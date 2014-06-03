@@ -38,22 +38,20 @@
     <contributor/>
   </contributors>
   <issueManagement/>
-  <!--
   <scm>
-    <connection/>
-    <developerConnection/>
-    <url/>
+    <connection>scm:git:https://github.com/HogeschoolLeiden/website.git</connection>
+    <developerConnection>scm:git:https://github.com/HogeschoolLeiden/website.git</developerConnection>
+    <url>https://github.com/HogeschoolLeiden/website</url>
   </scm>
-  -->
   <ciManagement/>
   <distributionManagement>
     <repository>
-      <id>-</id>
-      <url>-</url>
+      <id>openweb-nexus-releases</id>
+      <url>https://nexus.open-web.nl/nexus/content/repositories/releases/</url>
     </repository>
     <snapshotRepository>
-      <id>-</id>
-      <url>-</url>
+	  <id>openweb-nexus-snapshots</id>
+      <url>https://nexus.open-web.nl/nexus/content/repositories/snapshots/</url>
     </snapshotRepository>
   </distributionManagement>
   <!-- End of emptied/overridden metadata from parent hippo-cms7-release pom. -->
