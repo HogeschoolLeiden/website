@@ -35,12 +35,12 @@
         <sv:value>true</sv:value>
       </sv:property>
       <sv:property sv:multiple="true" sv:name="hipposysedit:supertype" sv:type="String">
-        <sv:value>website:basedocument</sv:value>
+        <sv:value>hsl:basedocument</sv:value>
         <sv:value>hippostd:relaxed</sv:value>
         <sv:value>hippotranslation:translated</sv:value>
       </sv:property>
       <sv:property sv:name="hipposysedit:uri" sv:type="String">
-        <sv:value>http://www.onehippo.org/website/nt/1.0</sv:value>
+        <sv:value>http://www.onehippo.org/hsl/nt/1.0</sv:value>
       </sv:property>
       <sv:node sv:name="hideFromSearch">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -56,7 +56,7 @@
           <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:name="hipposysedit:path" sv:type="String">
-          <sv:value>website:hideFromSearch</sv:value>
+          <sv:value>hsl:hideFromSearch</sv:value>
         </sv:property>
         <sv:property sv:name="hipposysedit:primary" sv:type="Boolean">
           <sv:value>false</sv:value>
@@ -79,7 +79,7 @@
           <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:name="hipposysedit:path" sv:type="String">
-          <sv:value>website:hideFromSitemap</sv:value>
+          <sv:value>hsl:hideFromSitemap</sv:value>
         </sv:property>
         <sv:property sv:name="hipposysedit:primary" sv:type="Boolean">
           <sv:value>false</sv:value>
@@ -102,7 +102,7 @@
           <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:name="hipposysedit:path" sv:type="String">
-          <sv:value>website:title</sv:value>
+          <sv:value>hsl:title</sv:value>
         </sv:property>
         <sv:property sv:name="hipposysedit:primary" sv:type="Boolean">
           <sv:value>false</sv:value>
@@ -129,7 +129,7 @@
           <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:name="hipposysedit:path" sv:type="String">
-          <sv:value>website:releaseDate</sv:value>
+          <sv:value>hsl:releaseDate</sv:value>
         </sv:property>
         <sv:property sv:name="hipposysedit:primary" sv:type="Boolean">
           <sv:value>false</sv:value>
@@ -152,7 +152,7 @@
           <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:name="hipposysedit:path" sv:type="String">
-          <sv:value>website:browserTitle</sv:value>
+          <sv:value>hsl:browserTitle</sv:value>
         </sv:property>
         <sv:property sv:name="hipposysedit:primary" sv:type="Boolean">
           <sv:value>false</sv:value>
@@ -175,7 +175,7 @@
           <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:name="hipposysedit:path" sv:type="String">
-          <sv:value>website:author</sv:value>
+          <sv:value>hsl:author</sv:value>
         </sv:property>
         <sv:property sv:name="hipposysedit:primary" sv:type="Boolean">
           <sv:value>false</sv:value>
@@ -192,7 +192,7 @@
     </sv:property>
     <sv:node sv:name="hipposysedit:prototype">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>website:WebDocument</sv:value>
+        <sv:value>hsl:WebDocument</sv:value>
       </sv:property>
       <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
         <sv:value>mix:referenceable</sv:value>
@@ -228,19 +228,19 @@
       <sv:property sv:name="hippotranslation:locale" sv:type="String">
         <sv:value>document-type-locale</sv:value>
       </sv:property>
-      <sv:property sv:name="website:author" sv:type="String">
+      <sv:property sv:name="hsl:author" sv:type="String">
         <sv:value/>
       </sv:property>
-      <sv:property sv:name="website:browserTitle" sv:type="String">
+      <sv:property sv:name="hsl:browserTitle" sv:type="String">
         <sv:value/>
       </sv:property>
-      <sv:property sv:name="website:hideFromSearch" sv:type="Boolean">
+      <sv:property sv:name="hsl:hideFromSearch" sv:type="Boolean">
         <sv:value>false</sv:value>
       </sv:property>
-      <sv:property sv:name="website:hideFromSitemap" sv:type="Boolean">
+      <sv:property sv:name="hsl:hideFromSitemap" sv:type="Boolean">
         <sv:value>false</sv:value>
       </sv:property>
-      <sv:property sv:name="website:title" sv:type="String">
+      <sv:property sv:name="hsl:title" sv:type="String">
         <sv:value/>
       </sv:property>
     </sv:node>
