@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd" version="2.0">
+
+	<description>Project specific tag library</description>
+	<display-name>Project Tag Library</display-name>
+	<tlib-version>1.0</tlib-version>
+	<short-name>projectTaglib</short-name>
+	<uri>http://www.hsleiden.nl/tags/hsl/1.0</uri>
+
+	<tag-file>
+		<name>pagenotfound</name>
+		<path>/WEB-INF/tags/pagenotfound.tag</path>
+	</tag-file>
+	
+	<function>
+		<description>get browser title from channel configuration</description>
+		<name>getDefaultBrowserTitle</name>
+		<function-class>nl.hsleiden.tags.Functions</function-class>
+		<function-signature>java.lang.String getDefaultBrowserTitle(javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+  
+    <function>
+      <description>test if document is subclass of web page</description>
+      <name>isSubclassOfWebPage</name>
+      <function-class>nl.hsleiden.tags.Functions</function-class>
+      <function-signature>boolean isSubclassOfWebPage(org.hippoecm.hst.content.beans.standard.HippoBean)</function-signature>
+    </function>
+    
+    <function>
+      <name>contextPath</name>
+      <function-class>nl.hsleiden.utils.HslUtils</function-class>
+      <function-signature>java.lang.String getContextPath(org.hippoecm.hst.core.component.HstRequest)</function-signature>
+    </function>
+
+</taglib>
