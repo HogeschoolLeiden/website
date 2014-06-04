@@ -18,20 +18,20 @@
       <destName>site.war</destName>
     </file>
     <file>
-      <source>conf/log4j-prod.xml</source>
+      <source>release/conf/log4j-prod.xml</source>
       <outputDirectory>/conf</outputDirectory>
       <destName>log4j.xml</destName>
     </file>
     <file>
-      <source>conf/log4j.dtd</source>
+      <source>release/conf/log4j.dtd</source>
       <outputDirectory>/conf</outputDirectory>
       <destName>log4j.dtd</destName>
     </file>
-    <file>
-      <source>conf/context.xml</source>
+<!--     <file>
+      <source>release/conf/context.xml</source>
       <outputDirectory>/conf</outputDirectory>
       <destName>context.xml</destName>
-    </file>
+    </file> -->
   </files>
   <dependencySets>
     <dependencySet>
