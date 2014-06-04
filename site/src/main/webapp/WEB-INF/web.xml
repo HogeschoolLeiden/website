@@ -55,8 +55,11 @@
   -->
   <context-param>
     <param-name>hst-beans-annotated-classes</param-name>
-    <param-value>classpath*:nl/hsleiden/beans/**/*.class
-      ,classpath*:org/onehippo/forge/**/*.class</param-value>
+    <param-value>
+      classpath*:nl/hsleiden/beans/**/*.class
+      ,classpath*:org/onehippo/forge/**/*.class
+      ,classpath*:hslbeans/**/*.class
+      </param-value>
   </context-param>
 
   <filter>

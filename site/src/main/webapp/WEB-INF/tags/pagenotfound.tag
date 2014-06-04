@@ -1,4 +1,4 @@
-<!doctype html>
+<%@ tag language="java"	trimDirectiveWhitespaces="true" pageEncoding="UTF-8"%>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
@@ -7,16 +7,8 @@
 <%@ taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml"%>
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 
-<%@ page isErrorPage="true" %>
-<% response.setStatus(400); %>
-
-<html lang="en">
-<head>
-  <meta charset="utf-8"/>
-  <title>400 error</title>
-</head>
-<body>
-<h1>Bad request!!!</h1>
-<p>The request cannot be fulfilled due to bad syntax.</p>
-</body>
-</html>
+<hst:element var="headTitle" name="title">
+   <fmt:message key="page.not.found"/>
+ </hst:element>
+<hst:headContribution keyHint="headTitle" element="${headTitle}"/>
+<h2><fmt:message key="page.not.found"/></h2>
