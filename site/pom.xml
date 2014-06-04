@@ -107,6 +107,23 @@
     <finalName>site</finalName>
     <plugins>
       <plugin>
+        <groupId>com.aharpour.ebrahim</groupId>
+        <artifactId>hippo-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <goals>
+              <goal>generate</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <namespaces>
+            <hsl>http://www.onehippo.org/hsl/nt/1.0</hsl>
+          </namespaces>
+          <namespace.location>${project.parent.basedir.absolutePath}/bootstrap/configuration/src/main/resources/namespaces</namespace.location>
+        </configuration>
+      </plugin>
+      <plugin>
         <groupId>org.codehaus.cargo</groupId>
         <artifactId>cargo-maven2-plugin</artifactId>
         <configuration>

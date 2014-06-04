@@ -69,8 +69,8 @@
     <junit.version>4.10</junit.version>
     <easymock.version>3.1</easymock.version>
     <freemarker.version>2.3.18</freemarker.version>
-     
-    <filesync.override>false</filesync.override>
+         
+    <filesync.override>false</filesync.override> 
     <maven.plugins.filesync.version>1.0.0</maven.plugins.filesync.version>
 
   </properties>
@@ -82,6 +82,14 @@
       <url>http://maven.onehippo.com/maven2/</url>
     </repository>
   </repositories>
+
+  <pluginRepositories>
+    <pluginRepository>
+	  <id>sf-hippo-maven-plugin-repo</id>
+      <name>Hippo maven plugin repository.</name>
+      <url>http://svn.code.sf.net/p/mavenhippo/code/maven2/</url>
+    </pluginRepository>
+  </pluginRepositories>
 
   <dependencyManagement>
     <dependencies>
@@ -169,6 +177,11 @@
               </goals>
             </execution>
           </executions>
+        </plugin>
+        <plugin>
+          <groupId>com.aharpour.ebrahim</groupId>
+          <artifactId>hippo-maven-plugin</artifactId>
+          <version>0.1.0</version>
         </plugin>
       </plugins>
     </pluginManagement>
