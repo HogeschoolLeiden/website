@@ -9,17 +9,17 @@
 <div class="container-fluid">
 	<hst:include ref="top-container" />    
   	<div class="row-fluid">
-		<nav class="span2-left">
+		<nav class="span2">
 			<hst:include ref="leftTop" />
 			<hst:include ref="left" />
 			<hst:include ref="leftBottom" />
 		</nav>
-		<div class="span8-center">
+		<div class="span8">
 			<hst:include ref="contentTop" />
 			<hst:include ref="content" />
 			<hst:include ref="contentBottom" />
 		</div>
-		<aside class="span2-right">
+		<aside class="span2">
 			<hst:include ref="rightTop" />
 			<hst:include ref="right" />
 			<hst:include ref="rightBottom" />
