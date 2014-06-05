@@ -27,7 +27,7 @@ public class Header extends BaseHstComponent {
         }
     }
 
-    protected Object getLogoBean(HstRequest request, WebsiteInfo info) {
+    private Object getLogoBean(HstRequest request, WebsiteInfo info) {
         Object result = null;
         String logoPath = info.getLogoPath();
         try {

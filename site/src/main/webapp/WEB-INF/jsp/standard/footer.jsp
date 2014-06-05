@@ -8,10 +8,16 @@
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 
 <div class="container-fluid">
-	<div class="footer">
-		<div class="navbar">
-            <p>this is the footer</p>
-			<%-- <hst:include ref="footerServiceMenu" /> --%>
-		</div>
-	</div>
+  <div class="row-fluid">
+    <div class="span2"></div>
+    <div class="span8">
+  	   <div class="footer">
+  	     <div class="navbar">
+           <p>this is the footer</p>
+  		   <%-- <hst:include ref="footerServiceMenu" /> --%>
+  	     </div>
+  	   </div>
+    </div>
+    <div class="span2"></div>
+  </div>
 </div>

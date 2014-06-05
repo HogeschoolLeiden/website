@@ -20,7 +20,6 @@
        <%--  <h3>${fn:escapeXml(document.subtitle)}</h3> --%>
         <p>${fn:escapeXml(document.introduction)}</p> 
       </header>
-      <p>this is the content</p>
       <%-- <hst:html hippohtml="${document.html}"/> --%>
     </article>
 
