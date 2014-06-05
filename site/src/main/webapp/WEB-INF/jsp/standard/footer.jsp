@@ -13,8 +13,7 @@
     <div class="span8">
   	   <div class="footer">
   	     <div class="navbar">
-           <p>this is the footer</p>
-  		   <%-- <hst:include ref="footerServiceMenu" /> --%>
+  		   <hst:include ref="footerServiceMenu" />
   	     </div>
   	   </div>
     </div>

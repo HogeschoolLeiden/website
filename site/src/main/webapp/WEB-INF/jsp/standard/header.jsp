@@ -35,8 +35,8 @@
               </a>
             </div>
             <div class="navbar nav pull-right h-menu">
-            <%-- <hst:include ref="serviceMenu" />
-				<hst:include ref="langaugeswitch" />
+            <hst:include ref="serviceMenu" />
+				<%-- <hst:include ref="langaugeswitch" /> 
 				<fmt:message var="submitText" key="search.submit.text" /> <hst:link var="link" path="/search" />
 				<form class="navbar-search form-search" action="${link}" method="get">
 					<p>
@@ -48,7 +48,7 @@
 
             <div class="nav-collapse">
 
-            <%-- <hst:include ref="mainMenu" /> --%>
+            <hst:include ref="mainMenu" />
             </div>
 
             <div class="clear-both"></div>
