@@ -14,6 +14,13 @@
 	<artifactId>website-release</artifactId>
 	<packaging>pom</packaging>
 
+	<dependencies>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+	</dependencies>
+
 	<build>
 		<plugins>
 			<plugin>

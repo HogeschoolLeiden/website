@@ -45,6 +45,31 @@
 			<outputDirectory>/conf</outputDirectory>
 			<destName>log4j.dtd</destName>
 		</file>
+		<file>
+			<source>${project.basedir}/conf/repository.xml</source>
+			<outputDirectory>/conf</outputDirectory>
+			<destName>repository.xml</destName>
+		</file>
+		<file>
+			<source>${project.basedir}/conf/heapdump.sh</source>
+			<outputDirectory>/conf</outputDirectory>
+			<destName>heapdump.sh</destName>
+		</file>
+		<file>
+			<source>${project.basedir}/conf/threaddump.sh</source>
+			<outputDirectory>/conf</outputDirectory>
+			<destName>threaddump.sh</destName>
+		</file>
+		<file>
+			<source>${project.basedir}/conf/tomcat-restart-email.sh</source>
+			<outputDirectory>/conf</outputDirectory>
+			<destName>tomcat-restart-email.sh</destName>
+		</file>
+		<file>
+			<source>${project.basedir}/conf/tomcat-restart-email.txt</source>
+			<outputDirectory>/conf</outputDirectory>
+			<destName>tomcat-restart-email.txt</destName>
+		</file>
 		<!--<file>
 			<source>${project.basedir}/conf/context.xml</source>
 			<outputDirectory>/conf</outputDirectory>
@@ -57,6 +82,7 @@
 			<outputDirectory>/common/lib</outputDirectory>
 			<scope>provided</scope>
 			<includes>
+				<include>mysql:mysql-connector-java</include>
 				<include>javax.jcr:jcr</include>
 				<include>org.apache.geronimo.specs:geronimo-jta_1.1_spec</include>
 				<include>javax.mail:mail</include>

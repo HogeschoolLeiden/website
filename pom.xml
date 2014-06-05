@@ -72,7 +72,7 @@
          
     <filesync.override>false</filesync.override> 
     <maven.plugins.filesync.version>1.0.0</maven.plugins.filesync.version>
-
+	<mysql.connecotr.version>5.1.30</mysql.connecotr.version>
   </properties>
 
   <repositories>
@@ -155,6 +155,13 @@
         <version>${easymock.version}</version>
         <scope>test</scope>
       </dependency>
+      
+      <dependency>
+		<groupId>mysql</groupId>
+		<artifactId>mysql-connector-java</artifactId>
+		<version>${mysql.connecotr.version}</version>
+		<scope>provided</scope>
+	  </dependency>
 
     </dependencies>
   </dependencyManagement>
