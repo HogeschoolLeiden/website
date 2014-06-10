@@ -38,8 +38,8 @@ public class NavigationUtils {
 
     public static EditableMenuItem getSiteMapItemByPath(EditableMenu editableMenu, String relativePath) {
         EditableMenuItem result = null;
-        relativePath = normalizePath(relativePath);
-        String[] split = relativePath.split("/");
+        String normalizedPath = normalizePath(relativePath);
+        String[] split = normalizedPath.split("/");
         List<EditableMenuItem> menuItems = editableMenu.getMenuItems();
         EditableMenuItem temp = result;
         for (String segment : split) {
@@ -60,9 +60,10 @@ public class NavigationUtils {
     }
 
     private static String normalizePath(String relativePath) {
-        if (relativePath.startsWith("/")) {
-            relativePath = relativePath.substring(1);
+        String result = relativePath;
+        if (result.startsWith("/")) {
+            result = result.substring(1);
         }
-        return relativePath;
+        return result;
     }
 }

@@ -78,7 +78,7 @@ public class RepoBasedMenuProvider {
             }
         }
     }
-
+    
     private void expandForcedExpandedItems(EditableMenuItem item) {
         String value = getParameterValue(HstParameters.EXPANDED, item);
         if (Values.TRUE.equals(value)) {
@@ -132,12 +132,13 @@ public class RepoBasedMenuProvider {
         return result;
     }
 
-    private List<? extends HippoBean> getChildbearingChildren(HippoBean childbearingBean) {
-        List<? extends HippoBean> result;
+    @SuppressWarnings("unchecked")
+    private <T extends HippoBean> List<T> getChildbearingChildren(HippoBean childbearingBean) {
+        List<T> result;
         if (childbearingBean instanceof HippoFacetNavigation) {
             result = getChildbearingChildrenOfFacet((HippoFacetNavigation) childbearingBean);
         } else if (childbearingBean instanceof HippoFolderBean) {
-            result = getChildbearingChildrenOfFolder(childbearingBean);
+            result = (List<T>) getChildbearingChildrenOfFolder(childbearingBean);
         } else {
             throw new IllegalArgumentException(
                     "Expect childbearingBean to be either a HippoFolderBean or a HippoFacetNavigationBean");
@@ -154,32 +155,32 @@ public class RepoBasedMenuProvider {
         return items;
     }
 
-    private List<? extends HippoBean> getChildbearingChildrenOfFacet(HippoFacetNavigation facetNavigation) {
-        List<? extends HippoBean> result;
+    @SuppressWarnings("unchecked")
+    private <T extends HippoBean> List<T> getChildbearingChildrenOfFacet(HippoFacetNavigation facetNavigation) {
+        List<T> result;
         List<HippoFacetsAvailableNavigation> availableNavigation = facetNavigation
                 .getChildBeans(HippoFacetsAvailableNavigation.class);
         if (availableNavigation == null || availableNavigation.size() != 1) {
-            result = new ArrayList<HippoBean>();
+            result = new ArrayList<T>();
         } else {
-            result = availableNavigation.get(0).getChildBeans(HippoFacetSubNavigation.class);
+            result = (List<T>) availableNavigation.get(0).getChildBeans(HippoFacetSubNavigation.class);
         }
         return result;
     }
 
     public static void markAsSeleted(EditableMenuItem item) {
-        EditableMenuItem temp = item;
-        if (temp instanceof SimpleEditableMenuItem) {
-            ((SimpleEditableMenuItem) temp).setSelected(true);
+        if (item instanceof SimpleEditableMenuItem) {
+            ((SimpleEditableMenuItem) item).setSelected(true);
         }
-        temp = markAsExpanded(temp);
+        markAsExpanded(item);
     }
 
-    public static EditableMenuItem markAsExpanded(EditableMenuItem temp) {
+    public static void markAsExpanded(EditableMenuItem item) {
+        EditableMenuItem temp = item;
         while (temp != null) {
             temp.setExpanded(true);
             temp = temp.getParentItem();
         }
-        return temp;
     }
 
     private void markOnlyCurrentItemAsExpanded(EditableMenuItem item) {
@@ -224,12 +225,13 @@ public class RepoBasedMenuProvider {
         if (bean instanceof HippoFacetNavigation) {
             result = bean;
         } else {
-            while (bean != null) {
-                if (bean.isHippoFolderBean()) {
-                    result = bean;
+            HippoBean entityBean = bean;
+            while (entityBean != null) {
+                if (entityBean.isHippoFolderBean()) {
+                    result = entityBean;
                     break;
                 }
-                bean = bean.getParentBean();
+                entityBean = entityBean.getParentBean();
             }
         }
 

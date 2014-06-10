@@ -45,8 +45,7 @@ public class BaseHslComponent extends BaseHstComponent {
                 try {
                     result = (T) request.getRequestContext().getObjectBeanManager().getObject(indexFilePath);
                 } catch (ObjectBeanManagerException e) {
-                    LOG.info("Could not retrive the document of the specfied indexFilePath: {}", indexFilePath);
-                    LOG.info(e.getMessage());
+                    LOG.info("Could not retrive the document of the specfied indexFilePath: " + indexFilePath, e);
                 }
             } else {
                 result = (T) getBean(indexFilePath, request);
