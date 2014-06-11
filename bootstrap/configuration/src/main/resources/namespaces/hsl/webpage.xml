@@ -250,7 +250,7 @@
           <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:name="hipposysedit:type" sv:type="String">
-          <sv:value>String</sv:value>
+          <sv:value>DynamicDropdown</sv:value>
         </sv:property>
       </sv:node>
     </sv:node>
@@ -417,10 +417,13 @@
           <sv:value>frontend:plugin</sv:value>
         </sv:property>
         <sv:property sv:name="caption" sv:type="String">
-          <sv:value>Author</sv:value>
+          <sv:value>Afzender</sv:value>
         </sv:property>
         <sv:property sv:name="field" sv:type="String">
           <sv:value>author</sv:value>
+        </sv:property>
+        <sv:property sv:name="hint" sv:type="String">
+          <sv:value/>
         </sv:property>
         <sv:property sv:name="plugin.class" sv:type="String">
           <sv:value>org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin</sv:value>
@@ -431,6 +434,18 @@
         <sv:node sv:name="cluster.options">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>frontend:pluginconfig</sv:value>
+          </sv:property>
+          <sv:property sv:name="sortBy" sv:type="String">
+            <sv:value>label</sv:value>
+          </sv:property>
+          <sv:property sv:name="sortComparator" sv:type="String">
+            <sv:value>org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator</sv:value>
+          </sv:property>
+          <sv:property sv:name="sortOrder" sv:type="String">
+            <sv:value>ascending</sv:value>
+          </sv:property>
+          <sv:property sv:name="source" sv:type="String">
+            <sv:value>/content/documents/hsl/configuratie/afzender-values</sv:value>
           </sv:property>
         </sv:node>
       </sv:node>
