@@ -345,8 +345,13 @@ a:hover {
 }
 
 .row-fluid .span8 {
-    width: 65.95744680199999%;
-    *width: 65.90425531263828%;
+    width: 50%;
+    *width: 49.5%;
+}
+
+.row-fluid .header.span8 {
+    width: 75.95744680199999%;
+    *width: 75.90425531263828%;
 }
 
 .row-fluid .span7 {
@@ -375,8 +380,13 @@ a:hover {
 }
 
 .row-fluid .span2 {
-    width: 14.89361702%;
-    *width: 14.8404255306383%;
+    width: 22.7%;
+    *width: 22.65%;
+}
+
+.row-fluid .header.span2 {
+    width: 9.89361702%;
+    *width: 9.8404255306383%;
 }
 
 .row-fluid .span1 {
@@ -4968,3 +4978,14 @@ article {
 ul.nav.nav-pills li > ul.nav.nav-pills {
     padding-left: 25px;
 }
+
+/* --------------------------------- style the paragraph ---------------------------------------- */
+p.image { width:230px; margin-bottom:10px; padding-top:5px; float:left; position: relative; } 
+p.image.right { float:right; padding-left:20px; clear: left; }
+p.image.left { padding-right:20px; }
+p.image.top { width:680px; margin-bottom:10px; padding-top:5px; float:left; position: relative; } 
+p.image.bottom { width:680px; margin-bottom:10px; padding-top:5px; float:left; position: relative; } 
+p.right img, p.left img{ display:block; }
+p.image span { width:230px; font-family: "Verdana", "Arial", sans-serif; font-style:italic; font-size:90%;
+  line-height:140%; display:block; margin-top: 6px; }
+/* ---------------------------------- style the paragraph ---------------------------------------- */

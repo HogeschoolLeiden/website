@@ -11,6 +11,8 @@ public class Constants {
         public static final String LOGO = "logo";
         public static final String HEADER_NAME = "headerName";
         public static final String MENU = "menu";
+        public static final String ITEMS = "items";
+        public static final String PAGINATOR = "paginator";
 
         private Attributes() {
             super();
@@ -38,8 +40,26 @@ public class Constants {
 
     public static class Values {
         public static final String TRUE = "true";
+        public static final String DESCENDING = "descending";
 
         private Values() {
+            super();
+        }
+    }
+    
+    public static class Parameters {
+        public static final String PAGE_SIZE = "size";
+        public static final String PAGE = "page";
+
+        private Parameters() {
+            super();
+        }
+    }
+    
+    public static class FieldName {
+        public static final String TDC_RELEASE_DATE = "hsl:releaseDate";
+        
+        private FieldName() {
             super();
         }
     }

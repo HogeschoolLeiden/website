@@ -2,7 +2,10 @@ package nl.hsleiden.components.base;
 
 import hslbeans.WebPage;
 import nl.hsleiden.componentsinfo.ContentBeanPathInfo;
+import nl.hsleiden.componentsinfo.PaginatedInfo;
 import nl.hsleiden.utils.Constants.HstParameters;
+import nl.hsleiden.utils.Constants.Parameters;
+import nl.hsleiden.utils.PaginatorWidget;
 
 import org.apache.commons.lang.StringUtils;
 import org.hippoecm.hst.component.support.bean.BaseHstComponent;
@@ -59,6 +62,34 @@ public class BaseHslComponent extends BaseHstComponent {
         T result = null;
         String path = PathUtils.normalizePath(relativePath);
         result = (T) request.getRequestContext().getSiteContentBaseBean().getBean(path);
+        return result;
+    }
+    
+    protected int getPageSize(HstRequest request) {
+        int result = 25;
+        String pageSzieString = getPublicRequestParameter(request, Parameters.PAGE_SIZE);
+        if (StringUtils.isNotBlank(pageSzieString) && StringUtils.isNumeric(pageSzieString)) {
+            result = Integer.parseInt(pageSzieString);
+        } else {
+            Object parametersInfo = getComponentParametersInfo(request);
+            if (parametersInfo instanceof PaginatedInfo) {
+                result = ((PaginatedInfo) parametersInfo).getDefaultPageSzie();
+            }
+        }
+        return result;
+    }
+    
+    protected PaginatorWidget getPaginator(HstRequest request, int defaultPageSzie, int totalRows) {
+        PaginatorWidget paginator = new PaginatorWidget(totalRows, getPageNumber(request), defaultPageSzie);
+        return paginator;
+    }
+    
+    protected int getPageNumber(HstRequest request) {
+        int result = 1;
+        String pageString = getPublicRequestParameter(request, Parameters.PAGE);
+        if (StringUtils.isNotBlank(pageString) && StringUtils.isNumeric(pageString)) {
+            result = Integer.parseInt(pageString);
+        }
         return result;
     }
 }
