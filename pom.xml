@@ -12,7 +12,7 @@
   <description>Website van Hogeschool Leiden</description>
   <groupId>nl.hsleiden</groupId>
   <artifactId>website</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.2-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <!-- 
@@ -22,28 +22,29 @@
     DO NOT remove these tags but instead fill them in appropriately as needed, 
     UNLESS the inherited values are valid for your project.
   -->
-  <url/>
-  <inceptionYear/>
-  <organization/>
+  <url />
+  <inceptionYear />
+  <organization />
   <licenses>
-    <license/>
+    <license />
   </licenses>
   <mailingLists>
-    <mailingList/>
+    <mailingList />
   </mailingLists>
   <developers>
-    <developer/>
+    <developer />
   </developers>
   <contributors>
-    <contributor/>
+    <contributor />
   </contributors>
-  <issueManagement/>
+  <issueManagement />
   <scm>
-    <connection>scm:git:https://github.com/HogeschoolLeiden/website.git</connection>
-    <developerConnection>scm:git:https://github.com/HogeschoolLeiden/website.git</developerConnection>
+    <connection>scm:git:git@github.com:HogeschoolLeiden/website.git</connection>
+    <developerConnection>scm:git:git@github.com:HogeschoolLeiden/website.git</developerConnection>
     <url>https://github.com/HogeschoolLeiden/website</url>
+    <tag>HEAD</tag>
   </scm>
-  <ciManagement/>
+  <ciManagement />
   <distributionManagement>
     <repository>
       <id>openweb-nexus-releases</id>
@@ -226,6 +227,26 @@
           </archive>
         </configuration>
       </plugin>
+	  <plugin>
+         <artifactId>maven-release-plugin</artifactId>
+         <version>2.4.1</version>
+         <configuration>
+           <releaseProfiles>release</releaseProfiles>
+           <goals>install deploy</goals>
+         </configuration>
+         <dependencies>
+           <dependency>
+             <groupId>org.apache.maven.scm</groupId>
+             <artifactId>maven-scm-api</artifactId>
+             <version>1.8.1</version>
+           </dependency>
+           <dependency>
+             <groupId>org.apache.maven.scm</groupId>
+             <artifactId>maven-scm-provider-gitexe</artifactId>
+             <version>1.8.1</version>
+           </dependency>
+         </dependencies>
+       </plugin>
     </plugins>
   </build>
 
