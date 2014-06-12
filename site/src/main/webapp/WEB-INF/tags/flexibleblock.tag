@@ -16,10 +16,10 @@
 		<c:when test="${block['class'].name == 'hslbeans.ParagraphCompound' }">
 			<tag:paragraphblock content="${block}"/>
 		</c:when>
-		<%-- <c:when test="${block.class.simpleName == 'ImageBean' }">
-			<tdc:imageblock content="${block }"/>
+		<c:when test="${block['class'].name == 'hslbeans.ImageCompound' }">
+			<tag:imageblock content="${block }"/>
       		<div class="hr"><hr /></div>
-		</c:when> --%>
+		</c:when>
 	</c:choose>
 	<c:set var="tagcount" value="${tagcount + 1 }" />
 </c:forEach>

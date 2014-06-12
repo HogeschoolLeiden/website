@@ -15,8 +15,11 @@
 	   <article class="well well-large">
 		 <hst:cmseditlink hippobean="${document}" />
 		 <header>
-		   <h2>
+		   <h1>
 			 <c:out value="${document.title }" escapeXml="true" />
+		   </h1>
+		   <h2>
+			 <c:out value="${document.subtitle }" escapeXml="true" />
 		   </h2>
 		   <c:if test="${hst:isReadable(document, 'date.time')}">
 			 <p class="badge badge-info">
