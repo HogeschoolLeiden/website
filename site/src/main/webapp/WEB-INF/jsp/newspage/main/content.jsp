@@ -12,31 +12,31 @@
 		<tag:pagenotfound />
 	</c:when>
 	<c:otherwise>
-		<article class="well well-large">
-			<hst:cmseditlink hippobean="${document}" />
-			<header>
-				<h2>
-					<c:out value="${document.title }" escapeXml="true" />
-				</h2>
-				<c:if test="${hst:isReadable(document, 'date.time')}">
-					<p class="badge badge-info">
-						<fmt:formatDate value="${document.date.time}" type="both"
+	   <article class="well well-large">
+		 <hst:cmseditlink hippobean="${document}" />
+		 <header>
+		   <h2>
+			 <c:out value="${document.title }" escapeXml="true" />
+		   </h2>
+		   <c:if test="${hst:isReadable(document, 'date.time')}">
+			 <p class="badge badge-info">
+			   <fmt:formatDate value="${document.date.time}" type="both"
 							dateStyle="medium" timeStyle="short" />
-					</p>
-				</c:if>
-			</header>
+			 </p>
+		    </c:if>
+		  </header>
 
-			<div class="inner">
-				<c:if test="${not empty document.introduction }">
-					<p class="intro">
-						<c:out value="${document.introduction }" />
-					</p>
-				</c:if>
+		  <div class="inner">
+			<c:if test="${not empty document.introduction }">
+			  <p class="intro">
+			    <c:out value="${document.introduction }" />
+			  </p>
+			</c:if>
 
-	            <tag:flexibleblock content="${document.flexibleblock }"/>
+	         <tag:flexibleblock content="${document.flexibleblock }"/>
 
-				<c:set var="path" value="${pageContext.request.pathInfo }" />
-			</div>
-		</article>
-	</c:otherwise>
+			 <c:set var="path" value="${pageContext.request.pathInfo }" />
+		  </div>
+	   </article>
+    </c:otherwise>
 </c:choose>

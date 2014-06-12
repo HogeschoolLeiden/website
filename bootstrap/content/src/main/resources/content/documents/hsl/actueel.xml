@@ -5,8 +5,8 @@
   </sv:property>
   <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
     <sv:value>hippotranslation:translated</sv:value>
-    <sv:value>hippo:translated</sv:value>
     <sv:value>mix:versionable</sv:value>
+    <sv:value>hippo:translated</sv:value>
   </sv:property>
   <sv:property sv:name="jcr:uuid" sv:type="String">
     <sv:value>62b8dd7a-ccf9-463a-a770-3f445f2edcef</sv:value>
@@ -38,8 +38,8 @@
     </sv:property>
     <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
       <sv:value>hippotranslation:translated</sv:value>
-      <sv:value>hippo:translated</sv:value>
       <sv:value>mix:versionable</sv:value>
+      <sv:value>hippo:translated</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>68657a00-650d-4be1-b773-e4f03f263be2</sv:value>
@@ -125,7 +125,7 @@
             <sv:value>2014-06-10T10:58:07.247+02:00</sv:value>
           </sv:property>
           <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-            <sv:value>2014-06-11T15:13:27.287+02:00</sv:value>
+            <sv:value>2014-06-12T12:59:06.568+02:00</sv:value>
           </sv:property>
           <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
             <sv:value>admin</sv:value>
@@ -137,7 +137,7 @@
             <sv:value>en</sv:value>
           </sv:property>
           <sv:property sv:name="hsl:author" sv:type="String">
-            <sv:value>tbd</sv:value>
+            <sv:value/>
           </sv:property>
           <sv:property sv:name="hsl:browserTitle" sv:type="String">
             <sv:value>news 1</sv:value>
@@ -163,8 +163,20 @@ Introduction Introduction Introduction Introduction</sv:value>
           <sv:property sv:name="hsl:releaseDate" sv:type="Date">
             <sv:value>2014-06-10T10:58:00.000+02:00</sv:value>
           </sv:property>
+          <sv:property sv:multiple="true" sv:name="hsl:subjecttags" sv:type="String">
+            <sv:value>over-hl</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:subtitle" sv:type="String">
+            <sv:value>Subtitel</sv:value>
+          </sv:property>
+          <sv:property sv:multiple="true" sv:name="hsl:thematags" sv:type="String">
+            <sv:value>life-sciences</sv:value>
+          </sv:property>
           <sv:property sv:name="hsl:title" sv:type="String">
             <sv:value>First news item</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:type" sv:type="String">
+            <sv:value/>
           </sv:property>
           <sv:node sv:name="hsl:flexibleblock">
             <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -204,6 +216,17 @@ Introduction Introduction Introduction Introduction</sv:value>
                 <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
               </sv:node>
             </sv:node>
+          </sv:node>
+          <sv:node sv:name="hsl:headerImage">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippogallerypicker:imagelink</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>b1265697-ea19-412d-aba6-9f0940f8b755</sv:value>
+            </sv:property>
+            <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
+            <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
+            <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
           </sv:node>
         </sv:node>
         <sv:node sv:name="hippo:translation">
@@ -247,7 +270,7 @@ Introduction Introduction Introduction Introduction</sv:value>
             <sv:value>2014-06-10T10:58:07.247+02:00</sv:value>
           </sv:property>
           <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-            <sv:value>2014-06-11T15:13:38.195+02:00</sv:value>
+            <sv:value>2014-06-12T12:59:12.957+02:00</sv:value>
           </sv:property>
           <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
             <sv:value>admin</sv:value>
@@ -259,7 +282,7 @@ Introduction Introduction Introduction Introduction</sv:value>
             <sv:value>en</sv:value>
           </sv:property>
           <sv:property sv:name="hsl:author" sv:type="String">
-            <sv:value>tbd</sv:value>
+            <sv:value/>
           </sv:property>
           <sv:property sv:name="hsl:browserTitle" sv:type="String">
             <sv:value>news 1</sv:value>
@@ -285,8 +308,20 @@ Introduction Introduction Introduction Introduction</sv:value>
           <sv:property sv:name="hsl:releaseDate" sv:type="Date">
             <sv:value>2014-06-10T10:58:00.000+02:00</sv:value>
           </sv:property>
+          <sv:property sv:multiple="true" sv:name="hsl:subjecttags" sv:type="String">
+            <sv:value>over-hl</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:subtitle" sv:type="String">
+            <sv:value>Subtitel</sv:value>
+          </sv:property>
+          <sv:property sv:multiple="true" sv:name="hsl:thematags" sv:type="String">
+            <sv:value>life-sciences</sv:value>
+          </sv:property>
           <sv:property sv:name="hsl:title" sv:type="String">
             <sv:value>First news item</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:type" sv:type="String">
+            <sv:value/>
           </sv:property>
           <sv:node sv:name="hsl:flexibleblock">
             <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -327,6 +362,17 @@ Introduction Introduction Introduction Introduction</sv:value>
               </sv:node>
             </sv:node>
           </sv:node>
+          <sv:node sv:name="hsl:headerImage">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippogallerypicker:imagelink</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>b1265697-ea19-412d-aba6-9f0940f8b755</sv:value>
+            </sv:property>
+            <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
+            <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
+            <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
+          </sv:node>
         </sv:node>
         <sv:node sv:name="news-item-1">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -357,13 +403,13 @@ Introduction Introduction Introduction Introduction</sv:value>
             <sv:value>2014-06-10T10:58:07.247+02:00</sv:value>
           </sv:property>
           <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-            <sv:value>2014-06-11T15:13:38.195+02:00</sv:value>
+            <sv:value>2014-06-12T12:59:12.957+02:00</sv:value>
           </sv:property>
           <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
             <sv:value>admin</sv:value>
           </sv:property>
           <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-            <sv:value>2014-06-11T15:13:40.355+02:00</sv:value>
+            <sv:value>2014-06-12T12:59:15.000+02:00</sv:value>
           </sv:property>
           <sv:property sv:name="hippotranslation:id" sv:type="String">
             <sv:value>96f8110b-2d1a-4dbc-af27-f15770334e33</sv:value>
@@ -372,7 +418,7 @@ Introduction Introduction Introduction Introduction</sv:value>
             <sv:value>en</sv:value>
           </sv:property>
           <sv:property sv:name="hsl:author" sv:type="String">
-            <sv:value>tbd</sv:value>
+            <sv:value/>
           </sv:property>
           <sv:property sv:name="hsl:browserTitle" sv:type="String">
             <sv:value>news 1</sv:value>
@@ -398,8 +444,20 @@ Introduction Introduction Introduction Introduction</sv:value>
           <sv:property sv:name="hsl:releaseDate" sv:type="Date">
             <sv:value>2014-06-10T10:58:00.000+02:00</sv:value>
           </sv:property>
+          <sv:property sv:multiple="true" sv:name="hsl:subjecttags" sv:type="String">
+            <sv:value>over-hl</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:subtitle" sv:type="String">
+            <sv:value>Subtitel</sv:value>
+          </sv:property>
+          <sv:property sv:multiple="true" sv:name="hsl:thematags" sv:type="String">
+            <sv:value>life-sciences</sv:value>
+          </sv:property>
           <sv:property sv:name="hsl:title" sv:type="String">
             <sv:value>First news item</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:type" sv:type="String">
+            <sv:value/>
           </sv:property>
           <sv:node sv:name="hsl:flexibleblock">
             <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -439,6 +497,17 @@ Introduction Introduction Introduction Introduction</sv:value>
                 <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
               </sv:node>
             </sv:node>
+          </sv:node>
+          <sv:node sv:name="hsl:headerImage">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippogallerypicker:imagelink</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>b1265697-ea19-412d-aba6-9f0940f8b755</sv:value>
+            </sv:property>
+            <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
+            <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
+            <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
           </sv:node>
         </sv:node>
       </sv:node>
@@ -483,7 +552,7 @@ Introduction Introduction Introduction Introduction</sv:value>
             <sv:value>2014-06-10T10:58:07.247+02:00</sv:value>
           </sv:property>
           <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-            <sv:value>2014-06-11T15:34:12.345+02:00</sv:value>
+            <sv:value>2014-06-12T13:01:12.071+02:00</sv:value>
           </sv:property>
           <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
             <sv:value>admin</sv:value>
@@ -495,7 +564,7 @@ Introduction Introduction Introduction Introduction</sv:value>
             <sv:value>en</sv:value>
           </sv:property>
           <sv:property sv:name="hsl:author" sv:type="String">
-            <sv:value>tb defined</sv:value>
+            <sv:value>author-three</sv:value>
           </sv:property>
           <sv:property sv:name="hsl:browserTitle" sv:type="String">
             <sv:value>news 2</sv:value>
@@ -519,8 +588,22 @@ Introduction Introduction Introduction Introduction</sv:value>
           <sv:property sv:name="hsl:releaseDate" sv:type="Date">
             <sv:value>2014-06-10T10:58:00.000+02:00</sv:value>
           </sv:property>
+          <sv:property sv:multiple="true" sv:name="hsl:subjecttags" sv:type="String">
+            <sv:value>actueel</sv:value>
+            <sv:value>over-hl</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:subtitle" sv:type="String">
+            <sv:value>Subtitel</sv:value>
+          </sv:property>
+          <sv:property sv:multiple="true" sv:name="hsl:thematags" sv:type="String">
+            <sv:value>management</sv:value>
+            <sv:value>life-sciences</sv:value>
+          </sv:property>
           <sv:property sv:name="hsl:title" sv:type="String">
             <sv:value>Second news item</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:type" sv:type="String">
+            <sv:value>nieuwsbericht</sv:value>
           </sv:property>
           <sv:node sv:name="hsl:flexibleblock">
             <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -531,7 +614,7 @@ Introduction Introduction Introduction Introduction</sv:value>
                 <sv:value>hippogallerypicker:imagelink</sv:value>
               </sv:property>
               <sv:property sv:name="hippo:docbase" sv:type="String">
-                <sv:value>7d1bdd37-fcf2-48cc-b699-c362d1ea30fb</sv:value>
+                <sv:value>4772e96c-bf98-44ef-8aa5-7fd2dd2f6fa7</sv:value>
               </sv:property>
               <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
               <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
@@ -551,7 +634,7 @@ Introduction Introduction Introduction Introduction</sv:value>
               </sv:property>
               <sv:property sv:name="hippostd:content" sv:type="String">
                 <sv:value>&lt;p&gt;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content Parag raph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&lt;/p&gt; 
-&lt;p&gt;&lt;span&gt;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content Para graph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&lt;/span&gt;&lt;/p&gt;</sv:value>
+&lt;p&gt;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content Para graph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&lt;/p&gt;</sv:value>
               </sv:property>
             </sv:node>
             <sv:node sv:name="hsl:paragraphImage">
@@ -576,6 +659,17 @@ Introduction Introduction Introduction Introduction</sv:value>
                 <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
               </sv:node>
             </sv:node>
+          </sv:node>
+          <sv:node sv:name="hsl:headerImage">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippogallerypicker:imagelink</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>b1265697-ea19-412d-aba6-9f0940f8b755</sv:value>
+            </sv:property>
+            <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
+            <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
+            <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
           </sv:node>
         </sv:node>
         <sv:node sv:name="hippo:translation">
@@ -617,7 +711,7 @@ Introduction Introduction Introduction Introduction</sv:value>
             <sv:value>2014-06-10T10:58:07.247+02:00</sv:value>
           </sv:property>
           <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-            <sv:value>2014-06-11T15:33:08.145+02:00</sv:value>
+            <sv:value>2014-06-12T13:01:04.826+02:00</sv:value>
           </sv:property>
           <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
             <sv:value>admin</sv:value>
@@ -629,7 +723,7 @@ Introduction Introduction Introduction Introduction</sv:value>
             <sv:value>en</sv:value>
           </sv:property>
           <sv:property sv:name="hsl:author" sv:type="String">
-            <sv:value>tb defined</sv:value>
+            <sv:value>author-three</sv:value>
           </sv:property>
           <sv:property sv:name="hsl:browserTitle" sv:type="String">
             <sv:value>news 2</sv:value>
@@ -653,8 +747,22 @@ Introduction Introduction Introduction Introduction</sv:value>
           <sv:property sv:name="hsl:releaseDate" sv:type="Date">
             <sv:value>2014-06-10T10:58:00.000+02:00</sv:value>
           </sv:property>
+          <sv:property sv:multiple="true" sv:name="hsl:subjecttags" sv:type="String">
+            <sv:value>actueel</sv:value>
+            <sv:value>over-hl</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:subtitle" sv:type="String">
+            <sv:value>Subtitel</sv:value>
+          </sv:property>
+          <sv:property sv:multiple="true" sv:name="hsl:thematags" sv:type="String">
+            <sv:value>management</sv:value>
+            <sv:value>life-sciences</sv:value>
+          </sv:property>
           <sv:property sv:name="hsl:title" sv:type="String">
             <sv:value>Second news item</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:type" sv:type="String">
+            <sv:value>nieuwsbericht</sv:value>
           </sv:property>
           <sv:node sv:name="hsl:flexibleblock">
             <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -665,7 +773,7 @@ Introduction Introduction Introduction Introduction</sv:value>
                 <sv:value>hippogallerypicker:imagelink</sv:value>
               </sv:property>
               <sv:property sv:name="hippo:docbase" sv:type="String">
-                <sv:value>7d1bdd37-fcf2-48cc-b699-c362d1ea30fb</sv:value>
+                <sv:value>4772e96c-bf98-44ef-8aa5-7fd2dd2f6fa7</sv:value>
               </sv:property>
               <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
               <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
@@ -685,7 +793,7 @@ Introduction Introduction Introduction Introduction</sv:value>
               </sv:property>
               <sv:property sv:name="hippostd:content" sv:type="String">
                 <sv:value>&lt;p&gt;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content Parag raph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&lt;/p&gt; 
-&lt;p&gt;&lt;span&gt;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content Para graph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&lt;/span&gt;&lt;/p&gt;</sv:value>
+&lt;p&gt;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content Para graph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&lt;/p&gt;</sv:value>
               </sv:property>
             </sv:node>
             <sv:node sv:name="hsl:paragraphImage">
@@ -710,6 +818,17 @@ Introduction Introduction Introduction Introduction</sv:value>
                 <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
               </sv:node>
             </sv:node>
+          </sv:node>
+          <sv:node sv:name="hsl:headerImage">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippogallerypicker:imagelink</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>b1265697-ea19-412d-aba6-9f0940f8b755</sv:value>
+            </sv:property>
+            <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
+            <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
+            <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
           </sv:node>
         </sv:node>
         <sv:node sv:name="news-item-2">
@@ -741,13 +860,13 @@ Introduction Introduction Introduction Introduction</sv:value>
             <sv:value>2014-06-10T10:58:07.247+02:00</sv:value>
           </sv:property>
           <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-            <sv:value>2014-06-11T15:34:12.345+02:00</sv:value>
+            <sv:value>2014-06-12T13:01:12.071+02:00</sv:value>
           </sv:property>
           <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
             <sv:value>admin</sv:value>
           </sv:property>
           <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-            <sv:value>2014-06-11T15:34:19.832+02:00</sv:value>
+            <sv:value>2014-06-12T13:01:13.806+02:00</sv:value>
           </sv:property>
           <sv:property sv:name="hippotranslation:id" sv:type="String">
             <sv:value>96f8110b-2d1a-4dbc-af27-f15770334e33</sv:value>
@@ -756,7 +875,7 @@ Introduction Introduction Introduction Introduction</sv:value>
             <sv:value>en</sv:value>
           </sv:property>
           <sv:property sv:name="hsl:author" sv:type="String">
-            <sv:value>tb defined</sv:value>
+            <sv:value>author-three</sv:value>
           </sv:property>
           <sv:property sv:name="hsl:browserTitle" sv:type="String">
             <sv:value>news 2</sv:value>
@@ -780,8 +899,22 @@ Introduction Introduction Introduction Introduction</sv:value>
           <sv:property sv:name="hsl:releaseDate" sv:type="Date">
             <sv:value>2014-06-10T10:58:00.000+02:00</sv:value>
           </sv:property>
+          <sv:property sv:multiple="true" sv:name="hsl:subjecttags" sv:type="String">
+            <sv:value>actueel</sv:value>
+            <sv:value>over-hl</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:subtitle" sv:type="String">
+            <sv:value>Subtitel</sv:value>
+          </sv:property>
+          <sv:property sv:multiple="true" sv:name="hsl:thematags" sv:type="String">
+            <sv:value>management</sv:value>
+            <sv:value>life-sciences</sv:value>
+          </sv:property>
           <sv:property sv:name="hsl:title" sv:type="String">
             <sv:value>Second news item</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:type" sv:type="String">
+            <sv:value>nieuwsbericht</sv:value>
           </sv:property>
           <sv:node sv:name="hsl:flexibleblock">
             <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -792,7 +925,7 @@ Introduction Introduction Introduction Introduction</sv:value>
                 <sv:value>hippogallerypicker:imagelink</sv:value>
               </sv:property>
               <sv:property sv:name="hippo:docbase" sv:type="String">
-                <sv:value>7d1bdd37-fcf2-48cc-b699-c362d1ea30fb</sv:value>
+                <sv:value>4772e96c-bf98-44ef-8aa5-7fd2dd2f6fa7</sv:value>
               </sv:property>
               <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
               <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
@@ -812,7 +945,7 @@ Introduction Introduction Introduction Introduction</sv:value>
               </sv:property>
               <sv:property sv:name="hippostd:content" sv:type="String">
                 <sv:value>&lt;p&gt;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content Parag raph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&lt;/p&gt; 
-&lt;p&gt;&lt;span&gt;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content Para graph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&lt;/span&gt;&lt;/p&gt;</sv:value>
+&lt;p&gt;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content Para graph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&lt;/p&gt;</sv:value>
               </sv:property>
             </sv:node>
             <sv:node sv:name="hsl:paragraphImage">
@@ -837,6 +970,17 @@ Introduction Introduction Introduction Introduction</sv:value>
                 <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
               </sv:node>
             </sv:node>
+          </sv:node>
+          <sv:node sv:name="hsl:headerImage">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippogallerypicker:imagelink</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>b1265697-ea19-412d-aba6-9f0940f8b755</sv:value>
+            </sv:property>
+            <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
+            <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
+            <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
           </sv:node>
         </sv:node>
       </sv:node>
@@ -879,7 +1023,7 @@ Introduction Introduction Introduction Introduction</sv:value>
             <sv:value>2014-06-11T10:37:58.223+02:00</sv:value>
           </sv:property>
           <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-            <sv:value>2014-06-11T15:35:19.632+02:00</sv:value>
+            <sv:value>2014-06-12T13:01:15.344+02:00</sv:value>
           </sv:property>
           <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
             <sv:value>admin</sv:value>
@@ -891,7 +1035,7 @@ Introduction Introduction Introduction Introduction</sv:value>
             <sv:value>en</sv:value>
           </sv:property>
           <sv:property sv:name="hsl:author" sv:type="String">
-            <sv:value>Author</sv:value>
+            <sv:value/>
           </sv:property>
           <sv:property sv:name="hsl:browserTitle" sv:type="String">
             <sv:value>news 3</sv:value>
@@ -914,8 +1058,21 @@ Introduction Introduction Introduction Introduction</sv:value>
           <sv:property sv:name="hsl:releaseDate" sv:type="Date">
             <sv:value>2014-06-11T10:38:00.000+02:00</sv:value>
           </sv:property>
+          <sv:property sv:multiple="true" sv:name="hsl:subjecttags" sv:type="String">
+            <sv:value>onderwijs</sv:value>
+            <sv:value>hl-media</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:subtitle" sv:type="String">
+            <sv:value>Subtitel</sv:value>
+          </sv:property>
+          <sv:property sv:multiple="true" sv:name="hsl:thematags" sv:type="String">
+            <sv:value>gezondheidszorg</sv:value>
+          </sv:property>
           <sv:property sv:name="hsl:title" sv:type="String">
             <sv:value>third news item</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:type" sv:type="String">
+            <sv:value/>
           </sv:property>
           <sv:node sv:name="hsl:flexibleblock">
             <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -929,8 +1086,7 @@ Introduction Introduction Introduction Introduction</sv:value>
                 <sv:value>hippostd:html</sv:value>
               </sv:property>
               <sv:property sv:name="hippostd:content" sv:type="String">
-                <sv:value>&lt;p&gt;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content Parag raph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;
-&lt;span&gt;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content Para graph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&lt;/span&gt;&lt;/p&gt; 
+                <sv:value>&lt;p&gt;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content Parag raph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp; Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content Para graph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&lt;/p&gt; 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;</sv:value>
               </sv:property>
             </sv:node>
@@ -999,6 +1155,17 @@ Introduction Introduction Introduction Introduction</sv:value>
                 <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
               </sv:node>
             </sv:node>
+          </sv:node>
+          <sv:node sv:name="hsl:headerImage">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippogallerypicker:imagelink</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>b1265697-ea19-412d-aba6-9f0940f8b755</sv:value>
+            </sv:property>
+            <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
+            <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
+            <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
           </sv:node>
         </sv:node>
         <sv:node sv:name="hippo:translation">
@@ -1042,7 +1209,7 @@ Introduction Introduction Introduction Introduction</sv:value>
             <sv:value>2014-06-11T10:37:58.223+02:00</sv:value>
           </sv:property>
           <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-            <sv:value>2014-06-11T15:35:31.937+02:00</sv:value>
+            <sv:value>2014-06-12T13:01:19.406+02:00</sv:value>
           </sv:property>
           <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
             <sv:value>admin</sv:value>
@@ -1054,7 +1221,7 @@ Introduction Introduction Introduction Introduction</sv:value>
             <sv:value>en</sv:value>
           </sv:property>
           <sv:property sv:name="hsl:author" sv:type="String">
-            <sv:value>Author</sv:value>
+            <sv:value/>
           </sv:property>
           <sv:property sv:name="hsl:browserTitle" sv:type="String">
             <sv:value>news 3</sv:value>
@@ -1077,8 +1244,21 @@ Introduction Introduction Introduction Introduction</sv:value>
           <sv:property sv:name="hsl:releaseDate" sv:type="Date">
             <sv:value>2014-06-11T10:38:00.000+02:00</sv:value>
           </sv:property>
+          <sv:property sv:multiple="true" sv:name="hsl:subjecttags" sv:type="String">
+            <sv:value>onderwijs</sv:value>
+            <sv:value>hl-media</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:subtitle" sv:type="String">
+            <sv:value>Subtitel</sv:value>
+          </sv:property>
+          <sv:property sv:multiple="true" sv:name="hsl:thematags" sv:type="String">
+            <sv:value>gezondheidszorg</sv:value>
+          </sv:property>
           <sv:property sv:name="hsl:title" sv:type="String">
             <sv:value>third news item</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:type" sv:type="String">
+            <sv:value/>
           </sv:property>
           <sv:node sv:name="hsl:flexibleblock">
             <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -1092,8 +1272,7 @@ Introduction Introduction Introduction Introduction</sv:value>
                 <sv:value>hippostd:html</sv:value>
               </sv:property>
               <sv:property sv:name="hippostd:content" sv:type="String">
-                <sv:value>&lt;p&gt;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content Parag raph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;
-&lt;span&gt;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content Para graph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&lt;/span&gt;&lt;/p&gt; 
+                <sv:value>&lt;p&gt;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content Parag raph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp; Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content Para graph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&lt;/p&gt; 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;</sv:value>
               </sv:property>
             </sv:node>
@@ -1162,6 +1341,17 @@ Introduction Introduction Introduction Introduction</sv:value>
                 <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
               </sv:node>
             </sv:node>
+          </sv:node>
+          <sv:node sv:name="hsl:headerImage">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippogallerypicker:imagelink</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>b1265697-ea19-412d-aba6-9f0940f8b755</sv:value>
+            </sv:property>
+            <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
+            <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
+            <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
           </sv:node>
         </sv:node>
         <sv:node sv:name="news-item-3">
@@ -1193,13 +1383,13 @@ Introduction Introduction Introduction Introduction</sv:value>
             <sv:value>2014-06-11T10:37:58.223+02:00</sv:value>
           </sv:property>
           <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-            <sv:value>2014-06-11T15:35:31.937+02:00</sv:value>
+            <sv:value>2014-06-12T13:01:19.406+02:00</sv:value>
           </sv:property>
           <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
             <sv:value>admin</sv:value>
           </sv:property>
           <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-            <sv:value>2014-06-11T15:35:34.362+02:00</sv:value>
+            <sv:value>2014-06-12T13:01:21.574+02:00</sv:value>
           </sv:property>
           <sv:property sv:name="hippotranslation:id" sv:type="String">
             <sv:value>f57cf1ca-e447-40f1-a6be-281bc2e10f30</sv:value>
@@ -1208,7 +1398,7 @@ Introduction Introduction Introduction Introduction</sv:value>
             <sv:value>en</sv:value>
           </sv:property>
           <sv:property sv:name="hsl:author" sv:type="String">
-            <sv:value>Author</sv:value>
+            <sv:value/>
           </sv:property>
           <sv:property sv:name="hsl:browserTitle" sv:type="String">
             <sv:value>news 3</sv:value>
@@ -1231,8 +1421,21 @@ Introduction Introduction Introduction Introduction</sv:value>
           <sv:property sv:name="hsl:releaseDate" sv:type="Date">
             <sv:value>2014-06-11T10:38:00.000+02:00</sv:value>
           </sv:property>
+          <sv:property sv:multiple="true" sv:name="hsl:subjecttags" sv:type="String">
+            <sv:value>onderwijs</sv:value>
+            <sv:value>hl-media</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:subtitle" sv:type="String">
+            <sv:value>Subtitel</sv:value>
+          </sv:property>
+          <sv:property sv:multiple="true" sv:name="hsl:thematags" sv:type="String">
+            <sv:value>gezondheidszorg</sv:value>
+          </sv:property>
           <sv:property sv:name="hsl:title" sv:type="String">
             <sv:value>third news item</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:type" sv:type="String">
+            <sv:value/>
           </sv:property>
           <sv:node sv:name="hsl:flexibleblock">
             <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -1246,8 +1449,7 @@ Introduction Introduction Introduction Introduction</sv:value>
                 <sv:value>hippostd:html</sv:value>
               </sv:property>
               <sv:property sv:name="hippostd:content" sv:type="String">
-                <sv:value>&lt;p&gt;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content Parag raph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;
-&lt;span&gt;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content Para graph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&lt;/span&gt;&lt;/p&gt; 
+                <sv:value>&lt;p&gt;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content Parag raph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp; Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content Para graph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&amp;nbsp;Paragraph Content&lt;/p&gt; 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;</sv:value>
               </sv:property>
             </sv:node>
@@ -1316,6 +1518,17 @@ Introduction Introduction Introduction Introduction</sv:value>
                 <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
               </sv:node>
             </sv:node>
+          </sv:node>
+          <sv:node sv:name="hsl:headerImage">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippogallerypicker:imagelink</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>b1265697-ea19-412d-aba6-9f0940f8b755</sv:value>
+            </sv:property>
+            <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
+            <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
+            <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
           </sv:node>
         </sv:node>
       </sv:node>
@@ -1557,8 +1770,8 @@ Introduction Introduction Introduction Introduction</sv:value>
     </sv:property>
     <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
       <sv:value>hippotranslation:translated</sv:value>
-      <sv:value>hippo:translated</sv:value>
       <sv:value>mix:versionable</sv:value>
+      <sv:value>hippo:translated</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>bd84f9a1-a22c-4eaa-a332-f057e99efba9</sv:value>
@@ -1843,8 +2056,8 @@ Introduction Introduction Introduction Introduction</sv:value>
     </sv:property>
     <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
       <sv:value>hippotranslation:translated</sv:value>
-      <sv:value>hippo:translated</sv:value>
       <sv:value>mix:versionable</sv:value>
+      <sv:value>hippo:translated</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>2fafa985-fdcc-498a-9cd5-8907a6624f41</sv:value>

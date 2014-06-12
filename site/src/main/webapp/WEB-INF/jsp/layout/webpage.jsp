@@ -49,6 +49,7 @@
 
 <body>
 	<hst:include ref="header" />
+    <tag:headerImage document="${document}"/>
 	<hst:include ref="main" />
 	<hst:include ref="footer" />
 	<hst:headContributions categoryIncludes="scripts" xhtml="true" />
