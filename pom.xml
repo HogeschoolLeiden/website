@@ -74,6 +74,7 @@
     <filesync.override>false</filesync.override> 
     <maven.plugins.filesync.version>1.0.0</maven.plugins.filesync.version>
 	<mysql.connecotr.version>5.1.30</mysql.connecotr.version>
+	<hippo.prototype.version>7.9.35-SNAPSHOT</hippo.prototype.version>
   </properties>
 
   <repositories>
@@ -82,6 +83,27 @@
       <name>Hippo maven 2 repository.</name>
       <url>http://maven.onehippo.com/maven2/</url>
     </repository>
+    <repository>
+    	<id>sf-hippo-prototype-repo</id>
+		<url>http://svn.code.sf.net/p/hippoprototype/code/maven2/</url>
+		<releases>
+			<updatePolicy>never</updatePolicy>
+			<enabled>true</enabled>
+		</releases>
+		<snapshots>
+			<enabled>false</enabled>
+		</snapshots>
+    </repository>
+    <repository>
+		<id>openweb-nexus-snapshots</id>
+		<url>https://nexus.open-web.nl/nexus/content/repositories/snapshots/</url>
+		<releases>
+			<enabled>false</enabled>
+		</releases>
+		<snapshots>
+			<enabled>true</enabled>
+		</snapshots>
+	</repository>
   </repositories>
 
   <pluginRepositories>
@@ -162,6 +184,12 @@
 		<artifactId>mysql-connector-java</artifactId>
 		<version>${mysql.connecotr.version}</version>
 		<scope>provided</scope>
+	  </dependency>
+	  
+	  <dependency>
+	  	<groupId>com.tdclighthouse.hippo</groupId>
+	  	<artifactId>hippo-prototype-frontend</artifactId>
+	  	<version>${hippo.prototype.version}</version>
 	  </dependency>
 
     </dependencies>
