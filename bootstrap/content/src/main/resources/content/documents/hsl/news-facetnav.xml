@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node sv:name="news-facetnav" xmlns:sv="http://www.jcp.org/jcr/sv/1.0">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>hippofacnav:facetnavigation</sv:value>
+  </sv:property>
+  <sv:property sv:name="hippo:count" sv:type="Long">
+    <sv:value>3</sv:value>
+  </sv:property>
+  <sv:property sv:name="hippo:docbase" sv:type="String">
+    <sv:value>68657a00-650d-4be1-b773-e4f03f263be2</sv:value>
+  </sv:property>
+  <sv:property sv:multiple="true" sv:name="hippofacnav:facetnodenames" sv:type="String">
+    <sv:value>Type</sv:value>
+    <sv:value>Over</sv:value>
+    <sv:value>Thema</sv:value>
+    <sv:value>Year</sv:value>
+    <sv:value>Month${after:'Year', hide:'Year'}</sv:value>
+  </sv:property>
+  <sv:property sv:multiple="true" sv:name="hippofacnav:facets" sv:type="String">
+    <sv:value>hsl:type</sv:value>
+    <sv:value>hsl:subjecttags</sv:value>
+    <sv:value>hsl:thematags</sv:value>
+    <sv:value>hsl:releaseDate$year</sv:value>
+    <sv:value>hsl:releaseDate$month</sv:value>
+  </sv:property>
+  <sv:property sv:multiple="true" sv:name="hippofacnav:filters" sv:type="String">
+    <sv:value>hippo:availability=live</sv:value>
+    <sv:value>jcr:primaryType=hsl:NewsPage</sv:value>
+    <sv:value>not(hsl:hideFromSearch=true)</sv:value>
+  </sv:property>
+  <sv:property sv:name="hippofacnav:limit" sv:type="Long">
+    <sv:value>100</sv:value>
+  </sv:property>
+  <sv:property sv:name="hippofacnav:skipresultsetfacetnavigationroot" sv:type="Boolean">
+    <sv:value>false</sv:value>
+  </sv:property>
+  <sv:property sv:name="hippofacnav:skipresultsetfacetsavailable" sv:type="Boolean">
+    <sv:value>false</sv:value>
+  </sv:property>
+</sv:node>
