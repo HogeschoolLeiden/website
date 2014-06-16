@@ -29,6 +29,7 @@ import net.sourceforge.mavenhippo.gen.ImportRegistry;
 import net.sourceforge.mavenhippo.gen.SupperClassHandler;
 import net.sourceforge.mavenhippo.gen.annotation.Weight;
 import net.sourceforge.mavenhippo.model.ContentTypeBean;
+import net.sourceforge.mavenhippo.model.ContentTypeBean.ContentTypeException;
 import net.sourceforge.mavenhippo.model.HippoBeanClass;
 import net.sourceforge.mavenhippo.utils.Constants;
 import net.sourceforge.mavenhippo.utils.NamespaceUtils;
@@ -36,9 +37,10 @@ import net.sourceforge.mavenhippo.utils.NamespaceUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.content.beans.standard.HippoItem;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.tdclighthouse.prototype.beans.TdcDocument;
-
 
 /**
  * @author Ebrahim Aharpour
@@ -47,36 +49,50 @@ import com.tdclighthouse.prototype.beans.TdcDocument;
 @Weight(value = -10.0)
 public class PrototypeSupperClassHandler extends SupperClassHandler {
 
-	public PrototypeSupperClassHandler(Map<String, HippoBeanClass> beansOnClassPath,
-			Map<String, HippoBeanClass> beansInProject, ClassLoader classLoader, Set<String> namespaces,
+	private static Logger LOG = LoggerFactory
+			.getLogger(PrototypeSupperClassHandler.class);
+
+	public PrototypeSupperClassHandler(
+			Map<String, HippoBeanClass> beansOnClassPath,
+			Map<String, HippoBeanClass> beansInProject,
+			ClassLoader classLoader, Set<String> namespaces,
 			Map<String, ContentTypeBean> mixins) {
 		super(beansOnClassPath, beansInProject, classLoader, namespaces, mixins);
 	}
 
 	@Override
-	public ClassReference getSupperClass(ContentTypeBean contentTypeBean, ImportRegistry importRegistry,
-			String packageName) {
+	public ClassReference getSupperClass(ContentTypeBean contentTypeBean,
+			ImportRegistry importRegistry, String packageName) {
 		ClassReference result = null;
-		if (contentTypeBean.isMixin()) {
-			result = new ClassReference(HippoItem.class);
-		} else {
-			List<String> supertypes = contentTypeBean.getSupertypes();
-			result = extendsGeneratedBean(packageName, supertypes);
-
-			if (result == null) {
-				result = extendsExistingBeans(result, supertypes);
+		try {
+			if (contentTypeBean.isMixin()) {
+				result = new ClassReference(HippoItem.class);
 			}
-			if (result == null) {
+			if ("hsl:basedocument".equals(contentTypeBean
+					.getFullyQualifiedName())) {
 				result = new ClassReference(TdcDocument.class);
+			} else {
+				List<String> supertypes = contentTypeBean.getSupertypes();
+				result = extendsGeneratedBean(packageName, supertypes);
+
+				if (result == null) {
+					result = extendsExistingBeans(result, supertypes);
+				}
+				if (result == null) {
+					result = new ClassReference(TdcDocument.class);
+				}
 			}
+
+			importRegistry.register(result);
+		} catch (ContentTypeException e) {
+			LOG.debug(e.getMessage(), e);
 		}
-		
-		importRegistry.register(result);
 		return result;
 	}
 
 	@SuppressWarnings("unchecked")
-	private ClassReference extendsExistingBeans(ClassReference result, List<String> supertypes) {
+	private ClassReference extendsExistingBeans(ClassReference result,
+			List<String> supertypes) {
 		SortedSet<Class<? extends HippoBean>> supperClasses = new TreeSet<Class<? extends HippoBean>>(
 				classExtensionComparator);
 		for (String superType : supertypes) {
@@ -84,7 +100,8 @@ public class PrototypeSupperClassHandler extends SupperClassHandler {
 				Class<TdcDocument> tdcDocumentClass = TdcDocument.class;
 				supperClasses.add(tdcDocumentClass);
 			} else if (getBeansOnClassPath().containsKey(superType)) {
-				HippoBeanClass hippoBeanClass = getBeansOnClassPath().get(superType);
+				HippoBeanClass hippoBeanClass = getBeansOnClassPath().get(
+						superType);
 				Class<?> clazz = getClass(hippoBeanClass);
 				supperClasses.add((Class<? extends HippoBean>) clazz);
 			}
@@ -95,12 +112,15 @@ public class PrototypeSupperClassHandler extends SupperClassHandler {
 		return result;
 	}
 
-	private ClassReference extendsGeneratedBean(String packageName, List<String> supertypes) {
+	private ClassReference extendsGeneratedBean(String packageName,
+			List<String> supertypes) {
 		ClassReference result = null;
 		for (String superType : supertypes) {
 			String ns = NamespaceUtils.getNamespace(superType);
-			if (StringUtils.isNotBlank(ns) && getNamespaces().contains(ns) && !getMixins().containsKey(superType)) {
-				result = new ClassReference(getClassName(packageName, superType));
+			if (StringUtils.isNotBlank(ns) && getNamespaces().contains(ns)
+					&& !getMixins().containsKey(superType)) {
+				result = new ClassReference(
+						getClassName(packageName, superType));
 				break;
 			}
 		}
@@ -110,7 +130,8 @@ public class PrototypeSupperClassHandler extends SupperClassHandler {
 	private String getClassName(String packageName, String superType) {
 		String result;
 		if (StringUtils.isNotBlank(packageName)) {
-			result = packageName + Constants.Language.PACKAGE_SEPARATOR + getClassNameHandler().getClassName(superType);
+			result = packageName + Constants.Language.PACKAGE_SEPARATOR
+					+ getClassNameHandler().getClassName(superType);
 		} else {
 			result = getClassNameHandler().getClassName(superType);
 		}
@@ -119,7 +140,8 @@ public class PrototypeSupperClassHandler extends SupperClassHandler {
 
 	private Class<?> getClass(HippoBeanClass hippoBeanClass) {
 		try {
-			return Class.forName(hippoBeanClass.getFullyQualifiedName(), true, getClassLoader());
+			return Class.forName(hippoBeanClass.getFullyQualifiedName(), true,
+					getClassLoader());
 		} catch (ClassNotFoundException e) {
 			throw new RuntimeException(e);
 		}
@@ -128,7 +150,8 @@ public class PrototypeSupperClassHandler extends SupperClassHandler {
 	private Comparator<Class<? extends HippoBean>> classExtensionComparator = new Comparator<Class<? extends HippoBean>>() {
 
 		@Override
-		public int compare(Class<? extends HippoBean> o1, Class<? extends HippoBean> o2) {
+		public int compare(Class<? extends HippoBean> o1,
+				Class<? extends HippoBean> o2) {
 			int result;
 			if (o1 != null && o2 == null) {
 				result = 1;
@@ -141,7 +164,8 @@ public class PrototypeSupperClassHandler extends SupperClassHandler {
 			} else if (o2.isAssignableFrom(o1)) {
 				result = -1;
 			} else {
-				throw new IllegalArgumentException("the given arguments are not comparable");
+				throw new IllegalArgumentException(
+						"the given arguments are not comparable");
 			}
 
 			return result;
@@ -149,4 +173,3 @@ public class PrototypeSupperClassHandler extends SupperClassHandler {
 	};
 
 }
-
