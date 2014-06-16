@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>nl.hsleiden</groupId>
+		<artifactId>website</artifactId>
+		<version>1.2-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>website-maven</artifactId>
+
+	<name>Website van Hogeschool Leiden Hippo Maven Plugin-plugins</name>
+	<url>http://maven.apache.org</url>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.aharpour.ebrahim</groupId>
+			<artifactId>hippo-maven-plugin</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.tdclighthouse.hippo</groupId>
+			<artifactId>hippo-prototype-frontend</artifactId>
+		</dependency>
+	</dependencies>
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/java</directory>
+				<filtering>false</filtering>
+				<includes>
+					<include>**/*.properties</include>
+					<include>**/*.ftl</include>
+				</includes>
+			</resource>
+		</resources>
+	</build>
+
+</project>

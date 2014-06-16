@@ -22,29 +22,29 @@
     DO NOT remove these tags but instead fill them in appropriately as needed, 
     UNLESS the inherited values are valid for your project.
   -->
-  <url />
-  <inceptionYear />
-  <organization />
+  <url/>
+  <inceptionYear/>
+  <organization/>
   <licenses>
-    <license />
+    <license/>
   </licenses>
   <mailingLists>
-    <mailingList />
+    <mailingList/>
   </mailingLists>
   <developers>
-    <developer />
+    <developer/>
   </developers>
   <contributors>
-    <contributor />
+    <contributor/>
   </contributors>
-  <issueManagement />
+  <issueManagement/>
   <scm>
     <connection>scm:git:git@github.com:HogeschoolLeiden/website.git</connection>
     <developerConnection>scm:git:git@github.com:HogeschoolLeiden/website.git</developerConnection>
     <url>https://github.com/HogeschoolLeiden/website</url>
     <tag>HEAD</tag>
   </scm>
-  <ciManagement />
+  <ciManagement/>
   <distributionManagement>
     <repository>
       <id>openweb-nexus-releases</id>
@@ -75,6 +75,7 @@
     <maven.plugins.filesync.version>1.0.0</maven.plugins.filesync.version>
 	<mysql.connecotr.version>5.1.30</mysql.connecotr.version>
 	<hippo.prototype.version>7.9.35-SNAPSHOT</hippo.prototype.version>
+	<hippo.maven.plugin.version>0.1.1</hippo.maven.plugin.version>
   </properties>
 
   <repositories>
@@ -191,6 +192,13 @@
 	  	<artifactId>hippo-prototype-frontend</artifactId>
 	  	<version>${hippo.prototype.version}</version>
 	  </dependency>
+	  
+	  <dependency>
+    	<groupId>com.aharpour.ebrahim</groupId>
+        <artifactId>hippo-maven-plugin</artifactId>
+        <version>${hippo.maven.plugin.version}</version>
+        <scope>provided</scope>
+    </dependency>
 
     </dependencies>
   </dependencyManagement>
@@ -217,7 +225,7 @@
         <plugin>
           <groupId>com.aharpour.ebrahim</groupId>
           <artifactId>hippo-maven-plugin</artifactId>
-          <version>0.1.0</version>
+          <version>${hippo.maven.plugin.version}</version>
         </plugin>
       </plugins>
     </pluginManagement>
@@ -291,6 +299,7 @@
       <modules>
         <module>bootstrap</module>
         <module>cms</module>
+		<module>maven</module>
         <module>site</module>
         <module>essentials</module>
       </modules>
@@ -301,6 +310,7 @@
     	<modules>
 	      <module>bootstrap</module>
 	      <module>cms</module>
+		  <module>maven</module>
 	      <module>site</module>
 	      <module>essentials</module>
 	      <module>release</module>
