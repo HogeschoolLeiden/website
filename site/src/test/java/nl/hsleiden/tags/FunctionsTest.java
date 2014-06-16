@@ -3,7 +3,7 @@ package nl.hsleiden.tags;
 import static org.easymock.EasyMock.*;
 
 import hslbeans.WebPage;
-import nl.hsleiden.beans.BaseDocument;
+import hslbeans.Basedocument;
 import nl.hsleiden.channels.WebsiteInfo;
 
 import org.hippoecm.hst.configuration.hosting.Mount;
@@ -24,7 +24,7 @@ public class FunctionsTest {
     
     @Test
     public void isSubclassOfWebPageFailure() {
-        boolean actual = Functions.isSubclassOfWebPage(new BaseDocument());
+        boolean actual = Functions.isSubclassOfWebPage(new Basedocument());
         Assert.assertEquals(false, actual);
     }
 

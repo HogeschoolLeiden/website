@@ -217,4 +217,39 @@
       </sv:node>
     </sv:node>
   </sv:node>
+  <sv:node sv:name="genericfacetedoverviewcommon">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:component</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>26327364-3e5a-4ccd-8014-f812498ad7f7</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:referencecomponent" sv:type="String">
+      <sv:value>hst:pages/standardcommon</sv:value>
+    </sv:property>
+    <sv:node sv:name="main">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:component</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>72010949-8a69-4c76-a830-f5d4831dab19</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentclassname" sv:type="String">
+        <sv:value>nl.hsleiden.components.GenericFacetedOverview</sv:value>
+      </sv:property>
+      <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
+        <sv:value>contentBeanPath</sv:value>
+        <sv:value>defaultPageSize</sv:value>
+        <sv:value>labelPaths</sv:value>
+      </sv:property>
+      <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
+        <sv:value>${contentBeanPath}</sv:value>
+        <sv:value>${defaultPageSize}</sv:value>
+        <sv:value>${labelPaths}</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:template" sv:type="String">
+        <sv:value>newsoverviewpage.main</sv:value>
+      </sv:property>
+    </sv:node>
+  </sv:node>
 </sv:node>
