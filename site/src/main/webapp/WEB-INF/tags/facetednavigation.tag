@@ -11,7 +11,7 @@
 
 <%-- <properties:property var="facetnavtitle" name="facet.navigation.title" documentPath="labels"/> --%>
 <c:set var="facetnavtitle" value="refine results:"/>
-<c:out value="${facetnavtitle}"/>
+<%-- <c:out value="${facetnavtitle}"/> --%>
 
 <div id="searchresult-category-container">
 	<c:if test="${facetnav.count gt 0}">
