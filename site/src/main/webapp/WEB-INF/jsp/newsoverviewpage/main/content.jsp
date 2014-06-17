@@ -5,7 +5,7 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="hst" uri="http://www.hippoecm.org/jsp/hst/core"%>
 <%@ taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml"%>
-<%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
+<%@ taglib prefix="opw" uri="http://open-web.nl/hippo/prototype"%>
 
 <c:if test="$tag:isSubclassOfWebPage(document)}">
 		<div class="inner">
@@ -32,5 +32,5 @@
 </c:forEach>
 
 <div class="paginator-style">
-	<tag:simplepaginator paginator="${paginator}"/> 
+	<opw:simplepaginator paginator="${paginator}"/>
 </div>

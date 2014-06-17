@@ -14,7 +14,7 @@
       <sv:value>f3c77952-482d-420d-a4f7-7cea05e525d9</sv:value>
     </sv:property>
     <sv:property sv:name="hst:componentclassname" sv:type="String">
-      <sv:value>nl.hsleiden.components.base.Detail</sv:value>
+      <sv:value>com.tdclighthouse.prototype.components.Detail</sv:value>
     </sv:property>
     <sv:property sv:name="hst:template" sv:type="String">
       <sv:value>layout.webpage</sv:value>
@@ -37,7 +37,7 @@
           <sv:value>1f2c1050-6d92-4370-bf3f-7912140e3faa</sv:value>
         </sv:property>
         <sv:property sv:name="hst:componentclassname" sv:type="String">
-          <sv:value>nl.hsleiden.components.base.Navigation</sv:value>
+          <sv:value>com.tdclighthouse.prototype.components.Navigation</sv:value>
         </sv:property>
         <sv:property sv:name="hst:template" sv:type="String">
           <sv:value>standard.header.mainmenu</sv:value>
@@ -51,7 +51,7 @@
           <sv:value>62bf22ed-e331-4cfa-91a1-7c4593236ca8</sv:value>
         </sv:property>
         <sv:property sv:name="hst:componentclassname" sv:type="String">
-          <sv:value>nl.hsleiden.components.base.SimpleNavigation</sv:value>
+          <sv:value>com.tdclighthouse.prototype.components.SimpleNavigation</sv:value>
         </sv:property>
         <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
           <sv:value>menuName</sv:value>
@@ -129,7 +129,7 @@
           <sv:value>afd74b8b-8e12-409e-a18b-9ac611207cfa</sv:value>
         </sv:property>
         <sv:property sv:name="hst:componentclassname" sv:type="String">
-          <sv:value>nl.hsleiden.components.base.SimpleNavigation</sv:value>
+          <sv:value>com.tdclighthouse.prototype.components.SimpleNavigation</sv:value>
         </sv:property>
         <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
           <sv:value>menuName</sv:value>
@@ -201,15 +201,19 @@
           <sv:value>34dda9c8-5565-4c54-b377-8b453970acdf</sv:value>
         </sv:property>
         <sv:property sv:name="hst:componentclassname" sv:type="String">
-          <sv:value>nl.hsleiden.components.base.GenericOverviewPage</sv:value>
+          <sv:value>com.tdclighthouse.prototype.components.GenericOverviewPage</sv:value>
         </sv:property>
         <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
           <sv:value>showTypes</sv:value>
           <sv:value>defaultPageSize</sv:value>
+          <sv:value>sortBy</sv:value>
+          <sv:value>sortOrder</sv:value>
         </sv:property>
         <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
           <sv:value>hslbeans.NewsPage</sv:value>
           <sv:value>8</sv:value>
+          <sv:value>hsl:releaseDate</sv:value>
+          <sv:value>descending</sv:value>
         </sv:property>
         <sv:property sv:name="hst:template" sv:type="String">
           <sv:value>newsoverviewpage.main.content</sv:value>

@@ -6,6 +6,7 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="hst" uri="http://www.hippoecm.org/jsp/hst/core"%>
 <%@taglib tagdir="/WEB-INF/tags" prefix="tag" %>
+<%@ taglib prefix="opw" uri="http://open-web.nl/hippo/prototype"%>
 
 <%@ attribute name="position" type="java.lang.String" rtexprvalue="true" required="true"%>
 <%@ attribute name="image" type="hslbeans.ParagraphImageCompound" rtexprvalue="true" required="true"%>
