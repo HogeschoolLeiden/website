@@ -13,6 +13,7 @@
     <sv:value>Type</sv:value>
     <sv:value>Over</sv:value>
     <sv:value>Thema</sv:value>
+    <sv:value>Periode</sv:value>
     <sv:value>Year</sv:value>
     <sv:value>Month${after:'Year', hide:'Year'}</sv:value>
   </sv:property>
@@ -20,6 +21,7 @@
     <sv:value>hsl:type</sv:value>
     <sv:value>hsl:subjecttags</sv:value>
     <sv:value>hsl:thematags</sv:value>
+    <sv:value>hsl:releaseDate$[{name:'deze week', resolution:'week', begin:-1, end:0}, {name:'binnen 30 dagen', resolution:'day', begin:0, end:30}, {name:'binnen 6 maanden', resolution:'day', begin:0, end:183}]</sv:value> 
     <sv:value>hsl:releaseDate$year</sv:value>
     <sv:value>hsl:releaseDate$month</sv:value>
   </sv:property>
