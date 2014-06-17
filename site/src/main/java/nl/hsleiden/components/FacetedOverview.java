@@ -6,7 +6,7 @@ import com.tdclighthouse.prototype.components.MonolithicFacetedOverview;
 import com.tdclighthouse.prototype.componentsinfo.FacetedOverviewPageInfo;
 
 @ParametersInfo(type = FacetedOverviewPageInfo.class)
-public class GenericFacetedOverview extends MonolithicFacetedOverview {
+public class FacetedOverview extends MonolithicFacetedOverview {
 	
 	@Override
 	protected String enhanceQuery(String query) {
