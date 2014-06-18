@@ -13,6 +13,16 @@
   <name>Website van Hogeschool Leiden Integration</name>
   <description>Website van Hogeschool Leiden Integration</description>
   <artifactId>website-integration</artifactId>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>xml-apis</groupId>
+        <artifactId>xml-apis</artifactId>
+        <version>1.4.01</version>
+        <scope>test</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
