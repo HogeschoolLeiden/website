@@ -66,7 +66,7 @@
 		<jstl.version>1.1.2</jstl.version>
 		<taglibs.version>1.1.2</taglibs.version>
 		<commons.lang.version>2.6</commons.lang.version>
-		<junit.version>4.10</junit.version>
+		<junit.version>4.11</junit.version>
 		<easymock.version>3.1</easymock.version>
 		<freemarker.version>2.3.18</freemarker.version>
 
@@ -75,6 +75,8 @@
 		<mysql.connecotr.version>5.1.30</mysql.connecotr.version>
 		<hippo.prototype.version>7.9.35-SNAPSHOT</hippo.prototype.version>
 		<hippo.maven.plugin.version>0.1.1</hippo.maven.plugin.version>
+        <cucumber.version>1.1.7</cucumber.version>
+        <webdriver.version>2.42.2</webdriver.version>
 	</properties>
 
 	<repositories>
@@ -215,7 +217,32 @@
 				<version>${hippo.maven.plugin.version}</version>
 				<scope>provided</scope>
 			</dependency>
-
+      
+            <!-- integration testing dependencies -->
+            <dependency>
+              <groupId>org.seleniumhq.selenium</groupId>
+              <artifactId>selenium-server</artifactId>
+              <version>${webdriver.version}</version>
+              <scope>test</scope>
+            </dependency>
+        
+            <dependency>
+              <groupId>info.cukes</groupId>
+              <artifactId>cucumber-java</artifactId>
+              <version>${cucumber.version}</version>
+            </dependency>
+            <dependency>
+              <groupId>info.cukes</groupId>
+              <artifactId>cucumber-picocontainer</artifactId>
+              <version>${cucumber.version}</version>
+              <scope>test</scope>
+            </dependency>
+            <dependency>
+              <groupId>info.cukes</groupId>
+              <artifactId>cucumber-junit</artifactId>
+              <version>${cucumber.version}</version>
+              <scope>test</scope>
+            </dependency>
 		</dependencies>
 	</dependencyManagement>
 
@@ -330,6 +357,7 @@
 				<module>site</module>
 				<module>essentials</module>
 				<module>release</module>
+                <module>integration</module>
 			</modules>
 		</profile>
 
