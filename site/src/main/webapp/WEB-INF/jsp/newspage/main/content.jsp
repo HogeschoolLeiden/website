@@ -38,7 +38,7 @@
 
 	         <tag:flexibleblock content="${document.flexibleblock }"/>
 
-			 <c:set var="path" value="${pageContext.request.pathInfo }" />
+             <tag:toolbox document="${document }" />
 		  </div>
 	   </article>
     </c:otherwise>
