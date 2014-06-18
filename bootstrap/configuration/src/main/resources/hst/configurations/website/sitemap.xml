@@ -6,28 +6,6 @@
   <sv:property sv:name="jcr:uuid" sv:type="String">
     <sv:value>18ff5c42-da9c-480c-b854-ee84adc0c233</sv:value>
   </sv:property>
-  <sv:node sv:name="_any_" xmlns:sv="http://www.jcp.org/jcr/sv/1.0">
-    <sv:property sv:name="jcr:primaryType" sv:type="Name">
-      <sv:value>hst:sitemapitem</sv:value>
-    </sv:property>
-    <sv:property sv:name="jcr:uuid" sv:type="String">
-      <sv:value>3f9f42c9-f7dc-47fa-8146-d85fefb27cbe</sv:value>
-    </sv:property>
-    <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
-      <sv:value>hst:pages/standard</sv:value>
-    </sv:property>
-    <sv:property sv:multiple="true"
-      sv:name="hst:componentconfigurationmappingnames" sv:type="String">
-      <sv:value>hsl:NewsPage</sv:value>
-    </sv:property>
-    <sv:property sv:multiple="true"
-      sv:name="hst:componentconfigurationmappingvalues" sv:type="String">
-      <sv:value>hst:pages/newspage</sv:value>
-    </sv:property>
-    <sv:property sv:name="hst:relativecontentpath" sv:type="String">
-      <sv:value>${1}</sv:value>
-    </sv:property>
-  </sv:node>
   <sv:node sv:name="root">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:sitemapitem</sv:value>
@@ -40,6 +18,30 @@
     </sv:property>
     <sv:property sv:name="hst:relativecontentpath" sv:type="String">
       <sv:value>home</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="_any_">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:sitemapitem</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>3f9f42c9-f7dc-47fa-8146-d85fefb27cbe</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+      <sv:value>hst:pages/pagenotfound</sv:value>
+    </sv:property>
+    <sv:property sv:multiple="true"
+      sv:name="hst:componentconfigurationmappingnames" sv:type="String">
+      <sv:value>hsl:NewsPage</sv:value>
+      <sv:value>hsl:WebPage</sv:value>
+    </sv:property>
+    <sv:property sv:multiple="true"
+      sv:name="hst:componentconfigurationmappingvalues" sv:type="String">
+      <sv:value>hst:pages/newspage</sv:value>
+      <sv:value>hst:pages/standard</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+      <sv:value>${1}</sv:value>
     </sv:property>
   </sv:node>
   <sv:node sv:name="actueel">
@@ -55,7 +57,7 @@
     <sv:property sv:name="hst:relativecontentpath" sv:type="String">
       <sv:value>actueel/actueel</sv:value>
     </sv:property>
-    <sv:node sv:name="nieuws" xmlns:sv="http://www.jcp.org/jcr/sv/1.0">
+    <sv:node sv:name="nieuws">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:sitemapitem</sv:value>
       </sv:property>

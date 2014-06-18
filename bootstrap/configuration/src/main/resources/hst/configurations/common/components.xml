@@ -3,9 +3,15 @@
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>hst:components</sv:value>
   </sv:property>
+  <sv:property sv:name="jcr:uuid" sv:type="String">
+    <sv:value>5dc90e1f-16cd-41c3-8fa6-fb980dac1c14</sv:value>
+  </sv:property>
   <sv:node sv:name="content">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:component</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>3305227b-6486-432e-9901-68ffdb0bc78c</sv:value>
     </sv:property>
     <sv:property sv:name="hst:componentclassname" sv:type="String">
       <sv:value>com.tdclighthouse.prototype.components.Detail</sv:value>
@@ -18,11 +24,28 @@
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:component</sv:value>
     </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>6bf0e633-81c7-4d41-a204-783072eb7c8f</sv:value>
+    </sv:property>
     <sv:property sv:name="hst:componentclassname" sv:type="String">
       <sv:value>nl.hsleiden.components.Header</sv:value>
     </sv:property>
     <sv:property sv:name="hst:template" sv:type="String">
       <sv:value>standard.header</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="notfound">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:component</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>fc8b20a2-e760-405a-a895-210be119ce3a</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:componentclassname" sv:type="String">
+      <sv:value>nl.hsleiden.components.NotFound</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:template" sv:type="String">
+      <sv:value>notfound.main.content</sv:value>
     </sv:property>
   </sv:node>
 </sv:node>
