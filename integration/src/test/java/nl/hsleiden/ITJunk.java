@@ -3,7 +3,7 @@ package nl.hsleiden;
 
 
 
-public class Test {
+public class ITJunk {
 
 	@org.junit.Test
 	public void test() {

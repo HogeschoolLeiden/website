@@ -18,9 +18,49 @@
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
     </dependency>
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-server</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>info.cukes</groupId>
+      <artifactId>cucumber-java</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>info.cukes</groupId>
+      <artifactId>cucumber-picocontainer</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>info.cukes</groupId>
+      <artifactId>cucumber-junit</artifactId>
+    </dependency>
   </dependencies>
   <build>
     <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-failsafe-plugin</artifactId>
+        <version>2.17</version>
+        <executions>
+          <execution>
+            <id>failsafe-it</id>
+            <phase>integration-test</phase>
+            <goals>
+              <goal>integration-test</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>failsafe-verify</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>verify</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <skipTests>false</skipTests>
+        </configuration>
+      </plugin>
       <plugin>
         <groupId>org.codehaus.cargo</groupId>
         <artifactId>cargo-maven2-plugin</artifactId>
@@ -44,10 +84,16 @@
           </execution>
         </executions>
         <configuration>
-
           <configuration>
             <properties>
               <catalina.servlet.uriencoding>UTF-8</catalina.servlet.uriencoding>
+              <cargo.jvmargs>-XX:PermSize=128m -XX:MaxPermSize=256m</cargo.jvmargs>
+              <cargo.servlet.uriencoding>UTF-8</cargo.servlet.uriencoding>
+              <cargo.remote.username>admin</cargo.remote.username>
+              <cargo.remote.password>admin</cargo.remote.password>
+              <cargo.servlet.port>9207</cargo.servlet.port>
+              <cargo.tomcat.ajp.port>9475</cargo.tomcat.ajp.port>
+              <cargo.rmi.port>9495</cargo.rmi.port>
             </properties>
             <configfiles>
               <configfile>
@@ -78,7 +124,7 @@
               <derby.stream.error.file>${project.parent.basedir}/target/derby.log</derby.stream.error.file>
               <log4j.configuration>file:${project.parent.basedir}/release/conf/log4j-dev.xml</log4j.configuration>
               <rebel.log4j-plugin>true</rebel.log4j-plugin>
-              <!-- enables auto export: -->
+              enables auto export:
               <project.basedir>${project.basedir}</project.basedir>
               <repo.base.path>${project.basedir}</repo.base.path>
               <repo.path>${project.build.directory}/storage</repo.path>
@@ -145,29 +191,8 @@
           </container>
         </configuration>
       </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <configuration>
-          <!-- turning off maven-surefire-plugin during the "test" phase -->
-          <skip>true</skip>
-        </configuration>
-        <executions>
-          <execution>
-            <id>surefire-it</id>
-            <phase>integration-test</phase>
-            <goals>
-              <goal>test</goal>
-            </goals>
-            <!-- turning on maven-surefire-plugin for the "integration-test" -->
-            <!-- Note : You cannot have unit tests and integration tests 
-              in the same Maven project. -->
-            <configuration>
-              <skip>false</skip>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
+
+
     </plugins>
   </build>
 
