@@ -15,14 +15,6 @@
 		<path>/WEB-INF/tags/pagenotfound.tag</path>
 	</tag-file>
     <tag-file>
-      <name>simplepaginator</name>
-      <path>/WEB-INF/tags/simplepaginator.tag</path>
-    </tag-file>
-    <tag-file>
-      <name>add-query-param</name>
-      <path>/WEB-INF/tags/add-query-param.tag</path>
-    </tag-file>
-    <tag-file>
       <name>flexibleblock</name>
       <path>/WEB-INF/tags/flexibleblock.tag</path>
     </tag-file>
@@ -41,6 +33,18 @@
     <tag-file>
       <name>headerImage</name>
       <path>/WEB-INF/tags/headerImage.tag</path>
+    </tag-file>
+    <tag-file>
+      <name>resultsummary</name>
+      <path>/WEB-INF/tags/resultsummary.tag</path>
+    </tag-file>
+    <tag-file>
+      <name>facetednavigation</name>
+      <path>/WEB-INF/tags/facetednavigation.tag</path>
+    </tag-file>
+    <tag-file>
+      <name>toolbox</name>
+      <path>/WEB-INF/tags/toolbox.tag</path>
     </tag-file>
     
 	
@@ -62,6 +66,12 @@
       <name>contextPath</name>
       <function-class>nl.hsleiden.utils.HslUtils</function-class>
       <function-signature>java.lang.String getContextPath(org.hippoecm.hst.core.component.HstRequest)</function-signature>
+    </function>
+    
+    <function>
+      <name>escapeEcmaScript</name>
+      <function-class>org.apache.commons.lang3.StringEscapeUtils</function-class>
+      <function-signature>java.lang.String escapeEcmaScript(java.lang.String)</function-signature>
     </function>
 
 </taglib>

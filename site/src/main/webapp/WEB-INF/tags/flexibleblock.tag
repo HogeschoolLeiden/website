@@ -4,7 +4,8 @@
 <%@ taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
-<%@taglib tagdir="/WEB-INF/tags" prefix="tag" %>
+<%@ taglib tagdir="/WEB-INF/tags" prefix="tag" %>
+<%@ taglib prefix="opw" uri="http://open-web.nl/hippo/prototype"%>
 
 <%@ attribute name="content" type="java.util.List" rtexprvalue="true" required="true" %>
 <%@ attribute name="flexibleblockid" type="java.lang.String" rtexprvalue="true" required="false" %>

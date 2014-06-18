@@ -6,20 +6,17 @@ public class Constants {
         super();
     }
 
-    public static class Attributes {
-        public static final String DOCUMENT = "document";
+    public static class Attributes extends com.tdclighthouse.prototype.utils.Constants.Attributes{
         public static final String LOGO = "logo";
         public static final String HEADER_NAME = "headerName";
-        public static final String MENU = "menu";
-        public static final String ITEMS = "items";
-        public static final String PAGINATOR = "paginator";
-
+        
         private Attributes() {
             super();
         }
+
     }
 
-    public static class PikcerTypes {
+    public static class PikcerTypes extends com.tdclighthouse.prototype.utils.Constants.PikcerTypes{
         public static final String IMAGE_PICKER = "cms-pickers/images";
 
         private PikcerTypes() {
@@ -27,45 +24,35 @@ public class Constants {
         }
     }
 
-    public static class HstParameters {
-        public static final String CONTENT_BEAN_PATH = "contentBeanPath";
-        public static final String ROOT = "root";
-        public static final String EXPANDED = "expanded";
-        public static final String EXPAND_ONLY_CURRENT_ITEM = "expandOnlyCurrentItem";
+    public static class HstParameters extends com.tdclighthouse.prototype.utils.Constants.HstParameters {
 
         private HstParameters() {
             super();
         }
     }
 
-    public static class Values {
-        public static final String TRUE = "true";
-        public static final String DESCENDING = "descending";
+    public static class Values extends com.tdclighthouse.prototype.utils.Constants.Values {
 
         private Values() {
             super();
         }
     }
     
-    public static class Parameters {
-        public static final String PAGE_SIZE = "size";
-        public static final String PAGE = "page";
+    public static class Parameters extends com.tdclighthouse.prototype.utils.Constants.Parameters {
 
         private Parameters() {
             super();
         }
     }
     
-    public static class FieldName {
-        public static final String TDC_RELEASE_DATE = "hsl:releaseDate";
+    public static class FieldName extends com.tdclighthouse.prototype.utils.Constants.FieldName {
         
         private FieldName() {
             super();
         }
     }
 
-    public static class NodeName {
-        public static final String INDEX = "index";
+    public static class NodeName extends com.tdclighthouse.prototype.utils.Constants.NodeName {
 
         private NodeName() {
             super();

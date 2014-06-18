@@ -5,6 +5,7 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="hst" uri="http://www.hippoecm.org/jsp/hst/core"%>
 <%@taglib tagdir="/WEB-INF/tags" prefix="tag" %>
+<%@ taglib prefix="opw" uri="http://open-web.nl/hippo/prototype"%>
 
 <%@ attribute name="content" rtexprvalue="true" required="true" type="hslbeans.ParagraphCompound" %>
 <c:choose>

@@ -20,6 +20,30 @@
       <sv:value>home</sv:value>
     </sv:property>
   </sv:node>
+  <sv:node sv:name="_any_">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:sitemapitem</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>3f9f42c9-f7dc-47fa-8146-d85fefb27cbe</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+      <sv:value>hst:pages/pagenotfound</sv:value>
+    </sv:property>
+    <sv:property sv:multiple="true"
+      sv:name="hst:componentconfigurationmappingnames" sv:type="String">
+      <sv:value>hsl:NewsPage</sv:value>
+      <sv:value>hsl:WebPage</sv:value>
+    </sv:property>
+    <sv:property sv:multiple="true"
+      sv:name="hst:componentconfigurationmappingvalues" sv:type="String">
+      <sv:value>hst:pages/newspage</sv:value>
+      <sv:value>hst:pages/standard</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+      <sv:value>${1}</sv:value>
+    </sv:property>
+  </sv:node>
   <sv:node sv:name="actueel">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:sitemapitem</sv:value>
@@ -28,7 +52,7 @@
       <sv:value>ad414ff6-8ee9-4bc6-8ed0-cb22ca98059b</sv:value>
     </sv:property>
     <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
-      <sv:value>hst:pages/standard</sv:value>
+      <sv:value>hst:pages/landingpage</sv:value>
     </sv:property>
     <sv:property sv:name="hst:relativecontentpath" sv:type="String">
       <sv:value>actueel/actueel</sv:value>
@@ -41,16 +65,17 @@
         <sv:value>58e478cd-f703-4fe5-a23e-f83f82ac982c</sv:value>
       </sv:property>
       <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
-        <sv:value>hst:pages/newsoverview</sv:value>
+        <sv:value>hst:pages/facetedoverview</sv:value>
       </sv:property>
       <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
         <sv:value>contentBeanPath</sv:value>
+        <sv:value>defaultPageSize</sv:value>
+        <sv:value>labelPaths</sv:value>
       </sv:property>
       <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
-        <sv:value>actueel/nieuws</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:refId" sv:type="String">
-        <sv:value>news</sv:value>
+        <sv:value>actueel/nieuws/news-facetnav</sv:value>
+        <sv:value>2</sv:value>
+        <sv:value>/content/documents/hsl/configuratie/label-paths</sv:value>
       </sv:property>
       <sv:property sv:name="hst:relativecontentpath" sv:type="String">
         <sv:value>actueel/nieuws/nieuws</sv:value>
@@ -61,6 +86,30 @@
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>63cbc551-48d5-4478-b83e-398fc17f05d9</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+          <sv:value>hst:pages/facetedoverview</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
+          <sv:value>contentBeanPath</sv:value>
+          <sv:value>defaultPageSize</sv:value>
+          <sv:value>labelPaths</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
+          <sv:value>actueel/nieuws/nieuws</sv:value>
+          <sv:value>2</sv:value>
+          <sv:value>/content/documents/hsl/configuratie/label-paths</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+          <sv:value>actueel/nieuws/news-facetnav/${1}</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="_any_.html">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:sitemapitem</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>40178418-7663-44db-89b7-e36f5de3896d</sv:value>
         </sv:property>
         <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
           <sv:value>hst:pages/newspage</sv:value>

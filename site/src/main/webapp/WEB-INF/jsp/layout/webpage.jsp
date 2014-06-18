@@ -7,6 +7,7 @@
 <%@ taglib prefix="hst" uri="http://www.hippoecm.org/jsp/hst/core"%>
 <%@ taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml"%>
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
+<%@ taglib prefix="opw" uri="http://open-web.nl/hippo/prototype"%>
 
 <html lang="${pageContext.request.locale.language}">
 <head>
@@ -49,7 +50,9 @@
 
 <body>
 	<hst:include ref="header" />
-    <tag:headerImage document="${document}"/>
+    <c:if test="${tag:isSubclassOfWebPage(document)}">
+      <tag:headerImage document="${document}"/>
+    </c:if>
 	<hst:include ref="main" />
 	<hst:include ref="footer" />
 	<hst:headContributions categoryIncludes="scripts" xhtml="true" />

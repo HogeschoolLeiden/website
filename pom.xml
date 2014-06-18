@@ -80,6 +80,18 @@
 	</properties>
 
 	<repositories>
+        <repository>
+          <id>sf-hst-mixin-support</id>
+          <url>http://svn.code.sf.net/p/hstmixinsupport/code/maven2/</url>
+          <name>Source forge HST mixin support module</name>
+          <releases>
+            <updatePolicy>never</updatePolicy>
+            <checksumPolicy>fail</checksumPolicy>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </repository>
 		<repository>
 			<id>sf-hippo-maven-plugin-repo</id>
 			<name>Hippo maven plugin repository.</name>

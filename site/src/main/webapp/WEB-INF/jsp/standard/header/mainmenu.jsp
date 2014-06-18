@@ -5,7 +5,6 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="hst" uri="http://www.hippoecm.org/jsp/hst/core"%>
 <%@ taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml"%>
-<%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 
 <ul class="nav mainMenuLink">
 	<c:forEach items="${menu.menuItems}" var="siteMenuItem" varStatus="step">
