@@ -18,7 +18,7 @@
 			<tag:paragraphblock content="${block}"/>
             <div class="hr"><hr /></div>
 		</c:when>
-		<c:when test="${block['class'].name == 'hslbeans.ImageCompound' }">
+		<c:when test="${block['class'].name == 'hslbeans.Image' }">
 			<tag:imageblock content="${block }"/>
       		<div class="hr"><hr /></div>
 		</c:when>

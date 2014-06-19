@@ -8,7 +8,7 @@
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 <%@ taglib prefix="opw" uri="http://open-web.nl/hippo/prototype"%>
 
-<%@ attribute name="content" rtexprvalue="true" required="true" type="hslbeans.ImageCompound" %>
+<%@ attribute name="content" rtexprvalue="true" required="true" type="hslbeans.Image" %>
 
 <c:if test="${not empty document.headerImage }">
   <c:set var="imageTag">
