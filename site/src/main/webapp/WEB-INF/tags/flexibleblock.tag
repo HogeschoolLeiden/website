@@ -16,6 +16,7 @@
 	<c:choose>
 		<c:when test="${block['class'].name == 'hslbeans.ParagraphCompound' }">
 			<tag:paragraphblock content="${block}"/>
+            <div class="hr"><hr /></div>
 		</c:when>
 		<c:when test="${block['class'].name == 'hslbeans.ImageCompound' }">
 			<tag:imageblock content="${block }"/>
@@ -23,6 +24,10 @@
 		</c:when>
 		<c:when test="${block['class'].name == 'nl.hsleiden.beans.YoutubeCompound' }">
 			<tag:youtubeblock content="${block }"/>
+      		<div class="hr"><hr /></div>
+		</c:when>
+		<c:when test="${block['class'].name == 'hslbeans.RelatedAssetsCompound' }">
+			<tag:downloads content="${block }"/>
       		<div class="hr"><hr /></div>
 		</c:when>
 	</c:choose>

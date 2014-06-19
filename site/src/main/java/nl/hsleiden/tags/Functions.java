@@ -1,12 +1,14 @@
 package nl.hsleiden.tags;
 
+import hslbeans.WebPage;
+
 import javax.servlet.http.HttpServletRequest;
 
-import hslbeans.WebPage;
 import nl.hsleiden.channels.WebsiteInfo;
 
 import org.hippoecm.hst.configuration.hosting.Mount;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
+import org.hippoecm.hst.content.beans.standard.HippoResource;
 import org.hippoecm.hst.core.component.HstRequest;
 
 public class Functions {
@@ -29,6 +31,12 @@ public class Functions {
         if (hippoBean instanceof WebPage) {
             result = true;
         }
+        return result;
+    }
+    
+    public static String getAssetTitle(HippoResource asset) {
+        String result = asset.getParentBean().getPath();
+        result = result.substring(result.lastIndexOf("/")+1);
         return result;
     }
 }
