@@ -22,7 +22,7 @@
 			<tag:imageblock content="${block }"/>
       		<div class="hr"><hr /></div>
 		</c:when>
-		<c:when test="${block['class'].name == 'nl.hsleiden.beans.YoutubeCompound' }">
+		<c:when test="${block['class'].name == 'nl.hsleiden.beans.Youtube' }">
 			<tag:youtubeblock content="${block }"/>
       		<div class="hr"><hr /></div>
 		</c:when>
