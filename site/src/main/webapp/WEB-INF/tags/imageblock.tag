@@ -10,7 +10,7 @@
 
 <%@ attribute name="content" rtexprvalue="true" required="true" type="hslbeans.Image" %>
 
-<c:if test="${not empty document.headerImage }">
+<c:if test="${not empty content.image }">
   <c:set var="imageTag">
     <figure class="fexibleblock image">
       <img  src="<hst:link hippobean="${content.image.wideImage }" />" 
