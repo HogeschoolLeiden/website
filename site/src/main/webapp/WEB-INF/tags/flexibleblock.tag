@@ -26,7 +26,7 @@
 			<tag:youtubeblock content="${block }"/>
       		<div class="hr"><hr /></div>
 		</c:when>
-		<c:when test="${block['class'].name == 'hslbeans.RelatedAssetsCompound' }">
+		<c:when test="${block['class'].name == 'hslbeans.Documents' }">
 			<tag:downloads content="${block }"/>
       		<div class="hr"><hr /></div>
 		</c:when>
