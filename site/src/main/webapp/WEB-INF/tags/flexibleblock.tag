@@ -14,7 +14,7 @@
 
 <c:forEach var="block" items="${content }">
 	<c:choose>
-		<c:when test="${block['class'].name == 'hslbeans.ParagraphCompound' }">
+		<c:when test="${block['class'].name == 'hslbeans.Paragraph' }">
 			<tag:paragraphblock content="${block}"/>
             <div class="hr"><hr /></div>
 		</c:when>
