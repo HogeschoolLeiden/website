@@ -9,7 +9,7 @@
 <%@ taglib prefix="opw" uri="http://open-web.nl/hippo/prototype"%>
 
 <%@ attribute name="position" type="java.lang.String" rtexprvalue="true" required="true"%>
-<%@ attribute name="image" type="hslbeans.ParagraphImageCompound" rtexprvalue="true" required="true"%>
+<%@ attribute name="image" type="hslbeans.ParagraphImage" rtexprvalue="true" required="true"%>
 
 <p class="image ${position }">
   <c:choose>
