@@ -81,6 +81,9 @@
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>a1b59bd8-12aa-4cb3-a2c3-64fb539e9da7</sv:value>
         </sv:property>
+        <sv:property sv:name="hst:componentclassname" sv:type="String">
+          <sv:value>com.tdclighthouse.prototype.components.Navigation</sv:value>
+        </sv:property>
         <sv:property sv:name="hst:template" sv:type="String">
           <sv:value>standard.main.left</sv:value>
         </sv:property>
@@ -184,7 +187,7 @@
       <sv:value>108e67ad-a7c2-4604-b003-25046ab63b6d</sv:value>
     </sv:property>
     <sv:property sv:name="hst:referencecomponent" sv:type="String">
-      <sv:value>hst:pages/standardcommon</sv:value>
+      <sv:value>hst:pages/articlepagecommon</sv:value>
     </sv:property>
     <sv:node sv:name="main">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -204,16 +207,18 @@
           <sv:value>com.tdclighthouse.prototype.components.GenericOverviewPage</sv:value>
         </sv:property>
         <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
+          <sv:value>contentBeanPath</sv:value>
           <sv:value>showTypes</sv:value>
           <sv:value>defaultPageSize</sv:value>
           <sv:value>sortBy</sv:value>
           <sv:value>sortOrder</sv:value>
         </sv:property>
         <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
-          <sv:value>hslbeans.NewsPage</sv:value>
-          <sv:value>8</sv:value>
-          <sv:value>hsl:releaseDate</sv:value>
-          <sv:value>descending</sv:value>
+          <sv:value>${contentBeanPath}</sv:value>
+          <sv:value>${showTypes}</sv:value>
+          <sv:value>${defaultPageSize}</sv:value>
+          <sv:value>${sortBy}</sv:value>
+          <sv:value>${sortOrder}</sv:value>
         </sv:property>
         <sv:property sv:name="hst:template" sv:type="String">
           <sv:value>genericoverviewpage.main.content</sv:value>
@@ -294,7 +299,7 @@
       <sv:value>37815a19-3ccf-46cb-86dd-e52e392bc56e</sv:value>
     </sv:property>
     <sv:property sv:name="hst:referencecomponent" sv:type="String">
-      <sv:value>hst:pages/standardcommon</sv:value>
+      <sv:value>hst:pages/articlepagecommon</sv:value>
     </sv:property>
     <sv:node sv:name="main">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -315,20 +320,6 @@
         </sv:property>
         <sv:property sv:name="hst:referencecomponent" sv:type="String">
           <sv:value>hst:components/content</sv:value>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="left">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hst:component</sv:value>
-        </sv:property>
-        <sv:property sv:name="jcr:uuid" sv:type="String">
-          <sv:value>57e1a951-dbcb-4be1-9893-c616436d09f1</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:componentclassname" sv:type="String">
-          <sv:value>com.tdclighthouse.prototype.components.Navigation</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:template" sv:type="String">
-          <sv:value>landingpage.main.left</sv:value>
         </sv:property>
       </sv:node>
     </sv:node>
@@ -362,6 +353,53 @@
         </sv:property>
         <sv:property sv:name="hst:template" sv:type="String">
           <sv:value>eventpage.main.content</sv:value>
+        </sv:property>
+      </sv:node>
+    </sv:node>
+  </sv:node>
+  <sv:node sv:name="articlepagecommon">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:component</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>37cb48ec-d8f7-437f-af2d-4ef22c25e581</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:referencecomponent" sv:type="String">
+      <sv:value>hst:pages/standardcommon</sv:value>
+    </sv:property>
+    <sv:node sv:name="main">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:component</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>ab6b923c-0bff-427e-8dfb-1c264e7eb575</sv:value>
+      </sv:property>
+      <sv:node sv:name="content">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:component</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>bfb6efa2-d67f-4941-ae57-f7895b384dc4</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencecomponent" sv:type="String">
+          <sv:value>hst:components/content</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:template" sv:type="String">
+          <sv:value>articlepage.main.content</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="left">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:component</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>8acc7875-ed47-44a8-81cf-5f7a9a394641</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:componentclassname" sv:type="String">
+          <sv:value>com.tdclighthouse.prototype.components.Navigation</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:template" sv:type="String">
+          <sv:value>articlepage.main.left</sv:value>
         </sv:property>
       </sv:node>
     </sv:node>
