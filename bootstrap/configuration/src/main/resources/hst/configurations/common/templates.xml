@@ -116,39 +116,30 @@
       <sv:value>jsp/standard/header/servicemenu.jsp</sv:value>
     </sv:property>
   </sv:node>
-  <sv:node sv:name="newspage.main.content">
+  
+  <sv:node sv:name="articlepage.main.content">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:template</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
-      <sv:value>ca068f2f-06c1-4b27-911d-984c66dbc624</sv:value>
+      <sv:value>3be10e99-1125-4ae0-9cfb-ebd1f3727580</sv:value>
     </sv:property>
     <sv:property sv:name="hst:renderpath" sv:type="String">
-      <sv:value>jsp/newspage/main/content.jsp</sv:value>
+      <sv:value>jsp/articlepage/main/content.jsp</sv:value>
     </sv:property>
   </sv:node>
-  <sv:node sv:name="newsoverviewpage.main.content">
+  <sv:node sv:name="articlepage.main.left">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:template</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
-      <sv:value>1fc4717a-ad8b-4d88-8dce-7d18edc565ac</sv:value>
+      <sv:value>822f674f-7e9b-45e7-ace8-f1f55a1d125c</sv:value>
     </sv:property>
     <sv:property sv:name="hst:renderpath" sv:type="String">
-      <sv:value>jsp/newsoverviewpage/main/content.jsp</sv:value>
+      <sv:value>jsp/articlepage/main/left.jsp</sv:value>
     </sv:property>
   </sv:node>
-  <sv:node sv:name="newsoverviewpage.main">
-    <sv:property sv:name="jcr:primaryType" sv:type="Name">
-      <sv:value>hst:template</sv:value>
-    </sv:property>
-    <sv:property sv:name="jcr:uuid" sv:type="String">
-      <sv:value>1798c690-8881-45cb-8ae6-5ac32d3dcf59</sv:value>
-    </sv:property>
-    <sv:property sv:name="hst:renderpath" sv:type="String">
-      <sv:value>jsp/newsoverviewpage/main.jsp</sv:value>
-    </sv:property>
-  </sv:node>
+  
   <sv:node sv:name="notfound.main.content">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:template</sv:value>
@@ -160,6 +151,7 @@
       <sv:value>jsp/notfound/main/content.jsp</sv:value>
     </sv:property>
   </sv:node>
+  
   <sv:node sv:name="landingpage.main.content">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:template</sv:value>
@@ -169,17 +161,6 @@
     </sv:property>
     <sv:property sv:name="hst:renderpath" sv:type="String">
       <sv:value>jsp/landingpage/main/content.jsp</sv:value>
-    </sv:property>
-  </sv:node>
-  <sv:node sv:name="landingpage.main.left">
-    <sv:property sv:name="jcr:primaryType" sv:type="Name">
-      <sv:value>hst:template</sv:value>
-    </sv:property>
-    <sv:property sv:name="jcr:uuid" sv:type="String">
-      <sv:value>b1718876-6752-4864-aa54-122ac260cace</sv:value>
-    </sv:property>
-    <sv:property sv:name="hst:renderpath" sv:type="String">
-      <sv:value>jsp/landingpage/main/left.jsp</sv:value>
     </sv:property>
   </sv:node>
   <sv:node sv:name="landingpage.main">
@@ -193,4 +174,53 @@
       <sv:value>jsp/landingpage/main.jsp</sv:value>
     </sv:property>
   </sv:node>
+  
+  <sv:node sv:name="newspage.main.content">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>ca068f2f-06c1-4b27-911d-984c66dbc624</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/newspage/main/content.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  
+  <sv:node sv:name="eventpage.main.content">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>918ab030-0928-4beb-8912-86f8dc4e6555</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/eventpage/main/content.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  
+  <sv:node sv:name="facetoverviewpage.main">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>c7f0aacb-c950-4589-b1bb-08ba55bf653e</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/facetoverviewpage/main.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  
+  <sv:node sv:name="genericoverviewpage.main.content">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>aa3d0752-ec7b-4670-81ae-a520dd9837ed</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/genericoverviewpage/main/content.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  
 </sv:node>

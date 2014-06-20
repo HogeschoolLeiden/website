@@ -8,7 +8,7 @@
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 <%@ taglib prefix="opw" uri="http://open-web.nl/hippo/prototype"%>
 
-<%@ attribute name="content" rtexprvalue="true" required="true" type="hslbeans.RelatedAssetsCompound" %>
+<%@ attribute name="content" rtexprvalue="true" required="true" type="hslbeans.Documents" %>
 
 <c:if test="${hst:isReadable(content, 'asset') && not empty content.asset[0] }">
 	<div class="mod box closed downloads">
@@ -19,9 +19,9 @@
                   <opw:assettype asset="${doc.asset }" />
                 </c:set>
 				<li class="${filetype }">
-                  <a href="<hst:link hippobean="${doc.asset }" />" target="_blank" onClick="fireGoogleAnalyticsEvent('Download', 'Download', '${tag:escapeEcmaScript(doc.asset.filename)}');">
-                    <c:out value="${tag:getAssetTitle(doc.asset)}"></c:out>
-                     (${filetype }, <opw:assetsize asset="${doc.asset }" /> )
+                  <a href="<hst:link hippobean="${doc.asset }" />" target="_blank" title="<c:out value="${tag:getAssetTitle(doc.asset)}"/>">
+                    <c:out value="${tag:getAssetTitle(doc.asset)}"/>
+                     ( ${filetype }, <opw:assetsize asset="${doc.asset }" /> )
                   </a>
                 </li>
 			</c:forEach>

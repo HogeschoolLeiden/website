@@ -21,13 +21,7 @@
 		   <h2>
 			 <c:out value="${document.subtitle }" escapeXml="true" />
 		   </h2>
-		   <c:if test="${hst:isReadable(document, 'releaseDate.time')}">
-			 <p class="badge badge-info">
-			   <fmt:formatDate value="${document.releaseDate.time}" type="both"
-							dateStyle="medium" timeStyle="short" />
-			 </p>
-		    </c:if>
-		  </header>
+		 </header>
 
 		  <div class="inner">
 			<c:if test="${not empty document.introduction }">
@@ -37,8 +31,8 @@
 			</c:if>
 
 	         <tag:flexibleblock content="${document.flexibleblock }"/>
-
              <tag:toolbox document="${document }" />
+             
 		  </div>
 	   </article>
     </c:otherwise>

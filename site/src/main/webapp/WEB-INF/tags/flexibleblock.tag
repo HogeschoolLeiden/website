@@ -14,7 +14,7 @@
 
 <c:forEach var="block" items="${content }">
 	<c:choose>
-		<c:when test="${block['class'].name == 'hslbeans.ParagraphCompound' }">
+		<c:when test="${block['class'].name == 'hslbeans.Paragraph' }">
 			<tag:paragraphblock content="${block}"/>
             <div class="hr"><hr /></div>
 		</c:when>
@@ -22,11 +22,11 @@
 			<tag:imageblock content="${block }"/>
       		<div class="hr"><hr /></div>
 		</c:when>
-		<c:when test="${block['class'].name == 'nl.hsleiden.beans.YoutubeCompound' }">
+		<c:when test="${block['class'].name == 'nl.hsleiden.beans.Youtube' }">
 			<tag:youtubeblock content="${block }"/>
       		<div class="hr"><hr /></div>
 		</c:when>
-		<c:when test="${block['class'].name == 'hslbeans.RelatedAssetsCompound' }">
+		<c:when test="${block['class'].name == 'hslbeans.Documents' }">
 			<tag:downloads content="${block }"/>
       		<div class="hr"><hr /></div>
 		</c:when>

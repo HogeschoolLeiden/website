@@ -117,7 +117,7 @@
       <sv:value>true</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsl-namespace-compounds-relatedassetscompound"> 
+  <sv:node sv:name="hsl-namespace-compounds-documents"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -125,7 +125,7 @@
       <sv:value>30051.8</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>namespaces/hsl/compounds/relatedassetscompound.xml</sv:value> 
+      <sv:value>namespaces/hsl/compounds/documents.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
       <sv:value>/hippo:namespaces/hsl</sv:value> 
@@ -168,7 +168,7 @@
       <sv:value>true</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsl-namespace-compounds-youtubecompound"> 
+  <sv:node sv:name="hsl-namespace-compounds-youtube"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -176,7 +176,7 @@
       <sv:value>30051.8</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>namespaces/hsl/compounds/youtubecompound.xml</sv:value> 
+      <sv:value>namespaces/hsl/compounds/youtube.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
       <sv:value>/hippo:namespaces/hsl</sv:value> 
@@ -245,6 +245,23 @@
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
       <sv:value>namespaces/hsl/newspage.xml</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentroot" sv:type="String"> 
+      <sv:value>/hippo:namespaces/hsl</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:reloadonstartup" sv:type="Boolean"> 
+      <sv:value>true</sv:value> 
+    </sv:property> 
+  </sv:node>  
+  <sv:node sv:name="hsl-eventpage-namespace"> 
+    <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
+      <sv:value>hippo:initializeitem</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:sequence" sv:type="Double"> 
+      <sv:value>30054</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentresource" sv:type="String"> 
+      <sv:value>namespaces/hsl/eventpage.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
       <sv:value>/hippo:namespaces/hsl</sv:value> 
@@ -873,7 +890,7 @@
       <sv:value>/hippo:configuration/hippo:queries/hippo:templates/new-image-folder/hippostd:templates/image gallery/hippostd:gallerytype</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="website-hippo-namespaces-hsl-compounds-paragraphimagecompound"> 
+  <sv:node sv:name="website-hippo-namespaces-hsl-compounds-paragraphimage"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -881,13 +898,13 @@
       <sv:value>30052.0</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>namespaces/hsl/compounds/paragraphimagecompound.xml</sv:value> 
+      <sv:value>namespaces/hsl/compounds/paragraphimage.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
       <sv:value>/hippo:namespaces/hsl</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="website-hippo-namespaces-hsl-compounds-paragraphcompound"> 
+  <sv:node sv:name="website-hippo-namespaces-hsl-compounds-paragraph"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -895,7 +912,7 @@
       <sv:value>30052.0</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>namespaces/hsl/compounds/paragraphcompound.xml</sv:value> 
+      <sv:value>namespaces/hsl/compounds/paragraph.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
       <sv:value>/hippo:namespaces/hsl</sv:value> 

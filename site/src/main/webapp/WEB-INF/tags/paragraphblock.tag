@@ -7,7 +7,7 @@
 <%@taglib tagdir="/WEB-INF/tags" prefix="tag" %>
 <%@ taglib prefix="opw" uri="http://open-web.nl/hippo/prototype"%>
 
-<%@ attribute name="content" rtexprvalue="true" required="true" type="hslbeans.ParagraphCompound" %>
+<%@ attribute name="content" rtexprvalue="true" required="true" type="hslbeans.Paragraph" %>
 <c:choose>
   <c:when test="${content.paragraphImage.position == 'right' }">
     <c:set var="position" value="right" />

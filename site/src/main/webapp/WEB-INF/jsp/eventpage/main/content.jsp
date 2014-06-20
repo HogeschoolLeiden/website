@@ -21,9 +21,9 @@
 		   <h2>
 			 <c:out value="${document.subtitle }" escapeXml="true" />
 		   </h2>
-		   <c:if test="${hst:isReadable(document, 'releaseDate.time')}">
+		   <c:if test="${hst:isReadable(document, 'eventDate.time')}">
 			 <p class="badge badge-info">
-			   <fmt:formatDate value="${document.releaseDate.time}" type="both"
+			   <fmt:formatDate value="${document.eventDate.time}" type="both"
 							dateStyle="medium" timeStyle="short" />
 			 </p>
 		    </c:if>

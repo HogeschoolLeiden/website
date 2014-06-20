@@ -8,18 +8,16 @@
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 <%@ taglib prefix='opw' uri="http://open-web.nl/hippo/prototype"%>
 
-<div class="catalog navigation">
+<div class="left">
+  <c:set var="parentItem" value="${not empty menu.deepestExpandedItem.parentItem ? menu.deepestExpandedItem.parentItem : menu.deepestExpandedItem}"/>
+  <c:set var="grandparentItem" value="${not empty parentItem.parentItem ? parentItem.parentItem : parentItem}"/>
   <ul class="nav nav-pills nav-stacked">
-    <c:forEach items="${menu.menuItems}" var="topMenuItem">
-      <c:if test="${topMenuItem.expanded}">
-        <c:forEach items="${topMenuItem.childMenuItems}" var="item">
-          <opw:menuitem siteMenuItem="${item}" depth="${depth}"
+    <c:forEach items="${hst:isReadable(grandparentItem, 'childMenuItems') ? grandparentItem.childMenuItems : grandparentItem.menuItems}" var="item">
+          <opw:menuitem siteMenuItem="${item}" depth="1"
             expandedClass="current arrow-down"
             selectedClass="active arrow-down"
             unexpandedClass="unexpanded arrow-side" leafClass="arrow-side" 
-            recurseOnlyExpanded="${recurseOnlyExpanded}"/>
-        </c:forEach>
-      </c:if>
+            recurseOnlyExpanded="true"/>
     </c:forEach>
   </ul>
 </div>
