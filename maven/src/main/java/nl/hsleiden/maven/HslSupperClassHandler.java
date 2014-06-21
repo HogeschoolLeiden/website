@@ -31,9 +31,9 @@ import com.tdclighthouse.prototype.beans.TdcDocument;
  * 
  */
 @Weight(value = -10.0)
-public class PrototypeSupperClassHandler extends SupperClassHandler {
+public class HslSupperClassHandler extends SupperClassHandler {
 
-    private static final Logger LOG = LoggerFactory.getLogger(PrototypeSupperClassHandler.class);
+    private static final Logger LOG = LoggerFactory.getLogger(HslSupperClassHandler.class);
 
     private Comparator<Class<? extends HippoBean>> classExtensionComparator = new Comparator<Class<? extends HippoBean>>() {
 
@@ -49,7 +49,7 @@ public class PrototypeSupperClassHandler extends SupperClassHandler {
         }
     };
 
-    public PrototypeSupperClassHandler(Map<String, HippoBeanClass> beansOnClassPath,
+    public HslSupperClassHandler(Map<String, HippoBeanClass> beansOnClassPath,
             Map<String, HippoBeanClass> beansInProject, ClassLoader classLoader, Set<String> namespaces,
             Map<String, ContentTypeBean> mixins) {
         super(beansOnClassPath, beansInProject, classLoader, namespaces, mixins);
@@ -62,8 +62,7 @@ public class PrototypeSupperClassHandler extends SupperClassHandler {
         try {
             if (contentTypeBean.isMixin()) {
                 result = new ClassReference(HippoItem.class);
-            }
-            if ("hsl:basedocument".equals(contentTypeBean.getFullyQualifiedName())) {
+            } else if ("hsl:basedocument".equals(contentTypeBean.getFullyQualifiedName())) {
                 result = new ClassReference(TdcDocument.class);
             } else {
                 List<String> supertypes = contentTypeBean.getSupertypes();

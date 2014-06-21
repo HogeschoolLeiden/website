@@ -11,14 +11,15 @@ import org.easymock.EasyMock;
 import org.junit.Assert;
 import org.junit.Test;
 
+
 public class SelectionHandlerTest {
 
     @Test
-    public void handleTest() throws GeneratorException {
+    public void normalCaseTest() throws GeneratorException {
         SelectionHandler selectionHandler = new SelectionHandler(null, null, null, null);
 
         ContentTypeBean contentTypeBean = EasyMock.createMock(ContentTypeBean.class);
-        Item item = createMockItem(contentTypeBean, "ns:myField", "myField", false);
+        Item item = createMockItem(contentTypeBean, "ns:myField", "myField", false, "DynamicDropdown");
         Template template = createMockTemplate("/path/to/value/list");
         EasyMock.expect(contentTypeBean.getTemplate(item)).andReturn(template);
 
@@ -34,6 +35,36 @@ public class SelectionHandlerTest {
                 handle.getMethodGenerators().get(0).getFragment());
     }
 
+    @Test
+    public void noTemplateTest() throws GeneratorException {
+        SelectionHandler selectionHandler = new SelectionHandler(null, null, null, null);
+
+        ContentTypeBean contentTypeBean = EasyMock.createMock(ContentTypeBean.class);
+        Item item = createMockItem(contentTypeBean, "ns:myField", "myField", false, "DynamicDropdown");
+        EasyMock.expect(contentTypeBean.getTemplate(item)).andReturn(null);
+
+        EasyMock.replay(item, contentTypeBean);
+
+        ImportRegistry importRegistry = new ImportRegistry();
+        HandlerResponse handle = selectionHandler.handle(item, importRegistry);
+        Assert.assertEquals(null, handle);
+    }
+
+    @Test
+    public void NoADynamicDropDownTest() throws GeneratorException {
+        SelectionHandler selectionHandler = new SelectionHandler(null, null, null, null);
+
+        ContentTypeBean contentTypeBean = EasyMock.createMock(ContentTypeBean.class);
+        Item item = createMockItem(contentTypeBean, "ns:myField", "myField", false, "String");
+        EasyMock.expect(contentTypeBean.getTemplate(item)).andReturn(null);
+
+        EasyMock.replay(item, contentTypeBean);
+
+        ImportRegistry importRegistry = new ImportRegistry();
+        HandlerResponse handle = selectionHandler.handle(item, importRegistry);
+        Assert.assertEquals(null, handle);
+    }
+
     private Template createMockTemplate(String source) {
         Template template = EasyMock.createMock(Template.class);
         EasyMock.expect(template.getOptionsValue("source")).andReturn(source);
@@ -41,9 +72,9 @@ public class SelectionHandlerTest {
     }
 
     private Item createMockItem(ContentTypeBean contentTypeBean, String relativePath, String simpleName,
-            boolean isMultible) {
+            boolean isMultible, String type) {
         Item item = EasyMock.createMock(Item.class);
-        EasyMock.expect(item.getType()).andReturn("DynamicDropdown");
+        EasyMock.expect(item.getType()).andReturn(type);
         EasyMock.expect(item.getContentType()).andReturn(contentTypeBean);
         EasyMock.expect(item.getRelativePath()).andReturn(relativePath);
         EasyMock.expect(item.getSimpleName()).andReturn(simpleName).anyTimes();
