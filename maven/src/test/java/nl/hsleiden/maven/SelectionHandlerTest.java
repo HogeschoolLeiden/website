@@ -30,7 +30,7 @@ public class SelectionHandlerTest {
         Assert.assertEquals(1, handle.getMethodGenerators().size());
         Assert.assertEquals("private SelectionBean myField;", handle.getPropertyGenerators().get(0).getFragment());
         Assert.assertEquals(
-                "public SelectionBean getMyField() {\r\n    if (this.myField == null) {\r\n        this.myField = getSelectionBean(\"ns:myField\", \"/path/to/value/list\");\r\n    }\r\n    return this.myField;\r\n}",
+                "public SelectionBean getMyField() {\n    if (this.myField == null) {\n        this.myField = getSelectionBean(\"ns:myField\", \"/path/to/value/list\");\n    }\n    return this.myField;\n}",
                 handle.getMethodGenerators().get(0).getFragment());
     }
 
