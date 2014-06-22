@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node sv:name="hippo:users" xmlns:sv="http://www.jcp.org/jcr/sv/1.0">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>hipposys:userfolder</sv:value>
+  </sv:property>
+  <sv:node sv:name="admin">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hipposys:user</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:active" sv:type="Boolean">
+      <sv:value>true</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:password" sv:type="String">
+      <sv:value>$SHA-1$H3X3o2IY6xg=$iHVP/F+iXCo7rsOEzK8atQNf1p8=</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:securityprovider" sv:type="String">
+      <sv:value>internal</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="workflowuser">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hipposys:user</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:active" sv:type="Boolean">
+      <sv:value>true</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:password" sv:type="String">
+      <sv:value>$SHA-256$*</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:securityprovider" sv:type="String">
+      <sv:value>internal</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:system" sv:type="Boolean">
+      <sv:value>true</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="liveuser">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hipposys:user</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:active" sv:type="Boolean">
+      <sv:value>true</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:password" sv:type="String">
+      <sv:value>liveuserpass</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:securityprovider" sv:type="String">
+      <sv:value>internal</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:system" sv:type="Boolean">
+      <sv:value>true</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="previewuser">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hipposys:user</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:active" sv:type="Boolean">
+      <sv:value>true</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:password" sv:type="String">
+      <sv:value>previewuserpass</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:securityprovider" sv:type="String">
+      <sv:value>internal</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:system" sv:type="Boolean">
+      <sv:value>true</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="configuser">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hipposys:user</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:active" sv:type="Boolean">
+      <sv:value>true</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:password" sv:type="String">
+      <sv:value>configuserpass</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:securityprovider" sv:type="String">
+      <sv:value>internal</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:system" sv:type="Boolean">
+      <sv:value>true</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="sitewriter">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hipposys:user</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:active" sv:type="Boolean">
+      <sv:value>true</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:password" sv:type="String">
+      <sv:value>sitewriterpass</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:securityprovider" sv:type="String">
+      <sv:value>internal</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:system" sv:type="Boolean">
+      <sv:value>true</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="schepers.haike">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hipposys:user</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:active" sv:type="Boolean">
+      <sv:value>true</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:firstname" sv:type="String">
+      <sv:value>haike</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:lastname" sv:type="String">
+      <sv:value>schepers</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:password" sv:type="String">
+      <sv:value>$SHA-1$y4g9HYGMOSM=$Rh5S2/DU5ppKs4NIJwvppmjzVEg=</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:passwordlastmodified" sv:type="Date">
+      <sv:value>2014-06-20T14:31:17.533+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:securityprovider" sv:type="String">
+      <sv:value>internal</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="berkouwer.patricia">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hipposys:user</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:active" sv:type="Boolean">
+      <sv:value>true</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:firstname" sv:type="String">
+      <sv:value>patricia</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:lastname" sv:type="String">
+      <sv:value>berkouwer</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:password" sv:type="String">
+      <sv:value>$SHA-1$oOU0J+zSzY4=$9Ca1XB+hPOTufqSic4XcvhGEJ3A=</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:passwordlastmodified" sv:type="Date">
+      <sv:value>2014-06-20T14:31:46.567+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:securityprovider" sv:type="String">
+      <sv:value>internal</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="kok.jacqueline">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hipposys:user</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:active" sv:type="Boolean">
+      <sv:value>true</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:firstname" sv:type="String">
+      <sv:value>jacqueline</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:lastname" sv:type="String">
+      <sv:value>kok</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:password" sv:type="String">
+      <sv:value>$SHA-1$CFIHahg0jFY=$KNreDRDLagkYtYSBydhG4iY0xFA=</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:passwordlastmodified" sv:type="Date">
+      <sv:value>2014-06-20T14:32:12.829+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:securityprovider" sv:type="String">
+      <sv:value>internal</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="remmers.veronique">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hipposys:user</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:active" sv:type="Boolean">
+      <sv:value>true</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:firstname" sv:type="String">
+      <sv:value>remmers</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:lastname" sv:type="String">
+      <sv:value>veronique</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:password" sv:type="String">
+      <sv:value>$SHA-1$V/uJOLH6e5w=$x6DZ43aWGdFjlzuRvUmuoCBFMYM=</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:passwordlastmodified" sv:type="Date">
+      <sv:value>2014-06-20T14:32:38.177+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:securityprovider" sv:type="String">
+      <sv:value>internal</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="vries.de.maurits">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hipposys:user</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:active" sv:type="Boolean">
+      <sv:value>true</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:firstname" sv:type="String">
+      <sv:value>vries</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:lastname" sv:type="String">
+      <sv:value>de maurits</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:password" sv:type="String">
+      <sv:value>$SHA-1$2OIHKfe3TAQ=$PRF7EyiNriN/oo2rh9sU8pAUDZI=</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:passwordlastmodified" sv:type="Date">
+      <sv:value>2014-06-20T14:33:13.356+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:securityprovider" sv:type="String">
+      <sv:value>internal</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="vermeire.nils">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hipposys:user</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:active" sv:type="Boolean">
+      <sv:value>true</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:firstname" sv:type="String">
+      <sv:value>nils</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:lastname" sv:type="String">
+      <sv:value>vermeire</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:password" sv:type="String">
+      <sv:value>$SHA-1$ZLmeN7E361c=$K8+WqNHKbfv+qegOrzoI/iPy+0o=</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:passwordlastmodified" sv:type="Date">
+      <sv:value>2014-06-20T14:33:40.876+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:securityprovider" sv:type="String">
+      <sv:value>internal</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="admin.ebrahim">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hipposys:user</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:active" sv:type="Boolean">
+      <sv:value>true</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:firstname" sv:type="String">
+      <sv:value>ebrahim</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:lastname" sv:type="String">
+      <sv:value>aharpour</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:password" sv:type="String">
+      <sv:value>$SHA-1$ysuA4jKNn6U=$2/7K5I/nbbS45BghB1GFtN/6jTE=</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:passwordlastmodified" sv:type="Date">
+      <sv:value>2014-06-20T14:34:18.889+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:securityprovider" sv:type="String">
+      <sv:value>internal</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="admin.gridi">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hipposys:user</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:active" sv:type="Boolean">
+      <sv:value>true</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:firstname" sv:type="String">
+      <sv:value>gridi</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:lastname" sv:type="String">
+      <sv:value>serbo</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:password" sv:type="String">
+      <sv:value>$SHA-1$5sgnqOCTRmY=$YkvBIir8tUrhRuyX0EPdhb5CNHk=</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:passwordlastmodified" sv:type="Date">
+      <sv:value>2014-06-20T14:35:06.233+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:securityprovider" sv:type="String">
+      <sv:value>internal</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="testadmin">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hipposys:user</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:active" sv:type="Boolean">
+      <sv:value>true</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:password" sv:type="String">
+      <sv:value>$SHA-1$ihzK0XdY6a8=$1YQJ4VqZ7icNW905H9ujTCDfM1I=</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:passwordlastmodified" sv:type="Date">
+      <sv:value>2014-06-20T14:35:25.447+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:securityprovider" sv:type="String">
+      <sv:value>internal</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="testeditor">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hipposys:user</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:active" sv:type="Boolean">
+      <sv:value>true</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:password" sv:type="String">
+      <sv:value>$SHA-1$+3lve1g1iGA=$50nVbUpSAgad6nYFsqyXbmnLAkA=</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:passwordlastmodified" sv:type="Date">
+      <sv:value>2014-06-20T14:35:42.734+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:securityprovider" sv:type="String">
+      <sv:value>internal</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="testauthor">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hipposys:user</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:active" sv:type="Boolean">
+      <sv:value>true</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:password" sv:type="String">
+      <sv:value>$SHA-1$ifZL54IYOnY=$gg87s+WarrjVznWHge86IazC8iw=</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:passwordlastmodified" sv:type="Date">
+      <sv:value>2014-06-20T14:36:18.233+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:securityprovider" sv:type="String">
+      <sv:value>internal</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="testeverybody">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hipposys:user</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:active" sv:type="Boolean">
+      <sv:value>true</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:password" sv:type="String">
+      <sv:value>$SHA-1$ig7voB6ME3Y=$zub173h9OeL4mGCg+jnaDf/24R0=</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:passwordlastmodified" sv:type="Date">
+      <sv:value>2014-06-20T14:36:34.653+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposys:securityprovider" sv:type="String">
+      <sv:value>internal</sv:value>
+    </sv:property>
+  </sv:node>
+</sv:node>

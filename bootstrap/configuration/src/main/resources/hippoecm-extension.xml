@@ -637,91 +637,194 @@
       <sv:value>33000.1</sv:value> 
     </sv:property> 
   </sv:node>  
-  <!-- Security and default available users -->  
-  <sv:node sv:name="website-user-editor"> 
+  <!-- Security and default available users -->
+  <!-- All users -->
+  <sv:node sv:name="website-users"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>security/user-editor.xml</sv:value> 
+      <sv:value>configuration/users/users.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hippo:configuration/hippo:users</sv:value> 
-    </sv:property>  
-    <sv:property sv:name="hippo:sequence" sv:type="Double"> 
-      <sv:value>33000.2</sv:value> 
-    </sv:property> 
-  </sv:node>  
-  <sv:node sv:name="website-user-author"> 
-    <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
-      <sv:value>hippo:initializeitem</sv:value> 
-    </sv:property>  
-    <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>security/user-author.xml</sv:value> 
-    </sv:property>  
-    <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hippo:configuration/hippo:users</sv:value> 
+      <sv:value>/hippo:configuration</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:sequence" sv:type="Double"> 
       <sv:value>33000.3</sv:value> 
     </sv:property> 
-  </sv:node>  
-  <sv:node sv:name="website-user-liveuser"> 
+  </sv:node>
+    
+  <!-- add new users to groups -->
+  <sv:node sv:name="website-groups-admin-schepers.haike-add"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
-    <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>security/user-liveuser.xml</sv:value> 
+    <sv:property sv:name="hippo:contentpropadd" sv:type="String"> 
+      <sv:value>schepers.haike</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hippo:configuration/hippo:users</sv:value> 
-    </sv:property>  
-    <sv:property sv:name="hippo:sequence" sv:type="Double"> 
-      <sv:value>33000.4</sv:value> 
-    </sv:property> 
-  </sv:node>  
-  <sv:node sv:name="website-user-previewuser"> 
-    <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
-      <sv:value>hippo:initializeitem</sv:value> 
-    </sv:property>  
-    <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>security/user-previewuser.xml</sv:value> 
-    </sv:property>  
-    <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hippo:configuration/hippo:users</sv:value> 
+      <sv:value>/hippo:configuration/hippo:groups/admin/hipposys:members</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:sequence" sv:type="Double"> 
       <sv:value>33000.5</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="website-user-configuser"> 
+  <sv:node sv:name="website-groups-admin-berkouwer.patricia-add"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
-    <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>security/user-configuser.xml</sv:value> 
+    <sv:property sv:name="hippo:contentpropadd" sv:type="String"> 
+      <sv:value>berkouwer.patricia</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hippo:configuration/hippo:users</sv:value> 
+      <sv:value>/hippo:configuration/hippo:groups/admin/hipposys:members</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:sequence" sv:type="Double"> 
+      <sv:value>33000.5</sv:value> 
+    </sv:property> 
+  </sv:node>  
+  <sv:node sv:name="website-groups-admin-kok.jacqueline-add"> 
+    <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
+      <sv:value>hippo:initializeitem</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentpropadd" sv:type="String"> 
+      <sv:value>kok.jacqueline</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentroot" sv:type="String"> 
+      <sv:value>/hippo:configuration/hippo:groups/admin/hipposys:members</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:sequence" sv:type="Double"> 
+      <sv:value>33000.5</sv:value> 
+    </sv:property> 
+  </sv:node>  
+  <sv:node sv:name="website-groups-admin-admin.ebrahim-add"> 
+    <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
+      <sv:value>hippo:initializeitem</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentpropadd" sv:type="String"> 
+      <sv:value>admin.ebrahim</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentroot" sv:type="String"> 
+      <sv:value>/hippo:configuration/hippo:groups/admin/hipposys:members</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:sequence" sv:type="Double"> 
+      <sv:value>33000.5</sv:value> 
+    </sv:property> 
+  </sv:node>  
+  <sv:node sv:name="website-groups-admin-admin.gridi-add"> 
+    <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
+      <sv:value>hippo:initializeitem</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentpropadd" sv:type="String"> 
+      <sv:value>admin.gridi</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentroot" sv:type="String"> 
+      <sv:value>/hippo:configuration/hippo:groups/admin/hipposys:members</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:sequence" sv:type="Double"> 
+      <sv:value>33000.5</sv:value> 
+    </sv:property> 
+  </sv:node>  
+  <sv:node sv:name="website-groups-admin-testadmin-add"> 
+    <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
+      <sv:value>hippo:initializeitem</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentpropadd" sv:type="String"> 
+      <sv:value>testadmin</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentroot" sv:type="String"> 
+      <sv:value>/hippo:configuration/hippo:groups/admin/hipposys:members</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:sequence" sv:type="Double"> 
+      <sv:value>33000.5</sv:value> 
+    </sv:property> 
+  </sv:node>
+  <sv:node sv:name="website-groups-editor-remmers.veronique-add"> 
+    <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
+      <sv:value>hippo:initializeitem</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentpropadd" sv:type="String"> 
+      <sv:value>remmers.veronique</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentroot" sv:type="String"> 
+      <sv:value>/hippo:configuration/hippo:groups/editor/hipposys:members</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:sequence" sv:type="Double"> 
       <sv:value>33000.6</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="website-user-sitewriter"> 
+  <sv:node sv:name="website-groups-editor-vries.de.maurits-add"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
-    <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>security/user-sitewriter.xml</sv:value> 
+    <sv:property sv:name="hippo:contentpropadd" sv:type="String"> 
+      <sv:value>vries.de.maurits</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hippo:configuration/hippo:users</sv:value> 
+      <sv:value>/hippo:configuration/hippo:groups/editor/hipposys:members</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:sequence" sv:type="Double"> 
+      <sv:value>33000.6</sv:value> 
+    </sv:property> 
+  </sv:node>  
+  <sv:node sv:name="website-groups-editor-vermeire.nils-add"> 
+    <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
+      <sv:value>hippo:initializeitem</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentpropadd" sv:type="String"> 
+      <sv:value>vermeire.nils</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentroot" sv:type="String"> 
+      <sv:value>/hippo:configuration/hippo:groups/editor/hipposys:members</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:sequence" sv:type="Double"> 
+      <sv:value>33000.6</sv:value> 
+    </sv:property> 
+  </sv:node>  
+  <sv:node sv:name="website-groups-editor-testeditor-add"> 
+    <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
+      <sv:value>hippo:initializeitem</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentpropadd" sv:type="String"> 
+      <sv:value>testeditor</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentroot" sv:type="String"> 
+      <sv:value>/hippo:configuration/hippo:groups/editor/hipposys:members</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:sequence" sv:type="Double"> 
+      <sv:value>33000.6</sv:value> 
+    </sv:property> 
+  </sv:node> 
+  <sv:node sv:name="website-groups-author-testauthor-add"> 
+    <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
+      <sv:value>hippo:initializeitem</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentpropadd" sv:type="String"> 
+      <sv:value>testauthor</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentroot" sv:type="String"> 
+      <sv:value>/hippo:configuration/hippo:groups/author/hipposys:members</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:sequence" sv:type="Double"> 
+      <sv:value>33000.6</sv:value> 
+    </sv:property> 
+  </sv:node> 
+  <sv:node sv:name="website-groups-everybody-testeverybody-add"> 
+    <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
+      <sv:value>hippo:initializeitem</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentpropadd" sv:type="String"> 
+      <sv:value>testeverybody</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentroot" sv:type="String"> 
+      <sv:value>/hippo:configuration/hippo:groups/everybody/hipposys:members</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:sequence" sv:type="Double"> 
       <sv:value>33000.7</sv:value> 
     </sv:property> 
-  </sv:node>  
+  </sv:node> 
+  <!-- /add new users to groups -->
+  
   <sv:node sv:name="website-groups-author-add"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
