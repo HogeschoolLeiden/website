@@ -1,22 +1,30 @@
 package nl.hsleiden.utils;
 
+import com.tdclighthouse.prototype.utils.Constants.AttributesConstants;
+import com.tdclighthouse.prototype.utils.Constants.FieldNameConstants;
+import com.tdclighthouse.prototype.utils.Constants.HstParametersConstants;
+import com.tdclighthouse.prototype.utils.Constants.NodeNameConstants;
+import com.tdclighthouse.prototype.utils.Constants.ParametersConstants;
+import com.tdclighthouse.prototype.utils.Constants.PikcerTypesConstants;
+import com.tdclighthouse.prototype.utils.Constants.ValuesConstants;
+
 public class Constants {
 
     private Constants() {
         super();
     }
 
-    public static class Attributes extends com.tdclighthouse.prototype.utils.Constants.Attributes{
+    public static class Attributes extends AttributesConstants {
         public static final String LOGO = "logo";
         public static final String HEADER_NAME = "headerName";
-        
+
         private Attributes() {
             super();
         }
 
     }
 
-    public static class PikcerTypes extends com.tdclighthouse.prototype.utils.Constants.PikcerTypes{
+    public static class PikcerTypes extends PikcerTypesConstants {
         public static final String IMAGE_PICKER = "cms-pickers/images";
 
         private PikcerTypes() {
@@ -24,35 +32,35 @@ public class Constants {
         }
     }
 
-    public static class HstParameters extends com.tdclighthouse.prototype.utils.Constants.HstParameters {
+    public static class HstParameters extends HstParametersConstants {
 
         private HstParameters() {
             super();
         }
     }
 
-    public static class Values extends com.tdclighthouse.prototype.utils.Constants.Values {
+    public static class Values extends ValuesConstants {
 
         private Values() {
             super();
         }
     }
-    
-    public static class Parameters extends com.tdclighthouse.prototype.utils.Constants.Parameters {
+
+    public static class Parameters extends ParametersConstants {
 
         private Parameters() {
             super();
         }
     }
-    
-    public static class FieldName extends com.tdclighthouse.prototype.utils.Constants.FieldName {
-        
+
+    public static class FieldName extends FieldNameConstants {
+
         private FieldName() {
             super();
         }
     }
 
-    public static class NodeName extends com.tdclighthouse.prototype.utils.Constants.NodeName {
+    public static class NodeName extends NodeNameConstants {
 
         private NodeName() {
             super();

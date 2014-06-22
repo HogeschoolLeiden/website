@@ -11,7 +11,7 @@ import org.hippoecm.hst.content.beans.Node;
 import com.tdclighthouse.prototype.utils.URL;
 
 @Node(jcrType = "hsl:Youtube")
-public class Youtube extends hslbeans.Youtube {
+public class YoutubeBean extends hslbeans.Youtube {
 
     private static final String YOUTUBE_REGEX = "https?://www.youtube.com/.*(\\?|&)(video_id=|/|v=)([^(&\\\r\\\n\\?)]*).*";
     private static final String YOUTUBE_START = "http://www.youtube.com/v/";
