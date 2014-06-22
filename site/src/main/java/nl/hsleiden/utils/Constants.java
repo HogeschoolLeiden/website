@@ -11,7 +11,6 @@ import com.tdclighthouse.prototype.utils.Constants.ValuesConstants;
 public class Constants {
 
     private Constants() {
-        super();
     }
 
     public static class Attributes extends AttributesConstants {
@@ -19,7 +18,6 @@ public class Constants {
         public static final String HEADER_NAME = "headerName";
 
         private Attributes() {
-            super();
         }
 
     }
@@ -28,42 +26,36 @@ public class Constants {
         public static final String IMAGE_PICKER = "cms-pickers/images";
 
         private PikcerTypes() {
-            super();
         }
     }
 
     public static class HstParameters extends HstParametersConstants {
 
         private HstParameters() {
-            super();
         }
     }
 
     public static class Values extends ValuesConstants {
 
         private Values() {
-            super();
         }
     }
 
     public static class Parameters extends ParametersConstants {
 
         private Parameters() {
-            super();
         }
     }
 
     public static class FieldName extends FieldNameConstants {
 
         private FieldName() {
-            super();
         }
     }
 
     public static class NodeName extends NodeNameConstants {
 
         private NodeName() {
-            super();
         }
     }
 }
