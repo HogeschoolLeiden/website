@@ -7,15 +7,15 @@ import com.tdclighthouse.prototype.componentsinfo.FacetedOverviewPageInfo;
 
 @ParametersInfo(type = FacetedOverviewPageInfo.class)
 public class FacetedOverview extends MonolithicFacetedOverview {
-	
-	@Override
-	protected String enhanceQuery(String query) {
-		String result;
-		if ((query != null) && !query.endsWith("*")) {
-			result = query + "*";
-		} else {
-			result = query;
-		}
-		return result;
-	}
+
+    @Override
+    protected String enhanceQuery(String query) {
+        String result;
+        if ((query != null) && !query.endsWith("*")) {
+            result = query + "*";
+        } else {
+            result = query;
+        }
+        return result;
+    }
 }
