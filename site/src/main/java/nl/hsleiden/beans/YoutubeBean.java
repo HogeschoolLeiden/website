@@ -1,5 +1,6 @@
 package nl.hsleiden.beans;
 
+import hslbeans.Youtube;
 import hslbeans.YoutubePlayerParameters;
 import hslbeans.YoutubeUrlParameters;
 
@@ -11,7 +12,7 @@ import org.hippoecm.hst.content.beans.Node;
 import com.tdclighthouse.prototype.utils.URL;
 
 @Node(jcrType = "hsl:Youtube")
-public class YoutubeBean extends hslbeans.Youtube {
+public class YoutubeBean extends Youtube {
 
     private static final String YOUTUBE_REGEX = "https?://www.youtube.com/.*(\\?|&)(video_id=|/|v=)([^(&\\\r\\\n\\?)]*).*";
     private static final String YOUTUBE_START = "http://www.youtube.com/v/";
@@ -56,8 +57,8 @@ public class YoutubeBean extends hslbeans.Youtube {
         return result;
     }
 
-    private String booelanToString(boolean value) {
-        return value ? "1" : "0";
+    private String booelanToString(Boolean value) {
+        return value != null && value ? "1" : "0";
     }
 
 }
