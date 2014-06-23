@@ -7,7 +7,7 @@
 <%@taglib tagdir="/WEB-INF/tags" prefix="tag" %>
 <%@ taglib prefix="opw" uri="http://open-web.nl/hippo/prototype"%>
 
-<%@ attribute name="content" rtexprvalue="true" required="true" type="nl.hsleiden.beans.Youtube" %>
+<%@ attribute name="content" rtexprvalue="true" required="true" type="nl.hsleiden.beans.YoutubeBean" %>
 
 <c:if test="${not empty content.url}">
   <div class="catalog video">
