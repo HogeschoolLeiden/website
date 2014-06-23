@@ -36,7 +36,8 @@ public class FacetDeepLinkNav extends BaseHstComponent {
         try {
             Map<String, Object> model = new HashMap<String, Object>();
             HippoBean hippoBean = FacetDeepLink.getDeepLinkBean(getFacet(request), getFilters(request));
-            model.put(Attributes.DOCUMENT, hippoBean);
+            model.put(Attributes.FACET_BEAN, hippoBean);
+            model.put(Attributes.LABELS, new HashMap<String, String>());
             return model;
         } catch (FacetDeepLinkExceptoin e) {
             throw new HstComponentException(e.getMessage(), e);

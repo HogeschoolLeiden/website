@@ -78,6 +78,9 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hst:component</sv:value>
         </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>5d0bf713-ddc5-4cce-bad5-6fe264121170</sv:value>
+        </sv:property>
         <sv:property sv:name="hst:template" sv:type="String">
           <sv:value>standard.main.left</sv:value>
         </sv:property>
@@ -169,6 +172,25 @@
         </sv:property>
         <sv:property sv:name="hst:template" sv:type="String">
           <sv:value>newspage.main.content</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="left">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:component</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>2ff257ae-89f4-43a8-bc66-0b0fb6ecd643</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
+          <sv:value>configuration</sv:value>
+          <sv:value>facetPath</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
+          <sv:value>{"propertyNames":["hsl:type", "hsl:subjecttags", "hsl:thematags"]}</sv:value>
+          <sv:value>actueel/nieuws/news-facetnav</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencecomponent" sv:type="String">
+          <sv:value>hst:components/facetdeeplink</sv:value>
         </sv:property>
       </sv:node>
     </sv:node>
@@ -349,6 +371,25 @@
           <sv:value>eventpage.main.content</sv:value>
         </sv:property>
       </sv:node>
+      <sv:node sv:name="left">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:component</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>4b84c752-8014-4394-9bda-3b69b84246e8</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
+          <sv:value>configuration</sv:value>
+          <sv:value>facetPath</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
+          <sv:value>{"propertyNames":["hsl:subjecttags", "hsl:thematags"]}</sv:value>
+          <sv:value>actueel/evenementen/events-facetnav</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencecomponent" sv:type="String">
+          <sv:value>hst:components/facetdeeplink</sv:value>
+        </sv:property>
+      </sv:node>
     </sv:node>
   </sv:node>
   <sv:node sv:name="articlepagecommon">
@@ -382,7 +423,7 @@
           <sv:value>articlepage.main.content</sv:value>
         </sv:property>
       </sv:node>
-      <sv:node sv:name="left" xmlns:sv="http://www.jcp.org/jcr/sv/1.0">
+      <sv:node sv:name="left">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hst:component</sv:value>
         </sv:property>
