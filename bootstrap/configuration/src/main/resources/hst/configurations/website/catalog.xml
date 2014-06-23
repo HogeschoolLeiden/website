@@ -3,9 +3,31 @@
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>hst:catalog</sv:value>
   </sv:property>
-  <sv:node sv:name="website-catalog">
+  <sv:node sv:name="hsl-catalog">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:containeritempackage</sv:value>
     </sv:property>
+    <sv:node sv:name="relatedNews">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:containeritemcomponent</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentclassname" sv:type="String">
+        <sv:value>nl.hsleiden.components.catalog.RelatedNews</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:iconpath" sv:type="String">
+        <sv:value>images/catalog/catalog-list.png</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:label" sv:type="String">
+        <sv:value>Related News</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true" />
+      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true" />
+      <sv:property sv:name="hst:template" sv:type="String">
+        <sv:value>catalog.latestitems.frame</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:xtype" sv:type="String">
+        <sv:value>HST.Item</sv:value>
+      </sv:property>
+    </sv:node>
   </sv:node>
 </sv:node>

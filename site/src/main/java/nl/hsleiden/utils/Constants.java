@@ -34,6 +34,16 @@ public class Constants {
         private HstParameters() {
         }
     }
+    
+    public static class DisplayedFieldNames {
+        
+        public static final String RELEASE_DATE = "Publicatiedatum";
+        public static final String TITLE = "Titel";
+        
+        private DisplayedFieldNames() {
+        }
+
+    }
 
     public static class Values extends ValuesConstants {
 
@@ -49,6 +59,9 @@ public class Constants {
 
     public static class FieldName extends FieldNameConstants {
 
+        public static final String RELEASE_DATE = "hsl:releaseDate";
+        public static final String TITLE = "hsl:title";
+        
         private FieldName() {
         }
     }

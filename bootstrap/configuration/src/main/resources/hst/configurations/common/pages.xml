@@ -78,12 +78,6 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hst:component</sv:value>
         </sv:property>
-        <sv:property sv:name="jcr:uuid" sv:type="String">
-          <sv:value>a1b59bd8-12aa-4cb3-a2c3-64fb539e9da7</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:componentclassname" sv:type="String">
-          <sv:value>com.tdclighthouse.prototype.components.Navigation</sv:value>
-        </sv:property>
         <sv:property sv:name="hst:template" sv:type="String">
           <sv:value>standard.main.left</sv:value>
         </sv:property>
@@ -388,18 +382,15 @@
           <sv:value>articlepage.main.content</sv:value>
         </sv:property>
       </sv:node>
-      <sv:node sv:name="left">
+      <sv:node sv:name="left" xmlns:sv="http://www.jcp.org/jcr/sv/1.0">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hst:component</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>8acc7875-ed47-44a8-81cf-5f7a9a394641</sv:value>
         </sv:property>
-        <sv:property sv:name="hst:componentclassname" sv:type="String">
-          <sv:value>com.tdclighthouse.prototype.components.Navigation</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:template" sv:type="String">
-          <sv:value>articlepage.main.left</sv:value>
+        <sv:property sv:name="hst:referencecomponent" sv:type="String">
+          <sv:value>hst:components/navigation</sv:value>
         </sv:property>
       </sv:node>
     </sv:node>
