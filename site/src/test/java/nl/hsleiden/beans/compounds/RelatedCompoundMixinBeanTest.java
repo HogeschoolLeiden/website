@@ -1,77 +1,47 @@
 package nl.hsleiden.beans.compounds;
 
-import hslbeans.RelatedFilterParameters;
-import hslbeans.RelatedOverviewParameters;
-import hslbeans.RelatedSortParameters;
 import hslbeans.RelatedWidgetParameters;
+import nl.hsleiden.utils.TestUtils;
 
-import java.lang.reflect.Field;
-
+import org.easymock.EasyMock;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
-import org.hippoecm.hst.mock.content.beans.standard.MockHippoBean;
 import org.junit.Assert;
-
+import org.junit.Test;
 
 public class RelatedCompoundMixinBeanTest {
 
-//    @Test
-    public void getWidgetTitle() throws NoSuchFieldException, IllegalAccessException {
-       String mockWidgetTitle = createMockRelatedCompoundMixin().getWidgetParameters().getWidgetTitle();
-       Assert.assertEquals("test widgetTitle", mockWidgetTitle);
+    @Test
+    public void getWidgetTitleTest() throws NoSuchFieldException, IllegalAccessException {
+        String title = "title";
+        RelatedCompoundMixinBean relatedCompoundMixinBean = new RelatedCompoundMixinBean();
+        TestUtils.setPrivateField(relatedCompoundMixinBean, "widgetParameters",
+                createMackWidgetParameters(title, null, null));
+        Assert.assertEquals(title, relatedCompoundMixinBean.getWidgetTitle());
     }
 
-    private RelatedCompoundMixinBean createMockRelatedCompoundMixin() throws NoSuchFieldException, IllegalAccessException{
-        RelatedCompoundMixinBean relatedCompoundMixin = new RelatedCompoundMixinBean();
-        setPrivateField(relatedCompoundMixin, "sortParameters", createMockRelatedSortParameters());
-        setPrivateField(relatedCompoundMixin, "overviewParameters", createMockRelatedOverviewParameters());
-        setPrivateField(relatedCompoundMixin, "widgetParameters", createMockWidgetParameters());
-        setPrivateField(relatedCompoundMixin, "filterParameters", createMockRelatedFilterParameters());
-        
-        return relatedCompoundMixin;
-    }
-    
-    private RelatedWidgetParameters createMockWidgetParameters() throws NoSuchFieldException, IllegalAccessException {
-        RelatedWidgetParameters relatedWidgetParameters = new RelatedWidgetParameters();
-        setPrivateField(relatedWidgetParameters, "widgetTitle", "test widgetTitle");
-        setPrivateField(relatedWidgetParameters, "size", 5L);
-       
-        //TODO: how to set the path of this bean
-        MockHippoBean hbMock = new MockHippoBean();
-        setPrivateField(relatedWidgetParameters, "contentBeanPath", hbMock);
-
-        return relatedWidgetParameters;
-    }
-    
-    private RelatedOverviewParameters createMockRelatedOverviewParameters() throws NoSuchFieldException, IllegalAccessException{
-        RelatedOverviewParameters relatedOverviewParameters = new RelatedOverviewParameters();
-        setPrivateField(relatedOverviewParameters, "showOverview", new Boolean(false));
-        setPrivateField(relatedOverviewParameters, "overviewLinkLabel", "test overviewLinkLabel");
-        
-        //TODO: how to set the path of this bean
-        HippoBean hbMock = new MockHippoBean();
-        setPrivateField(relatedOverviewParameters, "overviewBeanPath", hbMock);
-        
-        return relatedOverviewParameters;
+    @Test
+    public void getContentBeanPathTest() throws NoSuchFieldException, IllegalAccessException {
+        String path = "/path/to/a/bean";
+        RelatedCompoundMixinBean relatedCompoundMixinBean = new RelatedCompoundMixinBean();
+        TestUtils.setPrivateField(relatedCompoundMixinBean, "widgetParameters",
+                createMackWidgetParameters(null, path, null));
+        Assert.assertEquals(path, relatedCompoundMixinBean.getContentBeanPath());
     }
 
-    private RelatedFilterParameters createMockRelatedFilterParameters() throws NoSuchFieldException, IllegalAccessException{
-        RelatedFilterParameters relatedOverviewParameters = new RelatedFilterParameters();
-        setPrivateField(relatedOverviewParameters, "themaFilter", new Boolean(false));
-        setPrivateField(relatedOverviewParameters, "overFilter",  new Boolean(false));
-        return relatedOverviewParameters;
+    private RelatedWidgetParameters createMackWidgetParameters(String title, String contentBeanPath, Long size) {
+        RelatedWidgetParameters mock = EasyMock.createMock(RelatedWidgetParameters.class);
+        EasyMock.expect(mock.getWidgetTitle()).andReturn(title).anyTimes();
+        EasyMock.expect(mock.getContentBeanPath()).andReturn(createMockContentBean(contentBeanPath)).anyTimes();
+        EasyMock.expect(mock.getSize()).andReturn(size).anyTimes();
+        EasyMock.replay(mock);
+        return mock;
     }
 
-    private RelatedSortParameters createMockRelatedSortParameters() throws NoSuchFieldException, IllegalAccessException{
-        RelatedSortParameters relatedSortParameters = new RelatedSortParameters();
-        setPrivateField(relatedSortParameters, "sortOrder", "test sortOrder");
-        setPrivateField(relatedSortParameters, "sortBy", "test sortBy");
-        return relatedSortParameters;
+    private HippoBean createMockContentBean(String contentBeanPath) {
+        HippoBean mock = EasyMock.createMock(HippoBean.class);
+        EasyMock.expect(mock.getPath()).andReturn(contentBeanPath).anyTimes();
+        EasyMock.replay(mock);
+        return mock;
     }
-    
-    private void setPrivateField(Object target, String fieldName, Object value) throws NoSuchFieldException,
-        IllegalAccessException {
-        Field youtubeUrl = target.getClass().getDeclaredField(fieldName);
-        youtubeUrl.setAccessible(true);
-        youtubeUrl.set(target, value);
-    }
+
 }

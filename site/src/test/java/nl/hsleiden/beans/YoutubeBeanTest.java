@@ -3,11 +3,9 @@ package nl.hsleiden.beans;
 import hslbeans.YoutubePlayerParameters;
 import hslbeans.YoutubeUrlParameters;
 
-import java.lang.reflect.Field;
-
 import javax.jcr.Node;
 
-import nl.hsleiden.beans.YoutubeBean;
+import nl.hsleiden.utils.TestUtils;
 
 import org.easymock.EasyMock;
 import org.hippoecm.hst.content.beans.ObjectBeanManagerException;
@@ -44,22 +42,16 @@ public class YoutubeBeanTest {
     private YoutubeUrlParameters createMockYoutubeUrlParameters() throws NoSuchFieldException, SecurityException,
             IllegalArgumentException, IllegalAccessException {
         YoutubeUrlParameters youtubeUrlParameters = new YoutubeUrlParameters();
-        setPrivateField(youtubeUrlParameters, "youtubeUrl", "https://www.youtube.com/watch?v=yhKB-VxJWpg");
-        setPrivateField(youtubeUrlParameters, "theme", "black");
+        TestUtils.setPrivateField(youtubeUrlParameters, "youtubeUrl", "https://www.youtube.com/watch?v=yhKB-VxJWpg");
+        TestUtils.setPrivateField(youtubeUrlParameters, "theme", "black");
         return youtubeUrlParameters;
     }
 
     private YoutubePlayerParameters createMockYoutubePlayerParameters() throws NoSuchFieldException,
             IllegalAccessException {
         YoutubePlayerParameters youtubePlayerParameters = new YoutubePlayerParameters();
-        setPrivateField(youtubePlayerParameters, "autoplay", true);
+        TestUtils.setPrivateField(youtubePlayerParameters, "autoplay", true);
         return youtubePlayerParameters;
     }
 
-    private void setPrivateField(Object target, String fieldName, Object value) throws NoSuchFieldException,
-            IllegalAccessException {
-        Field youtubeUrl = target.getClass().getDeclaredField(fieldName);
-        youtubeUrl.setAccessible(true);
-        youtubeUrl.set(target, value);
-    }
 }
