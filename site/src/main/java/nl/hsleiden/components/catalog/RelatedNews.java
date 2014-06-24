@@ -1,8 +1,7 @@
 package nl.hsleiden.components.catalog;
 
+import hslbeans.ArticlePage;
 import hslbeans.NewsPage;
-import hslbeans.RelatedOverviewParameters;
-import hslbeans.RelatedSortParameters;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -11,17 +10,19 @@ import java.util.Map;
 
 import javax.jcr.RepositoryException;
 
-import nl.hsleiden.beans.compounds.RelatedWidgetParametersBean;
 import nl.hsleiden.beans.mixin.RelatedItemsMixin;
-import nl.hsleiden.componentsinfo.RelatedItemsInfo;
+import nl.hsleiden.componentsinfo.RelatedINewsInfo;
 import nl.hsleiden.utils.Constants;
 import nl.hsleiden.utils.Constants.Attributes;
 import nl.hsleiden.utils.HslUtils;
 
 import org.apache.commons.lang.StringUtils;
+import org.hippoecm.hst.content.beans.ObjectBeanManagerException;
 import org.hippoecm.hst.content.beans.query.HstQuery;
 import org.hippoecm.hst.content.beans.query.HstQueryResult;
+import org.hippoecm.hst.content.beans.query.exceptions.FilterException;
 import org.hippoecm.hst.content.beans.query.exceptions.QueryException;
+import org.hippoecm.hst.content.beans.query.filter.Filter;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.content.beans.standard.HippoBeanIterator;
 import org.hippoecm.hst.core.component.HstComponentException;
@@ -32,71 +33,45 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.tdclighthouse.prototype.components.AjaxEnabledComponent;
-import com.tdclighthouse.prototype.utils.ComponentUtils;
 
-@ParametersInfo(type = RelatedItemsInfo.class)
+@ParametersInfo(type = RelatedINewsInfo.class)
 public class RelatedNews extends AjaxEnabledComponent<Map<String, Object>> {
 
     private static final String OVERVIEW_LINK = "overviewLink";
     private static final Logger LOG = LoggerFactory.getLogger(RelatedNews.class);
 
     public Map<String, Object> getModel(HstRequest request, HstResponse response) {
+        try {
+            Map<String, Object> model = new HashMap<String, Object>();
+            RelatedINewsInfo parametersInfo = this.<RelatedINewsInfo> getComponentParametersInfo(request);
+            if (parametersInfo.getUseMixin()) {
+                HippoBean proxy = getMixinProxy(request.getRequestContext().getContentBean());
+                if (proxy instanceof RelatedItemsMixin) {
+                    parametersInfo = ((RelatedItemsMixin) proxy).getRelatedCompoundMixin();
+                }
+            }
+            model = populateModel(request, parametersInfo);
+            return model;
+        } catch (RepositoryException e) {
+            throw new HstComponentException(e.getMessage(), e);
+        }
+    }
+
+    private Map<String, Object> populateModel(HstRequest request, RelatedINewsInfo parametersInfo) {
         Map<String, Object> model = new HashMap<String, Object>();
-        RelatedItemsInfo parametersInfo = this.<RelatedItemsInfo> getComponentParametersInfo(request);
-        if (parametersInfo.getUseMixin()) {
-            populateModelFromMixin(request, model);
-        } else {
-            populateModelFromParametersOrMixin(request, model);
+        HippoBean contentBean = request.getRequestContext().getContentBean();
+        if (contentBean instanceof ArticlePage) {
+            model.put("info", parametersInfo);
+            addItemsToModel(request, model, (ArticlePage) contentBean, parametersInfo);
+            addOverviewLinkToModel(request, model, parametersInfo);
         }
         return model;
     }
 
-    private void populateModelFromParametersOrMixin(HstRequest request, Map<String, Object> model) {
+    private void addItemsToModel(HstRequest request, Map<String, Object> model, ArticlePage contentBean,
+            RelatedINewsInfo parametersInfo) {
         try {
-            HippoBean proxy = getMixinProxy(request.getRequestContext().getContentBean());
-            if (proxy instanceof RelatedItemsMixin) {
-                populateModelFromMixin(request, model);
-            } else {
-                populateModelFromParametrs(request, model);
-            }
-        } catch (RepositoryException e) {
-            LOG.error("mixin not available", e);
-        }
-    }
-
-    private void populateModelFromParametrs(HstRequest request, Map<String, Object> model) {
-        try {
-            addGenericInfoToModel(request, model);
-            addItemsToModel(request, model);
-            addOverviewLinkToModel(request, model);
-        } catch (RepositoryException e) {
-            throw new HstComponentException(e.getMessage(), e);
-        }
-    }
-
-    private void populateModelFromMixin(HstRequest request, Map<String, Object> model) {
-        try {
-            HippoBean proxy = getMixinProxy(request.getRequestContext().getContentBean());
-            if (proxy instanceof RelatedItemsMixin) {
-                model.put("info", ((RelatedItemsMixin) proxy).getRelatedCompoundMixin().getConfigObject());
-                addItemsFromMixin(request, model, proxy);
-                addOverviewLinkFromMixin(request, model, proxy);
-            } else {
-                model.put(Attributes.WEBMASTER_ERROR_MESSAGE, "why was it a constant ??");
-            }
-        } catch (RepositoryException e) {
-            throw new HstComponentException(e.getMessage(), e);
-        }
-    }
-
-    private void addGenericInfoToModel(HstRequest request, Map<String, Object> model) throws RepositoryException {
-        RelatedItemsInfo parametersInfo = this.<RelatedItemsInfo> getComponentParametersInfo(request);
-        model.put("info", parametersInfo);
-    }
-
-    private void addItemsToModel(HstRequest request, Map<String, Object> model) {
-        try {
-            HstQuery query = getQuery(request);
+            HstQuery query = getQuery(request, contentBean, parametersInfo);
             HstQueryResult queryResult = query.execute();
             List<HippoBean> items = getItems(queryResult);
             model.put(Attributes.ITEMS, items);
@@ -105,52 +80,46 @@ public class RelatedNews extends AjaxEnabledComponent<Map<String, Object>> {
         }
     }
 
-    protected HstQuery getQuery(HstRequest request) throws QueryException {
-        RelatedItemsInfo parametersInfo = getComponentParametersInfo(request);
-        HippoBean scope = getBean(parametersInfo.getContentBeanPath(), request);
-        HstQuery query = request.getRequestContext().getQueryManager().createQuery(scope, NewsPage.JCR_TYPE);
+    private HstQuery getQuery(HstRequest request, ArticlePage contentBean, RelatedINewsInfo parametersInfo)
+            throws QueryException {
 
-        addSorting(request, query);
+        HstQuery query = createQuery(request, parametersInfo);
+        addSorting(request, query, parametersInfo);
         query.setLimit(parametersInfo.getSize());
-        addFilter(query);
+        addFilter(query, parametersInfo, contentBean);
         return query;
+
     }
 
-    @Override
-    public int getPageSize(HstRequest request) {
-        RelatedItemsInfo parametersInfo = getComponentParametersInfo(request);
-        int result = parametersInfo.getSize();
-        result = retrieveComponentSpecificParameter(request, result);
-        return result;
-    }
-
-    private int retrieveComponentSpecificParameter(HstRequest request, int result) {
-        String pageSzieString = getComponentSpecificParameter(request, Constants.Parameters.PAGE_SIZE);
-        if (StringUtils.isNotBlank(pageSzieString) && StringUtils.isNumeric(pageSzieString)) {
-            result = Integer.parseInt(pageSzieString);
+    private HstQuery createQuery(HstRequest request, RelatedINewsInfo parametersInfo) throws QueryException {
+        try {
+            String contentBeanPath = parametersInfo.getContentBeanPath();
+            LOG.warn("content bean path = " + contentBeanPath);
+            HippoBean scope = (HippoBean) request.getRequestContext().getObjectBeanManager().getObject(contentBeanPath);
+            HstQuery query = request.getRequestContext().getQueryManager().createQuery(scope, NewsPage.JCR_TYPE);
+            return query;
+        } catch (ObjectBeanManagerException e) {
+            throw new HstComponentException(e.getMessage(), e);
         }
-        return result;
     }
 
-    protected String getComponentSpecificParameter(HstRequest request, String name) {
-        return getPublicRequestParameter(request, ComponentUtils.getComponentSpecificParameterName(request, name));
-    }
-
-    private void addOverviewLinkToModel(HstRequest request, Map<String, Object> model) {
-        RelatedItemsInfo parametersInfo = getComponentParametersInfo(request);
-        HippoBean overviewLink = getOverviewPageBean(request);
-        if (parametersInfo.getShowOverviewLink() && overviewLink != null) {
+    private void addOverviewLinkToModel(HstRequest request, Map<String, Object> model, RelatedINewsInfo parametersInfo) {
+        HippoBean overviewLink = getOverviewPageBean(request, parametersInfo);
+        if (parametersInfo.getShowOverview() && overviewLink != null) {
             model.put(OVERVIEW_LINK, overviewLink);
         }
     }
 
-    private HippoBean getOverviewPageBean(HstRequest request) {
-        HippoBean overviewLink = null;
-        RelatedItemsInfo parametersInfo = getComponentParametersInfo(request);
-        if (parametersInfo.getOverviewBeanPath() != null && !parametersInfo.getOverviewBeanPath().isEmpty()) {
-            overviewLink = getBean(parametersInfo.getOverviewBeanPath(), request);
+    private HippoBean getOverviewPageBean(HstRequest request, RelatedINewsInfo parametersInfo) {
+        try {
+            String contentBeanPath = parametersInfo.getOverviewBeanPath();
+            LOG.warn("content bean path = " + contentBeanPath);
+            HippoBean overviewLink = (HippoBean) request.getRequestContext().getObjectBeanManager().getObject(contentBeanPath);
+            return overviewLink;
+        } catch (ObjectBeanManagerException e) {
+            LOG.error("Object Manager Exception");
+            throw new HstComponentException(e.getMessage(), e);
         }
-        return overviewLink;
     }
 
     private List<HippoBean> getItems(HstQueryResult queryResult) {
@@ -161,8 +130,7 @@ public class RelatedNews extends AjaxEnabledComponent<Map<String, Object>> {
         return items;
     }
 
-    private void addSorting(HstRequest request, HstQuery query) {
-        RelatedItemsInfo parametersInfo = getComponentParametersInfo(request);
+    private void addSorting(HstRequest request, HstQuery query, RelatedINewsInfo parametersInfo) {
 
         String sortBy = HslUtils.getNamespacedFieldName(parametersInfo.getSortBy());
 
@@ -175,81 +143,34 @@ public class RelatedNews extends AjaxEnabledComponent<Map<String, Object>> {
         }
     }
 
-    @Override
-    public int getPageNumber(HstRequest request) {
-        int result = 1;
-        String pageString = getComponentSpecificParameter(request, Constants.Parameters.PAGE);
-        if (StringUtils.isNotBlank(pageString) && StringUtils.isNumeric(pageString)) {
-            result = Integer.parseInt(pageString);
+    private void addFilter(HstQuery query, RelatedINewsInfo info, ArticlePage contentBean) throws FilterException {
+        Filter globalFilter = query.createFilter();
+        if (info.getOverFilter()) {
+            addOverFilter(query, globalFilter, contentBean.getSubjecttags());
         }
-        return result;
-    }
-
-    // TODO: override if want to filter the selected catalogue items on some
-    // field value
-    protected void addFilter(HstQuery query) {
-    }
-
-    private void addItemsFromMixin(HstRequest request, Map<String, Object> model, HippoBean proxy)
-            throws RepositoryException {
-        try {
-            HstQuery query = getQueryFromMixin(request, model, proxy);
-            HstQueryResult queryResult = query.execute();
-            List<HippoBean> items = getItems(queryResult);
-            model.put(Attributes.ITEMS, items);
-        } catch (QueryException e) {
-            throw new HstComponentException(e.getMessage(), e);
+        if (info.getThemaFilter()) {
+            addThemaFilter(query, globalFilter, contentBean.getThematags());
         }
+        query.setFilter(globalFilter);
     }
 
-    private HstQuery getQueryFromMixin(HstRequest request, Map<String, Object> model, HippoBean proxy)
-            throws QueryException, RepositoryException {
-        RelatedWidgetParametersBean params = ((RelatedItemsMixin) proxy).getRelatedCompoundMixin()
-                .getWidgetParameters();
-        HippoBean scope = params.getContentBeanPath();
-        HstQuery query = request.getRequestContext().getQueryManager().createQuery(scope, NewsPage.JCR_TYPE);
-        addSortingFromMixin(request, query, proxy);
-        query.setLimit(getPageSizeFromMixin(request, proxy));
-        addFilter(query);
-        return query;
-    }
-
-    private void addSortingFromMixin(HstRequest request, HstQuery query, HippoBean proxy) {
-        RelatedSortParameters params = ((RelatedItemsMixin) proxy).getRelatedCompoundMixin().getSortParameters();
-        String sortBy = HslUtils.getNamespacedFieldName(params.getSortBy());
-        if (StringUtils.isNotBlank(sortBy)) {
-            if (Constants.Values.DESCENDING.equals(params.getSortOrder())) {
-                query.addOrderByDescending(sortBy);
-            } else {
-                query.addOrderByAscending(sortBy);
-            }
+    private void addThemaFilter(HstQuery query, Filter globalFilter, String[] themaTags) throws FilterException {
+        Filter f = query.createFilter();
+        for (String themaTag : themaTags) {
+            Filter themafilter = query.createFilter();
+            themafilter.addEqualTo("hsl:thematags", themaTag);
+            f.addOrFilter(themafilter);
         }
+        globalFilter.addAndFilter(f);
     }
 
-    private int getPageSizeFromMixin(HstRequest request, HippoBean proxy) {
-        RelatedWidgetParametersBean params = ((RelatedItemsMixin) proxy).getRelatedCompoundMixin()
-                .getWidgetParameters();
-        int result = params.getSize().intValue();
-        result = retrieveComponentSpecificParameter(request, result);
-        return result;
-    }
-
-    private void addOverviewLinkFromMixin(HstRequest request, Map<String, Object> model, HippoBean proxy) {
-        HippoBean overviewLink = getOverviewPageBeanFromMixin(request, proxy);
-        RelatedOverviewParameters params = ((RelatedItemsMixin) proxy).getRelatedCompoundMixin()
-                .getOverviewParameters();
-        if (params.getShowOverview() && overviewLink != null) {
-            model.put(OVERVIEW_LINK, overviewLink);
+    private void addOverFilter(HstQuery query, Filter globalFilter, String[] subjectTags) throws FilterException {
+        Filter f = query.createFilter();
+        for (String subjectTag : subjectTags) {
+            Filter tagfilter = query.createFilter();
+            tagfilter.addEqualTo("hsl:subjecttags", subjectTag);
+            f.addOrFilter(tagfilter);
         }
-    }
-
-    private HippoBean getOverviewPageBeanFromMixin(HstRequest request, HippoBean proxy) {
-        HippoBean overviewLink = null;
-        RelatedOverviewParameters params = ((RelatedItemsMixin) proxy).getRelatedCompoundMixin()
-                .getOverviewParameters();
-        if (params.getOverviewBeanPath() != null) {
-            overviewLink = params.getOverviewBeanPath();
-        }
-        return overviewLink;
+        globalFilter.addAndFilter(f);
     }
 }

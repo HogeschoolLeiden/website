@@ -2,7 +2,6 @@ package nl.hsleiden.componentsinfo;
 
 import nl.hsleiden.utils.Constants;
 
-import org.hippoecm.hst.core.parameters.DocumentLink;
 import org.hippoecm.hst.core.parameters.DropDownList;
 import org.hippoecm.hst.core.parameters.FieldGroup;
 import org.hippoecm.hst.core.parameters.FieldGroupList;
@@ -11,29 +10,27 @@ import org.hippoecm.hst.core.parameters.Parameter;
 
 import com.tdclighthouse.prototype.componentsinfo.ContentBeanPathInfo;
 
-//TODO: change names and grouping according to the mixin types
 @FieldGroupList({
 	@FieldGroup(titleKey = "mixin.group.title", 
-	        value = {  RelatedItemsInfo.FIELD_USER_MIXIN }),
+	        value = {  RelatedINewsInfo.FIELD_USER_MIXIN }),
 	@FieldGroup(titleKey = "widget.group.title", 
-	        value = {  RelatedItemsInfo.WIDGET_TITLE,
-	                   RelatedItemsInfo.SIZE,
-	                   RelatedItemsInfo.CONTENT_BEAN_PATH}),
+	        value = {  RelatedINewsInfo.WIDGET_TITLE,
+	                   RelatedINewsInfo.SIZE,
+	                   RelatedINewsInfo.CONTENT_BEAN_PATH}),
 	@FieldGroup(titleKey = "items.sort.title", 
-	        value = {  RelatedItemsInfo.SORT_BY, 
-	                   RelatedItemsInfo.SORT_ORDER}),
+	        value = {  RelatedINewsInfo.SORT_BY, 
+	                   RelatedINewsInfo.SORT_ORDER}),
 	@FieldGroup(titleKey = "overview.group.title", 
-	        value = {  RelatedItemsInfo.SHOW_OVERVIEW, 
-	                   RelatedItemsInfo.OVERVIEW_BEAN_PATH, 
-	                   RelatedItemsInfo.OVERVIEW_LINK_LABEL }),
+	        value = {  RelatedINewsInfo.SHOW_OVERVIEW, 
+	                   RelatedINewsInfo.OVERVIEW_BEAN_PATH, 
+	                   RelatedINewsInfo.OVERVIEW_LINK_LABEL }),
 	@FieldGroup(titleKey = "filter.group.title", 
-	        value = {  RelatedItemsInfo.THEMA_FILTER, 
-	                   RelatedItemsInfo.OVER_FILTER, 
-	                   RelatedItemsInfo.TYPE_FILTER })
+	        value = {  RelatedINewsInfo.THEMA_FILTER, 
+	                   RelatedINewsInfo.OVER_FILTER })
 })
-public interface RelatedItemsInfo extends ContentBeanPathInfo {
+public interface RelatedINewsInfo extends ContentBeanPathInfo {
 
-	public static final String FIELD_USER_MIXIN = "useMixin";
+	public static final String FIELD_USER_MIXIN = "try to use mixin";
 	
 	public static final String WIDGET_TITLE = "widgetTitle";
 	public static final String WIDGET_TITLE_DEFAULT = "Related Items";
@@ -52,19 +49,18 @@ public interface RelatedItemsInfo extends ContentBeanPathInfo {
 
 	public static final String THEMA_FILTER = "themaFilter";
 	public static final String OVER_FILTER = "overFilter";
-	public static final String TYPE_FILTER = "typeFilter";
 	
 	@Parameter(name = FIELD_USER_MIXIN, defaultValue = "off")
-	public boolean getUseMixin();
+	public Boolean getUseMixin();
 	
 	@Parameter(name = WIDGET_TITLE, defaultValue = WIDGET_TITLE_DEFAULT)
 	public String getWidgetTitle();
 	
 	@Parameter(name = SHOW_OVERVIEW, defaultValue = "on")
-	public boolean getShowOverviewLink();
+	public Boolean getShowOverview();
 	
 	@Parameter(name = OVERVIEW_BEAN_PATH, defaultValue = "")
-	@DocumentLink(docType = OVERVIEW_BEAN_PATH_DOC_TYPE, docLocation = INITIAL_LOCATION)
+	@JcrPath(isRelative = false, pickerInitialPath = INITIAL_LOCATION, pickerSelectableNodeTypes = {OVERVIEW_BEAN_PATH_DOC_TYPE})
 	public String getOverviewBeanPath();
 	 
 	@Parameter(name = OVERVIEW_LINK_LABEL, defaultValue = "")
@@ -72,14 +68,14 @@ public interface RelatedItemsInfo extends ContentBeanPathInfo {
 	
 	@Override
 	@Parameter(name = CONTENT_BEAN_PATH, required = true)
-	@JcrPath(isRelative = true, pickerInitialPath = INITIAL_LOCATION, pickerSelectableNodeTypes = {CONTENT_BEAN_PATH_SELECTABLE})
+	@JcrPath(isRelative = false, pickerInitialPath = INITIAL_LOCATION, pickerSelectableNodeTypes = {CONTENT_BEAN_PATH_SELECTABLE})
 	public String getContentBeanPath();
 	
 	@Parameter(name = SORT_ORDER, defaultValue = Constants.Values.DESCENDING)
 	@DropDownList(value = { Constants.Values.DESCENDING, Constants.Values.ASCENDING })
 	public String getSortOrder();
 
-	@Parameter(name = SORT_BY, defaultValue = Constants.FieldName.RELEASE_DATE)
+	@Parameter(name = SORT_BY, defaultValue = Constants.DisplayedFieldNames.RELEASE_DATE)
 	@DropDownList(value = {Constants.DisplayedFieldNames.RELEASE_DATE, 
 	        Constants.DisplayedFieldNames.TITLE})
 	public String getSortBy();
@@ -88,12 +84,9 @@ public interface RelatedItemsInfo extends ContentBeanPathInfo {
 	public int getSize();
 	
 	@Parameter(name = THEMA_FILTER, defaultValue = "off")
-    public boolean getThemaFilter();
+    public Boolean getThemaFilter();
 	
 	@Parameter(name = OVER_FILTER, defaultValue = "off")
-    public boolean getOverFilter();
-	
-	@Parameter(name = TYPE_FILTER, defaultValue = "off")
-    public boolean getTypeFilter();
+    public Boolean getOverFilter();
 	
 }

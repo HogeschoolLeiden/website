@@ -7,7 +7,7 @@
 <%@ taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml"%>
 
 <div class="container-fluid">
-	<hst:include ref="top-container" />    
+	<%-- <hst:include ref="top-container" />     --%>
   	<div class="row-fluid">
         <div class="header span2"></div>
 		<nav class="span2">
@@ -27,5 +27,5 @@
 		</aside>
         <div class="header span2"></div>
   	</div>
-  	<hst:include ref="bottom-container" />
+  	<%-- <hst:include ref="bottom-container" /> --%>
 </div>

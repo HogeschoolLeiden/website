@@ -63,10 +63,6 @@
         <sv:property sv:name="hipposysedit:type" sv:type="String">
           <sv:value>String</sv:value>
         </sv:property>
-        <sv:property sv:multiple="true" sv:name="hipposysedit:validators" sv:type="String">
-          <sv:value>non-empty</sv:value>
-          <sv:value>required</sv:value>
-        </sv:property>
       </sv:node>
       <sv:node sv:name="contentBeanPath">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -90,9 +86,6 @@
         <sv:property sv:name="hipposysedit:type" sv:type="String">
           <sv:value>hippo:mirror</sv:value>
         </sv:property>
-        <sv:property sv:multiple="true" sv:name="hipposysedit:validators" sv:type="String">
-          <sv:value>required</sv:value>
-        </sv:property>
       </sv:node>
       <sv:node sv:name="size">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -115,9 +108,6 @@
         </sv:property>
         <sv:property sv:name="hipposysedit:type" sv:type="String">
           <sv:value>Long</sv:value>
-        </sv:property>
-        <sv:property sv:multiple="true" sv:name="hipposysedit:validators" sv:type="String">
-          <sv:value>required</sv:value>
         </sv:property>
       </sv:node>
     </sv:node>

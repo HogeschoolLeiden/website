@@ -73,14 +73,7 @@
       </div>
     </c:forEach>
 
-    <%-- <div class="pager-wrapper" rel="${ajaxUrl}">
-      <opw:componentParameterName name="page" var="pageParameterName" />
-      <opw:verysimplepaginator paginator="${model.paginator}"
-        pageParamerter="${pageParameterName}" />
-    </div> --%>
-
-    <c:if
-      test="${model.info.showOverviewLink && not empty model.info.overviewLinkLabel }">
+    <c:if test="${model.info.showOverview && not empty model.overviewLink }">
       <div class="read_more">
         <h4>
           <a href='<hst:link hippobean="${model.overviewLink }" />'>
