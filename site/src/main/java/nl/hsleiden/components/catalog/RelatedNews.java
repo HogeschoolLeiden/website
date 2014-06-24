@@ -42,7 +42,6 @@ public class RelatedNews extends AjaxEnabledComponent<Map<String, Object>> {
 
     public Map<String, Object> getModel(HstRequest request, HstResponse response) {
         try {
-            Map<String, Object> model = new HashMap<String, Object>();
             RelatedINewsInfo parametersInfo = this.<RelatedINewsInfo> getComponentParametersInfo(request);
             if (parametersInfo.getUseMixin()) {
                 HippoBean proxy = getMixinProxy(request.getRequestContext().getContentBean());
@@ -50,8 +49,7 @@ public class RelatedNews extends AjaxEnabledComponent<Map<String, Object>> {
                     parametersInfo = ((RelatedItemsMixin) proxy).getRelatedCompoundMixin();
                 }
             }
-            model = populateModel(request, parametersInfo);
-            return model;
+            return populateModel(request, parametersInfo);
         } catch (RepositoryException e) {
             throw new HstComponentException(e.getMessage(), e);
         }
@@ -92,33 +90,23 @@ public class RelatedNews extends AjaxEnabledComponent<Map<String, Object>> {
     }
 
     private HstQuery createQuery(HstRequest request, RelatedINewsInfo parametersInfo) throws QueryException {
+        HippoBean scope = getSelectedBean(request, parametersInfo.getContentBeanPath());
+        return request.getRequestContext().getQueryManager().createQuery(scope, NewsPage.JCR_TYPE);
+    }
+
+    private HippoBean getSelectedBean(HstRequest request, String contentBeanPath) {
         try {
-            String contentBeanPath = parametersInfo.getContentBeanPath();
-            LOG.warn("content bean path = " + contentBeanPath);
-            HippoBean scope = (HippoBean) request.getRequestContext().getObjectBeanManager().getObject(contentBeanPath);
-            HstQuery query = request.getRequestContext().getQueryManager().createQuery(scope, NewsPage.JCR_TYPE);
-            return query;
+            LOG.debug("content bean path = " + contentBeanPath);
+            return(HippoBean) request.getRequestContext().getObjectBeanManager().getObject(contentBeanPath);
         } catch (ObjectBeanManagerException e) {
             throw new HstComponentException(e.getMessage(), e);
         }
     }
 
     private void addOverviewLinkToModel(HstRequest request, Map<String, Object> model, RelatedINewsInfo parametersInfo) {
-        HippoBean overviewLink = getOverviewPageBean(request, parametersInfo);
+        HippoBean overviewLink = getSelectedBean(request, parametersInfo.getOverviewBeanPath());
         if (parametersInfo.getShowOverview() && overviewLink != null) {
             model.put(OVERVIEW_LINK, overviewLink);
-        }
-    }
-
-    private HippoBean getOverviewPageBean(HstRequest request, RelatedINewsInfo parametersInfo) {
-        try {
-            String contentBeanPath = parametersInfo.getOverviewBeanPath();
-            LOG.warn("content bean path = " + contentBeanPath);
-            HippoBean overviewLink = (HippoBean) request.getRequestContext().getObjectBeanManager().getObject(contentBeanPath);
-            return overviewLink;
-        } catch (ObjectBeanManagerException e) {
-            LOG.error("Object Manager Exception");
-            throw new HstComponentException(e.getMessage(), e);
         }
     }
 
@@ -146,31 +134,24 @@ public class RelatedNews extends AjaxEnabledComponent<Map<String, Object>> {
     private void addFilter(HstQuery query, RelatedINewsInfo info, ArticlePage contentBean) throws FilterException {
         Filter globalFilter = query.createFilter();
         if (info.getOverFilter()) {
-            addOverFilter(query, globalFilter, contentBean.getSubjecttags());
+            Filter ff = addFilterOnField(query, contentBean.getSubjecttags(), "hsl:subjecttags");
+            globalFilter.addAndFilter(ff);
         }
         if (info.getThemaFilter()) {
-            addThemaFilter(query, globalFilter, contentBean.getThematags());
+            Filter ff = addFilterOnField(query, contentBean.getSubjecttags(), "hsl:thematags");
+            globalFilter.addAndFilter(ff);
         }
         query.setFilter(globalFilter);
     }
 
-    private void addThemaFilter(HstQuery query, Filter globalFilter, String[] themaTags) throws FilterException {
+    private Filter addFilterOnField(HstQuery query, String[] filterValues, String fieldToFilter)
+            throws FilterException {
         Filter f = query.createFilter();
-        for (String themaTag : themaTags) {
-            Filter themafilter = query.createFilter();
-            themafilter.addEqualTo("hsl:thematags", themaTag);
-            f.addOrFilter(themafilter);
-        }
-        globalFilter.addAndFilter(f);
-    }
-
-    private void addOverFilter(HstQuery query, Filter globalFilter, String[] subjectTags) throws FilterException {
-        Filter f = query.createFilter();
-        for (String subjectTag : subjectTags) {
+        for (String value : filterValues) {
             Filter tagfilter = query.createFilter();
-            tagfilter.addEqualTo("hsl:subjecttags", subjectTag);
+            tagfilter.addEqualTo(fieldToFilter, value);
             f.addOrFilter(tagfilter);
         }
-        globalFilter.addAndFilter(f);
+        return f;
     }
 }

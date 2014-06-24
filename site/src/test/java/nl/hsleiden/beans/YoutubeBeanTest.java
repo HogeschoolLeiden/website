@@ -1,4 +1,4 @@
-package nl.hsleiden.bean;
+package nl.hsleiden.beans;
 
 import hslbeans.YoutubePlayerParameters;
 import hslbeans.YoutubeUrlParameters;

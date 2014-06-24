@@ -22,6 +22,32 @@ public class Constants {
 
     }
 
+    public static class WidgetConstants {
+        public static final String FIELD_USER_MIXIN = "try to use mixin";
+
+        public static final String WIDGET_TITLE = "widgetTitle";
+        public static final String WIDGET_TITLE_DEFAULT = "Related Items";
+        public static final String SIZE = "size";
+        public static final String CONTENT_BEAN_PATH = "contentBeanPath";
+        public static final String CONTENT_BEAN_PATH_SELECTABLE = "hippostd:folder";
+
+        public static final String SHOW_OVERVIEW = "showOverviewLink";
+        public static final String OVERVIEW_BEAN_PATH = "overviewBeanPath";
+        public static final String OVERVIEW_BEAN_PATH_DOC_TYPE = "hsl:WebPage";
+        public static final String INITIAL_LOCATION = "hsl";
+        public static final String OVERVIEW_LINK_LABEL = "overviewLinkLabel";
+
+        public static final String SORT_ORDER = "sortOrder";
+        public static final String SORT_BY = "sortBy";
+
+        public static final String THEMA_FILTER = "themaFilter";
+        public static final String OVER_FILTER = "overFilter";
+        
+        private WidgetConstants() {
+        }
+        
+    }
+
     public static class PikcerTypes extends PikcerTypesConstants {
         public static final String IMAGE_PICKER = "cms-pickers/images";
 
