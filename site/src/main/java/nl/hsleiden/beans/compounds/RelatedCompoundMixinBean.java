@@ -18,6 +18,20 @@ public class RelatedCompoundMixinBean extends hslbeans.RelatedCompoundMixin impl
     }
 
     @Override
+    public String getContentBeanPath() {
+        String result = null;
+        if(getWidgetParameters().getContentBeanPath()!=null){
+            result = getWidgetParameters().getContentBeanPath().getPath();
+        }
+        return result;
+    }
+
+    @Override
+    public int getSize() {
+        return getWidgetParameters().getSize().intValue();
+    }
+
+    @Override
     public Boolean getShowOverview() {
        return getOverviewParameters().getShowOverview();
     }
@@ -36,14 +50,6 @@ public class RelatedCompoundMixinBean extends hslbeans.RelatedCompoundMixin impl
         return getOverviewParameters().getOverviewLinkLabel();
     }
 
-    @Override
-    public String getContentBeanPath() {
-        String result = null;
-        if(getWidgetParameters().getContentBeanPath()!=null){
-            result = getWidgetParameters().getContentBeanPath().getPath();
-        }
-        return result;
-    }
 
     @Override
     public String getSortOrder() {
@@ -55,10 +61,6 @@ public class RelatedCompoundMixinBean extends hslbeans.RelatedCompoundMixin impl
         return getSortParameters().getSortBy();
     }
 
-    @Override
-    public int getSize() {
-        return getWidgetParameters().getSize().intValue();
-    }
 
     @Override
     public Boolean getThemaFilter() {
