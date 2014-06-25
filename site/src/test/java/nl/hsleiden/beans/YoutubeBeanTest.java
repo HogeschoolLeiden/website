@@ -17,7 +17,8 @@ public class YoutubeBeanTest {
 
     @Test
     public void getUrlTest() throws Exception {
-        ObjectConverter objectConverter = createMockObjectConverter();
+        boolean wrongVideoId = false;
+        ObjectConverter objectConverter = createMockObjectConverter(wrongVideoId);
         YoutubeBean youtubeBean = new YoutubeBean();
         youtubeBean.setObjectConverter(objectConverter);
         String url = youtubeBean.getUrl();
@@ -25,11 +26,21 @@ public class YoutubeBeanTest {
                 url);
     }
 
-    private ObjectConverter createMockObjectConverter() throws Exception {
+    @Test
+    public void getUrlTestVideoIdEmpty() throws Exception {
+        boolean wrongVideoId = true;
+        ObjectConverter objectConverter = createMockObjectConverter(wrongVideoId);
+        YoutubeBean youtubeBean = new YoutubeBean();
+        youtubeBean.setObjectConverter(objectConverter);
+        String url = youtubeBean.getUrl();
+        Assert.assertEquals(null, url);
+    }
+
+    private ObjectConverter createMockObjectConverter(boolean wrongVideoid) throws Exception {
         ObjectConverter objectConverter = EasyMock.createMock(ObjectConverter.class);
         try {
             EasyMock.expect(objectConverter.getObject((Node) null, "hsl:youtubeUrlParameters"))
-                    .andReturn(createMockYoutubeUrlParameters()).anyTimes();
+                    .andReturn(createMockYoutubeUrlParameters(wrongVideoid)).anyTimes();
             EasyMock.expect(objectConverter.getObject((Node) null, "hsl:youtubePlayerParameters"))
                     .andReturn(createMockYoutubePlayerParameters()).anyTimes();
             EasyMock.replay(objectConverter);
@@ -39,10 +50,17 @@ public class YoutubeBeanTest {
         return objectConverter;
     }
 
-    private YoutubeUrlParameters createMockYoutubeUrlParameters() throws NoSuchFieldException, SecurityException,
-            IllegalArgumentException, IllegalAccessException {
+    private YoutubeUrlParameters createMockYoutubeUrlParameters(boolean wrongVideoId) throws NoSuchFieldException,
+            SecurityException, IllegalArgumentException, IllegalAccessException {
+
         YoutubeUrlParameters youtubeUrlParameters = new YoutubeUrlParameters();
-        TestUtils.setPrivateField(youtubeUrlParameters, "youtubeUrl", "https://www.youtube.com/watch?v=yhKB-VxJWpg");
+        if (wrongVideoId) {
+            TestUtils.setPrivateField(youtubeUrlParameters, "youtubeUrl", "wrong");
+        } else {
+            TestUtils
+                    .setPrivateField(youtubeUrlParameters, "youtubeUrl", "https://www.youtube.com/watch?v=yhKB-VxJWpg");
+        }
+
         TestUtils.setPrivateField(youtubeUrlParameters, "theme", "black");
         return youtubeUrlParameters;
     }
