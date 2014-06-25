@@ -11,7 +11,7 @@ import org.hippoecm.hst.core.component.HstResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class Header /*extends BaseHstComponent*/ {
+public class Header extends BaseHstComponent {
 
     private static final Logger LOG = LoggerFactory.getLogger(Header.class);
 
