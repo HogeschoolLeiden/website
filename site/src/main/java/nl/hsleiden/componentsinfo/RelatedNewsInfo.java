@@ -20,7 +20,7 @@ import com.tdclighthouse.prototype.componentsinfo.ContentBeanPathInfo;
                 Constants.WidgetConstants.OVERVIEW_BEAN_PATH, Constants.WidgetConstants.OVERVIEW_LINK_LABEL }),
         @FieldGroup(titleKey = "filter.group.title", value = { Constants.WidgetConstants.THEMA_FILTER,
                 Constants.WidgetConstants.OVER_FILTER }) })
-public interface RelatedINewsInfo extends ContentBeanPathInfo {
+public interface RelatedNewsInfo extends ContentBeanPathInfo {
 
     @Parameter(name = Constants.WidgetConstants.FIELD_USER_MIXIN, defaultValue = "off")
     public Boolean getUseMixin();

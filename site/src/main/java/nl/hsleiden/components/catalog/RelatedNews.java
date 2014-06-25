@@ -11,7 +11,7 @@ import java.util.Map;
 import javax.jcr.RepositoryException;
 
 import nl.hsleiden.beans.mixin.RelatedItemsMixin;
-import nl.hsleiden.componentsinfo.RelatedINewsInfo;
+import nl.hsleiden.componentsinfo.RelatedNewsInfo;
 import nl.hsleiden.utils.Constants;
 import nl.hsleiden.utils.Constants.Attributes;
 import nl.hsleiden.utils.HslUtils;
@@ -34,7 +34,7 @@ import org.slf4j.LoggerFactory;
 
 import com.tdclighthouse.prototype.components.AjaxEnabledComponent;
 
-@ParametersInfo(type = RelatedINewsInfo.class)
+@ParametersInfo(type = RelatedNewsInfo.class)
 public class RelatedNews extends AjaxEnabledComponent<Map<String, Object>> {
 
     private static final String OVERVIEW_LINK = "overviewLink";
@@ -42,7 +42,7 @@ public class RelatedNews extends AjaxEnabledComponent<Map<String, Object>> {
 
     public Map<String, Object> getModel(HstRequest request, HstResponse response) {
         try {
-            RelatedINewsInfo parametersInfo = this.<RelatedINewsInfo> getComponentParametersInfo(request);
+            RelatedNewsInfo parametersInfo = this.<RelatedNewsInfo> getComponentParametersInfo(request);
             if (parametersInfo.getUseMixin()) {
                 HippoBean proxy = getMixinProxy(request.getRequestContext().getContentBean());
                 if (proxy instanceof RelatedItemsMixin) {
@@ -55,7 +55,7 @@ public class RelatedNews extends AjaxEnabledComponent<Map<String, Object>> {
         }
     }
 
-    private Map<String, Object> populateModel(HstRequest request, RelatedINewsInfo parametersInfo) {
+    private Map<String, Object> populateModel(HstRequest request, RelatedNewsInfo parametersInfo) {
         Map<String, Object> model = new HashMap<String, Object>();
         HippoBean contentBean = request.getRequestContext().getContentBean();
         if (contentBean instanceof ArticlePage) {
@@ -67,7 +67,7 @@ public class RelatedNews extends AjaxEnabledComponent<Map<String, Object>> {
     }
 
     private void addItemsToModel(HstRequest request, Map<String, Object> model, ArticlePage contentBean,
-            RelatedINewsInfo parametersInfo) {
+            RelatedNewsInfo parametersInfo) {
         try {
             HstQuery query = getQuery(request, contentBean, parametersInfo);
             HstQueryResult queryResult = query.execute();
@@ -78,7 +78,7 @@ public class RelatedNews extends AjaxEnabledComponent<Map<String, Object>> {
         }
     }
 
-    private HstQuery getQuery(HstRequest request, ArticlePage contentBean, RelatedINewsInfo parametersInfo)
+    private HstQuery getQuery(HstRequest request, ArticlePage contentBean, RelatedNewsInfo parametersInfo)
             throws QueryException {
 
         HstQuery query = createQuery(request, parametersInfo);
@@ -89,7 +89,7 @@ public class RelatedNews extends AjaxEnabledComponent<Map<String, Object>> {
 
     }
 
-    private HstQuery createQuery(HstRequest request, RelatedINewsInfo parametersInfo) throws QueryException {
+    private HstQuery createQuery(HstRequest request, RelatedNewsInfo parametersInfo) throws QueryException {
         HippoBean scope = getSelectedBean(request, parametersInfo.getContentBeanPath());
         return request.getRequestContext().getQueryManager().createQuery(scope, NewsPage.JCR_TYPE);
     }
@@ -103,7 +103,7 @@ public class RelatedNews extends AjaxEnabledComponent<Map<String, Object>> {
         }
     }
 
-    private void addOverviewLinkToModel(HstRequest request, Map<String, Object> model, RelatedINewsInfo parametersInfo) {
+    private void addOverviewLinkToModel(HstRequest request, Map<String, Object> model, RelatedNewsInfo parametersInfo) {
         HippoBean overviewLink = getSelectedBean(request, parametersInfo.getOverviewBeanPath());
         if (parametersInfo.getShowOverview() && overviewLink != null) {
             model.put(OVERVIEW_LINK, overviewLink);
@@ -118,7 +118,7 @@ public class RelatedNews extends AjaxEnabledComponent<Map<String, Object>> {
         return items;
     }
 
-    private void addSorting(HstRequest request, HstQuery query, RelatedINewsInfo parametersInfo) {
+    private void addSorting(HstRequest request, HstQuery query, RelatedNewsInfo parametersInfo) {
 
         String sortBy = HslUtils.getNamespacedFieldName(parametersInfo.getSortBy());
 
@@ -131,7 +131,7 @@ public class RelatedNews extends AjaxEnabledComponent<Map<String, Object>> {
         }
     }
 
-    private void addFilter(HstQuery query, RelatedINewsInfo info, ArticlePage contentBean) throws FilterException {
+    private void addFilter(HstQuery query, RelatedNewsInfo info, ArticlePage contentBean) throws FilterException {
         Filter globalFilter = query.createFilter();
         if (info.getOverFilter()) {
             Filter ff = addFilterOnField(query, contentBean.getSubjecttags(), "hsl:subjecttags");
