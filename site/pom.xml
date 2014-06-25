@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
@@ -14,11 +15,11 @@
   <packaging>war</packaging>
 
   <dependencies>
-  	<dependency>
-  		<groupId>nl.hsleiden</groupId>
-  		<artifactId>website-maven</artifactId>
-  		<version>${project.version}</version>
-  	</dependency>
+    <dependency>
+      <groupId>nl.hsleiden</groupId>
+      <artifactId>website-maven</artifactId>
+      <version>${project.version}</version>
+    </dependency>
 
     <dependency>
       <groupId>org.onehippo.cms7.essentials</groupId>
@@ -40,7 +41,7 @@
       <version>${jsp-api.version}</version>
       <scope>provided</scope>
     </dependency>
-    
+
     <dependency>
       <groupId>org.onehippo.cms7.hst.dependencies</groupId>
       <artifactId>hst-server-dependencies</artifactId>
@@ -94,7 +95,7 @@
       <groupId>org.onehippo.cms7.hst.components</groupId>
       <artifactId>hst-security</artifactId>
     </dependency>
-    
+
     <dependency>
       <groupId>commons-codec</groupId>
       <artifactId>commons-codec</artifactId>
@@ -112,19 +113,26 @@
       <artifactId>hst-mock</artifactId>
       <scope>test</scope>
     </dependency>
-    
+
     <dependency>
       <groupId>org.apache.tomcat</groupId>
       <artifactId>coyote</artifactId>
       <version>6.0.41</version>
       <scope>test</scope>
     </dependency>
-    
+
     <dependency>
-  	  <groupId>com.tdclighthouse.hippo</groupId>
-  	  <artifactId>hippo-prototype-frontend</artifactId>
-  	</dependency>
-  
+      <groupId>com.tdclighthouse.hippo</groupId>
+      <artifactId>hippo-prototype-frontend</artifactId>
+    </dependency>
+
+    <!-- easy forms -->
+    <dependency>
+      <groupId>org.onehippo.forge</groupId>
+      <artifactId>easy-forms-hst</artifactId>
+      <version>${forge.easy-forms.version}</version>
+    </dependency>
+    <!-- /easy forms -->
   </dependencies>
 
   <build>
