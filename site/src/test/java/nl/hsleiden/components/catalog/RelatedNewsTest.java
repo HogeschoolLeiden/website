@@ -59,13 +59,12 @@ public class RelatedNewsTest {
         MockHstRequest request = new MockHstRequest();
         request.setAttribute(ParameterUtils.MY_MOCK_PARAMETER_INFO, myInfoMockNoMixinNoFilteringNoSorting);
         HstRequestContext requestContext = createMockHstRequestContext(CONTENT_BEAN_PATH, OVERVIEW_BEAN_PATH,
-                myInfoMockNoMixinNoFilteringNoSorting);
+                myInfoMockNoMixinNoFilteringNoSorting, null);
 
         request.setRequestContext(requestContext);
 
         Map<String, Object> model = relatedNews.getModel(request, null);
 
-        // TODO: assert more on results and on info,
         Assert.assertEquals(((List<HippoBean>) model.get("items")).size(), SIZE);
         Assert.assertEquals(model.get("info"), myInfoMockNoMixinNoFilteringNoSorting);
         Assert.assertEquals(model.get("overviewLink"), null);
@@ -84,7 +83,7 @@ public class RelatedNewsTest {
         MockHstRequest request = new MockHstRequest();
         request.setAttribute(ParameterUtils.MY_MOCK_PARAMETER_INFO, myInfoMockNoMixinOverFilteringNoSorting);
         HstRequestContext requestContext = createMockHstRequestContext(CONTENT_BEAN_PATH, OVERVIEW_BEAN_PATH,
-                myInfoMockNoMixinOverFilteringNoSorting);
+                myInfoMockNoMixinOverFilteringNoSorting, null);
 
         request.setRequestContext(requestContext);
 
@@ -108,7 +107,7 @@ public class RelatedNewsTest {
         MockHstRequest request = new MockHstRequest();
         request.setAttribute(ParameterUtils.MY_MOCK_PARAMETER_INFO, myInfoMockNoMixinOverFilteringNoSorting);
         HstRequestContext requestContext = createMockHstRequestContext(CONTENT_BEAN_PATH, OVERVIEW_BEAN_PATH,
-                myInfoMockNoMixinOverFilteringNoSorting);
+                myInfoMockNoMixinOverFilteringNoSorting, null);
         
         request.setRequestContext(requestContext);
         
@@ -119,12 +118,62 @@ public class RelatedNewsTest {
         Assert.assertEquals(model.get("overviewLink"), null);
     }
 
+    @SuppressWarnings("unchecked")
+    @Test
+    public void getModelTestUseMixinFalseThemaFilteringNoSortingWithOverview() throws ObjectBeanManagerException,
+    IllegalStateException, QueryException, NoSuchFieldException, IllegalAccessException {
+        
+        RelatedNewsInfo myInfoMockNoMixinOverFilteringNoSorting = createRelatedNewsInfoMock(false, true, false,
+                WIDGET_TITLE, SORT_ORDER_ASCENDING, SORT_FIELD_RELEASE_DATE, SIZE, true, OVERVIEW_LINK_LABEL,
+                OVERVIEW_BEAN_PATH, CONTENT_BEAN_PATH);
+        
+        RelatedNews relatedNews = new RelatedNews();
+        MockHstRequest request = new MockHstRequest();
+        request.setAttribute(ParameterUtils.MY_MOCK_PARAMETER_INFO, myInfoMockNoMixinOverFilteringNoSorting);
+        HippoBean overviewBean = createMockContentBean(OVERVIEW_BEAN_PATH);
+        HstRequestContext requestContext = createMockHstRequestContext(CONTENT_BEAN_PATH, OVERVIEW_BEAN_PATH, 
+                myInfoMockNoMixinOverFilteringNoSorting, overviewBean);
+        
+        request.setRequestContext(requestContext);
+        
+        Map<String, Object> model = relatedNews.getModel(request, null);
+        
+        Assert.assertEquals(((List<HippoBean>) model.get("items")).size(), SIZE);
+        Assert.assertEquals(model.get("info"), myInfoMockNoMixinOverFilteringNoSorting);
+        Assert.assertEquals(model.get("overviewLink"), overviewBean);
+    }
+
+    @SuppressWarnings("unchecked")
+    @Test
+    public void getModelTestUseMixinFalseThemaFilteringNoSortingNullOverview() throws ObjectBeanManagerException,
+    IllegalStateException, QueryException, NoSuchFieldException, IllegalAccessException {
+        
+        RelatedNewsInfo myInfoMockNoMixinOverFilteringNoSorting = createRelatedNewsInfoMock(false, true, false,
+                WIDGET_TITLE, SORT_ORDER_ASCENDING, SORT_FIELD_RELEASE_DATE, SIZE, true, OVERVIEW_LINK_LABEL,
+                OVERVIEW_BEAN_PATH, CONTENT_BEAN_PATH);
+        
+        RelatedNews relatedNews = new RelatedNews();
+        MockHstRequest request = new MockHstRequest();
+        request.setAttribute(ParameterUtils.MY_MOCK_PARAMETER_INFO, myInfoMockNoMixinOverFilteringNoSorting);
+        HippoBean overviewBean = null;
+        HstRequestContext requestContext = createMockHstRequestContext(CONTENT_BEAN_PATH, OVERVIEW_BEAN_PATH, 
+                myInfoMockNoMixinOverFilteringNoSorting, overviewBean);
+        
+        request.setRequestContext(requestContext);
+        
+        Map<String, Object> model = relatedNews.getModel(request, null);
+        
+        Assert.assertEquals(((List<HippoBean>) model.get("items")).size(), SIZE);
+        Assert.assertEquals(model.get("info"), myInfoMockNoMixinOverFilteringNoSorting);
+        Assert.assertEquals(model.get("overviewLink"), overviewBean);
+    }
+
     private HstRequestContext createMockHstRequestContext(String contentBeanPath, String overviewBeanPath,
-            RelatedNewsInfo info) throws ObjectBeanManagerException, IllegalStateException, QueryException,
+            RelatedNewsInfo info, HippoBean overviewBean) throws ObjectBeanManagerException, IllegalStateException, QueryException,
             NoSuchFieldException, IllegalAccessException {
         HstRequestContext mock = EasyMock.createMock(HstRequestContext.class);
         HippoBean scopeBean = createMockContentBean(contentBeanPath);
-        HippoBean overviewBean = createMockContentBean(overviewBeanPath);
+        
         ArticlePage displayedArticlePage = new ArticlePage();
         TestUtils
                 .setPrivateField(displayedArticlePage, FILTER_FIELD_SUBJECT_TAGS, new String[] { FILTER_VALUE_OVER_1 });
