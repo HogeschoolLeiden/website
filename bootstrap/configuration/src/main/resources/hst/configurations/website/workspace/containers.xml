@@ -61,6 +61,72 @@
       <sv:property sv:name="hst:xtype" sv:type="String">
         <sv:value>HST.vBox</sv:value>
       </sv:property>
+      <sv:node sv:name="forms" xmlns:sv="http://www.jcp.org/jcr/sv/1.0">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:containeritemcomponent</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>6d5a77a6-79bd-43e7-a6a5-63ae0a9a0762</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:componentclassname" sv:type="String">
+          <sv:value>nl.hsleiden.components.catalog.FormComponent</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:iconpath" sv:type="String">
+          <sv:value>images/catalog/form-icon.png</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:label" sv:type="String">
+          <sv:value>Formulieren</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
+          <sv:value>ef_done_redirect</sv:value>
+          <sv:value>ef-from-name</sv:value>
+          <sv:value>ef-from-email</sv:value>
+          <sv:value>behaviors</sv:value>
+          <sv:value>ef-use-freemarker</sv:value>
+          <sv:value>ef-mailsession</sv:value>
+          <sv:value>ef-body-html</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
+          <sv:value>/over-hl/thank-you-page</sv:value>
+          <sv:value>Hippo Site Info</sv:value>
+          <sv:value>info@hsl.com</sv:value>
+          <sv:value>org.onehippo.forge.easyforms.behaviors.FormIntroBehavior,org.onehippo.forge.easyforms.behaviors.StoreFormDataBehavior,org.onehippo.forge.easyforms.behaviors.ConfirmationBehavior,org.onehippo.forge.easyforms.behaviors.MailFormDataBehavior</sv:value>
+          <sv:value>true</sv:value>
+          <sv:value>mail/Session</sv:value>
+          <sv:value>&lt;h2&gt;Support form filled&lt;/h2&gt;
+&lt;table&gt;
+      &lt;#list form.getFields() as field&gt;
+        &lt;#if field.multiple&gt;
+          &lt;#assign multiValues = field.multiValues&gt;
+          &lt;#if multiValues??&gt;
+            &lt;#list multiValues?keys as key&gt;
+              &lt;#assign collection = multiValues[key]&gt;
+              &lt;#list collection as itemValue&gt;
+                &lt;#if itemValue??&gt;
+                  &lt;tr&gt;
+                    &lt;th align="left"&gt;${key}&lt;/th&gt;
+                    &lt;td align="left"&gt;${itemValue}&lt;/td&gt;
+                  &lt;/tr&gt;
+                &lt;/#if&gt;
+              &lt;/#list&gt;
+            &lt;/#list&gt;
+          &lt;/#if&gt;
+          &lt;#else&gt;
+            &lt;tr&gt;
+              &lt;th align="left"&gt;${field.getLabel()}&lt;/th&gt;
+              &lt;td align="left"&gt;${field.getValue()}&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/#if&gt;
+      &lt;/#list&gt;
+    &lt;/table&gt;</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:template" sv:type="String">
+          <sv:value>catalog.easyforms.formtemplate</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:xtype" sv:type="String">
+          <sv:value>HST.Item</sv:value>
+        </sv:property>
+      </sv:node>
     </sv:node>
     <sv:node sv:name="rightTop">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">

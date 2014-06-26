@@ -1,13 +1,22 @@
 package nl.hsleiden.utils;
 
+import nl.hsleiden.components.catalog.RelatedNews;
+
 import org.apache.commons.lang.StringUtils;
+import org.hippoecm.hst.content.beans.ObjectBeanManagerException;
+import org.hippoecm.hst.content.beans.standard.HippoBean;
+import org.hippoecm.hst.core.component.HstComponentException;
 import org.hippoecm.hst.core.component.HstRequest;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class HslUtils {
 
     private HslUtils() {
         super();
     }
+
+    private static final Logger LOG = LoggerFactory.getLogger(RelatedNews.class);
 
     public static String getContextPath(HstRequest request) {
         String contextPath = request.getRequestContext().getVirtualHost().getVirtualHosts().getDefaultContextPath();
@@ -28,5 +37,14 @@ public class HslUtils {
         }
         
         return result;
+    }
+    
+    public static HippoBean getSelectedBean(HstRequest request, String contentBeanPath) {
+        try {
+            LOG.debug("content bean path = " + contentBeanPath);
+            return(HippoBean) request.getRequestContext().getObjectBeanManager().getObject(contentBeanPath);
+        } catch (ObjectBeanManagerException e) {
+            throw new HstComponentException(e.getMessage(), e);
+        }
     }
 }

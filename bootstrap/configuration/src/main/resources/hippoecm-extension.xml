@@ -121,7 +121,7 @@
     </sv:property>
   </sv:node>
   
-  <!-- check above -->
+  <!-- check above for the forms -->
   
   <sv:node sv:name="hsl-doublemailform-namespace"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
@@ -433,6 +433,23 @@
       <sv:value>true</sv:value> 
     </sv:property> 
   </sv:node>  
+  <sv:node sv:name="hsl-namespace-compounds-formcompoundmixin"> 
+    <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
+      <sv:value>hippo:initializeitem</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:sequence" sv:type="Double"> 
+      <sv:value>30051.9</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentresource" sv:type="String"> 
+      <sv:value>namespaces/hsl/compounds/formcomponent/formcompoundmixin.xml</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentroot" sv:type="String"> 
+      <sv:value>/hippo:namespaces/hsl</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:reloadonstartup" sv:type="Boolean"> 
+      <sv:value>true</sv:value> 
+    </sv:property> 
+  </sv:node>  
   <sv:node sv:name="hsl-imageset-namespace"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
@@ -462,6 +479,23 @@
     </sv:property>
     <sv:property sv:name="hippo:contentresource" sv:type="String">
       <sv:value>namespaces/hsl/mixins/relateditemsmixin.xml</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:contentroot" sv:type="String">
+      <sv:value>/hippo:namespaces/hsl</sv:value>
+    </sv:property>
+  </sv:node>  
+  <sv:node sv:name="hsl-mixins-formcomponentmixin-namespace">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hippo:initializeitem</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:sequence" sv:type="Double">
+      <sv:value>30052.5</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:reloadonstartup" sv:type="Boolean">
+      <sv:value>true</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:contentresource" sv:type="String">
+      <sv:value>namespaces/hsl/mixins/formcomponentmixin.xml</sv:value>
     </sv:property>
     <sv:property sv:name="hippo:contentroot" sv:type="String">
       <sv:value>/hippo:namespaces/hsl</sv:value>

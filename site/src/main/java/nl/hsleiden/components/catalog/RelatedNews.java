@@ -17,7 +17,6 @@ import nl.hsleiden.utils.Constants.Attributes;
 import nl.hsleiden.utils.HslUtils;
 
 import org.apache.commons.lang.StringUtils;
-import org.hippoecm.hst.content.beans.ObjectBeanManagerException;
 import org.hippoecm.hst.content.beans.query.HstQuery;
 import org.hippoecm.hst.content.beans.query.HstQueryResult;
 import org.hippoecm.hst.content.beans.query.exceptions.FilterException;
@@ -29,8 +28,6 @@ import org.hippoecm.hst.core.component.HstComponentException;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
 import org.hippoecm.hst.core.parameters.ParametersInfo;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import com.tdclighthouse.prototype.components.AjaxEnabledComponent;
 
@@ -38,8 +35,7 @@ import com.tdclighthouse.prototype.components.AjaxEnabledComponent;
 public class RelatedNews extends AjaxEnabledComponent<Map<String, Object>> {
 
     private static final String OVERVIEW_LINK = "overviewLink";
-    private static final Logger LOG = LoggerFactory.getLogger(RelatedNews.class);
-
+    
     public Map<String, Object> getModel(HstRequest request, HstResponse response) {
         try {
             RelatedNewsInfo parametersInfo = this.<RelatedNewsInfo> getComponentParametersInfo(request);
@@ -90,21 +86,12 @@ public class RelatedNews extends AjaxEnabledComponent<Map<String, Object>> {
     }
 
     private HstQuery createQuery(HstRequest request, RelatedNewsInfo parametersInfo) throws QueryException {
-        HippoBean scope = getSelectedBean(request, parametersInfo.getContentBeanPath());
+        HippoBean scope = HslUtils.getSelectedBean(request, parametersInfo.getContentBeanPath());
         return request.getRequestContext().getQueryManager().createQuery(scope, NewsPage.JCR_TYPE);
     }
 
-    private HippoBean getSelectedBean(HstRequest request, String contentBeanPath) {
-        try {
-            LOG.debug("content bean path = " + contentBeanPath);
-            return(HippoBean) request.getRequestContext().getObjectBeanManager().getObject(contentBeanPath);
-        } catch (ObjectBeanManagerException e) {
-            throw new HstComponentException(e.getMessage(), e);
-        }
-    }
-
     private void addOverviewLinkToModel(HstRequest request, Map<String, Object> model, RelatedNewsInfo parametersInfo) {
-        HippoBean overviewLink = getSelectedBean(request, parametersInfo.getOverviewBeanPath());
+        HippoBean overviewLink = HslUtils.getSelectedBean(request, parametersInfo.getOverviewBeanPath());
         if (parametersInfo.getShowOverview() && overviewLink != null) {
             model.put(OVERVIEW_LINK, overviewLink);
         }

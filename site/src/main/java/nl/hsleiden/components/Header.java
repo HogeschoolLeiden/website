@@ -3,6 +3,7 @@ package nl.hsleiden.components;
 import nl.hsleiden.channels.WebsiteInfo;
 import nl.hsleiden.utils.Constants.Attributes;
 
+import org.hippoecm.hst.component.support.bean.BaseHstComponent;
 import org.hippoecm.hst.configuration.hosting.Mount;
 import org.hippoecm.hst.content.beans.ObjectBeanManagerException;
 import org.hippoecm.hst.core.component.HstRequest;
@@ -10,7 +11,7 @@ import org.hippoecm.hst.core.component.HstResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class Header {
+public class Header extends BaseHstComponent {
 
     private static final Logger LOG = LoggerFactory.getLogger(Header.class);
 

@@ -32,6 +32,28 @@
       <sv:value>Over HL</sv:value>
     </sv:property>
   </sv:node>
+  <sv:node sv:name="hippo:translation">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hippo:translation</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:language" sv:type="String">
+      <sv:value/>
+    </sv:property>
+    <sv:property sv:name="hippo:message" sv:type="String">
+      <sv:value>Over HL</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="hippo:translation">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hippo:translation</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:language" sv:type="String">
+      <sv:value/>
+    </sv:property>
+    <sv:property sv:name="hippo:message" sv:type="String">
+      <sv:value>Over HL</sv:value>
+    </sv:property>
+  </sv:node>
   <sv:node sv:name="index">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hippo:handle</sv:value>
@@ -996,6 +1018,610 @@
       <sv:property sv:name="hippo:message" sv:type="String">
         <sv:value>Mission and values</sv:value>
       </sv:property>
+    </sv:node>
+  </sv:node>
+  <sv:node sv:name="thank-you-page">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hippo:handle</sv:value>
+    </sv:property>
+    <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+      <sv:value>mix:referenceable</sv:value>
+      <sv:value>hippo:translated</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>c467ff4d-e1ab-4da3-a39a-3bd8239ac7cf</sv:value>
+    </sv:property>
+    <sv:node sv:name="thank-you-page">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hsl:ArticlePage</sv:value>
+      </sv:property>
+      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+        <sv:value>mix:referenceable</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>ad1ec4d0-0356-489e-9584-5d22ef2e6f14</sv:value>
+      </sv:property>
+      <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String"/>
+      <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+        <sv:value>over-hl/thank-you-page/thank-you-page[3]</sv:value>
+        <sv:value>over-hl/thank-you-page/thank-you-page[2]</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:state" sv:type="String">
+        <sv:value>draft</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+        <sv:value>live</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+        <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+        <sv:value>2014-06-26T12:50:23.522+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+        <sv:value>2014-06-26T12:51:25.689+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+        <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippotranslation:id" sv:type="String">
+        <sv:value>b25186d4-1941-4771-bc12-79626f364b16</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippotranslation:locale" sv:type="String">
+        <sv:value>en</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:browserTitle" sv:type="String">
+        <sv:value>thanks</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:description" sv:type="String">
+        <sv:value>form submission thank you page</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:hideFromSearch" sv:type="Boolean">
+        <sv:value>true</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:hideFromSitemap" sv:type="Boolean">
+        <sv:value>true</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:introduction" sv:type="String">
+        <sv:value>form submission thank you page form submission thank you page form submission thank you page</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:keywords" sv:type="String">
+        <sv:value>form submission thank you page</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:releaseDate" sv:type="Date">
+        <sv:value>2014-06-26T12:50:00.000+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:multiple="true" sv:name="hsl:subjecttags" sv:type="String">
+        <sv:value>hl-media</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:subtitle" sv:type="String">
+        <sv:value>form submission thank you page</sv:value>
+      </sv:property>
+      <sv:property sv:multiple="true" sv:name="hsl:thematags" sv:type="String">
+        <sv:value>gezondheidszorg</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:title" sv:type="String">
+        <sv:value>form submission thank you page</sv:value>
+      </sv:property>
+      <sv:node sv:name="hsl:headerImage">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hippogallerypicker:imagelink</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:docbase" sv:type="String">
+          <sv:value>b1265697-ea19-412d-aba6-9f0940f8b755</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
+        <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
+        <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
+      </sv:node>
+    </sv:node>
+    <sv:node sv:name="hippo:translation">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hippo:translation</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:language" sv:type="String">
+        <sv:value/>
+      </sv:property>
+      <sv:property sv:name="hippo:message" sv:type="String">
+        <sv:value>thank you page</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="thank-you-page">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hsl:ArticlePage</sv:value>
+      </sv:property>
+      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+        <sv:value>mix:referenceable</sv:value>
+        <sv:value>mix:versionable</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>ab3e40f0-661d-4a7c-b2a9-8ff50814f802</sv:value>
+      </sv:property>
+      <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
+        <sv:value>preview</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+        <sv:value>over-hl/thank-you-page/thank-you-page[3]</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:state" sv:type="String">
+        <sv:value>unpublished</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+        <sv:value>live</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+        <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+        <sv:value>2014-06-26T12:50:23.522+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+        <sv:value>2014-06-26T12:51:28.140+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+        <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippotranslation:id" sv:type="String">
+        <sv:value>b25186d4-1941-4771-bc12-79626f364b16</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippotranslation:locale" sv:type="String">
+        <sv:value>en</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:browserTitle" sv:type="String">
+        <sv:value>thanks</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:description" sv:type="String">
+        <sv:value>form submission thank you page</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:hideFromSearch" sv:type="Boolean">
+        <sv:value>true</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:hideFromSitemap" sv:type="Boolean">
+        <sv:value>true</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:introduction" sv:type="String">
+        <sv:value>form submission thank you page form submission thank you page form submission thank you page</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:keywords" sv:type="String">
+        <sv:value>form submission thank you page</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:releaseDate" sv:type="Date">
+        <sv:value>2014-06-26T12:50:00.000+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:multiple="true" sv:name="hsl:subjecttags" sv:type="String">
+        <sv:value>hl-media</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:subtitle" sv:type="String">
+        <sv:value>form submission thank you page</sv:value>
+      </sv:property>
+      <sv:property sv:multiple="true" sv:name="hsl:thematags" sv:type="String">
+        <sv:value>gezondheidszorg</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:title" sv:type="String">
+        <sv:value>form submission thank you page</sv:value>
+      </sv:property>
+      <sv:node sv:name="hsl:headerImage">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hippogallerypicker:imagelink</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:docbase" sv:type="String">
+          <sv:value>b1265697-ea19-412d-aba6-9f0940f8b755</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
+        <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
+        <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
+      </sv:node>
+    </sv:node>
+    <sv:node sv:name="thank-you-page">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hsl:ArticlePage</sv:value>
+      </sv:property>
+      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+        <sv:value>mix:referenceable</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>819fa66b-f54d-4e53-a187-af79ce2f003d</sv:value>
+      </sv:property>
+      <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
+        <sv:value>live</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+        <sv:value>over-hl/thank-you-page/thank-you-page[2]</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:state" sv:type="String">
+        <sv:value>published</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+        <sv:value>live</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+        <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+        <sv:value>2014-06-26T12:50:23.522+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+        <sv:value>2014-06-26T12:51:28.140+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+        <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
+        <sv:value>2014-06-26T12:51:30.280+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippotranslation:id" sv:type="String">
+        <sv:value>b25186d4-1941-4771-bc12-79626f364b16</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippotranslation:locale" sv:type="String">
+        <sv:value>en</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:browserTitle" sv:type="String">
+        <sv:value>thanks</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:description" sv:type="String">
+        <sv:value>form submission thank you page</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:hideFromSearch" sv:type="Boolean">
+        <sv:value>true</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:hideFromSitemap" sv:type="Boolean">
+        <sv:value>true</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:introduction" sv:type="String">
+        <sv:value>form submission thank you page form submission thank you page form submission thank you page</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:keywords" sv:type="String">
+        <sv:value>form submission thank you page</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:releaseDate" sv:type="Date">
+        <sv:value>2014-06-26T12:50:00.000+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:multiple="true" sv:name="hsl:subjecttags" sv:type="String">
+        <sv:value>hl-media</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:subtitle" sv:type="String">
+        <sv:value>form submission thank you page</sv:value>
+      </sv:property>
+      <sv:property sv:multiple="true" sv:name="hsl:thematags" sv:type="String">
+        <sv:value>gezondheidszorg</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:title" sv:type="String">
+        <sv:value>form submission thank you page</sv:value>
+      </sv:property>
+      <sv:node sv:name="hsl:headerImage">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hippogallerypicker:imagelink</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:docbase" sv:type="String">
+          <sv:value>b1265697-ea19-412d-aba6-9f0940f8b755</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
+        <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
+        <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
+      </sv:node>
+    </sv:node>
+  </sv:node>
+  <sv:node sv:name="form-test-page">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hippo:handle</sv:value>
+    </sv:property>
+    <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+      <sv:value>mix:referenceable</sv:value>
+      <sv:value>hippo:translated</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>77b63a04-1cad-4b35-b186-37e368ef1970</sv:value>
+    </sv:property>
+    <sv:node sv:name="form-test-page">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hsl:ArticlePage</sv:value>
+      </sv:property>
+      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+        <sv:value>mix:referenceable</sv:value>
+        <sv:value>hsl:FormComponentMixin</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>51fe76ce-8e2b-4233-a565-2a7999be1821</sv:value>
+      </sv:property>
+      <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String"/>
+      <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+        <sv:value>over-hl/form-test-page/form-test-page[2]</sv:value>
+        <sv:value>over-hl/form-test-page/form-test-page[3]</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:state" sv:type="String">
+        <sv:value>draft</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+        <sv:value>live</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+        <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+        <sv:value>2014-06-26T17:21:37.073+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+        <sv:value>2014-06-26T17:21:38.194+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+        <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippotranslation:id" sv:type="String">
+        <sv:value>6506cf0b-9af7-4ee7-8ab5-b024697894fd</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippotranslation:locale" sv:type="String">
+        <sv:value>en</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:browserTitle" sv:type="String">
+        <sv:value>Form test page</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:description" sv:type="String">
+        <sv:value>Inleiding</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:hideFromSearch" sv:type="Boolean">
+        <sv:value>false</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:hideFromSitemap" sv:type="Boolean">
+        <sv:value>false</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:introduction" sv:type="String">
+        <sv:value>Form test page Samenvatting Form test page Samenvatting Form test page Samenvatting Form test page Samenvatting</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:keywords" sv:type="String">
+        <sv:value>Trefwoorden</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:releaseDate" sv:type="Date">
+        <sv:value>2014-06-26T17:22:00.000+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:multiple="true" sv:name="hsl:subjecttags" sv:type="String">
+        <sv:value>onderzoek</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:subtitle" sv:type="String">
+        <sv:value>Form test page Subtitel</sv:value>
+      </sv:property>
+      <sv:property sv:multiple="true" sv:name="hsl:thematags" sv:type="String">
+        <sv:value>gezondheidszorg</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:title" sv:type="String">
+        <sv:value>Form test page</sv:value>
+      </sv:property>
+      <sv:node sv:name="hsl:headerImage">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hippogallerypicker:imagelink</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:docbase" sv:type="String">
+          <sv:value>b1265697-ea19-412d-aba6-9f0940f8b755</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
+        <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
+        <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
+      </sv:node>
+      <sv:node sv:name="hsl:formCompoundMixin">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsl:FormCompoundMixin</sv:value>
+        </sv:property>
+        <sv:node sv:name="hsl:formPicker">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>5eaf19d5-43f8-458d-a528-845dcfac8111</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+    </sv:node>
+    <sv:node sv:name="hippo:translation">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hippo:translation</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:language" sv:type="String">
+        <sv:value/>
+      </sv:property>
+      <sv:property sv:name="hippo:message" sv:type="String">
+        <sv:value>Form test page</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="form-test-page">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hsl:ArticlePage</sv:value>
+      </sv:property>
+      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+        <sv:value>mix:referenceable</sv:value>
+        <sv:value>hsl:FormComponentMixin</sv:value>
+        <sv:value>mix:versionable</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>370cbe02-39f5-41c0-b19b-0bfcf36541b7</sv:value>
+      </sv:property>
+      <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
+        <sv:value>preview</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+        <sv:value>over-hl/form-test-page/form-test-page[3]</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:state" sv:type="String">
+        <sv:value>unpublished</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+        <sv:value>live</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+        <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+        <sv:value>2014-06-26T17:21:37.073+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+        <sv:value>2014-06-26T17:22:34.845+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+        <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippotranslation:id" sv:type="String">
+        <sv:value>6506cf0b-9af7-4ee7-8ab5-b024697894fd</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippotranslation:locale" sv:type="String">
+        <sv:value>en</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:browserTitle" sv:type="String">
+        <sv:value>Form test page</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:description" sv:type="String">
+        <sv:value>Inleiding</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:hideFromSearch" sv:type="Boolean">
+        <sv:value>false</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:hideFromSitemap" sv:type="Boolean">
+        <sv:value>false</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:introduction" sv:type="String">
+        <sv:value>Form test page Samenvatting Form test page Samenvatting Form test page Samenvatting Form test page Samenvatting</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:keywords" sv:type="String">
+        <sv:value>Trefwoorden</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:releaseDate" sv:type="Date">
+        <sv:value>2014-06-26T17:22:00.000+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:multiple="true" sv:name="hsl:subjecttags" sv:type="String">
+        <sv:value>onderzoek</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:subtitle" sv:type="String">
+        <sv:value>Form test page Subtitel</sv:value>
+      </sv:property>
+      <sv:property sv:multiple="true" sv:name="hsl:thematags" sv:type="String">
+        <sv:value>gezondheidszorg</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:title" sv:type="String">
+        <sv:value>Form test page</sv:value>
+      </sv:property>
+      <sv:node sv:name="hsl:headerImage">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hippogallerypicker:imagelink</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:docbase" sv:type="String">
+          <sv:value>b1265697-ea19-412d-aba6-9f0940f8b755</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
+        <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
+        <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
+      </sv:node>
+      <sv:node sv:name="hsl:formCompoundMixin">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsl:FormCompoundMixin</sv:value>
+        </sv:property>
+        <sv:node sv:name="hsl:formPicker">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>5eaf19d5-43f8-458d-a528-845dcfac8111</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+    </sv:node>
+    <sv:node sv:name="form-test-page">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hsl:ArticlePage</sv:value>
+      </sv:property>
+      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+        <sv:value>mix:referenceable</sv:value>
+        <sv:value>hsl:FormComponentMixin</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>85cf9031-8ee3-4103-9692-af5558d5c3e7</sv:value>
+      </sv:property>
+      <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
+        <sv:value>live</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+        <sv:value>over-hl/form-test-page/form-test-page[2]</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:state" sv:type="String">
+        <sv:value>published</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+        <sv:value>live</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+        <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+        <sv:value>2014-06-26T17:21:37.073+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+        <sv:value>2014-06-26T17:22:34.845+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+        <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
+        <sv:value>2014-06-26T17:22:37.957+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippotranslation:id" sv:type="String">
+        <sv:value>6506cf0b-9af7-4ee7-8ab5-b024697894fd</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippotranslation:locale" sv:type="String">
+        <sv:value>en</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:browserTitle" sv:type="String">
+        <sv:value>Form test page</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:description" sv:type="String">
+        <sv:value>Inleiding</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:hideFromSearch" sv:type="Boolean">
+        <sv:value>false</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:hideFromSitemap" sv:type="Boolean">
+        <sv:value>false</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:introduction" sv:type="String">
+        <sv:value>Form test page Samenvatting Form test page Samenvatting Form test page Samenvatting Form test page Samenvatting</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:keywords" sv:type="String">
+        <sv:value>Trefwoorden</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:releaseDate" sv:type="Date">
+        <sv:value>2014-06-26T17:22:00.000+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:multiple="true" sv:name="hsl:subjecttags" sv:type="String">
+        <sv:value>onderzoek</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:subtitle" sv:type="String">
+        <sv:value>Form test page Subtitel</sv:value>
+      </sv:property>
+      <sv:property sv:multiple="true" sv:name="hsl:thematags" sv:type="String">
+        <sv:value>gezondheidszorg</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:title" sv:type="String">
+        <sv:value>Form test page</sv:value>
+      </sv:property>
+      <sv:node sv:name="hsl:headerImage">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hippogallerypicker:imagelink</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:docbase" sv:type="String">
+          <sv:value>b1265697-ea19-412d-aba6-9f0940f8b755</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
+        <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
+        <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
+      </sv:node>
+      <sv:node sv:name="hsl:formCompoundMixin">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsl:FormCompoundMixin</sv:value>
+        </sv:property>
+        <sv:node sv:name="hsl:formPicker">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>5eaf19d5-43f8-458d-a528-845dcfac8111</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
     </sv:node>
   </sv:node>
 </sv:node>

@@ -1,0 +1,1036 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node sv:name="formulieren" xmlns:sv="http://www.jcp.org/jcr/sv/1.0">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>hippostd:folder</sv:value>
+  </sv:property>
+  <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+    <sv:value>hippotranslation:translated</sv:value>
+    <sv:value>mix:versionable</sv:value>
+    <sv:value>hippo:translated</sv:value>
+  </sv:property>
+  <sv:property sv:name="jcr:uuid" sv:type="String">
+    <sv:value>4d42d5bd-949e-4ba1-b6f6-f261581f2a0c</sv:value>
+  </sv:property>
+  <sv:property sv:multiple="true" sv:name="hippostd:foldertype" sv:type="String">
+    <sv:value>new-forms-folder</sv:value>
+  </sv:property>
+  <sv:property sv:name="hippotranslation:id" sv:type="String">
+    <sv:value>600f490b-aa41-473b-89ea-998df281b187</sv:value>
+  </sv:property>
+  <sv:property sv:name="hippotranslation:locale" sv:type="String">
+    <sv:value>en</sv:value>
+  </sv:property>
+  <sv:node sv:name="hippo:translation">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hippo:translation</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:language" sv:type="String">
+      <sv:value/>
+    </sv:property>
+    <sv:property sv:name="hippo:message" sv:type="String">
+      <sv:value>Formulieren</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="standard-forms">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hippostd:folder</sv:value>
+    </sv:property>
+    <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+      <sv:value>hippo:harddocument</sv:value>
+      <sv:value>hippotranslation:translated</sv:value>
+      <sv:value>hippo:translated</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>547ef7f2-fe05-42f0-ba33-c2c5a36fb8e9</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:related___pathreference" sv:type="String"/>
+    <sv:property sv:multiple="true" sv:name="hippostd:foldertype" sv:type="String">
+      <sv:value>new-doublemail-form</sv:value>
+      <sv:value>new-doublemailstore-form</sv:value>
+      <sv:value>new-mailstore-form</sv:value>
+      <sv:value>new-mail-form</sv:value>
+      <sv:value>new-forms-folder</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippotranslation:id" sv:type="String">
+      <sv:value>66d035b2-6b3e-410f-b915-bde5fa1c97e1</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippotranslation:locale" sv:type="String">
+      <sv:value>en</sv:value>
+    </sv:property>
+    <sv:node sv:name="hippotranslation:translations">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hippotranslation:translations</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="hippo:translation">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hippo:translation</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:language" sv:type="String">
+        <sv:value/>
+      </sv:property>
+      <sv:property sv:name="hippo:message" sv:type="String">
+        <sv:value>standard forms</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="double-mail-store-form">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hippo:handle</sv:value>
+      </sv:property>
+      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+        <sv:value>mix:referenceable</sv:value>
+        <sv:value>hippo:translated</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>5eaf19d5-43f8-458d-a528-845dcfac8111</sv:value>
+      </sv:property>
+      <sv:node sv:name="double-mail-store-form">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsl:doublemailstoreform</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+          <sv:value>mix:referenceable</sv:value>
+          <sv:value>hippotranslation:translated</sv:value>
+          <sv:value>mix:versionable</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>3424a111-eeaf-4b8e-89a5-1ca7799d3fe3</sv:value>
+        </sv:property>
+        <sv:property sv:name="ef:action" sv:type="String">
+          <sv:value>mail</sv:value>
+        </sv:property>
+        <sv:property sv:name="ef:actionurl" sv:type="String">
+          <sv:value>http://test.com/action.do</sv:value>
+        </sv:property>
+        <sv:property sv:name="ef:confirmationemailfields" sv:type="String">
+          <sv:value>ida4dce09f5a2ad590,email</sv:value>
+        </sv:property>
+        <sv:property sv:name="ef:confirmationincludefields" sv:type="String">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:property sv:name="ef:confirmationsenderaddress" sv:type="String">
+          <sv:value>test@example.com</sv:value>
+        </sv:property>
+        <sv:property sv:name="ef:confirmationsubject" sv:type="String">
+          <sv:value>Thank you for your feedback</sv:value>
+        </sv:property>
+        <sv:property sv:name="ef:confirmationtext" sv:type="String">
+          <sv:value>We appriciate it a lot</sv:value>
+        </sv:property>
+        <sv:property sv:name="ef:formintro" sv:type="String">
+          <sv:value>This is some introduction text to be displayed before the fields of this form</sv:value>
+        </sv:property>
+        <sv:property sv:name="ef:formname" sv:type="String">
+          <sv:value>Double mail store form</sv:value>
+        </sv:property>
+        <sv:property sv:name="ef:mailformdata" sv:type="String">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:property sv:name="ef:notificationemail" sv:type="String">
+          <sv:value>test@example.com</sv:value>
+        </sv:property>
+        <sv:property sv:name="ef:storeformdata" sv:type="String">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
+          <sv:value>preview</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+          <sv:value>formulieren/standard-forms/double-mail-store-form/double-mail-store-form[3]</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostd:state" sv:type="String">
+          <sv:value>unpublished</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+          <sv:value>live</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+          <sv:value>admin</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+          <sv:value>2014-06-26T10:52:29.329+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+          <sv:value>2014-06-26T10:59:28.038+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+          <sv:value>admin</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippotranslation:id" sv:type="String">
+          <sv:value>169f6bf4-5a34-4393-a2cb-58528943f4c8</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippotranslation:locale" sv:type="String">
+          <sv:value>en</sv:value>
+        </sv:property>
+        <sv:node sv:name="field4">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>ef:textfield</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>1e7d0268-1522-4738-9705-7f373b535e75</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:expandhint" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:fieldid" sv:type="String">
+            <sv:value>idb2e4b874ef37b73c</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:fieldname" sv:type="String">
+            <sv:value>name</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:hint" sv:type="String">
+            <sv:value/>
+          </sv:property>
+          <sv:property sv:name="ef:label" sv:type="String">
+            <sv:value>Name</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:length" sv:type="Long">
+            <sv:value>40</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:mandatory" sv:type="Boolean">
+            <sv:value>true</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:validcasesensitive" sv:type="String">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:validexpression" sv:type="String">
+            <sv:value/>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="field0">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>ef:datefield</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>31525e2d-eda2-4d8a-8b87-9a313a706321</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:dateformat" sv:type="String">
+            <sv:value>dd-mm-yy</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:expandhint" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:fieldid" sv:type="String">
+            <sv:value>id94811a3356da7426</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:fieldname" sv:type="String">
+            <sv:value>birthday</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:hint" sv:type="String">
+            <sv:value>fill in your birthday</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:label" sv:type="String">
+            <sv:value>Birthday</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:mandatory" sv:type="Boolean">
+            <sv:value>true</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:validcasesensitive" sv:type="String">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:validexpression" sv:type="String">
+            <sv:value/>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="field2">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>ef:textfield</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>a1cad49c-09f0-4702-8043-9e8ee5b36041</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:expandhint" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:fieldid" sv:type="String">
+            <sv:value>ida4dce09f5a2ad590</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:fieldname" sv:type="String">
+            <sv:value>email</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:hint" sv:type="String">
+            <sv:value>fill in your mail</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:label" sv:type="String">
+            <sv:value>email</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:length" sv:type="Long">
+            <sv:value>60</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:mandatory" sv:type="Boolean">
+            <sv:value>true</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:validationruleid" sv:type="String">
+            <sv:value>email</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:validationrulelabel" sv:type="String">
+            <sv:value>E-mail Address</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:validcasesensitive" sv:type="String">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:validexpression" sv:type="String">
+            <sv:value>\b[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="field1">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>ef:fieldsettag</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>90341fa0-4a05-4d8c-9a6c-0d0e9d36b93a</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:expandhint" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:fieldid" sv:type="String">
+            <sv:value>id9367565c558b5fed</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:fieldname" sv:type="String">
+            <sv:value>Fieldset-tag</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:hint" sv:type="String">
+            <sv:value>field_hint</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:label" sv:type="String">
+            <sv:value>field_label</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:mandatory" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:startfieldsettag" sv:type="Boolean">
+            <sv:value>true</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="field5">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>ef:simpletext</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>4ecdfa5a-dd90-43ed-9908-382b6ab0f90d</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:expandhint" sv:type="Boolean">
+            <sv:value>true</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:fieldid" sv:type="String">
+            <sv:value>idab5084a7505dbc7e</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:fieldname" sv:type="String">
+            <sv:value>free-text</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:hint" sv:type="String">
+            <sv:value>can use the label and the hint of the free text field if want to add some text between some of the form fields</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:label" sv:type="String">
+            <sv:value>We will not use your mail</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:mandatory" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="field7">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>ef:fieldsettag</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>f219e17e-a18b-4645-9da3-97255c865db7</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:expandhint" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:fieldid" sv:type="String">
+            <sv:value>idb6155e7e245ad001</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:fieldname" sv:type="String">
+            <sv:value>Fieldset-tag</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:hint" sv:type="String">
+            <sv:value>field_hint</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:label" sv:type="String">
+            <sv:value>field_label</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:mandatory" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:startfieldsettag" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="field3">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>ef:textarea</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>697480ff-6757-43c5-87eb-b21597840dac</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:cols" sv:type="Long">
+            <sv:value>40</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:expandhint" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:fieldid" sv:type="String">
+            <sv:value>id89f846980056c99d</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:fieldname" sv:type="String">
+            <sv:value>description</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:hint" sv:type="String">
+            <sv:value/>
+          </sv:property>
+          <sv:property sv:name="ef:label" sv:type="String">
+            <sv:value>description</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:mandatory" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:rows" sv:type="Long">
+            <sv:value>10</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:validcasesensitive" sv:type="String">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:validexpression" sv:type="String">
+            <sv:value/>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="hippo:translation">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hippo:translation</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:language" sv:type="String">
+          <sv:value/>
+        </sv:property>
+        <sv:property sv:name="hippo:message" sv:type="String">
+          <sv:value>Double mail store form</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="double-mail-store-form">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsl:doublemailstoreform</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+          <sv:value>mix:referenceable</sv:value>
+          <sv:value>hippotranslation:translated</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>c86b0f01-a515-47eb-8e0f-079b85fe905b</sv:value>
+        </sv:property>
+        <sv:property sv:name="ef:action" sv:type="String">
+          <sv:value>mail</sv:value>
+        </sv:property>
+        <sv:property sv:name="ef:actionurl" sv:type="String">
+          <sv:value>http://test.com/action.do</sv:value>
+        </sv:property>
+        <sv:property sv:name="ef:confirmationemailfields" sv:type="String">
+          <sv:value>ida4dce09f5a2ad590,email</sv:value>
+        </sv:property>
+        <sv:property sv:name="ef:confirmationincludefields" sv:type="String">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:property sv:name="ef:confirmationsenderaddress" sv:type="String">
+          <sv:value>test@example.com</sv:value>
+        </sv:property>
+        <sv:property sv:name="ef:confirmationsubject" sv:type="String">
+          <sv:value>Thank you for your feedback</sv:value>
+        </sv:property>
+        <sv:property sv:name="ef:confirmationtext" sv:type="String">
+          <sv:value>We appriciate it a lot</sv:value>
+        </sv:property>
+        <sv:property sv:name="ef:formintro" sv:type="String">
+          <sv:value>This is some introduction text to be displayed before the fields of this form</sv:value>
+        </sv:property>
+        <sv:property sv:name="ef:formname" sv:type="String">
+          <sv:value>Double mail store form</sv:value>
+        </sv:property>
+        <sv:property sv:name="ef:mailformdata" sv:type="String">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:property sv:name="ef:notificationemail" sv:type="String">
+          <sv:value>test@example.com</sv:value>
+        </sv:property>
+        <sv:property sv:name="ef:storeformdata" sv:type="String">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String"/>
+        <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+          <sv:value>formulieren/standard-forms/double-mail-store-form/double-mail-store-form</sv:value>
+          <sv:value>formulieren/standard-forms/double-mail-store-form/double-mail-store-form[3]</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostd:state" sv:type="String">
+          <sv:value>draft</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+          <sv:value>live</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+          <sv:value>admin</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+          <sv:value>2014-06-26T10:52:29.329+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+          <sv:value>2014-06-26T11:00:33.433+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+          <sv:value>admin</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippotranslation:id" sv:type="String">
+          <sv:value>169f6bf4-5a34-4393-a2cb-58528943f4c8</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippotranslation:locale" sv:type="String">
+          <sv:value>en</sv:value>
+        </sv:property>
+        <sv:node sv:name="field4">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>ef:textfield</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>820ad768-8273-4c0f-a0fb-408d0dfe6a27</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:expandhint" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:fieldid" sv:type="String">
+            <sv:value>idb2e4b874ef37b73c</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:fieldname" sv:type="String">
+            <sv:value>name</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:hint" sv:type="String">
+            <sv:value/>
+          </sv:property>
+          <sv:property sv:name="ef:label" sv:type="String">
+            <sv:value>Name</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:length" sv:type="Long">
+            <sv:value>40</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:mandatory" sv:type="Boolean">
+            <sv:value>true</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:validcasesensitive" sv:type="String">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:validexpression" sv:type="String">
+            <sv:value/>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="field0">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>ef:datefield</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>d0831a0c-92b7-4c23-abcb-7e3fb762c4b9</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:dateformat" sv:type="String">
+            <sv:value>dd-mm-yy</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:expandhint" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:fieldid" sv:type="String">
+            <sv:value>id94811a3356da7426</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:fieldname" sv:type="String">
+            <sv:value>birthday</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:hint" sv:type="String">
+            <sv:value>fill in your birthday</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:label" sv:type="String">
+            <sv:value>Birthday</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:mandatory" sv:type="Boolean">
+            <sv:value>true</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:validcasesensitive" sv:type="String">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:validexpression" sv:type="String">
+            <sv:value/>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="field2">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>ef:textfield</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>2d3daeba-8f70-4486-8ca8-5ea36811d557</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:expandhint" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:fieldid" sv:type="String">
+            <sv:value>ida4dce09f5a2ad590</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:fieldname" sv:type="String">
+            <sv:value>email</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:hint" sv:type="String">
+            <sv:value>fill in your mail</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:label" sv:type="String">
+            <sv:value>email</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:length" sv:type="Long">
+            <sv:value>60</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:mandatory" sv:type="Boolean">
+            <sv:value>true</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:validationruleid" sv:type="String">
+            <sv:value>email</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:validationrulelabel" sv:type="String">
+            <sv:value>E-mail Address</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:validcasesensitive" sv:type="String">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:validexpression" sv:type="String">
+            <sv:value>\b[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="field1">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>ef:fieldsettag</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>8b999b3f-fd2f-44bb-b73e-713bbea95fd2</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:expandhint" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:fieldid" sv:type="String">
+            <sv:value>id9367565c558b5fed</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:fieldname" sv:type="String">
+            <sv:value>Fieldset-tag</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:hint" sv:type="String">
+            <sv:value>field_hint</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:label" sv:type="String">
+            <sv:value>field_label</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:mandatory" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:startfieldsettag" sv:type="Boolean">
+            <sv:value>true</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="field5">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>ef:simpletext</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>d7b378bc-b4f2-4e53-831d-fe8c7dfb2d43</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:expandhint" sv:type="Boolean">
+            <sv:value>true</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:fieldid" sv:type="String">
+            <sv:value>idab5084a7505dbc7e</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:fieldname" sv:type="String">
+            <sv:value>free-text</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:hint" sv:type="String">
+            <sv:value>can use the label and the hint of the free text field if want to add some text between some of the form fields</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:label" sv:type="String">
+            <sv:value>We will not use your mail</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:mandatory" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="field7">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>ef:fieldsettag</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>3c804c86-ab51-422d-b708-7364c97c80a4</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:expandhint" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:fieldid" sv:type="String">
+            <sv:value>idb6155e7e245ad001</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:fieldname" sv:type="String">
+            <sv:value>Fieldset-tag</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:hint" sv:type="String">
+            <sv:value>field_hint</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:label" sv:type="String">
+            <sv:value>field_label</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:mandatory" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:startfieldsettag" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="field3">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>ef:textarea</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>ea8cca25-48de-4c25-8c85-f8f78a9d6bda</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:cols" sv:type="Long">
+            <sv:value>40</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:expandhint" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:fieldid" sv:type="String">
+            <sv:value>id89f846980056c99d</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:fieldname" sv:type="String">
+            <sv:value>description</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:hint" sv:type="String">
+            <sv:value/>
+          </sv:property>
+          <sv:property sv:name="ef:label" sv:type="String">
+            <sv:value>description</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:mandatory" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:rows" sv:type="Long">
+            <sv:value>10</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:validcasesensitive" sv:type="String">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:validexpression" sv:type="String">
+            <sv:value/>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="double-mail-store-form">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsl:doublemailstoreform</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+          <sv:value>mix:referenceable</sv:value>
+          <sv:value>hippotranslation:translated</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>94626612-7ff1-46a6-be22-d24a1de6aa4f</sv:value>
+        </sv:property>
+        <sv:property sv:name="ef:action" sv:type="String">
+          <sv:value>mail</sv:value>
+        </sv:property>
+        <sv:property sv:name="ef:actionurl" sv:type="String">
+          <sv:value>http://test.com/action.do</sv:value>
+        </sv:property>
+        <sv:property sv:name="ef:confirmationemailfields" sv:type="String">
+          <sv:value>ida4dce09f5a2ad590,email</sv:value>
+        </sv:property>
+        <sv:property sv:name="ef:confirmationincludefields" sv:type="String">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:property sv:name="ef:confirmationsenderaddress" sv:type="String">
+          <sv:value>test@example.com</sv:value>
+        </sv:property>
+        <sv:property sv:name="ef:confirmationsubject" sv:type="String">
+          <sv:value>Thank you for your feedback</sv:value>
+        </sv:property>
+        <sv:property sv:name="ef:confirmationtext" sv:type="String">
+          <sv:value>We appriciate it a lot</sv:value>
+        </sv:property>
+        <sv:property sv:name="ef:formintro" sv:type="String">
+          <sv:value>This is some introduction text to be displayed before the fields of this form</sv:value>
+        </sv:property>
+        <sv:property sv:name="ef:formname" sv:type="String">
+          <sv:value>Double mail store form</sv:value>
+        </sv:property>
+        <sv:property sv:name="ef:mailformdata" sv:type="String">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:property sv:name="ef:notificationemail" sv:type="String">
+          <sv:value>test@example.com</sv:value>
+        </sv:property>
+        <sv:property sv:name="ef:storeformdata" sv:type="String">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
+          <sv:value>live</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+          <sv:value>formulieren/standard-forms/double-mail-store-form/double-mail-store-form</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostd:state" sv:type="String">
+          <sv:value>published</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+          <sv:value>live</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+          <sv:value>admin</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+          <sv:value>2014-06-26T10:52:29.329+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+          <sv:value>2014-06-26T10:59:28.038+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+          <sv:value>admin</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
+          <sv:value>2014-06-26T10:59:30.439+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippotranslation:id" sv:type="String">
+          <sv:value>169f6bf4-5a34-4393-a2cb-58528943f4c8</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippotranslation:locale" sv:type="String">
+          <sv:value>en</sv:value>
+        </sv:property>
+        <sv:node sv:name="field4">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>ef:textfield</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>455980ef-ba60-4fd7-a308-72f503703fca</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:expandhint" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:fieldid" sv:type="String">
+            <sv:value>idb2e4b874ef37b73c</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:fieldname" sv:type="String">
+            <sv:value>name</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:hint" sv:type="String">
+            <sv:value/>
+          </sv:property>
+          <sv:property sv:name="ef:label" sv:type="String">
+            <sv:value>Name</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:length" sv:type="Long">
+            <sv:value>40</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:mandatory" sv:type="Boolean">
+            <sv:value>true</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:validcasesensitive" sv:type="String">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:validexpression" sv:type="String">
+            <sv:value/>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="field0">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>ef:datefield</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>33c18968-0c81-4dad-858d-5e33b639d783</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:dateformat" sv:type="String">
+            <sv:value>dd-mm-yy</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:expandhint" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:fieldid" sv:type="String">
+            <sv:value>id94811a3356da7426</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:fieldname" sv:type="String">
+            <sv:value>birthday</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:hint" sv:type="String">
+            <sv:value>fill in your birthday</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:label" sv:type="String">
+            <sv:value>Birthday</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:mandatory" sv:type="Boolean">
+            <sv:value>true</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:validcasesensitive" sv:type="String">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:validexpression" sv:type="String">
+            <sv:value/>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="field2">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>ef:textfield</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>75a3b575-bbd2-44ac-977b-5dee952caa6a</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:expandhint" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:fieldid" sv:type="String">
+            <sv:value>ida4dce09f5a2ad590</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:fieldname" sv:type="String">
+            <sv:value>email</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:hint" sv:type="String">
+            <sv:value>fill in your mail</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:label" sv:type="String">
+            <sv:value>email</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:length" sv:type="Long">
+            <sv:value>60</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:mandatory" sv:type="Boolean">
+            <sv:value>true</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:validationruleid" sv:type="String">
+            <sv:value>email</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:validationrulelabel" sv:type="String">
+            <sv:value>E-mail Address</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:validcasesensitive" sv:type="String">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:validexpression" sv:type="String">
+            <sv:value>\b[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="field1">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>ef:fieldsettag</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>b8db1777-5a49-4740-b366-fbd838b49e49</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:expandhint" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:fieldid" sv:type="String">
+            <sv:value>id9367565c558b5fed</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:fieldname" sv:type="String">
+            <sv:value>Fieldset-tag</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:hint" sv:type="String">
+            <sv:value>field_hint</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:label" sv:type="String">
+            <sv:value>field_label</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:mandatory" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:startfieldsettag" sv:type="Boolean">
+            <sv:value>true</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="field5">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>ef:simpletext</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>faa9e55f-5003-446f-a8ed-57542eea15fe</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:expandhint" sv:type="Boolean">
+            <sv:value>true</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:fieldid" sv:type="String">
+            <sv:value>idab5084a7505dbc7e</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:fieldname" sv:type="String">
+            <sv:value>free-text</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:hint" sv:type="String">
+            <sv:value>can use the label and the hint of the free text field if want to add some text between some of the form fields</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:label" sv:type="String">
+            <sv:value>We will not use your mail</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:mandatory" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="field7">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>ef:fieldsettag</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>2ebb0b6c-70df-4c0f-a3f5-716eb099c637</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:expandhint" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:fieldid" sv:type="String">
+            <sv:value>idb6155e7e245ad001</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:fieldname" sv:type="String">
+            <sv:value>Fieldset-tag</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:hint" sv:type="String">
+            <sv:value>field_hint</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:label" sv:type="String">
+            <sv:value>field_label</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:mandatory" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:startfieldsettag" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="field3">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>ef:textarea</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>bf70b5b2-fa81-4d78-8ce8-6ea41cd9b18d</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:cols" sv:type="Long">
+            <sv:value>40</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:expandhint" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:fieldid" sv:type="String">
+            <sv:value>id89f846980056c99d</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:fieldname" sv:type="String">
+            <sv:value>description</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:hint" sv:type="String">
+            <sv:value/>
+          </sv:property>
+          <sv:property sv:name="ef:label" sv:type="String">
+            <sv:value>description</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:mandatory" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:rows" sv:type="Long">
+            <sv:value>10</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:validcasesensitive" sv:type="String">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:validexpression" sv:type="String">
+            <sv:value/>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+    </sv:node>
+  </sv:node>
+</sv:node>

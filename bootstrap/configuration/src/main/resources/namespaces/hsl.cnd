@@ -39,6 +39,8 @@
 
 [hsl:RelatedCompoundMixin] > hippo:compound, hippostd:relaxed orderable
 
+[hsl:FormCompoundMixin] > hippo:compound, hippostd:relaxed orderable
+
 [hsl:RelatedFilterParameters] > hippo:compound, hippostd:relaxed orderable
 
 [hsl:RelatedOverviewParameters] > hippo:compound, hippostd:relaxed orderable
@@ -55,4 +57,8 @@
 [hsl:doublemailstoreform] > ef:form
 [hsl:mailform] > ef:form
 [hsl:mailstoreform] > ef:form
+
+[hsl:FormComponentMixin]
+  mixin
+  + hsl:formCompoundMixin (hsl:FormCompoundMixin)
 
