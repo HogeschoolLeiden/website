@@ -19,4 +19,15 @@
     <!--
     <Parameter name="output-wicketpaths" value="true"/>
     -->
+    
+    <!-- Mail configuration for easy forms -->
+    <Resource name="mail/Session" auth="Container"  type="javax.mail.Session"
+              mail.smtp.host="localhost"
+              mail.debug="true"
+              mail.user=""
+              mail.from="test@test.test"
+              mail.smtp.starttls.enable="false"
+     />
+     
+     
 </Context>

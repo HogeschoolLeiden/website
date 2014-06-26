@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
@@ -14,7 +15,7 @@
   <packaging>war</packaging>
 
   <dependencies>
-    <!-- TODO: should be added by installer-->
+    <!-- TODO: should be added by installer -->
     <dependency>
       <groupId>org.onehippo.cms7.essentials</groupId>
       <artifactId>hippo-components-cms-plugin-library</artifactId>
@@ -29,7 +30,7 @@
       <artifactId>hst-repository-dependencies</artifactId>
       <type>pom</type>
     </dependency>
- 
+
     <dependency>
       <groupId>org.onehippo.cms7.hst.dependencies</groupId>
       <artifactId>hst-cms-dependencies</artifactId>
@@ -64,7 +65,7 @@
       <version>${project.version}</version>
     </dependency>
 
-    <!--  Gallery picker dependency -->
+    <!-- Gallery picker dependency -->
     <dependency>
       <groupId>org.onehippo.addon.frontend.gallerypicker</groupId>
       <artifactId>gallerypicker</artifactId>
@@ -93,14 +94,30 @@
       <artifactId>content-blocks</artifactId>
     </dependency>
 
+    <!-- easy forms -->
+    <dependency>
+      <groupId>org.onehippo.forge</groupId>
+      <artifactId>easy-forms-repository</artifactId>
+      <version>${forge.easy-forms.version}</version>
+      <type>jar</type>
+    </dependency>
+
+    <dependency>
+      <groupId>org.onehippo.forge</groupId>
+      <artifactId>easy-forms-cms</artifactId>
+      <version>${forge.easy-forms.version}</version>
+      <type>jar</type>
+    </dependency>
+    <!-- /easy forms -->
+
   </dependencies>
 
   <profiles>
     <profile>
       <id>essentials</id>
       <activation>
-        <!-- For the moment the essentials profile is active by default and
-         therefore the essentials content is always bootstrapped. -->
+        <!-- For the moment the essentials profile is active by default and 
+          therefore the essentials content is always bootstrapped. -->
         <activeByDefault>true</activeByDefault>
       </activation>
     </profile>
