@@ -39,7 +39,7 @@ public interface RelatedNewsInfo extends ContentBeanPathInfo {
     public String getOverviewLinkLabel();
 
     @Override
-    @Parameter(name = Constants.WidgetConstants.CONTENT_BEAN_PATH, required = true)
+    @Parameter(name = Constants.WidgetConstants.CONTENT_BEAN_PATH)
     @JcrPath(isRelative = false, pickerInitialPath = Constants.WidgetConstants.INITIAL_LOCATION, pickerSelectableNodeTypes = { Constants.WidgetConstants.CONTENT_BEAN_PATH_SELECTABLE })
     public String getContentBeanPath();
 

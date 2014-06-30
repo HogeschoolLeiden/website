@@ -9,6 +9,8 @@
 <%--@elvariable id="ef_errors" type="java.util.List"--%>
 <%--@elvariable id="error" type="org.onehippo.forge.easyforms.model.ErrorMessage"--%>
 
+<c:if test="${fn:length(form.fields)>0}">
+
 <c:if test="${not empty form.title}">
   <h2><c:out value="${form.title}"/></h2>
 </c:if>
@@ -42,6 +44,7 @@
           <c:set var="enctype" value="application/x-www-form-urlencoded"/>
         </c:otherwise>
       </c:choose>
+      
       <form class="form" action="<hst:actionURL />" method="post" id="${form.id}" name="${form.name}" enctype="${enctype}">
         <c:forEach var="field" items="${form.fields}">
           <c:choose>
@@ -135,6 +138,7 @@
           </c:forEach>
         </div>
       </form>
+      
     </c:if>
   </c:otherwise>
 </c:choose>
@@ -169,3 +173,5 @@ ${form.jsCall}
 <hst:headContribution keyHint="formCss">
   <link rel="stylesheet" href="<hst:link path="/css/easyforms.css"/>" type="text/css"/>
 </hst:headContribution>
+
+</c:if>

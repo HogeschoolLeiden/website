@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node sv:name="cms-easyforms-perspective" xmlns:sv="http://www.jcp.org/jcr/sv/1.0">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>frontend:plugincluster</sv:value>
+  </sv:property>
+  <sv:node sv:name="perspective">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>frontend:plugin</sv:value>
+    </sv:property>
+    <sv:property sv:name="center" sv:type="String">
+      <sv:value>service.easyforms.exporter.editor</sv:value>
+    </sv:property>
+    <sv:property sv:name="left" sv:type="String">
+      <sv:value>service.easyforms.exporter.navigator</sv:value>
+    </sv:property>
+    <sv:property sv:name="model.document" sv:type="String">
+      <sv:value>model.easyforms.document</sv:value>
+    </sv:property>
+    <sv:property sv:name="perspective.title" sv:type="String">
+      <sv:value>default-site</sv:value>
+    </sv:property>
+    <sv:property sv:name="plugin.class" sv:type="String">
+      <sv:value>org.onehippo.forge.easyforms.exporter.FormDataPerspective</sv:value>
+    </sv:property>
+    <sv:property sv:name="translator.id" sv:type="String">
+      <sv:value>service.easyforms.perspective.translator</sv:value>
+    </sv:property>
+    <sv:property sv:name="wicket.id" sv:type="String">
+      <sv:value>service.tab</sv:value>
+    </sv:property>
+    <sv:property sv:name="wicket.model" sv:type="String">
+      <sv:value>easyforms.perspective.model</sv:value>
+    </sv:property>
+    <sv:node sv:name="yui.config">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>frontend:pluginconfig</sv:value>
+      </sv:property>
+      <sv:property sv:name="center" sv:type="String">
+        <sv:value>id=easyforms-perspective-center,body=easyforms-perspective-center-body,minWidth=400,scroll=true,gutter=0px 0px 0px 0px</sv:value>
+      </sv:property>
+      <sv:property sv:name="left" sv:type="String">
+        <sv:value>id=easyforms-perspective-left,body=easyforms-perspective-left-body,resize=true,scroll=false,minWidth=200,width=200,gutter=0px 0px 0px 0px</sv:value>
+      </sv:property>
+      <sv:property sv:name="linked.with.parent" sv:type="Boolean">
+        <sv:value>true</sv:value>
+      </sv:property>
+      <sv:property sv:name="root.id" sv:type="String">
+        <sv:value>easyforms-perspective-wrapper</sv:value>
+      </sv:property>
+    </sv:node>
+  </sv:node>
+  <sv:node sv:name="navigator">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>frontend:plugin</sv:value>
+    </sv:property>
+    <sv:property sv:name="extension.components" sv:type="String">
+      <sv:value>${cluster.id}.tree.components</sv:value>
+    </sv:property>
+    <sv:property sv:multiple="true" sv:name="headers" sv:type="String">
+      <sv:value>section-formdata</sv:value>
+    </sv:property>
+    <sv:property sv:name="plugin.class" sv:type="String">
+      <sv:value>org.hippoecm.frontend.plugins.cms.browse.tree.SectionTreePlugin</sv:value>
+    </sv:property>
+    <sv:property sv:name="translator.id" sv:type="String">
+      <sv:value>service.easyforms.perspective.translator</sv:value>
+    </sv:property>
+    <sv:property sv:multiple="true" sv:name="wicket.extensions" sv:type="String">
+      <sv:value>extension.components</sv:value>
+    </sv:property>
+    <sv:property sv:name="wicket.id" sv:type="String">
+      <sv:value>service.easyforms.exporter.navigator</sv:value>
+    </sv:property>
+    <sv:property sv:name="wicket.model" sv:type="String">
+      <sv:value>easyforms.perspective.model</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="componentsBrowser">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>frontend:plugin</sv:value>
+    </sv:property>
+    <sv:property sv:name="nodename.max.length" sv:type="String">
+      <sv:value>30</sv:value>
+    </sv:property>
+    <sv:property sv:name="path" sv:type="String">
+      <sv:value>/formdata/permanent</sv:value>
+    </sv:property>
+    <sv:property sv:name="plugin.class" sv:type="String">
+      <sv:value>org.hippoecm.hst.plugins.frontend.browse.FolderTreePlugin</sv:value>
+    </sv:property>
+    <sv:property sv:name="rootless" sv:type="String">
+      <sv:value>true</sv:value>
+    </sv:property>
+    <sv:property sv:name="translator.id" sv:type="String">
+      <sv:value>service.easyforms.perspective.translator</sv:value>
+    </sv:property>
+    <sv:property sv:name="wicket.id" sv:type="String">
+      <sv:value>${cluster.id}.tree.components</sv:value>
+    </sv:property>
+    <sv:property sv:name="wicket.model" sv:type="String">
+      <sv:value>easyforms.perspective.model</sv:value>
+    </sv:property>
+    <sv:node sv:name="filters">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>frontend:pluginconfig</sv:value>
+      </sv:property>
+      <sv:node sv:name="hideIcon">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>frontend:pluginconfig</sv:value>
+        </sv:property>
+        <sv:property sv:name="child" sv:type="String">
+          <sv:value/>
+        </sv:property>
+        <sv:property sv:name="display" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="name" sv:type="String">
+          <sv:value/>
+        </sv:property>
+        <sv:property sv:name="parent" sv:type="String">
+          <sv:value/>
+        </sv:property>
+        <sv:property sv:name="path" sv:type="String">
+          <sv:value>hst:icon</sv:value>
+        </sv:property>
+        <sv:property sv:name="state" sv:type="String">
+          <sv:value/>
+        </sv:property>
+        <sv:property sv:name="target" sv:type="String">
+          <sv:value/>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="hideFormData">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>frontend:pluginconfig</sv:value>
+        </sv:property>
+        <sv:property sv:name="child" sv:type="String">
+          <sv:value>hst:formdata</sv:value>
+        </sv:property>
+        <sv:property sv:name="display" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="name" sv:type="String">
+          <sv:value/>
+        </sv:property>
+        <sv:property sv:name="parent" sv:type="String">
+          <sv:value/>
+        </sv:property>
+        <sv:property sv:name="path" sv:type="String">
+          <sv:value/>
+        </sv:property>
+        <sv:property sv:name="state" sv:type="String">
+          <sv:value/>
+        </sv:property>
+        <sv:property sv:name="target" sv:type="String">
+          <sv:value/>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="showFormDataContainer">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>frontend:pluginconfig</sv:value>
+        </sv:property>
+        <sv:property sv:name="child" sv:type="String">
+          <sv:value>hst:formdatacontainer</sv:value>
+        </sv:property>
+        <sv:property sv:name="display" sv:type="Boolean">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:property sv:name="name" sv:type="String">
+          <sv:value/>
+        </sv:property>
+        <sv:property sv:name="parent" sv:type="String">
+          <sv:value/>
+        </sv:property>
+        <sv:property sv:name="path" sv:type="String">
+          <sv:value/>
+        </sv:property>
+        <sv:property sv:name="state" sv:type="String">
+          <sv:value/>
+        </sv:property>
+        <sv:property sv:name="target" sv:type="String">
+          <sv:value/>
+        </sv:property>
+      </sv:node>
+    </sv:node>
+  </sv:node>
+  <sv:node sv:name="editor">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>frontend:plugin</sv:value>
+    </sv:property>
+    <sv:property sv:name="column.name" sv:type="String">
+      <sv:value>label</sv:value>
+    </sv:property>
+    <sv:property sv:name="column.name.latest" sv:type="Boolean">
+      <sv:value>true</sv:value>
+    </sv:property>
+    <sv:property sv:name="plugin.class" sv:type="String">
+      <sv:value>org.onehippo.forge.easyforms.exporter.FormContainerExporter</sv:value>
+    </sv:property>
+    <sv:property sv:name="translator.id" sv:type="String">
+      <sv:value>service.easyforms.perspective.translator</sv:value>
+    </sv:property>
+    <sv:property sv:name="wicket.id" sv:type="String">
+      <sv:value>service.easyforms.exporter.editor</sv:value>
+    </sv:property>
+    <sv:property sv:name="wicket.model" sv:type="String">
+      <sv:value>easyforms.perspective.model</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="easyforms-perspective-translator">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>frontend:plugin</sv:value>
+    </sv:property>
+    <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+      <sv:value>hippostd:translated</sv:value>
+    </sv:property>
+    <sv:property sv:name="plugin.class" sv:type="String">
+      <sv:value>org.hippoecm.frontend.i18n.ConfigTraversingPlugin</sv:value>
+    </sv:property>
+    <sv:property sv:name="translator.id" sv:type="String">
+      <sv:value>service.easyforms.perspective.translator</sv:value>
+    </sv:property>
+    <sv:node sv:name="hippostd:translations">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hippostd:translations</sv:value>
+      </sv:property>
+      <sv:node sv:name="section-formdata">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>frontend:pluginconfig</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+          <sv:value>hippo:translated</sv:value>
+        </sv:property>
+        <sv:node sv:name="hippo:translation">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:translation</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:language" sv:type="String">
+            <sv:value>nl</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:message" sv:type="String">
+            <sv:value>Formulieren</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="hippo:translation">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:translation</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:language" sv:type="String">
+            <sv:value>en</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:message" sv:type="String">
+            <sv:value>Forms</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="hippo:translation">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:translation</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:language" sv:type="String">
+            <sv:value>de</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:message" sv:type="String">
+            <sv:value>Formulare</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="hippo:translation">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:translation</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:language" sv:type="String">
+            <sv:value>fr</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:message" sv:type="String">
+            <sv:value>Formulaire</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="default-site">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>frontend:pluginconfig</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+          <sv:value>hippo:translated</sv:value>
+        </sv:property>
+        <sv:node sv:name="hippo:translation">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:translation</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:language" sv:type="String">
+            <sv:value>nl</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:message" sv:type="String">
+            <sv:value>Formulieren</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="hippo:translation">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:translation</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:language" sv:type="String">
+            <sv:value>en</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:message" sv:type="String">
+            <sv:value>Forms</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="hippo:translation">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:translation</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:language" sv:type="String">
+            <sv:value>de</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:message" sv:type="String">
+            <sv:value>Formulare</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="hippo:translation">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:translation</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:language" sv:type="String">
+            <sv:value>fr</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:message" sv:type="String">
+            <sv:value>Formulaire</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+    </sv:node>
+  </sv:node>
+</sv:node>
