@@ -66,9 +66,11 @@ public class RelatedNews extends AjaxEnabledComponent<Map<String, Object>> {
             RelatedNewsInfo parametersInfo) {
         try {
             HstQuery query = getQuery(request, contentBean, parametersInfo);
-            HstQueryResult queryResult = query.execute();
-            List<HippoBean> items = getItems(queryResult);
-            model.put(Attributes.ITEMS, items);
+            if(query!=null){ 
+                HstQueryResult queryResult = query.execute();
+                List<HippoBean> items = getItems(queryResult);
+                model.put(Attributes.ITEMS, items);
+            }
         } catch (QueryException e) {
             throw new HstComponentException(e.getMessage(), e);
         }
@@ -78,16 +80,22 @@ public class RelatedNews extends AjaxEnabledComponent<Map<String, Object>> {
             throws QueryException {
 
         HstQuery query = createQuery(request, parametersInfo);
-        addSorting(request, query, parametersInfo);
-        query.setLimit(parametersInfo.getSize());
-        addFilter(query, parametersInfo, contentBean);
+        if(query!=null){            
+            addSorting(request, query, parametersInfo);
+            query.setLimit(parametersInfo.getSize());
+            addFilter(query, parametersInfo, contentBean);
+        }
         return query;
 
     }
 
     private HstQuery createQuery(HstRequest request, RelatedNewsInfo parametersInfo) throws QueryException {
+        HstQuery result = null;
         HippoBean scope = HslUtils.getSelectedBean(request, parametersInfo.getContentBeanPath());
-        return request.getRequestContext().getQueryManager().createQuery(scope, NewsPage.JCR_TYPE);
+        if(scope!=null){            
+            result = request.getRequestContext().getQueryManager().createQuery(scope, NewsPage.JCR_TYPE);
+        }
+        return result; 
     }
 
     private void addOverviewLinkToModel(HstRequest request, Map<String, Object> model, RelatedNewsInfo parametersInfo) {
