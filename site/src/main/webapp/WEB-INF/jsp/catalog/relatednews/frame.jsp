@@ -9,23 +9,14 @@
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 <%@ taglib prefix='opw' uri="http://open-web.nl/hippo/prototype"%>
 
-<div class="catalog latestItems">
+<div class="catalog relatedNews">
   <hst:defineObjects />
   <c:set var="isCmsRequest" value="${hstRequest.requestContext.cmsRequest}" />
 
   <c:if test="${(empty model.items or fn:length(model.items) eq 0) and isCmsRequest}">
-    <c:choose>
-      <c:when test="${not empty model.webmasterErrorMessage}">
-        <p class="error-message">${model.webmasterErrorMessage}</p>
-      </c:when>
-      <c:otherwise>
-        <div class="catalog latestItems">
-          <p class="error-message">There are no newspage documents under folder:
-            ${model.info.contentBeanPath}. The widget will not display.
-            </p>
-        </div>
-      </c:otherwise>
-    </c:choose>
+  	<p class="error-message">There are no newspage documents under folder:
+      ${model.info.contentBeanPath}. The widget will not display.
+    </p>
   </c:if>
 
   <c:if test="${not empty model.items }">
@@ -38,6 +29,7 @@
         <div class="image-space">
           <c:if test="${hst:isReadable(item, 'image')}">
             <c:if test="${ not empty item.image.link.deref }">
+              <%-- Image size to be defined later --%>
               <hst:link var="image"
                 hippobean="${item.image.link.deref.listSmallImage }" />
               <img alt="${item.title }" src="${image }" />
