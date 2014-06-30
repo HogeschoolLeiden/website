@@ -23,7 +23,7 @@ public class Constants {
     }
 
     public static class WidgetConstants {
-        public static final String FIELD_USER_MIXIN = "try to use mixin";
+        public static final String FIELD_USER_MIXIN = "tryToUseMixin";
 
         public static final String WIDGET_TITLE = "widgetTitle";
         public static final String WIDGET_TITLE_DEFAULT = "Related Items";

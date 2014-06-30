@@ -12,7 +12,8 @@
     <sv:value>4d42d5bd-949e-4ba1-b6f6-f261581f2a0c</sv:value>
   </sv:property>
   <sv:property sv:multiple="true" sv:name="hippostd:foldertype" sv:type="String">
-    <sv:value>new-forms-folder</sv:value>
+    <sv:value>new-translated-folder</sv:value>
+    <sv:value>new-document</sv:value>
   </sv:property>
   <sv:property sv:name="hippotranslation:id" sv:type="String">
     <sv:value>600f490b-aa41-473b-89ea-998df281b187</sv:value>
@@ -20,6 +21,17 @@
   <sv:property sv:name="hippotranslation:locale" sv:type="String">
     <sv:value>en</sv:value>
   </sv:property>
+  <sv:node sv:name="hippo:translation">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hippo:translation</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:language" sv:type="String">
+      <sv:value/>
+    </sv:property>
+    <sv:property sv:name="hippo:message" sv:type="String">
+      <sv:value>Formulieren</sv:value>
+    </sv:property>
+  </sv:node>
   <sv:node sv:name="hippo:translation">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hippo:translation</sv:value>
@@ -151,7 +163,7 @@
           <sv:value>2014-06-26T10:52:29.329+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-06-26T10:59:28.038+02:00</sv:value>
+          <sv:value>2014-06-30T11:04:04.380+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -167,7 +179,7 @@
             <sv:value>ef:textfield</sv:value>
           </sv:property>
           <sv:property sv:name="jcr:uuid" sv:type="String">
-            <sv:value>1e7d0268-1522-4738-9705-7f373b535e75</sv:value>
+            <sv:value>4da4e865-d916-4666-b242-916cf486c34e</sv:value>
           </sv:property>
           <sv:property sv:name="ef:expandhint" sv:type="Boolean">
             <sv:value>false</sv:value>
@@ -202,7 +214,7 @@
             <sv:value>ef:datefield</sv:value>
           </sv:property>
           <sv:property sv:name="jcr:uuid" sv:type="String">
-            <sv:value>31525e2d-eda2-4d8a-8b87-9a313a706321</sv:value>
+            <sv:value>1a9be6e1-9a17-494c-89bc-6b177f458a78</sv:value>
           </sv:property>
           <sv:property sv:name="ef:dateformat" sv:type="String">
             <sv:value>dd-mm-yy</sv:value>
@@ -232,12 +244,38 @@
             <sv:value/>
           </sv:property>
         </sv:node>
+        <sv:node sv:name="field5">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>ef:simpletext</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>39118b1f-6327-4277-8d08-9971f9e24514</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:expandhint" sv:type="Boolean">
+            <sv:value>true</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:fieldid" sv:type="String">
+            <sv:value>idab5084a7505dbc7e</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:fieldname" sv:type="String">
+            <sv:value>free-text</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:hint" sv:type="String">
+            <sv:value>can use the label and the hint of the free text field if want to add some text between some of the form fields</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:label" sv:type="String">
+            <sv:value>We will not use your mail</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:mandatory" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+        </sv:node>
         <sv:node sv:name="field2">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>ef:textfield</sv:value>
           </sv:property>
           <sv:property sv:name="jcr:uuid" sv:type="String">
-            <sv:value>a1cad49c-09f0-4702-8043-9e8ee5b36041</sv:value>
+            <sv:value>2f2afcb7-f5c2-4a85-99c8-751934f039ff</sv:value>
           </sv:property>
           <sv:property sv:name="ef:expandhint" sv:type="Boolean">
             <sv:value>false</sv:value>
@@ -273,96 +311,12 @@
             <sv:value>\b[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b</sv:value>
           </sv:property>
         </sv:node>
-        <sv:node sv:name="field1">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>ef:fieldsettag</sv:value>
-          </sv:property>
-          <sv:property sv:name="jcr:uuid" sv:type="String">
-            <sv:value>90341fa0-4a05-4d8c-9a6c-0d0e9d36b93a</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:expandhint" sv:type="Boolean">
-            <sv:value>false</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:fieldid" sv:type="String">
-            <sv:value>id9367565c558b5fed</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:fieldname" sv:type="String">
-            <sv:value>Fieldset-tag</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:hint" sv:type="String">
-            <sv:value>field_hint</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:label" sv:type="String">
-            <sv:value>field_label</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:mandatory" sv:type="Boolean">
-            <sv:value>false</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:startfieldsettag" sv:type="Boolean">
-            <sv:value>true</sv:value>
-          </sv:property>
-        </sv:node>
-        <sv:node sv:name="field5">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>ef:simpletext</sv:value>
-          </sv:property>
-          <sv:property sv:name="jcr:uuid" sv:type="String">
-            <sv:value>4ecdfa5a-dd90-43ed-9908-382b6ab0f90d</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:expandhint" sv:type="Boolean">
-            <sv:value>true</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:fieldid" sv:type="String">
-            <sv:value>idab5084a7505dbc7e</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:fieldname" sv:type="String">
-            <sv:value>free-text</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:hint" sv:type="String">
-            <sv:value>can use the label and the hint of the free text field if want to add some text between some of the form fields</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:label" sv:type="String">
-            <sv:value>We will not use your mail</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:mandatory" sv:type="Boolean">
-            <sv:value>false</sv:value>
-          </sv:property>
-        </sv:node>
-        <sv:node sv:name="field7">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>ef:fieldsettag</sv:value>
-          </sv:property>
-          <sv:property sv:name="jcr:uuid" sv:type="String">
-            <sv:value>f219e17e-a18b-4645-9da3-97255c865db7</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:expandhint" sv:type="Boolean">
-            <sv:value>false</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:fieldid" sv:type="String">
-            <sv:value>idb6155e7e245ad001</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:fieldname" sv:type="String">
-            <sv:value>Fieldset-tag</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:hint" sv:type="String">
-            <sv:value>field_hint</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:label" sv:type="String">
-            <sv:value>field_label</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:mandatory" sv:type="Boolean">
-            <sv:value>false</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:startfieldsettag" sv:type="Boolean">
-            <sv:value>false</sv:value>
-          </sv:property>
-        </sv:node>
         <sv:node sv:name="field3">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>ef:textarea</sv:value>
           </sv:property>
           <sv:property sv:name="jcr:uuid" sv:type="String">
-            <sv:value>697480ff-6757-43c5-87eb-b21597840dac</sv:value>
+            <sv:value>7f68eb59-81b6-4212-95c2-dc9089ecd7a0</sv:value>
           </sv:property>
           <sv:property sv:name="ef:cols" sv:type="Long">
             <sv:value>40</sv:value>
@@ -472,7 +426,7 @@
           <sv:value>2014-06-26T10:52:29.329+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-06-26T11:00:33.433+02:00</sv:value>
+          <sv:value>2014-06-30T11:25:01.065+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -488,7 +442,7 @@
             <sv:value>ef:textfield</sv:value>
           </sv:property>
           <sv:property sv:name="jcr:uuid" sv:type="String">
-            <sv:value>820ad768-8273-4c0f-a0fb-408d0dfe6a27</sv:value>
+            <sv:value>25df0c00-dc6b-4b27-b0e4-62a96859eddf</sv:value>
           </sv:property>
           <sv:property sv:name="ef:expandhint" sv:type="Boolean">
             <sv:value>false</sv:value>
@@ -523,7 +477,7 @@
             <sv:value>ef:datefield</sv:value>
           </sv:property>
           <sv:property sv:name="jcr:uuid" sv:type="String">
-            <sv:value>d0831a0c-92b7-4c23-abcb-7e3fb762c4b9</sv:value>
+            <sv:value>3f8a97cb-d149-4452-8cc3-001afe56f36a</sv:value>
           </sv:property>
           <sv:property sv:name="ef:dateformat" sv:type="String">
             <sv:value>dd-mm-yy</sv:value>
@@ -553,12 +507,38 @@
             <sv:value/>
           </sv:property>
         </sv:node>
+        <sv:node sv:name="field5">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>ef:simpletext</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>b98c4de5-e3e8-4fc4-a76f-45003eff22a5</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:expandhint" sv:type="Boolean">
+            <sv:value>true</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:fieldid" sv:type="String">
+            <sv:value>idab5084a7505dbc7e</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:fieldname" sv:type="String">
+            <sv:value>free-text</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:hint" sv:type="String">
+            <sv:value>can use the label and the hint of the free text field if want to add some text between some of the form fields</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:label" sv:type="String">
+            <sv:value>We will not use your mail</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:mandatory" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+        </sv:node>
         <sv:node sv:name="field2">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>ef:textfield</sv:value>
           </sv:property>
           <sv:property sv:name="jcr:uuid" sv:type="String">
-            <sv:value>2d3daeba-8f70-4486-8ca8-5ea36811d557</sv:value>
+            <sv:value>e9727b54-0ddd-4c70-87f9-5fcf26858b94</sv:value>
           </sv:property>
           <sv:property sv:name="ef:expandhint" sv:type="Boolean">
             <sv:value>false</sv:value>
@@ -594,96 +574,12 @@
             <sv:value>\b[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b</sv:value>
           </sv:property>
         </sv:node>
-        <sv:node sv:name="field1">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>ef:fieldsettag</sv:value>
-          </sv:property>
-          <sv:property sv:name="jcr:uuid" sv:type="String">
-            <sv:value>8b999b3f-fd2f-44bb-b73e-713bbea95fd2</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:expandhint" sv:type="Boolean">
-            <sv:value>false</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:fieldid" sv:type="String">
-            <sv:value>id9367565c558b5fed</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:fieldname" sv:type="String">
-            <sv:value>Fieldset-tag</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:hint" sv:type="String">
-            <sv:value>field_hint</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:label" sv:type="String">
-            <sv:value>field_label</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:mandatory" sv:type="Boolean">
-            <sv:value>false</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:startfieldsettag" sv:type="Boolean">
-            <sv:value>true</sv:value>
-          </sv:property>
-        </sv:node>
-        <sv:node sv:name="field5">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>ef:simpletext</sv:value>
-          </sv:property>
-          <sv:property sv:name="jcr:uuid" sv:type="String">
-            <sv:value>d7b378bc-b4f2-4e53-831d-fe8c7dfb2d43</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:expandhint" sv:type="Boolean">
-            <sv:value>true</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:fieldid" sv:type="String">
-            <sv:value>idab5084a7505dbc7e</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:fieldname" sv:type="String">
-            <sv:value>free-text</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:hint" sv:type="String">
-            <sv:value>can use the label and the hint of the free text field if want to add some text between some of the form fields</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:label" sv:type="String">
-            <sv:value>We will not use your mail</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:mandatory" sv:type="Boolean">
-            <sv:value>false</sv:value>
-          </sv:property>
-        </sv:node>
-        <sv:node sv:name="field7">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>ef:fieldsettag</sv:value>
-          </sv:property>
-          <sv:property sv:name="jcr:uuid" sv:type="String">
-            <sv:value>3c804c86-ab51-422d-b708-7364c97c80a4</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:expandhint" sv:type="Boolean">
-            <sv:value>false</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:fieldid" sv:type="String">
-            <sv:value>idb6155e7e245ad001</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:fieldname" sv:type="String">
-            <sv:value>Fieldset-tag</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:hint" sv:type="String">
-            <sv:value>field_hint</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:label" sv:type="String">
-            <sv:value>field_label</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:mandatory" sv:type="Boolean">
-            <sv:value>false</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:startfieldsettag" sv:type="Boolean">
-            <sv:value>false</sv:value>
-          </sv:property>
-        </sv:node>
         <sv:node sv:name="field3">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>ef:textarea</sv:value>
           </sv:property>
           <sv:property sv:name="jcr:uuid" sv:type="String">
-            <sv:value>ea8cca25-48de-4c25-8c85-f8f78a9d6bda</sv:value>
+            <sv:value>2ee9e6a6-7982-452e-8a3b-481f8723d774</sv:value>
           </sv:property>
           <sv:property sv:name="ef:cols" sv:type="Long">
             <sv:value>40</sv:value>
@@ -783,13 +679,13 @@
           <sv:value>2014-06-26T10:52:29.329+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-06-26T10:59:28.038+02:00</sv:value>
+          <sv:value>2014-06-30T11:04:04.380+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-          <sv:value>2014-06-26T10:59:30.439+02:00</sv:value>
+          <sv:value>2014-06-30T11:04:06.504+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:id" sv:type="String">
           <sv:value>169f6bf4-5a34-4393-a2cb-58528943f4c8</sv:value>
@@ -802,7 +698,7 @@
             <sv:value>ef:textfield</sv:value>
           </sv:property>
           <sv:property sv:name="jcr:uuid" sv:type="String">
-            <sv:value>455980ef-ba60-4fd7-a308-72f503703fca</sv:value>
+            <sv:value>4cf8e5b2-bfe5-4218-ad94-cfc60fd9cd13</sv:value>
           </sv:property>
           <sv:property sv:name="ef:expandhint" sv:type="Boolean">
             <sv:value>false</sv:value>
@@ -837,7 +733,7 @@
             <sv:value>ef:datefield</sv:value>
           </sv:property>
           <sv:property sv:name="jcr:uuid" sv:type="String">
-            <sv:value>33c18968-0c81-4dad-858d-5e33b639d783</sv:value>
+            <sv:value>273d751e-25d8-4100-a1d3-ea2d92c08f5d</sv:value>
           </sv:property>
           <sv:property sv:name="ef:dateformat" sv:type="String">
             <sv:value>dd-mm-yy</sv:value>
@@ -867,12 +763,38 @@
             <sv:value/>
           </sv:property>
         </sv:node>
+        <sv:node sv:name="field5">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>ef:simpletext</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>7f3f2f5f-9834-482c-a11c-9a5d64792c92</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:expandhint" sv:type="Boolean">
+            <sv:value>true</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:fieldid" sv:type="String">
+            <sv:value>idab5084a7505dbc7e</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:fieldname" sv:type="String">
+            <sv:value>free-text</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:hint" sv:type="String">
+            <sv:value>can use the label and the hint of the free text field if want to add some text between some of the form fields</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:label" sv:type="String">
+            <sv:value>We will not use your mail</sv:value>
+          </sv:property>
+          <sv:property sv:name="ef:mandatory" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+        </sv:node>
         <sv:node sv:name="field2">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>ef:textfield</sv:value>
           </sv:property>
           <sv:property sv:name="jcr:uuid" sv:type="String">
-            <sv:value>75a3b575-bbd2-44ac-977b-5dee952caa6a</sv:value>
+            <sv:value>ad088290-d2fa-407f-95d4-afd0bb339c4c</sv:value>
           </sv:property>
           <sv:property sv:name="ef:expandhint" sv:type="Boolean">
             <sv:value>false</sv:value>
@@ -908,96 +830,12 @@
             <sv:value>\b[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b</sv:value>
           </sv:property>
         </sv:node>
-        <sv:node sv:name="field1">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>ef:fieldsettag</sv:value>
-          </sv:property>
-          <sv:property sv:name="jcr:uuid" sv:type="String">
-            <sv:value>b8db1777-5a49-4740-b366-fbd838b49e49</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:expandhint" sv:type="Boolean">
-            <sv:value>false</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:fieldid" sv:type="String">
-            <sv:value>id9367565c558b5fed</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:fieldname" sv:type="String">
-            <sv:value>Fieldset-tag</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:hint" sv:type="String">
-            <sv:value>field_hint</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:label" sv:type="String">
-            <sv:value>field_label</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:mandatory" sv:type="Boolean">
-            <sv:value>false</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:startfieldsettag" sv:type="Boolean">
-            <sv:value>true</sv:value>
-          </sv:property>
-        </sv:node>
-        <sv:node sv:name="field5">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>ef:simpletext</sv:value>
-          </sv:property>
-          <sv:property sv:name="jcr:uuid" sv:type="String">
-            <sv:value>faa9e55f-5003-446f-a8ed-57542eea15fe</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:expandhint" sv:type="Boolean">
-            <sv:value>true</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:fieldid" sv:type="String">
-            <sv:value>idab5084a7505dbc7e</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:fieldname" sv:type="String">
-            <sv:value>free-text</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:hint" sv:type="String">
-            <sv:value>can use the label and the hint of the free text field if want to add some text between some of the form fields</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:label" sv:type="String">
-            <sv:value>We will not use your mail</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:mandatory" sv:type="Boolean">
-            <sv:value>false</sv:value>
-          </sv:property>
-        </sv:node>
-        <sv:node sv:name="field7">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>ef:fieldsettag</sv:value>
-          </sv:property>
-          <sv:property sv:name="jcr:uuid" sv:type="String">
-            <sv:value>2ebb0b6c-70df-4c0f-a3f5-716eb099c637</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:expandhint" sv:type="Boolean">
-            <sv:value>false</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:fieldid" sv:type="String">
-            <sv:value>idb6155e7e245ad001</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:fieldname" sv:type="String">
-            <sv:value>Fieldset-tag</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:hint" sv:type="String">
-            <sv:value>field_hint</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:label" sv:type="String">
-            <sv:value>field_label</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:mandatory" sv:type="Boolean">
-            <sv:value>false</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:startfieldsettag" sv:type="Boolean">
-            <sv:value>false</sv:value>
-          </sv:property>
-        </sv:node>
         <sv:node sv:name="field3">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>ef:textarea</sv:value>
           </sv:property>
           <sv:property sv:name="jcr:uuid" sv:type="String">
-            <sv:value>bf70b5b2-fa81-4d78-8ce8-6ea41cd9b18d</sv:value>
+            <sv:value>ed759df0-1a9a-4988-8ae9-e41c234e122c</sv:value>
           </sv:property>
           <sv:property sv:name="ef:cols" sv:type="Long">
             <sv:value>40</sv:value>
