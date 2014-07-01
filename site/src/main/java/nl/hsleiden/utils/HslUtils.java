@@ -1,7 +1,5 @@
 package nl.hsleiden.utils;
 
-import nl.hsleiden.components.catalog.RelatedNews;
-
 import org.apache.commons.lang.StringUtils;
 import org.hippoecm.hst.content.beans.ObjectBeanManagerException;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
@@ -12,11 +10,12 @@ import org.slf4j.LoggerFactory;
 
 public class HslUtils {
 
+    private static final Logger LOG = LoggerFactory.getLogger(HslUtils.class);
+
     private HslUtils() {
         super();
     }
 
-    private static final Logger LOG = LoggerFactory.getLogger(RelatedNews.class);
 
     public static String getContextPath(HstRequest request) {
         String contextPath = request.getRequestContext().getVirtualHost().getVirtualHosts().getDefaultContextPath();

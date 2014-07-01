@@ -85,7 +85,7 @@
           <sv:value>ef-use-freemarker</sv:value>
           <sv:value>ef-mailsession</sv:value>
           <sv:value>ef-body-html</sv:value>
-          <sv:value>try to use mixin</sv:value>
+          <sv:value>tryToUseMixin</sv:value>
         </sv:property>
         <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
           <sv:value>/over-hl/thank-you-page</sv:value>
@@ -94,32 +94,34 @@
           <sv:value>org.onehippo.forge.easyforms.behaviors.FormIntroBehavior,org.onehippo.forge.easyforms.behaviors.StoreFormDataBehavior,org.onehippo.forge.easyforms.behaviors.ConfirmationBehavior,org.onehippo.forge.easyforms.behaviors.MailFormDataBehavior</sv:value>
           <sv:value>true</sv:value>
           <sv:value>mail/Session</sv:value>
-          <sv:value>&lt;h2&gt;Support form filled&lt;/h2&gt;
-&lt;table&gt;
-      &lt;#list form.getFields() as field&gt;
-        &lt;#if field.multiple&gt;
-          &lt;#assign multiValues = field.multiValues&gt;
-          &lt;#if multiValues??&gt;
-            &lt;#list multiValues?keys as key&gt;
-              &lt;#assign collection = multiValues[key]&gt;
-              &lt;#list collection as itemValue&gt;
-                &lt;#if itemValue??&gt;
-                  &lt;tr&gt;
-                    &lt;th align="left"&gt;${key}&lt;/th&gt;
-                    &lt;td align="left"&gt;${itemValue}&lt;/td&gt;
-                  &lt;/tr&gt;
-                &lt;/#if&gt;
-              &lt;/#list&gt;
-            &lt;/#list&gt;
-          &lt;/#if&gt;
-          &lt;#else&gt;
-            &lt;tr&gt;
-              &lt;th align="left"&gt;${field.getLabel()}&lt;/th&gt;
-              &lt;td align="left"&gt;${field.getValue()}&lt;/td&gt;
-            &lt;/tr&gt;
-        &lt;/#if&gt;
-      &lt;/#list&gt;
-    &lt;/table&gt;</sv:value>
+          <sv:value>&lt;h2&gt;Support form filled&lt;/h2&gt;&#xd;
+      &lt;table&gt;&#xd;
+            &lt;#list form.getFields() as field&gt;&#xd;
+              &lt;#if field.multiple&gt;&#xd;
+                &lt;#assign multiValues = field.multiValues&gt;&#xd;
+                &lt;#if multiValues??&gt;&#xd;
+                  &lt;#list multiValues?keys as key&gt;&#xd;
+                    &lt;#assign collection = multiValues[key]&gt;&#xd;
+                    &lt;#list collection as itemValue&gt;&#xd;
+                      &lt;#if itemValue??&gt;&#xd;
+                        &lt;tr&gt;&#xd;
+                          &lt;th align="left"&gt;${key}&lt;/th&gt;&#xd;
+                          &lt;td align="left"&gt;${itemValue}&lt;/td&gt;&#xd;
+                        &lt;/tr&gt;&#xd;
+                      &lt;/#if&gt;&#xd;
+                    &lt;/#list&gt;&#xd;
+                  &lt;/#list&gt;&#xd;
+                &lt;/#if&gt;&#xd;
+                &lt;#else&gt;&#xd;
+                  &lt;#if field.value?has_content&gt;&#xd;
+                    &lt;tr&gt;&#xd;
+                      &lt;th align="left"&gt;${field.getLabel()}&lt;/th&gt;&#xd;
+                      &lt;td align="left"&gt;${field.getValue()}&lt;/td&gt;&#xd;
+                    &lt;/tr&gt;&#xd;
+                  &lt;/#if&gt;&#xd;
+              &lt;/#if&gt;&#xd;
+            &lt;/#list&gt;&#xd;
+          &lt;/table&gt;</sv:value>
           <sv:value>true</sv:value>
         </sv:property>
         <sv:property sv:name="hst:template" sv:type="String">

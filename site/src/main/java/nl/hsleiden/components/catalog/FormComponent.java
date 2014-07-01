@@ -19,7 +19,7 @@ import org.slf4j.LoggerFactory;
 @ParametersInfo(type = FormComponentInfo.class)
 public class FormComponent extends FormStorageComponent {
 
-    private static Logger LOG = LoggerFactory.getLogger(FormComponent.class);
+    private static final Logger LOG = LoggerFactory.getLogger(FormComponent.class);
 
     private final DynamicProxyFactory dynamicProxyFactory = HstServices.getComponentManager().getComponent(
             DynamicProxyFactory.class);
@@ -43,13 +43,7 @@ public class FormComponent extends FormStorageComponent {
 
         HippoBean selectedForm = HslUtils.getSelectedBean(request, parametersInfo.getContentBeanPath());
         if (selectedForm == null || !(selectedForm.isHippoDocumentBean()) || !(selectedForm instanceof FormBean)) {
-            if (LOG.isDebugEnabled()) {
-                LOG.warn("*** EASY_FORMS ***");
-                LOG.warn("Form bean is either not defined or doesn't match Form bean type, [ef:form], returning null");
-                LOG.warn("Here is how it comes: you've mapped something to the EasyFormComponent, however, your document either doesn't exist or it is not Form document type");
-                LOG.warn("You can override [FormBean getFormBean(request)] method to fetch Form bean from some other location, e.g. through facet select");
-                LOG.warn("*** EASY_FORMS ***");
-            }
+            request.setAttribute("webMasterMessage", "There is no form connected to this page or this document");
         }else{
             result = (FormBean) selectedForm;
         }

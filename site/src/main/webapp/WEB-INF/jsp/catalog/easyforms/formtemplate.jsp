@@ -9,6 +9,13 @@
 <%--@elvariable id="ef_errors" type="java.util.List"--%>
 <%--@elvariable id="error" type="org.onehippo.forge.easyforms.model.ErrorMessage"--%>
 
+<hst:defineObjects />
+<c:set var="isCmsRequest" value="${hstRequest.requestContext.cmsRequest}" />
+
+<c:if test="${fn:length(form.fields)==0 and isCmsRequest}">
+  <p class="error-message"> <c:out value="${webMasterMessage}"/> </p>
+</c:if>
+  
 <c:if test="${fn:length(form.fields)>0}">
 
 <c:if test="${not empty form.title}">
