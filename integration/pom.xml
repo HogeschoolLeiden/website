@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
-<project
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
-  xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>nl.hsleiden</groupId>
     <artifactId>website</artifactId>
     <version>1.2-SNAPSHOT</version>
   </parent>
+
 
 
   <name>Website van Hogeschool Leiden Integration</name>
@@ -46,6 +46,22 @@
     </dependency>
   </dependencies>
   <build>
+    <testResources>
+      <testResource>
+        <filtering>false</filtering>
+        <directory>src/test/resources</directory>
+        <includes>
+          <include>**/*.*</include>
+        </includes>
+      </testResource>
+      <testResource>
+        <filtering>true</filtering>
+        <directory>src/test/fresources</directory>
+        <includes>
+          <include>**/*.properties</include>
+        </includes>
+      </testResource>
+    </testResources>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -101,9 +117,9 @@
               <cargo.servlet.uriencoding>UTF-8</cargo.servlet.uriencoding>
               <cargo.remote.username>admin</cargo.remote.username>
               <cargo.remote.password>admin</cargo.remote.password>
-              <cargo.servlet.port>9207</cargo.servlet.port>
-              <cargo.tomcat.ajp.port>9475</cargo.tomcat.ajp.port>
-              <cargo.rmi.port>9495</cargo.rmi.port>
+              <cargo.servlet.port>${it.cargo.servlet.port}</cargo.servlet.port>
+              <cargo.tomcat.ajp.port>${it.cargo.tomcat.ajp.port}</cargo.tomcat.ajp.port>
+              <cargo.rmi.port>${it.cargo.rmi.port}</cargo.rmi.port>
             </properties>
             <configfiles>
               <configfile>

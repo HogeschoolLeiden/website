@@ -1,37 +1,32 @@
 package nl.hsleiden.cucumber;
 
+import java.net.MalformedURLException;
+
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
-import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class Glue {
 
-    private WebDriver[] drivers;
-    private String host;
-    private String contextPath;
-    private String queryString;
+    private DriversManager driversManager;
+    private String page;
+    private String baseUrl;
+    private String queryString = "";
 
     @Before
-    public void setup() {
-        drivers = new WebDriver[1];
-        drivers[0] = new FirefoxDriver();
+    public void setup() throws MalformedURLException {
+        driversManager = new DriversManager();
     }
 
-    @Given("^the host name URL \"([^\"]*)\"$")
-    public void the_host_name_URL(String url) throws Throwable {
-        this.host = url;
-    }
-
-    @When("^open the context path \"([^\"]*)\"$")
-    public void open_the_context_path(String contextPath) throws Throwable {
-        this.contextPath = contextPath;
+    @When("^open the page \"([^\"]*)\" on site$")
+    public void open_the_context_path(String page) throws Throwable {
+        this.page = page;
+        this.baseUrl = Configuration.getSiteBaseUrl();
     }
 
     @When("^query string \"([^\"]*)\"$")
@@ -41,8 +36,9 @@ public class Glue {
 
     @Then("^the header should read \"([^\"]*)\"$")
     public void the_header_should_read(String text) throws Throwable {
-        String url = host + contextPath + "?" + queryString;
-        for (WebDriver driver : drivers) {
+        String url = baseUrl + page + "?" + queryString;
+        System.out.println(url);
+        for (WebDriver driver : driversManager.getDrivers()) {
             driver.get(url);
             Assert.assertEquals(text, driver.findElement(By.cssSelector("h2")).getText());
         }
@@ -50,10 +46,8 @@ public class Glue {
     }
 
     @After
-    public void tearDown() throws Exception {
-        for (WebDriver driver : drivers) {
-            driver.quit();
-        }
+    public void tearDown() {
+        driversManager.tearDown();
     }
 
 }
