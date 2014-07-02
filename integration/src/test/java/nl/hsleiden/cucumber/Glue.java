@@ -5,8 +5,6 @@ import java.net.MalformedURLException;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -14,8 +12,6 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class Glue {
-
-    private static final Logger LOG = LoggerFactory.getLogger(Glue.class);
 
     private DriversManager driversManager;
     private String page;
@@ -41,9 +37,6 @@ public class Glue {
     @Then("^the header should read \"([^\"]*)\"$")
     public void the_header_should_read(String text) throws Throwable {
         String url = baseUrl + page + "?" + queryString;
-        LOG.info("*****************************");
-        LOG.info(url);
-        LOG.info("*****************************");
         for (WebDriver driver : driversManager.getDrivers()) {
             driver.get(url);
             Assert.assertEquals(text, driver.findElement(By.cssSelector("h2")).getText());
