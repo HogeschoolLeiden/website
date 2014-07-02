@@ -33,6 +33,7 @@ public class Constants {
 
         public static final String SHOW_OVERVIEW = "showOverviewLink";
         public static final String OVERVIEW_BEAN_PATH = "overviewBeanPath";
+        public static final String THANKS_BEAN_PATH = "thanksBeanPath";
         public static final String OVERVIEW_BEAN_PATH_DOC_TYPE = "hsl:WebPage";
         public static final String INITIAL_LOCATION = "/content/documents/hsl/";
         public static final String OVERVIEW_LINK_LABEL = "overviewLinkLabel";
