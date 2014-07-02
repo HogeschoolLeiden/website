@@ -28,6 +28,8 @@ import org.hippoecm.hst.core.component.HstComponentException;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
 import org.hippoecm.hst.core.parameters.ParametersInfo;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.tdclighthouse.prototype.components.AjaxEnabledComponent;
 
@@ -35,6 +37,7 @@ import com.tdclighthouse.prototype.components.AjaxEnabledComponent;
 public class RelatedNews extends AjaxEnabledComponent<Map<String, Object>> {
 
     private static final String OVERVIEW_LINK = "overviewLink";
+    private static final Logger LOG = LoggerFactory.getLogger(RelatedNews.class);
     
     public Map<String, Object> getModel(HstRequest request, HstResponse response) {
         try {
@@ -67,7 +70,9 @@ public class RelatedNews extends AjaxEnabledComponent<Map<String, Object>> {
         try {
             HstQuery query = getQuery(request, contentBean, parametersInfo);
             if(query!=null){ 
+                LOG.warn("EXECUTING QUERY: " + query.getQueryAsString(false));
                 HstQueryResult queryResult = query.execute();
+                LOG.warn("QUERY RESULT SIZE: " + queryResult.getSize());
                 List<HippoBean> items = getItems(queryResult);
                 model.put(Attributes.ITEMS, items);
             }
@@ -133,7 +138,7 @@ public class RelatedNews extends AjaxEnabledComponent<Map<String, Object>> {
             globalFilter.addAndFilter(ff);
         }
         if (info.getThemaFilter()) {
-            Filter ff = addFilterOnField(query, contentBean.getSubjecttags(), "hsl:thematags");
+            Filter ff = addFilterOnField(query, contentBean.getThematags(), "hsl:thematags");
             globalFilter.addAndFilter(ff);
         }
         query.setFilter(globalFilter);

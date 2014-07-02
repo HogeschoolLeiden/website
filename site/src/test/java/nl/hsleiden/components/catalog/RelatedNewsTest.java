@@ -258,6 +258,8 @@ public class RelatedNewsTest {
         EasyMock.expect(mock.createFilter()).andReturn(filterMock);
         mock.setLimit(SIZE);
         mock.setFilter(filterMock);
+        EasyMock.expect(mock.getQueryAsString(false)).andReturn("print sorted query version");
+        EasyMock.expect(mock.getQueryAsString(true)).andReturn("print unsorted query version");
         if (info.getSortOrder().equals(SORT_ORDER_ASCENDING)) {
             mock.addOrderByAscending(SORT_FIELD_RELEASE_DATE);
         }
@@ -272,6 +274,7 @@ public class RelatedNewsTest {
     private HstQueryResult createHstQueryResultMock() {
         HstQueryResult mock = EasyMock.createMock(HstQueryResult.class);
         EasyMock.expect(mock.getHippoBeans()).andReturn(createHippoBeanIteratorMock());
+        EasyMock.expect(mock.getSize()).andReturn(SIZE);
 
         EasyMock.replay(mock);
         return mock;
@@ -293,7 +296,7 @@ public class RelatedNewsTest {
             EasyMock.expect(globalFilter.addAndFilter(ff)).andReturn(globalFilter);
         }
         if (info.getThemaFilter()) {
-            Filter ff = addFilterOnField(query, contentBean.getSubjecttags(), "hsl:thematags");
+            Filter ff = addFilterOnField(query, contentBean.getThematags(), "hsl:thematags");
             EasyMock.expect(globalFilter.addAndFilter(ff)).andReturn(globalFilter);
         }
 
