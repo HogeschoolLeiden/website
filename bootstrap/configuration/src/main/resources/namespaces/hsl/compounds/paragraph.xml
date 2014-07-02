@@ -173,7 +173,7 @@
           <sv:value>frontend:plugin</sv:value>
         </sv:property>
         <sv:property sv:name="caption" sv:type="String">
-          <sv:value>Paragraph title</sv:value>
+          <sv:value>Paragraaf titel</sv:value>
         </sv:property>
         <sv:property sv:name="field" sv:type="String">
           <sv:value>title</sv:value>
@@ -195,7 +195,7 @@
           <sv:value>frontend:plugin</sv:value>
         </sv:property>
         <sv:property sv:name="caption" sv:type="String">
-          <sv:value>Paragraph Content</sv:value>
+          <sv:value>Paragraaf Content</sv:value>
         </sv:property>
         <sv:property sv:name="field" sv:type="String">
           <sv:value>content</sv:value>
@@ -220,7 +220,7 @@
           <sv:value>frontend:plugin</sv:value>
         </sv:property>
         <sv:property sv:name="caption" sv:type="String">
-          <sv:value>Paragraph Image</sv:value>
+          <sv:value>Paragraaf Afbeelding</sv:value>
         </sv:property>
         <sv:property sv:name="field" sv:type="String">
           <sv:value>paragraphImage</sv:value>
@@ -238,5 +238,27 @@
         </sv:node>
       </sv:node>
     </sv:node>
+  </sv:node>
+  <sv:node sv:name="hippo:translation">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hippo:translation</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:language" sv:type="String">
+      <sv:value>en</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:message" sv:type="String">
+      <sv:value>Paragraph</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="hippo:translation">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hippo:translation</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:language" sv:type="String">
+      <sv:value>nl</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:message" sv:type="String">
+      <sv:value>Paragraaf</sv:value>
+    </sv:property>
   </sv:node>
 </sv:node>
