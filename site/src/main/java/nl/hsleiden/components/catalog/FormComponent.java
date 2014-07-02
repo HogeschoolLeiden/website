@@ -32,13 +32,7 @@ public class FormComponent extends FormStorageComponent {
         FormBean result = null;
         FormComponentInfo parametersInfo = getFormParametersInfo(request);
 
-        HippoBean selectedForm = HslUtils.getSelectedBean(request, parametersInfo.getContentBeanPath());
-//        System.out.println("selectedForm path = " + selectedForm.getPath());
-//        System.out.println("selectedForm = " + selectedForm);
-        System.out.println("null " + (selectedForm==null));
-        System.out.println("hippodoc " + !(selectedForm.isHippoDocumentBean()));
-        System.out.println("formbean " + !(selectedForm instanceof FormBean));
-        
+        HippoBean selectedForm = HslUtils.getSelectedBean(request, parametersInfo.getContentBeanPath());      
         if (selectedForm == null || !(selectedForm.isHippoDocumentBean()) || !(selectedForm instanceof FormBean)) {
             request.setAttribute("webMasterMessage", "There is no form connected to this page or this document");
         } else {

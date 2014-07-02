@@ -11,10 +11,13 @@ import org.junit.Test;
 
 public class FormCompoundMixinBeanTest {
 
+    private static final String PATH_TO_FORM = "/path/to/form";
+    private static final String PATH_TO_THANK_YOU_PAGE = "/path/to/thankYouPage";
+
     @Test
     public void getContentBeanPathTest() throws NoSuchFieldException, IllegalAccessException {
-        String pathToForm = "/path/to/a/form";
-        String pathTothanks = "/path/to/a/thankYouPage";
+        String pathToForm = PATH_TO_FORM;
+        String pathTothanks = PATH_TO_THANK_YOU_PAGE;
         FormCompoundMixinBean formCompoundMixinBean = new FormCompoundMixinBean();
         TestUtils.setPrivateField(formCompoundMixinBean, "formWidgetParameters", createMockWidgetParameters(pathToForm, pathTothanks));
         Assert.assertEquals(pathToForm, formCompoundMixinBean.getContentBeanPath());
@@ -22,10 +25,35 @@ public class FormCompoundMixinBeanTest {
 
     @Test
     public void getContentBeanPathNullTest() throws NoSuchFieldException, IllegalAccessException {
-        String pathTothanks = "/path/to/a/thankYouPage";
+        String pathTothanks = PATH_TO_THANK_YOU_PAGE;
         FormCompoundMixinBean formCompoundMixinBean = new FormCompoundMixinBean();
         TestUtils.setPrivateField(formCompoundMixinBean, "formWidgetParameters", createMockWidgetParameters(null, pathTothanks));
         Assert.assertEquals(null, formCompoundMixinBean.getContentBeanPath());
+    }
+    
+    @Test
+    public void getThanksBeanPathTest() throws NoSuchFieldException, IllegalAccessException{
+        String pathTothanks = PATH_TO_THANK_YOU_PAGE;
+        FormCompoundMixinBean formCompoundMixinBean = new FormCompoundMixinBean();
+        TestUtils.setPrivateField(formCompoundMixinBean, "formWidgetParameters", createMockWidgetParameters(null, pathTothanks));
+        Assert.assertEquals(pathTothanks, formCompoundMixinBean.getThanksBeanPath());
+    }
+
+    @Test
+    public void getThanksBeanPathNullTest() throws NoSuchFieldException, IllegalAccessException{
+        FormCompoundMixinBean formCompoundMixinBean = new FormCompoundMixinBean();
+        TestUtils.setPrivateField(formCompoundMixinBean, "formWidgetParameters", createMockWidgetParameters(PATH_TO_FORM, null));
+        Assert.assertEquals(null, formCompoundMixinBean.getThanksBeanPath());
+    }
+    
+    @Test
+    public void getUseMixinTest(){
+        FormCompoundMixinBean formCompoundMixinBean = new FormCompoundMixinBean();
+        try{
+            formCompoundMixinBean.getUseMixin();  
+        }catch(UnsupportedOperationException e){
+            Assert.assertNotEquals(e, null);
+        }
     }
     
     private HippoBean createMockContentBean(String contentBeanPath) {
@@ -37,7 +65,12 @@ public class FormCompoundMixinBeanTest {
     
     private FormWidgetParameters createMockWidgetParameters(String formBeanPath, String thanksBeanPath) {
         FormWidgetParameters mock = EasyMock.createMock(FormWidgetParameters.class);
-        EasyMock.expect(mock.getThanksPicker()).andReturn(createMockContentBean(thanksBeanPath)).anyTimes();
+        if(thanksBeanPath!=null){
+            EasyMock.expect(mock.getThanksPicker()).andReturn(createMockContentBean(thanksBeanPath)).anyTimes();
+        }else{
+            EasyMock.expect(mock.getThanksPicker()).andReturn(null).anyTimes();
+        }
+        
         if(formBeanPath!=null){
             EasyMock.expect(mock.getFormPicker()).andReturn(createMockContentBean(formBeanPath)).anyTimes();           
         }else{

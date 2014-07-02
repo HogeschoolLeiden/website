@@ -14,6 +14,16 @@ import org.junit.Test;
 public class RelatedCompoundMixinBeanTest {
 
     @Test
+    public void getUseMixinTest(){
+        RelatedCompoundMixinBean relatedCompoundMixinBean = new RelatedCompoundMixinBean();
+        try{
+            relatedCompoundMixinBean.getUseMixin();  
+        }catch(UnsupportedOperationException e){
+            Assert.assertNotEquals(e, null);
+        }
+    }
+    
+    @Test
     public void getWidgetTitleTest() throws NoSuchFieldException, IllegalAccessException {
         String title = "title";
         RelatedCompoundMixinBean relatedCompoundMixinBean = new RelatedCompoundMixinBean();
