@@ -9,9 +9,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class DriversManager {
 
+    private static final Logger LOG = LoggerFactory.getLogger(DriversManager.class);
     private WebDriver[] drivers;
 
     public DriversManager() throws MalformedURLException {
@@ -20,6 +23,9 @@ public class DriversManager {
         if (StringUtils.isNotBlank(seleniumAddress)) {
             DesiredCapabilities chromeCapability = DesiredCapabilities.chrome();
             DesiredCapabilities firefoxCapability = DesiredCapabilities.firefox();
+            LOG.info("___________________________");
+            LOG.info(seleniumAddress);
+            LOG.info("___________________________");
             drivers[0] = new RemoteWebDriver(new URL(seleniumAddress), firefoxCapability);
             drivers[1] = new RemoteWebDriver(new URL(seleniumAddress), chromeCapability);
         } else {
