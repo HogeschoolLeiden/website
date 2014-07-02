@@ -14,7 +14,7 @@
   <c:set var="isCmsRequest" value="${hstRequest.requestContext.cmsRequest}" />
 
   <c:if test="${(empty model.items or fn:length(model.items) eq 0) and isCmsRequest}">
-  	<p class="error-message">There are no newspages documents under folder:
+  	<p class="error-message">There are no eventpages documents under folder:
       ${model.info.contentBeanPath}. The widget will not display.
     </p>
   </c:if>
@@ -36,7 +36,7 @@
             </c:if>
           </c:if>
           <div class="date">
-            <fmt:formatDate value="${item.releaseDate.time}" type="Date"
+            <fmt:formatDate value="${item.eventDate.time}" type="Date"
               pattern="dd.MM.yyyy" />
           </div>
         </div>

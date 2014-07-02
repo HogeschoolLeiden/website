@@ -1,11 +1,12 @@
 package nl.hsleiden.beans.compounds;
 
-import nl.hsleiden.componentsinfo.RelatedNewsInfo;
+
+import nl.hsleiden.componentsinfo.RelatedItemsInfo;
 
 import org.hippoecm.hst.content.beans.Node;
 
 @Node(jcrType = "hsl:RelatedCompoundMixin")
-public class RelatedCompoundMixinBean extends hslbeans.RelatedCompoundMixin implements RelatedNewsInfo {
+public class RelatedCompoundMixinBean extends hslbeans.RelatedCompoundMixin implements RelatedItemsInfo {
     
     @Override
     public Boolean getUseMixin() {

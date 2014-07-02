@@ -1,6 +1,6 @@
 package nl.hsleiden.components.catalog;
 
-import hslbeans.NewsPage;
+import hslbeans.EventPage;
 import nl.hsleiden.componentsinfo.RelatedItemsInfo;
 import nl.hsleiden.utils.HslUtils;
 
@@ -11,7 +11,7 @@ import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.parameters.ParametersInfo;
 
 @ParametersInfo(type = RelatedItemsInfo.class)
-public class RelatedNews extends RelatedItems {
+public class RelatedEvents extends RelatedItems {
     
     @Override
     protected HstQuery createQuery(HstRequest request, RelatedItemsInfo parametersInfo) throws QueryException {
@@ -19,7 +19,7 @@ public class RelatedNews extends RelatedItems {
         HstQuery result = null;
         HippoBean scope = HslUtils.getSelectedBean(request, parametersInfo.getContentBeanPath());
         if(scope!=null){            
-            result = request.getRequestContext().getQueryManager().createQuery(scope, NewsPage.JCR_TYPE);
+            result = request.getRequestContext().getQueryManager().createQuery(scope, EventPage.JCR_TYPE);
         }
         return result; 
     }
