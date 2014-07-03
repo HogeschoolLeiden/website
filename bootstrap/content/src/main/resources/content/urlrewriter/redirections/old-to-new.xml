@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="old-to-new">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>hippo:handle</sv:value>
+  </sv:property>
+  <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+    <sv:value>mix:referenceable</sv:value>
+    <sv:value>hippo:translated</sv:value>
+  </sv:property>
+  <sv:property sv:name="jcr:uuid" sv:type="String">
+    <sv:value>04f704c5-e015-4a38-88fd-b95f271d0cf0</sv:value>
+  </sv:property>
+  <sv:node sv:name="old-to-new">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>urlrewriter:rule</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+      <sv:value>mix:referenceable</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>90f15fd6-a7e0-4da0-92ef-ee7ad77fbec9</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true"/>
+    <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+      <sv:value>old-to-new/old-to-new[2]</sv:value>
+      <sv:value>old-to-new/old-to-new[3]</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippostd:state" sv:type="String">
+      <sv:value>draft</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+      <sv:value>live</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+      <sv:value>admin</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+      <sv:value>2014-07-03T15:08:59.823+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+      <sv:value>2014-07-03T15:09:58.005+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+      <sv:value>admin</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
+      <sv:value>2008-03-26T12:03:00.000+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="urlrewriter:ruledescription" sv:type="String">
+      <sv:value>Redirect the old url to new</sv:value>
+    </sv:property>
+    <sv:property sv:name="urlrewriter:rulefrom" sv:type="String">
+      <sv:value>/old</sv:value>
+    </sv:property>
+    <sv:property sv:name="urlrewriter:ruleto" sv:type="String">
+      <sv:value>/actueel</sv:value>
+    </sv:property>
+    <sv:property sv:name="urlrewriter:ruletype" sv:type="String">
+      <sv:value>temporary-redirect</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="hippo:translation">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hippo:translation</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:language" sv:type="String">
+      <sv:value/>
+    </sv:property>
+    <sv:property sv:name="hippo:message" sv:type="String">
+      <sv:value>Old to new</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="old-to-new">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>urlrewriter:rule</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+      <sv:value>mix:referenceable</sv:value>
+      <sv:value>mix:versionable</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>07f7087b-eeab-4b33-b0b7-bfdaabccafcc</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+      <sv:value>preview</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+      <sv:value>old-to-new/old-to-new[3]</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippostd:state" sv:type="String">
+      <sv:value>unpublished</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+      <sv:value>live</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+      <sv:value>admin</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+      <sv:value>2014-07-03T15:08:59.823+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+      <sv:value>2014-07-03T15:10:05.738+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+      <sv:value>admin</sv:value>
+    </sv:property>
+    <sv:property sv:name="urlrewriter:ruledescription" sv:type="String">
+      <sv:value>Redirect the old url to new</sv:value>
+    </sv:property>
+    <sv:property sv:name="urlrewriter:rulefrom" sv:type="String">
+      <sv:value>/old</sv:value>
+    </sv:property>
+    <sv:property sv:name="urlrewriter:ruleto" sv:type="String">
+      <sv:value>/site/actueel</sv:value>
+    </sv:property>
+    <sv:property sv:name="urlrewriter:ruletype" sv:type="String">
+      <sv:value>temporary-redirect</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="old-to-new">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>urlrewriter:rule</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+      <sv:value>mix:referenceable</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>ae8ef798-6325-48b1-951a-e2ac0e9c56dd</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+      <sv:value>live</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+      <sv:value>old-to-new/old-to-new[2]</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippostd:state" sv:type="String">
+      <sv:value>published</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+      <sv:value>live</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+      <sv:value>admin</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+      <sv:value>2014-07-03T15:08:59.823+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+      <sv:value>2014-07-03T15:10:05.738+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+      <sv:value>admin</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
+      <sv:value>2014-07-03T15:10:07.924+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="urlrewriter:ruledescription" sv:type="String">
+      <sv:value>Redirect the old url to new</sv:value>
+    </sv:property>
+    <sv:property sv:name="urlrewriter:rulefrom" sv:type="String">
+      <sv:value>/old</sv:value>
+    </sv:property>
+    <sv:property sv:name="urlrewriter:ruleto" sv:type="String">
+      <sv:value>/site/actueel</sv:value>
+    </sv:property>
+    <sv:property sv:name="urlrewriter:ruletype" sv:type="String">
+      <sv:value>temporary-redirect</sv:value>
+    </sv:property>
+  </sv:node>
+</sv:node>

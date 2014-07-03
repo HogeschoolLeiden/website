@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns="http://java.sun.com/xml/ns/javaee"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
-  version="2.5"
-  id="site">
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5" id="site">
 
   <display-name>Website van Hogeschool Leiden site</display-name>
   <description>Website van Hogeschool Leiden site</description>
@@ -60,8 +57,41 @@
       ,classpath*:org/onehippo/forge/**/*.class
       ,classpath*:hslbeans/**/*.class
       ,classpath*:com/tdclighthouse/prototype/beans/**/*.class
+      ,classpath*:org/onehippo/forge/rewriting/beans/**/*.class
       </param-value>
   </context-param>
+
+  <filter>
+    <filter-name>RewriteFilter</filter-name>
+    <filter-class>org.onehippo.forge.rewriting.HippoRewriteFilter</filter-class>
+    <!-- sets up log level (will be logged to context log)
+     can be: TRACE, DEBUG, INFO (default), WARN, ERROR, FATAL, log4j, commons, slf4j,
+     sysout:{level} (ie, sysout:DEBUG)
+     if you are having trouble using normal levels use sysout:DEBUG
+     (default WARN) -->
+    <init-param>
+      <param-name>logLevel</param-name>
+      <param-value>slf4j</param-value>
+    </init-param>
+    <!-- you can disable status page if desired can be: true, false (default true)              -->
+    <init-param>
+      <param-name>statusEnabled</param-name>
+      <param-value>true</param-value>
+    </init-param>
+    <!-- you can change status path so that it does not conflict with your installed apps (note, defaults to /rewrite-status) note, must start with /  -->
+    <init-param>
+      <param-name>statusPath</param-name>
+      <param-value>/rewrite-status</param-value>
+    </init-param>
+    <init-param>
+      <param-name>statusEnabledOnHosts</param-name>
+      <param-value>localhost, 127.0.0.*, *.lan, *.local</param-value>
+    </init-param>
+    <init-param>
+      <param-name>rulesLocation</param-name>
+      <param-value>/content/urlrewriter</param-value>
+    </init-param>
+  </filter>
 
   <filter>
     <filter-name>CharacterEncodingFilter</filter-name>
@@ -95,6 +125,12 @@
       <param-value>.jsp, .ftl, .FTL</param-value>
     </init-param>
   </filter>
+
+  <filter-mapping>
+    <filter-name>RewriteFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+    <dispatcher>REQUEST</dispatcher>
+  </filter-mapping>
 
   <filter-mapping>
     <filter-name>CharacterEncodingFilter</filter-name>
