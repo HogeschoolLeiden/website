@@ -9,7 +9,6 @@
 <div class="container-fluid">
 	<%-- <hst:include ref="top-container" />     --%>
   	<div class="row-fluid">
-        <div class="header span2"></div>
 		<nav class="span2">
 			<hst:include ref="leftTop" />
 			<hst:include ref="left" />
@@ -25,7 +24,6 @@
 			<hst:include ref="right" />
 			<hst:include ref="rightBottom" />
 		</aside>
-        <div class="header span2"></div>
   	</div>
   	<%-- <hst:include ref="bottom-container" /> --%>
 </div>

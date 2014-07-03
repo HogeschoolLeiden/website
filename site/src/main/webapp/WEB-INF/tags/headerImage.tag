@@ -14,7 +14,6 @@
   <c:if test="${not empty document.headerImage }">
     <div class="container-fluid">
       <div class="row-fluid">
-        <div class="header span2"></div>
         <div class="header image span8">
           <hst:link var="img" hippobean="${document.headerImage.allWidthImage}"/>
           <c:if test="${not empty img }">
@@ -24,7 +23,6 @@
             </figure>
           </c:if>
         </div>
-        <div class="header span2"></div>
       </div>
     </div>       
   </c:if>

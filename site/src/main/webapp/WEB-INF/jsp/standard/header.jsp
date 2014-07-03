@@ -9,7 +9,6 @@
 
 <div class="container-fluid">
   <div class="row-fluid">
-    <div class="header span2"></div>
     <div class="header span8">
       <div class="navbar">
         <div class="navbar-inner">
@@ -57,6 +56,5 @@
         </div>
       </div>
     </div>
-    <div class="header span2"></div>
   </div>
 </div>
