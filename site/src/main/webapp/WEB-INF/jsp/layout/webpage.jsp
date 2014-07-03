@@ -8,6 +8,7 @@
 <%@ taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml"%>
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 <%@ taglib prefix="opw" uri="http://open-web.nl/hippo/prototype"%>
+<%@ taglib prefix="ga" uri="http://www.onehippo.org/jsp/google-analytics"%>
 
 <html lang="${pageContext.request.locale.language}">
 <head>
@@ -60,10 +61,10 @@
 	<hst:include ref="footer" />
 	<hst:headContributions categoryIncludes="scripts" xhtml="true" />
 		
-	<%-- <c:if test="${not composermode}">
+	<c:if test="${not composermode}">
 	    <ga:accountId/>
 	    <hst:link var="googleAnalytics" path="/resources/google-analytics.js"/>
     	<script src="${googleAnalytics}" type="text/javascript"></script>
-  	</c:if> --%>	
+  	</c:if>	
 </body>
 </html>
