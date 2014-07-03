@@ -6,6 +6,7 @@ import net.sourceforge.hstmixinsupport.DynamicProxyFactory;
 import nl.hsleiden.beans.mixin.FormComponentMixin;
 import nl.hsleiden.componentsinfo.FormComponentInfo;
 import nl.hsleiden.utils.HslUtils;
+import nl.hsleiden.utils.Constants.WidgetConstants;
 
 import org.hippoecm.hst.component.support.forms.FormMap;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
@@ -34,7 +35,7 @@ public class FormComponent extends FormStorageComponent {
 
         HippoBean selectedForm = HslUtils.getSelectedBean(request, parametersInfo.getContentBeanPath());      
         if (selectedForm == null || !(selectedForm.isHippoDocumentBean()) || !(selectedForm instanceof FormBean)) {
-            request.setAttribute("webMasterMessage", "There is no form connected to this page or this document");
+            request.setAttribute(WidgetConstants.WEB_MASTER_MESSAGE, "webmaster.noform.message");
         } else {
             result = (FormBean) selectedForm;
         }

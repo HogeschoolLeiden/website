@@ -13,10 +13,8 @@
   <hst:defineObjects />
   <c:set var="isCmsRequest" value="${hstRequest.requestContext.cmsRequest}" />
 
-  <c:if test="${(empty model.items or fn:length(model.items) eq 0) and isCmsRequest}">
-  	<p class="error-message">There are no eventpages documents under folder:
-      ${model.info.contentBeanPath}. The widget will not display.
-    </p>
+  <c:if test="${(empty model.items or fn:length(model.items) eq 0) and not empty webMasterMessage and isCmsRequest}">
+  	<p class="error-message"><fmt:message key="${webMasterMessage}" ></fmt:message></p>
   </c:if>
 
   <c:if test="${not empty model.items }">

@@ -7,10 +7,10 @@ import java.util.Map;
 import javax.jcr.RepositoryException;
 
 import nl.hsleiden.beans.mixin.RelatedEventsMixin;
-import nl.hsleiden.beans.mixin.RelatedItemsMixin;
 import nl.hsleiden.componentsinfo.RelatedEventsInfo;
 import nl.hsleiden.componentsinfo.RelatedItemsInfo;
 import nl.hsleiden.utils.HslUtils;
+import nl.hsleiden.utils.Constants.WidgetConstants;
 
 import org.hippoecm.hst.content.beans.query.HstQuery;
 import org.hippoecm.hst.content.beans.query.exceptions.QueryException;
@@ -30,6 +30,8 @@ public class RelatedEvents extends RelatedItems {
         HippoBean scope = HslUtils.getSelectedBean(request, parametersInfo.getContentBeanPath());
         if(scope!=null){            
             result = request.getRequestContext().getQueryManager().createQuery(scope, EventPage.JCR_TYPE);
+        }else{
+            request.setAttribute(WidgetConstants.WEB_MASTER_MESSAGE, "webmaster.nofolder.message");
         }
         return result; 
     }
@@ -40,7 +42,7 @@ public class RelatedEvents extends RelatedItems {
             RelatedItemsInfo parametersInfo = this.<RelatedEventsInfo> getComponentParametersInfo(request);
             if (parametersInfo.getUseMixin()) {
                 HippoBean proxy = getMixinProxy(request.getRequestContext().getContentBean());
-                if (proxy instanceof RelatedItemsMixin) {
+                if (proxy instanceof RelatedEventsMixin) {
                     parametersInfo = ((RelatedEventsMixin) proxy).getRelatedEventsCompoundMixin();
                 }
             }
