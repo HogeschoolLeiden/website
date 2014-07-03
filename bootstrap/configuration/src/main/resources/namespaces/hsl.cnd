@@ -23,6 +23,8 @@
 
 [hsl:EventPage] > hsl:ArticlePage, hippostd:relaxed, hippotranslation:translated orderable
 
+[hsl:FaqDocument] > hsl:ArticlePage, hippostd:relaxed, hippotranslation:translated orderable
+
 [hsl:Paragraph] > hippo:compound, hippostd:relaxed orderable
 
 [hsl:Link] > hippo:compound, hippostd:relaxed orderable
@@ -41,6 +43,8 @@
 
 [hsl:RelatedCompoundMixin] > hippo:compound, hippostd:relaxed orderable
 
+[hsl:RelatedEventsCompoundMixin] > hippo:compound, hippostd:relaxed orderable
+
 [hsl:FormCompoundMixin] > hippo:compound, hippostd:relaxed orderable
 
 [hsl:RelatedFilterParameters] > hippo:compound, hippostd:relaxed orderable
@@ -56,6 +60,10 @@
 [hsl:RelatedItemsMixin]
   mixin
   + hsl:relatedCompoundMixin (hsl:RelatedCompoundMixin)
+
+[hsl:RelatedEventsMixin]
+  mixin
+  + hsl:relatedEventsCompoundMixin (hsl:RelatedEventsCompoundMixin)
   
 [hsl:doublemailform] > ef:form
 [hsl:doublemailstoreform] > ef:form

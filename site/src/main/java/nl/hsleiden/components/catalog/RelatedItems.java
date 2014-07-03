@@ -53,7 +53,7 @@ public abstract class RelatedItems extends AjaxEnabledComponent<Map<String, Obje
         }
     }
 
-    private Map<String, Object> populateModel(HstRequest request, RelatedItemsInfo parametersInfo) {
+    protected Map<String, Object> populateModel(HstRequest request, RelatedItemsInfo parametersInfo) {
         Map<String, Object> model = new HashMap<String, Object>();
         HippoBean contentBean = request.getRequestContext().getContentBean();
         if (contentBean instanceof ArticlePage) {
