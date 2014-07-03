@@ -34,7 +34,7 @@ import org.slf4j.LoggerFactory;
 import com.tdclighthouse.prototype.components.AjaxEnabledComponent;
 
 @ParametersInfo(type = RelatedItemsInfo.class)
-public abstract class RelatedItems extends AjaxEnabledComponent<Map<String, Object>> {
+public abstract class RelatedItems extends AjaxEnabledComponent {
 
     private static final String OVERVIEW_LINK = "overviewLink";
     private static final Logger LOG = LoggerFactory.getLogger(RelatedItems.class);
@@ -57,9 +57,9 @@ public abstract class RelatedItems extends AjaxEnabledComponent<Map<String, Obje
     protected Map<String, Object> populateModel(HstRequest request, RelatedItemsInfo parametersInfo) {
         Map<String, Object> model = new HashMap<String, Object>();
 
-        model.put("info", parametersInfo);
+            model.put("info", parametersInfo);
         addItemsToModel(request, model, parametersInfo);
-        addOverviewLinkToModel(request, model, parametersInfo);
+            addOverviewLinkToModel(request, model, parametersInfo);
 
         return model;
     }
@@ -73,10 +73,10 @@ public abstract class RelatedItems extends AjaxEnabledComponent<Map<String, Obje
                 LOG.warn("QUERY RESULT SIZE: " + queryResult.getSize());
                 List<HippoBean> items = getItems(queryResult);
                 if(!items.isEmpty()){
-                    model.put(Attributes.ITEMS, items);                    
+                model.put(Attributes.ITEMS, items);
                 }else{
                     request.setAttribute(WidgetConstants.WEB_MASTER_MESSAGE, "webmaster.noitems.message");
-                }
+            }
             }
         } catch (QueryException e) {
             throw new HstComponentException(e.getMessage(), e);
