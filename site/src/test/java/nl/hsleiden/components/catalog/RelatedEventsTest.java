@@ -1,5 +1,6 @@
 package nl.hsleiden.components.catalog;
 
+import nl.hsleiden.componentsinfo.RelatedEventsInfo;
 import nl.hsleiden.componentsinfo.RelatedItemsInfo;
 
 import org.hippoecm.hst.content.beans.ObjectBeanManagerException;
@@ -13,7 +14,7 @@ public class RelatedEventsTest extends RelatedItemsTest {
     public void getModelTestUseMixinFalseNoFilteringNoSortingNoOverview() throws ObjectBeanManagerException,
             IllegalStateException, QueryException, NoSuchFieldException, IllegalAccessException {
 
-        RelatedItemsInfo myInfoMock = createRelatedinfoInfoMock(false, false, false, WIDGET_TITLE,
+        RelatedEventsInfo myInfoMock = createRelatedinfoInfoMock(false, false, false, WIDGET_TITLE,
                 SORT_ORDER_ASCENDING, SORT_FIELD_RELEASE_DATE, SIZE, false, OVERVIEW_LINK_LABEL, OVERVIEW_BEAN_PATH,
                 CONTENT_BEAN_PATH);
 

@@ -6,6 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
+import nl.hsleiden.componentsinfo.RelatedEventsInfo;
 import nl.hsleiden.componentsinfo.RelatedItemsInfo;
 import nl.hsleiden.utils.TestUtils;
 
@@ -371,11 +372,11 @@ public class RelatedItemsTest {
         return mock;
     }
 
-    protected static RelatedItemsInfo createRelatedinfoInfoMock(final Boolean useMixin, Boolean theamFilter,
+    protected static RelatedEventsInfo createRelatedinfoInfoMock(final Boolean useMixin, Boolean theamFilter,
             Boolean overFilter, String widgetTitle, String sortOrder, String sortBy, Integer size,
             Boolean showOverview, String overviewLinkLabel, String overviewBeanPath, String contentBeanPath) {
 
-        RelatedItemsInfo mock = EasyMock.createMock(RelatedItemsInfo.class);
+        RelatedEventsInfo mock = EasyMock.createMock(RelatedEventsInfo.class);
 
         EasyMock.expect(mock.getWidgetTitle()).andReturn(widgetTitle).anyTimes();
         EasyMock.expect(mock.getUseMixin()).andReturn(useMixin).anyTimes();

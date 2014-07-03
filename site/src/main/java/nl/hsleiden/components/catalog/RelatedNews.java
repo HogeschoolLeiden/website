@@ -23,7 +23,5 @@ public class RelatedNews extends RelatedItems {
             result = request.getRequestContext().getQueryManager().createQuery(scope, NewsPage.JCR_TYPE);
         }
         return result; 
-    }
-
-    
+    }    
 }
