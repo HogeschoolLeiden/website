@@ -48,6 +48,8 @@ public class Constants {
         
         public static final String FORMS_INITIAL_LOCATION = "/content/documents/hsl/formulieren/";
         
+        public static final String WEB_MASTER_MESSAGE = "webMasterMessage";
+        
         private WidgetConstants() {
         }
         

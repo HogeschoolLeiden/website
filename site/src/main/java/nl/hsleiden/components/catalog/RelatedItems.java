@@ -11,8 +11,9 @@ import javax.jcr.RepositoryException;
 
 import nl.hsleiden.beans.mixin.RelatedItemsMixin;
 import nl.hsleiden.componentsinfo.RelatedItemsInfo;
-import nl.hsleiden.utils.Constants;
 import nl.hsleiden.utils.Constants.Attributes;
+import nl.hsleiden.utils.Constants.Values;
+import nl.hsleiden.utils.Constants.WidgetConstants;
 import nl.hsleiden.utils.HslUtils;
 
 import org.apache.commons.lang.StringUtils;
@@ -55,39 +56,40 @@ public abstract class RelatedItems extends AjaxEnabledComponent {
 
     protected Map<String, Object> populateModel(HstRequest request, RelatedItemsInfo parametersInfo) {
         Map<String, Object> model = new HashMap<String, Object>();
-        HippoBean contentBean = request.getRequestContext().getContentBean();
-        if (contentBean instanceof ArticlePage) {
+
             model.put("info", parametersInfo);
-            addItemsToModel(request, model, (ArticlePage) contentBean, parametersInfo);
+        addItemsToModel(request, model, parametersInfo);
             addOverviewLinkToModel(request, model, parametersInfo);
-        }
+
         return model;
     }
 
-    private void addItemsToModel(HstRequest request, Map<String, Object> model, ArticlePage contentBean,
-            RelatedItemsInfo parametersInfo) {
+    private void addItemsToModel(HstRequest request, Map<String, Object> model, RelatedItemsInfo parametersInfo) {
         try {
-            HstQuery query = getQuery(request, contentBean, parametersInfo);
-            if (query != null) {
-                LOG.debug("EXECUTING QUERY: " + query.getQueryAsString(false));
+            HstQuery query = getQuery(request, parametersInfo);
+            if (query != null && request.getAttribute(WidgetConstants.WEB_MASTER_MESSAGE) == null) {
+                LOG.warn("EXECUTING QUERY: " + query.getQueryAsString(false));
                 HstQueryResult queryResult = query.execute();
-                LOG.debug("QUERY RESULT SIZE: " + queryResult.getSize());
+                LOG.warn("QUERY RESULT SIZE: " + queryResult.getSize());
                 List<HippoBean> items = getItems(queryResult);
+                if(!items.isEmpty()){
                 model.put(Attributes.ITEMS, items);
+                }else{
+                    request.setAttribute(WidgetConstants.WEB_MASTER_MESSAGE, "webmaster.noitems.message");
+            }
             }
         } catch (QueryException e) {
             throw new HstComponentException(e.getMessage(), e);
         }
     }
 
-    private HstQuery getQuery(HstRequest request, ArticlePage contentBean, RelatedItemsInfo parametersInfo)
-            throws QueryException {
+    private HstQuery getQuery(HstRequest request, RelatedItemsInfo parametersInfo) throws QueryException {
 
         HstQuery query = createQuery(request, parametersInfo);
         if (query != null) {
             addSorting(request, query, parametersInfo);
             query.setLimit(parametersInfo.getSize());
-            addFilter(query, parametersInfo, contentBean);
+            addFilter(query, parametersInfo, request);
         }
         return query;
 
@@ -115,7 +117,7 @@ public abstract class RelatedItems extends AjaxEnabledComponent {
         String sortBy = HslUtils.getNamespacedFieldName(parametersInfo.getSortBy());
 
         if (StringUtils.isNotBlank(sortBy)) {
-            if (Constants.Values.DESCENDING.equals(parametersInfo.getSortOrder())) {
+            if (Values.DESCENDING.equals(parametersInfo.getSortOrder())) {
                 query.addOrderByDescending(sortBy);
             } else {
                 query.addOrderByAscending(sortBy);
@@ -123,7 +125,21 @@ public abstract class RelatedItems extends AjaxEnabledComponent {
         }
     }
 
-    private void addFilter(HstQuery query, RelatedItemsInfo info, ArticlePage contentBean) throws FilterException {
+    private void addFilter(HstQuery query, RelatedItemsInfo info, HstRequest request) throws FilterException {
+        HippoBean contentBean = request.getRequestContext().getContentBean();
+        if (info.getOverFilter() || info.getThemaFilter()) {
+            if (contentBean instanceof ArticlePage) {
+                addFiltering(query, info, (ArticlePage) contentBean);
+            } else {
+                request.setAttribute(WidgetConstants.WEB_MASTER_MESSAGE,
+                        "webmaster.nofiltering.message");
+            }
+        }
+
+    }
+
+    private void addFiltering(HstQuery query, RelatedItemsInfo info, ArticlePage contentBean) throws FilterException {
+
         Filter globalFilter = query.createFilter();
         if (info.getOverFilter()) {
             Filter ff = addFilterOnField(query, contentBean.getSubjecttags(), "hsl:subjecttags");
