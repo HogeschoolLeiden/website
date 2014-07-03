@@ -1,6 +1,7 @@
 package nl.hsleiden.components.catalog;
 
 import hslbeans.EventPage;
+import nl.hsleiden.componentsinfo.RelatedEventsInfo;
 import nl.hsleiden.componentsinfo.RelatedItemsInfo;
 import nl.hsleiden.utils.HslUtils;
 
@@ -10,7 +11,7 @@ import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.parameters.ParametersInfo;
 
-@ParametersInfo(type = RelatedItemsInfo.class)
+@ParametersInfo(type = RelatedEventsInfo.class)
 public class RelatedEvents extends RelatedItems {
     
     @Override

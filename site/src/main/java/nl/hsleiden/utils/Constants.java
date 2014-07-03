@@ -27,6 +27,8 @@ public class Constants {
 
         public static final String WIDGET_TITLE = "widgetTitle";
         public static final String WIDGET_TITLE_DEFAULT = "Related Items";
+        public static final String WIDGET_TITLE_DEFAULT_NEWS = "Related News";
+        public static final String WIDGET_TITLE_DEFAULT_EVENTS = "Related Events";
         public static final String SIZE = "size";
         public static final String CONTENT_BEAN_PATH = "contentBeanPath";
         public static final String CONTENT_BEAN_PATH_SELECTABLE = "hippostd:folder";
