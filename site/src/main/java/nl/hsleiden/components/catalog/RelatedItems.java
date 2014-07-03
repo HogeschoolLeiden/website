@@ -33,11 +33,11 @@ import org.slf4j.LoggerFactory;
 import com.tdclighthouse.prototype.components.AjaxEnabledComponent;
 
 @ParametersInfo(type = RelatedItemsInfo.class)
-public abstract class RelatedItems extends AjaxEnabledComponent<Map<String, Object>> {
+public abstract class RelatedItems extends AjaxEnabledComponent {
 
     private static final String OVERVIEW_LINK = "overviewLink";
     private static final Logger LOG = LoggerFactory.getLogger(RelatedItems.class);
-    
+
     public Map<String, Object> getModel(HstRequest request, HstResponse response) {
         try {
             RelatedItemsInfo parametersInfo = this.<RelatedItemsInfo> getComponentParametersInfo(request);
@@ -68,7 +68,7 @@ public abstract class RelatedItems extends AjaxEnabledComponent<Map<String, Obje
             RelatedItemsInfo parametersInfo) {
         try {
             HstQuery query = getQuery(request, contentBean, parametersInfo);
-            if(query!=null){ 
+            if (query != null) {
                 LOG.debug("EXECUTING QUERY: " + query.getQueryAsString(false));
                 HstQueryResult queryResult = query.execute();
                 LOG.debug("QUERY RESULT SIZE: " + queryResult.getSize());
@@ -84,7 +84,7 @@ public abstract class RelatedItems extends AjaxEnabledComponent<Map<String, Obje
             throws QueryException {
 
         HstQuery query = createQuery(request, parametersInfo);
-        if(query!=null){            
+        if (query != null) {
             addSorting(request, query, parametersInfo);
             query.setLimit(parametersInfo.getSize());
             addFilter(query, parametersInfo, contentBean);
@@ -136,8 +136,7 @@ public abstract class RelatedItems extends AjaxEnabledComponent<Map<String, Obje
         query.setFilter(globalFilter);
     }
 
-    private Filter addFilterOnField(HstQuery query, String[] filterValues, String fieldToFilter)
-            throws FilterException {
+    private Filter addFilterOnField(HstQuery query, String[] filterValues, String fieldToFilter) throws FilterException {
         Filter f = query.createFilter();
         for (String value : filterValues) {
             Filter tagfilter = query.createFilter();
