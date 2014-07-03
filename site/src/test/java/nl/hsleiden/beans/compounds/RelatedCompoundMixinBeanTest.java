@@ -15,7 +15,7 @@ public class RelatedCompoundMixinBeanTest {
 
     @Test
     public void getUseMixinTest(){
-        RelatedCompoundMixinBean relatedCompoundMixinBean = new RelatedCompoundMixinBean();
+        RelatedNewsCompoundMixinBean relatedCompoundMixinBean = new RelatedNewsCompoundMixinBean();
         try{
             relatedCompoundMixinBean.getUseMixin();  
         }catch(UnsupportedOperationException e){
@@ -26,7 +26,7 @@ public class RelatedCompoundMixinBeanTest {
     @Test
     public void getWidgetTitleTest() throws NoSuchFieldException, IllegalAccessException {
         String title = "title";
-        RelatedCompoundMixinBean relatedCompoundMixinBean = new RelatedCompoundMixinBean();
+        RelatedNewsCompoundMixinBean relatedCompoundMixinBean = new RelatedNewsCompoundMixinBean();
         TestUtils.setPrivateField(relatedCompoundMixinBean, "widgetParameters",
                 createMockWidgetParameters(title, null, null));
         Assert.assertEquals(title, relatedCompoundMixinBean.getWidgetTitle());
@@ -35,7 +35,7 @@ public class RelatedCompoundMixinBeanTest {
     @Test
     public void getContentBeanPathTest() throws NoSuchFieldException, IllegalAccessException {
         String path = "/path/to/a/bean";
-        RelatedCompoundMixinBean relatedCompoundMixinBean = new RelatedCompoundMixinBean();
+        RelatedNewsCompoundMixinBean relatedCompoundMixinBean = new RelatedNewsCompoundMixinBean();
         TestUtils.setPrivateField(relatedCompoundMixinBean, "widgetParameters",
                 createMockWidgetParameters(null, path, null));
         Assert.assertEquals(path, relatedCompoundMixinBean.getContentBeanPath());
@@ -44,7 +44,7 @@ public class RelatedCompoundMixinBeanTest {
     @Test
     public void getContentBeanPathNullTest() throws NoSuchFieldException, IllegalAccessException {
         String path = null;
-        RelatedCompoundMixinBean relatedCompoundMixinBean = new RelatedCompoundMixinBean();
+        RelatedNewsCompoundMixinBean relatedCompoundMixinBean = new RelatedNewsCompoundMixinBean();
         TestUtils.setPrivateField(relatedCompoundMixinBean, "widgetParameters",
                 createMockWidgetParametersContentBeanPathNull(null, path, null));
         Assert.assertEquals(null, relatedCompoundMixinBean.getContentBeanPath());
@@ -53,7 +53,7 @@ public class RelatedCompoundMixinBeanTest {
     @Test
     public void getSizeTest() throws NoSuchFieldException, IllegalAccessException{
         long size =5l;
-        RelatedCompoundMixinBean relatedCompoundMixinBean = new RelatedCompoundMixinBean();
+        RelatedNewsCompoundMixinBean relatedCompoundMixinBean = new RelatedNewsCompoundMixinBean();
         TestUtils.setPrivateField(relatedCompoundMixinBean, "widgetParameters",
                 createMockWidgetParameters(null, null, size));
         Assert.assertEquals(size, relatedCompoundMixinBean.getSize());
@@ -63,7 +63,7 @@ public class RelatedCompoundMixinBeanTest {
     @Test
     public void getThemaFilterTest() throws NoSuchFieldException, IllegalAccessException{
         boolean themaFilter = false;
-        RelatedCompoundMixinBean relatedCompoundMixinBean = new RelatedCompoundMixinBean();
+        RelatedNewsCompoundMixinBean relatedCompoundMixinBean = new RelatedNewsCompoundMixinBean();
         TestUtils.setPrivateField(relatedCompoundMixinBean, "filterParameters",
                 createMockFilterParameters(themaFilter, true));
         Assert.assertEquals(themaFilter, relatedCompoundMixinBean.getThemaFilter());
@@ -72,7 +72,7 @@ public class RelatedCompoundMixinBeanTest {
     @Test
     public void getOverFilterTest() throws NoSuchFieldException, IllegalAccessException{
         boolean overFilter = false;
-        RelatedCompoundMixinBean relatedCompoundMixinBean = new RelatedCompoundMixinBean();
+        RelatedNewsCompoundMixinBean relatedCompoundMixinBean = new RelatedNewsCompoundMixinBean();
         TestUtils.setPrivateField(relatedCompoundMixinBean, "filterParameters",
                 createMockFilterParameters(true, overFilter));
         Assert.assertEquals(overFilter, relatedCompoundMixinBean.getOverFilter());
@@ -81,7 +81,7 @@ public class RelatedCompoundMixinBeanTest {
     @Test
     public void getSortByTest() throws NoSuchFieldException, IllegalAccessException{
         String sortBy = "sortByTest";
-        RelatedCompoundMixinBean relatedCompoundMixinBean = new RelatedCompoundMixinBean();
+        RelatedNewsCompoundMixinBean relatedCompoundMixinBean = new RelatedNewsCompoundMixinBean();
         TestUtils.setPrivateField(relatedCompoundMixinBean, "sortParameters",
                 createMockSortParameters(sortBy, null));
         Assert.assertEquals(sortBy, relatedCompoundMixinBean.getSortBy());
@@ -90,7 +90,7 @@ public class RelatedCompoundMixinBeanTest {
     @Test
     public void getSortOrderTest() throws NoSuchFieldException, IllegalAccessException{
         String sortOrder = "sortOrderTest";
-        RelatedCompoundMixinBean relatedCompoundMixinBean = new RelatedCompoundMixinBean();
+        RelatedNewsCompoundMixinBean relatedCompoundMixinBean = new RelatedNewsCompoundMixinBean();
         TestUtils.setPrivateField(relatedCompoundMixinBean, "sortParameters",
                 createMockSortParameters(null, sortOrder));
         Assert.assertEquals(sortOrder, relatedCompoundMixinBean.getSortOrder());
@@ -98,7 +98,7 @@ public class RelatedCompoundMixinBeanTest {
     
     @Test
     public void getShowOverviewTest() throws NoSuchFieldException, IllegalAccessException {
-        RelatedCompoundMixinBean relatedCompoundMixinBean = new RelatedCompoundMixinBean();
+        RelatedNewsCompoundMixinBean relatedCompoundMixinBean = new RelatedNewsCompoundMixinBean();
         TestUtils.setPrivateField(relatedCompoundMixinBean, "overviewParameters",
                 createMockOverviewParameters(false, null, null));
         Assert.assertEquals(false, relatedCompoundMixinBean.getShowOverview());
@@ -108,7 +108,7 @@ public class RelatedCompoundMixinBeanTest {
     @Test
     public void getOverviewBeanPathTest() throws NoSuchFieldException, IllegalAccessException {
         String path = "/path/to/my/bean";
-        RelatedCompoundMixinBean relatedCompoundMixinBean = new RelatedCompoundMixinBean();
+        RelatedNewsCompoundMixinBean relatedCompoundMixinBean = new RelatedNewsCompoundMixinBean();
         TestUtils.setPrivateField(relatedCompoundMixinBean, "overviewParameters",
                 createMockOverviewParameters(false, path, null));
         Assert.assertEquals(path, relatedCompoundMixinBean.getOverviewBeanPath());
@@ -117,7 +117,7 @@ public class RelatedCompoundMixinBeanTest {
     @Test
     public void getOverviewBeanPathNullTest() throws NoSuchFieldException, IllegalAccessException {
         String path = null;
-        RelatedCompoundMixinBean relatedCompoundMixinBean = new RelatedCompoundMixinBean();
+        RelatedNewsCompoundMixinBean relatedCompoundMixinBean = new RelatedNewsCompoundMixinBean();
         TestUtils.setPrivateField(relatedCompoundMixinBean, "overviewParameters",
                 createMockOverviewParametersContentBeanPathNull(false, path, null));
         Assert.assertEquals(null, relatedCompoundMixinBean.getOverviewBeanPath());
@@ -126,7 +126,7 @@ public class RelatedCompoundMixinBeanTest {
     @Test
     public void getOverviewLinkLabelTest() throws NoSuchFieldException, IllegalAccessException {
         String result = "overviewLinkLabelTest";
-        RelatedCompoundMixinBean relatedCompoundMixinBean = new RelatedCompoundMixinBean();
+        RelatedNewsCompoundMixinBean relatedCompoundMixinBean = new RelatedNewsCompoundMixinBean();
         TestUtils.setPrivateField(relatedCompoundMixinBean, "overviewParameters",
                 createMockOverviewParameters(false, null, result));
         Assert.assertEquals(result, relatedCompoundMixinBean.getOverviewLinkLabel());

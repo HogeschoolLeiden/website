@@ -1,13 +1,9 @@
 package nl.hsleiden.beans.compounds;
 
-
 import nl.hsleiden.componentsinfo.RelatedItemsInfo;
 
-import org.hippoecm.hst.content.beans.Node;
+public class RelatedItemsCompoundMixinBean extends hslbeans.RelatedCompoundMixin implements RelatedItemsInfo {
 
-@Node(jcrType = "hsl:RelatedCompoundMixin")
-public class RelatedCompoundMixinBean extends hslbeans.RelatedCompoundMixin implements RelatedItemsInfo {
-    
     @Override
     public Boolean getUseMixin() {
        throw new UnsupportedOperationException();
@@ -51,7 +47,6 @@ public class RelatedCompoundMixinBean extends hslbeans.RelatedCompoundMixin impl
         return getOverviewParameters().getOverviewLinkLabel();
     }
 
-
     @Override
     public String getSortOrder() {
         return getSortParameters().getSortOrder();
@@ -62,7 +57,6 @@ public class RelatedCompoundMixinBean extends hslbeans.RelatedCompoundMixin impl
         return getSortParameters().getSortBy();
     }
 
-
     @Override
     public Boolean getThemaFilter() {
         return getFilterParameters().getThemaFilter();
@@ -72,4 +66,5 @@ public class RelatedCompoundMixinBean extends hslbeans.RelatedCompoundMixin impl
     public Boolean getOverFilter() {
         return getFilterParameters().getOverFilter();
     }
+
 }

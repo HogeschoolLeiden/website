@@ -1,10 +1,11 @@
 package nl.hsleiden.components.catalog;
 
+import hslbeans.EventPage;
+
 import java.util.Map;
 
 import javax.jcr.RepositoryException;
 
-import hslbeans.EventPage;
 import nl.hsleiden.beans.mixin.RelatedEventsMixin;
 import nl.hsleiden.beans.mixin.RelatedItemsMixin;
 import nl.hsleiden.componentsinfo.RelatedEventsInfo;
@@ -36,7 +37,7 @@ public class RelatedEvents extends RelatedItems {
     @Override
     public Map<String, Object> getModel(HstRequest request, HstResponse response) {
         try {
-            RelatedEventsInfo parametersInfo = this.<RelatedEventsInfo> getComponentParametersInfo(request);
+            RelatedItemsInfo parametersInfo = this.<RelatedEventsInfo> getComponentParametersInfo(request);
             if (parametersInfo.getUseMixin()) {
                 HippoBean proxy = getMixinProxy(request.getRequestContext().getContentBean());
                 if (proxy instanceof RelatedItemsMixin) {
