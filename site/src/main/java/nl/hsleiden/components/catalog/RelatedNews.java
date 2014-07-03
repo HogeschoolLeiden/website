@@ -4,6 +4,7 @@ import hslbeans.NewsPage;
 import nl.hsleiden.componentsinfo.RelatedItemsInfo;
 import nl.hsleiden.componentsinfo.RelatedNewsInfo;
 import nl.hsleiden.utils.HslUtils;
+import nl.hsleiden.utils.Constants.WidgetConstants;
 
 import org.hippoecm.hst.content.beans.query.HstQuery;
 import org.hippoecm.hst.content.beans.query.exceptions.QueryException;
@@ -21,6 +22,8 @@ public class RelatedNews extends RelatedItems {
         HippoBean scope = HslUtils.getSelectedBean(request, parametersInfo.getContentBeanPath());
         if(scope!=null){            
             result = request.getRequestContext().getQueryManager().createQuery(scope, NewsPage.JCR_TYPE);
+        }else{
+            request.setAttribute(WidgetConstants.WEB_MASTER_MESSAGE, "webmaster.nofolder.message");
         }
         return result; 
     }    
