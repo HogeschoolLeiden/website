@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<sv:node sv:name="hst:catalog" xmlns:sv="http://www.jcp.org/jcr/sv/1.0">
+<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="hst:catalog">
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>hst:catalog</sv:value>
   </sv:property>
@@ -20,8 +19,8 @@
       <sv:property sv:name="hst:label" sv:type="String">
         <sv:value>Related Events</sv:value>
       </sv:property>
-      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true" />
-      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true" />
+      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
+      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
       <sv:property sv:name="hst:template" sv:type="String">
         <sv:value>catalog.relatedevents.frame</sv:value>
       </sv:property>
@@ -33,9 +32,6 @@
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:containeritemcomponent</sv:value>
       </sv:property>
-      <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>6d5a77a6-79bd-43e7-a6a5-63ae0a9a0762</sv:value>
-      </sv:property>
       <sv:property sv:name="hst:componentclassname" sv:type="String">
         <sv:value>nl.hsleiden.components.catalog.FormComponent</sv:value>
       </sv:property>
@@ -45,7 +41,7 @@
       <sv:property sv:name="hst:label" sv:type="String">
         <sv:value>Formulieren</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
+      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
         <sv:value>ef_done_redirect</sv:value>
         <sv:value>ef-from-name</sv:value>
         <sv:value>ef-from-email</sv:value>
@@ -55,40 +51,40 @@
         <sv:value>ef-body-html</sv:value>
         <sv:value>tryToUseMixin</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
+      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
         <sv:value>bedank/bedank-pagina</sv:value>
         <sv:value>Hippo Site Info</sv:value>
         <sv:value>info@hsl.com</sv:value>
         <sv:value>org.onehippo.forge.easyforms.behaviors.FormIntroBehavior,org.onehippo.forge.easyforms.behaviors.StoreFormDataBehavior,org.onehippo.forge.easyforms.behaviors.ConfirmationBehavior,org.onehippo.forge.easyforms.behaviors.MailFormDataBehavior</sv:value>
         <sv:value>true</sv:value>
         <sv:value>mail/Session</sv:value>
-        <sv:value>&lt;h2&gt;Support form filled&lt;/h2&gt;&#xd;
-    &lt;table&gt;&#xd;
-          &lt;#list form.getFields() as field&gt;&#xd;
-            &lt;#if field.multiple&gt;&#xd;
-              &lt;#assign multiValues = field.multiValues&gt;&#xd;
-              &lt;#if multiValues??&gt;&#xd;
-                &lt;#list multiValues?keys as key&gt;&#xd;
-                  &lt;#assign collection = multiValues[key]&gt;&#xd;
-                  &lt;#list collection as itemValue&gt;&#xd;
-                    &lt;#if itemValue??&gt;&#xd;
-                      &lt;tr&gt;&#xd;
-                        &lt;th align="left"&gt;${key}&lt;/th&gt;&#xd;
-                        &lt;td align="left"&gt;${itemValue}&lt;/td&gt;&#xd;
-                      &lt;/tr&gt;&#xd;
-                    &lt;/#if&gt;&#xd;
-                  &lt;/#list&gt;&#xd;
-                &lt;/#list&gt;&#xd;
-              &lt;/#if&gt;&#xd;
-              &lt;#else&gt;&#xd;
-                &lt;#if field.value?has_content&gt;&#xd;
-                  &lt;tr&gt;&#xd;
-                    &lt;th align="left"&gt;${field.getLabel()}&lt;/th&gt;&#xd;
-                    &lt;td align="left"&gt;${field.getValue()}&lt;/td&gt;&#xd;
-                  &lt;/tr&gt;&#xd;
-                &lt;/#if&gt;&#xd;
-            &lt;/#if&gt;&#xd;
-          &lt;/#list&gt;&#xd;
+        <sv:value>&lt;h2&gt;Support form filled&lt;/h2&gt;&#13;
+    &lt;table&gt;&#13;
+          &lt;#list form.getFields() as field&gt;&#13;
+            &lt;#if field.multiple&gt;&#13;
+              &lt;#assign multiValues = field.multiValues&gt;&#13;
+              &lt;#if multiValues??&gt;&#13;
+                &lt;#list multiValues?keys as key&gt;&#13;
+                  &lt;#assign collection = multiValues[key]&gt;&#13;
+                  &lt;#list collection as itemValue&gt;&#13;
+                    &lt;#if itemValue??&gt;&#13;
+                      &lt;tr&gt;&#13;
+                        &lt;th align="left"&gt;${key}&lt;/th&gt;&#13;
+                        &lt;td align="left"&gt;${itemValue}&lt;/td&gt;&#13;
+                      &lt;/tr&gt;&#13;
+                    &lt;/#if&gt;&#13;
+                  &lt;/#list&gt;&#13;
+                &lt;/#list&gt;&#13;
+              &lt;/#if&gt;&#13;
+              &lt;#else&gt;&#13;
+                &lt;#if field.value?has_content&gt;&#13;
+                  &lt;tr&gt;&#13;
+                    &lt;th align="left"&gt;${field.getLabel()}&lt;/th&gt;&#13;
+                    &lt;td align="left"&gt;${field.getValue()}&lt;/td&gt;&#13;
+                  &lt;/tr&gt;&#13;
+                &lt;/#if&gt;&#13;
+            &lt;/#if&gt;&#13;
+          &lt;/#list&gt;&#13;
         &lt;/table&gt;</sv:value>
         <sv:value>true</sv:value>
       </sv:property>
@@ -112,10 +108,54 @@
       <sv:property sv:name="hst:label" sv:type="String">
         <sv:value>Related News</sv:value>
       </sv:property>
-      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true" />
-      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true" />
+      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
+      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
       <sv:property sv:name="hst:template" sv:type="String">
         <sv:value>catalog.relatednews.frame</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:xtype" sv:type="String">
+        <sv:value>HST.Item</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="companyInsider">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:containeritemcomponent</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentclassname" sv:type="String">
+        <sv:value>nl.hsleiden.components.catalog.Linkedin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:iconpath" sv:type="String">
+        <sv:value>images/catalog/linkedin.png</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:label" sv:type="String">
+        <sv:value>Company Insider</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
+      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
+      <sv:property sv:name="hst:template" sv:type="String">
+        <sv:value>catalog.companyInsider</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:xtype" sv:type="String">
+        <sv:value>HST.Item</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="companyProfile">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:containeritemcomponent</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentclassname" sv:type="String">
+        <sv:value>nl.hsleiden.components.catalog.Linkedin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:iconpath" sv:type="String">
+        <sv:value>images/catalog/linkedin.png</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:label" sv:type="String">
+        <sv:value>Company profile</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
+      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
+      <sv:property sv:name="hst:template" sv:type="String">
+        <sv:value>catalog.companyProfile</sv:value>
       </sv:property>
       <sv:property sv:name="hst:xtype" sv:type="String">
         <sv:value>HST.Item</sv:value>

@@ -16,6 +16,7 @@ public class Constants {
     public static class Attributes extends AttributesConstants {
         public static final String LOGO = "logo";
         public static final String HEADER_NAME = "headerName";
+		public static final String PARAMETER_INFO = "parameterInfo";
 
         private Attributes() {
         }
@@ -49,6 +50,8 @@ public class Constants {
         public static final String FORMS_INITIAL_LOCATION = "/content/documents/hsl/formulieren/";
         
         public static final String WEB_MASTER_MESSAGE = "webMasterMessage";
+
+		public static final String COMPANY_PROFILE_ID = "companyProfileId";
         
         private WidgetConstants() {
         }
