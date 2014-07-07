@@ -141,7 +141,7 @@
         </sv:property>
         <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
           <sv:value>{"propertyNames":["hsl:type", "hsl:subjecttags", "hsl:thematags", "hsl:releaseDate"]}</sv:value>
-          <sv:value>actueel/nieuws/news-facetnav</sv:value>
+          <sv:value>pages/actueel/nieuws/news-facetnav</sv:value>
         </sv:property>
         <sv:property sv:name="hst:referencecomponent" sv:type="String">
           <sv:value>hst:components/facetdeeplink</sv:value>
@@ -290,7 +290,7 @@
         </sv:property>
         <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
           <sv:value>{"propertyNames":["hsl:subjecttags", "hsl:thematags", "hsl:eventDate"]}</sv:value>
-          <sv:value>actueel/evenementen/events-facetnav</sv:value>
+          <sv:value>pages/actueel/evenementen/events-facetnav</sv:value>
         </sv:property>
         <sv:property sv:name="hst:referencecomponent" sv:type="String">
           <sv:value>hst:components/facetdeeplink</sv:value>
@@ -330,4 +330,36 @@
       </sv:node>
     </sv:node>
   </sv:node>
+  
+  <sv:node sv:name="faqoverviewcommon" xmlns:sv="http://www.jcp.org/jcr/sv/1.0">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:component</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>554518f0-294e-4364-b751-30d5d235e786</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:referencecomponent" sv:type="String">
+      <sv:value>hst:pages/genericoverviewcommon</sv:value>
+    </sv:property>
+    <sv:node sv:name="main">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:component</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>b50b260e-2594-4427-b307-d2badb933737</sv:value>
+      </sv:property>
+      <sv:node sv:name="content">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:component</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>1538e53a-c4e1-4c98-a273-4eb3255843b9</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:template" sv:type="String">
+          <sv:value>faqoverviewpage.main.content</sv:value>
+        </sv:property>
+      </sv:node>
+    </sv:node>
+  </sv:node>
+  
 </sv:node>
