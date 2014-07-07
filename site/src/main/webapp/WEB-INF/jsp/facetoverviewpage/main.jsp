@@ -24,13 +24,7 @@
 			</c:when>
 			<c:otherwise>
 			 
-              <div class="inner">
-				<c:if test="${not empty model.document.introduction }">
-				  <p class="intro">
-					<c:out value="${model.document.introduction }" />
-				  </p>
-				</c:if>
-			  </div>
+              <tag:overviewIntrodution doc="${model.document}" ></tag:overviewIntrodution>
 						
 			  <tag:resultsummary paginator="${model.paginator}" />
 			
