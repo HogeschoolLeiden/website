@@ -1,78 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sv:node sv:name="hsl" xmlns:sv="http://www.jcp.org/jcr/sv/1.0">
+<sv:node sv:name="onderzoek" xmlns:sv="http://www.jcp.org/jcr/sv/1.0">
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>hippostd:folder</sv:value>
   </sv:property>
   <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
-    <sv:value>mix:referenceable</sv:value>
     <sv:value>hippotranslation:translated</sv:value>
+    <sv:value>mix:versionable</sv:value>
+    <sv:value>hippo:translated</sv:value>
   </sv:property>
   <sv:property sv:name="jcr:uuid" sv:type="String">
-    <sv:value>996bcac5-86cf-49b5-a7a3-16a74863e814</sv:value>
+    <sv:value>cd0e0325-da6d-4cb3-bee8-78b4bc8c2c26</sv:value>
   </sv:property>
   <sv:property sv:multiple="true" sv:name="hippostd:foldertype" sv:type="String">
     <sv:value>new-translated-folder</sv:value>
     <sv:value>new-document</sv:value>
   </sv:property>
   <sv:property sv:name="hippotranslation:id" sv:type="String">
-    <sv:value>996bcac5-86cf-49b5-a7a3-16a74863e814</sv:value>
+    <sv:value>88982948-c882-4a64-8ec5-1beff1c276fc</sv:value>
   </sv:property>
   <sv:property sv:name="hippotranslation:locale" sv:type="String">
     <sv:value>nl</sv:value>
   </sv:property>
-  <sv:node sv:name="componenten">
+  <sv:node sv:name="hippo:translation">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
-      <sv:value>hippostd:folder</sv:value>
+      <sv:value>hippo:translation</sv:value>
     </sv:property>
-    <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
-      <sv:value>hippotranslation:translated</sv:value>
-      <sv:value>mix:versionable</sv:value>
-      <sv:value>hippo:translated</sv:value>
+    <sv:property sv:name="hippo:language" sv:type="String">
+      <sv:value/>
     </sv:property>
-    <sv:property sv:name="jcr:uuid" sv:type="String">
-      <sv:value>070ebf8d-75fe-4d0c-abe7-e0bd37a1e03a</sv:value>
+    <sv:property sv:name="hippo:message" sv:type="String">
+      <sv:value>Onderzoek</sv:value>
     </sv:property>
-    <sv:property sv:multiple="true" sv:name="hippostd:foldertype" sv:type="String">
-      <sv:value>new-translated-folder</sv:value>
-      <sv:value>new-forms-folder</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippotranslation:id" sv:type="String">
-      <sv:value>be9b93d6-f61d-4dd5-b525-3d3d0d7340b7</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippotranslation:locale" sv:type="String">
-      <sv:value>nl</sv:value>
-    </sv:property>
-    <sv:node sv:name="hippo:translation">
-      <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hippo:translation</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippo:language" sv:type="String">
-        <sv:value/>
-      </sv:property>
-      <sv:property sv:name="hippo:message" sv:type="String">
-        <sv:value>Componenten</sv:value>
-      </sv:property>
-    </sv:node>
-    
   </sv:node>
-  <sv:node sv:name="configuratie">
+  <sv:node sv:name="lectoren">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hippostd:folder</sv:value>
     </sv:property>
     <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
       <sv:value>hippotranslation:translated</sv:value>
-      <sv:value>hippo:translated</sv:value>
       <sv:value>mix:versionable</sv:value>
+      <sv:value>hippo:translated</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
-      <sv:value>8d1bcae0-211c-4186-8c7f-fc32b17dc8a6</sv:value>
+      <sv:value>616c6b25-f0da-4ece-881e-d633430f8b8b</sv:value>
     </sv:property>
     <sv:property sv:multiple="true" sv:name="hippostd:foldertype" sv:type="String">
       <sv:value>new-translated-folder</sv:value>
       <sv:value>new-document</sv:value>
     </sv:property>
     <sv:property sv:name="hippotranslation:id" sv:type="String">
-      <sv:value>648e43d3-39bd-42c7-8a05-9f6c20fa35a3</sv:value>
+      <sv:value>bf373acc-efa0-46ac-ac63-3bc693905857</sv:value>
     </sv:property>
     <sv:property sv:name="hippotranslation:locale" sv:type="String">
       <sv:value>nl</sv:value>
@@ -85,28 +62,28 @@
         <sv:value/>
       </sv:property>
       <sv:property sv:name="hippo:message" sv:type="String">
-        <sv:value>Configuratie</sv:value>
+        <sv:value>Lectoren</sv:value>
       </sv:property>
     </sv:node>
   </sv:node>
-  <sv:node sv:name="pages">
+  <sv:node sv:name="lectoraten">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hippostd:folder</sv:value>
     </sv:property>
     <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
       <sv:value>hippotranslation:translated</sv:value>
-      <sv:value>hippo:translated</sv:value>
       <sv:value>mix:versionable</sv:value>
+      <sv:value>hippo:translated</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
-      <sv:value>c5a41f30-985c-4a3b-8679-e1233d608df8</sv:value>
+      <sv:value>db19e50c-b673-410f-b31e-d2d9afc5f24b</sv:value>
     </sv:property>
     <sv:property sv:multiple="true" sv:name="hippostd:foldertype" sv:type="String">
       <sv:value>new-translated-folder</sv:value>
       <sv:value>new-document</sv:value>
     </sv:property>
     <sv:property sv:name="hippotranslation:id" sv:type="String">
-      <sv:value>f91f3313-27c8-41e3-b26c-9cefb4119c72</sv:value>
+      <sv:value>c4a1bf46-b8c9-4024-8932-1a703d4182cb</sv:value>
     </sv:property>
     <sv:property sv:name="hippotranslation:locale" sv:type="String">
       <sv:value>nl</sv:value>
@@ -119,19 +96,52 @@
         <sv:value/>
       </sv:property>
       <sv:property sv:name="hippo:message" sv:type="String">
-        <sv:value>Pages</sv:value>
+        <sv:value>Lectoraten</sv:value>
       </sv:property>
     </sv:node>
-    <sv:node sv:name="hippo:translation">
+    <sv:node sv:name="items">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hippo:translation</sv:value>
+        <sv:value>hippostd:folder</sv:value>
       </sv:property>
-      <sv:property sv:name="hippo:language" sv:type="String">
+      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+        <sv:value>hippotranslation:translated</sv:value>
+        <sv:value>mix:versionable</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>4ac252e4-cbcb-4143-9d85-de8963267161</sv:value>
+      </sv:property>
+      <sv:property sv:multiple="true" sv:name="hippostd:foldertype" sv:type="String">
+        <sv:value>new-translated-folder</sv:value>
+        <sv:value>new-document</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippotranslation:id" sv:type="String">
+        <sv:value>48011602-8792-4f62-a76c-942873288eec</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippotranslation:locale" sv:type="String">
         <sv:value>nl</sv:value>
       </sv:property>
-      <sv:property sv:name="hippo:message" sv:type="String">
-        <sv:value>Paginas</sv:value>
-      </sv:property>
     </sv:node>
+  </sv:node>
+  <sv:node sv:name="algemeen">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hippostd:folder</sv:value>
+    </sv:property>
+    <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+      <sv:value>hippotranslation:translated</sv:value>
+      <sv:value>mix:versionable</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>c34b43ba-c7cc-426e-b753-6cc72d26c8f7</sv:value>
+    </sv:property>
+    <sv:property sv:multiple="true" sv:name="hippostd:foldertype" sv:type="String">
+      <sv:value>new-translated-folder</sv:value>
+      <sv:value>new-document</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippotranslation:id" sv:type="String">
+      <sv:value>73cb4602-b191-49d2-9065-6fe86276db85</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippotranslation:locale" sv:type="String">
+      <sv:value>nl</sv:value>
+    </sv:property>
   </sv:node>
 </sv:node>

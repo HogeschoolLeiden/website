@@ -37,7 +37,7 @@ public class Constants {
         public static final String OVERVIEW_BEAN_PATH = "overviewBeanPath";
         public static final String THANKS_BEAN_PATH = "thanksBeanPath";
         public static final String OVERVIEW_BEAN_PATH_DOC_TYPE = "hsl:WebPage";
-        public static final String INITIAL_LOCATION = "/content/documents/hsl/";
+        public static final String INITIAL_LOCATION = "/content/documents/hsl/pages";
         public static final String OVERVIEW_LINK_LABEL = "overviewLinkLabel";
 
         public static final String SORT_ORDER = "sortOrder";
@@ -46,7 +46,7 @@ public class Constants {
         public static final String THEMA_FILTER = "themaFilter";
         public static final String OVER_FILTER = "overFilter";
         
-        public static final String FORMS_INITIAL_LOCATION = "/content/documents/hsl/formulieren/";
+        public static final String FORMS_INITIAL_LOCATION = "/content/documents/hsl/componenten/formulieren";
         
         public static final String WEB_MASTER_MESSAGE = "webMasterMessage";
         

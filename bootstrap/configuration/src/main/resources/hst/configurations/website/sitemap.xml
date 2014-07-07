@@ -17,7 +17,7 @@
       <sv:value>hst:pages/standard</sv:value>
     </sv:property>
     <sv:property sv:name="hst:relativecontentpath" sv:type="String">
-      <sv:value>home</sv:value>
+      <sv:value>pages/home</sv:value>
     </sv:property>
   </sv:node>
   <sv:node sv:name="_any_">
@@ -45,7 +45,7 @@
       <sv:value>hst:pages/articlepage</sv:value>
     </sv:property>
     <sv:property sv:name="hst:relativecontentpath" sv:type="String">
-      <sv:value>${1}</sv:value>
+      <sv:value>pages/${1}</sv:value>
     </sv:property>
   </sv:node>
   <sv:node sv:name="actueel">
@@ -59,7 +59,7 @@
       <sv:value>hst:pages/landingpage</sv:value>
     </sv:property>
     <sv:property sv:name="hst:relativecontentpath" sv:type="String">
-      <sv:value>actueel/actueel</sv:value>
+      <sv:value>pages/actueel/actueel</sv:value>
     </sv:property>
     <sv:node sv:name="nieuws">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -77,12 +77,12 @@
         <sv:value>labelPaths</sv:value>
       </sv:property>
       <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
-        <sv:value>actueel/nieuws/news-facetnav</sv:value>
+        <sv:value>pages/actueel/nieuws/news-facetnav</sv:value>
         <sv:value>2</sv:value>
         <sv:value>/content/documents/hsl/configuratie/label-paths</sv:value>
       </sv:property>
       <sv:property sv:name="hst:relativecontentpath" sv:type="String">
-        <sv:value>actueel/nieuws/nieuws</sv:value>
+        <sv:value>pages/actueel/nieuws/nieuws</sv:value>
       </sv:property>
       <sv:node sv:name="_any_">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -100,12 +100,12 @@
           <sv:value>labelPaths</sv:value>
         </sv:property>
         <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
-          <sv:value>actueel/nieuws/nieuws</sv:value>
+          <sv:value>pages/actueel/nieuws/nieuws</sv:value>
           <sv:value>2</sv:value>
           <sv:value>/content/documents/hsl/configuratie/label-paths</sv:value>
         </sv:property>
         <sv:property sv:name="hst:relativecontentpath" sv:type="String">
-          <sv:value>actueel/nieuws/news-facetnav/${1}</sv:value>
+          <sv:value>pages/actueel/nieuws/news-facetnav/${1}</sv:value>
         </sv:property>
       </sv:node>
       <sv:node sv:name="_any_.html">
@@ -119,7 +119,7 @@
           <sv:value>hst:pages/newspage</sv:value>
         </sv:property>
         <sv:property sv:name="hst:relativecontentpath" sv:type="String">
-          <sv:value>actueel/nieuws/items/${1}</sv:value>
+          <sv:value>pages/actueel/nieuws/items/${1}</sv:value>
         </sv:property>
       </sv:node>
     </sv:node>
@@ -139,12 +139,12 @@
         <sv:value>labelPaths</sv:value>
       </sv:property>
       <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
-        <sv:value>actueel/evenementen/events-facetnav</sv:value>
+        <sv:value>pages/actueel/evenementen/events-facetnav</sv:value>
         <sv:value>2</sv:value>
         <sv:value>/content/documents/hsl/configuratie/label-paths</sv:value>
       </sv:property>
       <sv:property sv:name="hst:relativecontentpath" sv:type="String">
-        <sv:value>actueel/evenementen/evenementen</sv:value>
+        <sv:value>pages/actueel/evenementen/evenementen</sv:value>
       </sv:property>
       <sv:node sv:name="_any_">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -162,12 +162,12 @@
           <sv:value>labelPaths</sv:value>
         </sv:property>
         <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
-          <sv:value>actueel/evenementen/evenementen</sv:value>
+          <sv:value>pages/actueel/evenementen/evenementen</sv:value>
           <sv:value>2</sv:value>
           <sv:value>/content/documents/hsl/configuratie/label-paths</sv:value>
         </sv:property>
         <sv:property sv:name="hst:relativecontentpath" sv:type="String">
-          <sv:value>actueel/evenementen/events-facetnav/${1}</sv:value>
+          <sv:value>pages/actueel/evenementen/events-facetnav/${1}</sv:value>
         </sv:property>
       </sv:node>
       <sv:node sv:name="_any_.html">
@@ -181,7 +181,7 @@
           <sv:value>hst:pages/eventpage</sv:value>
         </sv:property>
         <sv:property sv:name="hst:relativecontentpath" sv:type="String">
-          <sv:value>actueel/evenementen/items/${1}</sv:value>
+          <sv:value>pages/actueel/evenementen/items/${1}</sv:value>
         </sv:property>
       </sv:node>
     </sv:node>
@@ -203,14 +203,14 @@
         <sv:value>sortOrder</sv:value>
       </sv:property>
       <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
-        <sv:value>actueel/pers</sv:value>
+        <sv:value>pages/actueel/pers</sv:value>
         <sv:value>hslbeans.NewsPage</sv:value>
         <sv:value>3</sv:value>
         <sv:value>hsl:releaseDate</sv:value>
         <sv:value>descending</sv:value>
       </sv:property>
       <sv:property sv:name="hst:relativecontentpath" sv:type="String">
-        <sv:value>actueel/pers/index</sv:value>
+        <sv:value>pages/actueel/pers/index</sv:value>
       </sv:property>
       <sv:node sv:name="_any_.html">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -223,7 +223,7 @@
           <sv:value>hst:pages/articlepage</sv:value>
         </sv:property>
         <sv:property sv:name="hst:relativecontentpath" sv:type="String">
-          <sv:value>actueel/pers/${1}</sv:value>
+          <sv:value>pages/actueel/pers/${1}</sv:value>
         </sv:property>
       </sv:node>
     </sv:node>
@@ -246,14 +246,14 @@
       <sv:value>sortOrder</sv:value>
     </sv:property>
     <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
-      <sv:value>over-hl</sv:value>
+      <sv:value>pages/over-hl</sv:value>
       <sv:value>hslbeans.ArticlePage</sv:value>
       <sv:value>3</sv:value>
       <sv:value>hsl:releaseDate</sv:value>
       <sv:value>descending</sv:value>
     </sv:property>
     <sv:property sv:name="hst:relativecontentpath" sv:type="String">
-      <sv:value>over-hl/index</sv:value>
+      <sv:value>pages/over-hl/index</sv:value>
     </sv:property>
     <sv:node sv:name="_any_">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -266,7 +266,7 @@
         <sv:value>hst:pages/articlepage</sv:value>
       </sv:property>
       <sv:property sv:name="hst:relativecontentpath" sv:type="String">
-        <sv:value>over-hl/${1}</sv:value>
+        <sv:value>pages/over-hl/${1}</sv:value>
       </sv:property>
     </sv:node>
   </sv:node>
@@ -281,7 +281,7 @@
       <sv:value>hst:pages/articlepage</sv:value>
     </sv:property>
     <sv:property sv:name="hst:relativecontentpath" sv:type="String">
-      <sv:value>formulieren/formulieren-bedank-paginas/bedank-pagina</sv:value>
+      <sv:value>pages/formulieren-bedank-paginas/bedank-pagina</sv:value>
     </sv:property>
     <sv:node sv:name="_any_">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -294,7 +294,7 @@
         <sv:value>hst:pages/articlepage</sv:value>
       </sv:property>
       <sv:property sv:name="hst:relativecontentpath" sv:type="String">
-        <sv:value>formulieren/formulieren-bedank-paginas/${1}</sv:value>
+        <sv:value>pages/formulieren-bedank-paginas/${1}</sv:value>
       </sv:property>
     </sv:node>
   </sv:node>
