@@ -34,12 +34,14 @@
         <div class="image">
           <hst:html hippohtml="${content.content }"/>
           <tag:paragraphImage position="${position }" image="${content.paragraphImage }" />
+          <div class="clear"></div>
         </div>
       </c:when>
       <c:otherwise>
         <div class="image">
           <tag:paragraphImage position="${position }" image="${content.paragraphImage }" />
           <hst:html hippohtml="${content.content }"/>
+          <div class="clear"></div>
         </div>
       </c:otherwise>
     </c:choose>

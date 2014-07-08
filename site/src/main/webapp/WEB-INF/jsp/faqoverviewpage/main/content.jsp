@@ -15,9 +15,13 @@
 <tag:overviewIntrodution doc="${document}" ></tag:overviewIntrodution>
 
 <c:forEach var="item" items="${items}">
-    <article class="well well-large">
+    <article class="well well-large faq">
         <hst:cmseditlink hippobean="${item}"/>
-        <h3>${fn:escapeXml(item.title)}</h3>
+        <div class="accordian">
+          <div class="title">
+            <h3><c:out value="${item.title}"/></h3>
+          </div>
+        </div>
         <c:if test="${hst:isReadable(item, 'releaseDate.time')}">
             <p class="badge badge-info">
               <c:out value=" "></c:out>

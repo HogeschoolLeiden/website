@@ -1,12 +1,12 @@
 var collapseDivs, collapseLinks;
 
 window.onload = function (evt) {
-    createDocumentStructure('h3');
+    createDocumentStructure('accordian');
 }
 
-function createDocumentStructure(tagName) {
-	if (document.getElementsByTagName) {
-		var elements = document.getElementsByTagName(tagName);
+function createDocumentStructure(className) {
+	if (document.getElementsByClassName) {
+		var elements = document.getElementsByClassName(className);
 		collapseDivs = new Array(elements.length);
 		collapseLinks = new Array(elements.length);
 		for (var i = 0; i < elements.length; i++) {
@@ -28,6 +28,12 @@ function createDocumentStructure(tagName) {
 				collapseDivs[i] = siblingContainer;
 
 				createCollapseLink(element, siblingContainer, i);
+				
+				var clearContainer;
+				if (document.createElement
+						&& (clearContainer = document.createElement('div'))) {
+					createClearDiv(element, clearContainer, i);
+				}
 			} else {
 				// no dynamic creation of elements possible
 				return;
@@ -38,17 +44,27 @@ function createDocumentStructure(tagName) {
 }
 
 function createCollapseLink(element, siblingContainer, index) {
-	var span;
-	if (document.createElement && (span = document.createElement('span'))) {
-		span.appendChild(document.createTextNode(String.fromCharCode(160)));
+	var collapsableDiv;
+	
+	if (document.createElement && (collapsableDiv = document.createElement('div'))) {
+		collapsableDiv.className = "collapsable";		
+		collapsableDiv.appendChild(document.createTextNode(String.fromCharCode(160)));
 		var link = document.createElement('a');
 		link.collapseDiv = siblingContainer;
 		link.href = '#';
 		link.appendChild(document.createTextNode('expand'));
 		link.onclick = collapseExpandLink;
 		collapseLinks[index] = link;
-		span.appendChild(link);
-		element.appendChild(span);
+		collapsableDiv.appendChild(link);
+		element.appendChild(collapsableDiv);
+	}
+}
+
+function createClearDiv(element, siblingContainer, index) {
+	var clearDiv;
+	if (document.createElement && (clearDiv = document.createElement('div'))) {
+		clearDiv.className = "clear";
+		element.appendChild(clearDiv);
 	}
 }
 
@@ -71,6 +87,7 @@ function createCollapseExpandAll(firstElement) {
 	var div;
 	if (document.createElement && (div = document.createElement('div'))) {
 		var link = document.createElement('a');
+		
 		link.href = '#';
 		link.appendChild(document.createTextNode('expand all'));
 		link.onclick = expandAll;
@@ -79,6 +96,7 @@ function createCollapseExpandAll(firstElement) {
 		link = document.createElement('a');
 		link.href = '#';
 		link.appendChild(document.createTextNode('collapse all'));
+
 		link.onclick = collapseAll;
 		div.appendChild(link);
 		firstElement.parentNode.insertBefore(div, firstElement);
