@@ -9,8 +9,8 @@ import javax.jcr.RepositoryException;
 import nl.hsleiden.beans.mixin.RelatedEventsMixin;
 import nl.hsleiden.componentsinfo.RelatedEventsInfo;
 import nl.hsleiden.componentsinfo.RelatedItemsInfo;
-import nl.hsleiden.utils.HslUtils;
 import nl.hsleiden.utils.Constants.WidgetConstants;
+import nl.hsleiden.utils.HslUtils;
 
 import org.hippoecm.hst.content.beans.query.HstQuery;
 import org.hippoecm.hst.content.beans.query.exceptions.QueryException;
@@ -19,6 +19,8 @@ import org.hippoecm.hst.core.component.HstComponentException;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
 import org.hippoecm.hst.core.parameters.ParametersInfo;
+
+import com.tdclighthouse.prototype.utils.BeanUtils;
 
 @ParametersInfo(type = RelatedEventsInfo.class)
 public class RelatedEvents extends RelatedItems {
@@ -41,7 +43,7 @@ public class RelatedEvents extends RelatedItems {
         try {
             RelatedItemsInfo parametersInfo = this.<RelatedEventsInfo> getComponentParametersInfo(request);
             if (parametersInfo.getUseMixin()) {
-                HippoBean proxy = getMixinProxy(request.getRequestContext().getContentBean());
+                HippoBean proxy = BeanUtils.getMixinProxy(request.getRequestContext().getContentBean());
                 if (proxy instanceof RelatedEventsMixin) {
                     parametersInfo = ((RelatedEventsMixin) proxy).getRelatedEventsCompoundMixin();
                 }
