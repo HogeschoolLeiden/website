@@ -39,7 +39,7 @@ public class Glue {
         String url = baseUrl + page + "?" + queryString;
         for (WebDriver driver : driversManager.getDrivers()) {
             driver.get(url);
-            Assert.assertEquals(text, driver.findElement(By.cssSelector("h2")).getText());
+            Assert.assertEquals(text, driver.findElement(By.cssSelector("h1")).getText());
         }
 
     }

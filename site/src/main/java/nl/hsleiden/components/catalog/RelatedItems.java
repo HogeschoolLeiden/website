@@ -32,6 +32,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.tdclighthouse.prototype.components.AjaxEnabledComponent;
+import com.tdclighthouse.prototype.utils.BeanUtils;
 
 @ParametersInfo(type = RelatedItemsInfo.class)
 public abstract class RelatedItems extends AjaxEnabledComponent {
@@ -43,7 +44,7 @@ public abstract class RelatedItems extends AjaxEnabledComponent {
         try {
             RelatedItemsInfo parametersInfo = this.<RelatedItemsInfo> getComponentParametersInfo(request);
             if (parametersInfo.getUseMixin()) {
-                HippoBean proxy = getMixinProxy(request.getRequestContext().getContentBean());
+                HippoBean proxy = BeanUtils.getMixinProxy(request.getRequestContext().getContentBean());
                 if (proxy instanceof RelatedItemsMixin) {
                     parametersInfo = ((RelatedItemsMixin) proxy).getRelatedCompoundMixin();
                 }
