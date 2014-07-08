@@ -16,11 +16,17 @@
     <article class="well well-large">
       <hst:cmseditlink hippobean="${document}"/>
       <header>
-        <h2>${fn:escapeXml(document.title)}</h2>
-       <%--  <h3>${fn:escapeXml(document.subtitle)}</h3> --%>
-        <p>${fn:escapeXml(document.introduction)}</p> 
+        
+        <c:if test="${hst:isReadable(document, 'title') }">
+          <h1>${fn:escapeXml(document.title)}</h1>
+        </c:if>
+        <c:if test="${hst:isReadable(document, 'subtitle') }">
+          <h2>${fn:escapeXml(document.subtitle)}</h2>
+        </c:if>
+        <c:if test="${hst:isReadable(document, 'introduction') }">
+          <p>${fn:escapeXml(document.introduction)}</p> 
+        </c:if>
       </header>
-      <%-- <hst:html hippohtml="${document.html}"/> --%>
     </article>
 
   </c:otherwise>

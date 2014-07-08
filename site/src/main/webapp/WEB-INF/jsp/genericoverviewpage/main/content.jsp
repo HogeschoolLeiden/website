@@ -8,15 +8,7 @@
 <%@ taglib prefix="opw" uri="http://open-web.nl/hippo/prototype"%>
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 
-<c:if test="${tag:isSubclassOfWebPage(document)}">
-    <div class="inner">
-      <c:if test="${not empty document.introduction }">
-        <p class="intro">
-          <c:out value="${document.introduction }" />
-        </p>
-      </c:if>
-    </div>
-</c:if>
+<tag:overviewIntrodution doc="${document }"></tag:overviewIntrodution>
         
 <c:forEach var="item" items="${items}">
     <hst:link var="link" hippobean="${item}"/>

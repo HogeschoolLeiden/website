@@ -7,25 +7,20 @@
 <%@ taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml"%>
 <%@ taglib prefix="opw" uri="http://open-web.nl/hippo/prototype"%>
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
+  
+<hst:headContribution category="scripts">
+  <script src="<hst:link path="/js/accordian.js"/>" type="text/javascript"></script>
+</hst:headContribution>
 
-<c:if test="${tag:isSubclassOfWebPage(document)}">
-    <div class="inner">
-      <c:if test="${not empty document.introduction }">
-        <p class="intro">
-          <c:out value="${document.introduction }" />
-        </p>
-      </c:if>
-    </div>
-</c:if>
-        
+<tag:overviewIntrodution doc="${document}" ></tag:overviewIntrodution>
+
 <c:forEach var="item" items="${items}">
-    <hst:link var="link" hippobean="${item}"/>
     <article class="well well-large">
         <hst:cmseditlink hippobean="${item}"/>
-        <h3><a href="${link}">${fn:escapeXml(item.title)}</a></h3>
+        <h3>${fn:escapeXml(item.title)}</h3>
         <c:if test="${hst:isReadable(item, 'releaseDate.time')}">
             <p class="badge badge-info">
-              <c:out value="use property for COLLAPSE / EXPAND link"></c:out>
+              <c:out value=" "></c:out>
             </p>
         </c:if>
         <tag:flexibleblock content="${item.flexibleblock }"/>
