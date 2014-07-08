@@ -11,6 +11,7 @@
 
 <c:if test="${not empty content.url}">
   <div class="catalog video">
+    <div class="align center">
     <object class="youtube">
       <param name="movie" value="${content.url}"/>
         <param name="allowFullScreen" value="${content.youtubePlayerParameters.allowFullScreen}"/>
@@ -19,6 +20,7 @@
             allowfullscreen="${content.youtubePlayerParameters.allowFullScreen}"
             allowscriptaccess="always" style="width: 605px; height: 300px;"/> 
     </object>
+    </div>
   </div>
 </c:if>
 
