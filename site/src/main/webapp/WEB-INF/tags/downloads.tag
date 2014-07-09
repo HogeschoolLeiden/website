@@ -8,6 +8,8 @@
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 <%@ taglib prefix="opw" uri="http://open-web.nl/hippo/prototype"%>
 
+<hst:setBundle basename="nl.hsleiden.general.Messages"/>
+
 <%@ attribute name="content" rtexprvalue="true" required="true" type="hslbeans.Documents" %>
 
 <c:if test="${hst:isReadable(content, 'asset') && not empty content.asset[0] }">

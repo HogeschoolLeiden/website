@@ -7,6 +7,8 @@
 <%@ taglib prefix="opw" uri="http://open-web.nl/hippo/prototype"%>
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 
+<hst:setBundle basename="nl.hsleiden.sharebox.Messages"/>
+
 <%@ attribute name="document" required="true" type="org.hippoecm.hst.content.beans.standard.HippoBean" rtexprvalue="true"%>
 
 <fmt:message key="page.facebook"  var="pageFacebook"/>

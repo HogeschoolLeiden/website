@@ -8,6 +8,8 @@
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 <%@ taglib prefix="opw" uri="http://open-web.nl/hippo/prototype"%>
 
+<hst:setBundle basename="nl.hsleiden.general.Messages"/>
+
 <hst:element var="headTitle" name="title">
    <fmt:message key="page.not.found"/>
  </hst:element>
