@@ -9,7 +9,7 @@
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 <%@ taglib prefix='opw' uri="http://open-web.nl/hippo/prototype"%>
 
-<hst:setBundle basename="nl.hsleiden.channelmanager.Messages"/>
+<hst:setBundle basename="nl.hsleiden.channelmanager.Messages, nl.hsleiden.widget.Messages"/>
 
 <div class="catalog relatedNews">
   <hst:defineObjects />
@@ -30,13 +30,12 @@
           <c:if test="${hst:isReadable(item, 'image')}">
             <c:if test="${ not empty item.image.link.deref }">
               <%-- Image size to be defined later --%>
-              <hst:link var="image"
-                hippobean="${item.image.link.deref.listSmallImage }" />
+              <hst:link var="image" hippobean="${item.image.link.deref.listSmallImage }" />
               <img alt="${item.title }" src="${image }" />
             </c:if>
           </c:if>
           <div class="date">
-            <fmt:formatDate value="${item.releaseDate.time}" type="Date"
+            <fmt:formatDate value="${item.eventDate.time}" type="Date"
               pattern="dd.MM.yyyy" />
           </div>
         </div>
@@ -75,7 +74,7 @@
                   <c:out value="${model.info.overviewLinkLabel }" escapeXml="true" />
                 </c:when>
                 <c:otherwise>
-                  <c:out value="Overview" escapeXml="true" />
+                  <fmt:message key="overiewlink.default.label" />
                 </c:otherwise>
               </c:choose>
             </span>

@@ -9,11 +9,13 @@
 <%--@elvariable id="ef_errors" type="java.util.List"--%>
 <%--@elvariable id="error" type="org.onehippo.forge.easyforms.model.ErrorMessage"--%>
 
+<hst:setBundle basename="nl.hsleiden.channelmanager.Messages, nl.hsleiden.widget.Messages"/>
+
 <hst:defineObjects />
 <c:set var="isCmsRequest" value="${hstRequest.requestContext.cmsRequest}" />
 
 <c:if test="${fn:length(form.fields)==0 and isCmsRequest}">
-  <p class="error-message"> <c:out value="${webMasterMessage}"/> </p>
+  <p class="error-message"><fmt:message key="${webMasterMessage}" ></fmt:message></p>
 </c:if>
   
 <c:if test="${fn:length(form.fields)>0}">

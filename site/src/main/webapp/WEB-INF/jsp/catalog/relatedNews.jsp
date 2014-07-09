@@ -9,7 +9,7 @@
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 <%@ taglib prefix='opw' uri="http://open-web.nl/hippo/prototype"%>
 
-<hst:setBundle basename="nl.hsleiden.sharebox.Messages"/>
+<hst:setBundle basename="nl.hsleiden.channelmanager.Messages, nl.hsleiden.widget.Messages"/>
 
 <div class="catalog relatedNews">
   <hst:defineObjects />
@@ -36,7 +36,7 @@
             </c:if>
           </c:if>
           <div class="date">
-            <fmt:formatDate value="${item.eventDate.time}" type="Date"
+            <fmt:formatDate value="${item.releaseDate.time}" type="Date"
               pattern="dd.MM.yyyy" />
           </div>
         </div>
@@ -75,7 +75,7 @@
                   <c:out value="${model.info.overviewLinkLabel }" escapeXml="true" />
                 </c:when>
                 <c:otherwise>
-                  <c:out value="Overview" escapeXml="true" />
+                  <fmt:message key="overiewlink.default.label" />
                 </c:otherwise>
               </c:choose>
             </span>

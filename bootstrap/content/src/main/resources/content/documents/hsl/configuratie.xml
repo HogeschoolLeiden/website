@@ -54,14 +54,25 @@
       <sv:value>Configuratie</sv:value>
     </sv:property>
   </sv:node>
+  <sv:node sv:name="hippo:translation">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hippo:translation</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:language" sv:type="String">
+      <sv:value/>
+    </sv:property>
+    <sv:property sv:name="hippo:message" sv:type="String">
+      <sv:value>Configuratie</sv:value>
+    </sv:property>
+  </sv:node>
   <sv:node sv:name="valuelists">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hippostd:folder</sv:value>
     </sv:property>
     <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
       <sv:value>hippotranslation:translated</sv:value>
-      <sv:value>hippo:translated</sv:value>
       <sv:value>mix:versionable</sv:value>
+      <sv:value>hippo:translated</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>0710213c-430e-44b9-871c-dabb4f22d510</sv:value>
@@ -545,8 +556,8 @@
     </sv:property>
     <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
       <sv:value>hippotranslation:translated</sv:value>
-      <sv:value>hippo:translated</sv:value>
       <sv:value>mix:versionable</sv:value>
+      <sv:value>hippo:translated</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>9d40f53f-c9e7-4a90-9a4f-706c3396eaf5</sv:value>
@@ -1591,6 +1602,209 @@
           <sv:value/>
           <sv:value>There is no form connected to this page or this document</sv:value>
           <sv:value>No root folder has been selected neither in the widget configuration nor in the mixin. No items will be displayed.</sv:value>
+        </sv:property>
+      </sv:node>
+    </sv:node>
+    <sv:node sv:name="widget-messages">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hippo:handle</sv:value>
+      </sv:property>
+      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+        <sv:value>mix:referenceable</sv:value>
+        <sv:value>hippo:translated</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>6b86b068-0f6a-444b-864e-834683405e1e</sv:value>
+      </sv:property>
+      <sv:node sv:name="widget-messages">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>resourcebundle:resourcebundle</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+          <sv:value>mix:referenceable</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>9e6e3a57-5e3a-4411-a73a-db99a496210e</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String"/>
+        <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+          <sv:value>configuratie/resource-bundles/widget-messages/widget-messages[2]</sv:value>
+          <sv:value>configuratie/resource-bundles/widget-messages/widget-messages[3]</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostd:state" sv:type="String">
+          <sv:value>draft</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+          <sv:value>live</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+          <sv:value>boogaard.joris</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+          <sv:value>2014-07-09T11:47:12.308+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+          <sv:value>2014-07-09T11:47:13.241+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+          <sv:value>boogaard.joris</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippotranslation:id" sv:type="String">
+          <sv:value>a624d81b-1d29-4fa5-a54c-22baa0004a2a</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippotranslation:locale" sv:type="String">
+          <sv:value>nl</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="resourcebundle:descriptions" sv:type="String">
+          <sv:value>Default value for label of the overview links in the widgets</sv:value>
+        </sv:property>
+        <sv:property sv:name="resourcebundle:id" sv:type="String">
+          <sv:value>nl.hsleiden.widget.Messages</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="resourcebundle:keys" sv:type="String">
+          <sv:value>overiewlink.default.label</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="resourcebundle:messages" sv:type="String">
+          <sv:value>Overview</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="resourcebundle:messages_en" sv:type="String">
+          <sv:value>Overview</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="resourcebundle:messages_nl" sv:type="String">
+          <sv:value>Overview</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="hippo:translation">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hippo:translation</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:language" sv:type="String">
+          <sv:value/>
+        </sv:property>
+        <sv:property sv:name="hippo:message" sv:type="String">
+          <sv:value>widget messages</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="widget-messages">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>resourcebundle:resourcebundle</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+          <sv:value>mix:referenceable</sv:value>
+          <sv:value>mix:versionable</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>4c56b761-b681-4bf4-b23c-d38f6325c083</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
+          <sv:value>preview</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+          <sv:value>configuratie/resource-bundles/widget-messages/widget-messages[3]</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostd:state" sv:type="String">
+          <sv:value>unpublished</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+          <sv:value>live</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+          <sv:value>boogaard.joris</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+          <sv:value>2014-07-09T11:47:12.308+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+          <sv:value>2014-07-09T11:48:56.249+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+          <sv:value>boogaard.joris</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippotranslation:id" sv:type="String">
+          <sv:value>a624d81b-1d29-4fa5-a54c-22baa0004a2a</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippotranslation:locale" sv:type="String">
+          <sv:value>nl</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="resourcebundle:descriptions" sv:type="String">
+          <sv:value>Default value for label of the overview links in the widgets</sv:value>
+        </sv:property>
+        <sv:property sv:name="resourcebundle:id" sv:type="String">
+          <sv:value>nl.hsleiden.widget.Messages</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="resourcebundle:keys" sv:type="String">
+          <sv:value>overiewlink.default.label</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="resourcebundle:messages" sv:type="String">
+          <sv:value>Overview</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="resourcebundle:messages_en" sv:type="String">
+          <sv:value>Overview</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="resourcebundle:messages_nl" sv:type="String">
+          <sv:value>Overview</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="widget-messages">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>resourcebundle:resourcebundle</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+          <sv:value>mix:referenceable</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>6e159050-d0d7-41e2-b49b-3be83c8137b4</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
+          <sv:value>live</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+          <sv:value>configuratie/resource-bundles/widget-messages/widget-messages[2]</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostd:state" sv:type="String">
+          <sv:value>published</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+          <sv:value>live</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+          <sv:value>boogaard.joris</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+          <sv:value>2014-07-09T11:47:12.308+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+          <sv:value>2014-07-09T11:48:56.249+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+          <sv:value>boogaard.joris</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
+          <sv:value>2014-07-09T11:48:58.881+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippotranslation:id" sv:type="String">
+          <sv:value>a624d81b-1d29-4fa5-a54c-22baa0004a2a</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippotranslation:locale" sv:type="String">
+          <sv:value>nl</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="resourcebundle:descriptions" sv:type="String">
+          <sv:value>Default value for label of the overview links in the widgets</sv:value>
+        </sv:property>
+        <sv:property sv:name="resourcebundle:id" sv:type="String">
+          <sv:value>nl.hsleiden.widget.Messages</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="resourcebundle:keys" sv:type="String">
+          <sv:value>overiewlink.default.label</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="resourcebundle:messages" sv:type="String">
+          <sv:value>Overview</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="resourcebundle:messages_en" sv:type="String">
+          <sv:value>Overview</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="resourcebundle:messages_nl" sv:type="String">
+          <sv:value>Overview</sv:value>
         </sv:property>
       </sv:node>
     </sv:node>
