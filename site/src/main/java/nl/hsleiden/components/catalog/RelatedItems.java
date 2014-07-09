@@ -58,9 +58,9 @@ public abstract class RelatedItems extends AjaxEnabledComponent {
     protected Map<String, Object> populateModel(HstRequest request, RelatedItemsInfo parametersInfo) {
         Map<String, Object> model = new HashMap<String, Object>();
 
-            model.put("info", parametersInfo);
+        model.put("info", parametersInfo);
         addItemsToModel(request, model, parametersInfo);
-            addOverviewLinkToModel(request, model, parametersInfo);
+        addOverviewLinkToModel(request, model, parametersInfo);
 
         return model;
     }
@@ -69,15 +69,15 @@ public abstract class RelatedItems extends AjaxEnabledComponent {
         try {
             HstQuery query = getQuery(request, parametersInfo);
             if (query != null && request.getAttribute(WidgetConstants.WEB_MASTER_MESSAGE) == null) {
-                LOG.warn("EXECUTING QUERY: " + query.getQueryAsString(false));
+                LOG.debug("EXECUTING QUERY: " + query.getQueryAsString(false));
                 HstQueryResult queryResult = query.execute();
-                LOG.warn("QUERY RESULT SIZE: " + queryResult.getSize());
+                LOG.debug("QUERY RESULT SIZE: " + queryResult.getSize());
                 List<HippoBean> items = getItems(queryResult);
-                if(!items.isEmpty()){
-                model.put(Attributes.ITEMS, items);
-                }else{
+                if (!items.isEmpty()) {
+                    model.put(Attributes.ITEMS, items);
+                } else {
                     request.setAttribute(WidgetConstants.WEB_MASTER_MESSAGE, "webmaster.noitems.message");
-            }
+                }
             }
         } catch (QueryException e) {
             throw new HstComponentException(e.getMessage(), e);
@@ -132,8 +132,7 @@ public abstract class RelatedItems extends AjaxEnabledComponent {
             if (contentBean instanceof ArticlePage) {
                 addFiltering(query, info, (ArticlePage) contentBean);
             } else {
-                request.setAttribute(WidgetConstants.WEB_MASTER_MESSAGE,
-                        "webmaster.nofiltering.message");
+                request.setAttribute(WidgetConstants.WEB_MASTER_MESSAGE, "webmaster.nofiltering.message");
             }
         }
 
