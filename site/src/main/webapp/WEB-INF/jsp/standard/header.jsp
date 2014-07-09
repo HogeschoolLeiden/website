@@ -7,6 +7,8 @@
 <%@ taglib prefix="hst" uri="http://www.hippoecm.org/jsp/hst/core"%>
 <%@ taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml"%>
 
+<hst:setBundle basename="nl.hsleiden.general.Messages"/>
+
 <div class="container-fluid">
   <div class="row-fluid">
     <div class="header span8">
@@ -34,14 +36,14 @@
             </div>
             <div class="navbar nav pull-right h-menu">
             <hst:include ref="serviceMenu" />
-				<%-- <hst:include ref="langaugeswitch" /> 
-				<fmt:message var="submitText" key="search.submit.text" /> <hst:link var="link" path="/search" />
+				<%-- <hst:include ref="langaugeswitch" /> --%> 
+				<fmt:message var="submitText" key="search.submit.text" /> <hst:link var="link" siteMapItemRefId="search"/>
 				<form class="navbar-search form-search" action="${link}" method="get">
 					<p>
 						<input type="text" name="q" class="search-query input-xlarge" placeholder="${submitText}" required="required" />
 						<button class="btn btn-primary inline" type="submit" value="${submitText}">${submitText}</button>
 					</p>
-				</form> --%>
+				</form> 
             </div>
 
             <div class="nav-collapse">
