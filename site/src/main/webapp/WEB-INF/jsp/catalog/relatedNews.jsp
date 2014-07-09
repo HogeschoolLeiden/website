@@ -26,20 +26,12 @@
     <%-- Items in-inlined for better performance --%>
     <c:forEach var="item" items="${model.items}" varStatus="zebra">
       <div class="item-with-image">
-        <div class="image-space">
-          <c:if test="${hst:isReadable(item, 'image')}">
-            <c:if test="${ not empty item.image.link.deref }">
-              <%-- Image size to be defined later --%>
-              <hst:link var="image"
-                hippobean="${item.image.link.deref.listSmallImage }" />
+          <c:if test="${not empty tag:getFirstFlexibleBlockImage(item) }">
+            <div class="image-space">
+              <hst:link var="image" hippobean="${tag:getFirstFlexibleBlockImage(item).image.listImageMedium }" />
               <img alt="${item.title }" src="${image }" />
-            </c:if>
+            </div>
           </c:if>
-          <div class="date">
-            <fmt:formatDate value="${item.releaseDate.time}" type="Date"
-              pattern="dd.MM.yyyy" />
-          </div>
-        </div>
         <div class="itemContent">
           <div class=itemTitle>
             <hst:link hippobean="${item }" var="link" />
@@ -47,6 +39,10 @@
               <c:out value="${item.title }" escapeXml="true" />
             </c:set>
             <a href="${link }" title="${title }">${title }</a>
+          </div>
+
+          <div class="date">
+            <fmt:formatDate value="${item.releaseDate.time}" type="Date" pattern="dd.MM.yyyy" />
           </div>
 
           <c:if test="${not empty item.introduction }">
@@ -61,7 +57,7 @@
             </div>
           </c:if>
         </div>
-        <div class="clear-both"></div>
+        <div class="clear"></div>
       </div>
     </c:forEach>
 

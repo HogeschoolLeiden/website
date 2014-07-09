@@ -54,8 +54,7 @@ public class FormComponent extends FormStorageComponent {
         FormComponentInfo parametersInfo = this.<FormComponentInfo> getComponentParametersInfo(request);
         try {
             if (parametersInfo.getUseMixin()) {
-                HippoBean proxy;
-                proxy = dynamicProxyFactory.getProxy(request.getRequestContext().getContentBean());
+                HippoBean proxy = dynamicProxyFactory.getProxy(request.getRequestContext().getContentBean());
 
                 if (proxy instanceof FormComponentMixin) {
                     parametersInfo = ((FormComponentMixin) proxy).getFormCompoundMixin();

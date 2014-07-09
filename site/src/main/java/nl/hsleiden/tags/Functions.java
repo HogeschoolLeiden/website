@@ -1,6 +1,10 @@
 package nl.hsleiden.tags;
 
+import hslbeans.ArticlePage;
+import hslbeans.Image;
 import hslbeans.WebPage;
+
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -33,10 +37,21 @@ public class Functions {
         }
         return result;
     }
-    
+
     public static String getAssetTitle(HippoResource asset) {
         String result = asset.getParentBean().getPath();
-        result = result.substring(result.lastIndexOf("/")+1);
+        result = result.substring(result.lastIndexOf("/") + 1);
+        return result;
+    }
+
+    public static HippoBean getFirstFlexibleBlockImage(ArticlePage bean) {
+        HippoBean result = null;
+        List<HippoBean> flexibleblock = bean.getFlexibleblock();
+        for (HippoBean hippoBean : flexibleblock) {
+            if (hippoBean instanceof Image && ((Image) hippoBean).getImage()!=null) {
+                result = hippoBean;
+            }
+        }
         return result;
     }
 }
