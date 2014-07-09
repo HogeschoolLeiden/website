@@ -1,19 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="formulieren-bedank-paginas">
+<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="formulieren-bedank-paginas">
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>hippostd:folder</sv:value>
   </sv:property>
-  <sv:property sv:multiple="true" sv:name="jcr:mixinTypes"
-    sv:type="Name">
+  <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
     <sv:value>hippotranslation:translated</sv:value>
-    <sv:value>mix:versionable</sv:value>
     <sv:value>hippo:translated</sv:value>
+    <sv:value>mix:versionable</sv:value>
   </sv:property>
   <sv:property sv:name="jcr:uuid" sv:type="String">
     <sv:value>be20efdd-e2ab-425c-878b-bb6374499ac4</sv:value>
   </sv:property>
-  <sv:property sv:multiple="true" sv:name="hippostd:foldertype"
-    sv:type="String">
+  <sv:property sv:name="hippostd:foldertype" sv:type="String" sv:multiple="true">
     <sv:value>new-translated-folder</sv:value>
     <sv:value>new-document</sv:value>
   </sv:property>
@@ -28,7 +25,7 @@
       <sv:value>hippo:translation</sv:value>
     </sv:property>
     <sv:property sv:name="hippo:language" sv:type="String">
-      <sv:value />
+      <sv:value/>
     </sv:property>
     <sv:property sv:name="hippo:message" sv:type="String">
       <sv:value>Formulieren Bedank Paginas</sv:value>
@@ -38,8 +35,7 @@
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hippo:handle</sv:value>
     </sv:property>
-    <sv:property sv:multiple="true" sv:name="jcr:mixinTypes"
-      sv:type="Name">
+    <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
       <sv:value>mix:referenceable</sv:value>
       <sv:value>hippo:translated</sv:value>
     </sv:property>
@@ -51,7 +47,7 @@
         <sv:value>hippo:translation</sv:value>
       </sv:property>
       <sv:property sv:name="hippo:language" sv:type="String">
-        <sv:value />
+        <sv:value/>
       </sv:property>
       <sv:property sv:name="hippo:message" sv:type="String">
         <sv:value>Bedank pagina</sv:value>
@@ -61,21 +57,16 @@
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hsl:ArticlePage</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes"
-        sv:type="Name">
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
         <sv:value>mix:referenceable</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
         <sv:value>ad1ec4d0-0356-489e-9584-5d22ef2e6f14</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hippo:availability"
-        sv:type="String" />
-      <sv:property sv:name="hippo:related___pathreference"
-        sv:type="String">
-        <sv:value>hsl/pages/formulieren-bedank-paginas/bedank-pagina/bedank-pagina[3]
-        </sv:value>
-        <sv:value>hsl/pages/formulieren-bedank-paginas/bedank-pagina/bedank-pagina[2]
-        </sv:value>
+      <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true"/>
+      <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+        <sv:value>formulieren-bedank-paginas/bedank-pagina/bedank-pagina[3]</sv:value>
+        <sv:value>formulieren-bedank-paginas/bedank-pagina/bedank-pagina[2]</sv:value>
       </sv:property>
       <sv:property sv:name="hippostd:state" sv:type="String">
         <sv:value>draft</sv:value>
@@ -83,27 +74,22 @@
       <sv:property sv:name="hippostd:stateSummary" sv:type="String">
         <sv:value>live</sv:value>
       </sv:property>
-      <sv:property sv:name="hippostdpubwf:createdBy"
-        sv:type="String">
+      <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
         <sv:value>admin</sv:value>
       </sv:property>
-      <sv:property sv:name="hippostdpubwf:creationDate"
-        sv:type="Date">
+      <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
         <sv:value>2014-06-26T12:50:23.522+02:00</sv:value>
       </sv:property>
-      <sv:property sv:name="hippostdpubwf:lastModificationDate"
-        sv:type="Date">
-        <sv:value>2014-06-26T12:51:25.689+02:00</sv:value>
+      <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+        <sv:value>2014-07-09T13:56:09.748+02:00</sv:value>
       </sv:property>
-      <sv:property sv:name="hippostdpubwf:lastModifiedBy"
-        sv:type="String">
+      <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
         <sv:value>admin</sv:value>
       </sv:property>
       <sv:property sv:name="hippotranslation:id" sv:type="String">
         <sv:value>b25186d4-1941-4771-bc12-79626f364b16</sv:value>
       </sv:property>
-      <sv:property sv:name="hippotranslation:locale"
-        sv:type="String">
+      <sv:property sv:name="hippotranslation:locale" sv:type="String">
         <sv:value>nl</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:browserTitle" sv:type="String">
@@ -119,7 +105,7 @@
         <sv:value>true</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:introduction" sv:type="String">
-        <sv:value>form submission thank you page form submission thank
+        <sv:value>form submission thank you page form submission thank&#13;
           you page form submission thank you page</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:keywords" sv:type="String">
@@ -128,15 +114,13 @@
       <sv:property sv:name="hsl:releaseDate" sv:type="Date">
         <sv:value>2014-06-26T12:50:00.000+02:00</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hsl:subjecttags"
-        sv:type="String">
+      <sv:property sv:name="hsl:subjecttags" sv:type="String" sv:multiple="true">
         <sv:value>hl-media</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:subtitle" sv:type="String">
         <sv:value>form submission thank you page</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hsl:thematags"
-        sv:type="String">
+      <sv:property sv:name="hsl:thematags" sv:type="String" sv:multiple="true">
         <sv:value>gezondheidszorg</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:title" sv:type="String">
@@ -147,36 +131,29 @@
           <sv:value>hippogallerypicker:imagelink</sv:value>
         </sv:property>
         <sv:property sv:name="hippo:docbase" sv:type="String">
-          <sv:value>b1265697-ea19-412d-aba6-9f0940f8b755</sv:value>
+          <sv:value>8d154015-2946-4d43-9003-ca8a31640797</sv:value>
         </sv:property>
-        <sv:property sv:multiple="true" sv:name="hippo:facets"
-          sv:type="String" />
-        <sv:property sv:multiple="true" sv:name="hippo:modes"
-          sv:type="String" />
-        <sv:property sv:multiple="true" sv:name="hippo:values"
-          sv:type="String" />
+        <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
       </sv:node>
     </sv:node>
     <sv:node sv:name="bedank-pagina">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hsl:ArticlePage</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes"
-        sv:type="Name">
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
         <sv:value>mix:referenceable</sv:value>
         <sv:value>mix:versionable</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
         <sv:value>ab3e40f0-661d-4a7c-b2a9-8ff50814f802</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hippo:availability"
-        sv:type="String">
+      <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
         <sv:value>preview</sv:value>
       </sv:property>
-      <sv:property sv:name="hippo:related___pathreference"
-        sv:type="String">
-        <sv:value>hsl/pages/formulieren-bedank-paginas/bedank-pagina/bedank-pagina[3]
-        </sv:value>
+      <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+        <sv:value>formulieren-bedank-paginas/bedank-pagina/bedank-pagina[3]</sv:value>
       </sv:property>
       <sv:property sv:name="hippostd:state" sv:type="String">
         <sv:value>unpublished</sv:value>
@@ -184,27 +161,22 @@
       <sv:property sv:name="hippostd:stateSummary" sv:type="String">
         <sv:value>live</sv:value>
       </sv:property>
-      <sv:property sv:name="hippostdpubwf:createdBy"
-        sv:type="String">
+      <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
         <sv:value>admin</sv:value>
       </sv:property>
-      <sv:property sv:name="hippostdpubwf:creationDate"
-        sv:type="Date">
+      <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
         <sv:value>2014-06-26T12:50:23.522+02:00</sv:value>
       </sv:property>
-      <sv:property sv:name="hippostdpubwf:lastModificationDate"
-        sv:type="Date">
-        <sv:value>2014-06-26T12:51:28.140+02:00</sv:value>
+      <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+        <sv:value>2014-07-09T13:56:16.618+02:00</sv:value>
       </sv:property>
-      <sv:property sv:name="hippostdpubwf:lastModifiedBy"
-        sv:type="String">
+      <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
         <sv:value>admin</sv:value>
       </sv:property>
       <sv:property sv:name="hippotranslation:id" sv:type="String">
         <sv:value>b25186d4-1941-4771-bc12-79626f364b16</sv:value>
       </sv:property>
-      <sv:property sv:name="hippotranslation:locale"
-        sv:type="String">
+      <sv:property sv:name="hippotranslation:locale" sv:type="String">
         <sv:value>nl</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:browserTitle" sv:type="String">
@@ -220,7 +192,7 @@
         <sv:value>true</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:introduction" sv:type="String">
-        <sv:value>form submission thank you page form submission thank
+        <sv:value>form submission thank you page form submission thank&#13;
           you page form submission thank you page</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:keywords" sv:type="String">
@@ -229,15 +201,13 @@
       <sv:property sv:name="hsl:releaseDate" sv:type="Date">
         <sv:value>2014-06-26T12:50:00.000+02:00</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hsl:subjecttags"
-        sv:type="String">
+      <sv:property sv:name="hsl:subjecttags" sv:type="String" sv:multiple="true">
         <sv:value>hl-media</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:subtitle" sv:type="String">
         <sv:value>form submission thank you page</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hsl:thematags"
-        sv:type="String">
+      <sv:property sv:name="hsl:thematags" sv:type="String" sv:multiple="true">
         <sv:value>gezondheidszorg</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:title" sv:type="String">
@@ -248,35 +218,28 @@
           <sv:value>hippogallerypicker:imagelink</sv:value>
         </sv:property>
         <sv:property sv:name="hippo:docbase" sv:type="String">
-          <sv:value>b1265697-ea19-412d-aba6-9f0940f8b755</sv:value>
+          <sv:value>8d154015-2946-4d43-9003-ca8a31640797</sv:value>
         </sv:property>
-        <sv:property sv:multiple="true" sv:name="hippo:facets"
-          sv:type="String" />
-        <sv:property sv:multiple="true" sv:name="hippo:modes"
-          sv:type="String" />
-        <sv:property sv:multiple="true" sv:name="hippo:values"
-          sv:type="String" />
+        <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
       </sv:node>
     </sv:node>
     <sv:node sv:name="bedank-pagina">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hsl:ArticlePage</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes"
-        sv:type="Name">
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
         <sv:value>mix:referenceable</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
         <sv:value>819fa66b-f54d-4e53-a187-af79ce2f003d</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hippo:availability"
-        sv:type="String">
+      <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
         <sv:value>live</sv:value>
       </sv:property>
-      <sv:property sv:name="hippo:related___pathreference"
-        sv:type="String">
-        <sv:value>hsl/pages/formulieren-bedank-paginas/bedank-pagina/bedank-pagina[2]
-        </sv:value>
+      <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+        <sv:value>formulieren-bedank-paginas/bedank-pagina/bedank-pagina[2]</sv:value>
       </sv:property>
       <sv:property sv:name="hippostd:state" sv:type="String">
         <sv:value>published</sv:value>
@@ -284,31 +247,25 @@
       <sv:property sv:name="hippostd:stateSummary" sv:type="String">
         <sv:value>live</sv:value>
       </sv:property>
-      <sv:property sv:name="hippostdpubwf:createdBy"
-        sv:type="String">
+      <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
         <sv:value>admin</sv:value>
       </sv:property>
-      <sv:property sv:name="hippostdpubwf:creationDate"
-        sv:type="Date">
+      <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
         <sv:value>2014-06-26T12:50:23.522+02:00</sv:value>
       </sv:property>
-      <sv:property sv:name="hippostdpubwf:lastModificationDate"
-        sv:type="Date">
-        <sv:value>2014-06-26T12:51:28.140+02:00</sv:value>
+      <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+        <sv:value>2014-07-09T13:56:16.618+02:00</sv:value>
       </sv:property>
-      <sv:property sv:name="hippostdpubwf:lastModifiedBy"
-        sv:type="String">
+      <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
         <sv:value>admin</sv:value>
       </sv:property>
-      <sv:property sv:name="hippostdpubwf:publicationDate"
-        sv:type="Date">
-        <sv:value>2014-07-01T15:43:28.492+02:00</sv:value>
+      <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
+        <sv:value>2014-07-09T13:56:18.978+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippotranslation:id" sv:type="String">
         <sv:value>b25186d4-1941-4771-bc12-79626f364b16</sv:value>
       </sv:property>
-      <sv:property sv:name="hippotranslation:locale"
-        sv:type="String">
+      <sv:property sv:name="hippotranslation:locale" sv:type="String">
         <sv:value>nl</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:browserTitle" sv:type="String">
@@ -324,7 +281,7 @@
         <sv:value>true</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:introduction" sv:type="String">
-        <sv:value>form submission thank you page form submission thank
+        <sv:value>form submission thank you page form submission thank&#13;
           you page form submission thank you page</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:keywords" sv:type="String">
@@ -333,15 +290,13 @@
       <sv:property sv:name="hsl:releaseDate" sv:type="Date">
         <sv:value>2014-06-26T12:50:00.000+02:00</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hsl:subjecttags"
-        sv:type="String">
+      <sv:property sv:name="hsl:subjecttags" sv:type="String" sv:multiple="true">
         <sv:value>hl-media</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:subtitle" sv:type="String">
         <sv:value>form submission thank you page</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hsl:thematags"
-        sv:type="String">
+      <sv:property sv:name="hsl:thematags" sv:type="String" sv:multiple="true">
         <sv:value>gezondheidszorg</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:title" sv:type="String">
@@ -352,14 +307,11 @@
           <sv:value>hippogallerypicker:imagelink</sv:value>
         </sv:property>
         <sv:property sv:name="hippo:docbase" sv:type="String">
-          <sv:value>b1265697-ea19-412d-aba6-9f0940f8b755</sv:value>
+          <sv:value>8d154015-2946-4d43-9003-ca8a31640797</sv:value>
         </sv:property>
-        <sv:property sv:multiple="true" sv:name="hippo:facets"
-          sv:type="String" />
-        <sv:property sv:multiple="true" sv:name="hippo:modes"
-          sv:type="String" />
-        <sv:property sv:multiple="true" sv:name="hippo:values"
-          sv:type="String" />
+        <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
       </sv:node>
     </sv:node>
   </sv:node>
@@ -367,8 +319,7 @@
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hippo:handle</sv:value>
     </sv:property>
-    <sv:property sv:multiple="true" sv:name="jcr:mixinTypes"
-      sv:type="Name">
+    <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
       <sv:value>mix:referenceable</sv:value>
       <sv:value>hippo:translated</sv:value>
     </sv:property>
@@ -379,21 +330,16 @@
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hsl:ArticlePage</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes"
-        sv:type="Name">
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
         <sv:value>mix:referenceable</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
         <sv:value>7bbcfb04-1e4b-4543-bd6c-c1097ac451b3</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hippo:availability"
-        sv:type="String" />
-      <sv:property sv:name="hippo:related___pathreference"
-        sv:type="String">
-        <sv:value>hsl/pages/formulieren-bedank-paginas/alternative-bedank-pagina/alternative-bedank-pagina[3]
-        </sv:value>
-        <sv:value>hsl/pages/formulieren-bedank-paginas/alternative-bedank-pagina/alternative-bedank-pagina[2]
-        </sv:value>
+      <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true"/>
+      <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+        <sv:value>formulieren-bedank-paginas/alternative-bedank-pagina/alternative-bedank-pagina[3]</sv:value>
+        <sv:value>formulieren-bedank-paginas/alternative-bedank-pagina/alternative-bedank-pagina[2]</sv:value>
       </sv:property>
       <sv:property sv:name="hippostd:state" sv:type="String">
         <sv:value>draft</sv:value>
@@ -401,27 +347,22 @@
       <sv:property sv:name="hippostd:stateSummary" sv:type="String">
         <sv:value>live</sv:value>
       </sv:property>
-      <sv:property sv:name="hippostdpubwf:createdBy"
-        sv:type="String">
+      <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
         <sv:value>admin</sv:value>
       </sv:property>
-      <sv:property sv:name="hippostdpubwf:creationDate"
-        sv:type="Date">
+      <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
         <sv:value>2014-07-01T15:43:54.200+02:00</sv:value>
       </sv:property>
-      <sv:property sv:name="hippostdpubwf:lastModificationDate"
-        sv:type="Date">
-        <sv:value>2014-07-01T15:46:21.739+02:00</sv:value>
+      <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+        <sv:value>2014-07-09T13:56:21.342+02:00</sv:value>
       </sv:property>
-      <sv:property sv:name="hippostdpubwf:lastModifiedBy"
-        sv:type="String">
+      <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
         <sv:value>admin</sv:value>
       </sv:property>
       <sv:property sv:name="hippotranslation:id" sv:type="String">
         <sv:value>f491405a-2c72-4aac-bb0b-90ea3505ac1a</sv:value>
       </sv:property>
-      <sv:property sv:name="hippotranslation:locale"
-        sv:type="String">
+      <sv:property sv:name="hippotranslation:locale" sv:type="String">
         <sv:value>nl</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:browserTitle" sv:type="String">
@@ -437,12 +378,11 @@
         <sv:value>true</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:introduction" sv:type="String">
-        <sv:value>Alternative thenk you page Alternative thenk you page
-          Alternative thenk you page Alternative thenk you page&#xd;
-          &#xd;
-          Alternative thenk you page Alternative thenk you page Alternative thenk you
-          page
-        </sv:value>
+        <sv:value>Alternative thenk you page Alternative thenk you page&#13;
+          Alternative thenk you page Alternative thenk you page&#13;
+          &#13;
+          Alternative thenk you page Alternative thenk you page Alternative thenk you&#13;
+          page</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:keywords" sv:type="String">
         <sv:value>Trefwoorden Metatags</sv:value>
@@ -450,15 +390,13 @@
       <sv:property sv:name="hsl:releaseDate" sv:type="Date">
         <sv:value>2014-07-01T15:44:00.000+02:00</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hsl:subjecttags"
-        sv:type="String">
+      <sv:property sv:name="hsl:subjecttags" sv:type="String" sv:multiple="true">
         <sv:value>actueel</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:subtitle" sv:type="String">
         <sv:value>Subtitel</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hsl:thematags"
-        sv:type="String">
+      <sv:property sv:name="hsl:thematags" sv:type="String" sv:multiple="true">
         <sv:value>jeugd</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:title" sv:type="String">
@@ -469,14 +407,11 @@
           <sv:value>hippogallerypicker:imagelink</sv:value>
         </sv:property>
         <sv:property sv:name="hippo:docbase" sv:type="String">
-          <sv:value>b1265697-ea19-412d-aba6-9f0940f8b755</sv:value>
+          <sv:value>00e66dd6-aec5-44d6-bada-0534d76d1a9a</sv:value>
         </sv:property>
-        <sv:property sv:multiple="true" sv:name="hippo:facets"
-          sv:type="String" />
-        <sv:property sv:multiple="true" sv:name="hippo:modes"
-          sv:type="String" />
-        <sv:property sv:multiple="true" sv:name="hippo:values"
-          sv:type="String" />
+        <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
       </sv:node>
     </sv:node>
     <sv:node sv:name="hippo:translation">
@@ -484,7 +419,7 @@
         <sv:value>hippo:translation</sv:value>
       </sv:property>
       <sv:property sv:name="hippo:language" sv:type="String">
-        <sv:value />
+        <sv:value/>
       </sv:property>
       <sv:property sv:name="hippo:message" sv:type="String">
         <sv:value>Alternative bedank pagina</sv:value>
@@ -494,22 +429,18 @@
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hsl:ArticlePage</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes"
-        sv:type="Name">
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
         <sv:value>mix:referenceable</sv:value>
         <sv:value>mix:versionable</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
         <sv:value>86e3b9c7-4c76-49aa-9207-40d9d96372a3</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hippo:availability"
-        sv:type="String">
+      <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
         <sv:value>preview</sv:value>
       </sv:property>
-      <sv:property sv:name="hippo:related___pathreference"
-        sv:type="String">
-        <sv:value>hsl/pages/formulieren-bedank-paginas/alternative-bedank-pagina/alternative-bedank-pagina[3]
-        </sv:value>
+      <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+        <sv:value>formulieren-bedank-paginas/alternative-bedank-pagina/alternative-bedank-pagina[3]</sv:value>
       </sv:property>
       <sv:property sv:name="hippostd:state" sv:type="String">
         <sv:value>unpublished</sv:value>
@@ -517,27 +448,22 @@
       <sv:property sv:name="hippostd:stateSummary" sv:type="String">
         <sv:value>live</sv:value>
       </sv:property>
-      <sv:property sv:name="hippostdpubwf:createdBy"
-        sv:type="String">
+      <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
         <sv:value>admin</sv:value>
       </sv:property>
-      <sv:property sv:name="hippostdpubwf:creationDate"
-        sv:type="Date">
+      <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
         <sv:value>2014-07-01T15:43:54.200+02:00</sv:value>
       </sv:property>
-      <sv:property sv:name="hippostdpubwf:lastModificationDate"
-        sv:type="Date">
-        <sv:value>2014-07-01T15:47:41.994+02:00</sv:value>
+      <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+        <sv:value>2014-07-09T13:56:26.799+02:00</sv:value>
       </sv:property>
-      <sv:property sv:name="hippostdpubwf:lastModifiedBy"
-        sv:type="String">
+      <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
         <sv:value>admin</sv:value>
       </sv:property>
       <sv:property sv:name="hippotranslation:id" sv:type="String">
         <sv:value>f491405a-2c72-4aac-bb0b-90ea3505ac1a</sv:value>
       </sv:property>
-      <sv:property sv:name="hippotranslation:locale"
-        sv:type="String">
+      <sv:property sv:name="hippotranslation:locale" sv:type="String">
         <sv:value>nl</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:browserTitle" sv:type="String">
@@ -553,12 +479,11 @@
         <sv:value>true</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:introduction" sv:type="String">
-        <sv:value>Alternative thenk you page Alternative thenk you page
-          Alternative thenk you page Alternative thenk you page&#xd;
-          &#xd;
-          Alternative thenk you page Alternative thenk you page Alternative thenk you
-          page
-        </sv:value>
+        <sv:value>Alternative thenk you page Alternative thenk you page&#13;
+          Alternative thenk you page Alternative thenk you page&#13;
+          &#13;
+          Alternative thenk you page Alternative thenk you page Alternative thenk you&#13;
+          page</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:keywords" sv:type="String">
         <sv:value>Trefwoorden Metatags</sv:value>
@@ -566,15 +491,13 @@
       <sv:property sv:name="hsl:releaseDate" sv:type="Date">
         <sv:value>2014-07-01T15:44:00.000+02:00</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hsl:subjecttags"
-        sv:type="String">
+      <sv:property sv:name="hsl:subjecttags" sv:type="String" sv:multiple="true">
         <sv:value>actueel</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:subtitle" sv:type="String">
         <sv:value>Subtitel</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hsl:thematags"
-        sv:type="String">
+      <sv:property sv:name="hsl:thematags" sv:type="String" sv:multiple="true">
         <sv:value>jeugd</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:title" sv:type="String">
@@ -585,35 +508,28 @@
           <sv:value>hippogallerypicker:imagelink</sv:value>
         </sv:property>
         <sv:property sv:name="hippo:docbase" sv:type="String">
-          <sv:value>b1265697-ea19-412d-aba6-9f0940f8b755</sv:value>
+          <sv:value>00e66dd6-aec5-44d6-bada-0534d76d1a9a</sv:value>
         </sv:property>
-        <sv:property sv:multiple="true" sv:name="hippo:facets"
-          sv:type="String" />
-        <sv:property sv:multiple="true" sv:name="hippo:modes"
-          sv:type="String" />
-        <sv:property sv:multiple="true" sv:name="hippo:values"
-          sv:type="String" />
+        <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
       </sv:node>
     </sv:node>
     <sv:node sv:name="alternative-bedank-pagina">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hsl:ArticlePage</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes"
-        sv:type="Name">
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
         <sv:value>mix:referenceable</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
         <sv:value>02ec6e5f-60ac-4ff7-a726-4701ffa03fc9</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hippo:availability"
-        sv:type="String">
+      <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
         <sv:value>live</sv:value>
       </sv:property>
-      <sv:property sv:name="hippo:related___pathreference"
-        sv:type="String">
-        <sv:value>hsl/pages/formulieren-bedank-paginas/alternative-bedank-pagina/alternative-bedank-pagina[2]
-        </sv:value>
+      <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+        <sv:value>formulieren-bedank-paginas/alternative-bedank-pagina/alternative-bedank-pagina[2]</sv:value>
       </sv:property>
       <sv:property sv:name="hippostd:state" sv:type="String">
         <sv:value>published</sv:value>
@@ -621,31 +537,25 @@
       <sv:property sv:name="hippostd:stateSummary" sv:type="String">
         <sv:value>live</sv:value>
       </sv:property>
-      <sv:property sv:name="hippostdpubwf:createdBy"
-        sv:type="String">
+      <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
         <sv:value>admin</sv:value>
       </sv:property>
-      <sv:property sv:name="hippostdpubwf:creationDate"
-        sv:type="Date">
+      <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
         <sv:value>2014-07-01T15:43:54.200+02:00</sv:value>
       </sv:property>
-      <sv:property sv:name="hippostdpubwf:lastModificationDate"
-        sv:type="Date">
-        <sv:value>2014-07-01T15:47:41.994+02:00</sv:value>
+      <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+        <sv:value>2014-07-09T13:56:26.799+02:00</sv:value>
       </sv:property>
-      <sv:property sv:name="hippostdpubwf:lastModifiedBy"
-        sv:type="String">
+      <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
         <sv:value>admin</sv:value>
       </sv:property>
-      <sv:property sv:name="hippostdpubwf:publicationDate"
-        sv:type="Date">
-        <sv:value>2014-07-01T15:47:44.588+02:00</sv:value>
+      <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
+        <sv:value>2014-07-09T13:56:28.860+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippotranslation:id" sv:type="String">
         <sv:value>f491405a-2c72-4aac-bb0b-90ea3505ac1a</sv:value>
       </sv:property>
-      <sv:property sv:name="hippotranslation:locale"
-        sv:type="String">
+      <sv:property sv:name="hippotranslation:locale" sv:type="String">
         <sv:value>nl</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:browserTitle" sv:type="String">
@@ -661,12 +571,11 @@
         <sv:value>true</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:introduction" sv:type="String">
-        <sv:value>Alternative thenk you page Alternative thenk you page
-          Alternative thenk you page Alternative thenk you page&#xd;
-          &#xd;
-          Alternative thenk you page Alternative thenk you page Alternative thenk you
-          page
-        </sv:value>
+        <sv:value>Alternative thenk you page Alternative thenk you page&#13;
+          Alternative thenk you page Alternative thenk you page&#13;
+          &#13;
+          Alternative thenk you page Alternative thenk you page Alternative thenk you&#13;
+          page</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:keywords" sv:type="String">
         <sv:value>Trefwoorden Metatags</sv:value>
@@ -674,15 +583,13 @@
       <sv:property sv:name="hsl:releaseDate" sv:type="Date">
         <sv:value>2014-07-01T15:44:00.000+02:00</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hsl:subjecttags"
-        sv:type="String">
+      <sv:property sv:name="hsl:subjecttags" sv:type="String" sv:multiple="true">
         <sv:value>actueel</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:subtitle" sv:type="String">
         <sv:value>Subtitel</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hsl:thematags"
-        sv:type="String">
+      <sv:property sv:name="hsl:thematags" sv:type="String" sv:multiple="true">
         <sv:value>jeugd</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:title" sv:type="String">
@@ -693,14 +600,11 @@
           <sv:value>hippogallerypicker:imagelink</sv:value>
         </sv:property>
         <sv:property sv:name="hippo:docbase" sv:type="String">
-          <sv:value>b1265697-ea19-412d-aba6-9f0940f8b755</sv:value>
+          <sv:value>00e66dd6-aec5-44d6-bada-0534d76d1a9a</sv:value>
         </sv:property>
-        <sv:property sv:multiple="true" sv:name="hippo:facets"
-          sv:type="String" />
-        <sv:property sv:multiple="true" sv:name="hippo:modes"
-          sv:type="String" />
-        <sv:property sv:multiple="true" sv:name="hippo:values"
-          sv:type="String" />
+        <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
       </sv:node>
     </sv:node>
   </sv:node>
