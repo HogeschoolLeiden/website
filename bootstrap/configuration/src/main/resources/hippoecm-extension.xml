@@ -32,148 +32,144 @@
     <sv:property sv:name="hippo:sequence" sv:type="Double"> 
       <sv:value>30011</sv:value> 
     </sv:property> 
-  </sv:node>
-  <sv:node sv:name="website-google-analytics-configuration-properties">
-    <sv:property sv:name="jcr:primaryType" sv:type="Name">
-      <sv:value>hippo:initializeitem</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:contentresource" sv:type="String">
-      <sv:value>configuration/modules/google-analytics-configuration-properties.xml</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:contentroot" sv:type="String">
-      <sv:value>/hippo:configuration/hippo:modules</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:sequence" sv:type="Double">
-      <sv:value>910</sv:value>
-    </sv:property>
-  </sv:node>
-  
-  <!-- easy forms stuff -->
-  <sv:node sv:name="configuration-hippo-queries-templates-new-doublemail-form">
-    <sv:property sv:name="jcr:primaryType" sv:type="Name">
-      <sv:value>hippo:initializeitem</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:sequence" sv:type="Double">
-      <sv:value>30000.3</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:reloadonstartup" sv:type="Boolean">
-      <sv:value>true</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:contentresource" sv:type="String">
-      <sv:value>configuration/queries/templates/new-doublemail-form.xml</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:contentroot" sv:type="String">
-      <sv:value>/hippo:configuration/hippo:queries/hippo:templates</sv:value>
-    </sv:property>
-  </sv:node>
-  <sv:node sv:name="configuration-hippo-queries-templates-new-doublemailstore-form">
-    <sv:property sv:name="jcr:primaryType" sv:type="Name">
-      <sv:value>hippo:initializeitem</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:sequence" sv:type="Double">
-      <sv:value>30000.3</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:reloadonstartup" sv:type="Boolean">
-      <sv:value>true</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:contentresource" sv:type="String">
-      <sv:value>configuration/queries/templates/new-doublemailstore-form.xml</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:contentroot" sv:type="String">
-      <sv:value>/hippo:configuration/hippo:queries/hippo:templates</sv:value>
-    </sv:property>
-  </sv:node>
-  <sv:node sv:name="configuration-hippo-queries-templates-new-mail-form">
-    <sv:property sv:name="jcr:primaryType" sv:type="Name">
-      <sv:value>hippo:initializeitem</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:sequence" sv:type="Double">
-      <sv:value>30000.3</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:reloadonstartup" sv:type="Boolean">
-      <sv:value>true</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:contentresource" sv:type="String">
-      <sv:value>configuration/queries/templates/new-mail-form.xml</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:contentroot" sv:type="String">
-      <sv:value>/hippo:configuration/hippo:queries/hippo:templates</sv:value>
-    </sv:property>
-  </sv:node>
-  <sv:node sv:name="configuration-hippo-queries-templates-new-mailstore-form">
-    <sv:property sv:name="jcr:primaryType" sv:type="Name">
-      <sv:value>hippo:initializeitem</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:sequence" sv:type="Double">
-      <sv:value>30000.3</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:reloadonstartup" sv:type="Boolean">
-      <sv:value>true</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:contentresource" sv:type="String">
-      <sv:value>configuration/queries/templates/new-mailstore-form.xml</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:contentroot" sv:type="String">
-      <sv:value>/hippo:configuration/hippo:queries/hippo:templates</sv:value>
-    </sv:property>
-  </sv:node>
-  <sv:node sv:name="configuration-hippo-queries-templates-new-forms-folder">
-    <sv:property sv:name="jcr:primaryType" sv:type="Name">
-      <sv:value>hippo:initializeitem</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:sequence" sv:type="Double">
-      <sv:value>30000.3</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:reloadonstartup" sv:type="Boolean">
-      <sv:value>true</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:contentresource" sv:type="String">
-      <sv:value>configuration/queries/templates/new-forms-folder.xml</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:contentroot" sv:type="String">
-      <sv:value>/hippo:configuration/hippo:queries/hippo:templates</sv:value>
-    </sv:property>
-  </sv:node>
-  
-  <!-- check above for the forms -->
-  
-  <!-- folder configurations -->
-  <sv:node sv:name="configuration-hippo-queries-templates-new-faq-document">
-    <sv:property sv:name="jcr:primaryType" sv:type="Name">
-      <sv:value>hippo:initializeitem</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:sequence" sv:type="Double">
-      <sv:value>30000.3</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:reloadonstartup" sv:type="Boolean">
-      <sv:value>true</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:contentresource" sv:type="String">
-      <sv:value>configuration/queries/templates/new-faq-document.xml</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:contentroot" sv:type="String">
-      <sv:value>/hippo:configuration/hippo:queries/hippo:templates</sv:value>
-    </sv:property>
-  </sv:node>
-  <sv:node sv:name="configuration-hippo-queries-templates-new-faq-folder">
-    <sv:property sv:name="jcr:primaryType" sv:type="Name">
-      <sv:value>hippo:initializeitem</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:sequence" sv:type="Double">
-      <sv:value>30000.3</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:reloadonstartup" sv:type="Boolean">
-      <sv:value>true</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:contentresource" sv:type="String">
-      <sv:value>configuration/queries/templates/new-faq-folder.xml</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:contentroot" sv:type="String">
-      <sv:value>/hippo:configuration/hippo:queries/hippo:templates</sv:value>
-    </sv:property>
-  </sv:node>
-  <!-- /folder configurations -->
-  
+  </sv:node>  
+  <sv:node sv:name="website-google-analytics-configuration-properties"> 
+    <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
+      <sv:value>hippo:initializeitem</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentresource" sv:type="String"> 
+      <sv:value>configuration/modules/google-analytics-configuration-properties.xml</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentroot" sv:type="String"> 
+      <sv:value>/hippo:configuration/hippo:modules</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:sequence" sv:type="Double"> 
+      <sv:value>910</sv:value> 
+    </sv:property> 
+  </sv:node>  
+  <!-- easy forms stuff -->  
+  <sv:node sv:name="configuration-hippo-queries-templates-new-doublemail-form"> 
+    <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
+      <sv:value>hippo:initializeitem</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:sequence" sv:type="Double"> 
+      <sv:value>30000.3</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:reloadonstartup" sv:type="Boolean"> 
+      <sv:value>true</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentresource" sv:type="String"> 
+      <sv:value>configuration/queries/templates/new-doublemail-form.xml</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentroot" sv:type="String"> 
+      <sv:value>/hippo:configuration/hippo:queries/hippo:templates</sv:value> 
+    </sv:property> 
+  </sv:node>  
+  <sv:node sv:name="configuration-hippo-queries-templates-new-doublemailstore-form"> 
+    <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
+      <sv:value>hippo:initializeitem</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:sequence" sv:type="Double"> 
+      <sv:value>30000.3</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:reloadonstartup" sv:type="Boolean"> 
+      <sv:value>true</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentresource" sv:type="String"> 
+      <sv:value>configuration/queries/templates/new-doublemailstore-form.xml</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentroot" sv:type="String"> 
+      <sv:value>/hippo:configuration/hippo:queries/hippo:templates</sv:value> 
+    </sv:property> 
+  </sv:node>  
+  <sv:node sv:name="configuration-hippo-queries-templates-new-mail-form"> 
+    <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
+      <sv:value>hippo:initializeitem</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:sequence" sv:type="Double"> 
+      <sv:value>30000.3</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:reloadonstartup" sv:type="Boolean"> 
+      <sv:value>true</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentresource" sv:type="String"> 
+      <sv:value>configuration/queries/templates/new-mail-form.xml</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentroot" sv:type="String"> 
+      <sv:value>/hippo:configuration/hippo:queries/hippo:templates</sv:value> 
+    </sv:property> 
+  </sv:node>  
+  <sv:node sv:name="configuration-hippo-queries-templates-new-mailstore-form"> 
+    <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
+      <sv:value>hippo:initializeitem</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:sequence" sv:type="Double"> 
+      <sv:value>30000.3</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:reloadonstartup" sv:type="Boolean"> 
+      <sv:value>true</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentresource" sv:type="String"> 
+      <sv:value>configuration/queries/templates/new-mailstore-form.xml</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentroot" sv:type="String"> 
+      <sv:value>/hippo:configuration/hippo:queries/hippo:templates</sv:value> 
+    </sv:property> 
+  </sv:node>  
+  <sv:node sv:name="configuration-hippo-queries-templates-new-forms-folder"> 
+    <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
+      <sv:value>hippo:initializeitem</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:sequence" sv:type="Double"> 
+      <sv:value>30000.3</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:reloadonstartup" sv:type="Boolean"> 
+      <sv:value>true</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentresource" sv:type="String"> 
+      <sv:value>configuration/queries/templates/new-forms-folder.xml</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentroot" sv:type="String"> 
+      <sv:value>/hippo:configuration/hippo:queries/hippo:templates</sv:value> 
+    </sv:property> 
+  </sv:node>  
+  <!-- check above for the forms -->  
+  <!-- folder configurations -->  
+  <sv:node sv:name="configuration-hippo-queries-templates-new-faq-document"> 
+    <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
+      <sv:value>hippo:initializeitem</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:sequence" sv:type="Double"> 
+      <sv:value>30000.3</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:reloadonstartup" sv:type="Boolean"> 
+      <sv:value>true</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentresource" sv:type="String"> 
+      <sv:value>configuration/queries/templates/new-faq-document.xml</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentroot" sv:type="String"> 
+      <sv:value>/hippo:configuration/hippo:queries/hippo:templates</sv:value> 
+    </sv:property> 
+  </sv:node>  
+  <sv:node sv:name="configuration-hippo-queries-templates-new-faq-folder"> 
+    <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
+      <sv:value>hippo:initializeitem</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:sequence" sv:type="Double"> 
+      <sv:value>30000.3</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:reloadonstartup" sv:type="Boolean"> 
+      <sv:value>true</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentresource" sv:type="String"> 
+      <sv:value>configuration/queries/templates/new-faq-folder.xml</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentroot" sv:type="String"> 
+      <sv:value>/hippo:configuration/hippo:queries/hippo:templates</sv:value> 
+    </sv:property> 
+  </sv:node>  
+  <!-- /folder configurations -->  
   <sv:node sv:name="hsl-doublemailform-namespace"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
@@ -191,7 +187,6 @@
       <sv:value>true</sv:value> 
     </sv:property> 
   </sv:node>  
-
   <sv:node sv:name="hsl-doublemailstoreform-namespace"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
@@ -209,7 +204,6 @@
       <sv:value>true</sv:value> 
     </sv:property> 
   </sv:node>  
-  
   <sv:node sv:name="hsl-mailstoreform-namespace"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
@@ -227,7 +221,6 @@
       <sv:value>true</sv:value> 
     </sv:property> 
   </sv:node>  
-
   <sv:node sv:name="hsl-mailform-namespace"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
@@ -244,9 +237,8 @@
     <sv:property sv:name="hippo:reloadonstartup" sv:type="Boolean"> 
       <sv:value>true</sv:value> 
     </sv:property> 
-  </sv:node>    
-  <!-- /easy forms stuff -->
-    
+  </sv:node>  
+  <!-- /easy forms stuff -->  
   <!-- gallery processor configuration -->  
   <sv:node sv:name="configuration-frontend-cms-services-galleryProcessorService"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
@@ -265,7 +257,7 @@
       <sv:value>true</sv:value> 
     </sv:property> 
   </sv:node>  
-  <!-- forms perspecrive -->
+  <!-- forms perspecrive -->  
   <sv:node sv:name="configuration-frontend-cms-cms-easyforms-perspective"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
@@ -586,57 +578,57 @@
     <sv:property sv:name="hippo:reloadonstartup" sv:type="Boolean"> 
       <sv:value>true</sv:value> 
     </sv:property> 
-  </sv:node>
-  <sv:node sv:name="hsl-mixins-relateditemsmixin-namespace">
-    <sv:property sv:name="jcr:primaryType" sv:type="Name">
-      <sv:value>hippo:initializeitem</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:sequence" sv:type="Double">
-      <sv:value>30052.5</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:contentresource" sv:type="String">
-      <sv:value>namespaces/hsl/mixins/relateditemsmixin.xml</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:contentroot" sv:type="String">
-      <sv:value>/hippo:namespaces/hsl</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:reloadonstartup" sv:type="Boolean">
-      <sv:value>true</sv:value>
-    </sv:property>
   </sv:node>  
-  <sv:node sv:name="hsl-mixins-relatedeventsmixin-namespace">
-    <sv:property sv:name="jcr:primaryType" sv:type="Name">
-      <sv:value>hippo:initializeitem</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:sequence" sv:type="Double">
-      <sv:value>30052.5</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:contentresource" sv:type="String">
-      <sv:value>namespaces/hsl/mixins/relatedeventsmixin.xml</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:contentroot" sv:type="String">
-      <sv:value>/hippo:namespaces/hsl</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:reloadonstartup" sv:type="Boolean">
-      <sv:value>true</sv:value>
-    </sv:property>
+  <sv:node sv:name="hsl-mixins-relateditemsmixin-namespace"> 
+    <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
+      <sv:value>hippo:initializeitem</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:sequence" sv:type="Double"> 
+      <sv:value>30052.5</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentresource" sv:type="String"> 
+      <sv:value>namespaces/hsl/mixins/relateditemsmixin.xml</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentroot" sv:type="String"> 
+      <sv:value>/hippo:namespaces/hsl</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:reloadonstartup" sv:type="Boolean"> 
+      <sv:value>true</sv:value> 
+    </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsl-mixins-formcomponentmixin-namespace">
-    <sv:property sv:name="jcr:primaryType" sv:type="Name">
-      <sv:value>hippo:initializeitem</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:sequence" sv:type="Double">
-      <sv:value>30052.5</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:contentresource" sv:type="String">
-      <sv:value>namespaces/hsl/mixins/formcomponentmixin.xml</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:contentroot" sv:type="String">
-      <sv:value>/hippo:namespaces/hsl</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:reloadonstartup" sv:type="Boolean">
-      <sv:value>true</sv:value>
-    </sv:property>
+  <sv:node sv:name="hsl-mixins-relatedeventsmixin-namespace"> 
+    <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
+      <sv:value>hippo:initializeitem</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:sequence" sv:type="Double"> 
+      <sv:value>30052.5</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentresource" sv:type="String"> 
+      <sv:value>namespaces/hsl/mixins/relatedeventsmixin.xml</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentroot" sv:type="String"> 
+      <sv:value>/hippo:namespaces/hsl</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:reloadonstartup" sv:type="Boolean"> 
+      <sv:value>true</sv:value> 
+    </sv:property> 
+  </sv:node>  
+  <sv:node sv:name="hsl-mixins-formcomponentmixin-namespace"> 
+    <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
+      <sv:value>hippo:initializeitem</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:sequence" sv:type="Double"> 
+      <sv:value>30052.5</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentresource" sv:type="String"> 
+      <sv:value>namespaces/hsl/mixins/formcomponentmixin.xml</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentroot" sv:type="String"> 
+      <sv:value>/hippo:namespaces/hsl</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:reloadonstartup" sv:type="Boolean"> 
+      <sv:value>true</sv:value> 
+    </sv:property> 
   </sv:node>  
   <sv:node sv:name="hsl-webdocument-namespace"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
@@ -1045,7 +1037,7 @@
     <sv:property sv:name="hippo:reloadonstartup" sv:type="Boolean"> 
       <sv:value>true</sv:value> 
     </sv:property> 
-  </sv:node>
+  </sv:node>  
   <!-- Subsites bootstrap content -->  
   <sv:node sv:name="website-hippo-queries-new-subsite-template-website-subsite"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
@@ -1090,8 +1082,8 @@
       <sv:value>33000.1</sv:value> 
     </sv:property> 
   </sv:node>  
-  <!-- Security and default available users -->
-  <!-- All users -->
+  <!-- Security and default available users -->  
+  <!-- All users -->  
   <sv:node sv:name="website-users"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
@@ -1105,9 +1097,8 @@
     <sv:property sv:name="hippo:sequence" sv:type="Double"> 
       <sv:value>33000.3</sv:value> 
     </sv:property> 
-  </sv:node>
-    
-  <!-- add new users to groups -->
+  </sv:node>  
+  <!-- add new users to groups -->  
   <sv:node sv:name="website-groups-admin-schepers.haike-add"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
@@ -1219,7 +1210,7 @@
     <sv:property sv:name="hippo:sequence" sv:type="Double"> 
       <sv:value>33000.5</sv:value> 
     </sv:property> 
-  </sv:node>
+  </sv:node>  
   <sv:node sv:name="website-groups-editor-remmers.veronique-add"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
@@ -1275,7 +1266,7 @@
     <sv:property sv:name="hippo:sequence" sv:type="Double"> 
       <sv:value>33000.6</sv:value> 
     </sv:property> 
-  </sv:node> 
+  </sv:node>  
   <sv:node sv:name="website-groups-author-testauthor-add"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
@@ -1289,7 +1280,7 @@
     <sv:property sv:name="hippo:sequence" sv:type="Double"> 
       <sv:value>33000.6</sv:value> 
     </sv:property> 
-  </sv:node> 
+  </sv:node>  
   <sv:node sv:name="website-groups-everybody-testeverybody-add"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
@@ -1303,9 +1294,8 @@
     <sv:property sv:name="hippo:sequence" sv:type="Double"> 
       <sv:value>33000.7</sv:value> 
     </sv:property> 
-  </sv:node> 
-  <!-- /add new users to groups -->
-  
+  </sv:node>  
+  <!-- /add new users to groups -->  
   <sv:node sv:name="website-groups-author-add"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
@@ -1486,9 +1476,9 @@
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
       <sv:value>/hippo:namespaces/hsl</sv:value> 
-    </sv:property>
-    <sv:property sv:name="hippo:reloadonstartup" sv:type="Boolean">
-      <sv:value>true</sv:value>
+    </sv:property>  
+    <sv:property sv:name="hippo:reloadonstartup" sv:type="Boolean"> 
+      <sv:value>true</sv:value> 
     </sv:property> 
   </sv:node>  
   <sv:node sv:name="website-hippo-namespaces-hsl-compounds-link"> 
@@ -1503,10 +1493,10 @@
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
       <sv:value>/hippo:namespaces/hsl</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:reloadonstartup" sv:type="Boolean"> 
+      <sv:value>true</sv:value> 
     </sv:property> 
-    <sv:property sv:name="hippo:reloadonstartup" sv:type="Boolean">
-      <sv:value>true</sv:value>
-    </sv:property>
   </sv:node>  
   <sv:node sv:name="website-hippo-namespaces-hsl-compounds-paragraph"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
@@ -1520,9 +1510,9 @@
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
       <sv:value>/hippo:namespaces/hsl</sv:value> 
-    </sv:property>
-    <sv:property sv:name="hippo:reloadonstartup" sv:type="Boolean">
-      <sv:value>true</sv:value>
+    </sv:property>  
+    <sv:property sv:name="hippo:reloadonstartup" sv:type="Boolean"> 
+      <sv:value>true</sv:value> 
     </sv:property> 
   </sv:node>  
   <sv:node sv:name="website-hippo-namespaces-hsl-flexibleblock"> 
@@ -1537,37 +1527,65 @@
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
       <sv:value>/hippo:namespaces/hsl</sv:value> 
-    </sv:property>
-    <sv:property sv:name="hippo:reloadonstartup" sv:type="Boolean">
-      <sv:value>true</sv:value>
-    </sv:property>
+    </sv:property>  
+    <sv:property sv:name="hippo:reloadonstartup" sv:type="Boolean"> 
+      <sv:value>true</sv:value> 
+    </sv:property> 
   </sv:node>  
-  <sv:node sv:name="website-hippo-configuration-hippo-domains-live-documents">
+  <sv:node sv:name="website-hippo-configuration-hippo-domains-live-documents"> 
+    <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
+      <sv:value>hippo:initializeitem</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:sequence" sv:type="Double"> 
+      <sv:value>30000.3</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentresource" sv:type="String"> 
+      <sv:value>configuration/domains/live-documents.xml</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentroot" sv:type="String"> 
+      <sv:value>/hippo:configuration/hippo:domains</sv:value> 
+    </sv:property> 
+  </sv:node>  
+  <sv:node sv:name="website-hippo-configuration-hippo-domains-preview-documents"> 
+    <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
+      <sv:value>hippo:initializeitem</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:sequence" sv:type="Double"> 
+      <sv:value>30000.3</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentresource" sv:type="String"> 
+      <sv:value>configuration/domains/preview-documents.xml</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentroot" sv:type="String"> 
+      <sv:value>/hippo:configuration/hippo:domains</sv:value> 
+    </sv:property> 
+  </sv:node>  
+  <sv:node sv:name="website-hst-hst-hst-configurations-common-hst-pages-searchpagecommon"> 
+    <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
+      <sv:value>hippo:initializeitem</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:sequence" sv:type="Double"> 
+      <sv:value>30101.0</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentresource" sv:type="String"> 
+      <sv:value>hst/configurations/common/pages/searchpagecommon.xml</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentroot" sv:type="String"> 
+      <sv:value>/hst:hst/hst:configurations/common/hst:pages</sv:value> 
+    </sv:property> 
+  </sv:node>  
+  <sv:node sv:name="website-hst-hst-hst-configurations-website-hst-pages-searchpage">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hippo:initializeitem</sv:value>
     </sv:property>
     <sv:property sv:name="hippo:sequence" sv:type="Double">
-      <sv:value>30000.3</sv:value>
+      <sv:value>30076.0</sv:value>
     </sv:property>
     <sv:property sv:name="hippo:contentresource" sv:type="String">
-      <sv:value>configuration/domains/live-documents.xml</sv:value>
+      <sv:value>hst/configurations/website/pages/searchpage.xml</sv:value>
     </sv:property>
     <sv:property sv:name="hippo:contentroot" sv:type="String">
-      <sv:value>/hippo:configuration/hippo:domains</sv:value>
-    </sv:property>
-  </sv:node>
-  <sv:node sv:name="website-hippo-configuration-hippo-domains-preview-documents">
-    <sv:property sv:name="jcr:primaryType" sv:type="Name">
-      <sv:value>hippo:initializeitem</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:sequence" sv:type="Double">
-      <sv:value>30000.3</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:contentresource" sv:type="String">
-      <sv:value>configuration/domains/preview-documents.xml</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:contentroot" sv:type="String">
-      <sv:value>/hippo:configuration/hippo:domains</sv:value>
+      <sv:value>/hst:hst/hst:configurations/website/hst:pages</sv:value>
     </sv:property>
   </sv:node>
 </sv:node>
