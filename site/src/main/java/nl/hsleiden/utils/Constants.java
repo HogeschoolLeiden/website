@@ -16,7 +16,7 @@ public class Constants {
     public static class Attributes extends AttributesConstants {
         public static final String LOGO = "logo";
         public static final String HEADER_NAME = "headerName";
-		public static final String PARAMETER_INFO = "parameterInfo";
+        public static final String PARAMETER_INFO = "parameterInfo";
 
         private Attributes() {
         }
@@ -46,16 +46,16 @@ public class Constants {
 
         public static final String THEMA_FILTER = "themaFilter";
         public static final String OVER_FILTER = "overFilter";
-        
+
         public static final String FORMS_INITIAL_LOCATION = "/content/documents/hsl/componenten/formulieren";
-        
+
         public static final String WEB_MASTER_MESSAGE = "webMasterMessage";
 
-		public static final String COMPANY_PROFILE_ID = "companyProfileId";
-        
+        public static final String COMPANY_PROFILE_ID = "companyProfileId";
+
         private WidgetConstants() {
         }
-        
+
     }
 
     public static class PikcerTypes extends PikcerTypesConstants {
@@ -70,12 +70,12 @@ public class Constants {
         private HstParameters() {
         }
     }
-    
+
     public static class DisplayedFieldNames {
-        
+
         public static final String RELEASE_DATE = "Publicatiedatum";
         public static final String TITLE = "Titel";
-        
+
         private DisplayedFieldNames() {
         }
 
@@ -97,7 +97,7 @@ public class Constants {
 
         public static final String RELEASE_DATE = "hsl:releaseDate";
         public static final String TITLE = "hsl:title";
-        
+
         private FieldName() {
         }
     }
