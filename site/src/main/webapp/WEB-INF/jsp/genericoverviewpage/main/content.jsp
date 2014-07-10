@@ -14,13 +14,13 @@
     <hst:link var="link" hippobean="${item}"/>
     <article class="well well-large">
         <hst:cmseditlink hippobean="${item}"/>
-        <h3><a href="${link}">${fn:escapeXml(item.title)}</a></h3>
+        <h3><a href="${link}"><c:out value="${item.title}"/></a></h3>
         <c:if test="${hst:isReadable(item, 'releaseDate.time')}">
             <p class="badge badge-info">
               <fmt:formatDate value="${item.releaseDate.time}" type="both" dateStyle="medium" timeStyle="short"/>
             </p>
         </c:if>
-        <p>${fn:escapeXml(item.introduction)}</p>
+        <p><c:out value="${item.introduction}"/></p>
   </article>
 </c:forEach>
 

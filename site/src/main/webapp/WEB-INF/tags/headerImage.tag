@@ -18,8 +18,8 @@
           <hst:link var="img" hippobean="${document.headerImage.allWidthImage}"/>
           <c:if test="${not empty img }">
             <figure>
-              <img src="${img}" title="${fn:escapeXml(document.headerImage.alt)}"
-              alt="${fn:escapeXml(document.headerImage.alt)}"/>
+              <img src="${img}" title="<c:out value="${document.headerImage.alt}"/>"
+              alt="<c:out value="${document.headerImage.alt}"/>"/>
             </figure>
           </c:if>
         </div>

@@ -13,7 +13,7 @@
 <c:if test="${tag:isSubclassOfWebPage(doc)}">
   <div class="inner">
     <c:if test="${not empty doc.title }">
-      <h1>${fn:escapeXml(doc.title)}</h1>
+      <h1><c:out value="${doc.title}"/></h1>
     </c:if>
     <c:if test="${not empty doc.introduction }">
       <p class="intro">

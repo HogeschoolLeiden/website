@@ -18,13 +18,13 @@
       <header>
         
         <c:if test="${hst:isReadable(document, 'title') }">
-          <h1>${fn:escapeXml(document.title)}</h1>
+          <h1><c:out value="${document.title}"/></h1>
         </c:if>
         <c:if test="${hst:isReadable(document, 'subtitle') }">
-          <h2>${fn:escapeXml(document.subtitle)}</h2>
+          <h2><c:out value="${document.subtitle}"/></h2>
         </c:if>
         <c:if test="${hst:isReadable(document, 'introduction') }">
-          <p>${fn:escapeXml(document.introduction)}</p> 
+          <p><c:out value="${document.introduction}"/></p> 
         </c:if>
       </header>
     </article>

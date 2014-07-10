@@ -11,12 +11,7 @@
   <ul>
     <c:forEach var="componentException" items="${errorComponentWindow.componentExceptions}">
       <li>
-        <pre>${fn:escapeXml(componentException.message)}</pre>
-        <!--
-            <c:forEach items="${componentException.stackTrace}" var="line">
-              ${fn:escapeXml(line)}<br>
-            </c:forEach>
-          -->
+        <pre><c:out value="${componentException.message}"/></pre>
       </li>
     </c:forEach>
   </ul>

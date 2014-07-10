@@ -23,13 +23,13 @@
                 <c:choose>
                   <c:when test="${not empty logo}">
                     <img src="<hst:link hippobean="${logo.original}"/>"
-                      alt="${fn:escapeXml(headerName)}"
-                      title="${fn:escapeXml(headerName)}" />
+                      alt="<c:out value="${headerName}"/>"
+                      title="<c:out value="${headerName}"/>" />
                   </c:when>
                   <c:otherwise>
                     <img src="<hst:link path="images/logo.png"/>"
-                      alt="${fn:escapeXml(headerName)}"
-                      title="${fn:escapeXml(headerName)}" />
+                      alt="<c:out value="${headerName}"/>"
+                      title="<c:out value="${headerName}"/>" />
                   </c:otherwise>
                 </c:choose>
               </a>

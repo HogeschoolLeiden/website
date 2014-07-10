@@ -24,8 +24,9 @@
     </a> --%>
   <c:if test="${not empty document}">
     <li>
+      <hst:link mount="pdf" var="pdfLink"/>
       <a  class="pdf" id="pdflink" title="<fmt:message key="page.pdf"/>" 
-          href='<hst:link mount="pdf" />'>
+          href="${pdfLink}?${pageContext.request.queryString}">
         <c:out value="${pagePdf}"/>
       </a>
     </li>
