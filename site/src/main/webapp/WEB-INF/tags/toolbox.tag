@@ -13,16 +13,23 @@
 
 <fmt:message key="page.facebook"  var="pageFacebook"/>
 <fmt:message key="page.twitter" var="pageTwitter"/>
+<fmt:message key="page.pdf" var="pagePdf"/>
 <ul class="toolbox">
   <c:set var="url">
     <hst:link hippobean="${document }" fullyQualified="true" />
   </c:set>
-  <li>
-    <a class="print" id="tool-print-page" title="<fmt:message key="page.print" />" 
+    <%-- <a class="print" id="tool-print-page" title="<fmt:message key="page.print" />" 
        href="<hst:link hippobean="${document }" />">
           <fmt:message key="page.print" />
-    </a>
-  </li>
+    </a> --%>
+  <c:if test="${not empty document}">
+    <li>
+      <a  class="pdf" id="pdflink" title="<fmt:message key="page.pdf"/>" 
+          href='<hst:link mount="pdf" />'>
+        <c:out value="${pagePdf}"/>
+      </a>
+    </li>
+  </c:if>
   <li>
     <a class="facebook" id="tool-facebook" title="<fmt:message key="page.facebook"/>" 
        href="https://www.facebook.com/sharer/sharer.php?u=${url }&amp;t=<c:out value="${document.title }" />" 

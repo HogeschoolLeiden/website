@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
@@ -15,11 +16,11 @@
   <version>1.2-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-	<!-- The below project elements are emptied/overridden as otherwise their 
-		metadata would be inherited or merged from the parent hippo-cms7-release 
-		pom (or its hippo-cms7-project pom). DO NOT remove these tags but instead 
-		fill them in appropriately as needed, UNLESS the inherited values are valid 
-		for your project. -->
+  <!-- The below project elements are emptied/overridden as otherwise their 
+    metadata would be inherited or merged from the parent hippo-cms7-release 
+    pom (or its hippo-cms7-project pom). DO NOT remove these tags but instead 
+    fill them in appropriately as needed, UNLESS the inherited values are valid 
+    for your project. -->
   <url />
   <inceptionYear />
   <organization />
@@ -53,16 +54,17 @@
       <url>https://nexus.open-web.nl/nexus/content/repositories/snapshots/</url>
     </snapshotRepository>
   </distributionManagement>
-	<!-- End of emptied/overridden metadata from parent hippo-cms7-release pom. -->
+  <!-- End of emptied/overridden metadata from parent hippo-cms7-release 
+    pom. -->
 
   <properties>
     <it.cargo.servlet.port>9208</it.cargo.servlet.port>
     <it.cargo.tomcat.ajp.port>9476</it.cargo.tomcat.ajp.port>
     <it.cargo.rmi.port>9496</it.cargo.rmi.port>
 
-		<!--***START temporary override of versions*** -->
+    <!--***START temporary override of versions*** -->
     <essentials.version>1.01.02</essentials.version>
-		<!-- ***END temporary override of versions*** -->
+    <!-- ***END temporary override of versions*** -->
 
     <jsp-api.version>2.1</jsp-api.version>
     <jstl.version>1.1.2</jstl.version>
@@ -82,6 +84,10 @@
 
     <forge.easy-forms.version>2.14.00</forge.easy-forms.version>
     <forge.urlrewriter.version>1.05.01</forge.urlrewriter.version>
+
+    <forge.hstpdfrenderer.version>1.01.00</forge.hstpdfrenderer.version>
+    
+    
   </properties>
 
   <repositories>
@@ -128,6 +134,11 @@
         <enabled>true</enabled>
       </snapshots>
     </repository>
+    <repository>
+      <id>hstpdfrenderer-maven-repo</id>
+      <name>HST PDF Renderer Maven 2 Repository</name>
+      <url>http://forge.onehippo.org/svn/hstpdfrenderer/maven2/</url>
+    </repository>
   </repositories>
 
   <pluginRepositories>
@@ -161,7 +172,7 @@
         <version>${essentials.version}</version>
       </dependency>
 
-			<!-- other predefined runtime scope versioned dependencies -->
+      <!-- other predefined runtime scope versioned dependencies -->
       <dependency>
         <groupId>javax.servlet</groupId>
         <artifactId>jstl</artifactId>
@@ -176,7 +187,7 @@
         <scope>runtime</scope>
       </dependency>
 
-			<!-- other predefined compile scope versioned dependencies -->
+      <!-- other predefined compile scope versioned dependencies -->
       <dependency>
         <groupId>commons-lang</groupId>
         <artifactId>commons-lang</artifactId>
@@ -222,8 +233,8 @@
         <version>${hippo.maven.plugin.version}</version>
         <scope>provided</scope>
       </dependency>
-      
-            <!-- integration testing dependencies -->
+
+      <!-- integration testing dependencies -->
       <dependency>
         <groupId>org.seleniumhq.selenium</groupId>
         <artifactId>selenium-server</artifactId>
@@ -429,7 +440,7 @@
                   <derby.stream.error.file>${project.basedir}/target/derby.log</derby.stream.error.file>
                   <log4j.configuration>file:${project.basedir}/release/conf/log4j-dev.xml</log4j.configuration>
                   <rebel.log4j-plugin>true</rebel.log4j-plugin>
-									<!-- enables auto export: -->
+                  <!-- enables auto export: -->
                   <project.basedir>${project.basedir}</project.basedir>
                 </systemProperties>
               </container>
