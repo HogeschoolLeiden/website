@@ -13,18 +13,40 @@
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>5b7c2833-9b20-4f34-b904-26fe9a2a4a51</sv:value>
     </sv:property>
-    <sv:node sv:name="Intranet">
+    <sv:node sv:name="home">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:sitemenuitem</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>29c74d0d-c660-423a-98d1-2a964e662d8c</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+        <sv:value>root</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="voor decanen">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:sitemenuitem</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>1435e76e-6b20-497c-b3fb-0a5f402da95c</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+        <sv:value>voor-decanen</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="voor ouders">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:sitemenuitem</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
         <sv:value>80f8b0fe-e8d5-4261-ac4a-41d44ac35a0e</sv:value>
       </sv:property>
-      <sv:property sv:name="hst:externallink" sv:type="String">
-        <sv:value>http://intranet.hsleiden.nl/</sv:value>
+      <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+        <sv:value>voor-ouders</sv:value>
       </sv:property>
     </sv:node>
-    <sv:node sv:name="Alumni">
+    <sv:node sv:name="alumni">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:sitemenuitem</sv:value>
       </sv:property>
@@ -35,27 +57,15 @@
         <sv:value>http://www.hsleiden.alumni-net.nl/</sv:value>
       </sv:property>
     </sv:node>
-    <sv:node sv:name="Bedrijven">
+    <sv:node sv:name="contact">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:sitemenuitem</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>58d173d8-0a54-4107-8ef9-9aa4a8129b21</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:depth" sv:type="Long">
-        <sv:value>5</sv:value>
-      </sv:property>
-      <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
-        <sv:value>root</sv:value>
-      </sv:property>
-      <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
-        <sv:value>bedrijven</sv:value>
+        <sv:value>01e77af6-f33d-4ec9-b548-c09225075e5d</sv:value>
       </sv:property>
       <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-        <sv:value>bedrijven</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:repobased" sv:type="Boolean">
-        <sv:value>true</sv:value>
+        <sv:value>contact</sv:value>
       </sv:property>
     </sv:node>
   </sv:node>
@@ -112,24 +122,24 @@
         <sv:value>true</sv:value>
       </sv:property>
     </sv:node>
-    <sv:node sv:name="Over HL">
+    <sv:node sv:name="Bedrijven">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:sitemenuitem</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>728e1480-078a-4399-b713-68342781f651</sv:value>
+        <sv:value>58d173d8-0a54-4107-8ef9-9aa4a8129b21</sv:value>
       </sv:property>
       <sv:property sv:name="hst:depth" sv:type="Long">
-        <sv:value>2</sv:value>
+        <sv:value>5</sv:value>
       </sv:property>
       <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
         <sv:value>root</sv:value>
       </sv:property>
       <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
-        <sv:value>pages/over-hl/index</sv:value>
+        <sv:value>bedrijven</sv:value>
       </sv:property>
       <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-        <sv:value>over-hl</sv:value>
+        <sv:value>bedrijven</sv:value>
       </sv:property>
       <sv:property sv:name="hst:repobased" sv:type="Boolean">
         <sv:value>true</sv:value>
@@ -208,6 +218,29 @@
         </sv:property>
       </sv:node>
     </sv:node>
+    <sv:node sv:name="Over HL">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:sitemenuitem</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>728e1480-078a-4399-b713-68342781f651</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:depth" sv:type="Long">
+        <sv:value>2</sv:value>
+      </sv:property>
+      <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
+        <sv:value>root</sv:value>
+      </sv:property>
+      <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
+        <sv:value>pages/over-hl/index</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+        <sv:value>over-hl</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:repobased" sv:type="Boolean">
+        <sv:value>true</sv:value>
+      </sv:property>
+    </sv:node>
   </sv:node>
   <sv:node sv:name="footer">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -249,28 +282,6 @@
         <sv:value>http://google.com/</sv:value>
       </sv:property>
     </sv:node>
-    <sv:node sv:name="Phone +31 123456789">
-      <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hst:sitemenuitem</sv:value>
-      </sv:property>
-      <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>43762ee9-ac7f-40dd-b9a7-87d26e6a7110</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:externallink" sv:type="String">
-        <sv:value>callto:+123456789</sv:value>
-      </sv:property>
-    </sv:node>
-    <sv:node sv:name="Fax +31 123456789">
-      <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hst:sitemenuitem</sv:value>
-      </sv:property>
-      <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>059a7f81-ca3d-46c7-b75f-79ec55c0d6a8</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:externallink" sv:type="String">
-        <sv:value>fax:+123456789</sv:value>
-      </sv:property>
-    </sv:node>
     <sv:node sv:name="Mail Contact">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:sitemenuitem</sv:value>
@@ -280,6 +291,17 @@
       </sv:property>
       <sv:property sv:name="hst:externallink" sv:type="String">
         <sv:value>mailto:kok.j@hsleiden.nl</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="F.A.Q.">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:sitemenuitem</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>8ed38943-756d-4f03-993c-543f3a139403</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+        <sv:value>veelgestelde-vragen</sv:value>
       </sv:property>
     </sv:node>
   </sv:node>

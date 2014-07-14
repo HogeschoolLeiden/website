@@ -6,7 +6,9 @@
 <%@ taglib prefix="hst" uri="http://www.hippoecm.org/jsp/hst/core"%>
 <%@ taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml"%>
 
-<ul class="nav mainMenuLink">
+<div class="main-menu">
+
+  <ul class="nav mainMenuLink main-menu">
 	<c:forEach items="${menu.menuItems}" var="siteMenuItem" varStatus="step">
 		<c:choose>
 			<c:when test="${not empty siteMenuItem.hstLink }">
@@ -37,4 +39,5 @@
 			</a>
 		</li>
 	</c:forEach>
-</ul>
+  </ul>
+</div>
