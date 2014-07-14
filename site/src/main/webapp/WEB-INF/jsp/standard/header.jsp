@@ -42,9 +42,7 @@
 
         <div class="clear"></div>
       </div>
-      
-      <%-- add the breadcrumb reference here --%>
-	
+      	
     </div>
   </div>
 </div>

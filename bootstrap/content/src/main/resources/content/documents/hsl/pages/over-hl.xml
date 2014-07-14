@@ -923,7 +923,7 @@
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hippo:handle</sv:value>
     </sv:property>
-    <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+    <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
       <sv:value>mix:referenceable</sv:value>
       <sv:value>hippo:translated</sv:value>
     </sv:property>
@@ -934,16 +934,16 @@
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hsl:ArticlePage</sv:value>
       </sv:property>
-      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
         <sv:value>mix:referenceable</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
         <sv:value>ed8935b9-950d-4c3b-8bf3-6566967aedf8</sv:value>
       </sv:property>
-      <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true"/>
+      <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String"/>
       <sv:property sv:name="hippo:related___pathreference" sv:type="String">
-        <sv:value>over-hl/mission-and-values/mission-and-values[3]</sv:value>
-        <sv:value>over-hl/mission-and-values/mission-and-values[2]</sv:value>
+        <sv:value>mission-and-values/mission-and-values[3]</sv:value>
+        <sv:value>mission-and-values/mission-and-values[2]</sv:value>
       </sv:property>
       <sv:property sv:name="hippostd:state" sv:type="String">
         <sv:value>draft</sv:value>
@@ -958,7 +958,7 @@
         <sv:value>2014-06-19T16:39:44.106+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-        <sv:value>2014-07-09T13:57:46.858+02:00</sv:value>
+        <sv:value>2014-07-14T17:19:13.835+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
         <sv:value>admin</sv:value>
@@ -990,14 +990,14 @@
       <sv:property sv:name="hsl:releaseDate" sv:type="Date">
         <sv:value>2014-06-20T07:30:00.000+02:00</sv:value>
       </sv:property>
-      <sv:property sv:name="hsl:subjecttags" sv:type="String" sv:multiple="true">
+      <sv:property sv:multiple="true" sv:name="hsl:subjecttags" sv:type="String">
         <sv:value>onderzoek</sv:value>
         <sv:value>actueel</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:subtitle" sv:type="String">
         <sv:value>Subtitel</sv:value>
       </sv:property>
-      <sv:property sv:name="hsl:thematags" sv:type="String" sv:multiple="true">
+      <sv:property sv:multiple="true" sv:name="hsl:thematags" sv:type="String">
         <sv:value>life-sciences</sv:value>
         <sv:value>management</sv:value>
       </sv:property>
@@ -1011,9 +1011,9 @@
         <sv:property sv:name="hippo:docbase" sv:type="String">
           <sv:value>00e66dd6-aec5-44d6-bada-0534d76d1a9a</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
+        <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
+        <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
       </sv:node>
       <sv:node sv:name="hsl:flexibleblock">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -1026,9 +1026,9 @@
           <sv:property sv:name="hippo:docbase" sv:type="String">
             <sv:value>8d154015-2946-4d43-9003-ca8a31640797</sv:value>
           </sv:property>
-          <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
-          <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
-          <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+          <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
+          <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
+          <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
         </sv:node>
       </sv:node>
       <sv:node sv:name="hsl:flexibleblock">
@@ -1052,23 +1052,61 @@
           </sv:property>
         </sv:node>
       </sv:node>
+      <sv:node sv:name="hsl:flexibleblock">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsl:Paragraph</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:title" sv:type="String">
+          <sv:value>aside aside asideaside</sv:value>
+        </sv:property>
+        <sv:node sv:name="hsl:content">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippostd:html</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippostd:content" sv:type="String">
+            <sv:value>&lt;p&gt;aside&amp;nbsp;aside&amp;nbsp;asideaside &amp;nbsp;aside&amp;nbsp;aside&amp;nbsp;asideaside&amp;nbsp;aside&amp;nbsp;as ide&amp;nbsp;asideaside&amp;nbsp;aside &amp;nbsp;aside&amp;nbsp;asideaside&amp;nbsp; aside&amp;nbsp;as de&amp;nbsp;asideaside&amp;nbsp;aside&amp;nbsp;aside&amp;nbsp;asid easide&amp;nbsp;asideside&amp;nbsp;asideaside&amp;nbsp;aside&amp;nbsp;aside&amp;nbsp;as deaside&amp;nbsp;aside&amp;nbsp;as ide&amp;nbsp;aside &amp;nbsp;aside &amp;nbsp;aside&amp;nbsp;as ide&amp;nbsp;as idea side&amp;nbsp;aside&amp;nbsp;aside&amp;nbsp;as ideaside&amp;nbsp;asid e&amp;nbsp;aside&amp;nbsp;aside aside&amp;nbsp; a side&amp;nbsp;aside&amp;nbsp;asideaside&amp;nbsp;asid e&amp;nbsp;aside&amp;nbsp;asideaside&amp;nbsp;aside&amp;nbsp;aside&amp;nbsp;asidea ide&amp;nbsp;aside &amp;nbsp;aside &amp;nbsp;asid easide&amp;nbsp;aside&amp;nbsp;aside &amp;nbsp;sidea side&amp;nbsp;aside&amp;nbsp;aside&amp;nbsp;asideaside vaside&amp;nbsp;as ide&amp;nbsp;asidea side&amp;nbsp;aside&amp;nbsp;aside&amp;nbsp;asidea side&amp;nbsp;aside&amp;nbsp;aside&amp;nbsp;asi deaside&amp;nbsp;aside&amp;nbsp;aside&amp;nbsp;asid easide &amp;nbsp; aside&amp;nbsp;aside&amp;nbsp;asideaside&amp;nbsp;aside&amp;nbsp;aside&amp;nbsp;aside aside&amp;nbsp;&lt;/p&gt;</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="hsl:paragraphImage">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:ParagraphImage</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:position" sv:type="String">
+            <sv:value>right</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:staticdropdown" sv:type="String">
+            <sv:value>top</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:paragraphImageLink">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippogallerypicker:imagelink</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>00e66dd6-aec5-44d6-bada-0534d76d1a9a</sv:value>
+            </sv:property>
+            <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
+            <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
+            <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
+          </sv:node>
+        </sv:node>
+      </sv:node>
     </sv:node>
     <sv:node sv:name="mission-and-values">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hsl:ArticlePage</sv:value>
       </sv:property>
-      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
         <sv:value>mix:referenceable</sv:value>
         <sv:value>mix:versionable</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
         <sv:value>c6ea54af-e652-4323-b228-054f3310ff09</sv:value>
       </sv:property>
-      <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+      <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
         <sv:value>preview</sv:value>
       </sv:property>
       <sv:property sv:name="hippo:related___pathreference" sv:type="String">
-        <sv:value>over-hl/mission-and-values/mission-and-values[3]</sv:value>
+        <sv:value>mission-and-values/mission-and-values[3]</sv:value>
       </sv:property>
       <sv:property sv:name="hippostd:state" sv:type="String">
         <sv:value>unpublished</sv:value>
@@ -1083,7 +1121,7 @@
         <sv:value>2014-06-19T16:39:44.106+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-        <sv:value>2014-07-09T13:57:56.315+02:00</sv:value>
+        <sv:value>2014-07-14T17:19:40.783+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
         <sv:value>admin</sv:value>
@@ -1115,14 +1153,14 @@
       <sv:property sv:name="hsl:releaseDate" sv:type="Date">
         <sv:value>2014-06-20T07:30:00.000+02:00</sv:value>
       </sv:property>
-      <sv:property sv:name="hsl:subjecttags" sv:type="String" sv:multiple="true">
+      <sv:property sv:multiple="true" sv:name="hsl:subjecttags" sv:type="String">
         <sv:value>onderzoek</sv:value>
         <sv:value>actueel</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:subtitle" sv:type="String">
         <sv:value>Subtitel</sv:value>
       </sv:property>
-      <sv:property sv:name="hsl:thematags" sv:type="String" sv:multiple="true">
+      <sv:property sv:multiple="true" sv:name="hsl:thematags" sv:type="String">
         <sv:value>life-sciences</sv:value>
         <sv:value>management</sv:value>
       </sv:property>
@@ -1136,9 +1174,9 @@
         <sv:property sv:name="hippo:docbase" sv:type="String">
           <sv:value>00e66dd6-aec5-44d6-bada-0534d76d1a9a</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
+        <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
+        <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
       </sv:node>
       <sv:node sv:name="hsl:flexibleblock">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -1151,9 +1189,9 @@
           <sv:property sv:name="hippo:docbase" sv:type="String">
             <sv:value>8d154015-2946-4d43-9003-ca8a31640797</sv:value>
           </sv:property>
-          <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
-          <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
-          <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+          <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
+          <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
+          <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
         </sv:node>
       </sv:node>
       <sv:node sv:name="hsl:flexibleblock">
@@ -1177,22 +1215,60 @@
           </sv:property>
         </sv:node>
       </sv:node>
+      <sv:node sv:name="hsl:flexibleblock">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsl:Paragraph</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:title" sv:type="String">
+          <sv:value>aside aside asideaside</sv:value>
+        </sv:property>
+        <sv:node sv:name="hsl:content">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippostd:html</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippostd:content" sv:type="String">
+            <sv:value>&lt;p&gt;aside&amp;nbsp;aside&amp;nbsp;asideaside &amp;nbsp;aside&amp;nbsp;aside&amp;nbsp;asideaside&amp;nbsp;aside&amp;nbsp;as ide&amp;nbsp;asideaside&amp;nbsp;aside &amp;nbsp;aside&amp;nbsp;asideaside&amp;nbsp; aside&amp;nbsp;as de&amp;nbsp;asideaside&amp;nbsp;aside&amp;nbsp;aside&amp;nbsp;asid easide&amp;nbsp;asideside&amp;nbsp;asideaside&amp;nbsp;aside&amp;nbsp;aside&amp;nbsp;as deaside&amp;nbsp;aside&amp;nbsp;as ide&amp;nbsp;aside &amp;nbsp;aside &amp;nbsp;aside&amp;nbsp;as ide&amp;nbsp;as idea side&amp;nbsp;aside&amp;nbsp;aside&amp;nbsp;as ideaside&amp;nbsp;asid e&amp;nbsp;aside&amp;nbsp;aside aside&amp;nbsp; a side&amp;nbsp;aside&amp;nbsp;asideaside&amp;nbsp;asid e&amp;nbsp;aside&amp;nbsp;asideaside&amp;nbsp;aside&amp;nbsp;aside&amp;nbsp;asidea ide&amp;nbsp;aside &amp;nbsp;aside &amp;nbsp;asid easide&amp;nbsp;aside&amp;nbsp;aside &amp;nbsp;sidea side&amp;nbsp;aside&amp;nbsp;aside&amp;nbsp;asideaside vaside&amp;nbsp;as ide&amp;nbsp;asidea side&amp;nbsp;aside&amp;nbsp;aside&amp;nbsp;asidea side&amp;nbsp;aside&amp;nbsp;aside&amp;nbsp;asi deaside&amp;nbsp;aside&amp;nbsp;aside&amp;nbsp;asid easide &amp;nbsp; aside&amp;nbsp;aside&amp;nbsp;asideaside&amp;nbsp;aside&amp;nbsp;aside&amp;nbsp;aside aside&amp;nbsp;&lt;/p&gt;</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="hsl:paragraphImage">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:ParagraphImage</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:position" sv:type="String">
+            <sv:value>right</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:staticdropdown" sv:type="String">
+            <sv:value>top</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:paragraphImageLink">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippogallerypicker:imagelink</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>00e66dd6-aec5-44d6-bada-0534d76d1a9a</sv:value>
+            </sv:property>
+            <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
+            <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
+            <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
+          </sv:node>
+        </sv:node>
+      </sv:node>
     </sv:node>
     <sv:node sv:name="mission-and-values">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hsl:ArticlePage</sv:value>
       </sv:property>
-      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
         <sv:value>mix:referenceable</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
         <sv:value>a88367b5-b89c-4714-9f28-347bf2c8bc8c</sv:value>
       </sv:property>
-      <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+      <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
         <sv:value>live</sv:value>
       </sv:property>
       <sv:property sv:name="hippo:related___pathreference" sv:type="String">
-        <sv:value>over-hl/mission-and-values/mission-and-values[2]</sv:value>
+        <sv:value>mission-and-values/mission-and-values[2]</sv:value>
       </sv:property>
       <sv:property sv:name="hippostd:state" sv:type="String">
         <sv:value>published</sv:value>
@@ -1207,13 +1283,13 @@
         <sv:value>2014-06-19T16:39:44.106+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-        <sv:value>2014-07-09T13:57:56.315+02:00</sv:value>
+        <sv:value>2014-07-14T17:19:40.783+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
         <sv:value>admin</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-        <sv:value>2014-07-09T13:57:58.132+02:00</sv:value>
+        <sv:value>2014-07-14T17:19:42.402+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippotranslation:id" sv:type="String">
         <sv:value>4122224d-0ec8-4806-811d-c783d05a37b5</sv:value>
@@ -1242,14 +1318,14 @@
       <sv:property sv:name="hsl:releaseDate" sv:type="Date">
         <sv:value>2014-06-20T07:30:00.000+02:00</sv:value>
       </sv:property>
-      <sv:property sv:name="hsl:subjecttags" sv:type="String" sv:multiple="true">
+      <sv:property sv:multiple="true" sv:name="hsl:subjecttags" sv:type="String">
         <sv:value>onderzoek</sv:value>
         <sv:value>actueel</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:subtitle" sv:type="String">
         <sv:value>Subtitel</sv:value>
       </sv:property>
-      <sv:property sv:name="hsl:thematags" sv:type="String" sv:multiple="true">
+      <sv:property sv:multiple="true" sv:name="hsl:thematags" sv:type="String">
         <sv:value>life-sciences</sv:value>
         <sv:value>management</sv:value>
       </sv:property>
@@ -1263,9 +1339,9 @@
         <sv:property sv:name="hippo:docbase" sv:type="String">
           <sv:value>00e66dd6-aec5-44d6-bada-0534d76d1a9a</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
+        <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
+        <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
       </sv:node>
       <sv:node sv:name="hsl:flexibleblock">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -1278,9 +1354,9 @@
           <sv:property sv:name="hippo:docbase" sv:type="String">
             <sv:value>8d154015-2946-4d43-9003-ca8a31640797</sv:value>
           </sv:property>
-          <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
-          <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
-          <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+          <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
+          <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
+          <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
         </sv:node>
       </sv:node>
       <sv:node sv:name="hsl:flexibleblock">
@@ -1302,6 +1378,44 @@
           <sv:property sv:name="hippo:docbase" sv:type="String">
             <sv:value>ea3b98ae-2d50-48fd-8431-9eea287d93b4</sv:value>
           </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="hsl:flexibleblock">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsl:Paragraph</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:title" sv:type="String">
+          <sv:value>aside aside asideaside</sv:value>
+        </sv:property>
+        <sv:node sv:name="hsl:content">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippostd:html</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippostd:content" sv:type="String">
+            <sv:value>&lt;p&gt;aside&amp;nbsp;aside&amp;nbsp;asideaside &amp;nbsp;aside&amp;nbsp;aside&amp;nbsp;asideaside&amp;nbsp;aside&amp;nbsp;as ide&amp;nbsp;asideaside&amp;nbsp;aside &amp;nbsp;aside&amp;nbsp;asideaside&amp;nbsp; aside&amp;nbsp;as de&amp;nbsp;asideaside&amp;nbsp;aside&amp;nbsp;aside&amp;nbsp;asid easide&amp;nbsp;asideside&amp;nbsp;asideaside&amp;nbsp;aside&amp;nbsp;aside&amp;nbsp;as deaside&amp;nbsp;aside&amp;nbsp;as ide&amp;nbsp;aside &amp;nbsp;aside &amp;nbsp;aside&amp;nbsp;as ide&amp;nbsp;as idea side&amp;nbsp;aside&amp;nbsp;aside&amp;nbsp;as ideaside&amp;nbsp;asid e&amp;nbsp;aside&amp;nbsp;aside aside&amp;nbsp; a side&amp;nbsp;aside&amp;nbsp;asideaside&amp;nbsp;asid e&amp;nbsp;aside&amp;nbsp;asideaside&amp;nbsp;aside&amp;nbsp;aside&amp;nbsp;asidea ide&amp;nbsp;aside &amp;nbsp;aside &amp;nbsp;asid easide&amp;nbsp;aside&amp;nbsp;aside &amp;nbsp;sidea side&amp;nbsp;aside&amp;nbsp;aside&amp;nbsp;asideaside vaside&amp;nbsp;as ide&amp;nbsp;asidea side&amp;nbsp;aside&amp;nbsp;aside&amp;nbsp;asidea side&amp;nbsp;aside&amp;nbsp;aside&amp;nbsp;asi deaside&amp;nbsp;aside&amp;nbsp;aside&amp;nbsp;asid easide &amp;nbsp; aside&amp;nbsp;aside&amp;nbsp;asideaside&amp;nbsp;aside&amp;nbsp;aside&amp;nbsp;aside aside&amp;nbsp;&lt;/p&gt;</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="hsl:paragraphImage">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:ParagraphImage</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:position" sv:type="String">
+            <sv:value>right</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:staticdropdown" sv:type="String">
+            <sv:value>top</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:paragraphImageLink">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippogallerypicker:imagelink</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>00e66dd6-aec5-44d6-bada-0534d76d1a9a</sv:value>
+            </sv:property>
+            <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
+            <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
+            <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
+          </sv:node>
         </sv:node>
       </sv:node>
     </sv:node>
