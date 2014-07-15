@@ -67,11 +67,10 @@ public class FormComponent extends FormStorageComponent {
     }
 
     private String getRedirectionSitemap(final HstRequest request) {
-        String result = null;
-        result = getComponentParameter(request, ATTRIBUTE_DONE_REDIRECT, null);
+        String result = getComponentParameter(request, ATTRIBUTE_DONE_REDIRECT, null);
         FormComponentInfo parametersInfo = getFormParametersInfo(request);
         String beanPath = parametersInfo.getThanksBeanPath();
-        if (beanPath != null) {
+        if (!beanPath.isEmpty()) {
             result = HslUtils.getMatchingSitemap(request, beanPath);
         }
         return result;
