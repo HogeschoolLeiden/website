@@ -13,8 +13,16 @@
 <%@ attribute name="content" rtexprvalue="true" required="true" type="hslbeans.Documents" %>
 
 <c:if test="${hst:isReadable(content, 'asset') && not empty content.asset[0] }">
-	<div class="mod box closed downloads">
-		<h3 class="head"><fmt:message key="documents.title" /></h3>
+    
+    <c:set var="title">
+      <c:choose>
+        <c:when test="${not empty content.title }"><c:out value="${content.title }"/></c:when>
+        <c:otherwise><fmt:message key="documents.title" /></c:otherwise>
+      </c:choose>
+    </c:set>
+	
+    <div class="mod box closed downloads">
+		<h3 class="head">${title}</h3>
 		<ul class="downloads">
 			<c:forEach items="${content.asset }" var="doc">
 				<c:set var="filetype">
