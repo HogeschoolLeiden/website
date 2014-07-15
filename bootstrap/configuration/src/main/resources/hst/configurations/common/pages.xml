@@ -6,6 +6,9 @@
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:component</sv:value>
     </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>6f425a57-d89e-445c-a980-b047782d5c7a</sv:value>
+    </sv:property>
     <sv:property sv:name="hst:componentclassname" sv:type="String">
       <sv:value>com.tdclighthouse.prototype.components.Detail</sv:value>
     </sv:property>
@@ -16,12 +19,18 @@
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:component</sv:value>
       </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>31b3f74d-1983-4cc2-aed7-8603bea84685</sv:value>
+      </sv:property>
       <sv:property sv:name="hst:referencecomponent" sv:type="String">
         <sv:value>hst:components/header</sv:value>
       </sv:property>
       <sv:node sv:name="mainMenu">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hst:component</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>d365473f-4748-4ae5-ae66-3fce7a946373</sv:value>
         </sv:property>
         <sv:property sv:name="hst:componentclassname" sv:type="String">
           <sv:value>com.tdclighthouse.prototype.components.Navigation</sv:value>
@@ -34,13 +43,16 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hst:component</sv:value>
         </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>bccbf33e-5a36-4609-85e4-0bff56ad66a3</sv:value>
+        </sv:property>
         <sv:property sv:name="hst:componentclassname" sv:type="String">
           <sv:value>com.tdclighthouse.prototype.components.SimpleNavigation</sv:value>
         </sv:property>
-        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
           <sv:value>menuName</sv:value>
         </sv:property>
-        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
           <sv:value>service</sv:value>
         </sv:property>
         <sv:property sv:name="hst:template" sv:type="String">
@@ -52,12 +64,18 @@
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:component</sv:value>
       </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>34f1e3dc-ed50-4f69-b4b9-5ea3cfb81664</sv:value>
+      </sv:property>
       <sv:property sv:name="hst:template" sv:type="String">
         <sv:value>standard.main</sv:value>
       </sv:property>
       <sv:node sv:name="left">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hst:component</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>63381504-9ef4-441f-bff7-fce26c156ba1</sv:value>
         </sv:property>
         <sv:property sv:name="hst:template" sv:type="String">
           <sv:value>standard.main.left</sv:value>
@@ -66,6 +84,9 @@
       <sv:node sv:name="content">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hst:component</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>a41f6bbd-ae40-447b-b3a2-ea763eeadc80</sv:value>
         </sv:property>
         <sv:property sv:name="hst:referencecomponent" sv:type="String">
           <sv:value>hst:components/content</sv:value>
@@ -78,6 +99,9 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hst:component</sv:value>
         </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>227af87b-b8b9-4293-98eb-4796a7acc5bd</sv:value>
+        </sv:property>
         <sv:property sv:name="hst:template" sv:type="String">
           <sv:value>standard.main.right</sv:value>
         </sv:property>
@@ -87,6 +111,9 @@
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:component</sv:value>
       </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>c120a0ad-98a9-470c-93c0-2f5ceacb2669</sv:value>
+      </sv:property>
       <sv:property sv:name="hst:template" sv:type="String">
         <sv:value>standard.footer</sv:value>
       </sv:property>
@@ -94,19 +121,33 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hst:component</sv:value>
         </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>7cec8144-0c3b-4171-89cc-ecfbae44f4af</sv:value>
+        </sv:property>
         <sv:property sv:name="hst:componentclassname" sv:type="String">
           <sv:value>com.tdclighthouse.prototype.components.SimpleNavigation</sv:value>
         </sv:property>
-        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
           <sv:value>menuName</sv:value>
         </sv:property>
-        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
           <sv:value>footer</sv:value>
         </sv:property>
         <sv:property sv:name="hst:template" sv:type="String">
           <sv:value>standard.footer.footerservicemenu</sv:value>
         </sv:property>
       </sv:node>
+    </sv:node>
+    <sv:node sv:name="breadcrumb">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:component</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>e45056c1-5b41-40dc-9db1-7c2d1a7ff390</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:referencecomponent" sv:type="String">
+        <sv:value>hst:components/breadcrumb</sv:value>
+      </sv:property>
     </sv:node>
   </sv:node>
   <sv:node sv:name="newspagecommon">

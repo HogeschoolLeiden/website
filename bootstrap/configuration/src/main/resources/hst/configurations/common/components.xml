@@ -1,10 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="hst:components">
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node sv:name="hst:components" xmlns:sv="http://www.jcp.org/jcr/sv/1.0">
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>hst:components</sv:value>
+  </sv:property>
+  <sv:property sv:name="jcr:uuid" sv:type="String">
+    <sv:value>01b427de-e692-46e1-9938-86a2b7d7ab12</sv:value>
   </sv:property>
   <sv:node sv:name="content">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:component</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>9e51c630-486e-4401-94af-03ee9fe2adcc</sv:value>
     </sv:property>
     <sv:property sv:name="hst:componentclassname" sv:type="String">
       <sv:value>com.tdclighthouse.prototype.components.Detail</sv:value>
@@ -17,6 +24,9 @@
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:component</sv:value>
     </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>69dd6f32-f4f2-4e2a-888e-1fc5d49b7aee</sv:value>
+    </sv:property>
     <sv:property sv:name="hst:componentclassname" sv:type="String">
       <sv:value>nl.hsleiden.components.Header</sv:value>
     </sv:property>
@@ -28,13 +38,16 @@
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:component</sv:value>
     </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>3a40a48c-ecd7-4240-a279-5ba07e1c2bd5</sv:value>
+    </sv:property>
     <sv:property sv:name="hst:componentclassname" sv:type="String">
       <sv:value>com.tdclighthouse.prototype.components.CustomNotFound</sv:value>
     </sv:property>
-    <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+    <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
       <sv:value>contentBeanPath</sv:value>
     </sv:property>
-    <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+    <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
       <sv:value>pages/service/not-found</sv:value>
     </sv:property>
     <sv:property sv:name="hst:template" sv:type="String">
@@ -44,6 +57,9 @@
   <sv:node sv:name="navigation">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:component</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>bd0756cc-9fba-429e-96bd-6655b4b3a393</sv:value>
     </sv:property>
     <sv:property sv:name="hst:componentclassname" sv:type="String">
       <sv:value>com.tdclighthouse.prototype.components.Navigation</sv:value>
@@ -56,11 +72,28 @@
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:component</sv:value>
     </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>bb74943f-2efb-4e2f-a967-cf4882fee55f</sv:value>
+    </sv:property>
     <sv:property sv:name="hst:componentclassname" sv:type="String">
       <sv:value>com.tdclighthouse.prototype.components.FacetDeepLinkNav</sv:value>
     </sv:property>
     <sv:property sv:name="hst:template" sv:type="String">
       <sv:value>components.facetdeeplink</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="breadcrumb">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:component</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>0b7e2ffc-c216-4bde-854b-ebdf37b6b15e</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:componentclassname" sv:type="String">
+      <sv:value>com.tdclighthouse.prototype.components.Navigation</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:template" sv:type="String">
+      <sv:value>components.breadcrumb</sv:value>
     </sv:property>
   </sv:node>
 </sv:node>
