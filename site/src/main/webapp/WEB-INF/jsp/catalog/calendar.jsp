@@ -11,6 +11,17 @@
 
 <hst:setBundle basename="nl.hsleiden.channelmanager.Messages, nl.hsleiden.widget.Messages"/>
 
+<hst:headContribution keyHint="fullCalendarCss">
+<link rel='stylesheet' href='<hst:link path="/css/fullcalendar/fullcalendar.css" />' />
+</hst:headContribution>
+<hst:headContribution keyHint="momentJs">
+	<script src="<hst:link path="/js/moment.min.js" />" type="text/javascript"></script>
+</hst:headContribution>
+<hst:headContribution keyHint="fullCalendarJs">
+	<script src="<hst:link path="/js/fullcalendar/fullcalendar.min.js" />" type="text/javascript"></script>
+</hst:headContribution>
+
+
 <div class="catalog relatedNews">
   <hst:defineObjects />
   <c:set var="isCmsRequest" value="${hstRequest.requestContext.cmsRequest}" />
@@ -19,68 +30,25 @@
   	<p class="error-message"><fmt:message key="${webMasterMessage}" ></fmt:message></p>
   </c:if>
 
-  <c:if test="${not empty model.items }">
     <div class="widget-title">
-      <h2><c:out value="${model.info.widgetTitle}" escapeXml="true" /></h2>
+      <h2><c:out value="${model.paramInfo.widgetTitle}" escapeXml="true" /></h2>
     </div>
-    <%-- Items in-inlined for better performance --%>
-    <c:forEach var="item" items="${model.items}" varStatus="zebra">
-      <div class="item-with-image">
-        <div class="image-space">
-          <c:if test="${hst:isReadable(item, 'image')}">
-            <c:if test="${ not empty item.image.link.deref }">
-              <%-- Image size to be defined later --%>
-              <hst:link var="image" hippobean="${item.image.link.deref.listSmallImage }" />
-              <img alt="${item.title }" src="${image }" />
-            </c:if>
-          </c:if>
-          <div class="date">
-            <fmt:formatDate value="${item.eventDate.time}" type="Date"
-              pattern="dd.MM.yyyy" />
-          </div>
-        </div>
-        <div class="itemContent">
-          <div class=itemTitle>
-            <hst:link hippobean="${item }" var="link" />
-            <c:set var="title">
-              <c:out value="${item.title }" escapeXml="true" />
-            </c:set>
-            <a href="${link }" title="${title }">${title }</a>
-          </div>
+    <div id='calendar'></div>
+<hst:resourceURL  var="resouceUrl" />
+<script type="text/javascript">
+$(document).ready(function() {
 
-          <c:if test="${not empty item.introduction }">
-            <div class=introduction>
-              <p>
-                <opw:string-chopper
-                  maxLength="250" bean="${item }"
-                  stringPath="introduction"
-                  allowedLengthTolerance="10"
-                  showDots="true" />
-              </p>
-            </div>
-          </c:if>
-        </div>
-        <div class="clear-both"></div>
-      </div>
-    </c:forEach>
+    // page is now ready, initialize the calendar...
 
-    <c:if test="${model.info.showOverview && not empty model.overviewLink }">
-      <div class="read_more">
-        <h4>
-          <a href='<hst:link hippobean="${model.overviewLink }" />'>
-            <span> 
-              <c:choose>
-                <c:when test="${not empty model.info.overviewLinkLabel }">
-                  <c:out value="${model.info.overviewLinkLabel }" escapeXml="true" />
-                </c:when>
-                <c:otherwise>
-                  <fmt:message key="overiewlink.default.label" />
-                </c:otherwise>
-              </c:choose>
-            </span>
-          </a>
-        </h4>
-      </div>
-    </c:if>
-  </c:if>
+    $('#calendar').fullCalendar({
+    	weekends: true,
+    	events: '${resouceUrl}',
+		eventClick: function(calEvent, jsEvent, view) {
+	        window.location.href = calEvent.link;
+	    }
+ 			
+    });
+
+});
+</script>
 </div>

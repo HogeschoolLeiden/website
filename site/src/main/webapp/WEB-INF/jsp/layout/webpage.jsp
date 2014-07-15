@@ -13,7 +13,6 @@
 <html lang="${pageContext.request.locale.language}">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <hst:headContributions categoryExcludes="scripts" xhtml="true" />
   <!--[if lt IE 9]>
     <hst:link var="html4shiv" path="/js/html5shiv.js"/>
     <script type="text/javascript" src="${html4shiv}"></script>
@@ -37,10 +36,14 @@
   <script type="text/javascript">
   	var contextPath = "${tag:contextPath(pageContext.request)}";
   </script>
-    
+  
   <link rel="shortcut icon" href="<hst:link path="/images/favicon.ico" />" />
   <link rel="stylesheet" href="<hst:link path="/css/style.css" />" type="text/css" />
-
+  <script src="<hst:link path="/js/jquery.min.js" />" type="text/javascript"></script>
+  <script src="<hst:link path="/js/jquery.browser.min.js" />" type="text/javascript"></script>
+  
+  <hst:headContributions categoryExcludes="scripts" xhtml="true" />
+  
   <c:choose>
     <c:when test="${tag:isSubclassOfWebPage(document)}">
 	 <title><c:out value="${document.browserTitle}" escapeXml="true" /></title>

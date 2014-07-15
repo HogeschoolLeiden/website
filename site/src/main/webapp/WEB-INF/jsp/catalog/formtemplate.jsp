@@ -165,15 +165,12 @@ ${form.jsCall}
   <link rel="stylesheet" href="<hst:link path="/js/formcheck/theme/blue/formcheck.css"/>" type="text/css"/>
 </hst:headContribution>
 <hst:headContribution keyHint="jqueryUICss">
-  <link rel="stylesheet" href="<hst:link path="/css/jquery-ui-1.7.3.custom.css"/>" type="text/css"/>
+  <link rel="stylesheet" href="<hst:link path="/css/jquery-ui.min.css"/>" type="text/css"/>
 </hst:headContribution>
-<hst:headContribution keyHint="jquery">
-  <script type="text/javascript" src="<hst:link path="/js/jquery-1.3.2.js"/>"></script>
+<hst:headContribution keyHint="jquery-datepicker" category="scripts">
+  <script type="text/javascript" src="<hst:link path="/js/jquery-ui.min.js"/>"></script>
 </hst:headContribution>
-<hst:headContribution keyHint="jquery-datepicker">
-  <script type="text/javascript" src="<hst:link path="/js/jquery-ui-1.7.3.custom.min.js"/>"></script>
-</hst:headContribution>
-<hst:headContribution keyHint="formJsValidation">
+<hst:headContribution keyHint="formJsValidation" category="scripts">
   <script type="text/javascript" src="<hst:link path="/js/jquery.validate.min.js"/>"></script>
 </hst:headContribution>
 <%--
