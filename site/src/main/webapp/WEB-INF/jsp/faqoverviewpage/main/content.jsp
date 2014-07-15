@@ -28,6 +28,7 @@
             </p>
         </c:if>
         <tag:flexibleblock content="${item.flexibleblock }"/>
+        <tag:toolbox document="${document }" />
   </article>
 </c:forEach>
 <tag:toolbox document="${document }" />

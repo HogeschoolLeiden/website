@@ -14,6 +14,8 @@
 <fmt:message key="page.facebook"  var="pageFacebook"/>
 <fmt:message key="page.twitter" var="pageTwitter"/>
 <fmt:message key="page.pdf" var="pagePdf"/>
+
+<c:if test="${document.share }">
 <ul class="toolbox">
   <c:set var="url">
     <hst:link hippobean="${document }" fullyQualified="true" />
@@ -54,3 +56,4 @@
     </a>
   </li>
 </ul>
+</c:if>

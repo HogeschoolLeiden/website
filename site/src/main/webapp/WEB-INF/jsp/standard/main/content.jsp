@@ -27,6 +27,9 @@
           <p><c:out value="${document.introduction}"/></p> 
         </c:if>
       </header>
+      
+      <tag:toolbox document="${document }" />
+      
     </article>
 
   </c:otherwise>
