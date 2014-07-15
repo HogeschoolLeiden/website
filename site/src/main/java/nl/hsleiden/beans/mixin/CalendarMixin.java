@@ -7,11 +7,11 @@ import org.hippoecm.hst.content.beans.standard.HippoBean;
 
 @Mixin("hsl:CalendarMixin")
 public interface CalendarMixin {
-	
-	@JcrPath("hsl:title")
-	public String getTitle();
 
-	@JcrPath("hsl:scope")
-	public HippoBean getScope();
+    @JcrPath("hsl:title")
+    public String getTitle();
+
+    @JcrPath("hsl:scope")
+    public HippoBean getScope();
 
 }

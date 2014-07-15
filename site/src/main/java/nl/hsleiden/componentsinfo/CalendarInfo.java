@@ -10,20 +10,17 @@ import com.tdclighthouse.prototype.componentsinfo.MixinEnabled;
 
 public interface CalendarInfo extends MixinEnabled {
 
-	@Parameter(name = "title", defaultValue = WidgetConstants.WIDGET_TITLE_DEFAULT)
+    @Parameter(name = "title", defaultValue = WidgetConstants.WIDGET_TITLE_DEFAULT)
     public String getWidgetTitle();
-	
-	@Parameter(name = "scope")
+
+    @Parameter(name = "scope")
     @JcrPath(isRelative = true, pickerInitialPath = WidgetConstants.INITIAL_LOCATION, pickerSelectableNodeTypes = { Constants.WidgetConstants.CONTENT_BEAN_PATH_SELECTABLE })
     public String getScope();
-	
-	@Parameter(name = WidgetConstants.THEMA_FILTER, defaultValue = "off")
+
+    @Parameter(name = WidgetConstants.THEMA_FILTER, defaultValue = "off")
     public Boolean getThemaFilter();
 
     @Parameter(name = WidgetConstants.OVER_FILTER, defaultValue = "off")
     public Boolean getOverFilter();
-	
-	
-	
-	
+
 }
