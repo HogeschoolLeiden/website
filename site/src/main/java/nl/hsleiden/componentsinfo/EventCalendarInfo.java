@@ -8,7 +8,7 @@ import org.hippoecm.hst.core.parameters.Parameter;
 
 import com.tdclighthouse.prototype.componentsinfo.MixinEnabled;
 
-public interface CalendarEventsInfo extends MixinEnabled {
+public interface EventCalendarInfo extends MixinEnabled {
 
     @Parameter(name = "title", defaultValue = WidgetConstants.WIDGET_TITLE_DEFAULT)
     public String getWidgetTitle();

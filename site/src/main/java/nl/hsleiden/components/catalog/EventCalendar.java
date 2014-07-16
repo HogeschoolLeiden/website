@@ -15,7 +15,7 @@ import java.util.Map;
 import javax.jcr.RepositoryException;
 
 import nl.hsleiden.beans.mixin.CalendarEventsMixin;
-import nl.hsleiden.componentsinfo.CalendarEventsInfo;
+import nl.hsleiden.componentsinfo.EventCalendarInfo;
 import nl.hsleiden.utils.Constants;
 import nl.hsleiden.utils.Constants.FieldName;
 import nl.hsleiden.utils.Constants.WidgetConstants;
@@ -40,8 +40,8 @@ import org.hippoecm.hst.core.request.HstRequestContext;
 import com.tdclighthouse.prototype.components.AjaxEnabledComponent;
 import com.tdclighthouse.prototype.utils.BeanUtils;
 
-@ParametersInfo(type = CalendarEventsInfo.class)
-public class Calendar extends AjaxEnabledComponent {
+@ParametersInfo(type = EventCalendarInfo.class)
+public class EventCalendar extends AjaxEnabledComponent {
 
     
     private static final String DATE_FORMATE_PATTERN = "yyyy-MM-dd";
@@ -50,7 +50,7 @@ public class Calendar extends AjaxEnabledComponent {
     public Map<String, Object> getModel(HstRequest request, HstResponse response) {
         try {
             Map<String, Object> result = new HashMap<String, Object>();
-            CalendarEventsInfo paramInfo = getConfiguration(request);
+            EventCalendarInfo paramInfo = getConfiguration(request);
             result.put(Constants.Attributes.PARAM_INFO, paramInfo);
             addEventualErrorMessages(request, result, paramInfo);
             return result;
@@ -59,7 +59,7 @@ public class Calendar extends AjaxEnabledComponent {
         }
     }
 
-    private void addEventualErrorMessages(HstRequest request, Map<String, Object> result, CalendarEventsInfo paramInfo)
+    private void addEventualErrorMessages(HstRequest request, Map<String, Object> result, EventCalendarInfo paramInfo)
             throws RepositoryException {
         if (getScope(request) == null) {
             request.setAttribute(WidgetConstants.WEB_MASTER_MESSAGE, "webmaster.nofolder.message");
@@ -74,13 +74,13 @@ public class Calendar extends AjaxEnabledComponent {
     @Override
     public Object getJsonAjaxModel(HstRequest request, HstResponse response) {
         try {
-            List<Event> result = null;
-            CalendarEventsInfo paramInfo = getConfiguration(request);
+            List<Event> result = new ArrayList<Event>();
+            EventCalendarInfo paramInfo = getConfiguration(request);
             HippoBean scope = getScope(request);
             if (scope != null) {
                 HstQuery query = getQuery(request, scope, paramInfo);
                 HstQueryResult queryResult = query.execute();
-                result = addItems(request, queryResult);
+                result = getEvents(request, queryResult);
             }
             return result;
         } catch (RepositoryException e) {
@@ -93,7 +93,7 @@ public class Calendar extends AjaxEnabledComponent {
     }
 
     @SuppressWarnings("unchecked")
-    private HstQuery getQuery(HstRequest request, HippoBean scope, CalendarEventsInfo info) throws ParseException,
+    private HstQuery getQuery(HstRequest request, HippoBean scope, EventCalendarInfo info) throws ParseException,
             QueryException {
 
         DateFormat format = new SimpleDateFormat(DATE_FORMATE_PATTERN);
@@ -108,14 +108,14 @@ public class Calendar extends AjaxEnabledComponent {
         return query;
     }
 
-    private List<Event> addItems(HstRequest request, HstQueryResult queryResult) {
+    private List<Event> getEvents(HstRequest request, HstQueryResult queryResult) {
         DateFormat format = new SimpleDateFormat(DATE_FORMATE_PATTERN);
         List<Event> result = new ArrayList<Event>();
 
         HstRequestContext requestContext = request.getRequestContext();
         HstLinkCreator linkCreator = requestContext.getHstLinkCreator();
         for (HippoBeanIterator hippoBeans = queryResult.getHippoBeans(); hippoBeans.hasNext();) {
-            EventPage event = (EventPage) hippoBeans.next();
+            EventPage event = (EventPage) hippoBeans.nextHippoBean();
             HstLink link = linkCreator.create(event, requestContext);
             result.add(new Event(event.getTitle(), link.toUrlForm(requestContext, false), format.format(event
                     .getEventDate().getTime())));
@@ -124,11 +124,11 @@ public class Calendar extends AjaxEnabledComponent {
     }
 
     private HippoBean getScope(HstRequest request) throws RepositoryException {
-        CalendarEventsInfo configuration = getConfiguration(request);
+        EventCalendarInfo configuration = getConfiguration(request);
         return HslUtils.getSelectedBean(request, configuration.getScope());
     }
 
-    private void addTaggingFilter(Filter baseFilter, HstQuery query, HstRequest request, CalendarEventsInfo info)
+    private void addTaggingFilter(Filter baseFilter, HstQuery query, HstRequest request, EventCalendarInfo info)
             throws FilterException {
         HippoBean contentBean = request.getRequestContext().getContentBean();
         if (contentBean instanceof ArticlePage) {
@@ -153,8 +153,8 @@ public class Calendar extends AjaxEnabledComponent {
         return baseFilter;
     }
 
-    private CalendarEventsInfo getConfiguration(HstRequest request) throws RepositoryException {
-        CalendarEventsInfo paramInfo = this.<CalendarEventsInfo> getComponentParametersInfo(request);
+    private EventCalendarInfo getConfiguration(HstRequest request) throws RepositoryException {
+        EventCalendarInfo paramInfo = this.<EventCalendarInfo> getComponentParametersInfo(request);
         if (paramInfo.getUseMixin() != null && paramInfo.getUseMixin()) {
             HippoBean proxy;
             proxy = BeanUtils.getMixinProxy(request.getRequestContext().getContentBean());

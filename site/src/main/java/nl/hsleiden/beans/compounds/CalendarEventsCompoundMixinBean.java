@@ -1,13 +1,13 @@
 package nl.hsleiden.beans.compounds;
 
 
-import nl.hsleiden.componentsinfo.CalendarEventsInfo;
+import nl.hsleiden.componentsinfo.EventCalendarInfo;
 
 import org.hippoecm.hst.content.beans.Node;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 
 @Node(jcrType = "hsl:CalendarEventsCompoundMixin")
-public class CalendarEventsCompoundMixinBean extends hslbeans.CalendarEventsCompoundMixin implements CalendarEventsInfo  {
+public class CalendarEventsCompoundMixinBean extends hslbeans.CalendarEventsCompoundMixin implements EventCalendarInfo  {
 
     public Boolean getUseMixin() {
         throw new UnsupportedOperationException();
