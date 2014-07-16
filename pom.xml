@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
@@ -16,11 +15,9 @@
   <version>1.2-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <!-- The below project elements are emptied/overridden as otherwise their 
-    metadata would be inherited or merged from the parent hippo-cms7-release 
-    pom (or its hippo-cms7-project pom). DO NOT remove these tags but instead 
-    fill them in appropriately as needed, UNLESS the inherited values are valid 
-    for your project. -->
+  <!-- The below project elements are emptied/overridden as otherwise their metadata would be inherited or merged from the parent hippo-cms7-release pom 
+    (or its hippo-cms7-project pom). DO NOT remove these tags but instead fill them in appropriately as needed, UNLESS the inherited values are valid for your 
+    project. -->
   <url />
   <inceptionYear />
   <organization />
@@ -54,8 +51,7 @@
       <url>https://nexus.open-web.nl/nexus/content/repositories/snapshots/</url>
     </snapshotRepository>
   </distributionManagement>
-  <!-- End of emptied/overridden metadata from parent hippo-cms7-release 
-    pom. -->
+  <!-- End of emptied/overridden metadata from parent hippo-cms7-release pom. -->
 
   <properties>
     <it.cargo.servlet.port>9208</it.cargo.servlet.port>
@@ -86,8 +82,8 @@
     <forge.urlrewriter.version>1.05.01</forge.urlrewriter.version>
 
     <forge.hstpdfrenderer.version>1.01.00</forge.hstpdfrenderer.version>
-    
-    
+    <jcr.mock.version>1.0-SNAPSHOT</jcr.mock.version>
+
   </properties>
 
   <repositories>
@@ -204,6 +200,13 @@
         <groupId>junit</groupId>
         <artifactId>junit</artifactId>
         <version>${junit.version}</version>
+        <scope>test</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>nl.openweb.jcr</groupId>
+        <artifactId>jcr-mock</artifactId>
+        <version>${jcr.mock.version}</version>
         <scope>test</scope>
       </dependency>
 
@@ -442,7 +445,7 @@
                   <rebel.log4j-plugin>true</rebel.log4j-plugin>
                   <!-- enables auto export: -->
                   <project.basedir>${project.basedir}</project.basedir>
-				  <xr.util-logging.loggingEnabled>true</xr.util-logging.loggingEnabled>
+                  <xr.util-logging.loggingEnabled>true</xr.util-logging.loggingEnabled>
                 </systemProperties>
               </container>
             </configuration>

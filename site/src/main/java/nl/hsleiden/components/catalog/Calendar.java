@@ -72,7 +72,7 @@ public class Calendar extends AjaxEnabledComponent {
 
             HstLinkCreator linkCreator = requestContext.getHstLinkCreator();
             for (HippoBeanIterator hippoBeans = queryResult.getHippoBeans(); hippoBeans.hasNext();) {
-                EventPage event = (EventPage) hippoBeans.next();
+                EventPage event = (EventPage) hippoBeans.nextHippoBean();
                 HstLink link = linkCreator.create(event, requestContext);
                 result.add(new Event(event.getTitle(), link.toUrlForm(requestContext, false), format.format(event.getEventDate().getTime())));
             }

@@ -4,12 +4,13 @@ import hslbeans.EventPage;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import javax.jcr.Node;
-import javax.jcr.NodeIterator;
 import javax.jcr.RepositoryException;
 import javax.jcr.Session;
 import javax.jcr.ValueFactory;
@@ -18,14 +19,22 @@ import javax.jcr.query.Query;
 import javax.jcr.query.QueryManager;
 import javax.jcr.query.QueryResult;
 
+import nl.hsleiden.components.catalog.Calendar.Event;
 import nl.hsleiden.componentsinfo.CalendarInfo;
 import nl.hsleiden.utils.Constants;
+import nl.openweb.jcr.mock.MockNode;
+import nl.openweb.jcr.mock.MockNodeIterator;
+import nl.openweb.jcr.mock.MockProperty;
 
 import org.apache.jackrabbit.value.StringValue;
 import org.easymock.EasyMock;
 import org.hippoecm.hst.content.beans.manager.ObjectConverterImpl;
 import org.hippoecm.hst.content.beans.query.HstQueryManagerImpl;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
+import org.hippoecm.hst.core.jcr.RuntimeRepositoryException;
+import org.hippoecm.hst.core.linking.HstLink;
+import org.hippoecm.hst.core.linking.HstLinkCreator;
+import org.hippoecm.hst.core.request.HstRequestContext;
 import org.hippoecm.hst.mock.core.component.MockHstRequest;
 import org.hippoecm.hst.mock.core.component.MockHstResponse;
 import org.hippoecm.hst.mock.core.request.MockHstRequestContext;
@@ -35,6 +44,8 @@ import org.junit.Test;
 
 public class CalendarTest {
 
+    private static final String LINK_TO_EVENT = "/link/to/event";
+    private static final String EVENT_PAGE_TYPE = "hsl:EventPage";
     private static final String EXPECTED_QUERY = "//*[(@hippo:paths='62b8dd7a-ccf9-463a-a770-3f445f2edcef') and not(@jcr:primaryType='nt:frozenNode') and (@hsl:eventDate >= xs:dateTime('2014-06-29T00:00:00.000+02:00') and @hsl:eventDate <= xs:dateTime('2014-08-10T00:00:00.000+02:00')) and ((@jcr:primaryType='hsl:EventPage'))] order by @jcr:score descending ";
     private static final String END_DATE = "2014-08-10";
     private static final String START_DATE = "2014-06-29";
@@ -60,11 +71,21 @@ public class CalendarTest {
         MockHstRequestContext requestContext = (MockHstRequestContext) request.getRequestContext();
         requestContext.setSiteContentBaseBean(siteContentBean);
         Map<String, Class<? extends HippoBean>> jcrPrimaryNodeTypeBeanPairs = new HashMap<String, Class<? extends HippoBean>>();
-        jcrPrimaryNodeTypeBeanPairs.put("hsl:EventPage", EventPage.class);
+        jcrPrimaryNodeTypeBeanPairs.put(EVENT_PAGE_TYPE, EventPage.class);
         requestContext.setDefaultHstQueryManager(new HstQueryManagerImpl(session, new ObjectConverterImpl(
                 jcrPrimaryNodeTypeBeanPairs, null), null));
-        Object model = calendar.getJsonAjaxModel(request, new MockHstResponse());
-        Assert.assertTrue(model instanceof List);
+        @SuppressWarnings("unchecked")
+        List<Event> model = (List<Event>) calendar.getJsonAjaxModel(request, new MockHstResponse());
+        Assert.assertEquals(2, model.size());
+        Event event = model.get(0);
+        Assert.assertEquals("event-1", event.getTitle());
+        Assert.assertEquals("2014-07-16", event.getStart());
+        Assert.assertEquals(LINK_TO_EVENT, event.getLink());
+
+        event = model.get(1);
+        Assert.assertEquals("event-2", event.getTitle());
+        Assert.assertEquals("2014-07-17", event.getStart());
+        Assert.assertEquals(LINK_TO_EVENT, event.getLink());
     }
 
     private Session createMockSession() {
@@ -74,10 +95,12 @@ public class CalendarTest {
             SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
             java.util.Calendar calendar = java.util.Calendar.getInstance();
             calendar.setTime(format.parse(START_DATE));
-            EasyMock.expect(valueFactory.createValue(calendar)).andReturn(new StringValue("2014-06-29T00:00:00.000+02:00"));
+            EasyMock.expect(valueFactory.createValue(calendar)).andReturn(
+                    new StringValue("2014-06-29T00:00:00.000+02:00"));
             calendar = java.util.Calendar.getInstance();
             calendar.setTime(format.parse(END_DATE));
-            EasyMock.expect(valueFactory.createValue(calendar)).andReturn(new StringValue("2014-08-10T00:00:00.000+02:00"));
+            EasyMock.expect(valueFactory.createValue(calendar)).andReturn(
+                    new StringValue("2014-08-10T00:00:00.000+02:00"));
             EasyMock.expect(session.getValueFactory()).andReturn(valueFactory).times(2);
             Workspace workspace = EasyMock.createNiceMock(Workspace.class);
             QueryManager queryManager = EasyMock.createMock(QueryManager.class);
@@ -87,7 +110,7 @@ public class CalendarTest {
             EasyMock.expect(session.getWorkspace()).andReturn(workspace).times(2);
             EasyMock.expect(queryManager.createQuery(EXPECTED_QUERY, "xpath")).andReturn(query);
             EasyMock.replay(workspace, queryManager, query);
-            
+
         } catch (RepositoryException e) {
             // never going to happen
         } catch (ParseException e) {
@@ -98,28 +121,33 @@ public class CalendarTest {
     }
 
     private QueryResult getMockQueryResult() {
-        QueryResult queryResult = EasyMock.createMock(QueryResult.class);
-        NodeIterator nodeIterator = EasyMock.createNiceMock(NodeIterator.class);
         try {
-            EasyMock.expect(queryResult.getNodes()).andReturn(nodeIterator);
+            QueryResult queryResult = EasyMock.createMock(QueryResult.class);
+            List<Node> nodes = new ArrayList<Node>();
+            nodes.add(createMockEventPageNode("event-1", new GregorianCalendar(2014, 6, 16)));
+            nodes.add(createMockEventPageNode("event-2", new GregorianCalendar(2014, 6, 17)));
+            EasyMock.expect(queryResult.getNodes()).andReturn(new MockNodeIterator(nodes));
+            EasyMock.replay(queryResult);
+            return queryResult;
         } catch (RepositoryException e) {
             // never going to happen
+            throw new RuntimeRepositoryException(e.getMessage(), e);
         }
-        EasyMock.replay(queryResult);
-        return queryResult;
+    }
+
+    private MockNode createMockEventPageNode(String name, java.util.Calendar date) {
+        MockNode result = new MockNode(name, EVENT_PAGE_TYPE);
+        result.addProperty(new MockProperty("hsl:title", name, result));
+        result.addProperty(new MockProperty("hsl:eventDate", date, result));
+        return result;
     }
 
     private HippoBean createMockScope(Session session) {
         HippoBean scope = EasyMock.createMock(HippoBean.class);
-        Node node = EasyMock.createNiceMock(Node.class);
-        try {
-            EasyMock.expect(node.getIdentifier()).andReturn("62b8dd7a-ccf9-463a-a770-3f445f2edcef").anyTimes();
-            EasyMock.expect(node.getSession()).andReturn(session).anyTimes();
-        } catch (RepositoryException e) {
-            // Never going to happen
-        }
+        MockNode node = new MockNode(session);
+        node.setIdentifier("62b8dd7a-ccf9-463a-a770-3f445f2edcef");
         EasyMock.expect(scope.getNode()).andReturn(node).anyTimes();
-        EasyMock.replay(scope, node);
+        EasyMock.replay(scope);
         return scope;
     }
 
@@ -134,10 +162,29 @@ public class CalendarTest {
         MockHstRequest request = new MockHstRequest();
         request.setAttribute(ParameterUtils.MY_MOCK_PARAMETER_INFO, calendarInfo);
         MockHstRequestContext requestContext = new MockHstRequestContext();
+
+        requestContext.setLinkCreator(createMockLinkCreator());
         request.setRequestContext(requestContext);
         request.addParameter("start", START_DATE);
         request.addParameter("end", END_DATE);
         return request;
+    }
+
+    private HstLinkCreator createMockLinkCreator() {
+        HstLinkCreator linkCreator = EasyMock.createMock(HstLinkCreator.class);
+        EasyMock.expect(
+                linkCreator.create(EasyMock.anyObject(EventPage.class), EasyMock.anyObject(HstRequestContext.class)))
+                .andReturn(createMockHstLink("/my/link/")).anyTimes();
+        EasyMock.replay(linkCreator);
+        return linkCreator;
+    }
+
+    private HstLink createMockHstLink(String string) {
+        HstLink createMock = EasyMock.createMock(HstLink.class);
+        EasyMock.expect(createMock.toUrlForm(EasyMock.anyObject(HstRequestContext.class), EasyMock.anyBoolean()))
+                .andReturn(LINK_TO_EVENT).anyTimes();
+        EasyMock.replay(createMock);
+        return createMock;
     }
 
     private CalendarInfo createMockCalendarInfo(Boolean useMixin, String scope) {
