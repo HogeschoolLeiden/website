@@ -18,9 +18,11 @@
 	<script src="<hst:link path="/js/moment.min.js" />" type="text/javascript"></script>
 </hst:headContribution>
 <hst:headContribution keyHint="fullCalendarJs">
-	<script src="<hst:link path="/js/fullcalendar/fullcalendar.min.js" />" type="text/javascript"></script>
+	<script src="<hst:link path="/js/fullcalendar/fullcalendar.js" />" type="text/javascript"></script>
 </hst:headContribution>
-
+<hst:headContribution keyHint="fullCalendarLangJs">
+	<script src="<hst:link path="/js/fullcalendar/lang/nl.js" />" type="text/javascript"></script>
+</hst:headContribution>
 
 <hst:defineObjects />
 <c:set var="isCmsRequest" value="${hstRequest.requestContext.cmsRequest}" />
@@ -40,11 +42,20 @@
 		$(document).ready(function() {
   		// page is now ready, initialize the calendar...
   			$('#calendar').fullCalendar({
+  				lang: '${pageContext.request.locale.language}',
             	weekends: true,
             	events: '${resouceUrl}',
     			eventClick: function(calEvent, jsEvent, view) {
     	        	window.location.href = calEvent.link;
-      	    	}
+      	    	},
+            	header: {
+            	    left:   'title',
+            	    center: '',
+                	right:  '',
+              		left2:   'today',
+              	    center2: '',
+                  	right2:  'prev,next'
+            	}
         	});
     	});
   	</script>
