@@ -19,8 +19,8 @@ import javax.jcr.query.Query;
 import javax.jcr.query.QueryManager;
 import javax.jcr.query.QueryResult;
 
-import nl.hsleiden.components.catalog.Calendar.Event;
-import nl.hsleiden.componentsinfo.CalendarInfo;
+import nl.hsleiden.components.catalog.EventCalendar.Event;
+import nl.hsleiden.componentsinfo.EventCalendarInfo;
 import nl.hsleiden.utils.Constants;
 import nl.openweb.jcr.mock.MockNode;
 import nl.openweb.jcr.mock.MockNodeIterator;
@@ -28,6 +28,8 @@ import nl.openweb.jcr.mock.MockProperty;
 
 import org.apache.jackrabbit.value.StringValue;
 import org.easymock.EasyMock;
+import org.hippoecm.hst.content.beans.ObjectBeanManagerException;
+import org.hippoecm.hst.content.beans.manager.ObjectBeanManager;
 import org.hippoecm.hst.content.beans.manager.ObjectConverterImpl;
 import org.hippoecm.hst.content.beans.query.HstQueryManagerImpl;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
@@ -42,7 +44,7 @@ import org.hippoecm.hst.utils.ParameterUtils;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class CalendarTest {
+public class EventCalendarTest {
 
     private static final String LINK_TO_EVENT = "/link/to/event";
     private static final String EVENT_PAGE_TYPE = "hsl:EventPage";
@@ -53,9 +55,9 @@ public class CalendarTest {
 
     @Test
     public void getModel() {
-        Calendar calendar = new Calendar();
-        CalendarInfo calendarInfo = createMockCalendarInfo(false, null);
-        MockHstRequest request = getMockRequest(calendarInfo);
+        EventCalendar calendar = new EventCalendar();
+        EventCalendarInfo calendarInfo = createMockCalendarInfo(false, SCOPE);
+        MockHstRequest request = getMockRequest(calendarInfo, null);
         Map<String, Object> model = calendar.getModel(request, new MockHstResponse());
         Assert.assertEquals(1, model.size());
         Assert.assertSame(calendarInfo, model.get(Constants.Attributes.PARAM_INFO));
@@ -63,13 +65,11 @@ public class CalendarTest {
 
     @Test
     public void getJsonAjaxModel() {
-        Calendar calendar = new Calendar();
-        CalendarInfo calendarInfo = createMockCalendarInfo(false, SCOPE);
-        MockHstRequest request = getMockRequest(calendarInfo);
+        EventCalendar calendar = new EventCalendar();
+        EventCalendarInfo calendarInfo = createMockCalendarInfo(false, SCOPE);
         Session session = createMockSession();
-        HippoBean siteContentBean = mockSiteContentBean(createMockScope(session), SCOPE);
+        MockHstRequest request = getMockRequest(calendarInfo, session);
         MockHstRequestContext requestContext = (MockHstRequestContext) request.getRequestContext();
-        requestContext.setSiteContentBaseBean(siteContentBean);
         Map<String, Class<? extends HippoBean>> jcrPrimaryNodeTypeBeanPairs = new HashMap<String, Class<? extends HippoBean>>();
         jcrPrimaryNodeTypeBeanPairs.put(EVENT_PAGE_TYPE, EventPage.class);
         requestContext.setDefaultHstQueryManager(new HstQueryManagerImpl(session, new ObjectConverterImpl(
@@ -106,8 +106,8 @@ public class CalendarTest {
             QueryManager queryManager = EasyMock.createMock(QueryManager.class);
             Query query = EasyMock.createNiceMock(Query.class);
             EasyMock.expect(query.execute()).andReturn(getMockQueryResult());
-            EasyMock.expect(workspace.getQueryManager()).andReturn(queryManager);
-            EasyMock.expect(session.getWorkspace()).andReturn(workspace).times(2);
+            EasyMock.expect(workspace.getQueryManager()).andReturn(queryManager).anyTimes();
+            EasyMock.expect(session.getWorkspace()).andReturn(workspace).anyTimes();
             EasyMock.expect(queryManager.createQuery(EXPECTED_QUERY, "xpath")).andReturn(query);
             EasyMock.replay(workspace, queryManager, query);
 
@@ -151,23 +151,27 @@ public class CalendarTest {
         return scope;
     }
 
-    private HippoBean mockSiteContentBean(HippoBean scope, String scopePath) {
-        HippoBean siteContentBean = EasyMock.createMock(HippoBean.class);
-        EasyMock.expect(siteContentBean.getBean(scopePath)).andReturn(scope);
-        EasyMock.replay(siteContentBean);
-        return siteContentBean;
-    }
+    
 
-    private MockHstRequest getMockRequest(CalendarInfo calendarInfo) {
-        MockHstRequest request = new MockHstRequest();
-        request.setAttribute(ParameterUtils.MY_MOCK_PARAMETER_INFO, calendarInfo);
-        MockHstRequestContext requestContext = new MockHstRequestContext();
-
-        requestContext.setLinkCreator(createMockLinkCreator());
-        request.setRequestContext(requestContext);
-        request.addParameter("start", START_DATE);
-        request.addParameter("end", END_DATE);
-        return request;
+    private MockHstRequest getMockRequest(EventCalendarInfo calendarInfo, Session session) {
+        try {
+            MockHstRequest request = new MockHstRequest();
+            request.setAttribute(ParameterUtils.MY_MOCK_PARAMETER_INFO, calendarInfo);
+            MockHstRequestContext requestContext = new MockHstRequestContext();
+            ObjectBeanManager objectBeanManager = EasyMock.createMock(ObjectBeanManager.class);
+            HippoBean eventPage = createMockScope(session);
+            EasyMock.expect(objectBeanManager.getObject(SCOPE)).andReturn(eventPage).anyTimes();
+            EasyMock.replay(objectBeanManager);
+            requestContext.setDefaultObjectBeanManager(objectBeanManager);
+            requestContext.setLinkCreator(createMockLinkCreator());
+            request.setRequestContext(requestContext);
+            request.addParameter("start", START_DATE);
+            request.addParameter("end", END_DATE);
+            return request;
+        } catch (ObjectBeanManagerException e) {
+            // never going to happen
+            throw new RuntimeException(e.getMessage(), e);
+        }
     }
 
     private HstLinkCreator createMockLinkCreator() {
@@ -187,9 +191,11 @@ public class CalendarTest {
         return createMock;
     }
 
-    private CalendarInfo createMockCalendarInfo(Boolean useMixin, String scope) {
-        CalendarInfo result = EasyMock.createMock(CalendarInfo.class);
-        EasyMock.expect(result.getUseMixin()).andReturn(useMixin).times(2);
+    private EventCalendarInfo createMockCalendarInfo(Boolean useMixin, String scope) {
+        EventCalendarInfo result = EasyMock.createMock(EventCalendarInfo.class);
+        EasyMock.expect(result.getUseMixin()).andReturn(useMixin).anyTimes();
+        EasyMock.expect(result.getOverFilter()).andReturn(false).anyTimes();
+        EasyMock.expect(result.getThemaFilter()).andReturn(false).anyTimes();
         if (scope != null) {
             EasyMock.expect(result.getScope()).andReturn(scope);
         }

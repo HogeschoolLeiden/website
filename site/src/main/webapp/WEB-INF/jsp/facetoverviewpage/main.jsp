@@ -65,6 +65,7 @@
 		  </c:choose>
 
 		  <hst:include ref="contentBottom" />
+          <tag:toolbox document="${document }" />
 		</div>
 		<aside class="span2">
 			<hst:include ref="rightTop" />

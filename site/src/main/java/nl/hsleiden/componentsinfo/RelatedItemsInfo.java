@@ -32,7 +32,7 @@ public interface RelatedItemsInfo extends ContentBeanPathInfo {
     public Boolean getShowOverview();
 
     @Parameter(name = Constants.WidgetConstants.OVERVIEW_BEAN_PATH, defaultValue = "")
-    @JcrPath(isRelative = false, pickerInitialPath = Constants.WidgetConstants.INITIAL_LOCATION, pickerSelectableNodeTypes = { Constants.WidgetConstants.OVERVIEW_BEAN_PATH_DOC_TYPE })
+    @JcrPath(isRelative = false, pickerInitialPath = Constants.WidgetConstants.INITIAL_LOCATION, pickerRemembersLastVisited=false, pickerSelectableNodeTypes = { Constants.WidgetConstants.OVERVIEW_BEAN_PATH_DOC_TYPE })
     public String getOverviewBeanPath();
 
     @Parameter(name = Constants.WidgetConstants.OVERVIEW_LINK_LABEL, defaultValue = "")
@@ -40,7 +40,7 @@ public interface RelatedItemsInfo extends ContentBeanPathInfo {
 
     @Override
     @Parameter(name = Constants.WidgetConstants.CONTENT_BEAN_PATH)
-    @JcrPath(isRelative = false, pickerInitialPath = Constants.WidgetConstants.INITIAL_LOCATION, pickerSelectableNodeTypes = { Constants.WidgetConstants.CONTENT_BEAN_PATH_SELECTABLE })
+    @JcrPath(isRelative = false, pickerInitialPath = Constants.WidgetConstants.INITIAL_LOCATION, pickerRemembersLastVisited=false, pickerSelectableNodeTypes = { Constants.WidgetConstants.CONTENT_BEAN_PATH_SELECTABLE })
     public String getContentBeanPath();
 
     @Parameter(name = Constants.WidgetConstants.SORT_ORDER, defaultValue = Constants.Values.DESCENDING)

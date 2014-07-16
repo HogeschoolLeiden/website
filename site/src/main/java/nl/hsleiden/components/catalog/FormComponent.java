@@ -70,7 +70,7 @@ public class FormComponent extends FormStorageComponent {
         String result = getComponentParameter(request, ATTRIBUTE_DONE_REDIRECT, null);
         FormComponentInfo parametersInfo = getFormParametersInfo(request);
         String beanPath = parametersInfo.getThanksBeanPath();
-        if (!beanPath.isEmpty()) {
+        if (beanPath!=null && !beanPath.isEmpty()) {
             result = HslUtils.getMatchingSitemap(request, beanPath);
         }
         return result;

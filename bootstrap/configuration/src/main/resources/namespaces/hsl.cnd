@@ -45,6 +45,8 @@
 
 [hsl:RelatedEventsCompoundMixin] > hippo:compound, hippostd:relaxed orderable
 
+[hsl:CalendarEventsCompoundMixin] > hippo:compound, hippostd:relaxed orderable
+
 [hsl:FormCompoundMixin] > hippo:compound, hippostd:relaxed orderable
 
 [hsl:RelatedFilterParameters] > hippo:compound, hippostd:relaxed orderable
@@ -64,6 +66,10 @@
 [hsl:RelatedEventsMixin]
   mixin
   + hsl:relatedEventsCompoundMixin (hsl:RelatedEventsCompoundMixin)
+
+[hsl:CalendarEventsMixin]
+  mixin
+  + hsl:calendarEventsCompoundMixin (hsl:CalendarEventsCompoundMixin)
   
 [hsl:doublemailform] > ef:form
 [hsl:doublemailstoreform] > ef:form

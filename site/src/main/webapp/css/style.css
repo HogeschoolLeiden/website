@@ -994,7 +994,7 @@ select:focus {
 }
 
 .input-xlarge {
-    width: 270px;
+    width: 75%;
 }
 
 .input-xxlarge {
@@ -5020,15 +5020,17 @@ p.image span { width:230px; font-family: "Verdana", "Arial", sans-serif; font-st
 /* ---------------------------------- style the toolbox ---------------------------------------- */
 ul.toolbox{ display: block; padding: 5px 10px 5px; border: 1px solid #ccc; 
 border-color: #007bc7; 	list-style: none; margin-left: 0px; height: 55px; }
-ul.toolbox li {width:50%; float: left; height: 27.5px; line-height: 25px; }
+ul.toolbox li {width:33%; float: left; height: 27.5px; line-height: 25px; }
 
 .toolbox a{	background-repeat: no-repeat; padding-left: 27px; display: block; }
 
 .toolbox a.print{ background-image: url("../images/toolbox/print-icon.png"); }
 .toolbox a.facebook{ background-image: url("../images/toolbox/fb-icon.png"); }
 .toolbox a.email{ background-image: url("../images/toolbox/mail-icon.png"); }
-.toolbox a.twitter{ background-image: url("../images/toolbox/tw-icon.png"); }
 .toolbox a.pdf{ background-image: url("../images/toolbox/pdf-icon.png"); }
+.toolbox a.googleplus{ background-image: url("../images/toolbox/googleplus-icon.png"); }
+.toolbox a.linkedin{ background-image: url("../images/toolbox/linkedin-icon.png"); }
+.toolbox a.twitter{ background-image: url("../images/toolbox/tw-icon.png"); }
 /* ---------------------------------- style the facets ---------------------------------------- */
 
 /* ---------------------------------- style left side navigation ---------------------------------------- */
@@ -5075,12 +5077,13 @@ div.clear {clear: both;}
 /* ---------------------------------- images in the list widgets ---------------------------------------- */
 
 /* ---------------------------------- header style ---------------------------------------- */
-.header.span8 .logo { width: 170px; float: left; margin: 20px 0;}
-.header.span8 .navbar.nav.pull-right.h-menu{ float: left; margin: 5px 0 20px 20px; width: 880px; }
+.header.span8 .logo { width: 15.8%; float: left; margin: 20px 0;}
+.header.span8 .navbar.nav.pull-right.h-menu{ float: left; margin: 5px 0 20px 20px; width: 82.1%; }
 
-.header.span8 div.service-menu { height: 75px; width: 880px; float:right; position: relative;}
+.header.span8 div.service-menu { height: 75px; width: 100%; float:right; position: relative;}
 .header.span8 div.main-menu { height: 32px; text-align: justify;
-    -ms-text-justify: distribute-all-lines; text-justify: distribute-all-lines; width: 880px; float:right; }
+    -ms-text-justify: distribute-all-lines; text-justify: distribute-all-lines; 
+    width: 100%; float:right; }
 
 .header.span8 div.main-menu ul { width: 100%; margin-right: 0; height: 32px;}
 .header.span8 div.main-menu ul li {width: 20%; vertical-align: top; display: inline-block; 
@@ -5093,9 +5096,9 @@ div.service-menu .search-box { width:100%; height: 37px; }
 
 div.service-menu .menulinks ul { float: right; height: 38px;}
 div.service-menu .menulinks ul.international { float: left; height: 38px;}
-div.service-menu .menulinks ul li.last a { padding-right: 0;}
+div.service-menu .menulinks ul li.last a { padding-right: 5px;}
 
-div.service-menu .search-box form { float: right; }
+div.service-menu .search-box form { width: 41%; float: left; margin-left: 59%}
 /* ---------------------------------- headder style ---------------------------------------- */
 
 /* ---------------------------------- breadcrumb style ---------------------------------------- */

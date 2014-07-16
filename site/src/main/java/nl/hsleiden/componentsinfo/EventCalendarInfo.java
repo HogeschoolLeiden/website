@@ -8,13 +8,15 @@ import org.hippoecm.hst.core.parameters.Parameter;
 
 import com.tdclighthouse.prototype.componentsinfo.MixinEnabled;
 
-public interface CalendarInfo extends MixinEnabled {
+public interface EventCalendarInfo extends MixinEnabled {
 
     @Parameter(name = "title", defaultValue = WidgetConstants.WIDGET_TITLE_DEFAULT)
     public String getWidgetTitle();
 
     @Parameter(name = "scope")
-    @JcrPath(isRelative = true, pickerInitialPath = WidgetConstants.INITIAL_LOCATION, pickerSelectableNodeTypes = { Constants.WidgetConstants.CONTENT_BEAN_PATH_SELECTABLE })
+    @JcrPath(isRelative = false, pickerRemembersLastVisited=false, 
+             pickerInitialPath = WidgetConstants.INITIAL_LOCATION, 
+             pickerSelectableNodeTypes = { Constants.WidgetConstants.CONTENT_BEAN_PATH_SELECTABLE })
     public String getScope();
 
     @Parameter(name = WidgetConstants.THEMA_FILTER, defaultValue = "off")
