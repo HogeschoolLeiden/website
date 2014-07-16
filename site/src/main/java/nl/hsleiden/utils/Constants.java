@@ -97,6 +97,7 @@ public class Constants {
 
         public static final String RELEASE_DATE = "hsl:releaseDate";
         public static final String TITLE = "hsl:title";
+        public static final String HSL_EVENT_DATE = "hsl:eventDate";
 
         private FieldName() {
         }

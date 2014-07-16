@@ -22,33 +22,31 @@
 </hst:headContribution>
 
 
-<div class="catalog relatedNews">
-  <hst:defineObjects />
-  <c:set var="isCmsRequest" value="${hstRequest.requestContext.cmsRequest}" />
+<hst:defineObjects />
+<c:set var="isCmsRequest" value="${hstRequest.requestContext.cmsRequest}" />
 
-  <c:if test="${(empty model.items or fn:length(model.items) eq 0) and not empty webMasterMessage and isCmsRequest}">
-  	<p class="error-message"><fmt:message key="${webMasterMessage}" ></fmt:message></p>
-  </c:if>
+<c:if test="${(empty model.items or fn:length(model.items) eq 0) and not empty webMasterMessage and isCmsRequest}">
+	<p class="error-message"><fmt:message key="${webMasterMessage}" ></fmt:message></p>
+</c:if>
 
+<c:if test="${empty webMasterMessage}">
+  <div class="catalog calendarEvents">
     <div class="widget-title">
       <h2><c:out value="${model.paramInfo.widgetTitle}" escapeXml="true" /></h2>
     </div>
     <div id='calendar'></div>
-<hst:resourceURL  var="resouceUrl" />
-<script type="text/javascript">
-$(document).ready(function() {
-
-    // page is now ready, initialize the calendar...
-
-    $('#calendar').fullCalendar({
-    	weekends: true,
-    	events: '${resouceUrl}',
-		eventClick: function(calEvent, jsEvent, view) {
-	        window.location.href = calEvent.link;
-	    }
- 			
-    });
-
-});
-</script>
-</div>
+    <hst:resourceURL  var="resouceUrl" />
+    <script type="text/javascript">
+		$(document).ready(function() {
+  		// page is now ready, initialize the calendar...
+  			$('#calendar').fullCalendar({
+            	weekends: true,
+            	events: '${resouceUrl}',
+    			eventClick: function(calEvent, jsEvent, view) {
+    	        	window.location.href = calEvent.link;
+      	    	}
+        	});
+    	});
+  	</script>
+  </div>
+</c:if>  

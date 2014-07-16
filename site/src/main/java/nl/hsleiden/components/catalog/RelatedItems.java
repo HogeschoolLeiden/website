@@ -142,23 +142,15 @@ public abstract class RelatedItems extends AjaxEnabledComponent {
 
         Filter globalFilter = query.createFilter();
         if (info.getOverFilter()) {
-            Filter ff = addFilterOnField(query, contentBean.getSubjecttags(), "hsl:subjecttags");
+            Filter ff = HslUtils.addFilterOnField(query, contentBean.getSubjecttags(), "hsl:subjecttags");
             globalFilter.addAndFilter(ff);
         }
         if (info.getThemaFilter()) {
-            Filter ff = addFilterOnField(query, contentBean.getThematags(), "hsl:thematags");
+            Filter ff = HslUtils.addFilterOnField(query, contentBean.getThematags(), "hsl:thematags");
             globalFilter.addAndFilter(ff);
         }
         query.setFilter(globalFilter);
     }
 
-    private Filter addFilterOnField(HstQuery query, String[] filterValues, String fieldToFilter) throws FilterException {
-        Filter f = query.createFilter();
-        for (String value : filterValues) {
-            Filter tagfilter = query.createFilter();
-            tagfilter.addEqualTo(fieldToFilter, value);
-            f.addOrFilter(tagfilter);
-        }
-        return f;
-    }
+    
 }

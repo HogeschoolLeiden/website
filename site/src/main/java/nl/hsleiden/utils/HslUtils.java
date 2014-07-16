@@ -4,6 +4,9 @@ import org.apache.commons.lang.StringUtils;
 import org.hippoecm.hst.configuration.hosting.Mount;
 import org.hippoecm.hst.content.beans.ObjectBeanManagerException;
 import org.hippoecm.hst.content.beans.manager.ObjectBeanManager;
+import org.hippoecm.hst.content.beans.query.HstQuery;
+import org.hippoecm.hst.content.beans.query.exceptions.FilterException;
+import org.hippoecm.hst.content.beans.query.filter.Filter;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.core.component.HstComponentException;
 import org.hippoecm.hst.core.component.HstRequest;
@@ -77,5 +80,15 @@ public class HslUtils {
         }
 
         return result;
+    }
+    
+    public static Filter addFilterOnField(HstQuery query, String[] filterValues, String fieldToFilter) throws FilterException {
+        Filter f = query.createFilter();
+        for (String value : filterValues) {
+            Filter tagfilter = query.createFilter();
+            tagfilter.addEqualTo(fieldToFilter, value);
+            f.addOrFilter(tagfilter);
+        }
+        return f;
     }
 }
