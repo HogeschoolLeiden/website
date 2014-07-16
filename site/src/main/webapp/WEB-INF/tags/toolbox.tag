@@ -18,7 +18,7 @@
 <fmt:message key="page.pdf" var="pagePdf"/>
 <fmt:message key="page.forward" var="forward"/>
 
-<c:if test="${document.share }">
+<c:if test="${hst:isReadable(document, 'share') && document.share}">
 <ul class="toolbox">
   <c:set var="url">
     <hst:link hippobean="${document }" fullyQualified="true" />
