@@ -11,7 +11,7 @@ public interface ContactPersonsInfo {
     @Parameter(name = Constants.WidgetConstants.FIELD_USER_MIXIN, defaultValue = "off")
     public Boolean getUseMixin();
 
-    @Parameter(name = Constants.WidgetConstants.WIDGET_TITLE, defaultValue = Constants.WidgetConstants.WIDGET_TITLE_DEFAULT)
+    @Parameter(name = Constants.WidgetConstants.WIDGET_TITLE, defaultValue = Constants.WidgetConstants.WIDGET_TITLE_DEFAULT_CONTACTS)
     public String getWidgetTitle();
 
     @Parameter(name = Constants.WidgetConstants.CONTACT_1, defaultValue = "")
