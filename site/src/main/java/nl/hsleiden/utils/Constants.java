@@ -37,9 +37,11 @@ public class Constants {
         public static final String SHOW_OVERVIEW = "showOverviewLink";
         public static final String OVERVIEW_BEAN_PATH = "overviewBeanPath";
         public static final String THANKS_BEAN_PATH = "thanksBeanPath";
-        public static final String OVERVIEW_BEAN_PATH_DOC_TYPE = "hsl:WebPage";
-        public static final String INITIAL_LOCATION = "/content/documents/hsl/pages";
         public static final String OVERVIEW_LINK_LABEL = "overviewLinkLabel";
+
+        public static final String CONTACT_1 = "firstContact";
+        public static final String CONTACT_2 = "secondContact";
+        public static final String CONTACT_3 = "thirdContact";
 
         public static final String SORT_ORDER = "sortOrder";
         public static final String SORT_BY = "sortBy";
@@ -47,7 +49,9 @@ public class Constants {
         public static final String THEMA_FILTER = "themaFilter";
         public static final String OVER_FILTER = "overFilter";
 
+        public static final String INITIAL_LOCATION = "/content/documents/hsl/pages";
         public static final String FORMS_INITIAL_LOCATION = "/content/documents/hsl/componenten/formulieren";
+        public static final String CONTACTS_INITIAL_LOCATION = "/content/documents/hsl/componenten/personen";
 
         public static final String WEB_MASTER_MESSAGE = "webMasterMessage";
 
@@ -104,7 +108,7 @@ public class Constants {
     }
 
     public static class NodeName extends NodeNameConstants {
-
+        
         private NodeName() {
         }
     }

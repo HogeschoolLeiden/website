@@ -11,7 +11,7 @@
 
 <hst:setBundle basename="nl.hsleiden.channelmanager.Messages, nl.hsleiden.widget.Messages"/>
 
-<div class="catalog relatedNews">
+<div class="catalog relatedEvents">
   <hst:defineObjects />
   <c:set var="isCmsRequest" value="${hstRequest.requestContext.cmsRequest}" />
 

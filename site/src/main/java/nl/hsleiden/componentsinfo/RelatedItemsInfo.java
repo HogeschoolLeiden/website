@@ -1,5 +1,6 @@
 package nl.hsleiden.componentsinfo;
 
+import hslbeans.WebPage;
 import nl.hsleiden.utils.Constants;
 
 import org.hippoecm.hst.core.parameters.DropDownList;
@@ -32,7 +33,7 @@ public interface RelatedItemsInfo extends ContentBeanPathInfo {
     public Boolean getShowOverview();
 
     @Parameter(name = Constants.WidgetConstants.OVERVIEW_BEAN_PATH, defaultValue = "")
-    @JcrPath(isRelative = false, pickerInitialPath = Constants.WidgetConstants.INITIAL_LOCATION, pickerRemembersLastVisited=false, pickerSelectableNodeTypes = { Constants.WidgetConstants.OVERVIEW_BEAN_PATH_DOC_TYPE })
+    @JcrPath(isRelative = false, pickerInitialPath = Constants.WidgetConstants.INITIAL_LOCATION, pickerRemembersLastVisited=false, pickerSelectableNodeTypes = { WebPage.JCR_TYPE })
     public String getOverviewBeanPath();
 
     @Parameter(name = Constants.WidgetConstants.OVERVIEW_LINK_LABEL, defaultValue = "")

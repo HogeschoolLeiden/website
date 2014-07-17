@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="configuratie">
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node sv:name="configuratie" xmlns:sv="http://www.jcp.org/jcr/sv/1.0">
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>hippostd:folder</sv:value>
   </sv:property>
-  <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+  <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
     <sv:value>hippotranslation:translated</sv:value>
     <sv:value>mix:versionable</sv:value>
     <sv:value>hippo:translated</sv:value>
@@ -10,7 +11,7 @@
   <sv:property sv:name="jcr:uuid" sv:type="String">
     <sv:value>8d1bcae0-211c-4186-8c7f-fc32b17dc8a6</sv:value>
   </sv:property>
-  <sv:property sv:name="hippostd:foldertype" sv:type="String" sv:multiple="true">
+  <sv:property sv:multiple="true" sv:name="hippostd:foldertype" sv:type="String">
     <sv:value>new-translated-folder</sv:value>
     <sv:value>new-document</sv:value>
   </sv:property>
@@ -75,19 +76,30 @@
       <sv:value>Configuratie</sv:value>
     </sv:property>
   </sv:node>
+  <sv:node sv:name="hippo:translation">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hippo:translation</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:language" sv:type="String">
+      <sv:value/>
+    </sv:property>
+    <sv:property sv:name="hippo:message" sv:type="String">
+      <sv:value>Configuratie</sv:value>
+    </sv:property>
+  </sv:node>
   <sv:node sv:name="valuelists">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hippostd:folder</sv:value>
     </sv:property>
-    <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+    <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
       <sv:value>hippotranslation:translated</sv:value>
-      <sv:value>hippo:translated</sv:value>
       <sv:value>mix:versionable</sv:value>
+      <sv:value>hippo:translated</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>0710213c-430e-44b9-871c-dabb4f22d510</sv:value>
     </sv:property>
-    <sv:property sv:name="hippostd:foldertype" sv:type="String" sv:multiple="true">
+    <sv:property sv:multiple="true" sv:name="hippostd:foldertype" sv:type="String">
       <sv:value>new-translated-folder</sv:value>
       <sv:value>new-document</sv:value>
     </sv:property>
@@ -112,7 +124,7 @@
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hippo:handle</sv:value>
       </sv:property>
-      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
         <sv:value>mix:referenceable</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
@@ -122,14 +134,14 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>selection:valuelist</sv:value>
         </sv:property>
-        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
           <sv:value>mix:referenceable</sv:value>
           <sv:value>hippotranslation:translated</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>c67798f7-1371-4933-b8a5-5d66d3ce5752</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
           <sv:value>live</sv:value>
           <sv:value>preview</sv:value>
         </sv:property>
@@ -178,7 +190,7 @@
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hippo:handle</sv:value>
       </sv:property>
-      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
         <sv:value>mix:referenceable</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
@@ -188,14 +200,14 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>selection:valuelist</sv:value>
         </sv:property>
-        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
           <sv:value>mix:referenceable</sv:value>
           <sv:value>hippotranslation:translated</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>9c1a4c69-c87f-48fc-a15c-7d3650942bd8</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
           <sv:value>live</sv:value>
           <sv:value>preview</sv:value>
         </sv:property>
@@ -343,7 +355,7 @@
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hippo:handle</sv:value>
       </sv:property>
-      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
         <sv:value>mix:referenceable</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
@@ -353,14 +365,14 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>selection:valuelist</sv:value>
         </sv:property>
-        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
           <sv:value>mix:referenceable</sv:value>
           <sv:value>hippotranslation:translated</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>c30d932e-1cea-4f24-879f-ed4a3a501ee5</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
           <sv:value>live</sv:value>
           <sv:value>preview</sv:value>
         </sv:property>
@@ -420,7 +432,7 @@
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hippo:handle</sv:value>
       </sv:property>
-      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
         <sv:value>mix:referenceable</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
@@ -430,14 +442,14 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>selection:valuelist</sv:value>
         </sv:property>
-        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
           <sv:value>mix:referenceable</sv:value>
           <sv:value>hippotranslation:translated</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>db22a5a4-82d6-4e61-864e-b01ef9a26914</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
           <sv:value>live</sv:value>
           <sv:value>preview</sv:value>
         </sv:property>
@@ -508,7 +520,7 @@
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hippo:handle</sv:value>
       </sv:property>
-      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
         <sv:value>mix:referenceable</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
@@ -518,14 +530,14 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>selection:valuelist</sv:value>
         </sv:property>
-        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
           <sv:value>mix:referenceable</sv:value>
           <sv:value>hippotranslation:translated</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>bcd1dd01-08c8-4b9f-8214-fbd44fc1f7d7</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
           <sv:value>live</sv:value>
           <sv:value>preview</sv:value>
         </sv:property>
@@ -564,15 +576,15 @@
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hippostd:folder</sv:value>
     </sv:property>
-    <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+    <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
       <sv:value>hippotranslation:translated</sv:value>
-      <sv:value>hippo:translated</sv:value>
       <sv:value>mix:versionable</sv:value>
+      <sv:value>hippo:translated</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>9d40f53f-c9e7-4a90-9a4f-706c3396eaf5</sv:value>
     </sv:property>
-    <sv:property sv:name="hippostd:foldertype" sv:type="String" sv:multiple="true">
+    <sv:property sv:multiple="true" sv:name="hippostd:foldertype" sv:type="String">
       <sv:value>new-translated-folder</sv:value>
       <sv:value>new-document</sv:value>
     </sv:property>
@@ -616,8 +628,8 @@
         </sv:property>
         <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String"/>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
-          <sv:value>share-box-messages/share-box-messages[3]</sv:value>
-          <sv:value>share-box-messages/share-box-messages[2]</sv:value>
+          <sv:value>configuratie/resource-bundles/share-box-messages/share-box-messages[3]</sv:value>
+          <sv:value>configuratie/resource-bundles/share-box-messages/share-box-messages[2]</sv:value>
         </sv:property>
         <sv:property sv:name="hippostd:state" sv:type="String">
           <sv:value>draft</sv:value>
@@ -707,7 +719,7 @@
           <sv:value>preview</sv:value>
         </sv:property>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
-          <sv:value>share-box-messages/share-box-messages[3]</sv:value>
+          <sv:value>configuratie/resource-bundles/share-box-messages/share-box-messages[3]</sv:value>
         </sv:property>
         <sv:property sv:name="hippostd:state" sv:type="String">
           <sv:value>unpublished</sv:value>
@@ -796,7 +808,7 @@
           <sv:value>live</sv:value>
         </sv:property>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
-          <sv:value>share-box-messages/share-box-messages[2]</sv:value>
+          <sv:value>configuratie/resource-bundles/share-box-messages/share-box-messages[2]</sv:value>
         </sv:property>
         <sv:property sv:name="hippostd:state" sv:type="String">
           <sv:value>published</sv:value>
@@ -890,7 +902,7 @@
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hippo:handle</sv:value>
       </sv:property>
-      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
         <sv:value>mix:referenceable</sv:value>
         <sv:value>hippo:translated</sv:value>
       </sv:property>
@@ -901,13 +913,13 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>resourcebundle:resourcebundle</sv:value>
         </sv:property>
-        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
           <sv:value>mix:referenceable</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>517eb859-35e0-4321-84f8-46db7ec8a352</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String"/>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
           <sv:value>configuratie/resource-bundles/prototype-messages/prototype-messages[3]</sv:value>
           <sv:value>configuratie/resource-bundles/prototype-messages/prototype-messages[2]</sv:value>
@@ -936,7 +948,7 @@
         <sv:property sv:name="hippotranslation:locale" sv:type="String">
           <sv:value>nl</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:descriptions" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:descriptions" sv:type="String">
           <sv:value>used for the paginator in overview pages and lists</sv:value>
           <sv:value>used for the paginator in overview pages and list</sv:value>
           <sv:value/>
@@ -949,7 +961,7 @@
         <sv:property sv:name="resourcebundle:id" sv:type="String">
           <sv:value>nl.openweb.prototype.Messages</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:keys" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:keys" sv:type="String">
           <sv:value>paginator.next</sv:value>
           <sv:value>paginator.previous</sv:value>
           <sv:value>file.type.xlsx</sv:value>
@@ -959,7 +971,7 @@
           <sv:value>file.type.doc</sv:value>
           <sv:value>documents.title</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:messages" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:messages" sv:type="String">
           <sv:value>next page</sv:value>
           <sv:value>previous page</sv:value>
           <sv:value>xlsx</sv:value>
@@ -969,7 +981,7 @@
           <sv:value>doc</sv:value>
           <sv:value>Available Downloads</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:messages_en" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:messages_en" sv:type="String">
           <sv:value>next page</sv:value>
           <sv:value>previous page</sv:value>
           <sv:value>xlsx</sv:value>
@@ -979,7 +991,7 @@
           <sv:value>doc</sv:value>
           <sv:value>Available Downloads</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:messages_nl" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:messages_nl" sv:type="String">
           <sv:value>next page</sv:value>
           <sv:value>previous page</sv:value>
           <sv:value>xlsx</sv:value>
@@ -1005,14 +1017,14 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>resourcebundle:resourcebundle</sv:value>
         </sv:property>
-        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
           <sv:value>mix:referenceable</sv:value>
           <sv:value>mix:versionable</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>61362122-97e1-4bc5-88f9-e9f8ffa76ec3</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
           <sv:value>preview</sv:value>
         </sv:property>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
@@ -1042,7 +1054,7 @@
         <sv:property sv:name="hippotranslation:locale" sv:type="String">
           <sv:value>nl</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:descriptions" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:descriptions" sv:type="String">
           <sv:value>used for the paginator in overview pages and lists</sv:value>
           <sv:value>used for the paginator in overview pages and list</sv:value>
           <sv:value/>
@@ -1055,7 +1067,7 @@
         <sv:property sv:name="resourcebundle:id" sv:type="String">
           <sv:value>nl.openweb.prototype.Messages</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:keys" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:keys" sv:type="String">
           <sv:value>paginator.next</sv:value>
           <sv:value>paginator.previous</sv:value>
           <sv:value>file.type.xlsx</sv:value>
@@ -1065,7 +1077,7 @@
           <sv:value>file.type.doc</sv:value>
           <sv:value>documents.title</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:messages" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:messages" sv:type="String">
           <sv:value>next page</sv:value>
           <sv:value>previous page</sv:value>
           <sv:value>xlsx</sv:value>
@@ -1075,7 +1087,7 @@
           <sv:value>doc</sv:value>
           <sv:value>Available Downloads</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:messages_en" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:messages_en" sv:type="String">
           <sv:value>next page</sv:value>
           <sv:value>previous page</sv:value>
           <sv:value>xlsx</sv:value>
@@ -1085,7 +1097,7 @@
           <sv:value>doc</sv:value>
           <sv:value>Available Downloads</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:messages_nl" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:messages_nl" sv:type="String">
           <sv:value>next page</sv:value>
           <sv:value>previous page</sv:value>
           <sv:value>xlsx</sv:value>
@@ -1100,13 +1112,13 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>resourcebundle:resourcebundle</sv:value>
         </sv:property>
-        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
           <sv:value>mix:referenceable</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>3e1557bf-18ee-4749-9cff-dfd973f84e8a</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
           <sv:value>live</sv:value>
         </sv:property>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
@@ -1139,7 +1151,7 @@
         <sv:property sv:name="hippotranslation:locale" sv:type="String">
           <sv:value>nl</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:descriptions" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:descriptions" sv:type="String">
           <sv:value>used for the paginator in overview pages and lists</sv:value>
           <sv:value>used for the paginator in overview pages and list</sv:value>
           <sv:value/>
@@ -1152,7 +1164,7 @@
         <sv:property sv:name="resourcebundle:id" sv:type="String">
           <sv:value>nl.openweb.prototype.Messages</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:keys" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:keys" sv:type="String">
           <sv:value>paginator.next</sv:value>
           <sv:value>paginator.previous</sv:value>
           <sv:value>file.type.xlsx</sv:value>
@@ -1162,7 +1174,7 @@
           <sv:value>file.type.doc</sv:value>
           <sv:value>documents.title</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:messages" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:messages" sv:type="String">
           <sv:value>next page</sv:value>
           <sv:value>previous page</sv:value>
           <sv:value>xlsx</sv:value>
@@ -1172,7 +1184,7 @@
           <sv:value>doc</sv:value>
           <sv:value>Available Downloads</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:messages_en" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:messages_en" sv:type="String">
           <sv:value>next page</sv:value>
           <sv:value>previous page</sv:value>
           <sv:value>xlsx</sv:value>
@@ -1182,7 +1194,7 @@
           <sv:value>doc</sv:value>
           <sv:value>Available Downloads</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:messages_nl" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:messages_nl" sv:type="String">
           <sv:value>next page</sv:value>
           <sv:value>previous page</sv:value>
           <sv:value>xlsx</sv:value>
@@ -1198,7 +1210,7 @@
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hippo:handle</sv:value>
       </sv:property>
-      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
         <sv:value>mix:referenceable</sv:value>
         <sv:value>hippo:translated</sv:value>
       </sv:property>
@@ -1220,13 +1232,13 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>resourcebundle:resourcebundle</sv:value>
         </sv:property>
-        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
           <sv:value>mix:referenceable</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>1d28b8bc-4f2e-44a2-8cab-c5b755e6023b</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String"/>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
           <sv:value>configuratie/resource-bundles/general-messages/general-messages[3]</sv:value>
           <sv:value>configuratie/resource-bundles/general-messages/general-messages[2]</sv:value>
@@ -1255,7 +1267,7 @@
         <sv:property sv:name="hippotranslation:locale" sv:type="String">
           <sv:value>nl</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:descriptions" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:descriptions" sv:type="String">
           <sv:value/>
           <sv:value/>
           <sv:value/>
@@ -1263,22 +1275,22 @@
         <sv:property sv:name="resourcebundle:id" sv:type="String">
           <sv:value>nl.hsleiden.general.Messages</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:keys" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:keys" sv:type="String">
           <sv:value>documents.title</sv:value>
           <sv:value>page.not.found</sv:value>
           <sv:value>search.submit.text</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:messages" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:messages" sv:type="String">
           <sv:value>Available Downloads</sv:value>
           <sv:value>Not Found</sv:value>
           <sv:value>Zoek</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:messages_en" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:messages_en" sv:type="String">
           <sv:value>Available Downloads</sv:value>
           <sv:value>Not Found</sv:value>
           <sv:value>Search</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:messages_nl" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:messages_nl" sv:type="String">
           <sv:value>Available Downloads</sv:value>
           <sv:value>Not Found</sv:value>
           <sv:value>Zoek</sv:value>
@@ -1288,14 +1300,14 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>resourcebundle:resourcebundle</sv:value>
         </sv:property>
-        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
           <sv:value>mix:referenceable</sv:value>
           <sv:value>mix:versionable</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>cf4056a8-cb8c-4b85-9075-32870e846750</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
           <sv:value>preview</sv:value>
         </sv:property>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
@@ -1325,7 +1337,7 @@
         <sv:property sv:name="hippotranslation:locale" sv:type="String">
           <sv:value>nl</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:descriptions" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:descriptions" sv:type="String">
           <sv:value/>
           <sv:value/>
           <sv:value/>
@@ -1333,22 +1345,22 @@
         <sv:property sv:name="resourcebundle:id" sv:type="String">
           <sv:value>nl.hsleiden.general.Messages</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:keys" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:keys" sv:type="String">
           <sv:value>documents.title</sv:value>
           <sv:value>page.not.found</sv:value>
           <sv:value>search.submit.text</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:messages" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:messages" sv:type="String">
           <sv:value>Available Downloads</sv:value>
           <sv:value>Not Found</sv:value>
           <sv:value>Zoek</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:messages_en" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:messages_en" sv:type="String">
           <sv:value>Available Downloads</sv:value>
           <sv:value>Not Found</sv:value>
           <sv:value>Search</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:messages_nl" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:messages_nl" sv:type="String">
           <sv:value>Available Downloads</sv:value>
           <sv:value>Not Found</sv:value>
           <sv:value>Zoek</sv:value>
@@ -1358,13 +1370,13 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>resourcebundle:resourcebundle</sv:value>
         </sv:property>
-        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
           <sv:value>mix:referenceable</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>40049ec8-311a-4d8c-af95-6cf7c2daf0c7</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
           <sv:value>live</sv:value>
         </sv:property>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
@@ -1397,7 +1409,7 @@
         <sv:property sv:name="hippotranslation:locale" sv:type="String">
           <sv:value>nl</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:descriptions" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:descriptions" sv:type="String">
           <sv:value/>
           <sv:value/>
           <sv:value/>
@@ -1405,22 +1417,22 @@
         <sv:property sv:name="resourcebundle:id" sv:type="String">
           <sv:value>nl.hsleiden.general.Messages</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:keys" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:keys" sv:type="String">
           <sv:value>documents.title</sv:value>
           <sv:value>page.not.found</sv:value>
           <sv:value>search.submit.text</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:messages" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:messages" sv:type="String">
           <sv:value>Available Downloads</sv:value>
           <sv:value>Not Found</sv:value>
           <sv:value>Zoek</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:messages_en" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:messages_en" sv:type="String">
           <sv:value>Available Downloads</sv:value>
           <sv:value>Not Found</sv:value>
           <sv:value>Search</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:messages_nl" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:messages_nl" sv:type="String">
           <sv:value>Available Downloads</sv:value>
           <sv:value>Not Found</sv:value>
           <sv:value>Zoek</sv:value>
@@ -1431,7 +1443,7 @@
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hippo:handle</sv:value>
       </sv:property>
-      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
         <sv:value>mix:referenceable</sv:value>
         <sv:value>hippo:translated</sv:value>
       </sv:property>
@@ -1442,13 +1454,13 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>resourcebundle:resourcebundle</sv:value>
         </sv:property>
-        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
           <sv:value>mix:referenceable</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>90b33a03-4db9-4359-b1ec-ab230ce1974b</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String"/>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
           <sv:value>configuratie/resource-bundles/channel-manager-messages/channel-manager-messages[2]</sv:value>
           <sv:value>configuratie/resource-bundles/channel-manager-messages/channel-manager-messages[3]</sv:value>
@@ -1477,7 +1489,7 @@
         <sv:property sv:name="hippotranslation:locale" sv:type="String">
           <sv:value>nl</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:descriptions" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:descriptions" sv:type="String">
           <sv:value/>
           <sv:value/>
           <sv:value/>
@@ -1486,25 +1498,25 @@
         <sv:property sv:name="resourcebundle:id" sv:type="String">
           <sv:value>nl.hsleiden.channelmanager.Messages</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:keys" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:keys" sv:type="String">
           <sv:value>webmaster.nofiltering.message</sv:value>
           <sv:value>webmaster.noitems.message</sv:value>
           <sv:value>webmaster.noform.message</sv:value>
           <sv:value>webmaster.nofolder.message</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:messages" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:messages" sv:type="String">
           <sv:value>This document has no over or thema tags. Filtering can not be applied. Remove filter checkboxes for having any items displayed</sv:value>
           <sv:value>There are no items to display under the selected folder or the items do not match the required filtering.</sv:value>
           <sv:value>There is no form connected to this page or this document</sv:value>
           <sv:value>No root folder has been selected neither in the widget configuration nor in the mixin. No items will be displayed.</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:messages_en" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:messages_en" sv:type="String">
           <sv:value>This document has no over or thema tags. Filtering can not be applied. Remove filter checkboxes for having any items displayed</sv:value>
           <sv:value>There are no items to display under the selected folder or the items do not match the required filtering.</sv:value>
           <sv:value>There is no form connected to this page or this document</sv:value>
           <sv:value>No root folder has been selected neither in the widget configuration nor in the mixin. No items will be displayed.</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:messages_nl" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:messages_nl" sv:type="String">
           <sv:value>This document has no over or thema tags. Filtering can not be applied. Remove filter checkboxes for having any items displayed</sv:value>
           <sv:value/>
           <sv:value>There is no form connected to this page or this document</sv:value>
@@ -1526,14 +1538,14 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>resourcebundle:resourcebundle</sv:value>
         </sv:property>
-        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
           <sv:value>mix:referenceable</sv:value>
           <sv:value>mix:versionable</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>3373b068-3605-4e9f-b42e-cf11a6f0f888</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
           <sv:value>preview</sv:value>
         </sv:property>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
@@ -1563,7 +1575,7 @@
         <sv:property sv:name="hippotranslation:locale" sv:type="String">
           <sv:value>nl</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:descriptions" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:descriptions" sv:type="String">
           <sv:value/>
           <sv:value/>
           <sv:value/>
@@ -1572,25 +1584,25 @@
         <sv:property sv:name="resourcebundle:id" sv:type="String">
           <sv:value>nl.hsleiden.channelmanager.Messages</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:keys" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:keys" sv:type="String">
           <sv:value>webmaster.nofiltering.message</sv:value>
           <sv:value>webmaster.noitems.message</sv:value>
           <sv:value>webmaster.noform.message</sv:value>
           <sv:value>webmaster.nofolder.message</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:messages" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:messages" sv:type="String">
           <sv:value>This document has no over or thema tags. Filtering can not be applied. Remove filter checkboxes for having any items displayed</sv:value>
           <sv:value>There are no items to display under the selected folder or the items do not match the required filtering.</sv:value>
           <sv:value>There is no form connected to this page or this document</sv:value>
           <sv:value>No root folder has been selected neither in the widget configuration nor in the mixin. No items will be displayed.</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:messages_en" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:messages_en" sv:type="String">
           <sv:value>This document has no over or thema tags. Filtering can not be applied. Remove filter checkboxes for having any items displayed</sv:value>
           <sv:value>There are no items to display under the selected folder or the items do not match the required filtering.</sv:value>
           <sv:value>There is no form connected to this page or this document</sv:value>
           <sv:value>No root folder has been selected neither in the widget configuration nor in the mixin. No items will be displayed.</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:messages_nl" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:messages_nl" sv:type="String">
           <sv:value>This document has no over or thema tags. Filtering can not be applied. Remove filter checkboxes for having any items displayed</sv:value>
           <sv:value/>
           <sv:value>There is no form connected to this page or this document</sv:value>
@@ -1601,13 +1613,13 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>resourcebundle:resourcebundle</sv:value>
         </sv:property>
-        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
           <sv:value>mix:referenceable</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>e7e8fa08-1ce9-4ed8-b254-ef086e27f3dd</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
           <sv:value>live</sv:value>
         </sv:property>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
@@ -1640,7 +1652,7 @@
         <sv:property sv:name="hippotranslation:locale" sv:type="String">
           <sv:value>nl</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:descriptions" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:descriptions" sv:type="String">
           <sv:value/>
           <sv:value/>
           <sv:value/>
@@ -1649,25 +1661,25 @@
         <sv:property sv:name="resourcebundle:id" sv:type="String">
           <sv:value>nl.hsleiden.channelmanager.Messages</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:keys" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:keys" sv:type="String">
           <sv:value>webmaster.nofiltering.message</sv:value>
           <sv:value>webmaster.noitems.message</sv:value>
           <sv:value>webmaster.noform.message</sv:value>
           <sv:value>webmaster.nofolder.message</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:messages" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:messages" sv:type="String">
           <sv:value>This document has no over or thema tags. Filtering can not be applied. Remove filter checkboxes for having any items displayed</sv:value>
           <sv:value>There are no items to display under the selected folder or the items do not match the required filtering.</sv:value>
           <sv:value>There is no form connected to this page or this document</sv:value>
           <sv:value>No root folder has been selected neither in the widget configuration nor in the mixin. No items will be displayed.</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:messages_en" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:messages_en" sv:type="String">
           <sv:value>This document has no over or thema tags. Filtering can not be applied. Remove filter checkboxes for having any items displayed</sv:value>
           <sv:value>There are no items to display under the selected folder or the items do not match the required filtering.</sv:value>
           <sv:value>There is no form connected to this page or this document</sv:value>
           <sv:value>No root folder has been selected neither in the widget configuration nor in the mixin. No items will be displayed.</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:messages_nl" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:messages_nl" sv:type="String">
           <sv:value>This document has no over or thema tags. Filtering can not be applied. Remove filter checkboxes for having any items displayed</sv:value>
           <sv:value>There are no items to display under the selected folder or the items do not match the required filtering.</sv:value>
           <sv:value>There is no form connected to this page or this document</sv:value>
@@ -1679,7 +1691,7 @@
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hippo:handle</sv:value>
       </sv:property>
-      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
         <sv:value>mix:referenceable</sv:value>
         <sv:value>hippo:translated</sv:value>
       </sv:property>
@@ -1690,13 +1702,13 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>resourcebundle:resourcebundle</sv:value>
         </sv:property>
-        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
           <sv:value>mix:referenceable</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>9e6e3a57-5e3a-4411-a73a-db99a496210e</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String"/>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
           <sv:value>configuratie/resource-bundles/widget-messages/widget-messages[2]</sv:value>
           <sv:value>configuratie/resource-bundles/widget-messages/widget-messages[3]</sv:value>
@@ -1714,10 +1726,10 @@
           <sv:value>2014-07-09T11:47:12.308+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-09T11:47:13.241+02:00</sv:value>
+          <sv:value>2014-07-17T11:41:01.576+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
-          <sv:value>boogaard.joris</sv:value>
+          <sv:value>admin</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:id" sv:type="String">
           <sv:value>a624d81b-1d29-4fa5-a54c-22baa0004a2a</sv:value>
@@ -1725,23 +1737,28 @@
         <sv:property sv:name="hippotranslation:locale" sv:type="String">
           <sv:value>nl</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:descriptions" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:descriptions" sv:type="String">
           <sv:value>Default value for label of the overview links in the widgets</sv:value>
+          <sv:value/>
         </sv:property>
         <sv:property sv:name="resourcebundle:id" sv:type="String">
           <sv:value>nl.hsleiden.widget.Messages</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:keys" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:keys" sv:type="String">
           <sv:value>overiewlink.default.label</sv:value>
+          <sv:value>contact.person.subject</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:messages" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:messages" sv:type="String">
           <sv:value>Overview</sv:value>
+          <sv:value>Define it in property: contact person subject</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:messages_en" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:messages_en" sv:type="String">
           <sv:value>Overview</sv:value>
+          <sv:value>Define it in property: contact person subject</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:messages_nl" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:messages_nl" sv:type="String">
           <sv:value>Overview</sv:value>
+          <sv:value>Define it in property: contact person subject</sv:value>
         </sv:property>
       </sv:node>
       <sv:node sv:name="hippo:translation">
@@ -1759,14 +1776,14 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>resourcebundle:resourcebundle</sv:value>
         </sv:property>
-        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
           <sv:value>mix:referenceable</sv:value>
           <sv:value>mix:versionable</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>4c56b761-b681-4bf4-b23c-d38f6325c083</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
           <sv:value>preview</sv:value>
         </sv:property>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
@@ -1785,10 +1802,10 @@
           <sv:value>2014-07-09T11:47:12.308+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-09T11:48:56.249+02:00</sv:value>
+          <sv:value>2014-07-17T11:41:40.007+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
-          <sv:value>boogaard.joris</sv:value>
+          <sv:value>admin</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:id" sv:type="String">
           <sv:value>a624d81b-1d29-4fa5-a54c-22baa0004a2a</sv:value>
@@ -1796,36 +1813,41 @@
         <sv:property sv:name="hippotranslation:locale" sv:type="String">
           <sv:value>nl</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:descriptions" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:descriptions" sv:type="String">
           <sv:value>Default value for label of the overview links in the widgets</sv:value>
+          <sv:value/>
         </sv:property>
         <sv:property sv:name="resourcebundle:id" sv:type="String">
           <sv:value>nl.hsleiden.widget.Messages</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:keys" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:keys" sv:type="String">
           <sv:value>overiewlink.default.label</sv:value>
+          <sv:value>contact.person.subject</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:messages" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:messages" sv:type="String">
           <sv:value>Overview</sv:value>
+          <sv:value>Define it in property: contact person subject</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:messages_en" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:messages_en" sv:type="String">
           <sv:value>Overview</sv:value>
+          <sv:value>Define it in property: contact person subject</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:messages_nl" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:messages_nl" sv:type="String">
           <sv:value>Overview</sv:value>
+          <sv:value>Define it in property: contact person subject</sv:value>
         </sv:property>
       </sv:node>
       <sv:node sv:name="widget-messages">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>resourcebundle:resourcebundle</sv:value>
         </sv:property>
-        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
           <sv:value>mix:referenceable</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>6e159050-d0d7-41e2-b49b-3be83c8137b4</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
           <sv:value>live</sv:value>
         </sv:property>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
@@ -1844,13 +1866,13 @@
           <sv:value>2014-07-09T11:47:12.308+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-09T11:48:56.249+02:00</sv:value>
+          <sv:value>2014-07-17T11:41:40.007+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
-          <sv:value>boogaard.joris</sv:value>
+          <sv:value>admin</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-          <sv:value>2014-07-09T11:48:58.881+02:00</sv:value>
+          <sv:value>2014-07-17T11:41:41.700+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:id" sv:type="String">
           <sv:value>a624d81b-1d29-4fa5-a54c-22baa0004a2a</sv:value>
@@ -1858,23 +1880,28 @@
         <sv:property sv:name="hippotranslation:locale" sv:type="String">
           <sv:value>nl</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:descriptions" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:descriptions" sv:type="String">
           <sv:value>Default value for label of the overview links in the widgets</sv:value>
+          <sv:value/>
         </sv:property>
         <sv:property sv:name="resourcebundle:id" sv:type="String">
           <sv:value>nl.hsleiden.widget.Messages</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:keys" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:keys" sv:type="String">
           <sv:value>overiewlink.default.label</sv:value>
+          <sv:value>contact.person.subject</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:messages" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:messages" sv:type="String">
           <sv:value>Overview</sv:value>
+          <sv:value>Define it in property: contact person subject</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:messages_en" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:messages_en" sv:type="String">
           <sv:value>Overview</sv:value>
+          <sv:value>Define it in property: contact person subject</sv:value>
         </sv:property>
-        <sv:property sv:name="resourcebundle:messages_nl" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="resourcebundle:messages_nl" sv:type="String">
           <sv:value>Overview</sv:value>
+          <sv:value>Define it in property: contact person subject</sv:value>
         </sv:property>
       </sv:node>
     </sv:node>
