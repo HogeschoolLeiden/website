@@ -8,7 +8,6 @@ import java.util.Map;
 import javax.jcr.RepositoryException;
 
 import nl.hsleiden.componentsinfo.ContactPersonsInfo;
-import nl.hsleiden.utils.HslUtils;
 import nl.hsleiden.utils.Constants.Attributes;
 import nl.hsleiden.utils.Constants.WidgetConstants;
 
@@ -21,6 +20,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.tdclighthouse.prototype.components.AjaxEnabledComponent;
+import com.tdclighthouse.prototype.utils.BeanUtils;
 
 @ParametersInfo(type = ContactPersonsInfo.class)
 public class ContactPersons extends AjaxEnabledComponent {
@@ -50,9 +50,9 @@ public class ContactPersons extends AjaxEnabledComponent {
         List<HippoBean> items = new ArrayList<HippoBean>();
         
         //items should be added only if not null
-        items.add(HslUtils.getSelectedBean(request, parametersInfo.getFirstContact()));
-        items.add(HslUtils.getSelectedBean(request, parametersInfo.getSecondContact()));
-        items.add(HslUtils.getSelectedBean(request, parametersInfo.getThirdContact()));
+        items.add(BeanUtils.getBeanViaAbsolutionPath(parametersInfo.getFirstContact(), request));
+        items.add(BeanUtils.getBeanViaAbsolutionPath(parametersInfo.getSecondContact(), request));
+        items.add(BeanUtils.getBeanViaAbsolutionPath(parametersInfo.getThirdContact(), request));
         
         if (!items.isEmpty()) {
             model.put(Attributes.ITEMS, items);
