@@ -82,4 +82,11 @@
 [hsl:FormComponentMixin]
   mixin
   + hsl:formCompoundMixin (hsl:FormCompoundMixin)
+  
+[hsl:ContactPersonsCompoundMixin] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hsl:ContactPersonsMixin]
+  mixin
+  + hsl:contactPersonsCompoundMixin (hsl:ContactPersonsCompoundMixin)
 

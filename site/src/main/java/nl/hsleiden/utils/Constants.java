@@ -28,6 +28,7 @@ public class Constants {
 
         public static final String WIDGET_TITLE = "widgetTitle";
         public static final String WIDGET_TITLE_DEFAULT = "Related Items";
+        public static final String WIDGET_TITLE_DEFAULT_CONTACTS = "Contacts";
         public static final String WIDGET_TITLE_DEFAULT_NEWS = "Related News";
         public static final String WIDGET_TITLE_DEFAULT_EVENTS = "Related Events";
         public static final String SIZE = "size";

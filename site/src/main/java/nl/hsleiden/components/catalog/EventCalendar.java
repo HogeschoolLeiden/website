@@ -156,8 +156,7 @@ public class EventCalendar extends AjaxEnabledComponent {
     private EventCalendarInfo getConfiguration(HstRequest request) throws RepositoryException {
         EventCalendarInfo paramInfo = this.<EventCalendarInfo> getComponentParametersInfo(request);
         if (paramInfo.getUseMixin() != null && paramInfo.getUseMixin()) {
-            HippoBean proxy;
-            proxy = BeanUtils.getMixinProxy(request.getRequestContext().getContentBean());
+            HippoBean proxy = BeanUtils.getMixinProxy(request.getRequestContext().getContentBean());
             if (proxy instanceof EventsCalendarMixin) {
                 paramInfo = ((EventsCalendarMixin) proxy).getCalendarEventsCompoundMixin();
             }
