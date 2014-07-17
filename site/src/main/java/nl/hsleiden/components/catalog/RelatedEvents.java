@@ -10,7 +10,6 @@ import nl.hsleiden.beans.mixin.RelatedEventsMixin;
 import nl.hsleiden.componentsinfo.RelatedEventsInfo;
 import nl.hsleiden.componentsinfo.RelatedItemsInfo;
 import nl.hsleiden.utils.Constants.WidgetConstants;
-import nl.hsleiden.utils.HslUtils;
 
 import org.hippoecm.hst.content.beans.query.HstQuery;
 import org.hippoecm.hst.content.beans.query.exceptions.QueryException;
@@ -29,7 +28,7 @@ public class RelatedEvents extends RelatedItems {
     protected HstQuery createQuery(HstRequest request, RelatedItemsInfo parametersInfo) throws QueryException {
         
         HstQuery result = null;
-        HippoBean scope = HslUtils.getSelectedBean(request, parametersInfo.getContentBeanPath());
+        HippoBean scope = BeanUtils.getBeanViaAbsolutionPath(parametersInfo.getContentBeanPath(), request);
         if(scope!=null){            
             result = request.getRequestContext().getQueryManager().createQuery(scope, EventPage.JCR_TYPE);
         }else{

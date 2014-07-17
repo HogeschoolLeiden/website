@@ -45,15 +45,6 @@ public class HslUtils {
         return result;
     }
     
-    public static HippoBean getSelectedBean(HstRequest request, String contentBeanPath) {
-        try {
-            LOG.debug("content bean path = " + contentBeanPath);
-            return(HippoBean) request.getRequestContext().getObjectBeanManager().getObject(contentBeanPath);
-        } catch (ObjectBeanManagerException e) {
-            throw new HstComponentException(e.getMessage(), e);
-        }
-    }
-    
     public static String getMatchingSitemap(final HstRequest request, String beanPath) {
         String result = null;
         try {

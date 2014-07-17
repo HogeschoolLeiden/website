@@ -14,7 +14,7 @@ import java.util.Map;
 
 import javax.jcr.RepositoryException;
 
-import nl.hsleiden.beans.mixin.CalendarEventsMixin;
+import nl.hsleiden.beans.mixin.EventsCalendarMixin;
 import nl.hsleiden.componentsinfo.EventCalendarInfo;
 import nl.hsleiden.utils.Constants;
 import nl.hsleiden.utils.Constants.FieldName;
@@ -125,7 +125,7 @@ public class EventCalendar extends AjaxEnabledComponent {
 
     private HippoBean getScope(HstRequest request) throws RepositoryException {
         EventCalendarInfo configuration = getConfiguration(request);
-        return HslUtils.getSelectedBean(request, configuration.getScope());
+        return BeanUtils.getBeanViaAbsolutionPath(configuration.getScope(), request);
     }
 
     private void addTaggingFilter(Filter baseFilter, HstQuery query, HstRequest request, EventCalendarInfo info)
@@ -158,8 +158,8 @@ public class EventCalendar extends AjaxEnabledComponent {
         if (paramInfo.getUseMixin() != null && paramInfo.getUseMixin()) {
             HippoBean proxy;
             proxy = BeanUtils.getMixinProxy(request.getRequestContext().getContentBean());
-            if (proxy instanceof CalendarEventsMixin) {
-                paramInfo = ((CalendarEventsMixin) proxy).getCalendarEventsCompoundMixin();
+            if (proxy instanceof EventsCalendarMixin) {
+                paramInfo = ((EventsCalendarMixin) proxy).getCalendarEventsCompoundMixin();
             }
         }
         return paramInfo;
