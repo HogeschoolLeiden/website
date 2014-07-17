@@ -7,7 +7,6 @@ import org.hippoecm.hst.configuration.hosting.VirtualHosts;
 import org.hippoecm.hst.content.beans.ObjectBeanManagerException;
 import org.hippoecm.hst.content.beans.manager.ObjectBeanManager;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
-import org.hippoecm.hst.core.component.HstComponentException;
 import org.hippoecm.hst.core.linking.HstLink;
 import org.hippoecm.hst.core.linking.HstLinkCreator;
 import org.hippoecm.hst.core.request.HstRequestContext;
@@ -93,26 +92,6 @@ public class HslUtilsTest {
         Assert.assertEquals("", actual);
     }
 
-    @Test
-    public void getSelectedBeanTest() throws IllegalStateException, ObjectBeanManagerException {
-
-        MockHstRequest requestMock = new MockHstRequest();
-        requestMock.setRequestContext(createMockHstRequestContext(BEAN_PATH, false, null, true));
-        HippoBean selectedBean = HslUtils.getSelectedBean(requestMock, BEAN_PATH);
-        Assert.assertEquals(BEAN_PATH, selectedBean.getPath());
-    }
-
-    @Test
-    public void getSelectedBeanExceptionTest() throws IllegalStateException, ObjectBeanManagerException {
-        HippoBean selectedBean = null;
-        try {
-            MockHstRequest requestMock = new MockHstRequest();
-            requestMock.setRequestContext(createMockHstRequestContext(BEAN_PATH, true, null, false));
-            selectedBean = HslUtils.getSelectedBean(requestMock, BEAN_PATH);
-        } catch (HstComponentException e) {
-            Assert.assertEquals(selectedBean, null);
-        }
-    }
 
     @Test
     public void getRelativeUrlPathContextPathShowTest() {

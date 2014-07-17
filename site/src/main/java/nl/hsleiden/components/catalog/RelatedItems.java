@@ -99,7 +99,7 @@ public abstract class RelatedItems extends AjaxEnabledComponent {
     protected abstract HstQuery createQuery(HstRequest request, RelatedItemsInfo parametersInfo) throws QueryException;
 
     private void addOverviewLinkToModel(HstRequest request, Map<String, Object> model, RelatedItemsInfo parametersInfo) {
-        HippoBean overviewLink = HslUtils.getSelectedBean(request, parametersInfo.getOverviewBeanPath());
+        HippoBean overviewLink = BeanUtils.getBeanViaAbsolutionPath(parametersInfo.getOverviewBeanPath(), request);
         if (parametersInfo.getShowOverview() && overviewLink != null) {
             model.put(OVERVIEW_LINK, overviewLink);
         }
@@ -152,5 +152,4 @@ public abstract class RelatedItems extends AjaxEnabledComponent {
         query.setFilter(globalFilter);
     }
 
-    
 }

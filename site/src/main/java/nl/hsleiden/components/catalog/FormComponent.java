@@ -20,6 +20,8 @@ import org.onehippo.forge.easyforms.model.Form;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.tdclighthouse.prototype.utils.BeanUtils;
+
 @ParametersInfo(type = FormComponentInfo.class)
 public class FormComponent extends FormStorageComponent {
 
@@ -33,7 +35,7 @@ public class FormComponent extends FormStorageComponent {
         FormBean result = null;
         FormComponentInfo parametersInfo = getFormParametersInfo(request);
 
-        HippoBean selectedForm = HslUtils.getSelectedBean(request, parametersInfo.getContentBeanPath());      
+        HippoBean selectedForm = BeanUtils.getBeanViaAbsolutionPath(parametersInfo.getContentBeanPath(), request);      
         if (selectedForm == null || !(selectedForm.isHippoDocumentBean()) || !(selectedForm instanceof FormBean)) {
             request.setAttribute(WidgetConstants.WEB_MASTER_MESSAGE, "webmaster.noform.message");
         } else {
