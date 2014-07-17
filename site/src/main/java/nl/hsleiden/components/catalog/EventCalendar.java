@@ -125,7 +125,7 @@ public class EventCalendar extends AjaxEnabledComponent {
 
     private HippoBean getScope(HstRequest request) throws RepositoryException {
         EventCalendarInfo configuration = getConfiguration(request);
-        return BeanUtils.getBeanViaAbsolutionPath(configuration.getScope(), request);
+        return BeanUtils.getBeanViaAbsolutePath(configuration.getScope(), request);
     }
 
     private void addTaggingFilter(Filter baseFilter, HstQuery query, HstRequest request, EventCalendarInfo info)

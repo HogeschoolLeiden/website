@@ -50,9 +50,9 @@ public class ContactPersons extends AjaxEnabledComponent {
         List<HippoBean> items = new ArrayList<HippoBean>();
         
         //items should be added only if not null
-        items.add(BeanUtils.getBeanViaAbsolutionPath(parametersInfo.getFirstContact(), request));
-        items.add(BeanUtils.getBeanViaAbsolutionPath(parametersInfo.getSecondContact(), request));
-        items.add(BeanUtils.getBeanViaAbsolutionPath(parametersInfo.getThirdContact(), request));
+        items.add(BeanUtils.getBeanViaAbsolutePath(parametersInfo.getFirstContact(), request));
+        items.add(BeanUtils.getBeanViaAbsolutePath(parametersInfo.getSecondContact(), request));
+        items.add(BeanUtils.getBeanViaAbsolutePath(parametersInfo.getThirdContact(), request));
         
         if (!items.isEmpty()) {
             model.put(Attributes.ITEMS, items);

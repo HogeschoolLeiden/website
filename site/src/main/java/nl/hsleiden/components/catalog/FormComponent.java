@@ -35,7 +35,7 @@ public class FormComponent extends FormStorageComponent {
         FormBean result = null;
         FormComponentInfo parametersInfo = getFormParametersInfo(request);
 
-        HippoBean selectedForm = BeanUtils.getBeanViaAbsolutionPath(parametersInfo.getContentBeanPath(), request);      
+        HippoBean selectedForm = BeanUtils.getBeanViaAbsolutePath(parametersInfo.getContentBeanPath(), request);      
         if (selectedForm == null || !(selectedForm.isHippoDocumentBean()) || !(selectedForm instanceof FormBean)) {
             request.setAttribute(WidgetConstants.WEB_MASTER_MESSAGE, "webmaster.noform.message");
         } else {
