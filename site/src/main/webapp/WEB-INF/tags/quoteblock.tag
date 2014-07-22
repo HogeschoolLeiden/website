@@ -53,15 +53,24 @@
       <c:if test="${content.shareParameters.facebook}">
       <li>
         <a class="facebook" id="tool-facebook" title="${pageFacebook}"
-           href="https://www.facebook.com/sharer/sharer.php?s=100&p[summary]=${completeQuote}&p[images][0]=${image}" 
+           href="https://www.facebook.com/sharer/sharer.php?s=100&p[url]=${url}&p[summary]=${completeQuote}&p[images][0]=${image}" 
            target="_blank"><c:out value="${pageFacebook}" /> 
         </a>
       </li>
       </c:if>
       <c:if test="${content.shareParameters.twitter}">
+        <c:choose>
+        <c:when test="${fn:length(completeQuote) > 140 }">
+          <c:set var="twitterQuote" value="${fn:substring(completeQuote,0, 138)} ..."/>
+        </c:when>
+        <c:otherwise>
+          <c:set var="twitterQuote" value="${completeQuote} ..."/>
+        </c:otherwise>
+        </c:choose>
+        
       <li>
         <a class="twitter" id="tool-twitter" title="${pageTwitter}"
-           href="http://twitter.com/home?status=${completeQuote}"
+           href="http://twitter.com/home?status=${twitterQuote}"
            target="_blank"> <c:out value="${pageTwitter}" />
         </a>
       </li>
