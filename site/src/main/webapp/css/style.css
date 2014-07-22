@@ -5073,7 +5073,6 @@ div.clear {clear: both;}
 /* ---------------------------------- images in the list widgets ---------------------------------------- */
 .item-with-image{ margin: 15px 0;}
 .image-space{width: 15%; float: left;  padding-top: 5px; padding-right: 6px;}
-.itemContent{ }
 /* ---------------------------------- images in the list widgets ---------------------------------------- */
 
 /* ---------------------------------- header style ---------------------------------------- */
@@ -5119,4 +5118,26 @@ td.fc-header-right2{display: block; float: right;}
 .catalog.contactPersons .itemContent {margin-left: 23%;} 
 .catalog.contactPersons p {text-align: center; margin-bottom: 3px;}
 /* ---------------------------------- contact persons style ---------------------------------------- */
+
+/* ---------------------------------- quote style ---------------------------------------- */
+.quote.item-with-image{border-style: solid; border-width: 1px; border-color: blue;}
+
+.quote.image-space {width: 26%; float: left;  padding: 6px 6px;}
+.quote.itemContent{ width: 74%; padding: 6px 6px 6px 0; margin-left: 26%;}
+
+
+.quote .author { font-size: 1.5em; font-style: italic; color: #66CCFF;}
+.quote .text { padding-right: 6px;}
+
+.quote .share ul { display: block; padding: 6px 6px 0 8px; list-style: none; 
+					margin-left: 0px; margin-bottom: 0; height: 55px; }
+.quote .share ul li {width:49%; float: left; height: 50px; line-height: 25px; padding-top: 10px;}
+
+.quote a{background-repeat: no-repeat; padding-left: 27px; display: block; }
+
+.quote a.facebook{ background-image: url("../images/toolbox/fb-icon.png"); }
+.quote a.googleplus{ background-image: url("../images/toolbox/googleplus-icon.png"); }
+.quote a.twitter{ background-image: url("../images/toolbox/tw-icon.png"); }
+
+/* ---------------------------------- quote style ---------------------------------------- */
 

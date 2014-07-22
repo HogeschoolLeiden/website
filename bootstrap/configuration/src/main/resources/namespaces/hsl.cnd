@@ -89,4 +89,13 @@
 [hsl:ContactPersonsMixin]
   mixin
   + hsl:contactPersonsCompoundMixin (hsl:ContactPersonsCompoundMixin)
+  
+[hsl:Quote] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hsl:QuoteParameters] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hsl:ShareParameters] > hippo:compound, hippostd:relaxed
+  orderable
 
