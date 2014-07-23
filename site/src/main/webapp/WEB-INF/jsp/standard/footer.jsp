@@ -15,16 +15,17 @@
 <hst:setBundle basename="nl.hsleiden.general.Messages"/>
 
 <div class="container-fluid">
-  <div class="row-fluid">
-    <div class="span2"></div>
-    <div class="span8">
-  	   <div class="footer">
+  <div class="footer row-fluid">
+    <div class="header span8">
   	     <div class="navbar">
+  		   <hst:include ref="footerMenu" />
+  	     </div>
+  	     <div class="service">
   		   <hst:include ref="footerServiceMenu" />
   	     </div>
-         <div class="addthis_horizontal_follow_toolbox"></div>
+         <div class="addthis_horizontal_follow_toolbox">
+          <p>Social media</p>
+         </div>
   	   </div>
     </div>
-    <div class="span2"></div>
-  </div>
 </div>

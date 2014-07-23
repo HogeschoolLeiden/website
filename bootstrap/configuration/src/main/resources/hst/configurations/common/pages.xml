@@ -117,6 +117,26 @@
       <sv:property sv:name="hst:template" sv:type="String">
         <sv:value>standard.footer</sv:value>
       </sv:property>
+      <sv:node sv:name="footerMenu">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:component</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>29c8ee13-fee7-413a-90b5-fe2a00463326</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:componentclassname" sv:type="String">
+          <sv:value>nl.hsleiden.components.FooterNavigation</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
+          <sv:value>menuName</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
+          <sv:value>footer</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:template" sv:type="String">
+          <sv:value>standard.footer.footermenu</sv:value>
+        </sv:property>
+      </sv:node>
       <sv:node sv:name="footerServiceMenu">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hst:component</sv:value>
@@ -125,13 +145,13 @@
           <sv:value>7cec8144-0c3b-4171-89cc-ecfbae44f4af</sv:value>
         </sv:property>
         <sv:property sv:name="hst:componentclassname" sv:type="String">
-          <sv:value>com.tdclighthouse.prototype.components.SimpleNavigation</sv:value>
+          <sv:value>nl.hsleiden.components.FooterNavigation</sv:value>
         </sv:property>
         <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
           <sv:value>menuName</sv:value>
         </sv:property>
         <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
-          <sv:value>footer</sv:value>
+          <sv:value>footerService</sv:value>
         </sv:property>
         <sv:property sv:name="hst:template" sv:type="String">
           <sv:value>standard.footer.footerservicemenu</sv:value>

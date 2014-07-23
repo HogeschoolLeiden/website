@@ -5080,13 +5080,11 @@ div.clear {clear: both;}
 .header.span8 .navbar.nav.pull-right.h-menu{ float: left; margin: 5px 0 20px 20px; width: 82.1%; }
 
 .header.span8 div.service-menu { height: 75px; width: 100%; float:right; position: relative;}
-.header.span8 div.main-menu { height: 32px; text-align: justify;
-    -ms-text-justify: distribute-all-lines; text-justify: distribute-all-lines; 
-    width: 100%; float:right; }
+.header.span8 div.main-menu { text-align: justify; width: 100%; float:right; }
 
-.header.span8 div.main-menu ul { width: 100%; margin-right: 0; height: 32px;}
+.header.span8 div.main-menu ul { width: 100%; margin-right: 0; }
 .header.span8 div.main-menu ul li {width: 20%; vertical-align: top; display: inline-block; 
-			*display: inline; zoom: 1; text-align: center; text-transform: uppercase;}
+			*display: inline; zoom: 1; text-align: center; text-transform: uppercase; margin-top: 1%;}
 .header.span8 div.main-menu ul li a { padding: 2px 10px;}
 
 
@@ -5140,4 +5138,49 @@ td.fc-header-right2{display: block; float: right;}
 .quote a.twitter{ background-image: url("../images/toolbox/tw-icon.png"); }
 
 /* ---------------------------------- quote style ---------------------------------------- */
+
+/* ---------------------------------- footer style ---------------------------------------- */
+.footer .addthis_horizontal_follow_toolbox{ width: 17%;	float: right; }
+.footer .addthis_horizontal_follow_toolbox p{ font-weight: bold; padding-left: 10px; }
+
+.footer .service {width: 24%; float: left; overflow: visible; margin-top: 2%; 
+					margin-left: 59%; text-align: justify; }
+.footer .service .main-menu ul.nav li{text-align: center; text-transform: none; width:30%;}
+.footer .service ul.nav{float: right; margin-bottom: 0; margin-top: 14px;}
+
+.footer .navbar{ width: 100%; float: left; }
+.footer .navbar .main-menu ul.nav li {width: 16.6%; text-align: left; text-transform: none;}
+.footer .navbar ul.nav li ul.subMenuLevel{width: 100%; margin-left: 0;}
+
+.footer .navbar ul.nav li ul.subMenuLevel li {background-image: url("../images/u341.png");  
+				background-repeat: no-repeat; margin-left: 10px; background-position: 1px; 
+				text-align: left; text-transform: none; width: 100%; }
+
+.footer ul.nav li ul.subMenuLevel li.active a, 
+.footer ul.nav li ul.subMenuLevel li.active, 
+.footer .navbar .nav .active > a, 
+.footer ul.nav li ul.subMenuLevel li a, 
+.footer .navbar .nav .active > a:hover,
+.footer .service ul.nav li > a:hover {
+    color: rgb(153, 153, 153); 
+    background-color: transparent;
+}
+
+.footer .navbar ul.nav li.active a,
+.footer ul.nav li a { 
+	font-weight: bold; color: black; text-shadow: none;  
+} 
+
+.footer .navbar ul.nav li > a:hover,
+.footer .navbar ul.nav li ul.subMenuLevel li > a:hover,
+.footer .service ul.nav li > a:hover{ 
+	color: rgb(153, 153, 153); 
+	text-decoration: underline;
+}
+
+/* .footer .service ul.nav li > a:hover{ 
+	color: rgb(153, 153, 153);
+} */
+
+/* ---------------------------------- footer style ---------------------------------------- */
 
