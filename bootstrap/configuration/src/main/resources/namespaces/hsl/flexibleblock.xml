@@ -29,7 +29,7 @@
         <sv:value>hippo:harddocument</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>d29e9129-82ff-466f-aea0-42a7be6a50ec</sv:value>
+        <sv:value>035703f2-5054-4ad3-93bb-ebc87f08325a</sv:value>
       </sv:property>
       <sv:property sv:name="hippo:related___pathreference" sv:type="String"/>
       <sv:property sv:name="hipposysedit:node" sv:type="Boolean">
@@ -132,6 +132,29 @@
         </sv:property>
         <sv:property sv:name="hipposysedit:type" sv:type="String">
           <sv:value>hsl:Documents</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="hsl_quote">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hipposysedit:field</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:mandatory" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:multiple" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:ordered" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:path" sv:type="String">
+          <sv:value>hsl:hsl_quote</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:primary" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:type" sv:type="String">
+          <sv:value>hsl:Quote</sv:value>
         </sv:property>
       </sv:node>
     </sv:node>
@@ -238,12 +261,59 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hsl:Documents</sv:value>
         </sv:property>
+        <sv:property sv:name="hsl:title" sv:type="String">
+          <sv:value/>
+        </sv:property>
         <sv:node sv:name="hsl:asset">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>hippo:mirror</sv:value>
           </sv:property>
           <sv:property sv:name="hippo:docbase" sv:type="String">
             <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="hsl:hsl_quote">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsl:Quote</sv:value>
+        </sv:property>
+        <sv:node sv:name="hsl:quoteParameters">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:QuoteParameters</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:name" sv:type="String">
+            <sv:value/>
+          </sv:property>
+          <sv:property sv:name="hsl:quoteText" sv:type="String">
+            <sv:value/>
+          </sv:property>
+          <sv:node sv:name="hsl:image">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippogallerypicker:imagelink</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
+            </sv:property>
+            <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
+            <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
+            <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="hsl:shareParameters">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:ShareParameters</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:facebook" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:google" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:linkedin" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:twitter" sv:type="Boolean">
+            <sv:value>false</sv:value>
           </sv:property>
         </sv:node>
       </sv:node>
@@ -366,6 +436,31 @@
         </sv:property>
         <sv:property sv:name="field" sv:type="String">
           <sv:value>relatedAssets</sv:value>
+        </sv:property>
+        <sv:property sv:name="hint" sv:type="String">
+          <sv:value/>
+        </sv:property>
+        <sv:property sv:name="plugin.class" sv:type="String">
+          <sv:value>org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin</sv:value>
+        </sv:property>
+        <sv:property sv:name="wicket.id" sv:type="String">
+          <sv:value>${cluster.id}.field</sv:value>
+        </sv:property>
+        <sv:node sv:name="cluster.options">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>frontend:pluginconfig</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="hsl_quote">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>frontend:plugin</sv:value>
+        </sv:property>
+        <sv:property sv:name="caption" sv:type="String">
+          <sv:value>Quote</sv:value>
+        </sv:property>
+        <sv:property sv:name="field" sv:type="String">
+          <sv:value>hsl_quote</sv:value>
         </sv:property>
         <sv:property sv:name="hint" sv:type="String">
           <sv:value/>

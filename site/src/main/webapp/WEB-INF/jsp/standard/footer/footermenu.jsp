@@ -36,6 +36,22 @@
   			<a href="${link}"> 
   				<c:out value="${siteMenuItem.name}" />
   			</a>
+           
+            <ul class="subMenuLevel">
+              <c:forEach items="${siteMenuItem.childMenuItems}" var="subItem">
+                <c:choose>
+                  <c:when test="${not empty subItem.hstLink }">
+                    <hst:link var="link" link="${subItem.hstLink}" />
+                  </c:when>
+                  <c:otherwise>
+                    <c:set var="link" value="${subItem.externalLink}" />
+                  </c:otherwise>
+                </c:choose>
+                <li ${not empty cssClass ? ' class=\"': ''}${cssClass}${not empty cssClass ? '\"': ''}>
+                    <a href="${link}"> <c:out value="${subItem.name}" /> </a>
+                </li>
+              </c:forEach>
+            </ul>
   		</li>
   	</c:forEach>
   </ul>

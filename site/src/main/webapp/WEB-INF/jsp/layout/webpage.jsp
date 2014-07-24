@@ -10,17 +10,20 @@
 <%@ taglib prefix="opw" uri="http://open-web.nl/hippo/prototype"%>
 <%@ taglib prefix="ga" uri="http://www.onehippo.org/jsp/google-analytics"%>
 
-<html lang="${pageContext.request.locale.language}">
+<html lang="${pageContext.request.locale.language}" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <!--[if lt IE 9]>
     <hst:link var="html4shiv" path="/js/html5shiv.js"/>
     <script type="text/javascript" src="${html4shiv}"></script>
   <![endif]-->
-    
+  
+  <meta name="og:type" content="website"/>
+       
   <c:if test="${tag:isSubclassOfWebPage(document)}">
     <c:if test="${not empty document.title }">
       <meta name="title" content="<c:out value="${document.title}" escapeXml="true" />" />
+      <meta name="og:title" content="${document.title}"/>
     </c:if>
     <c:if test="${hst:isReadable(document, 'description') && not empty document.description }">
       <meta name="description" content="<c:out value="${document.description}" escapeXml="true" />" />
@@ -55,7 +58,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
-<body>
+<body itemscope itemtype="http://schema.org/WebPage">
 	<hst:include ref="header" />
     <c:if test="${tag:isSubclassOfWebPage(document)}">
       <hst:include ref="breadcrumb"/>

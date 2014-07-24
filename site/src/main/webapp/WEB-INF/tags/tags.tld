@@ -27,6 +27,14 @@
       <path>/WEB-INF/tags/imageblock.tag</path>
     </tag-file>
     <tag-file>
+      <name>downloadsblock</name>
+      <path>/WEB-INF/tags/downloadsblock.tag</path>
+    </tag-file>
+    <tag-file>
+      <name>quoteblock</name>
+      <path>/WEB-INF/tags/quoteblock.tag</path>
+    </tag-file>
+    <tag-file>
       <name>paragraphImage</name>
       <path>/WEB-INF/tags/paragraphImage.tag</path>
     </tag-file>
@@ -45,6 +53,10 @@
     <tag-file>
       <name>toolbox</name>
       <path>/WEB-INF/tags/toolbox.tag</path>
+    </tag-file>
+    <tag-file>
+      <name>follow</name>
+      <path>/WEB-INF/tags/follow.tag</path>
     </tag-file>
     <tag-file>
       <name>overviewIntrodution</name>
@@ -89,7 +101,7 @@
     <function>
       <name>getFirstFlexibleBlockImage</name>
       <function-class>nl.hsleiden.tags.Functions</function-class>
-      <function-signature>org.hippoecm.hst.content.beans.standard.HippoBean getFirstFlexibleBlockImage(hslbeans.ArticlePage)</function-signature>
+      <function-signature>org.hippoecm.hst.content.beans.standard.HippoBean getFirstFlexibleBlockImage(hslbeans.WebPage)</function-signature>
     </function>
 
 </taglib>

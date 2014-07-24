@@ -16,7 +16,7 @@ import org.hippoecm.hst.content.beans.standard.HippoResource;
 import org.hippoecm.hst.core.component.HstRequest;
 
 public class Functions {
-
+    
     private Functions() {
     }
 
@@ -44,12 +44,15 @@ public class Functions {
         return result;
     }
 
-    public static HippoBean getFirstFlexibleBlockImage(ArticlePage bean) {
+    public static HippoBean getFirstFlexibleBlockImage(WebPage bean) {
         HippoBean result = null;
-        List<HippoBean> flexibleblock = bean.getFlexibleblock();
-        for (HippoBean hippoBean : flexibleblock) {
-            if (hippoBean instanceof Image && ((Image) hippoBean).getImage()!=null) {
-                result = hippoBean;
+        if(bean instanceof ArticlePage){
+            ArticlePage article = (ArticlePage) bean;         
+            List<HippoBean> flexibleblock = article.getFlexibleblock();
+            for (HippoBean hippoBean : flexibleblock) {
+                if (hippoBean instanceof Image && ((Image) hippoBean).getImage()!=null) {
+                    result = hippoBean;
+                }
             }
         }
         return result;

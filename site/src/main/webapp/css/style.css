@@ -5073,7 +5073,6 @@ div.clear {clear: both;}
 /* ---------------------------------- images in the list widgets ---------------------------------------- */
 .item-with-image{ margin: 15px 0;}
 .image-space{width: 15%; float: left;  padding-top: 5px; padding-right: 6px;}
-.itemContent{ }
 /* ---------------------------------- images in the list widgets ---------------------------------------- */
 
 /* ---------------------------------- header style ---------------------------------------- */
@@ -5081,13 +5080,11 @@ div.clear {clear: both;}
 .header.span8 .navbar.nav.pull-right.h-menu{ float: left; margin: 5px 0 20px 20px; width: 82.1%; }
 
 .header.span8 div.service-menu { height: 75px; width: 100%; float:right; position: relative;}
-.header.span8 div.main-menu { height: 32px; text-align: justify;
-    -ms-text-justify: distribute-all-lines; text-justify: distribute-all-lines; 
-    width: 100%; float:right; }
+.header.span8 div.main-menu { text-align: justify; width: 100%; float:right; }
 
-.header.span8 div.main-menu ul { width: 100%; margin-right: 0; height: 32px;}
+.header.span8 div.main-menu ul { width: 100%; margin-right: 0; }
 .header.span8 div.main-menu ul li {width: 20%; vertical-align: top; display: inline-block; 
-			*display: inline; zoom: 1; text-align: center; text-transform: uppercase;}
+			*display: inline; zoom: 1; text-align: center; text-transform: uppercase; margin-top: 1%;}
 .header.span8 div.main-menu ul li a { padding: 2px 10px;}
 
 
@@ -5119,4 +5116,71 @@ td.fc-header-right2{display: block; float: right;}
 .catalog.contactPersons .itemContent {margin-left: 23%;} 
 .catalog.contactPersons p {text-align: center; margin-bottom: 3px;}
 /* ---------------------------------- contact persons style ---------------------------------------- */
+
+/* ---------------------------------- quote style ---------------------------------------- */
+.quote.item-with-image{border-style: solid; border-width: 1px; border-color: blue;}
+
+.quote.image-space {width: 26%; float: left;  padding: 6px 6px;}
+.quote.itemContent{ width: 74%; padding: 6px 6px 6px 0; margin-left: 26%;}
+
+
+.quote .author { font-size: 1.5em; font-style: italic; color: #66CCFF;}
+.quote .text { padding-right: 6px;}
+
+.quote .share ul { display: block; padding: 6px 6px 0 8px; list-style: none; 
+					margin-left: 0px; margin-bottom: 0; height: 55px; }
+.quote .share ul li {width:49%; float: left; height: 50px; line-height: 25px; padding-top: 10px;}
+
+.quote a{background-repeat: no-repeat; padding-left: 27px; display: block; }
+
+.quote a.facebook{ background-image: url("../images/toolbox/fb-icon.png"); }
+.quote a.linkedin{ background-image: url("../images/toolbox/linkedin-icon.png"); }
+.quote a.twitter{ background-image: url("../images/toolbox/tw-icon.png"); }
+
+/* ---------------------------------- quote style ---------------------------------------- */
+
+/* ---------------------------------- footer style ---------------------------------------- */
+.footer .follow_toolbox{ width: 17%;	float: right; }
+.footer .follow_toolbox p{ font-weight: bold; padding-left: 10px; }
+
+.footer .service {width: 24%; float: left; overflow: visible; margin-top: 2%; 
+					margin-left: 59%; text-align: justify; }
+.footer .service .main-menu ul.nav li{text-align: center; text-transform: none; width:30%;}
+.footer .service ul.nav{float: right; margin-bottom: 0; margin-top: 14px;}
+
+.footer .navbar{ width: 100%; float: left; }
+.footer .navbar .main-menu ul.nav li {width: 16.6%; text-align: left; text-transform: none;}
+.footer .navbar ul.nav li ul.subMenuLevel{width: 100%; margin-left: 0;}
+
+.footer .navbar ul.nav li ul.subMenuLevel li {background-image: url("../images/u341.png");  
+				background-repeat: no-repeat; margin-left: 10px; background-position: 1px; 
+				text-align: left; text-transform: none; width: 100%; }
+
+.footer ul.nav li ul.subMenuLevel li.active a, 
+.footer ul.nav li ul.subMenuLevel li.active, 
+.footer .navbar .nav .active > a, 
+.footer ul.nav li ul.subMenuLevel li a, 
+.footer .navbar .nav .active > a:hover,
+.footer .service ul.nav li > a:hover {
+    color: rgb(153, 153, 153); 
+    background-color: transparent;
+}
+
+.footer .navbar ul.nav li.active a,
+.footer ul.nav li a { 
+	font-weight: bold; color: black; text-shadow: none;  
+} 
+
+.footer .navbar ul.nav li > a:hover,
+.footer .navbar ul.nav li ul.subMenuLevel li > a:hover,
+.footer .service ul.nav li > a:hover{ 
+	color: rgb(153, 153, 153); 
+	text-decoration: underline;
+}
+
+ul.social.follow{ list-style: none; margin-left: 0;}
+ul.social.follow li{ width:20%; float: left;}
+
+
+/* ---------------------------------- footer style ---------------------------------------- */
 

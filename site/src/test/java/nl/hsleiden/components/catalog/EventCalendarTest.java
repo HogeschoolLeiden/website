@@ -1,5 +1,6 @@
 package nl.hsleiden.components.catalog;
 
+import hslbeans.ArticlePage;
 import hslbeans.EventPage;
 
 import java.text.ParseException;
@@ -52,23 +53,64 @@ public class EventCalendarTest {
     private static final String END_DATE = "2014-08-10";
     private static final String START_DATE = "2014-06-29";
     private static final String SCOPE = "scope";
+    private static final String CONTENT_BEAN_PATH = "/content/bean/path";
 
     @Test
     public void getModel() {
         EventCalendar calendar = new EventCalendar();
-        EventCalendarInfo calendarInfo = createMockCalendarInfo(false, SCOPE);
-        MockHstRequest request = getMockRequest(calendarInfo, null);
+        EventCalendarInfo calendarInfo = createMockCalendarInfo(false, SCOPE, false, false);
+        MockHstRequest request = getMockRequest(calendarInfo, null, createMockHippoBeanContentBean(CONTENT_BEAN_PATH));
         Map<String, Object> model = calendar.getModel(request, new MockHstResponse());
         Assert.assertEquals(1, model.size());
         Assert.assertSame(calendarInfo, model.get(Constants.Attributes.PARAM_INFO));
     }
 
     @Test
+    public void getModelNoScope() {
+        EventCalendar calendar = new EventCalendar();
+        EventCalendarInfo calendarInfo = createMockCalendarInfo(false, null, false, false);
+        MockHstRequest request = getMockRequest(calendarInfo, null, createMockHippoBeanContentBean(CONTENT_BEAN_PATH));
+        Map<String, Object> model = calendar.getModel(request, new MockHstResponse());
+        Assert.assertSame(calendarInfo, model.get(Constants.Attributes.PARAM_INFO));
+        Assert.assertEquals(request.getAttribute("webMasterMessage"), "webmaster.nofolder.message");
+    }
+
+    @Test
+    public void getModelScopeDoubleFiltering() {
+        EventCalendar calendar = new EventCalendar();
+        EventCalendarInfo calendarInfo = createMockCalendarInfo(false, SCOPE, true, true);
+        MockHstRequest request = getMockRequest(calendarInfo, null, createMockHippoBeanContentBean(CONTENT_BEAN_PATH));
+        Map<String, Object> model = calendar.getModel(request, new MockHstResponse());
+        Assert.assertSame(calendarInfo, model.get(Constants.Attributes.PARAM_INFO));
+        Assert.assertEquals(request.getAttribute("webMasterMessage"), "webmaster.nofiltering.message");
+    }
+
+    @Test
+    public void getModelScopeOverFiltering() {
+        EventCalendar calendar = new EventCalendar();
+        EventCalendarInfo calendarInfo = createMockCalendarInfo(false, SCOPE, true, false);
+        MockHstRequest request = getMockRequest(calendarInfo, null, createMockArticlePageContentBean(CONTENT_BEAN_PATH));
+        Map<String, Object> model = calendar.getModel(request, new MockHstResponse());
+        Assert.assertSame(calendarInfo, model.get(Constants.Attributes.PARAM_INFO));
+        Assert.assertEquals(request.getAttribute("webMasterMessage"), null);
+    }
+    
+    @Test
+    public void getModelScopeThemaFiltering() {
+        EventCalendar calendar = new EventCalendar();
+        EventCalendarInfo calendarInfo = createMockCalendarInfo(false, SCOPE, false, true);
+        MockHstRequest request = getMockRequest(calendarInfo, null, createMockHippoBeanContentBean(CONTENT_BEAN_PATH));
+        Map<String, Object> model = calendar.getModel(request, new MockHstResponse());
+        Assert.assertSame(calendarInfo, model.get(Constants.Attributes.PARAM_INFO));
+        Assert.assertEquals(request.getAttribute("webMasterMessage"), "webmaster.nofiltering.message");
+    }
+
+    @Test
     public void getJsonAjaxModel() {
         EventCalendar calendar = new EventCalendar();
-        EventCalendarInfo calendarInfo = createMockCalendarInfo(false, SCOPE);
+        EventCalendarInfo calendarInfo = createMockCalendarInfo(false, SCOPE, false, false);
         Session session = createMockSession();
-        MockHstRequest request = getMockRequest(calendarInfo, session);
+        MockHstRequest request = getMockRequest(calendarInfo, session, createMockHippoBeanContentBean(CONTENT_BEAN_PATH));
         MockHstRequestContext requestContext = (MockHstRequestContext) request.getRequestContext();
         Map<String, Class<? extends HippoBean>> jcrPrimaryNodeTypeBeanPairs = new HashMap<String, Class<? extends HippoBean>>();
         jcrPrimaryNodeTypeBeanPairs.put(EVENT_PAGE_TYPE, EventPage.class);
@@ -86,6 +128,47 @@ public class EventCalendarTest {
         Assert.assertEquals("event-2", event.getTitle());
         Assert.assertEquals("2014-07-17", event.getStart());
         Assert.assertEquals(LINK_TO_EVENT, event.getLink());
+    }
+
+    @Test
+    public void getJsonAjaxModelArticlePage() {
+        EventCalendar calendar = new EventCalendar();
+        EventCalendarInfo calendarInfo = createMockCalendarInfo(false, SCOPE, false, false);
+        Session session = createMockSession();
+        MockHstRequest request = getMockRequest(calendarInfo, session, createMockArticlePageContentBean(CONTENT_BEAN_PATH));
+        MockHstRequestContext requestContext = (MockHstRequestContext) request.getRequestContext();
+        Map<String, Class<? extends HippoBean>> jcrPrimaryNodeTypeBeanPairs = new HashMap<String, Class<? extends HippoBean>>();
+        jcrPrimaryNodeTypeBeanPairs.put(EVENT_PAGE_TYPE, EventPage.class);
+        requestContext.setDefaultHstQueryManager(new HstQueryManagerImpl(session, new ObjectConverterImpl(
+                jcrPrimaryNodeTypeBeanPairs, null), null));
+        @SuppressWarnings("unchecked")
+        List<Event> model = (List<Event>) calendar.getJsonAjaxModel(request, new MockHstResponse());
+        Assert.assertEquals(2, model.size());
+        Event event = model.get(0);
+        Assert.assertEquals("event-1", event.getTitle());
+        Assert.assertEquals("2014-07-16", event.getStart());
+        Assert.assertEquals(LINK_TO_EVENT, event.getLink());
+        
+        event = model.get(1);
+        Assert.assertEquals("event-2", event.getTitle());
+        Assert.assertEquals("2014-07-17", event.getStart());
+        Assert.assertEquals(LINK_TO_EVENT, event.getLink());
+    }
+
+    @Test
+    public void getJsonAjaxModelNoScope() {
+        EventCalendar calendar = new EventCalendar();
+        EventCalendarInfo calendarInfo = createMockCalendarInfo(false, null, false, false);
+        Session session = createMockSession();
+        MockHstRequest request = getMockRequest(calendarInfo, session, createMockHippoBeanContentBean(CONTENT_BEAN_PATH));
+        MockHstRequestContext requestContext = (MockHstRequestContext) request.getRequestContext();
+        Map<String, Class<? extends HippoBean>> jcrPrimaryNodeTypeBeanPairs = new HashMap<String, Class<? extends HippoBean>>();
+        jcrPrimaryNodeTypeBeanPairs.put(EVENT_PAGE_TYPE, EventPage.class);
+        requestContext.setDefaultHstQueryManager(new HstQueryManagerImpl(session, new ObjectConverterImpl(
+                jcrPrimaryNodeTypeBeanPairs, null), null));
+        @SuppressWarnings("unchecked")
+        List<Event> model = (List<Event>) calendar.getJsonAjaxModel(request, new MockHstResponse());
+        Assert.assertEquals(0, model.size());
     }
 
     private Session createMockSession() {
@@ -153,7 +236,7 @@ public class EventCalendarTest {
 
     
 
-    private MockHstRequest getMockRequest(EventCalendarInfo calendarInfo, Session session) {
+    private MockHstRequest getMockRequest(EventCalendarInfo calendarInfo, Session session, HippoBean contentBean) {
         try {
             MockHstRequest request = new MockHstRequest();
             request.setAttribute(ParameterUtils.MY_MOCK_PARAMETER_INFO, calendarInfo);
@@ -161,9 +244,11 @@ public class EventCalendarTest {
             ObjectBeanManager objectBeanManager = EasyMock.createMock(ObjectBeanManager.class);
             HippoBean eventPage = createMockScope(session);
             EasyMock.expect(objectBeanManager.getObject(SCOPE)).andReturn(eventPage).anyTimes();
+            EasyMock.expect(objectBeanManager.getObject(null)).andReturn(null).anyTimes();
             EasyMock.replay(objectBeanManager);
             requestContext.setDefaultObjectBeanManager(objectBeanManager);
             requestContext.setLinkCreator(createMockLinkCreator());
+            requestContext.setContentBean(contentBean);
             request.setRequestContext(requestContext);
             request.addParameter("start", START_DATE);
             request.addParameter("end", END_DATE);
@@ -191,15 +276,27 @@ public class EventCalendarTest {
         return createMock;
     }
 
-    private EventCalendarInfo createMockCalendarInfo(Boolean useMixin, String scope) {
+    private EventCalendarInfo createMockCalendarInfo(Boolean useMixin, String scope, boolean overFilter, boolean themaFilter) {
         EventCalendarInfo result = EasyMock.createMock(EventCalendarInfo.class);
         EasyMock.expect(result.getUseMixin()).andReturn(useMixin).anyTimes();
-        EasyMock.expect(result.getOverFilter()).andReturn(false).anyTimes();
-        EasyMock.expect(result.getThemaFilter()).andReturn(false).anyTimes();
-        if (scope != null) {
-            EasyMock.expect(result.getScope()).andReturn(scope);
-        }
+        EasyMock.expect(result.getOverFilter()).andReturn(overFilter).anyTimes();
+        EasyMock.expect(result.getThemaFilter()).andReturn(themaFilter).anyTimes();
+        EasyMock.expect(result.getScope()).andReturn(scope);
         EasyMock.replay(result);
         return result;
+    }
+    
+    private ArticlePage createMockArticlePageContentBean(String contentBeanPath) {
+        ArticlePage mock = EasyMock.createMock(ArticlePage.class);
+        EasyMock.expect(mock.getPath()).andReturn(contentBeanPath).anyTimes();
+        EasyMock.replay(mock);
+        return mock;
+    }
+    
+    private HippoBean createMockHippoBeanContentBean(String contentBeanPath) {
+        HippoBean mock = EasyMock.createMock(HippoBean.class);
+        EasyMock.expect(mock.getPath()).andReturn(contentBeanPath).anyTimes();
+        EasyMock.replay(mock);
+        return mock;
     }
 }

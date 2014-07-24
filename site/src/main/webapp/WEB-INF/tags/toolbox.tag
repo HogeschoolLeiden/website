@@ -19,14 +19,21 @@
 <fmt:message key="page.forward" var="forward"/>
 
 <c:if test="${hst:isReadable(document, 'share') && document.share}">
-<ul class="toolbox">
+
   <c:set var="url">
     <hst:link hippobean="${document }" fullyQualified="true" />
   </c:set>
-    <%-- <a class="print" id="tool-print-page" title="<fmt:message key="page.print" />" 
-       href="<hst:link hippobean="${document }" />">
-          <fmt:message key="page.print" />
-    </a> --%>
+
+  <hst:headContribution category="metadata" keyHint="url">
+    <meta name="og:url" content="${url}"/>
+  </hst:headContribution>
+
+  <hst:headContribution category="metadata" keyHint="description">
+    <meta name="og:description" content="${document.introduction}"/>
+  </hst:headContribution>
+
+
+<ul class="toolbox">
   <c:if test="${not empty document}">
     <li>
       <hst:link mount="pdf" var="pdfLink"/>
@@ -38,7 +45,7 @@
   </c:if>
   <li>
     <a class="facebook" id="tool-facebook" title="${pageFacebook}" 
-       href="https://www.facebook.com/sharer/sharer.php?u=${url }&amp;t=<c:out value="${document.title }" />" 
+       href="https://www.facebook.com/sharer/sharer.php?u=${url }&amp;t=<c:out value="${document.title }" />"
        target="_blank"><c:out value="${pageFacebook}"/>
     </a>
   </li>

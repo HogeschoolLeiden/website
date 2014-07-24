@@ -958,7 +958,7 @@
         <sv:value>2014-06-19T16:39:44.106+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-        <sv:value>2014-07-14T17:19:13.835+02:00</sv:value>
+        <sv:value>2014-07-22T10:51:24.697+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
         <sv:value>admin</sv:value>
@@ -989,6 +989,9 @@
       </sv:property>
       <sv:property sv:name="hsl:releaseDate" sv:type="Date">
         <sv:value>2014-06-20T07:30:00.000+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:share" sv:type="Boolean">
+        <sv:value>false</sv:value>
       </sv:property>
       <sv:property sv:multiple="true" sv:name="hsl:subjecttags" sv:type="String">
         <sv:value>onderzoek</sv:value>
@@ -1035,6 +1038,9 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hsl:Documents</sv:value>
         </sv:property>
+        <sv:property sv:name="hsl:title" sv:type="String">
+          <sv:value/>
+        </sv:property>
         <sv:node sv:name="hsl:asset">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>hippo:mirror</sv:value>
@@ -1049,6 +1055,45 @@
           </sv:property>
           <sv:property sv:name="hippo:docbase" sv:type="String">
             <sv:value>ea3b98ae-2d50-48fd-8431-9eea287d93b4</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="hsl:flexibleblock">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsl:Quote</sv:value>
+        </sv:property>
+        <sv:node sv:name="hsl:quoteParameters">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:QuoteParameters</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:name" sv:type="String">
+            <sv:value>Auteur Auteur</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:quoteText" sv:type="String">
+            <sv:value>Quote text Quote text Quote text Quote text Quote text Quote text Quote text Quote text Quote text Quote text&#xd;
+  Quote text Quote text Quote text Quote text Quote text Quote text Quote text Quote text Quote text Quote text</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:image">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippogallerypicker:imagelink</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>2847485e-292a-42ed-9f1d-6f0893ee141b</sv:value>
+            </sv:property>
+            <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
+            <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
+            <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="hsl:shareParameters">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:ShareParameters</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:facebook" sv:type="Boolean">
+            <sv:value>true</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:twitter" sv:type="Boolean">
+            <sv:value>true</sv:value>
           </sv:property>
         </sv:node>
       </sv:node>
@@ -1121,7 +1166,7 @@
         <sv:value>2014-06-19T16:39:44.106+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-        <sv:value>2014-07-14T17:19:40.783+02:00</sv:value>
+        <sv:value>2014-07-22T10:51:33.100+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
         <sv:value>admin</sv:value>
@@ -1152,6 +1197,9 @@
       </sv:property>
       <sv:property sv:name="hsl:releaseDate" sv:type="Date">
         <sv:value>2014-06-20T07:30:00.000+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:share" sv:type="Boolean">
+        <sv:value>false</sv:value>
       </sv:property>
       <sv:property sv:multiple="true" sv:name="hsl:subjecttags" sv:type="String">
         <sv:value>onderzoek</sv:value>
@@ -1198,6 +1246,9 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hsl:Documents</sv:value>
         </sv:property>
+        <sv:property sv:name="hsl:title" sv:type="String">
+          <sv:value/>
+        </sv:property>
         <sv:node sv:name="hsl:asset">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>hippo:mirror</sv:value>
@@ -1212,6 +1263,45 @@
           </sv:property>
           <sv:property sv:name="hippo:docbase" sv:type="String">
             <sv:value>ea3b98ae-2d50-48fd-8431-9eea287d93b4</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="hsl:flexibleblock">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsl:Quote</sv:value>
+        </sv:property>
+        <sv:node sv:name="hsl:quoteParameters">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:QuoteParameters</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:name" sv:type="String">
+            <sv:value>Auteur Auteur</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:quoteText" sv:type="String">
+            <sv:value>Quote text Quote text Quote text Quote text Quote text Quote text Quote text Quote text Quote text Quote text&#xd;
+  Quote text Quote text Quote text Quote text Quote text Quote text Quote text Quote text Quote text Quote text</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:image">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippogallerypicker:imagelink</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>2847485e-292a-42ed-9f1d-6f0893ee141b</sv:value>
+            </sv:property>
+            <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
+            <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
+            <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="hsl:shareParameters">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:ShareParameters</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:facebook" sv:type="Boolean">
+            <sv:value>true</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:twitter" sv:type="Boolean">
+            <sv:value>true</sv:value>
           </sv:property>
         </sv:node>
       </sv:node>
@@ -1283,13 +1373,13 @@
         <sv:value>2014-06-19T16:39:44.106+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-        <sv:value>2014-07-14T17:19:40.783+02:00</sv:value>
+        <sv:value>2014-07-22T10:51:33.100+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
         <sv:value>admin</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-        <sv:value>2014-07-14T17:19:42.402+02:00</sv:value>
+        <sv:value>2014-07-22T10:51:35.247+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippotranslation:id" sv:type="String">
         <sv:value>4122224d-0ec8-4806-811d-c783d05a37b5</sv:value>
@@ -1317,6 +1407,9 @@
       </sv:property>
       <sv:property sv:name="hsl:releaseDate" sv:type="Date">
         <sv:value>2014-06-20T07:30:00.000+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:share" sv:type="Boolean">
+        <sv:value>false</sv:value>
       </sv:property>
       <sv:property sv:multiple="true" sv:name="hsl:subjecttags" sv:type="String">
         <sv:value>onderzoek</sv:value>
@@ -1363,6 +1456,9 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hsl:Documents</sv:value>
         </sv:property>
+        <sv:property sv:name="hsl:title" sv:type="String">
+          <sv:value/>
+        </sv:property>
         <sv:node sv:name="hsl:asset">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>hippo:mirror</sv:value>
@@ -1377,6 +1473,45 @@
           </sv:property>
           <sv:property sv:name="hippo:docbase" sv:type="String">
             <sv:value>ea3b98ae-2d50-48fd-8431-9eea287d93b4</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="hsl:flexibleblock">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsl:Quote</sv:value>
+        </sv:property>
+        <sv:node sv:name="hsl:quoteParameters">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:QuoteParameters</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:name" sv:type="String">
+            <sv:value>Auteur Auteur</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:quoteText" sv:type="String">
+            <sv:value>Quote text Quote text Quote text Quote text Quote text Quote text Quote text Quote text Quote text Quote text&#xd;
+  Quote text Quote text Quote text Quote text Quote text Quote text Quote text Quote text Quote text Quote text</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:image">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippogallerypicker:imagelink</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>2847485e-292a-42ed-9f1d-6f0893ee141b</sv:value>
+            </sv:property>
+            <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
+            <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
+            <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="hsl:shareParameters">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:ShareParameters</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:facebook" sv:type="Boolean">
+            <sv:value>true</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:twitter" sv:type="Boolean">
+            <sv:value>true</sv:value>
           </sv:property>
         </sv:node>
       </sv:node>
