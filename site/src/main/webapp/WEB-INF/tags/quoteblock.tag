@@ -11,9 +11,10 @@
 
 <hst:setBundle basename="nl.hsleiden.sharebox.Messages" />
 
-<fmt:message key="quote.facebook" var="pageFacebook" />
+<fmt:message key="quote.facebook" var="facebook" />
+<fmt:message key="quote.linkedin" var="linkedin" />
 <fmt:message key="quote.googleplus" var="googleplus" />
-<fmt:message key="quote.twitter" var="pageTwitter" />
+<fmt:message key="quote.twitter" var="twitter" />
 
 <c:set var="url"><hst:link hippobean="${document }" fullyQualified="true" /></c:set>
 <c:set var="quoteAuthor">
@@ -25,7 +26,7 @@
 </c:set>
 <c:set var="completeQuote">
   <c:out value="${content.quoteParameters.name }" />
-  <c:out value=" : " />
+  <c:out value=": " />
   <c:out value="${content.quoteParameters.quoteText }" />
 </c:set>
 
@@ -47,31 +48,31 @@
     </div>
 
 
-    <c:if test="${content.shareParameters.twitter or content.shareParameters.facebook }">
+    <c:if test="${content.shareParameters.twitter or content.shareParameters.linkedin }">
     <div class="share">
     <ul>
-      <c:if test="${content.shareParameters.facebook}">
+      <c:if test="${content.shareParameters.linkedin}">
       <li>
-        <a class="facebook" id="tool-facebook" title="${pageFacebook}"
-           href="https://www.facebook.com/sharer/sharer.php?s=100&p[url]=${url}&p[summary]=${completeQuote}&p[images][0]=${image}" 
-           target="_blank"><c:out value="${pageFacebook}" /> 
+       <a class="linkedin" title="${linkedin}"
+           href="http://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${quoteAuthor}&summary=${completeQuote}" 
+           target="_blank"><c:out value="${linkedin}" /> 
         </a>
       </li>
       </c:if>
       <c:if test="${content.shareParameters.twitter}">
         <c:choose>
         <c:when test="${fn:length(completeQuote) > 140 }">
-          <c:set var="twitterQuote" value="${fn:substring(completeQuote,0, 138)} ..."/>
+          <c:set var="twitterQuote" value="${fn:substring(completeQuote,0, 136)} ..."/>
         </c:when>
         <c:otherwise>
-          <c:set var="twitterQuote" value="${completeQuote} ..."/>
+          <c:set var="twitterQuote" value="${completeQuote}"/>
         </c:otherwise>
         </c:choose>
         
       <li>
-        <a class="twitter" id="tool-twitter" title="${pageTwitter}"
+        <a class="twitter" title="${twitter}"
            href="http://twitter.com/home?status=${twitterQuote}"
-           target="_blank"> <c:out value="${pageTwitter}" />
+           target="_blank"> <c:out value="${twitter}" />
         </a>
       </li>
       </c:if>

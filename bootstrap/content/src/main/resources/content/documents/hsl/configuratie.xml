@@ -87,14 +87,25 @@
       <sv:value>Configuratie</sv:value>
     </sv:property>
   </sv:node>
+  <sv:node sv:name="hippo:translation">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hippo:translation</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:language" sv:type="String">
+      <sv:value/>
+    </sv:property>
+    <sv:property sv:name="hippo:message" sv:type="String">
+      <sv:value>Configuratie</sv:value>
+    </sv:property>
+  </sv:node>
   <sv:node sv:name="valuelists">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hippostd:folder</sv:value>
     </sv:property>
     <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
       <sv:value>hippotranslation:translated</sv:value>
-      <sv:value>mix:versionable</sv:value>
       <sv:value>hippo:translated</sv:value>
+      <sv:value>mix:versionable</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>0710213c-430e-44b9-871c-dabb4f22d510</sv:value>
@@ -578,8 +589,8 @@
     </sv:property>
     <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
       <sv:value>hippotranslation:translated</sv:value>
-      <sv:value>mix:versionable</sv:value>
       <sv:value>hippo:translated</sv:value>
+      <sv:value>mix:versionable</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>9d40f53f-c9e7-4a90-9a4f-706c3396eaf5</sv:value>
@@ -628,8 +639,8 @@
         </sv:property>
         <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String"/>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
-          <sv:value>share-box-messages/share-box-messages[3]</sv:value>
-          <sv:value>share-box-messages/share-box-messages[2]</sv:value>
+          <sv:value>configuratie/resource-bundles/share-box-messages/share-box-messages[3]</sv:value>
+          <sv:value>configuratie/resource-bundles/share-box-messages/share-box-messages[2]</sv:value>
         </sv:property>
         <sv:property sv:name="hippostd:state" sv:type="String">
           <sv:value>draft</sv:value>
@@ -644,7 +655,7 @@
           <sv:value>2014-07-08T15:26:05.813+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-22T10:35:34.538+02:00</sv:value>
+          <sv:value>2014-07-24T10:06:02.859+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -656,6 +667,12 @@
           <sv:value>nl</sv:value>
         </sv:property>
         <sv:property sv:multiple="true" sv:name="resourcebundle:descriptions" sv:type="String">
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
           <sv:value/>
           <sv:value/>
           <sv:value/>
@@ -681,6 +698,12 @@
           <sv:value>quote.facebook</sv:value>
           <sv:value>quote.googleplus</sv:value>
           <sv:value>quote.twitter</sv:value>
+          <sv:value>follow.facebook</sv:value>
+          <sv:value>follow.googleplus</sv:value>
+          <sv:value>follow.linkedin</sv:value>
+          <sv:value>follow.twitter</sv:value>
+          <sv:value>follow.pinterest</sv:value>
+          <sv:value>quote.linkedin</sv:value>
         </sv:property>
         <sv:property sv:multiple="true" sv:name="resourcebundle:messages" sv:type="String">
           <sv:value>Share on Facebook</sv:value>
@@ -693,6 +716,12 @@
           <sv:value>quote on Facebook</sv:value>
           <sv:value>quote on Google+</sv:value>
           <sv:value>quote on Twitter</sv:value>
+          <sv:value>Follow us on facebook</sv:value>
+          <sv:value>Follow us on google+</sv:value>
+          <sv:value>Follow us on linkedIn</sv:value>
+          <sv:value>Follow us on twitter</sv:value>
+          <sv:value>Follow us on pinterest</sv:value>
+          <sv:value>quote on LinkedIn</sv:value>
         </sv:property>
         <sv:property sv:multiple="true" sv:name="resourcebundle:messages_en" sv:type="String">
           <sv:value>Share on Facebook</sv:value>
@@ -705,6 +734,12 @@
           <sv:value>quote on Facebook</sv:value>
           <sv:value>quote on Google+</sv:value>
           <sv:value>quote on Twitter</sv:value>
+          <sv:value>Follow us on facebook</sv:value>
+          <sv:value>Follow us on google+</sv:value>
+          <sv:value>Follow us on linkedIn</sv:value>
+          <sv:value>Follow us on twitter</sv:value>
+          <sv:value>Follow us on pinterest</sv:value>
+          <sv:value>quote on LinkedIn</sv:value>
         </sv:property>
         <sv:property sv:multiple="true" sv:name="resourcebundle:messages_nl" sv:type="String">
           <sv:value>Share on Facebook</sv:value>
@@ -717,6 +752,12 @@
           <sv:value>quote on Facebook</sv:value>
           <sv:value>quote on Google+</sv:value>
           <sv:value>quote on Twitter</sv:value>
+          <sv:value>Follow us on facebook</sv:value>
+          <sv:value>Follow us on google+</sv:value>
+          <sv:value>Follow us on linkedIn</sv:value>
+          <sv:value>Follow us on twitter</sv:value>
+          <sv:value>Follow us on pinterest</sv:value>
+          <sv:value>quote on LinkedIn</sv:value>
         </sv:property>
       </sv:node>
       <sv:node sv:name="share-box-messages">
@@ -734,7 +775,7 @@
           <sv:value>preview</sv:value>
         </sv:property>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
-          <sv:value>share-box-messages/share-box-messages[3]</sv:value>
+          <sv:value>configuratie/resource-bundles/share-box-messages/share-box-messages[3]</sv:value>
         </sv:property>
         <sv:property sv:name="hippostd:state" sv:type="String">
           <sv:value>unpublished</sv:value>
@@ -749,7 +790,7 @@
           <sv:value>2014-07-08T15:26:05.813+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-22T10:35:43.445+02:00</sv:value>
+          <sv:value>2014-07-24T10:06:30.788+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -761,6 +802,12 @@
           <sv:value>nl</sv:value>
         </sv:property>
         <sv:property sv:multiple="true" sv:name="resourcebundle:descriptions" sv:type="String">
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
           <sv:value/>
           <sv:value/>
           <sv:value/>
@@ -786,6 +833,12 @@
           <sv:value>quote.facebook</sv:value>
           <sv:value>quote.googleplus</sv:value>
           <sv:value>quote.twitter</sv:value>
+          <sv:value>follow.facebook</sv:value>
+          <sv:value>follow.googleplus</sv:value>
+          <sv:value>follow.linkedin</sv:value>
+          <sv:value>follow.twitter</sv:value>
+          <sv:value>follow.pinterest</sv:value>
+          <sv:value>quote.linkedin</sv:value>
         </sv:property>
         <sv:property sv:multiple="true" sv:name="resourcebundle:messages" sv:type="String">
           <sv:value>Share on Facebook</sv:value>
@@ -798,6 +851,12 @@
           <sv:value>quote on Facebook</sv:value>
           <sv:value>quote on Google+</sv:value>
           <sv:value>quote on Twitter</sv:value>
+          <sv:value>Follow us on facebook</sv:value>
+          <sv:value>Follow us on google+</sv:value>
+          <sv:value>Follow us on linkedIn</sv:value>
+          <sv:value>Follow us on twitter</sv:value>
+          <sv:value>Follow us on pinterest</sv:value>
+          <sv:value>quote on LinkedIn</sv:value>
         </sv:property>
         <sv:property sv:multiple="true" sv:name="resourcebundle:messages_en" sv:type="String">
           <sv:value>Share on Facebook</sv:value>
@@ -810,6 +869,12 @@
           <sv:value>quote on Facebook</sv:value>
           <sv:value>quote on Google+</sv:value>
           <sv:value>quote on Twitter</sv:value>
+          <sv:value>Follow us on facebook</sv:value>
+          <sv:value>Follow us on google+</sv:value>
+          <sv:value>Follow us on linkedIn</sv:value>
+          <sv:value>Follow us on twitter</sv:value>
+          <sv:value>Follow us on pinterest</sv:value>
+          <sv:value>quote on LinkedIn</sv:value>
         </sv:property>
         <sv:property sv:multiple="true" sv:name="resourcebundle:messages_nl" sv:type="String">
           <sv:value>Share on Facebook</sv:value>
@@ -822,6 +887,12 @@
           <sv:value>quote on Facebook</sv:value>
           <sv:value>quote on Google+</sv:value>
           <sv:value>quote on Twitter</sv:value>
+          <sv:value>Follow us on facebook</sv:value>
+          <sv:value>Follow us on google+</sv:value>
+          <sv:value>Follow us on linkedIn</sv:value>
+          <sv:value>Follow us on twitter</sv:value>
+          <sv:value>Follow us on pinterest</sv:value>
+          <sv:value>quote on LinkedIn</sv:value>
         </sv:property>
       </sv:node>
       <sv:node sv:name="share-box-messages">
@@ -838,7 +909,7 @@
           <sv:value>live</sv:value>
         </sv:property>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
-          <sv:value>share-box-messages/share-box-messages[2]</sv:value>
+          <sv:value>configuratie/resource-bundles/share-box-messages/share-box-messages[2]</sv:value>
         </sv:property>
         <sv:property sv:name="hippostd:state" sv:type="String">
           <sv:value>published</sv:value>
@@ -853,13 +924,13 @@
           <sv:value>2014-07-08T15:26:05.813+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-22T10:35:43.445+02:00</sv:value>
+          <sv:value>2014-07-24T10:06:30.788+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-          <sv:value>2014-07-22T10:35:45.166+02:00</sv:value>
+          <sv:value>2014-07-24T10:06:32.316+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:id" sv:type="String">
           <sv:value>4110de29-db25-4569-bf77-8784fe00847e</sv:value>
@@ -868,6 +939,12 @@
           <sv:value>nl</sv:value>
         </sv:property>
         <sv:property sv:multiple="true" sv:name="resourcebundle:descriptions" sv:type="String">
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
           <sv:value/>
           <sv:value/>
           <sv:value/>
@@ -893,6 +970,12 @@
           <sv:value>quote.facebook</sv:value>
           <sv:value>quote.googleplus</sv:value>
           <sv:value>quote.twitter</sv:value>
+          <sv:value>follow.facebook</sv:value>
+          <sv:value>follow.googleplus</sv:value>
+          <sv:value>follow.linkedin</sv:value>
+          <sv:value>follow.twitter</sv:value>
+          <sv:value>follow.pinterest</sv:value>
+          <sv:value>quote.linkedin</sv:value>
         </sv:property>
         <sv:property sv:multiple="true" sv:name="resourcebundle:messages" sv:type="String">
           <sv:value>Share on Facebook</sv:value>
@@ -905,6 +988,12 @@
           <sv:value>quote on Facebook</sv:value>
           <sv:value>quote on Google+</sv:value>
           <sv:value>quote on Twitter</sv:value>
+          <sv:value>Follow us on facebook</sv:value>
+          <sv:value>Follow us on google+</sv:value>
+          <sv:value>Follow us on linkedIn</sv:value>
+          <sv:value>Follow us on twitter</sv:value>
+          <sv:value>Follow us on pinterest</sv:value>
+          <sv:value>quote on LinkedIn</sv:value>
         </sv:property>
         <sv:property sv:multiple="true" sv:name="resourcebundle:messages_en" sv:type="String">
           <sv:value>Share on Facebook</sv:value>
@@ -917,6 +1006,12 @@
           <sv:value>quote on Facebook</sv:value>
           <sv:value>quote on Google+</sv:value>
           <sv:value>quote on Twitter</sv:value>
+          <sv:value>Follow us on facebook</sv:value>
+          <sv:value>Follow us on google+</sv:value>
+          <sv:value>Follow us on linkedIn</sv:value>
+          <sv:value>Follow us on twitter</sv:value>
+          <sv:value>Follow us on pinterest</sv:value>
+          <sv:value>quote on LinkedIn</sv:value>
         </sv:property>
         <sv:property sv:multiple="true" sv:name="resourcebundle:messages_nl" sv:type="String">
           <sv:value>Share on Facebook</sv:value>
@@ -929,6 +1024,12 @@
           <sv:value>quote on Facebook</sv:value>
           <sv:value>quote on Google+</sv:value>
           <sv:value>quote on Twitter</sv:value>
+          <sv:value>Follow us on facebook</sv:value>
+          <sv:value>Follow us on google+</sv:value>
+          <sv:value>Follow us on linkedIn</sv:value>
+          <sv:value>Follow us on twitter</sv:value>
+          <sv:value>Follow us on pinterest</sv:value>
+          <sv:value>quote on LinkedIn</sv:value>
         </sv:property>
       </sv:node>
       <sv:node sv:name="hippo:translation">

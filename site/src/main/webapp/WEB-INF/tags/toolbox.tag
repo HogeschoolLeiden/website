@@ -23,10 +23,6 @@
   <c:set var="url">
     <hst:link hippobean="${document }" fullyQualified="true" />
   </c:set>
-    <%-- <a class="print" id="tool-print-page" title="<fmt:message key="page.print" />" 
-       href="<hst:link hippobean="${document }" />">
-          <fmt:message key="page.print" />
-    </a> --%>
   <c:if test="${not empty document}">
     <li>
       <hst:link mount="pdf" var="pdfLink"/>
@@ -38,7 +34,7 @@
   </c:if>
   <li>
     <a class="facebook" id="tool-facebook" title="${pageFacebook}" 
-       href="https://www.facebook.com/sharer/sharer.php?u=${url }&amp;t=<c:out value="${document.title }" />" 
+       href="#" 
        target="_blank"><c:out value="${pageFacebook}"/>
     </a>
   </li>

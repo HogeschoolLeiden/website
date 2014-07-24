@@ -5,12 +5,13 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="hst" uri="http://www.hippoecm.org/jsp/hst/core"%>
 <%@ taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml"%>
+<%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 
 <hst:setBundle basename="nl.hsleiden.general.Messages"/>
 
-<hst:headContribution category="scripts">
+<%-- <hst:headContribution category="scripts">
   <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53c2b4d4115b0ba9" type="text/javascript"></script>
-</hst:headContribution>
+</hst:headContribution> --%>
 
 <hst:setBundle basename="nl.hsleiden.general.Messages"/>
 
@@ -23,8 +24,9 @@
   	     <div class="service">
   		   <hst:include ref="footerServiceMenu" />
   	     </div>
-         <div class="addthis_horizontal_follow_toolbox">
+         <div class="follow_toolbox">
           <p>Social media</p>
+          <tag:follow/>
          </div>
   	   </div>
     </div>
