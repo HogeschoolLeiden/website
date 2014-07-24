@@ -1,6 +1,5 @@
 package nl.hsleiden.components;
 
-import org.hippoecm.hst.core.component.HstComponentException;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
 import org.hippoecm.hst.core.parameters.ParametersInfo;
@@ -16,7 +15,7 @@ import com.tdclighthouse.prototype.utils.Constants;
 public class FooterNavigation extends Navigation{
 
     @Override
-    public void doBeforeRender(HstRequest request, HstResponse response) throws HstComponentException {
+    public void doBeforeRender(HstRequest request, HstResponse response) {
         super.doBeforeRender(request, response);
         final NavigationInfo parametersInfo = this.<NavigationInfo> getComponentParametersInfo(request);
         
