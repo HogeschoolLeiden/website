@@ -28,6 +28,7 @@
           <p>Social media</p>
           <tag:follow/>
          </div>
+        <%--  <div class="addthis_horizontal_follow_toolbox"></div> --%>
   	   </div>
     </div>
 </div>

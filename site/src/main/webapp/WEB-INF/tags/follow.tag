@@ -14,6 +14,7 @@
 <fmt:message key="follow.linkedin"  var="linkedin"/>
 <fmt:message key="follow.twitter" var="twitter"/>
 <fmt:message key="follow.pinterest" var="pinterest"/>
+<fmt:message key="follow.instagram" var="instagram"/>
 
 <ul class="social follow">
 <li>
@@ -37,8 +38,13 @@
   </a>
 </li>
 <li>
+  <a href="https://instagram.com/hsleiden" target="_blank" title="${instagram}">
+    <img src="<hst:link path="images/follow/instagram-icon.png"/>">
+  </a>
+</li>
+<%-- <li>
   <a href="http://www.pinterest.com/ivanderent/hogeschool-leiden" target="_blank" title="${pinterest}">
     <img src="<hst:link path="images/follow/pinterest-icon.png"/>">
   </a>
-</li>
+</li> --%>
 </ul>
