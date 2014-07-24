@@ -10,7 +10,7 @@
 <%@ taglib prefix="opw" uri="http://open-web.nl/hippo/prototype"%>
 <%@ taglib prefix="ga" uri="http://www.onehippo.org/jsp/google-analytics"%>
 
-<html lang="${pageContext.request.locale.language}">
+<html lang="${pageContext.request.locale.language}" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <!--[if lt IE 9]>
@@ -55,7 +55,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
-<body>
+<body itemscope itemtype="http://schema.org/WebPage">
 	<hst:include ref="header" />
     <c:if test="${tag:isSubclassOfWebPage(document)}">
       <hst:include ref="breadcrumb"/>

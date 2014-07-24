@@ -34,7 +34,7 @@
   </c:if>
   <li>
     <a class="facebook" id="tool-facebook" title="${pageFacebook}" 
-       href="#" 
+       href="https://www.facebook.com/sharer/sharer.php?u=${url }&amp;t=<c:out value="${document.title }" />"
        target="_blank"><c:out value="${pageFacebook}"/>
     </a>
   </li>

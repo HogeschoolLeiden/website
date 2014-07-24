@@ -12,10 +12,11 @@
 		<tag:pagenotfound />
 	</c:when>
 	<c:otherwise>
+       <div itemscope itemtype="http://schema.org/NewsArticle">
 	   <article class="well well-large">
 		 <hst:cmseditlink hippobean="${document}" />
 		 <header>
-		   <h1>
+		   <h1 itemprop="headline">
 			 <c:out value="${document.title }" escapeXml="true" />
 		   </h1>
 		   <h2>
@@ -41,5 +42,6 @@
              <tag:toolbox document="${document }" />
 		  </div>
 	   </article>
+       </div>
     </c:otherwise>
 </c:choose>
