@@ -19,10 +19,21 @@
 <fmt:message key="page.forward" var="forward"/>
 
 <c:if test="${hst:isReadable(document, 'share') && document.share}">
-<ul class="toolbox">
+
   <c:set var="url">
     <hst:link hippobean="${document }" fullyQualified="true" />
   </c:set>
+
+  <hst:headContribution category="metadata" keyHint="url">
+    <meta name="og:url" content="${url}"/>
+  </hst:headContribution>
+
+  <hst:headContribution category="metadata" keyHint="description">
+    <meta name="og:description" content="${document.introduction}"/>
+  </hst:headContribution>
+
+
+<ul class="toolbox">
   <c:if test="${not empty document}">
     <li>
       <hst:link mount="pdf" var="pdfLink"/>
