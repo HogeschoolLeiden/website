@@ -8,7 +8,7 @@
 
 <div class="main-menu">
   <ul class="nav">
-  	<c:forEach items="${menu.menuItems}" var="siteMenuItem" varStatus="step">
+  	<c:forEach items="${menu.siteMenuItems}" var="siteMenuItem" varStatus="step">
   		<c:choose>
   			<c:when test="${not empty siteMenuItem.hstLink }">
   				<hst:link var="link" link="${siteMenuItem.hstLink}" />

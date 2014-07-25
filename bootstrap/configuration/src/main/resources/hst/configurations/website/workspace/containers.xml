@@ -690,28 +690,6 @@
         <sv:value>HST.vBox</sv:value>
       </sv:property>
     </sv:node>
-    <sv:node sv:name="rightTop">
-      <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hst:containercomponent</sv:value>
-      </sv:property>
-      <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>3ea066b1-e9f2-48f8-8796-1e602f81105e</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:xtype" sv:type="String">
-        <sv:value>HST.vBox</sv:value>
-      </sv:property>
-    </sv:node>
-    <sv:node sv:name="rightBottom">
-      <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hst:containercomponent</sv:value>
-      </sv:property>
-      <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>799277b0-830e-4e43-85b4-5ba825f24418</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:xtype" sv:type="String">
-        <sv:value>HST.vBox</sv:value>
-      </sv:property>
-    </sv:node>
     <sv:node sv:name="bottom-container">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:containercomponent</sv:value>
@@ -722,6 +700,160 @@
       <sv:property sv:name="hst:xtype" sv:type="String">
         <sv:value>HST.vBox</sv:value>
       </sv:property>
+    </sv:node>
+    <sv:node sv:name="rightBottom">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:containercomponent</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>4e6c7ec3-98f1-4bce-b210-3fe6920797b0</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:lastmodified" sv:type="Date">
+        <sv:value>2014-07-25T11:16:42.096+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:xtype" sv:type="String">
+        <sv:value>HST.vBox</sv:value>
+      </sv:property>
+      <sv:node sv:name="relatedNews">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:containeritemcomponent</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>68afeb26-4b12-4d81-9a7f-ecb74f867473</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:componentclassname" sv:type="String">
+          <sv:value>nl.hsleiden.components.catalog.RelatedNews</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:iconpath" sv:type="String">
+          <sv:value>images/catalog/catalog-list.png</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:label" sv:type="String">
+          <sv:value>Gerelateerde Nieuws</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
+          <sv:value>contentBeanPath</sv:value>
+          <sv:value>sortBy</sv:value>
+          <sv:value>overviewBeanPath</sv:value>
+          <sv:value>overviewLinkLabel</sv:value>
+          <sv:value>sortOrder</sv:value>
+          <sv:value>tryToUseMixin</sv:value>
+          <sv:value>showOverviewLink</sv:value>
+          <sv:value>themaFilter</sv:value>
+          <sv:value>widgetTitle</sv:value>
+          <sv:value>overFilter</sv:value>
+          <sv:value>size</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
+          <sv:value/>
+          <sv:value>Publicatiedatum</sv:value>
+          <sv:value/>
+          <sv:value/>
+          <sv:value>descending</sv:value>
+          <sv:value>on</sv:value>
+          <sv:value>on</sv:value>
+          <sv:value>off</sv:value>
+          <sv:value>Related News</sv:value>
+          <sv:value>off</sv:value>
+          <sv:value>1</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:template" sv:type="String">
+          <sv:value>catalog.relatednews</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:xtype" sv:type="String">
+          <sv:value>HST.Item</sv:value>
+        </sv:property>
+      </sv:node>
+    </sv:node>
+    <sv:node sv:name="rightTop">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:containercomponent</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>344c1f24-6128-4887-975e-bf41a303f30e</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:lastmodified" sv:type="Date">
+        <sv:value>2014-07-25T11:16:42.096+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:xtype" sv:type="String">
+        <sv:value>HST.vBox</sv:value>
+      </sv:property>
+      <sv:node sv:name="calendar">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:containeritemcomponent</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>e62b5e75-efe4-4d91-ad07-e4b6cc79a123</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:componentclassname" sv:type="String">
+          <sv:value>nl.hsleiden.components.catalog.EventCalendar</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:iconpath" sv:type="String">
+          <sv:value>images/catalog/events-calendar-icon.png</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:label" sv:type="String">
+          <sv:value>Evenementen Kalender</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
+          <sv:value>title</sv:value>
+          <sv:value>scope</sv:value>
+          <sv:value>themaFilter</sv:value>
+          <sv:value>overFilter</sv:value>
+          <sv:value>tryToUserMixin</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
+          <sv:value>Related Items</sv:value>
+          <sv:value/>
+          <sv:value>off</sv:value>
+          <sv:value>off</sv:value>
+          <sv:value>on</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:resourcetemplate" sv:type="String">
+          <sv:value>blank</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:template" sv:type="String">
+          <sv:value>catalog.calendar</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:xtype" sv:type="String">
+          <sv:value>HST.Item</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="contactPersons">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:containeritemcomponent</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>472505ce-4372-4f86-9dd6-d9baa4cc5727</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:componentclassname" sv:type="String">
+          <sv:value>nl.hsleiden.components.catalog.ContactPersons</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:iconpath" sv:type="String">
+          <sv:value>images/catalog/contact-icon.png</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:label" sv:type="String">
+          <sv:value>Contactpersonen</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
+          <sv:value>firstContact</sv:value>
+          <sv:value>secondContact</sv:value>
+          <sv:value>tryToUseMixin</sv:value>
+          <sv:value>widgetTitle</sv:value>
+          <sv:value>thirdContact</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
+          <sv:value/>
+          <sv:value/>
+          <sv:value>on</sv:value>
+          <sv:value>Contacts</sv:value>
+          <sv:value/>
+        </sv:property>
+        <sv:property sv:name="hst:template" sv:type="String">
+          <sv:value>catalog.contactpersons</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:xtype" sv:type="String">
+          <sv:value>HST.Item</sv:value>
+        </sv:property>
+      </sv:node>
     </sv:node>
   </sv:node>
   <sv:node sv:name="searchpage">
