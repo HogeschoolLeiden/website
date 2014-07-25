@@ -25,11 +25,11 @@
   </c:set>
 
   <hst:headContribution category="metadata" keyHint="url">
-    <meta name="og:url" content="${url}"/>
+    <meta property="og:url" content="${url}"/>
   </hst:headContribution>
 
   <hst:headContribution category="metadata" keyHint="description">
-    <meta name="og:description" content="${document.introduction}"/>
+    <meta property="og:description" content="${document.introduction}"/>
   </hst:headContribution>
 
 

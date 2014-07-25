@@ -9,16 +9,17 @@
 <%@ taglib prefix="opw" uri="http://open-web.nl/hippo/prototype"%>
 
 <%@ attribute name="content" rtexprvalue="true" required="true" type="hslbeans.Image" %>
+<%@ attribute name="event" type="java.lang.Boolean" rtexprvalue="true" required="false" %>
 
 <c:if test="${not empty content.image }">
   <c:set var="imageTag">
     <figure class="fexibleblock image">
-      <img  src="<hst:link hippobean="${content.image.wideImage }" />" 
+      <img  ${event ? 'itemprop="photo"': ''} src="<hst:link hippobean="${content.image.wideImage }" />" 
             alt="<c:out value="${content.image.alt }" escapeXml="true" />" 
             title="<c:out value="${content.image.alt }" escapeXml="true" />" />
       
       <hst:headContribution category="metadata" keyHint="image">
-        <meta name="og:image" content="<hst:link hippobean="${content.image.wideImage }" />"/>
+        <meta property="og:image" content="<hst:link hippobean="${content.image.wideImage }" />"/>
       </hst:headContribution>      
       
             <c:if test="${not empty content.image.description }">

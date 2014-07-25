@@ -16,18 +16,26 @@
 
 <ul>
   <hst:link path="/" var="home"/>
-  <li><a href="${home }" ><c:out value="Home / "/></a></li>
+  <li>
+    <a itemprop="url" href="${home }" >
+      <span itemprop="title"><c:out value="Home / "/></span>
+    </a>
+  </li>
   <c:forEach items="${menu.menuItems}" var="item">
     <c:choose>
       <c:when test="${item.selected}">
       	<li class="${lastItemClass}">
-          <a href="<hst:link link="${item.hstLink}"/>">
-            <c:out value="${item.name}" />
+          <a itemprop="url" href="<hst:link link="${item.hstLink}"/>">
+            <span itemprop="title"><c:out value="${item.name}" /></span>
           </a>
         </li>
       </c:when>
       <c:when test="${item.expanded}">
-      	<li><a href="<hst:link link="${item.hstLink}"/>"><c:out	value="${item.name}" /><c:out  value=" / " /></a></li>
+      	<li>
+          <a itemprop="url" href="<hst:link link="${item.hstLink}"/>">
+             <span itemprop="title"><c:out value="${item.name}" /><c:out  value=" / " /></span>
+          </a>
+        </li>
       	<tag:breadcrumbitem parentItem="${item}" lastItemClass="${lastItemClass} " />
       </c:when>
     </c:choose>

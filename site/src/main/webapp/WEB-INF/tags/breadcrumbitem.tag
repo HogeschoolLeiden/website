@@ -16,11 +16,17 @@
 <c:forEach items="${parentItem.childMenuItems}" var="item">
 <c:choose>
 <c:when test="${item.selected}">
-	<li class="${lastItemClass}"><c:out value="${item.name}"/></li>
+	<li class="${lastItemClass}"> 
+      <span itemprop="title"><c:out value="${item.name}"/></span>
+    </li>
 	<c:set var="hasExpandedItem" value="${true}"/>
 </c:when>
 <c:when test="${item.expanded}">
-	<li><a href="<hst:link link="${item.hstLink}"/>"><c:out value="${item.name} / "/></a></li>
+	<li>
+      <a itemprop="url" href="<hst:link link="${item.hstLink}"/>">
+         <span itemprop="title"><c:out value="${item.name} / "/></span>
+      </a>
+    </li>
 	<tag:breadcrumbitem parentItem="${item}"/>
 	<c:set var="hasExpandedItem" value="${true}"/>
 </c:when>
@@ -28,6 +34,8 @@
 </c:forEach>
 <c:if test="${not hasExpandedItem  and not empty document}">
 	<c:catch>	
-		<li class="${lastItemClass}"><c:out value="${document.localizedName}"/></li>
+		<li class="${lastItemClass}"> 
+          <span itemprop="title"><c:out value="${document.localizedName}"/></span>
+        </li>
 	</c:catch>
 </c:if>

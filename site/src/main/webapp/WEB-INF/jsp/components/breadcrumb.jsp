@@ -10,7 +10,7 @@
 
 <div class="container-fluid">
   <div class="row-fluid">
-    <div class="header breadcrumb span8">
+    <div itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="header breadcrumb span8">
       <tag:breadcrumbs menu="${menu }" />
     </div>
   </div>

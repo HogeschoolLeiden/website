@@ -18,12 +18,12 @@
     <script type="text/javascript" src="${html4shiv}"></script>
   <![endif]-->
   
-  <meta name="og:type" content="website"/>
+  <meta property="og:type" content="website"/>
        
   <c:if test="${tag:isSubclassOfWebPage(document)}">
     <c:if test="${not empty document.title }">
       <meta name="title" content="<c:out value="${document.title}" escapeXml="true" />" />
-      <meta name="og:title" content="${document.title}"/>
+      <meta property="og:title" content="${document.title}"/>
     </c:if>
     <c:if test="${hst:isReadable(document, 'description') && not empty document.description }">
       <meta name="description" content="<c:out value="${document.description}" escapeXml="true" />" />

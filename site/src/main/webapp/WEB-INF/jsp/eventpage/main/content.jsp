@@ -12,34 +12,37 @@
 		<tag:pagenotfound />
 	</c:when>
 	<c:otherwise>
+       <div itemscope itemtype="http://data-vocabulary.org/Event">
 	   <article class="well well-large">
 		 <hst:cmseditlink hippobean="${document}" />
 		 <header>
 		   <h1>
-			 <c:out value="${document.title }" escapeXml="true" />
+			 <span itemprop="summary"><c:out value="${document.title }"/></span>
 		   </h1>
 		   <h2>
 			 <c:out value="${document.subtitle }" escapeXml="true" />
 		   </h2>
 		   <c:if test="${hst:isReadable(document, 'eventDate.time')}">
 			 <p class="badge badge-info">
-			   <fmt:formatDate value="${document.eventDate.time}" type="both"
-							dateStyle="medium" timeStyle="short" />
-			 </p>
+               <time itemprop="startDate" datetime="${document.eventDate.time}">
+			     <fmt:formatDate value="${document.eventDate.time}" type="both" dateStyle="medium" timeStyle="short" />
+			   </time>
+              </p>
 		    </c:if>
 		  </header>
 
 		  <div class="inner">
 			<c:if test="${not empty document.introduction }">
 			  <p class="intro">
-			    <c:out value="${document.introduction }" />
+			    <span itemprop="description"><c:out value="${document.introduction }" /></span>
 			  </p>
 			</c:if>
 
-	         <tag:flexibleblock content="${document.flexibleblock }"/>
+	         <tag:flexibleblock content="${document.flexibleblock }" event="true"/>
 
              <tag:toolbox document="${document }" />
 		  </div>
 	   </article>
+       </div>
     </c:otherwise>
 </c:choose>

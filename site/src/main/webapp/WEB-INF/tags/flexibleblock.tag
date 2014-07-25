@@ -8,6 +8,7 @@
 <%@ taglib prefix="opw" uri="http://open-web.nl/hippo/prototype"%>
 
 <%@ attribute name="content" type="java.util.List" rtexprvalue="true" required="true" %>
+<%@ attribute name="event" type="java.lang.Boolean" rtexprvalue="true" required="false" %>
 <%@ attribute name="flexibleblockid" type="java.lang.String" rtexprvalue="true" required="false" %>
 
 <c:set var="tagcount" value="0" />
@@ -18,7 +19,7 @@
 			<tag:paragraphblock content="${block}"/>
 		</c:when>
 		<c:when test="${block['class'].name == 'hslbeans.Image' }">
-			<tag:imageblock content="${block }"/>
+			<tag:imageblock content="${block }" event="${event}"/>
       		<div class="hr"><hr /></div>
 		</c:when>
 		<c:when test="${block['class'].name == 'nl.hsleiden.beans.YoutubeBean' }">
