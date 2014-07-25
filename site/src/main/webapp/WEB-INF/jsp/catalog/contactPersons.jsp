@@ -11,7 +11,7 @@
 
 <hst:setBundle basename="nl.hsleiden.channelmanager.Messages, nl.hsleiden.widget.Messages"/>
 
-<div class="catalog contactPersons">
+<div itemscope itemtype="http://data-vocabulary.org/Person" class="catalog contactPersons">
   <hst:defineObjects />
   <c:set var="isCmsRequest" value="${hstRequest.requestContext.cmsRequest}" />
 
@@ -28,25 +28,25 @@
       <c:if test="${not empty item }">
       <div class="item-with-image">
         
-        <h3 class="contact">${item.name }</h3>
+        <h3 class="contact"><span itemprop="name">${item.name }</span></h3>
         <c:if test="${not empty item.image }">
           <div class="image-space contact">
             <hst:link var="image" hippobean="${item.image.listImageMedium }" />
-            <img alt="${item.name }" src="${image }" />
+            <img itemprop="photo" alt="${item.name }" src="${image }" />
           </div>
         </c:if>   
 
         <div class="itemContent">
-          <p class="function">${item.function }</p>
+          <p class="function"><span itemprop="role">${item.function }</span></p>
           <c:if test="${not empty item.mail }">
             <c:set var="email">
                 mailto:${item.mail}?subject=<fmt:message key="contact.person.subject" />
             </c:set>
             <p class="contact email">
-            <a class="contact email" title="${item.mail }" 
-               href="<c:out value="${email}" escapeXml="true" />">
-               <c:out value="${item.mail }"/>     
-            </a>   
+              <a class="contact email" title="${item.mail }" 
+                 href="<c:out value="${email}" escapeXml="true" />">
+                 <c:out value="${item.mail }"/>     
+              </a>   
             </p>
           </c:if>
           <p>${item.phone }</p>
