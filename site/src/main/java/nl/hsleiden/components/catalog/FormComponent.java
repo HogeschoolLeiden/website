@@ -3,6 +3,7 @@ package nl.hsleiden.components.catalog;
 import javax.jcr.RepositoryException;
 
 import net.sourceforge.hstmixinsupport.DynamicProxyFactory;
+import net.sourceforge.hstmixinsupport.HstMinxinSupportInfo;
 import nl.hsleiden.beans.mixin.FormComponentMixin;
 import nl.hsleiden.componentsinfo.FormComponentInfo;
 import nl.hsleiden.utils.HslUtils;
@@ -28,7 +29,7 @@ public class FormComponent extends FormStorageComponent {
     private static final Logger LOG = LoggerFactory.getLogger(FormComponent.class);
 
     private final DynamicProxyFactory dynamicProxyFactory = HstServices.getComponentManager().getComponent(
-            DynamicProxyFactory.class);
+            DynamicProxyFactory.class, HstMinxinSupportInfo.MODULE_NAME);
 
     @Override
     public FormBean getFormBean(final HstRequest request) {
