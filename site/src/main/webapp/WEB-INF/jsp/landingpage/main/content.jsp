@@ -8,26 +8,19 @@
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 <%@ taglib prefix='opw' uri="http://open-web.nl/hippo/prototype"%>
 
+
 <c:choose>
   <c:when test="${empty document}">
 	<tag:pagenotfound />
   </c:when>
   <c:otherwise>
-	<article class="well well-large">
-	  <hst:cmseditlink hippobean="${document}" />
-		<header>
-		  <h1>
-			 <c:out value="${document.title }" escapeXml="true" />
-		  </h1>
-		</header>
-
-		<div class="inner">
-		  <c:if test="${not empty document.introduction }">
-		    <p class="intro">
-		      <c:out value="${document.introduction }" />
-			</p>
-		  </c:if>             
-		 </div>
-	</article>
+    <div class="three column container">
+		<c:forEach items="${items }" var="item" varStatus="loop">
+          <div ${loop.index==0 ? 'class="oneThird first"': 'class="oneThird"'}>
+            <tag:landingOverviewItem item="${item}"/>
+          </div>
+        </c:forEach>
+        <div class="clear"></div>
+    </div>
   </c:otherwise>
 </c:choose>

@@ -12,21 +12,22 @@
     <div class="header span8">
       
       <hst:include ref="contentTop" />
+      
+      <hst:cmseditlink hippobean="${document}" />
+      
       <div class="threeFourth">
-        <hst:cmseditlink hippobean="${document}" />
-        <h3><c:out value="${document.title}"/></h3>
+        <h1><c:out value="${document.title}"/></h1>
         <hst:include ref="content" />
       </div>
+      
       <div class="oneFourth">
-        <p>here the widgets</p>
         <hst:include ref="rightTop" />
         <hst:include ref="rightBottom" />
       </div>
+      
       <div class="clear"></div>
+      
       <hst:include ref="contentBottom" />
-      
-      <%-- <opw:beaninspection bean="${document}" depth="3"/> --%>
-      
       
       <tag:toolbox document="${document }"/>
     </div>
