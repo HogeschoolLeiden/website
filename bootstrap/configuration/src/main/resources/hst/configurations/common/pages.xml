@@ -309,18 +309,21 @@
       <sv:value>hst:component</sv:value>
     </sv:property>
     <sv:property sv:name="hst:referencecomponent" sv:type="String">
-      <sv:value>hst:pages/articlepagecommon</sv:value>
+      <sv:value>hst:pages/standardcommon</sv:value>
     </sv:property>
     <sv:node sv:name="main">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:component</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:template" sv:type="String">
+        <sv:value>landingpage.main</sv:value>
       </sv:property>
       <sv:node sv:name="content">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hst:component</sv:value>
         </sv:property>
         <sv:property sv:name="hst:referencecomponent" sv:type="String">
-          <sv:value>hst:components/content</sv:value>
+          <sv:value>hst:components/landingpage</sv:value>
         </sv:property>
       </sv:node>
     </sv:node>

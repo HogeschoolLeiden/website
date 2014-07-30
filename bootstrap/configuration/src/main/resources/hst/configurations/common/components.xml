@@ -96,4 +96,21 @@
       <sv:value>components.breadcrumb</sv:value>
     </sv:property>
   </sv:node>
+  <sv:node sv:name="landingpage">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:component</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:componentclassname" sv:type="String">
+      <sv:value>nl.hsleiden.components.LandingPage</sv:value>
+    </sv:property>
+    <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
+      <sv:value>menuName</sv:value>
+    </sv:property>
+    <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
+      <sv:value>megaMenu</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:template" sv:type="String">
+      <sv:value>landingpage.main.content</sv:value>
+    </sv:property>
+  </sv:node>
 </sv:node>
