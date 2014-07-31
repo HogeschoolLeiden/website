@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:ae="http://www.onehippo.org/jcr/autoexport/1.0" sv:name="hippo:initialize" ae:id="website">  
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sv:node xmlns:ae="http://www.onehippo.org/jcr/autoexport/1.0" xmlns:sv="http://www.jcp.org/jcr/sv/1.0" ae:id="website" sv:name="hippo:initialize">  
   <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
     <sv:value>hippo:initializefolder</sv:value> 
   </sv:property>  
@@ -1470,7 +1470,7 @@
     <sv:property sv:name="hippo:sequence" sv:type="Double"> 
       <sv:value>33001.0</sv:value> 
     </sv:property>  
-    <sv:property sv:name="hippo:contentpropadd" sv:multiple="true" sv:type="String"> 
+    <sv:property sv:multiple="true" sv:name="hippo:contentpropadd" sv:type="String"> 
       <sv:value>editor</sv:value> 
     </sv:property> 
   </sv:node>  
@@ -1739,6 +1739,48 @@
     </sv:property>
     <sv:property sv:name="hippo:contentroot" sv:type="String">
       <sv:value>/hst:hst/hst:configurations/website/hst:pages</sv:value>
+    </sv:property>
+  </sv:node>
+<sv:node sv:name="website-hst-hst-hst-configurations-website-hst-pages-actueellandingpage">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hippo:initializeitem</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:sequence" sv:type="Double">
+      <sv:value>30076.0</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:contentresource" sv:type="String">
+      <sv:value>hst/configurations/website/pages/actueellandingpage.xml</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:contentroot" sv:type="String">
+      <sv:value>/hst:hst/hst:configurations/website/hst:pages</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="website-hst-hst-hst-configurations-website-hst-pages-onderwijslandingpage">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hippo:initializeitem</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:sequence" sv:type="Double">
+      <sv:value>30076.0</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:contentresource" sv:type="String">
+      <sv:value>hst/configurations/website/pages/onderwijslandingpage.xml</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:contentroot" sv:type="String">
+      <sv:value>/hst:hst/hst:configurations/website/hst:pages</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="website-hst-hst-hst-configurations-common-hst-pages-landingpageonderwijscommon">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hippo:initializeitem</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:sequence" sv:type="Double">
+      <sv:value>30101.0</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:contentresource" sv:type="String">
+      <sv:value>hst/configurations/common/pages/landingpageonderwijscommon.xml</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:contentroot" sv:type="String">
+      <sv:value>/hst:hst/hst:configurations/common/hst:pages</sv:value>
     </sv:property>
   </sv:node>
 </sv:node>
