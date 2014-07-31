@@ -5237,38 +5237,54 @@ ul.social.follow li{ width:20%; float: left;}
 /* ---------------------------------- footer style ---------------------------------------- */
 
 /* ---------------------------------- landing page style ---------------------------------------- */
-.threeFourth{width: 75%; float: left;}
 .fourFourth{width: 100%;}
-.oneFourth{	width:23%; float: left; margin-left: 18px;}
+.threeFourth{width: 75%; float: left;}
+.widgets.column{ width:23%; float: left; margin-left: 18px;}
 
+.four.column.container,
 .three.column.container{width:100%;}
-.threeFourth h1 {margin-left: 20px;}
+
+.threeFourth h1,
+.fourFourth h1 {margin-left: 20px;}
 
 .oneThird{	width:33.3%; float: left;}
+.oneFourth{ width:24.6%; float: left; }
 
-.oneThird .overviewItem { margin-left: 20px; border: solid 1px; margin-bottom: 10px;}
-.oneThird .overviewItem h2 { margin-left: 20px;}
-.oneThird .overviewItem a.highlighted.link { display:block; width:85%; }
-.oneThird .overviewItem a { display: block; margin: 0 auto;}
-.oneThird .overviewItem a img { display: block; margin: 0 auto; }
+.oneThird .overviewItem,
+.oneFourth .overviewItem { margin-left: 20px; border: solid 1px; margin-bottom: 10px;}
 
+.oneThird .overviewItem h2,
+.oneFourth .overviewItem h2  { margin-left: 20px;}
+
+.oneThird .overviewItem a.highlighted.link,
+.oneFourth .overviewItem a.highlighted.link { display:block; width:85%; }
+
+.oneThird .overviewItem a,
+.oneFourth .overviewItem a { display: block; margin: 0 auto;}
+
+.oneThird .overviewItem a img,
+.oneFourth .overviewItem a img { display: block; margin: 0 auto; }
+
+.oneFourth .overviewItem .title,
 .oneThird .overviewItem .title { width:60%; margin-left:2%;
 	position:absolute; margin-top: -50px; z-index: 10;
 }
 
+.oneFourth .overviewItem .title a span,
 .oneThird .overviewItem .title a span{
 	font-weight: bold; font-size:16px; margin: auto;
 	border-style: solid; border-width: 2px; border-color: black; background-color: white;
 	padding: 10px 10px;
 }
-	
+
+.oneFourth .overviewItem p.highLighted.introduction,	
 .oneThird .overviewItem p.highLighted.introduction {
 	display:block; width:80%; margin-left: 19px; 
 }
 
 .overviewItem li{
 	list-style: none;
-	margin-left: 10px;
+	margin-left: 15px;
 }
 
 .overviewItem li ul{

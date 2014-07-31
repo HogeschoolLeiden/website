@@ -20,7 +20,7 @@
         <hst:include ref="content" />
       </div>
       
-      <div class="oneFourth">
+      <div class="widgets column">
         <hst:include ref="rightTop" />
         <hst:include ref="rightBottom" />
       </div>
