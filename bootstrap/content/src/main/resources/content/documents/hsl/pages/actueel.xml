@@ -5,8 +5,8 @@
   </sv:property>
   <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
     <sv:value>hippotranslation:translated</sv:value>
-    <sv:value>hippo:translated</sv:value>
     <sv:value>mix:versionable</sv:value>
+    <sv:value>hippo:translated</sv:value>
   </sv:property>
   <sv:property sv:name="jcr:uuid" sv:type="String">
     <sv:value>62b8dd7a-ccf9-463a-a770-3f445f2edcef</sv:value>
@@ -38,8 +38,8 @@
     </sv:property>
     <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
       <sv:value>hippotranslation:translated</sv:value>
-      <sv:value>hippo:translated</sv:value>
       <sv:value>mix:versionable</sv:value>
+      <sv:value>hippo:translated</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>68657a00-650d-4be1-b773-e4f03f263be2</sv:value>
@@ -456,7 +456,7 @@
           <sv:value>2014-06-10T10:58:07.247+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-30T10:34:32.167+02:00</sv:value>
+          <sv:value>2014-07-30T17:38:40.934+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -2933,7 +2933,7 @@
           <sv:value>2014-06-17T10:39:33.853+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-09T13:49:29.386+02:00</sv:value>
+          <sv:value>2014-07-30T17:43:19.415+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -2974,6 +2974,9 @@
         </sv:property>
         <sv:property sv:name="hsl:releaseDate" sv:type="Date">
           <sv:value>2014-06-30T16:31:00.000+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:share" sv:type="Boolean">
+          <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:multiple="true" sv:name="hsl:subjecttags" sv:type="String">
           <sv:value>onderzoek</sv:value>
@@ -3037,6 +3040,22 @@
             <sv:property sv:name="hsl:youtubeUrl" sv:type="String">
               <sv:value>https://www.youtube.com/watch?v=7pKrVB5f2W0</sv:value>
             </sv:property>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="hsl:flexibleblock">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:Image</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:image">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippogallerypicker:imagelink</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>00e66dd6-aec5-44d6-bada-0534d76d1a9a</sv:value>
+            </sv:property>
+            <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
+            <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
+            <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
           </sv:node>
         </sv:node>
       </sv:node>
@@ -3081,7 +3100,7 @@
           <sv:value>2014-06-17T10:39:33.853+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-09T13:49:40.910+02:00</sv:value>
+          <sv:value>2014-07-30T17:43:30.582+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -3122,6 +3141,9 @@
         </sv:property>
         <sv:property sv:name="hsl:releaseDate" sv:type="Date">
           <sv:value>2014-06-30T16:31:00.000+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:share" sv:type="Boolean">
+          <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:multiple="true" sv:name="hsl:subjecttags" sv:type="String">
           <sv:value>onderzoek</sv:value>
@@ -3185,6 +3207,22 @@
             <sv:property sv:name="hsl:youtubeUrl" sv:type="String">
               <sv:value>https://www.youtube.com/watch?v=7pKrVB5f2W0</sv:value>
             </sv:property>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="hsl:flexibleblock">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:Image</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:image">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippogallerypicker:imagelink</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>00e66dd6-aec5-44d6-bada-0534d76d1a9a</sv:value>
+            </sv:property>
+            <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
+            <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
+            <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
           </sv:node>
         </sv:node>
       </sv:node>
@@ -3217,13 +3255,13 @@
           <sv:value>2014-06-17T10:39:33.853+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-09T13:49:40.910+02:00</sv:value>
+          <sv:value>2014-07-30T17:43:30.582+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-          <sv:value>2014-07-09T13:49:45.423+02:00</sv:value>
+          <sv:value>2014-07-30T17:43:32.571+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:id" sv:type="String">
           <sv:value>a52a11b6-766c-41f9-aedc-84e9aef69b41</sv:value>
@@ -3262,6 +3300,9 @@
         <sv:property sv:name="hsl:releaseDate" sv:type="Date">
           <sv:value>2014-06-30T16:31:00.000+02:00</sv:value>
         </sv:property>
+        <sv:property sv:name="hsl:share" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
         <sv:property sv:multiple="true" sv:name="hsl:subjecttags" sv:type="String">
           <sv:value>onderzoek</sv:value>
         </sv:property>
@@ -3299,13 +3340,13 @@
               <sv:value>hsl:YoutubePlayerParameters</sv:value>
             </sv:property>
             <sv:property sv:name="hsl:allowFullScreen" sv:type="Boolean">
-              <sv:value>false</sv:value>
+              <sv:value>true</sv:value>
             </sv:property>
             <sv:property sv:name="hsl:autoplay" sv:type="Boolean">
               <sv:value>false</sv:value>
             </sv:property>
             <sv:property sv:name="hsl:disablekb" sv:type="Boolean">
-              <sv:value>false</sv:value>
+              <sv:value>true</sv:value>
             </sv:property>
             <sv:property sv:name="hsl:rel" sv:type="Boolean">
               <sv:value>false</sv:value>
@@ -3324,6 +3365,22 @@
             <sv:property sv:name="hsl:youtubeUrl" sv:type="String">
               <sv:value>https://www.youtube.com/watch?v=7pKrVB5f2W0</sv:value>
             </sv:property>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="hsl:flexibleblock">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:Image</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:image">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippogallerypicker:imagelink</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>00e66dd6-aec5-44d6-bada-0534d76d1a9a</sv:value>
+            </sv:property>
+            <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
+            <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
+            <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
           </sv:node>
         </sv:node>
       </sv:node>
@@ -3955,7 +4012,7 @@
           <sv:value>draft</sv:value>
         </sv:property>
         <sv:property sv:name="hippostd:stateSummary" sv:type="String">
-          <sv:value>changed</sv:value>
+          <sv:value>live</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
           <sv:value>boogaard.joris</sv:value>
@@ -3964,10 +4021,10 @@
           <sv:value>2014-07-14T14:11:31.765Z</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-14T15:05:18.387Z</sv:value>
+          <sv:value>2014-07-30T17:58:05.676+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
-          <sv:value>boogaard.joris</sv:value>
+          <sv:value>admin</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:id" sv:type="String">
           <sv:value>71291d51-f341-4388-ba79-bdca26debd00</sv:value>
@@ -3998,6 +4055,9 @@
         </sv:property>
         <sv:property sv:name="hsl:releaseDate" sv:type="Date">
           <sv:value>2014-07-14T14:22:00.000Z</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:share" sv:type="Boolean">
+          <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:multiple="true" sv:name="hsl:subjecttags" sv:type="String">
           <sv:value>actueel</sv:value>
@@ -4043,19 +4103,6 @@
         </sv:node>
         <sv:node sv:name="hsl:flexibleblock">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>hsl:Documents</sv:value>
-          </sv:property>
-          <sv:node sv:name="hsl:asset">
-            <sv:property sv:name="jcr:primaryType" sv:type="Name">
-              <sv:value>hippo:mirror</sv:value>
-            </sv:property>
-            <sv:property sv:name="hippo:docbase" sv:type="String">
-              <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
-            </sv:property>
-          </sv:node>
-        </sv:node>
-        <sv:node sv:name="hsl:flexibleblock">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>hsl:Paragraph</sv:value>
           </sv:property>
           <sv:property sv:name="hsl:title" sv:type="String">
@@ -4066,7 +4113,7 @@
               <sv:value>hippostd:html</sv:value>
             </sv:property>
             <sv:property sv:name="hippostd:content" sv:type="String">
-              <sv:value>&lt;p&gt;&lt;/p&gt; 
+              <sv:value>&lt;p&gt;&amp;nbsp;&lt;/p&gt; 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt; 
 &lt;table border="1" cellpadding="1" cellspacing="1" style="width:500px"&gt; 
 &lt;tbody&gt; 
@@ -4162,7 +4209,7 @@
           <sv:value>unpublished</sv:value>
         </sv:property>
         <sv:property sv:name="hippostd:stateSummary" sv:type="String">
-          <sv:value>changed</sv:value>
+          <sv:value>live</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
           <sv:value>boogaard.joris</sv:value>
@@ -4171,10 +4218,10 @@
           <sv:value>2014-07-14T14:11:31.765Z</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-14T15:05:30.206Z</sv:value>
+          <sv:value>2014-07-30T17:58:13.108+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
-          <sv:value>boogaard.joris</sv:value>
+          <sv:value>admin</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:id" sv:type="String">
           <sv:value>71291d51-f341-4388-ba79-bdca26debd00</sv:value>
@@ -4205,6 +4252,9 @@
         </sv:property>
         <sv:property sv:name="hsl:releaseDate" sv:type="Date">
           <sv:value>2014-07-14T14:22:00.000Z</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:share" sv:type="Boolean">
+          <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:multiple="true" sv:name="hsl:subjecttags" sv:type="String">
           <sv:value>actueel</sv:value>
@@ -4250,19 +4300,6 @@
         </sv:node>
         <sv:node sv:name="hsl:flexibleblock">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>hsl:Documents</sv:value>
-          </sv:property>
-          <sv:node sv:name="hsl:asset">
-            <sv:property sv:name="jcr:primaryType" sv:type="Name">
-              <sv:value>hippo:mirror</sv:value>
-            </sv:property>
-            <sv:property sv:name="hippo:docbase" sv:type="String">
-              <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
-            </sv:property>
-          </sv:node>
-        </sv:node>
-        <sv:node sv:name="hsl:flexibleblock">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>hsl:Paragraph</sv:value>
           </sv:property>
           <sv:property sv:name="hsl:title" sv:type="String">
@@ -4273,7 +4310,7 @@
               <sv:value>hippostd:html</sv:value>
             </sv:property>
             <sv:property sv:name="hippostd:content" sv:type="String">
-              <sv:value>&lt;p&gt;&lt;/p&gt; 
+              <sv:value>&lt;p&gt;&amp;nbsp;&lt;/p&gt; 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt; 
 &lt;table border="1" cellpadding="1" cellspacing="1" style="width:500px"&gt; 
 &lt;tbody&gt; 
@@ -4357,7 +4394,7 @@
           <sv:value>published</sv:value>
         </sv:property>
         <sv:property sv:name="hippostd:stateSummary" sv:type="String">
-          <sv:value>changed</sv:value>
+          <sv:value>live</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
           <sv:value>boogaard.joris</sv:value>
@@ -4366,13 +4403,13 @@
           <sv:value>2014-07-14T14:11:31.765Z</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-14T14:59:48.506Z</sv:value>
+          <sv:value>2014-07-30T17:58:13.108+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
-          <sv:value>boogaard.joris</sv:value>
+          <sv:value>admin</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-          <sv:value>2014-07-14T14:59:53.077Z</sv:value>
+          <sv:value>2014-07-30T17:58:15.041+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:id" sv:type="String">
           <sv:value>71291d51-f341-4388-ba79-bdca26debd00</sv:value>
@@ -4403,6 +4440,9 @@
         </sv:property>
         <sv:property sv:name="hsl:releaseDate" sv:type="Date">
           <sv:value>2014-07-14T14:22:00.000Z</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:share" sv:type="Boolean">
+          <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:multiple="true" sv:name="hsl:subjecttags" sv:type="String">
           <sv:value>actueel</sv:value>
@@ -4448,19 +4488,6 @@
         </sv:node>
         <sv:node sv:name="hsl:flexibleblock">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>hsl:Documents</sv:value>
-          </sv:property>
-          <sv:node sv:name="hsl:asset">
-            <sv:property sv:name="jcr:primaryType" sv:type="Name">
-              <sv:value>hippo:mirror</sv:value>
-            </sv:property>
-            <sv:property sv:name="hippo:docbase" sv:type="String">
-              <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
-            </sv:property>
-          </sv:node>
-        </sv:node>
-        <sv:node sv:name="hsl:flexibleblock">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>hsl:Paragraph</sv:value>
           </sv:property>
           <sv:property sv:name="hsl:title" sv:type="String">
@@ -4471,7 +4498,7 @@
               <sv:value>hippostd:html</sv:value>
             </sv:property>
             <sv:property sv:name="hippostd:content" sv:type="String">
-              <sv:value>&lt;p&gt;Waar is mijn tabel?&lt;/p&gt; 
+              <sv:value>&lt;p&gt;&amp;nbsp;&lt;/p&gt; 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt; 
 &lt;table border="1" cellpadding="1" cellspacing="1" style="width:500px"&gt; 
 &lt;tbody&gt; 
@@ -4484,16 +4511,16 @@
 &lt;li&gt;Opsomming&lt;/li&gt; &lt;/ol&gt; &lt;/td&gt; 
 &lt;td&gt; 
 &lt;ol&gt; 
-&lt;li&gt;Opsomming&lt;/li&gt; &lt;/ol&gt; &lt;/td&gt; &lt;/tr&gt; 
+&lt;li&gt;&amp;nbsp;&lt;/li&gt; &lt;/ol&gt; &lt;/td&gt; &lt;/tr&gt; 
 &lt;tr&gt; 
 &lt;td&gt; 
 &lt;ol&gt; 
-&lt;li&gt;Opsomming&lt;/li&gt; &lt;/ol&gt; 
+&lt;li&gt;&amp;nbsp;&lt;/li&gt; &lt;/ol&gt; 
 &lt;ul&gt; 
 &lt;li&gt;&amp;nbsp;&lt;/li&gt; &lt;/ul&gt; &lt;/td&gt; 
 &lt;td&gt; 
 &lt;ol&gt; 
-&lt;li&gt;&lt;u&gt;&lt;strong&gt;&lt;em&gt;&lt;/em&gt;&lt;/strong&gt;&lt;/u&gt;&lt;/li&gt; &lt;/ol&gt; &lt;/td&gt; &lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt; 
+&lt;li&gt;&amp;nbsp;&lt;/li&gt; &lt;/ol&gt; &lt;/td&gt; &lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt; 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;</sv:value>
             </sv:property>
           </sv:node>
@@ -4658,8 +4685,8 @@
     </sv:property>
     <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
       <sv:value>hippotranslation:translated</sv:value>
-      <sv:value>hippo:translated</sv:value>
       <sv:value>mix:versionable</sv:value>
+      <sv:value>hippo:translated</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>bd84f9a1-a22c-4eaa-a332-f057e99efba9</sv:value>
@@ -5072,7 +5099,7 @@
           <sv:value>2014-06-19T12:10:20.307+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-30T10:34:15.804+02:00</sv:value>
+          <sv:value>2014-07-30T20:20:29.359+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -5106,7 +5133,7 @@
           <sv:value>Trefwoorden Metatags Search engine</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:releaseDate" sv:type="Date">
-          <sv:value>2014-06-19T12:10:00.000+02:00</sv:value>
+          <sv:value>2010-06-19T12:10:00.000+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:share" sv:type="Boolean">
           <sv:value>true</sv:value>
@@ -5195,7 +5222,7 @@
               <sv:value>hippogallerypicker:imagelink</sv:value>
             </sv:property>
             <sv:property sv:name="hippo:docbase" sv:type="String">
-              <sv:value>2847485e-292a-42ed-9f1d-6f0893ee141b</sv:value>
+              <sv:value>8d154015-2946-4d43-9003-ca8a31640797</sv:value>
             </sv:property>
             <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
             <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
@@ -5233,7 +5260,7 @@
           <sv:value>2014-06-19T12:10:20.307+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-30T10:34:22.992+02:00</sv:value>
+          <sv:value>2014-07-30T20:20:43.061+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -5267,7 +5294,7 @@
           <sv:value>Trefwoorden Metatags Search engine</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:releaseDate" sv:type="Date">
-          <sv:value>2014-06-19T12:10:00.000+02:00</sv:value>
+          <sv:value>2010-06-19T12:10:00.000+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:share" sv:type="Boolean">
           <sv:value>true</sv:value>
@@ -5356,7 +5383,7 @@
               <sv:value>hippogallerypicker:imagelink</sv:value>
             </sv:property>
             <sv:property sv:name="hippo:docbase" sv:type="String">
-              <sv:value>2847485e-292a-42ed-9f1d-6f0893ee141b</sv:value>
+              <sv:value>8d154015-2946-4d43-9003-ca8a31640797</sv:value>
             </sv:property>
             <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
             <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
@@ -5393,13 +5420,13 @@
           <sv:value>2014-06-19T12:10:20.307+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-30T10:34:22.992+02:00</sv:value>
+          <sv:value>2014-07-30T20:20:43.061+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-          <sv:value>2014-07-30T10:34:25.348+02:00</sv:value>
+          <sv:value>2014-07-30T20:20:45.968+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:id" sv:type="String">
           <sv:value>d1627e32-7bd1-4c24-8cc2-e1828f021bce</sv:value>
@@ -5430,7 +5457,7 @@
           <sv:value>Trefwoorden Metatags Search engine</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:releaseDate" sv:type="Date">
-          <sv:value>2014-06-19T12:10:00.000+02:00</sv:value>
+          <sv:value>2010-06-19T12:10:00.000+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:share" sv:type="Boolean">
           <sv:value>true</sv:value>
@@ -5519,7 +5546,7 @@
               <sv:value>hippogallerypicker:imagelink</sv:value>
             </sv:property>
             <sv:property sv:name="hippo:docbase" sv:type="String">
-              <sv:value>2847485e-292a-42ed-9f1d-6f0893ee141b</sv:value>
+              <sv:value>8d154015-2946-4d43-9003-ca8a31640797</sv:value>
             </sv:property>
             <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
             <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
@@ -5566,7 +5593,7 @@
           <sv:value>2014-06-19T12:47:26.920+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-09T13:47:08.134+02:00</sv:value>
+          <sv:value>2014-07-30T20:20:47.959+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -5601,6 +5628,9 @@
         <sv:property sv:name="hsl:releaseDate" sv:type="Date">
           <sv:value>2014-06-19T12:47:00.000+02:00</sv:value>
         </sv:property>
+        <sv:property sv:name="hsl:share" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
         <sv:property sv:multiple="true" sv:name="hsl:subjecttags" sv:type="String">
           <sv:value>hl-media</sv:value>
           <sv:value>onderwijs</sv:value>
@@ -5633,6 +5663,9 @@
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>hsl:Documents</sv:value>
           </sv:property>
+          <sv:property sv:name="hsl:title" sv:type="String">
+            <sv:value/>
+          </sv:property>
           <sv:node sv:name="hsl:asset">
             <sv:property sv:name="jcr:primaryType" sv:type="Name">
               <sv:value>hippo:mirror</sv:value>
@@ -5659,7 +5692,7 @@
               <sv:value>hippogallerypicker:imagelink</sv:value>
             </sv:property>
             <sv:property sv:name="hippo:docbase" sv:type="String">
-              <sv:value>2847485e-292a-42ed-9f1d-6f0893ee141b</sv:value>
+              <sv:value>00e66dd6-aec5-44d6-bada-0534d76d1a9a</sv:value>
             </sv:property>
             <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
             <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
@@ -5697,7 +5730,7 @@
           <sv:value>2014-06-19T12:47:26.920+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-09T13:47:26.807+02:00</sv:value>
+          <sv:value>2014-07-30T20:20:55.192+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -5732,6 +5765,9 @@
         <sv:property sv:name="hsl:releaseDate" sv:type="Date">
           <sv:value>2014-06-19T12:47:00.000+02:00</sv:value>
         </sv:property>
+        <sv:property sv:name="hsl:share" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
         <sv:property sv:multiple="true" sv:name="hsl:subjecttags" sv:type="String">
           <sv:value>hl-media</sv:value>
           <sv:value>onderwijs</sv:value>
@@ -5764,6 +5800,9 @@
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>hsl:Documents</sv:value>
           </sv:property>
+          <sv:property sv:name="hsl:title" sv:type="String">
+            <sv:value/>
+          </sv:property>
           <sv:node sv:name="hsl:asset">
             <sv:property sv:name="jcr:primaryType" sv:type="Name">
               <sv:value>hippo:mirror</sv:value>
@@ -5790,7 +5829,7 @@
               <sv:value>hippogallerypicker:imagelink</sv:value>
             </sv:property>
             <sv:property sv:name="hippo:docbase" sv:type="String">
-              <sv:value>2847485e-292a-42ed-9f1d-6f0893ee141b</sv:value>
+              <sv:value>00e66dd6-aec5-44d6-bada-0534d76d1a9a</sv:value>
             </sv:property>
             <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
             <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
@@ -5827,13 +5866,13 @@
           <sv:value>2014-06-19T12:47:26.920+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-09T13:47:26.807+02:00</sv:value>
+          <sv:value>2014-07-30T20:20:55.192+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-          <sv:value>2014-07-09T13:47:28.542+02:00</sv:value>
+          <sv:value>2014-07-30T20:20:57.206+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:id" sv:type="String">
           <sv:value>23be660d-8711-433a-9f61-b303a4efb54a</sv:value>
@@ -5864,6 +5903,9 @@
         </sv:property>
         <sv:property sv:name="hsl:releaseDate" sv:type="Date">
           <sv:value>2014-06-19T12:47:00.000+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:share" sv:type="Boolean">
+          <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:multiple="true" sv:name="hsl:subjecttags" sv:type="String">
           <sv:value>hl-media</sv:value>
@@ -5897,6 +5939,9 @@
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>hsl:Documents</sv:value>
           </sv:property>
+          <sv:property sv:name="hsl:title" sv:type="String">
+            <sv:value/>
+          </sv:property>
           <sv:node sv:name="hsl:asset">
             <sv:property sv:name="jcr:primaryType" sv:type="Name">
               <sv:value>hippo:mirror</sv:value>
@@ -5923,7 +5968,7 @@
               <sv:value>hippogallerypicker:imagelink</sv:value>
             </sv:property>
             <sv:property sv:name="hippo:docbase" sv:type="String">
-              <sv:value>2847485e-292a-42ed-9f1d-6f0893ee141b</sv:value>
+              <sv:value>00e66dd6-aec5-44d6-bada-0534d76d1a9a</sv:value>
             </sv:property>
             <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
             <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
@@ -5970,7 +6015,7 @@
           <sv:value>2014-06-19T12:48:50.332+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-09T13:47:42.133+02:00</sv:value>
+          <sv:value>2014-07-30T20:22:05.720+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -6005,6 +6050,9 @@
         <sv:property sv:name="hsl:releaseDate" sv:type="Date">
           <sv:value>2014-06-19T12:49:00.000+02:00</sv:value>
         </sv:property>
+        <sv:property sv:name="hsl:share" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
         <sv:property sv:multiple="true" sv:name="hsl:subjecttags" sv:type="String">
           <sv:value>onderwijs</sv:value>
           <sv:value>onderzoek</sv:value>
@@ -6031,22 +6079,6 @@
           <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
           <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
           <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
-        </sv:node>
-        <sv:node sv:name="hsl:flexibleblock">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>hsl:Image</sv:value>
-          </sv:property>
-          <sv:node sv:name="hsl:image">
-            <sv:property sv:name="jcr:primaryType" sv:type="Name">
-              <sv:value>hippogallerypicker:imagelink</sv:value>
-            </sv:property>
-            <sv:property sv:name="hippo:docbase" sv:type="String">
-              <sv:value>2847485e-292a-42ed-9f1d-6f0893ee141b</sv:value>
-            </sv:property>
-            <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
-            <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
-            <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
-          </sv:node>
         </sv:node>
       </sv:node>
       <sv:node sv:name="event-3">
@@ -6079,7 +6111,7 @@
           <sv:value>2014-06-19T12:48:50.332+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-09T13:47:56.149+02:00</sv:value>
+          <sv:value>2014-07-30T20:22:11.340+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -6114,6 +6146,9 @@
         <sv:property sv:name="hsl:releaseDate" sv:type="Date">
           <sv:value>2014-06-19T12:49:00.000+02:00</sv:value>
         </sv:property>
+        <sv:property sv:name="hsl:share" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
         <sv:property sv:multiple="true" sv:name="hsl:subjecttags" sv:type="String">
           <sv:value>onderwijs</sv:value>
           <sv:value>onderzoek</sv:value>
@@ -6140,22 +6175,6 @@
           <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
           <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
           <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
-        </sv:node>
-        <sv:node sv:name="hsl:flexibleblock">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>hsl:Image</sv:value>
-          </sv:property>
-          <sv:node sv:name="hsl:image">
-            <sv:property sv:name="jcr:primaryType" sv:type="Name">
-              <sv:value>hippogallerypicker:imagelink</sv:value>
-            </sv:property>
-            <sv:property sv:name="hippo:docbase" sv:type="String">
-              <sv:value>2847485e-292a-42ed-9f1d-6f0893ee141b</sv:value>
-            </sv:property>
-            <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
-            <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
-            <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
-          </sv:node>
         </sv:node>
       </sv:node>
       <sv:node sv:name="event-3">
@@ -6187,13 +6206,13 @@
           <sv:value>2014-06-19T12:48:50.332+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-09T13:47:56.149+02:00</sv:value>
+          <sv:value>2014-07-30T20:22:11.340+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-          <sv:value>2014-07-09T13:47:58.042+02:00</sv:value>
+          <sv:value>2014-07-30T20:22:13.221+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:id" sv:type="String">
           <sv:value>ecffcb2b-aac6-44f7-a478-97d74a26a73a</sv:value>
@@ -6225,6 +6244,9 @@
         <sv:property sv:name="hsl:releaseDate" sv:type="Date">
           <sv:value>2014-06-19T12:49:00.000+02:00</sv:value>
         </sv:property>
+        <sv:property sv:name="hsl:share" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
         <sv:property sv:multiple="true" sv:name="hsl:subjecttags" sv:type="String">
           <sv:value>onderwijs</sv:value>
           <sv:value>onderzoek</sv:value>
@@ -6252,22 +6274,6 @@
           <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
           <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
         </sv:node>
-        <sv:node sv:name="hsl:flexibleblock">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>hsl:Image</sv:value>
-          </sv:property>
-          <sv:node sv:name="hsl:image">
-            <sv:property sv:name="jcr:primaryType" sv:type="Name">
-              <sv:value>hippogallerypicker:imagelink</sv:value>
-            </sv:property>
-            <sv:property sv:name="hippo:docbase" sv:type="String">
-              <sv:value>2847485e-292a-42ed-9f1d-6f0893ee141b</sv:value>
-            </sv:property>
-            <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
-            <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
-            <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
-          </sv:node>
-        </sv:node>
       </sv:node>
     </sv:node>
   </sv:node>
@@ -6277,8 +6283,8 @@
     </sv:property>
     <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
       <sv:value>hippotranslation:translated</sv:value>
-      <sv:value>hippo:translated</sv:value>
       <sv:value>mix:versionable</sv:value>
+      <sv:value>hippo:translated</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>2fafa985-fdcc-498a-9cd5-8907a6624f41</sv:value>

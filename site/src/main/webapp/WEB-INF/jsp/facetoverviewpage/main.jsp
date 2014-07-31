@@ -33,14 +33,14 @@
 				<article class="well well-large">
 				  <hst:cmseditlink hippobean="${item}" />
         
-                  <c:if test="${not empty item.headerImage }">
+                  <c:if test="${not empty tag:getFirstFlexibleBlockImage(item.canonicalBean) }">
                     <div class="image-space">
-                      <hst:link var="image" hippobean="${item.headerImage.paragraphImage}" />
+                      <hst:link var="image" hippobean="${tag:getFirstFlexibleBlockImage(item.canonicalBean).image.paragraphImage}" />
                       <img alt="${item.title }" title="${item.title }" src="${image }" />
                     </div>
                   </c:if>
 
-                  <div ${not empty item.image ? 'class="list-item-content"' : 'class="item-content"' } >
+                  <div ${not empty tag:getFirstFlexibleBlockImage(item.canonicalBean) ? 'class="list-item-content"' : 'class="item-content"' } >
     			    <h3>
     				  <a href="${link}"><c:out value="${item.title}"/></a>
     				</h3>
@@ -64,7 +64,8 @@
   			       
         			<p><c:out value="${item.introduction}"/></p>
                   </div>
-                  <c:if test="${not empty item.image }">
+                  
+                  <c:if test="${not empty tag:getFirstFlexibleBlockImage(item.canonicalBean) }">
                     <div class="clear"></div>
                   </c:if>
 				</article>

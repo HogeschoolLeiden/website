@@ -26,9 +26,9 @@
     <%-- Items in-inlined for better performance --%>
     <c:forEach var="item" items="${model.items}" varStatus="zebra">
       <div class="item-with-image">
-          <c:if test="${not empty tag:getFirstFlexibleBlockImage(item) }">
+          <c:if test="${not empty tag:getFirstFlexibleBlockImage(item.canonicalBean) }">
             <div class="image-space">
-              <hst:link var="image" hippobean="${tag:getFirstFlexibleBlockImage(item).image.listImageMedium }" />
+              <hst:link var="image" hippobean="${tag:getFirstFlexibleBlockImage(item.canonicalBean).image.listImageMedium }" />
               <img alt="${item.title }" src="${image }" />
             </div>
           </c:if>   

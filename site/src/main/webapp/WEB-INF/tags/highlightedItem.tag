@@ -11,14 +11,17 @@
 
 <article class="well well-large">
   <hst:cmseditlink hippobean="${highLightedItem}" />
+  <hst:link var="image" hippobean="${highLightedItem.headerImage.wideImage}" />
+  <hst:link hippobean="${highLightedItem }" var="link" />
+
   <div class="higlighted-image">
-      <hst:link var="image" hippobean="${highLightedItem.headerImage.wideImage}" />
-      <img alt="${highLightedItem.title }" title="${highLightedItem.title }" src="${image }" />
+      <a href="${link }" title="${title }">
+        <img alt="${highLightedItem.title }" title="${highLightedItem.title }" src="${image }" />
+      </a>
   </div>
   
   <div class="higlighted-itemContent">
     <div class=higlighted-itemTitle>
-      <hst:link hippobean="${highLightedItem }" var="link" />
       <c:set var="title">
         <c:out value="${highLightedItem.title }" escapeXml="true" />
       </c:set>
