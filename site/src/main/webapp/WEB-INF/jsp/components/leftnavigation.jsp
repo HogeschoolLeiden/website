@@ -8,7 +8,18 @@
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 <%@ taglib prefix='opw' uri="http://open-web.nl/hippo/prototype"%>
 
+<hst:setBundle basename="nl.hsleiden.widget.Messages" />
+
 <div class="left">
+  
+  <c:if test="${not empty paramInfo.overviewSitemapRefId}">
+    <div class="backToOverview">
+      <c:set var="refId" value="${paramInfo.overviewSitemapRefId}"/>
+      <hst:link siteMapItemRefId="${refId}" var="overviewLink"/>
+      <a href="${overviewLink}"><fmt:message key="back.overview.${refId}"/></a>
+    </div>
+  </c:if>
+  
   <c:set var="parentItem" value="${not empty menu.deepestExpandedItem.parentItem ? menu.deepestExpandedItem.parentItem : menu.deepestExpandedItem}"/>
   <c:set var="grandparentItem" value="${not empty parentItem.parentItem ? parentItem.parentItem : parentItem}"/>
   <ul class="nav nav-pills nav-stacked">

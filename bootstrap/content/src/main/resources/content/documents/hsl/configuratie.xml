@@ -1857,7 +1857,7 @@
         </sv:property>
       </sv:node>
     </sv:node>
-    <sv:node sv:name="widget-messages">
+    <sv:node sv:name="widget-messages" xmlns:sv="http://www.jcp.org/jcr/sv/1.0">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hippo:handle</sv:value>
       </sv:property>
@@ -1880,8 +1880,8 @@
         </sv:property>
         <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String"/>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
-          <sv:value>configuratie/resource-bundles/widget-messages/widget-messages[2]</sv:value>
-          <sv:value>configuratie/resource-bundles/widget-messages/widget-messages[3]</sv:value>
+          <sv:value>widget-messages/widget-messages[2]</sv:value>
+          <sv:value>widget-messages/widget-messages[3]</sv:value>
         </sv:property>
         <sv:property sv:name="hippostd:state" sv:type="String">
           <sv:value>draft</sv:value>
@@ -1896,7 +1896,7 @@
           <sv:value>2014-07-09T11:47:12.308+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-17T11:41:01.576+02:00</sv:value>
+          <sv:value>2014-07-31T15:34:24.398+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -1910,6 +1910,9 @@
         <sv:property sv:multiple="true" sv:name="resourcebundle:descriptions" sv:type="String">
           <sv:value>Default value for label of the overview links in the widgets</sv:value>
           <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
         </sv:property>
         <sv:property sv:name="resourcebundle:id" sv:type="String">
           <sv:value>nl.hsleiden.widget.Messages</sv:value>
@@ -1917,18 +1920,30 @@
         <sv:property sv:multiple="true" sv:name="resourcebundle:keys" sv:type="String">
           <sv:value>overiewlink.default.label</sv:value>
           <sv:value>contact.person.subject</sv:value>
+          <sv:value>back.overview.agenda</sv:value>
+          <sv:value>back.overview.pers</sv:value>
+          <sv:value>back.overview.nieuws</sv:value>
         </sv:property>
         <sv:property sv:multiple="true" sv:name="resourcebundle:messages" sv:type="String">
           <sv:value>Overview</sv:value>
           <sv:value>Define it in property: contact person subject</sv:value>
+          <sv:value>wdg sms back.overview.agenda</sv:value>
+          <sv:value>wdg sms back.overview.pers</sv:value>
+          <sv:value>wdg sms back.overview.nieuws</sv:value>
         </sv:property>
         <sv:property sv:multiple="true" sv:name="resourcebundle:messages_en" sv:type="String">
           <sv:value>Overview</sv:value>
           <sv:value>Define it in property: contact person subject</sv:value>
+          <sv:value>wdg sms back.overview.agenda</sv:value>
+          <sv:value>wdg sms back.overview.pers</sv:value>
+          <sv:value>wdg sms back.overview.nieuws</sv:value>
         </sv:property>
         <sv:property sv:multiple="true" sv:name="resourcebundle:messages_nl" sv:type="String">
           <sv:value>Overview</sv:value>
           <sv:value>Define it in property: contact person subject</sv:value>
+          <sv:value>wdg sms back.overview.agenda</sv:value>
+          <sv:value>wdg sms back.overview.pers</sv:value>
+          <sv:value>wdg sms back.overview.nieuws</sv:value>
         </sv:property>
       </sv:node>
       <sv:node sv:name="hippo:translation">
@@ -1957,7 +1972,7 @@
           <sv:value>preview</sv:value>
         </sv:property>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
-          <sv:value>configuratie/resource-bundles/widget-messages/widget-messages[3]</sv:value>
+          <sv:value>widget-messages/widget-messages[3]</sv:value>
         </sv:property>
         <sv:property sv:name="hippostd:state" sv:type="String">
           <sv:value>unpublished</sv:value>
@@ -1972,7 +1987,7 @@
           <sv:value>2014-07-09T11:47:12.308+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-17T11:41:40.007+02:00</sv:value>
+          <sv:value>2014-07-31T15:35:13.683+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -1986,6 +2001,9 @@
         <sv:property sv:multiple="true" sv:name="resourcebundle:descriptions" sv:type="String">
           <sv:value>Default value for label of the overview links in the widgets</sv:value>
           <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
         </sv:property>
         <sv:property sv:name="resourcebundle:id" sv:type="String">
           <sv:value>nl.hsleiden.widget.Messages</sv:value>
@@ -1993,18 +2011,30 @@
         <sv:property sv:multiple="true" sv:name="resourcebundle:keys" sv:type="String">
           <sv:value>overiewlink.default.label</sv:value>
           <sv:value>contact.person.subject</sv:value>
+          <sv:value>back.overview.agenda</sv:value>
+          <sv:value>back.overview.pers</sv:value>
+          <sv:value>back.overview.nieuws</sv:value>
         </sv:property>
         <sv:property sv:multiple="true" sv:name="resourcebundle:messages" sv:type="String">
           <sv:value>Overview</sv:value>
           <sv:value>Define it in property: contact person subject</sv:value>
+          <sv:value>wdg sms back.overview.agenda</sv:value>
+          <sv:value>wdg sms back.overview.pers</sv:value>
+          <sv:value>wdg sms back.overview.nieuws</sv:value>
         </sv:property>
         <sv:property sv:multiple="true" sv:name="resourcebundle:messages_en" sv:type="String">
           <sv:value>Overview</sv:value>
           <sv:value>Define it in property: contact person subject</sv:value>
+          <sv:value>wdg sms back.overview.agenda</sv:value>
+          <sv:value>wdg sms back.overview.pers</sv:value>
+          <sv:value>wdg sms back.overview.nieuws</sv:value>
         </sv:property>
         <sv:property sv:multiple="true" sv:name="resourcebundle:messages_nl" sv:type="String">
           <sv:value>Overview</sv:value>
           <sv:value>Define it in property: contact person subject</sv:value>
+          <sv:value>wdg sms back.overview.agenda</sv:value>
+          <sv:value>wdg sms back.overview.pers</sv:value>
+          <sv:value>wdg sms back.overview.nieuws</sv:value>
         </sv:property>
       </sv:node>
       <sv:node sv:name="widget-messages">
@@ -2021,7 +2051,7 @@
           <sv:value>live</sv:value>
         </sv:property>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
-          <sv:value>configuratie/resource-bundles/widget-messages/widget-messages[2]</sv:value>
+          <sv:value>widget-messages/widget-messages[2]</sv:value>
         </sv:property>
         <sv:property sv:name="hippostd:state" sv:type="String">
           <sv:value>published</sv:value>
@@ -2036,13 +2066,13 @@
           <sv:value>2014-07-09T11:47:12.308+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-17T11:41:40.007+02:00</sv:value>
+          <sv:value>2014-07-31T15:35:13.683+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-          <sv:value>2014-07-17T11:41:41.700+02:00</sv:value>
+          <sv:value>2014-07-31T15:35:15.442+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:id" sv:type="String">
           <sv:value>a624d81b-1d29-4fa5-a54c-22baa0004a2a</sv:value>
@@ -2053,6 +2083,9 @@
         <sv:property sv:multiple="true" sv:name="resourcebundle:descriptions" sv:type="String">
           <sv:value>Default value for label of the overview links in the widgets</sv:value>
           <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
         </sv:property>
         <sv:property sv:name="resourcebundle:id" sv:type="String">
           <sv:value>nl.hsleiden.widget.Messages</sv:value>
@@ -2060,18 +2093,30 @@
         <sv:property sv:multiple="true" sv:name="resourcebundle:keys" sv:type="String">
           <sv:value>overiewlink.default.label</sv:value>
           <sv:value>contact.person.subject</sv:value>
+          <sv:value>back.overview.agenda</sv:value>
+          <sv:value>back.overview.pers</sv:value>
+          <sv:value>back.overview.nieuws</sv:value>
         </sv:property>
         <sv:property sv:multiple="true" sv:name="resourcebundle:messages" sv:type="String">
           <sv:value>Overview</sv:value>
           <sv:value>Define it in property: contact person subject</sv:value>
+          <sv:value>wdg sms back.overview.agenda</sv:value>
+          <sv:value>wdg sms back.overview.pers</sv:value>
+          <sv:value>wdg sms back.overview.nieuws</sv:value>
         </sv:property>
         <sv:property sv:multiple="true" sv:name="resourcebundle:messages_en" sv:type="String">
           <sv:value>Overview</sv:value>
           <sv:value>Define it in property: contact person subject</sv:value>
+          <sv:value>wdg sms back.overview.agenda</sv:value>
+          <sv:value>wdg sms back.overview.pers</sv:value>
+          <sv:value>wdg sms back.overview.nieuws</sv:value>
         </sv:property>
         <sv:property sv:multiple="true" sv:name="resourcebundle:messages_nl" sv:type="String">
           <sv:value>Overview</sv:value>
           <sv:value>Define it in property: contact person subject</sv:value>
+          <sv:value>wdg sms back.overview.agenda</sv:value>
+          <sv:value>wdg sms back.overview.pers</sv:value>
+          <sv:value>wdg sms back.overview.nieuws</sv:value>
         </sv:property>
       </sv:node>
     </sv:node>

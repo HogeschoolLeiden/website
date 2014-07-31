@@ -62,7 +62,13 @@
       <sv:value>bd0756cc-9fba-429e-96bd-6655b4b3a393</sv:value>
     </sv:property>
     <sv:property sv:name="hst:componentclassname" sv:type="String">
-      <sv:value>com.tdclighthouse.prototype.components.Navigation</sv:value>
+      <sv:value>nl.hsleiden.components.NavigationComponent</sv:value>
+    </sv:property>
+    <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
+      <sv:value>overviewSitemapRefId</sv:value>
+    </sv:property>
+    <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
+      <sv:value>${overviewSitemapRefId}</sv:value>
     </sv:property>
     <sv:property sv:name="hst:template" sv:type="String">
       <sv:value>components.leftnavigation</sv:value>
@@ -76,7 +82,13 @@
       <sv:value>bb74943f-2efb-4e2f-a967-cf4882fee55f</sv:value>
     </sv:property>
     <sv:property sv:name="hst:componentclassname" sv:type="String">
-      <sv:value>com.tdclighthouse.prototype.components.FacetDeepLinkNav</sv:value>
+      <sv:value>nl.hsleiden.components.FacetDeepLinkNavigation</sv:value>
+    </sv:property>
+    <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
+      <sv:value>overviewSitemapRefId</sv:value>
+    </sv:property>
+    <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
+      <sv:value>${overviewSitemapRefId}</sv:value>
     </sv:property>
     <sv:property sv:name="hst:template" sv:type="String">
       <sv:value>components.facetdeeplink</sv:value>
@@ -99,6 +111,9 @@
   <sv:node sv:name="landingpage">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:component</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>d6fd7b04-d2a0-46ab-b73c-5bfabebf85b1</sv:value>
     </sv:property>
     <sv:property sv:name="hst:componentclassname" sv:type="String">
       <sv:value>nl.hsleiden.components.LandingPage</sv:value>
