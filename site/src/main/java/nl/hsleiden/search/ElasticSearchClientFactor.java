@@ -17,7 +17,7 @@ public class ElasticSearchClientFactor {
     static {
         // TODO get the cluster.name server location and port number from a
         // property file.
-        BUILDER = ImmutableSettings.settingsBuilder().put("cluster.name", "ebrahimcluster");
+        BUILDER = ImmutableSettings.settingsBuilder().put("cluster.name", "hslcluster");
         TransportClient c = new TransportClient(BUILDER.build());
         c.addTransportAddress(new InetSocketTransportAddress("localhost", 9300));
         CLIENT = c;
