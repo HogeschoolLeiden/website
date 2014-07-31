@@ -23,38 +23,52 @@
 			  <tag:pagenotfound />
 			</c:when>
 			<c:otherwise>
-			 
-              <tag:overviewIntrodution doc="${model.document}" ></tag:overviewIntrodution>
-						
-			  <tag:resultsummary paginator="${model.paginator}" />
-			
+              
+              <c:if test="${pageContext.request.requestContext.contentBean['class'].name == 'hslbeans.OverviewPage'}">
+                <tag:highlightedItem highLightedItem="${model.document.highLightedItem }"/>
+              </c:if>
+              	
 			  <c:forEach var="item" items="${model.items}">
 				<hst:link var="link" hippobean="${item}" />
 				<article class="well well-large">
 				  <hst:cmseditlink hippobean="${item}" />
-			      <h3>
-				    <a href="${link}"><c:out value="${item.title}"/></a>
-				  </h3>
-            
-                  <c:choose>
-                    <c:when test="${item['class'].name=='hslbeans.EventPage' }">
-					<c:if test="${hst:isReadable(item, 'eventDate.time')}">
-					  <p class="badge badge-info">
-						<fmt:formatDate value="${item.eventDate.time}" type="both" dateStyle="medium" timeStyle="short" />
-					  </p>
-					</c:if>
-                    </c:when>
-                    <c:otherwise>
-                      <c:if test="${hst:isReadable(item, 'releaseDate.time')}">
-                        <p class="badge badge-info">
-                          <fmt:formatDate value="${item.releaseDate.time}" type="both" dateStyle="medium" timeStyle="short" />
-                        </p>
-                      </c:if>
-                    </c:otherwise>
-                  </c:choose>
-			       
-      			  <p><c:out value="${item.introduction}"/></p>
+        
+                  <c:if test="${not empty item.headerImage }">
+                    <div class="image-space">
+                      <hst:link var="image" hippobean="${item.headerImage.paragraphImage}" />
+                      <img alt="${item.title }" title="${item.title }" src="${image }" />
+                    </div>
+                  </c:if>
+
+                  <div ${not empty item.image ? 'class="list-item-content"' : 'class="item-content"' } >
+    			    <h3>
+    				  <a href="${link}"><c:out value="${item.title}"/></a>
+    				</h3>
+              
+                    <c:choose>
+                      <c:when test="${item['class'].name=='hslbeans.EventPage' }">
+  					   <c:if test="${hst:isReadable(item, 'eventDate.time')}">
+  					     <p class="badge badge-info">
+  						   <fmt:formatDate value="${item.eventDate.time}" type="both" dateStyle="medium" timeStyle="short" />
+  					     </p>
+  					   </c:if>
+                      </c:when>
+                      <c:otherwise>
+                        <c:if test="${hst:isReadable(item, 'releaseDate.time')}">
+                          <p class="badge badge-info">
+                            <fmt:formatDate value="${item.releaseDate.time}" type="both" dateStyle="medium" timeStyle="short" />
+                          </p>
+                        </c:if>
+                      </c:otherwise>
+                    </c:choose>
+  			       
+        			<p><c:out value="${item.introduction}"/></p>
+                  </div>
+                  <c:if test="${not empty item.image }">
+                    <div class="clear"></div>
+                  </c:if>
 				</article>
+                
 		      </c:forEach>
 					
 			  <div class="paginator-style">
