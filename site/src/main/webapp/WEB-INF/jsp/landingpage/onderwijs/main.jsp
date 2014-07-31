@@ -15,17 +15,10 @@
       
       <hst:cmseditlink hippobean="${document}" />
       
-      <div class="threeFourth">
+      <div class="fourFourth">
         <h1><c:out value="${document.title}"/></h1>
         <hst:include ref="content" />
       </div>
-      
-      <div class="widgets column">
-        <hst:include ref="rightTop" />
-        <hst:include ref="rightBottom" />
-      </div>
-      
-      <div class="clear"></div>
       
       <hst:include ref="contentBottom" />
       

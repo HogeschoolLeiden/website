@@ -1,2 +1,19 @@
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
-<tag:facetednavigation facetnav="${model.facetBean}" labels="${model.labels}"/>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ taglib prefix="hst" uri="http://www.hippoecm.org/jsp/hst/core"%>
+<%@ taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml"%>
+<%@ taglib prefix='opw' uri="http://open-web.nl/hippo/prototype"%>
+
+<hst:setBundle basename="nl.hsleiden.widget.Messages" />
+
+<c:if test="${not empty model.paramInfo.overviewSitemapRefId}">
+  <div class="backToOverview">
+    <c:set var="refId" value="${model.paramInfo.overviewSitemapRefId}" />
+    <hst:link siteMapItemRefId="${refId}" var="overviewLink" />
+    <a href="${overviewLink}"><fmt:message key="back.overview.${refId}" /></a>
+  </div>
+</c:if>
+
+<tag:facetednavigation facetnav="${model.facetBean}" labels="${model.labels}" />

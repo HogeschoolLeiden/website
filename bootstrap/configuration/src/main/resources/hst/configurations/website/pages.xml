@@ -1,17 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<sv:node sv:name="hst:pages" xmlns:sv="http://www.jcp.org/jcr/sv/1.0">
+<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="hst:pages">
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>hst:pages</sv:value>
-  </sv:property>
-  <sv:property sv:name="jcr:uuid" sv:type="String">
-    <sv:value>7a3d13c3-60b9-4820-b5a8-1974120dfc80</sv:value>
   </sv:property>
   <sv:node sv:name="standard">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:component</sv:value>
-    </sv:property>
-    <sv:property sv:name="jcr:uuid" sv:type="String">
-      <sv:value>60f3a343-3888-4e30-9bcc-d0e61db3f7ba</sv:value>
     </sv:property>
     <sv:property sv:name="hst:referencecomponent" sv:type="String">
       <sv:value>hst:pages/standardcommon</sv:value>
@@ -21,18 +14,12 @@
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:component</sv:value>
     </sv:property>
-    <sv:property sv:name="jcr:uuid" sv:type="String">
-      <sv:value>e7a1ede3-f13a-4b07-a942-ff89d79e9ca2</sv:value>
-    </sv:property>
     <sv:property sv:name="hst:referencecomponent" sv:type="String">
       <sv:value>hst:pages/newspagecommon</sv:value>
     </sv:property>
     <sv:node sv:name="main">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:component</sv:value>
-      </sv:property>
-      <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>57ddb0cc-1fbd-4e4b-8b0f-1fbf35b3b46d</sv:value>
       </sv:property>
       <sv:node sv:name="top-container">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -104,18 +91,12 @@
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:component</sv:value>
     </sv:property>
-    <sv:property sv:name="jcr:uuid" sv:type="String">
-      <sv:value>a20d8ea4-364c-4711-adf5-0fb7ca716077</sv:value>
-    </sv:property>
     <sv:property sv:name="hst:referencecomponent" sv:type="String">
       <sv:value>hst:pages/facetedoverviewcommon</sv:value>
     </sv:property>
     <sv:node sv:name="main">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:component</sv:value>
-      </sv:property>
-      <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>5d116256-1a00-4bb2-b305-787e677068b0</sv:value>
       </sv:property>
       <sv:node sv:name="top-container">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -187,18 +168,12 @@
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:component</sv:value>
     </sv:property>
-    <sv:property sv:name="jcr:uuid" sv:type="String">
-      <sv:value>59e29b1b-9137-4b96-9c04-a164d1dc957a</sv:value>
-    </sv:property>
     <sv:property sv:name="hst:referencecomponent" sv:type="String">
       <sv:value>hst:pages/pagenotfoundcommon</sv:value>
     </sv:property>
     <sv:node sv:name="main">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:component</sv:value>
-      </sv:property>
-      <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>2ababd3a-eea7-48cb-bd58-ba6aa2962274</sv:value>
       </sv:property>
       <sv:node sv:name="top-container">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -266,95 +241,9 @@
       </sv:node>
     </sv:node>
   </sv:node>
-  <sv:node sv:name="landingpage">
-    <sv:property sv:name="jcr:primaryType" sv:type="Name">
-      <sv:value>hst:component</sv:value>
-    </sv:property>
-    <sv:property sv:name="jcr:uuid" sv:type="String">
-      <sv:value>ab3371e2-c304-413c-9a67-374058ebeecf</sv:value>
-    </sv:property>
-    <sv:property sv:name="hst:referencecomponent" sv:type="String">
-      <sv:value>hst:pages/landingpagecommon</sv:value>
-    </sv:property>
-    <sv:node sv:name="main">
-      <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hst:component</sv:value>
-      </sv:property>
-      <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>ddc759a7-8cfe-43d5-ad50-9cf7b0e77752</sv:value>
-      </sv:property>
-      <sv:node sv:name="top-container">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hst:containercomponentreference</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:referencecomponent" sv:type="String">
-          <sv:value>landingpage/top-container</sv:value>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="leftTop">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hst:containercomponentreference</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:referencecomponent" sv:type="String">
-          <sv:value>landingpage/leftTop</sv:value>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="leftBottom">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hst:containercomponentreference</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:referencecomponent" sv:type="String">
-          <sv:value>landingpage/leftBottom</sv:value>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="contentTop">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hst:containercomponentreference</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:referencecomponent" sv:type="String">
-          <sv:value>landingpage/contentTop</sv:value>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="contentBottom">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hst:containercomponentreference</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:referencecomponent" sv:type="String">
-          <sv:value>landingpage/contentBottom</sv:value>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="rightTop">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hst:containercomponentreference</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:referencecomponent" sv:type="String">
-          <sv:value>landingpage/rightTop</sv:value>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="rightBottom">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hst:containercomponentreference</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:referencecomponent" sv:type="String">
-          <sv:value>landingpage/rightBottom</sv:value>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="bottom-container">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hst:containercomponentreference</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:referencecomponent" sv:type="String">
-          <sv:value>landingpage/bottom-container</sv:value>
-        </sv:property>
-      </sv:node>
-    </sv:node>
-  </sv:node>
   <sv:node sv:name="eventpage">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:component</sv:value>
-    </sv:property>
-    <sv:property sv:name="jcr:uuid" sv:type="String">
-      <sv:value>45fe31a5-d766-4c33-91fb-0b5d8aa90dd4</sv:value>
     </sv:property>
     <sv:property sv:name="hst:referencecomponent" sv:type="String">
       <sv:value>hst:pages/eventpagecommon</sv:value>
@@ -362,9 +251,6 @@
     <sv:node sv:name="main">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:component</sv:value>
-      </sv:property>
-      <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>792f7b7c-5718-4e43-8bbc-6c236a12576d</sv:value>
       </sv:property>
       <sv:node sv:name="top-container">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -436,18 +322,12 @@
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:component</sv:value>
     </sv:property>
-    <sv:property sv:name="jcr:uuid" sv:type="String">
-      <sv:value>4c8eef24-58d1-4a2d-b6a8-ca35bc46f802</sv:value>
-    </sv:property>
     <sv:property sv:name="hst:referencecomponent" sv:type="String">
       <sv:value>hst:pages/articlepagecommon</sv:value>
     </sv:property>
     <sv:node sv:name="main">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:component</sv:value>
-      </sv:property>
-      <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>b493d445-de0b-4f61-8c7e-1d150b14e3c6</sv:value>
       </sv:property>
       <sv:node sv:name="top-container">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -519,18 +399,12 @@
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:component</sv:value>
     </sv:property>
-    <sv:property sv:name="jcr:uuid" sv:type="String">
-      <sv:value>6151d405-fe00-42be-a875-8fa94431f171</sv:value>
-    </sv:property>
     <sv:property sv:name="hst:referencecomponent" sv:type="String">
       <sv:value>hst:pages/genericoverviewcommon</sv:value>
     </sv:property>
     <sv:node sv:name="main">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:component</sv:value>
-      </sv:property>
-      <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>1dee2c4b-40ad-4e8d-857e-9205cd9992ed</sv:value>
       </sv:property>
       <sv:node sv:name="top-container">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -598,7 +472,7 @@
       </sv:node>
     </sv:node>
   </sv:node>
-  <sv:node sv:name="faqoverview" xmlns:sv="http://www.jcp.org/jcr/sv/1.0">
+  <sv:node sv:name="faqoverview">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:component</sv:value>
     </sv:property>
@@ -675,6 +549,4 @@
       </sv:node>
     </sv:node>
   </sv:node>
-
-  
 </sv:node>
