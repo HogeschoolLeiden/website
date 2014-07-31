@@ -57,14 +57,13 @@ public class LandingPage extends Navigation {
             HippoBean bean = BeanUtils.getBean(resolveToSiteMapItem.getHstSiteMapItem().getRelativeContentPath(),
                     request);
 
-            // TODO: instance of overview or of the interface the overview beans will implement ??
             if (bean instanceof OverviewPage) {
                 ob.setHighLighted(((OverviewPage) bean).getHighLightedItem());
                 ob.setMenuItem(sitemenuItem);
                 ob.setOverviewBean((OverviewPage) bean);
                 overviewBeans.add(ob);
             } else {
-                LOG.error("what to do in this case ?? ");
+                LOG.error("Document referenced by sub menu item is not an OverviewPage. Skipping it.");
             }
         }
         return overviewBeans;
