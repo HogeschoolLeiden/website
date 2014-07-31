@@ -5,6 +5,7 @@ import hslbeans.OverviewPage;
 import java.util.ArrayList;
 import java.util.List;
 
+import nl.hsleiden.beans.OverviewBean;
 import nl.hsleiden.utils.Constants.Attributes;
 
 import org.hippoecm.hst.content.beans.standard.HippoBean;
@@ -46,7 +47,7 @@ public class LandingPage extends Navigation {
 
     private List<OverviewBean> getOverviewBeansList(HstRequest request, EditableMenu menu) {
         
-        List<OverviewBean> overviewBeans = new ArrayList<LandingPage.OverviewBean>();
+        List<OverviewBean> overviewBeans = new ArrayList<OverviewBean>();
 
         EditableMenuItem deepestExpandedItem = menu.getDeepestExpandedItem();
 
@@ -69,34 +70,5 @@ public class LandingPage extends Navigation {
         return overviewBeans;
     }
 
-    public static class OverviewBean {
 
-        private HippoBean highLighted;
-        private EditableMenuItem menuItem;
-        private OverviewPage overviewBean;
-
-        public HippoBean getHighLighted() {
-            return highLighted;
-        }
-
-        public void setHighLighted(HippoBean highLighted) {
-            this.highLighted = highLighted;
-        }
-
-        public EditableMenuItem getMenuItem() {
-            return menuItem;
-        }
-
-        public void setMenuItem(EditableMenuItem menuItem) {
-            this.menuItem = menuItem;
-        }
-
-        public OverviewPage getOverviewBean() {
-            return overviewBean;
-        }
-
-        public void setOverviewBean(OverviewPage overviewBean) {
-            this.overviewBean = overviewBean;
-        }
-    }
 }

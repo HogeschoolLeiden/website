@@ -7,7 +7,7 @@
 <%@taglib tagdir="/WEB-INF/tags" prefix="tag"%>
 <%@ taglib prefix="opw" uri="http://open-web.nl/hippo/prototype"%>
 
-<%@ attribute name="item" rtexprvalue="true" required="true" type="nl.hsleiden.components.LandingPage.OverviewBean"%>
+<%@ attribute name="item" rtexprvalue="true" required="true" type="nl.hsleiden.beans.OverviewBean"%>
 
 <hst:setBundle basename="nl.hsleiden.sharebox.Messages" />
 
