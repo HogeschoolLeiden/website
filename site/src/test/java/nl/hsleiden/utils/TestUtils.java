@@ -75,9 +75,9 @@ public class TestUtils {
         referencedNode.setPrimaryType(referencedNodeType);
         EasyMock.expect(session.getNodeByIdentifier(referencedNodeUuid)).andReturn(referencedNode);
         if(StringUtils.isBlank(referencedNodePath) || "/".equals(referencedNodePath)){            
-            EasyMock.expect(session.getRootNode()).andReturn(referencedNode);
+            EasyMock.expect(session.getRootNode()).andReturn(referencedNode).anyTimes();
         }else{
-            EasyMock.expect(session.getRootNode()).andReturn(new MockNode());
+            EasyMock.expect(session.getRootNode()).andReturn(new MockNode()).anyTimes();
             
         }
         EasyMock.replay(session);

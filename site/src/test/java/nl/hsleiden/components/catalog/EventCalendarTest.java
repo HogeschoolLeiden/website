@@ -26,6 +26,7 @@ import nl.hsleiden.utils.Constants;
 import nl.openweb.jcr.mock.MockNode;
 import nl.openweb.jcr.mock.MockNodeIterator;
 import nl.openweb.jcr.mock.MockProperty;
+import nl.openweb.jcr.mock.MockSession;
 
 import org.apache.jackrabbit.value.StringValue;
 import org.easymock.EasyMock;
@@ -220,6 +221,7 @@ public class EventCalendarTest {
 
     private MockNode createMockEventPageNode(String name, java.util.Calendar date) {
         MockNode result = new MockNode(name, EVENT_PAGE_TYPE);
+        result.setSession(new MockSession(""));
         result.addProperty(new MockProperty("hsl:title", name, result));
         result.addProperty(new MockProperty("hsl:eventDate", date, result));
         return result;

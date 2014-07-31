@@ -3,9 +3,9 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.onehippo.cms7</groupId>
-    <artifactId>hippo-cms7-release</artifactId>
-    <version>7.9.1-iteration-80</version>
+    <groupId>com.onehippo.cms7</groupId>
+    <artifactId>hippo-cms7-enterprise-release</artifactId>
+    <version>7.9.1</version>
   </parent>
 
   <name>Website van Hogeschool Leiden</name>
@@ -57,6 +57,11 @@
     <it.cargo.servlet.port>9208</it.cargo.servlet.port>
     <it.cargo.tomcat.ajp.port>9476</it.cargo.tomcat.ajp.port>
     <it.cargo.rmi.port>9496</it.cargo.rmi.port>
+    <!-- 
+      Tomcat v7.0.54 has a nasty bug so we upgraded to Tomcat v7.0.55
+      Please remove this as soon as Hippo upgraded to Tomcat v7.0.55 or above. 
+     -->
+    <cargo.tomcat.full.version>7.0.55</cargo.tomcat.full.version>
 
     <!--***START temporary override of versions*** -->
     <essentials.version>1.01.02</essentials.version>
@@ -108,6 +113,14 @@
       <id>hippo</id>
       <name>Hippo maven 2 repository.</name>
       <url>http://maven.onehippo.com/maven2/</url>
+    </repository>
+    <repository>
+      <id>hippo-maven2-enterprise</id>
+      <name>Hippo Enterprise Maven 2</name>
+      <url>https://maven.onehippo.com/maven2-enterprise </url>
+      <releases>
+        <updatePolicy>never</updatePolicy>
+      </releases>
     </repository>
     <repository>
       <id>sf-hippo-prototype-repo</id>
