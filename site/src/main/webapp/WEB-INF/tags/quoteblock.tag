@@ -33,11 +33,13 @@
 <hst:link var="image" hippobean="${content.quoteParameters.image.listImageLarge }" />
 
 <div class="quote item-with-image">
-  <div class="quote image-space">
-    <img alt="${item.title }" src="${image }" />
-  </div>
+  <c:if test="${not empty image}">
+    <div class="quote image-space">
+      <img alt="${item.title }" src="${image }" />
+    </div>
+  </c:if>
 
-  <div class="quote itemContent">
+  <div ${empty image ? 'class="noimage quote itemContent"' : 'class="quote itemContent"' }>
 
     <div class="author">
       <c:out value="${quoteAuthor }" />

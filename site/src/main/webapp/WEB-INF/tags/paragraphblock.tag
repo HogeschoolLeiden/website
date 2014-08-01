@@ -24,7 +24,15 @@
 </c:choose>
 
 <c:if test="${not empty content.title }">
-  <h3><c:out value="${content.title }" escapeXml="true" /> </h3>
+  <h2>
+    <c:if test="${not empty content.titleIcon }">
+      <img src="<hst:link hippobean="${content.titleIcon.paragraphImage }" />" 
+           alt="<c:out value="${content.title }" escapeXml="true" />" 
+           title="<c:out value="${content.title }" escapeXml="true" />" 
+           class="title-icon"/>
+    </c:if>
+    <c:out value="${content.title }" escapeXml="true" />
+  </h2>
 </c:if>
 
 <c:choose>
