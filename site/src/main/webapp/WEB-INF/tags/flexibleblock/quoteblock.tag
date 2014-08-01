@@ -35,7 +35,7 @@
 <div class="quote item-with-image">
   <c:if test="${not empty image}">
     <div class="quote image-space">
-      <img alt="${item.title }" src="${image }" />
+      <img alt="${content.quoteParameters.name }" src="${image }" title="${content.quoteParameters.name }"/>
     </div>
   </c:if>
 
