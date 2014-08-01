@@ -40,7 +40,7 @@
       <sv:property sv:name="hipposysedit:uri" sv:type="String">
         <sv:value>http://www.onehippo.org/hsl/nt/1.0</sv:value>
       </sv:property>
-      <sv:node sv:name="titel">
+      <sv:node sv:name="title">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hipposysedit:field</sv:value>
         </sv:property>
@@ -54,7 +54,7 @@
           <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:name="hipposysedit:path" sv:type="String">
-          <sv:value>hsl:titel</sv:value>
+          <sv:value>hsl:title</sv:value>
         </sv:property>
         <sv:property sv:name="hipposysedit:primary" sv:type="Boolean">
           <sv:value>false</sv:value>
@@ -93,7 +93,7 @@
           <sv:value>optional</sv:value>
         </sv:property>
       </sv:node>
-      <sv:node sv:name="externallink">
+      <sv:node sv:name="externallinks">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hipposysedit:field</sv:value>
         </sv:property>
@@ -107,7 +107,7 @@
           <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:name="hipposysedit:path" sv:type="String">
-          <sv:value>hsl:externallink</sv:value>
+          <sv:value>hsl:externallinks</sv:value>
         </sv:property>
         <sv:property sv:name="hipposysedit:primary" sv:type="Boolean">
           <sv:value>false</sv:value>
@@ -126,7 +126,7 @@
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hsl:ExternalLinks</sv:value>
       </sv:property>
-      <sv:property sv:name="hsl:titel" sv:type="String">
+      <sv:property sv:name="hsl:title" sv:type="String">
         <sv:value/>
       </sv:property>
       <sv:node sv:name="hsl:titleIcon">
@@ -140,11 +140,11 @@
         <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
         <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
       </sv:node>
-      <sv:node sv:name="hsl:externallink">
+      <sv:node sv:name="hsl:externallinks">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hsl:ExternalLink</sv:value>
         </sv:property>
-        <sv:property sv:name="hsl:linkTitlle" sv:type="String">
+        <sv:property sv:name="hsl:linkTitle" sv:type="String">
           <sv:value/>
         </sv:property>
         <sv:property sv:name="hsl:linkUrl" sv:type="String">
@@ -188,7 +188,7 @@
           <sv:value>org.hippoecm.frontend.service.render.ListViewPlugin</sv:value>
         </sv:property>
       </sv:node>
-      <sv:node sv:name="titel">
+      <sv:node sv:name="title">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>frontend:plugin</sv:value>
         </sv:property>
@@ -196,7 +196,7 @@
           <sv:value>Titel</sv:value>
         </sv:property>
         <sv:property sv:name="field" sv:type="String">
-          <sv:value>titel</sv:value>
+          <sv:value>title</sv:value>
         </sv:property>
         <sv:property sv:name="plugin.class" sv:type="String">
           <sv:value>org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin</sv:value>
@@ -235,15 +235,15 @@
           </sv:property>
         </sv:node>
       </sv:node>
-      <sv:node sv:name="externallink">
+      <sv:node sv:name="externallinks">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>frontend:plugin</sv:value>
         </sv:property>
         <sv:property sv:name="caption" sv:type="String">
-          <sv:value>Externe Link</sv:value>
+          <sv:value>Externe Links</sv:value>
         </sv:property>
         <sv:property sv:name="field" sv:type="String">
-          <sv:value>externallink</sv:value>
+          <sv:value>externallinks</sv:value>
         </sv:property>
         <sv:property sv:name="hint" sv:type="String">
           <sv:value/>

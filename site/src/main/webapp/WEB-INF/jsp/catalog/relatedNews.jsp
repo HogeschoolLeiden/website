@@ -62,21 +62,22 @@
     </c:forEach>
 
     <c:if test="${model.info.showOverview && not empty model.overviewLink }">
+      <c:set var="linkTitle">
+        <c:choose>
+          <c:when test="${not empty model.info.overviewLinkLabel }">
+            <c:out value="${model.info.overviewLinkLabel }" escapeXml="true" />
+          </c:when>
+          <c:otherwise>
+            <fmt:message key="overiewlink.default.label" />
+          </c:otherwise>
+        </c:choose>
+      </c:set>
       <div class="read_more">
-        <h4>
-          <a href='<hst:link hippobean="${model.overviewLink }" />'>
-            <span> 
-              <c:choose>
-                <c:when test="${not empty model.info.overviewLinkLabel }">
-                  <c:out value="${model.info.overviewLinkLabel }" escapeXml="true" />
-                </c:when>
-                <c:otherwise>
-                  <fmt:message key="overiewlink.default.label" />
-                </c:otherwise>
-              </c:choose>
-            </span>
+        <h3>
+          <a href="<hst:link hippobean="${model.overviewLink }" />" title="${linkTitle }">
+            <span> ${linkTitle} </span>
           </a>
-        </h4>
+        </h3>
       </div>
     </c:if>
   </c:if>

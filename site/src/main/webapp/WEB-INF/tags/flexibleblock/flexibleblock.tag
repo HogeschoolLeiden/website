@@ -4,8 +4,8 @@
 <%@ taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
-<%@ taglib tagdir="/WEB-INF/tags" prefix="tag" %>
 <%@ taglib prefix="opw" uri="http://open-web.nl/hippo/prototype"%>
+<%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 
 <%@ attribute name="content" type="java.util.List" rtexprvalue="true" required="true" %>
 <%@ attribute name="event" type="java.lang.Boolean" rtexprvalue="true" required="false" %>
@@ -32,6 +32,10 @@
 		</c:when>
 		<c:when test="${block['class'].name == 'hslbeans.Quote' }">
 			<tag:quoteblock content="${block }"/>
+      		<div class="hr"><hr /></div>
+		</c:when>
+		<c:when test="${block['class'].name == 'hslbeans.ExternalLinks' }">
+			<tag:externallinksblock content="${block }"/>
       		<div class="hr"><hr /></div>
 		</c:when>
 	</c:choose>

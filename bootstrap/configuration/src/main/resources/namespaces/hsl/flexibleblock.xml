@@ -343,7 +343,7 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hsl:ExternalLinks</sv:value>
         </sv:property>
-        <sv:property sv:name="hsl:titel" sv:type="String">
+        <sv:property sv:name="hsl:title" sv:type="String">
           <sv:value/>
         </sv:property>
         <sv:node sv:name="hsl:titleIcon">
@@ -357,11 +357,14 @@
           <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
           <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
         </sv:node>
-        <sv:node sv:name="hsl:externallink">
+        <sv:node sv:name="hsl:externallinks">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>hsl:ExternalLink</sv:value>
           </sv:property>
-          <sv:property sv:name="hsl:linkTitlle" sv:type="String">
+          <sv:property sv:name="hsl:linkTitle" sv:type="String">
+            <sv:value/>
+          </sv:property>
+          <sv:property sv:name="hsl:alt" sv:type="String">
             <sv:value/>
           </sv:property>
           <sv:property sv:name="hsl:linkUrl" sv:type="String">
