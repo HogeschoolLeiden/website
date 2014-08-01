@@ -5004,6 +5004,7 @@ p.image.bottom { width:680px; margin-bottom:10px; padding-top:5px; float:left; p
 p.right img, p.left img{ display:block; }
 p.image span { width:230px; font-family: "Verdana", "Arial", sans-serif; font-style:italic; font-size:90%;
   line-height:140%; display:block; margin-top: 6px; }
+img.title-icon{width:35px; height: 35px;}
 /* ---------------------------------- style the paragraph ---------------------------------------- */
 
 /* ---------------------------------- style the facets ---------------------------------------- */
@@ -5175,7 +5176,7 @@ td.fc-header-right2{display: block; float: right;}
 
 .quote.image-space {width: 26%; float: left;  padding: 6px 6px;}
 .quote.itemContent{ width: 74%; padding: 6px 6px 6px 0; margin-left: 26%;}
-
+.noimage.quote.itemContent{ width: 97%; padding: 6px 6px 6px 0; margin-left: 2%; }
 
 .quote .author { font-size: 1.5em; font-style: italic; color: #66CCFF;}
 .quote .text { padding-right: 6px;}
@@ -5323,4 +5324,8 @@ ul.social.follow li{ width:20%; float: left;}
 }
 .backToOverview a{display:block; margin-top: 5px;} 
 /* ---------------------------------- back to overview page style ---------------------------------------- */
+
+/* ---------------------------------- external links style ---------------------------------------- */
+ul.externalLinks li.link {padding-top: 10px; font-size: 15px;}
+/* ---------------------------------- external links style ---------------------------------------- */
 

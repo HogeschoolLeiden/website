@@ -12,7 +12,9 @@
   <div class="backToOverview">
     <c:set var="refId" value="${model.paramInfo.overviewSitemapRefId}" />
     <hst:link siteMapItemRefId="${refId}" var="overviewLink" />
-    <a href="${overviewLink}"><fmt:message key="back.overview.${refId}" /></a>
+    <a href="${overviewLink}" title="<fmt:message key="back.overview.${refId}" />">
+      <fmt:message key="back.overview.${refId}" />
+    </a>
   </div>
 </c:if>
 

@@ -26,9 +26,9 @@
     <%-- Items in-inlined for better performance --%>
     <c:forEach var="item" items="${model.items}" varStatus="zebra">
       <div class="item-with-image">
-          <c:if test="${not empty tag:getFirstFlexibleBlockImage(item.canonicalBean) }">
+          <c:if test="${not empty tag:getFirstFlexibleBlockImage(item) }">
             <div class="image-space">
-              <hst:link var="image" hippobean="${tag:getFirstFlexibleBlockImage(item.canonicalBean).image.listImageMedium }" />
+              <hst:link var="image" hippobean="${tag:getFirstFlexibleBlockImage(item).image.listImageMedium }" />
               <img alt="${item.title }" src="${image }" />
             </div>
           </c:if>   
@@ -64,20 +64,21 @@
 
     <c:if test="${model.info.showOverview && not empty model.overviewLink }">
       <div class="read_more">
-        <h4>
-          <a href='<hst:link hippobean="${model.overviewLink }" />'>
-            <span> 
-              <c:choose>
-                <c:when test="${not empty model.info.overviewLinkLabel }">
-                  <c:out value="${model.info.overviewLinkLabel }" escapeXml="true" />
-                </c:when>
-                <c:otherwise>
-                  <fmt:message key="overiewlink.default.label" />
-                </c:otherwise>
-              </c:choose>
-            </span>
+        <c:set var="linkTitle">
+          <c:choose>
+            <c:when test="${not empty model.info.overviewLinkLabel }">
+              <c:out value="${model.info.overviewLinkLabel }" escapeXml="true" />
+            </c:when>
+            <c:otherwise>
+              <fmt:message key="overiewlink.default.label" />
+            </c:otherwise>
+          </c:choose>
+        </c:set>
+        <h3>
+          <a href="<hst:link hippobean="${model.overviewLink }" />" title="${linkTitle}">
+            <span> ${linkTitle} </span>
           </a>
-        </h4>
+        </h3>
       </div>
     </c:if>
   </c:if>
