@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
@@ -129,11 +128,30 @@
       <type>jar</type>
     </dependency>
     <!-- /easy forms -->
-    
+
     <!-- Indicating the Enterprise Edition version -->
     <dependency>
       <groupId>com.onehippo.cms7</groupId>
       <artifactId>hippo-addon-edition-indicator</artifactId>
+    </dependency>
+
+    <dependency>
+      <artifactId>hippo-addon-reporting-dashboard-frontend</artifactId>
+      <groupId>com.onehippo.cms7</groupId>
+    </dependency>
+    <dependency>
+      <artifactId>hippo-addon-reporting-dashboard-repository</artifactId>
+      <groupId>com.onehippo.cms7</groupId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.onehippo.cms7</groupId>
+      <artifactId>hippo-addon-advanced-search-frontend</artifactId>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>com.onehippo.cms7</groupId>
+      <artifactId>hippo-addon-advanced-search-repository</artifactId>
     </dependency>
 
   </dependencies>
@@ -142,8 +160,7 @@
     <profile>
       <id>essentials</id>
       <activation>
-        <!-- For the moment the essentials profile is active by default and 
-          therefore the essentials content is always bootstrapped. -->
+        <!-- For the moment the essentials profile is active by default and therefore the essentials content is always bootstrapped. -->
         <activeByDefault>true</activeByDefault>
       </activation>
     </profile>
