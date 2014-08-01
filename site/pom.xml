@@ -153,7 +153,7 @@
       <artifactId>hippo-addon-eforms-hst</artifactId>
     </dependency>
     <!-- /easy forms -->
-    
+
     <!-- pdf -->
     <dependency>
       <groupId>org.onehippo.forge.hstpdfrenderer</groupId>
@@ -161,7 +161,12 @@
       <version>${forge.hstpdfrenderer.version}</version>
     </dependency>
     <!-- /pdf -->
-    
+
+    <dependency>
+      <groupId>org.elasticsearch</groupId>
+      <artifactId>elasticsearch</artifactId>
+    </dependency>
+
   </dependencies>
 
   <build>
