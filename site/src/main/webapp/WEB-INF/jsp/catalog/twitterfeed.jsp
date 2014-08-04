@@ -9,6 +9,8 @@
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 <%@ taglib prefix='opw' uri="http://open-web.nl/hippo/prototype"%>
 
+<hst:setBundle basename="nl.hsleiden.channelmanager.Messages, nl.hsleiden.widget.Messages"/>
+
 <c:set var="position">
   <c:choose>
     <c:when test="${hst:isReadable(model.info, 'horizontal') and model.info.horizontal}">horizontal</c:when>
@@ -16,8 +18,16 @@
   </c:choose>
 </c:set>
 
-<div class="catalog twitter ${position}">
-    <h2><c:out value="${model.info.title}"/></h2>
+<hst:defineObjects />
+  <c:set var="isCmsRequest" value="${hstRequest.requestContext.cmsRequest}" />
+
+  <c:if test="${(empty model.items or fn:length(model.items) eq 0) and not empty webMasterMessage and isCmsRequest}">
+    <p class="error-message"><fmt:message key="${webMasterMessage}" /></p>
+  </c:if>
+  
+<c:if test="${fn:length(model.tweets)>0}">
+  <div class="catalog twitter ${position}">
+    <h2><c:out value="${model.paramInfo.title}"/></h2>
     <c:forEach items="${model.tweets}" var="tweet">
         <hr/>
         <div class="tweet">
@@ -38,9 +48,10 @@
         </div>
     </c:forEach>
     <hr/>
-    <c:if test="${not empty model.info.followText and not empty model.info.from}">
+    <c:if test="${not empty model.paramInfo.followText and not empty model.paramInfo.from}">
         <div class="button-block">
-            <a href="http://www.twitter.com/${model.info.from}" target="_BLANK">${model.info.followText}</a>
+            <a href="http://www.twitter.com/${model.paramInfo.from}" target="_BLANK">${model.paramInfo.followText}</a>
         </div>
     </c:if>
-</div>
+  </div>
+</c:if>
