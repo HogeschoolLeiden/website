@@ -15,16 +15,16 @@ import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
 import org.hippoecm.hst.core.parameters.ParametersInfo;
 import org.hippoecm.hst.site.HstServices;
-import org.onehippo.forge.easyforms.beans.FormBean;
-import org.onehippo.forge.easyforms.hst.FormStorageComponent;
-import org.onehippo.forge.easyforms.model.Form;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.onehippo.cms7.eforms.hst.beans.FormBean;
+import com.onehippo.cms7.eforms.hst.components.FormStoringEformComponent;
+import com.onehippo.cms7.eforms.hst.model.Form;
 import com.tdclighthouse.prototype.utils.BeanUtils;
 
 @ParametersInfo(type = FormComponentInfo.class)
-public class FormComponent extends FormStorageComponent {
+public class FormComponent extends FormStoringEformComponent {
 
     private static final Logger LOG = LoggerFactory.getLogger(FormComponent.class);
 

@@ -18,9 +18,10 @@ import org.hippoecm.hst.mock.core.component.MockHstRequest;
 import org.hippoecm.hst.utils.ParameterUtils;
 import org.junit.Assert;
 import org.junit.Test;
-import org.onehippo.forge.easyforms.beans.FormBean;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import com.onehippo.cms7.eforms.hst.beans.FormBean;
 
 public class FormComponentTest {
 

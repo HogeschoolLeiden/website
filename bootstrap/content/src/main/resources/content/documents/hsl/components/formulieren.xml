@@ -3,17 +3,15 @@
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>hippostd:folder</sv:value>
   </sv:property>
-  <sv:property sv:multiple="true" sv:name="jcr:mixinTypes"
-    sv:type="Name">
+  <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
     <sv:value>hippotranslation:translated</sv:value>
-    <sv:value>mix:versionable</sv:value>
     <sv:value>hippo:translated</sv:value>
+    <sv:value>mix:versionable</sv:value>
   </sv:property>
   <sv:property sv:name="jcr:uuid" sv:type="String">
     <sv:value>4d42d5bd-949e-4ba1-b6f6-f261581f2a0c</sv:value>
   </sv:property>
-  <sv:property sv:multiple="true" sv:name="hippostd:foldertype"
-    sv:type="String">
+  <sv:property sv:multiple="true" sv:name="hippostd:foldertype" sv:type="String">
     <sv:value>new-forms-folder</sv:value>
     <sv:value>new-mail-form</sv:value>
     <sv:value>new-mailstore-form</sv:value>
@@ -31,7 +29,7 @@
       <sv:value>hippo:translation</sv:value>
     </sv:property>
     <sv:property sv:name="hippo:language" sv:type="String">
-      <sv:value />
+      <sv:value/>
     </sv:property>
     <sv:property sv:name="hippo:message" sv:type="String">
       <sv:value>Formulieren</sv:value>
@@ -42,7 +40,7 @@
       <sv:value>hippo:translation</sv:value>
     </sv:property>
     <sv:property sv:name="hippo:language" sv:type="String">
-      <sv:value />
+      <sv:value/>
     </sv:property>
     <sv:property sv:name="hippo:message" sv:type="String">
       <sv:value>Formulieren</sv:value>
@@ -53,7 +51,7 @@
       <sv:value>hippo:translation</sv:value>
     </sv:property>
     <sv:property sv:name="hippo:language" sv:type="String">
-      <sv:value />
+      <sv:value/>
     </sv:property>
     <sv:property sv:name="hippo:message" sv:type="String">
       <sv:value>Formulieren</sv:value>
@@ -64,7 +62,7 @@
       <sv:value>hippo:translation</sv:value>
     </sv:property>
     <sv:property sv:name="hippo:language" sv:type="String">
-      <sv:value />
+      <sv:value/>
     </sv:property>
     <sv:property sv:name="hippo:message" sv:type="String">
       <sv:value>Formulieren</sv:value>
@@ -74,8 +72,7 @@
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hippostd:folder</sv:value>
     </sv:property>
-    <sv:property sv:multiple="true" sv:name="jcr:mixinTypes"
-      sv:type="Name">
+    <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
       <sv:value>hippo:harddocument</sv:value>
       <sv:value>hippotranslation:translated</sv:value>
       <sv:value>hippo:translated</sv:value>
@@ -83,10 +80,8 @@
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>547ef7f2-fe05-42f0-ba33-c2c5a36fb8e9</sv:value>
     </sv:property>
-    <sv:property sv:name="hippo:related___pathreference"
-      sv:type="String" />
-    <sv:property sv:multiple="true" sv:name="hippostd:foldertype"
-      sv:type="String">
+    <sv:property sv:name="hippo:related___pathreference" sv:type="String"/>
+    <sv:property sv:multiple="true" sv:name="hippostd:foldertype" sv:type="String">
       <sv:value>new-doublemail-form</sv:value>
       <sv:value>new-doublemailstore-form</sv:value>
       <sv:value>new-mailstore-form</sv:value>
@@ -109,298 +104,458 @@
         <sv:value>hippo:translation</sv:value>
       </sv:property>
       <sv:property sv:name="hippo:language" sv:type="String">
-        <sv:value />
+        <sv:value/>
       </sv:property>
       <sv:property sv:name="hippo:message" sv:type="String">
         <sv:value>Standard Formulieren</sv:value>
       </sv:property>
     </sv:node>
-    <sv:node sv:name="double-mail-store-form">
+    <sv:node sv:name="double-mail-store-form-migrated">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hippo:handle</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes"
-        sv:type="Name">
+      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
         <sv:value>mix:referenceable</sv:value>
         <sv:value>hippo:translated</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>5eaf19d5-43f8-458d-a528-845dcfac8111</sv:value>
+        <sv:value>49beae9d-53e1-4d26-a572-633c2e85585f</sv:value>
       </sv:property>
-      <sv:node sv:name="double-mail-store-form">
+      <sv:node sv:name="double-mail-store-form-migrated">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hsl:doublemailstoreform</sv:value>
+          <sv:value>eforms:form</sv:value>
         </sv:property>
-        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes"
-          sv:type="Name">
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
           <sv:value>mix:referenceable</sv:value>
           <sv:value>hippotranslation:translated</sv:value>
           <sv:value>mix:versionable</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
-          <sv:value>3424a111-eeaf-4b8e-89a5-1ca7799d3fe3</sv:value>
+          <sv:value>b7cc5558-0683-4f26-88c3-5a46e17b2371</sv:value>
         </sv:property>
-        <sv:property sv:name="ef:action" sv:type="String">
+        <sv:property sv:name="eforms:action" sv:type="String">
           <sv:value>mail</sv:value>
         </sv:property>
-        <sv:property sv:name="ef:actionurl" sv:type="String">
+        <sv:property sv:name="eforms:actionurl" sv:type="String">
           <sv:value>http://test.com/action.do</sv:value>
         </sv:property>
-        <sv:property sv:name="ef:confirmationemailfields"
-          sv:type="String">
+        <sv:property sv:name="eforms:confirmationemailfields" sv:type="String">
           <sv:value>ida4dce09f5a2ad590,email</sv:value>
         </sv:property>
-        <sv:property sv:name="ef:confirmationincludefields"
-          sv:type="String">
+        <sv:property sv:name="eforms:confirmationincludefields" sv:type="String">
           <sv:value>true</sv:value>
         </sv:property>
-        <sv:property sv:name="ef:confirmationsenderaddress"
-          sv:type="String">
+        <sv:property sv:name="eforms:confirmationsenderaddress" sv:type="String">
           <sv:value>test@example.com</sv:value>
         </sv:property>
-        <sv:property sv:name="ef:confirmationsubject"
-          sv:type="String">
+        <sv:property sv:name="eforms:confirmationsubject" sv:type="String">
           <sv:value>Thank you for your feedback</sv:value>
         </sv:property>
-        <sv:property sv:name="ef:confirmationtext" sv:type="String">
+        <sv:property sv:name="eforms:confirmationtext" sv:type="String">
           <sv:value>We appriciate it a lot</sv:value>
         </sv:property>
-        <sv:property sv:name="ef:formintro" sv:type="String">
+        <sv:property sv:name="eforms:formintro" sv:type="String">
           <sv:value>This is some introduction text to be displayed
             before the fields of this form</sv:value>
         </sv:property>
-        <sv:property sv:name="ef:formname" sv:type="String">
+        <sv:property sv:name="eforms:formname" sv:type="String">
           <sv:value>Double mail store form</sv:value>
         </sv:property>
-        <sv:property sv:name="ef:mailformdata" sv:type="String">
+        <sv:property sv:name="eforms:mailformdata" sv:type="String">
           <sv:value>true</sv:value>
         </sv:property>
-        <sv:property sv:name="ef:notificationemail" sv:type="String">
+        <sv:property sv:name="eforms:notificationemail" sv:type="String">
           <sv:value>test@example.com</sv:value>
         </sv:property>
-        <sv:property sv:name="ef:storeformdata" sv:type="String">
+        <sv:property sv:name="eforms:storeformdata" sv:type="String">
           <sv:value>true</sv:value>
         </sv:property>
-        <sv:property sv:multiple="true" sv:name="hippo:availability"
-          sv:type="String">
+        <sv:property sv:name="eforms:validationhelper" sv:type="Boolean">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
           <sv:value>preview</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:related___pathreference"
-          sv:type="String">
-          <sv:value>hsl/componenten/formulieren/standard-forms/double-mail-store-form/double-mail-store-form[3]</sv:value>
+        <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+          <sv:value>formulieren/standard-forms/double-mail-store-form-migrated/double-mail-store-form-migrated[3]</sv:value>
         </sv:property>
         <sv:property sv:name="hippostd:state" sv:type="String">
           <sv:value>unpublished</sv:value>
         </sv:property>
-        <sv:property sv:name="hippostd:stateSummary"
-          sv:type="String">
+        <sv:property sv:name="hippostd:stateSummary" sv:type="String">
           <sv:value>live</sv:value>
         </sv:property>
-        <sv:property sv:name="hippostdpubwf:createdBy"
-          sv:type="String">
-          <sv:value>admin</sv:value>
+        <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+          <sv:value>system</sv:value>
         </sv:property>
-        <sv:property sv:name="hippostdpubwf:creationDate"
-          sv:type="Date">
-          <sv:value>2014-06-26T10:52:29.329+02:00</sv:value>
+        <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+          <sv:value>2014-08-01T16:01:00.110+02:00</sv:value>
         </sv:property>
-        <sv:property sv:name="hippostdpubwf:lastModificationDate"
-          sv:type="Date">
-          <sv:value>2014-06-30T11:04:04.380+02:00</sv:value>
+        <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+          <sv:value>2014-08-04T10:14:50.392+02:00</sv:value>
         </sv:property>
-        <sv:property sv:name="hippostdpubwf:lastModifiedBy"
-          sv:type="String">
+        <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:id" sv:type="String">
-          <sv:value>169f6bf4-5a34-4393-a2cb-58528943f4c8</sv:value>
+          <sv:value>46440608-f49b-4533-83a4-aab89835e710</sv:value>
         </sv:property>
-        <sv:property sv:name="hippotranslation:locale"
-          sv:type="String">
+        <sv:property sv:name="hippotranslation:locale" sv:type="String">
           <sv:value>nl</sv:value>
         </sv:property>
-        <sv:node sv:name="field4">
+        <sv:node sv:name="page0">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>ef:textfield</sv:value>
+            <sv:value>eforms:page</sv:value>
           </sv:property>
           <sv:property sv:name="jcr:uuid" sv:type="String">
-            <sv:value>4da4e865-d916-4666-b242-916cf486c34e</sv:value>
+            <sv:value>f8085f2d-5b2e-46e0-95c5-db5edd657a0f</sv:value>
           </sv:property>
-          <sv:property sv:name="ef:expandhint" sv:type="Boolean">
+          <sv:property sv:name="eforms:conditional" sv:type="Boolean">
             <sv:value>false</sv:value>
           </sv:property>
-          <sv:property sv:name="ef:fieldid" sv:type="String">
-            <sv:value>idb2e4b874ef37b73c</sv:value>
+          <sv:property sv:name="eforms:label" sv:type="String">
+            <sv:value>Provide mandatory data</sv:value>
           </sv:property>
-          <sv:property sv:name="ef:fieldname" sv:type="String">
-            <sv:value>name</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:hint" sv:type="String">
-            <sv:value />
-          </sv:property>
-          <sv:property sv:name="ef:label" sv:type="String">
-            <sv:value>Name</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:length" sv:type="Long">
-            <sv:value>40</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:mandatory" sv:type="Boolean">
-            <sv:value>true</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:validcasesensitive"
-            sv:type="String">
-            <sv:value>false</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:validexpression" sv:type="String">
-            <sv:value />
-          </sv:property>
-        </sv:node>
-        <sv:node sv:name="field0">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>ef:datefield</sv:value>
-          </sv:property>
-          <sv:property sv:name="jcr:uuid" sv:type="String">
-            <sv:value>1a9be6e1-9a17-494c-89bc-6b177f458a78</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:dateformat" sv:type="String">
-            <sv:value>dd-mm-yy</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:expandhint" sv:type="Boolean">
-            <sv:value>false</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:fieldid" sv:type="String">
-            <sv:value>id94811a3356da7426</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:fieldname" sv:type="String">
-            <sv:value>birthday</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:hint" sv:type="String">
-            <sv:value>fill in your birthday</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:label" sv:type="String">
-            <sv:value>Birthday</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:mandatory" sv:type="Boolean">
-            <sv:value>true</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:validcasesensitive"
-            sv:type="String">
-            <sv:value>false</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:validexpression" sv:type="String">
-            <sv:value />
-          </sv:property>
-        </sv:node>
-        <sv:node sv:name="field5">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>ef:simpletext</sv:value>
-          </sv:property>
-          <sv:property sv:name="jcr:uuid" sv:type="String">
-            <sv:value>39118b1f-6327-4277-8d08-9971f9e24514</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:expandhint" sv:type="Boolean">
-            <sv:value>true</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:fieldid" sv:type="String">
-            <sv:value>idab5084a7505dbc7e</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:fieldname" sv:type="String">
-            <sv:value>free-text</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:hint" sv:type="String">
-            <sv:value>can use the label and the hint of the free text
+          <sv:node sv:name="field4">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>eforms:textfield</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>a7d748cd-f588-4251-b1b4-14692533c5e5</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:expandhint" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldid" sv:type="String">
+              <sv:value>idb2e4b874ef37b73c</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldname" sv:type="String">
+              <sv:value>name</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:hint" sv:type="String">
+              <sv:value/>
+            </sv:property>
+            <sv:property sv:name="eforms:label" sv:type="String">
+              <sv:value>Name</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:length" sv:type="Long">
+              <sv:value>40</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validexpression" sv:type="String">
+              <sv:value/>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="field0">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>eforms:datefield</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>705e10e2-97e4-4d55-aa30-b9de4b226cef</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:dateformat" sv:type="String">
+              <sv:value>dd-mm-yy</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:expandhint" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldid" sv:type="String">
+              <sv:value>id94811a3356da7426</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldname" sv:type="String">
+              <sv:value>birthday</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:hint" sv:type="String">
+              <sv:value>fill in your birthday</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:label" sv:type="String">
+              <sv:value>Birthday</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validexpression" sv:type="String">
+              <sv:value/>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="field5">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>eforms:simpletext</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>f6aa13e1-8367-4356-94c4-0ee563105b28</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:expandhint" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldid" sv:type="String">
+              <sv:value>idab5084a7505dbc7e</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldname" sv:type="String">
+              <sv:value>free-text</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:hint" sv:type="String">
+              <sv:value>can use the label and the hint of the free text
               field if want to add some text between some of the form
               fields</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:label" sv:type="String">
-            <sv:value>We will not use your mail</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:mandatory" sv:type="Boolean">
-            <sv:value>false</sv:value>
-          </sv:property>
+            </sv:property>
+            <sv:property sv:name="eforms:label" sv:type="String">
+              <sv:value>We will not use your mail</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="field2">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>eforms:textfield</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>076cd1d1-0ea7-4b8e-b2f9-2ce01838d542</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:expandhint" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldid" sv:type="String">
+              <sv:value>ida4dce09f5a2ad590</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldname" sv:type="String">
+              <sv:value>email</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:hint" sv:type="String">
+              <sv:value>fill in your mail</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:label" sv:type="String">
+              <sv:value>email</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:length" sv:type="Long">
+              <sv:value>60</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validationruleid" sv:type="String">
+              <sv:value>email</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validationrulelabel" sv:type="String">
+              <sv:value>E-mail Address</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validexpression" sv:type="String">
+              <sv:value>\b[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b</sv:value>
+            </sv:property>
+          </sv:node>
         </sv:node>
-        <sv:node sv:name="field2">
+        <sv:node sv:name="page1">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>ef:textfield</sv:value>
+            <sv:value>eforms:page</sv:value>
           </sv:property>
           <sv:property sv:name="jcr:uuid" sv:type="String">
-            <sv:value>2f2afcb7-f5c2-4a85-99c8-751934f039ff</sv:value>
+            <sv:value>aa652c90-bafe-49aa-90da-285a0b074e24</sv:value>
           </sv:property>
-          <sv:property sv:name="ef:expandhint" sv:type="Boolean">
+          <sv:property sv:name="eforms:conditional" sv:type="Boolean">
             <sv:value>false</sv:value>
           </sv:property>
-          <sv:property sv:name="ef:fieldid" sv:type="String">
-            <sv:value>ida4dce09f5a2ad590</sv:value>
+          <sv:property sv:name="eforms:label" sv:type="String">
+            <sv:value>Provide your opinion</sv:value>
           </sv:property>
-          <sv:property sv:name="ef:fieldname" sv:type="String">
-            <sv:value>email</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:hint" sv:type="String">
-            <sv:value>fill in your mail</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:label" sv:type="String">
-            <sv:value>email</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:length" sv:type="Long">
-            <sv:value>60</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:mandatory" sv:type="Boolean">
-            <sv:value>true</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:validationruleid"
-            sv:type="String">
-            <sv:value>email</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:validationrulelabel"
-            sv:type="String">
-            <sv:value>E-mail Address</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:validcasesensitive"
-            sv:type="String">
-            <sv:value>false</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:validexpression" sv:type="String">
-            <sv:value>\b[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b</sv:value>
-          </sv:property>
-        </sv:node>
-        <sv:node sv:name="field3">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>ef:textarea</sv:value>
-          </sv:property>
-          <sv:property sv:name="jcr:uuid" sv:type="String">
-            <sv:value>7f68eb59-81b6-4212-95c2-dc9089ecd7a0</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:cols" sv:type="Long">
-            <sv:value>40</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:expandhint" sv:type="Boolean">
-            <sv:value>false</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:fieldid" sv:type="String">
-            <sv:value>id89f846980056c99d</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:fieldname" sv:type="String">
-            <sv:value>description</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:hint" sv:type="String">
-            <sv:value />
-          </sv:property>
-          <sv:property sv:name="ef:label" sv:type="String">
-            <sv:value>description</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:mandatory" sv:type="Boolean">
-            <sv:value>false</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:rows" sv:type="Long">
-            <sv:value>10</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:validcasesensitive"
-            sv:type="String">
-            <sv:value>false</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:validexpression" sv:type="String">
-            <sv:value />
-          </sv:property>
+          <sv:node sv:name="field0">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>eforms:textarea</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>900bfac6-7249-4f2c-bd21-ea361b5a0ef5</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:cols" sv:type="Long">
+              <sv:value>40</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:expandhint" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldid" sv:type="String">
+              <sv:value>id89f846980056c99d</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldname" sv:type="String">
+              <sv:value>description</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:hint" sv:type="String">
+              <sv:value/>
+            </sv:property>
+            <sv:property sv:name="eforms:label" sv:type="String">
+              <sv:value>description</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:rows" sv:type="Long">
+              <sv:value>10</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validexpression" sv:type="String">
+              <sv:value/>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="fieldgroup0">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>eforms:embeddedfieldgroup</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldnameprefix" sv:type="String">
+              <sv:value>address</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:groupname" sv:type="String">
+              <sv:value>address</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:label" sv:type="String">
+              <sv:value>group_label</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:oneline" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validationhelper" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+            <sv:node sv:name="field0">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>eforms:textfield</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>e55cb456-bb34-4d83-bd63-87dad750a072</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:expandhint" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldid" sv:type="String">
+                <sv:value>id8344849e46dddeda</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldname" sv:type="String">
+                <sv:value>street</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:hint" sv:type="String">
+                <sv:value/>
+              </sv:property>
+              <sv:property sv:name="eforms:label" sv:type="String">
+                <sv:value>Street and house number</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:length" sv:type="Long">
+                <sv:value>40</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+                <sv:value>true</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validexpression" sv:type="String">
+                <sv:value/>
+              </sv:property>
+            </sv:node>
+            <sv:node sv:name="field1">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>eforms:textfield</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>48c87f27-1309-4614-a6c2-a91594f26d66</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldid" sv:type="String">
+                <sv:value>id81890d6d6f42b0c0</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldname" sv:type="String">
+                <sv:value>postcode</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:hint" sv:type="String">
+                <sv:value/>
+              </sv:property>
+              <sv:property sv:name="eforms:label" sv:type="String">
+                <sv:value>Postcode</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:length" sv:type="Long">
+                <sv:value>40</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+                <sv:value>true</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validexpression" sv:type="String">
+                <sv:value/>
+              </sv:property>
+            </sv:node>
+            <sv:node sv:name="field2">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>eforms:textfield</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>ffb9d88b-1ae6-4324-b350-dcf72a500acc</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldid" sv:type="String">
+                <sv:value>id8964e4be99647f54</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldname" sv:type="String">
+                <sv:value>city</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:hint" sv:type="String">
+                <sv:value/>
+              </sv:property>
+              <sv:property sv:name="eforms:label" sv:type="String">
+                <sv:value>City</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:length" sv:type="Long">
+                <sv:value>40</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+                <sv:value>true</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validexpression" sv:type="String">
+                <sv:value/>
+              </sv:property>
+            </sv:node>
+          </sv:node>
         </sv:node>
       </sv:node>
       <sv:node sv:name="hippo:translation">
@@ -408,563 +563,2494 @@
           <sv:value>hippo:translation</sv:value>
         </sv:property>
         <sv:property sv:name="hippo:language" sv:type="String">
-          <sv:value />
+          <sv:value/>
         </sv:property>
         <sv:property sv:name="hippo:message" sv:type="String">
-          <sv:value>Double mail store form</sv:value>
+          <sv:value>Double mail store form (Migrated)</sv:value>
         </sv:property>
       </sv:node>
-      <sv:node sv:name="double-mail-store-form">
+      <sv:node sv:name="double-mail-store-form-migrated">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hsl:doublemailstoreform</sv:value>
+          <sv:value>eforms:form</sv:value>
         </sv:property>
-        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes"
-          sv:type="Name">
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
           <sv:value>mix:referenceable</sv:value>
           <sv:value>hippotranslation:translated</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
-          <sv:value>c86b0f01-a515-47eb-8e0f-079b85fe905b</sv:value>
+          <sv:value>88fab4f6-f6f2-4ce2-a895-41ffb3dfc377</sv:value>
         </sv:property>
-        <sv:property sv:name="ef:action" sv:type="String">
+        <sv:property sv:name="eforms:action" sv:type="String">
           <sv:value>mail</sv:value>
         </sv:property>
-        <sv:property sv:name="ef:actionurl" sv:type="String">
+        <sv:property sv:name="eforms:actionurl" sv:type="String">
           <sv:value>http://test.com/action.do</sv:value>
         </sv:property>
-        <sv:property sv:name="ef:confirmationemailfields"
-          sv:type="String">
+        <sv:property sv:name="eforms:confirmationemailfields" sv:type="String">
           <sv:value>ida4dce09f5a2ad590,email</sv:value>
         </sv:property>
-        <sv:property sv:name="ef:confirmationincludefields"
-          sv:type="String">
+        <sv:property sv:name="eforms:confirmationincludefields" sv:type="String">
           <sv:value>true</sv:value>
         </sv:property>
-        <sv:property sv:name="ef:confirmationsenderaddress"
-          sv:type="String">
+        <sv:property sv:name="eforms:confirmationsenderaddress" sv:type="String">
           <sv:value>test@example.com</sv:value>
         </sv:property>
-        <sv:property sv:name="ef:confirmationsubject"
-          sv:type="String">
+        <sv:property sv:name="eforms:confirmationsubject" sv:type="String">
           <sv:value>Thank you for your feedback</sv:value>
         </sv:property>
-        <sv:property sv:name="ef:confirmationtext" sv:type="String">
+        <sv:property sv:name="eforms:confirmationtext" sv:type="String">
           <sv:value>We appriciate it a lot</sv:value>
         </sv:property>
-        <sv:property sv:name="ef:formintro" sv:type="String">
+        <sv:property sv:name="eforms:formintro" sv:type="String">
           <sv:value>This is some introduction text to be displayed
             before the fields of this form</sv:value>
         </sv:property>
-        <sv:property sv:name="ef:formname" sv:type="String">
+        <sv:property sv:name="eforms:formname" sv:type="String">
           <sv:value>Double mail store form</sv:value>
         </sv:property>
-        <sv:property sv:name="ef:mailformdata" sv:type="String">
+        <sv:property sv:name="eforms:mailformdata" sv:type="String">
           <sv:value>true</sv:value>
         </sv:property>
-        <sv:property sv:name="ef:notificationemail" sv:type="String">
+        <sv:property sv:name="eforms:notificationemail" sv:type="String">
           <sv:value>test@example.com</sv:value>
         </sv:property>
-        <sv:property sv:name="ef:storeformdata" sv:type="String">
+        <sv:property sv:name="eforms:storeformdata" sv:type="String">
           <sv:value>true</sv:value>
         </sv:property>
-        <sv:property sv:multiple="true" sv:name="hippo:availability"
-          sv:type="String" />
-        <sv:property sv:name="hippo:related___pathreference"
-          sv:type="String">
-          <sv:value>hsl/componenten/formulieren/standard-forms/double-mail-store-form/double-mail-store-form</sv:value>
-          <sv:value>hsl/componenten/formulieren/standard-forms/double-mail-store-form/double-mail-store-form[3]</sv:value>
+        <sv:property sv:name="eforms:validationhelper" sv:type="Boolean">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String"/>
+        <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+          <sv:value>formulieren/standard-forms/double-mail-store-form-migrated/double-mail-store-form-migrated[3]</sv:value>
+          <sv:value>formulieren/standard-forms/double-mail-store-form-migrated/double-mail-store-form-migrated</sv:value>
         </sv:property>
         <sv:property sv:name="hippostd:state" sv:type="String">
           <sv:value>draft</sv:value>
         </sv:property>
-        <sv:property sv:name="hippostd:stateSummary"
-          sv:type="String">
+        <sv:property sv:name="hippostd:stateSummary" sv:type="String">
           <sv:value>live</sv:value>
         </sv:property>
-        <sv:property sv:name="hippostdpubwf:createdBy"
-          sv:type="String">
-          <sv:value>admin</sv:value>
+        <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+          <sv:value>system</sv:value>
         </sv:property>
-        <sv:property sv:name="hippostdpubwf:creationDate"
-          sv:type="Date">
-          <sv:value>2014-06-26T10:52:29.329+02:00</sv:value>
+        <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+          <sv:value>2014-08-01T16:01:00.110+02:00</sv:value>
         </sv:property>
-        <sv:property sv:name="hippostdpubwf:lastModificationDate"
-          sv:type="Date">
-          <sv:value>2014-06-30T11:25:01.065+02:00</sv:value>
+        <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+          <sv:value>2014-08-04T10:14:37.632+02:00</sv:value>
         </sv:property>
-        <sv:property sv:name="hippostdpubwf:lastModifiedBy"
-          sv:type="String">
+        <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:id" sv:type="String">
-          <sv:value>169f6bf4-5a34-4393-a2cb-58528943f4c8</sv:value>
+          <sv:value>46440608-f49b-4533-83a4-aab89835e710</sv:value>
         </sv:property>
-        <sv:property sv:name="hippotranslation:locale"
-          sv:type="String">
+        <sv:property sv:name="hippotranslation:locale" sv:type="String">
           <sv:value>nl</sv:value>
         </sv:property>
-        <sv:node sv:name="field4">
+        <sv:node sv:name="page0">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>ef:textfield</sv:value>
+            <sv:value>eforms:page</sv:value>
           </sv:property>
           <sv:property sv:name="jcr:uuid" sv:type="String">
-            <sv:value>25df0c00-dc6b-4b27-b0e4-62a96859eddf</sv:value>
+            <sv:value>4eaa2d27-8422-4f00-b8be-3c31786cc451</sv:value>
           </sv:property>
-          <sv:property sv:name="ef:expandhint" sv:type="Boolean">
+          <sv:property sv:name="eforms:conditional" sv:type="Boolean">
             <sv:value>false</sv:value>
           </sv:property>
-          <sv:property sv:name="ef:fieldid" sv:type="String">
-            <sv:value>idb2e4b874ef37b73c</sv:value>
+          <sv:property sv:name="eforms:label" sv:type="String">
+            <sv:value>Provide mandatory data</sv:value>
           </sv:property>
-          <sv:property sv:name="ef:fieldname" sv:type="String">
-            <sv:value>name</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:hint" sv:type="String">
-            <sv:value />
-          </sv:property>
-          <sv:property sv:name="ef:label" sv:type="String">
-            <sv:value>Name</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:length" sv:type="Long">
-            <sv:value>40</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:mandatory" sv:type="Boolean">
-            <sv:value>true</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:validcasesensitive"
-            sv:type="String">
-            <sv:value>false</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:validexpression" sv:type="String">
-            <sv:value />
-          </sv:property>
-        </sv:node>
-        <sv:node sv:name="field0">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>ef:datefield</sv:value>
-          </sv:property>
-          <sv:property sv:name="jcr:uuid" sv:type="String">
-            <sv:value>3f8a97cb-d149-4452-8cc3-001afe56f36a</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:dateformat" sv:type="String">
-            <sv:value>dd-mm-yy</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:expandhint" sv:type="Boolean">
-            <sv:value>false</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:fieldid" sv:type="String">
-            <sv:value>id94811a3356da7426</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:fieldname" sv:type="String">
-            <sv:value>birthday</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:hint" sv:type="String">
-            <sv:value>fill in your birthday</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:label" sv:type="String">
-            <sv:value>Birthday</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:mandatory" sv:type="Boolean">
-            <sv:value>true</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:validcasesensitive"
-            sv:type="String">
-            <sv:value>false</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:validexpression" sv:type="String">
-            <sv:value />
-          </sv:property>
-        </sv:node>
-        <sv:node sv:name="field5">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>ef:simpletext</sv:value>
-          </sv:property>
-          <sv:property sv:name="jcr:uuid" sv:type="String">
-            <sv:value>b98c4de5-e3e8-4fc4-a76f-45003eff22a5</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:expandhint" sv:type="Boolean">
-            <sv:value>true</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:fieldid" sv:type="String">
-            <sv:value>idab5084a7505dbc7e</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:fieldname" sv:type="String">
-            <sv:value>free-text</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:hint" sv:type="String">
-            <sv:value>can use the label and the hint of the free text
+          <sv:node sv:name="field4">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>eforms:textfield</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>5edc2efc-46cf-4ce3-97b7-bc7959294be8</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:expandhint" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldid" sv:type="String">
+              <sv:value>idb2e4b874ef37b73c</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldname" sv:type="String">
+              <sv:value>name</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:hint" sv:type="String">
+              <sv:value/>
+            </sv:property>
+            <sv:property sv:name="eforms:label" sv:type="String">
+              <sv:value>Name</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:length" sv:type="Long">
+              <sv:value>40</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validexpression" sv:type="String">
+              <sv:value/>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="field0">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>eforms:datefield</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>97a72107-8072-4d8f-93e5-21df684b9936</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:dateformat" sv:type="String">
+              <sv:value>dd-mm-yy</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:expandhint" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldid" sv:type="String">
+              <sv:value>id94811a3356da7426</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldname" sv:type="String">
+              <sv:value>birthday</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:hint" sv:type="String">
+              <sv:value>fill in your birthday</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:label" sv:type="String">
+              <sv:value>Birthday</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validexpression" sv:type="String">
+              <sv:value/>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="field5">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>eforms:simpletext</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>f6e658de-11c1-4d8a-898e-5c94874e1f44</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:expandhint" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldid" sv:type="String">
+              <sv:value>idab5084a7505dbc7e</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldname" sv:type="String">
+              <sv:value>free-text</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:hint" sv:type="String">
+              <sv:value>can use the label and the hint of the free text
               field if want to add some text between some of the form
               fields</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:label" sv:type="String">
-            <sv:value>We will not use your mail</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:mandatory" sv:type="Boolean">
-            <sv:value>false</sv:value>
-          </sv:property>
+            </sv:property>
+            <sv:property sv:name="eforms:label" sv:type="String">
+              <sv:value>We will not use your mail</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="field2">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>eforms:textfield</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>302227d7-61b2-465d-a663-668f2917b89c</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:expandhint" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldid" sv:type="String">
+              <sv:value>ida4dce09f5a2ad590</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldname" sv:type="String">
+              <sv:value>email</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:hint" sv:type="String">
+              <sv:value>fill in your mail</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:label" sv:type="String">
+              <sv:value>email</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:length" sv:type="Long">
+              <sv:value>60</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validationruleid" sv:type="String">
+              <sv:value>email</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validationrulelabel" sv:type="String">
+              <sv:value>E-mail Address</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validexpression" sv:type="String">
+              <sv:value>\b[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b</sv:value>
+            </sv:property>
+          </sv:node>
         </sv:node>
-        <sv:node sv:name="field2">
+        <sv:node sv:name="page1">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>ef:textfield</sv:value>
+            <sv:value>eforms:page</sv:value>
           </sv:property>
           <sv:property sv:name="jcr:uuid" sv:type="String">
-            <sv:value>e9727b54-0ddd-4c70-87f9-5fcf26858b94</sv:value>
+            <sv:value>2e74b1ca-b914-4e89-b9f6-faaffb391c19</sv:value>
           </sv:property>
-          <sv:property sv:name="ef:expandhint" sv:type="Boolean">
+          <sv:property sv:name="eforms:conditional" sv:type="Boolean">
             <sv:value>false</sv:value>
           </sv:property>
-          <sv:property sv:name="ef:fieldid" sv:type="String">
-            <sv:value>ida4dce09f5a2ad590</sv:value>
+          <sv:property sv:name="eforms:label" sv:type="String">
+            <sv:value>Provide your opinion</sv:value>
           </sv:property>
-          <sv:property sv:name="ef:fieldname" sv:type="String">
-            <sv:value>email</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:hint" sv:type="String">
-            <sv:value>fill in your mail</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:label" sv:type="String">
-            <sv:value>email</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:length" sv:type="Long">
-            <sv:value>60</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:mandatory" sv:type="Boolean">
-            <sv:value>true</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:validationruleid"
-            sv:type="String">
-            <sv:value>email</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:validationrulelabel"
-            sv:type="String">
-            <sv:value>E-mail Address</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:validcasesensitive"
-            sv:type="String">
-            <sv:value>false</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:validexpression" sv:type="String">
-            <sv:value>\b[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b</sv:value>
-          </sv:property>
-        </sv:node>
-        <sv:node sv:name="field3">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>ef:textarea</sv:value>
-          </sv:property>
-          <sv:property sv:name="jcr:uuid" sv:type="String">
-            <sv:value>2ee9e6a6-7982-452e-8a3b-481f8723d774</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:cols" sv:type="Long">
-            <sv:value>40</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:expandhint" sv:type="Boolean">
-            <sv:value>false</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:fieldid" sv:type="String">
-            <sv:value>id89f846980056c99d</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:fieldname" sv:type="String">
-            <sv:value>description</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:hint" sv:type="String">
-            <sv:value />
-          </sv:property>
-          <sv:property sv:name="ef:label" sv:type="String">
-            <sv:value>description</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:mandatory" sv:type="Boolean">
-            <sv:value>false</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:rows" sv:type="Long">
-            <sv:value>10</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:validcasesensitive"
-            sv:type="String">
-            <sv:value>false</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:validexpression" sv:type="String">
-            <sv:value />
-          </sv:property>
+          <sv:node sv:name="field0">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>eforms:textarea</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>4fa90e0a-9b2b-4cd0-9050-fefb0c0c99d4</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:cols" sv:type="Long">
+              <sv:value>40</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:expandhint" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldid" sv:type="String">
+              <sv:value>id89f846980056c99d</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldname" sv:type="String">
+              <sv:value>description</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:hint" sv:type="String">
+              <sv:value/>
+            </sv:property>
+            <sv:property sv:name="eforms:label" sv:type="String">
+              <sv:value>description</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:rows" sv:type="Long">
+              <sv:value>10</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validexpression" sv:type="String">
+              <sv:value/>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="fieldgroup0">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>eforms:embeddedfieldgroup</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldnameprefix" sv:type="String">
+              <sv:value>address</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:groupname" sv:type="String">
+              <sv:value>address</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:label" sv:type="String">
+              <sv:value>group_label</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:oneline" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validationhelper" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+            <sv:node sv:name="field0">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>eforms:textfield</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>c618e6b4-3a38-4e24-bc74-ff65615d1e16</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:expandhint" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldid" sv:type="String">
+                <sv:value>id8344849e46dddeda</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldname" sv:type="String">
+                <sv:value>street</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:hint" sv:type="String">
+                <sv:value/>
+              </sv:property>
+              <sv:property sv:name="eforms:label" sv:type="String">
+                <sv:value>Street and house number</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:length" sv:type="Long">
+                <sv:value>40</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+                <sv:value>true</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validexpression" sv:type="String">
+                <sv:value/>
+              </sv:property>
+            </sv:node>
+            <sv:node sv:name="field1">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>eforms:textfield</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>c0df4d96-d337-49eb-b89f-377d7d62f6b4</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldid" sv:type="String">
+                <sv:value>id81890d6d6f42b0c0</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldname" sv:type="String">
+                <sv:value>postcode</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:hint" sv:type="String">
+                <sv:value/>
+              </sv:property>
+              <sv:property sv:name="eforms:label" sv:type="String">
+                <sv:value>Postcode</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:length" sv:type="Long">
+                <sv:value>40</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+                <sv:value>true</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validexpression" sv:type="String">
+                <sv:value/>
+              </sv:property>
+            </sv:node>
+            <sv:node sv:name="field2">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>eforms:textfield</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>f0ed9ab5-bb07-406d-9911-033f868faa92</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldid" sv:type="String">
+                <sv:value>id8964e4be99647f54</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldname" sv:type="String">
+                <sv:value>city</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:hint" sv:type="String">
+                <sv:value/>
+              </sv:property>
+              <sv:property sv:name="eforms:label" sv:type="String">
+                <sv:value>City</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:length" sv:type="Long">
+                <sv:value>40</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+                <sv:value>true</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validexpression" sv:type="String">
+                <sv:value/>
+              </sv:property>
+            </sv:node>
+          </sv:node>
         </sv:node>
       </sv:node>
-      <sv:node sv:name="double-mail-store-form">
+      <sv:node sv:name="double-mail-store-form-migrated">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hsl:doublemailstoreform</sv:value>
+          <sv:value>eforms:form</sv:value>
         </sv:property>
-        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes"
-          sv:type="Name">
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
           <sv:value>mix:referenceable</sv:value>
           <sv:value>hippotranslation:translated</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
-          <sv:value>94626612-7ff1-46a6-be22-d24a1de6aa4f</sv:value>
+          <sv:value>17ee8ef1-d3a7-410c-9508-d7d415dcadbc</sv:value>
         </sv:property>
-        <sv:property sv:name="ef:action" sv:type="String">
+        <sv:property sv:name="eforms:action" sv:type="String">
           <sv:value>mail</sv:value>
         </sv:property>
-        <sv:property sv:name="ef:actionurl" sv:type="String">
+        <sv:property sv:name="eforms:actionurl" sv:type="String">
           <sv:value>http://test.com/action.do</sv:value>
         </sv:property>
-        <sv:property sv:name="ef:confirmationemailfields"
-          sv:type="String">
+        <sv:property sv:name="eforms:confirmationemailfields" sv:type="String">
           <sv:value>ida4dce09f5a2ad590,email</sv:value>
         </sv:property>
-        <sv:property sv:name="ef:confirmationincludefields"
-          sv:type="String">
+        <sv:property sv:name="eforms:confirmationincludefields" sv:type="String">
           <sv:value>true</sv:value>
         </sv:property>
-        <sv:property sv:name="ef:confirmationsenderaddress"
-          sv:type="String">
+        <sv:property sv:name="eforms:confirmationsenderaddress" sv:type="String">
           <sv:value>test@example.com</sv:value>
         </sv:property>
-        <sv:property sv:name="ef:confirmationsubject"
-          sv:type="String">
+        <sv:property sv:name="eforms:confirmationsubject" sv:type="String">
           <sv:value>Thank you for your feedback</sv:value>
         </sv:property>
-        <sv:property sv:name="ef:confirmationtext" sv:type="String">
+        <sv:property sv:name="eforms:confirmationtext" sv:type="String">
           <sv:value>We appriciate it a lot</sv:value>
         </sv:property>
-        <sv:property sv:name="ef:formintro" sv:type="String">
+        <sv:property sv:name="eforms:formintro" sv:type="String">
           <sv:value>This is some introduction text to be displayed
             before the fields of this form</sv:value>
         </sv:property>
-        <sv:property sv:name="ef:formname" sv:type="String">
+        <sv:property sv:name="eforms:formname" sv:type="String">
           <sv:value>Double mail store form</sv:value>
         </sv:property>
-        <sv:property sv:name="ef:mailformdata" sv:type="String">
+        <sv:property sv:name="eforms:mailformdata" sv:type="String">
           <sv:value>true</sv:value>
         </sv:property>
-        <sv:property sv:name="ef:notificationemail" sv:type="String">
+        <sv:property sv:name="eforms:notificationemail" sv:type="String">
           <sv:value>test@example.com</sv:value>
         </sv:property>
-        <sv:property sv:name="ef:storeformdata" sv:type="String">
+        <sv:property sv:name="eforms:storeformdata" sv:type="String">
           <sv:value>true</sv:value>
         </sv:property>
-        <sv:property sv:multiple="true" sv:name="hippo:availability"
-          sv:type="String">
+        <sv:property sv:name="eforms:validationhelper" sv:type="Boolean">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
           <sv:value>live</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:related___pathreference"
-          sv:type="String">
-          <sv:value>hsl/componenten/formulieren/standard-forms/double-mail-store-form/double-mail-store-form</sv:value>
+        <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+          <sv:value>formulieren/standard-forms/double-mail-store-form-migrated/double-mail-store-form-migrated</sv:value>
         </sv:property>
         <sv:property sv:name="hippostd:state" sv:type="String">
           <sv:value>published</sv:value>
         </sv:property>
-        <sv:property sv:name="hippostd:stateSummary"
-          sv:type="String">
+        <sv:property sv:name="hippostd:stateSummary" sv:type="String">
           <sv:value>live</sv:value>
         </sv:property>
-        <sv:property sv:name="hippostdpubwf:createdBy"
-          sv:type="String">
+        <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+          <sv:value>system</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+          <sv:value>2014-08-01T16:01:00.110+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+          <sv:value>2014-08-04T10:14:50.392+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
         </sv:property>
-        <sv:property sv:name="hippostdpubwf:creationDate"
-          sv:type="Date">
-          <sv:value>2014-06-26T10:52:29.329+02:00</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippostdpubwf:lastModificationDate"
-          sv:type="Date">
-          <sv:value>2014-06-30T11:04:04.380+02:00</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippostdpubwf:lastModifiedBy"
-          sv:type="String">
-          <sv:value>admin</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippostdpubwf:publicationDate"
-          sv:type="Date">
-          <sv:value>2014-06-30T11:04:06.504+02:00</sv:value>
+        <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
+          <sv:value>2014-08-04T10:14:53.604+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:id" sv:type="String">
-          <sv:value>169f6bf4-5a34-4393-a2cb-58528943f4c8</sv:value>
+          <sv:value>46440608-f49b-4533-83a4-aab89835e710</sv:value>
         </sv:property>
-        <sv:property sv:name="hippotranslation:locale"
-          sv:type="String">
+        <sv:property sv:name="hippotranslation:locale" sv:type="String">
           <sv:value>nl</sv:value>
         </sv:property>
-        <sv:node sv:name="field4">
+        <sv:node sv:name="page0">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>ef:textfield</sv:value>
+            <sv:value>eforms:page</sv:value>
           </sv:property>
           <sv:property sv:name="jcr:uuid" sv:type="String">
-            <sv:value>4cf8e5b2-bfe5-4218-ad94-cfc60fd9cd13</sv:value>
+            <sv:value>63637480-e29a-4e51-838b-7c146b62b330</sv:value>
           </sv:property>
-          <sv:property sv:name="ef:expandhint" sv:type="Boolean">
+          <sv:property sv:name="eforms:conditional" sv:type="Boolean">
             <sv:value>false</sv:value>
           </sv:property>
-          <sv:property sv:name="ef:fieldid" sv:type="String">
-            <sv:value>idb2e4b874ef37b73c</sv:value>
+          <sv:property sv:name="eforms:label" sv:type="String">
+            <sv:value>Provide mandatory data</sv:value>
           </sv:property>
-          <sv:property sv:name="ef:fieldname" sv:type="String">
-            <sv:value>name</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:hint" sv:type="String">
-            <sv:value />
-          </sv:property>
-          <sv:property sv:name="ef:label" sv:type="String">
-            <sv:value>Name</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:length" sv:type="Long">
-            <sv:value>40</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:mandatory" sv:type="Boolean">
-            <sv:value>true</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:validcasesensitive"
-            sv:type="String">
-            <sv:value>false</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:validexpression" sv:type="String">
-            <sv:value />
-          </sv:property>
-        </sv:node>
-        <sv:node sv:name="field0">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>ef:datefield</sv:value>
-          </sv:property>
-          <sv:property sv:name="jcr:uuid" sv:type="String">
-            <sv:value>273d751e-25d8-4100-a1d3-ea2d92c08f5d</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:dateformat" sv:type="String">
-            <sv:value>dd-mm-yy</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:expandhint" sv:type="Boolean">
-            <sv:value>false</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:fieldid" sv:type="String">
-            <sv:value>id94811a3356da7426</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:fieldname" sv:type="String">
-            <sv:value>birthday</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:hint" sv:type="String">
-            <sv:value>fill in your birthday</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:label" sv:type="String">
-            <sv:value>Birthday</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:mandatory" sv:type="Boolean">
-            <sv:value>true</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:validcasesensitive"
-            sv:type="String">
-            <sv:value>false</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:validexpression" sv:type="String">
-            <sv:value />
-          </sv:property>
-        </sv:node>
-        <sv:node sv:name="field5">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>ef:simpletext</sv:value>
-          </sv:property>
-          <sv:property sv:name="jcr:uuid" sv:type="String">
-            <sv:value>7f3f2f5f-9834-482c-a11c-9a5d64792c92</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:expandhint" sv:type="Boolean">
-            <sv:value>true</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:fieldid" sv:type="String">
-            <sv:value>idab5084a7505dbc7e</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:fieldname" sv:type="String">
-            <sv:value>free-text</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:hint" sv:type="String">
-            <sv:value>can use the label and the hint of the free text
+          <sv:node sv:name="field4">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>eforms:textfield</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>3e176a13-edfa-4543-a782-73c4768ea336</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:expandhint" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldid" sv:type="String">
+              <sv:value>idb2e4b874ef37b73c</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldname" sv:type="String">
+              <sv:value>name</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:hint" sv:type="String">
+              <sv:value/>
+            </sv:property>
+            <sv:property sv:name="eforms:label" sv:type="String">
+              <sv:value>Name</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:length" sv:type="Long">
+              <sv:value>40</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validexpression" sv:type="String">
+              <sv:value/>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="field0">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>eforms:datefield</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>a3faa3ad-385f-4a2a-b128-fbbf2ddeb77d</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:dateformat" sv:type="String">
+              <sv:value>dd-mm-yy</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:expandhint" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldid" sv:type="String">
+              <sv:value>id94811a3356da7426</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldname" sv:type="String">
+              <sv:value>birthday</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:hint" sv:type="String">
+              <sv:value>fill in your birthday</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:label" sv:type="String">
+              <sv:value>Birthday</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validexpression" sv:type="String">
+              <sv:value/>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="field5">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>eforms:simpletext</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>0faafbd4-1122-40f2-a239-9909bf6944f7</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:expandhint" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldid" sv:type="String">
+              <sv:value>idab5084a7505dbc7e</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldname" sv:type="String">
+              <sv:value>free-text</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:hint" sv:type="String">
+              <sv:value>can use the label and the hint of the free text
               field if want to add some text between some of the form
               fields</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:label" sv:type="String">
-            <sv:value>We will not use your mail</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:mandatory" sv:type="Boolean">
-            <sv:value>false</sv:value>
-          </sv:property>
+            </sv:property>
+            <sv:property sv:name="eforms:label" sv:type="String">
+              <sv:value>We will not use your mail</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="field2">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>eforms:textfield</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>fd699179-f3e6-4529-9c1b-5a53aa23a057</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:expandhint" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldid" sv:type="String">
+              <sv:value>ida4dce09f5a2ad590</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldname" sv:type="String">
+              <sv:value>email</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:hint" sv:type="String">
+              <sv:value>fill in your mail</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:label" sv:type="String">
+              <sv:value>email</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:length" sv:type="Long">
+              <sv:value>60</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validationruleid" sv:type="String">
+              <sv:value>email</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validationrulelabel" sv:type="String">
+              <sv:value>E-mail Address</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validexpression" sv:type="String">
+              <sv:value>\b[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b</sv:value>
+            </sv:property>
+          </sv:node>
         </sv:node>
-        <sv:node sv:name="field2">
+        <sv:node sv:name="page1">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>ef:textfield</sv:value>
+            <sv:value>eforms:page</sv:value>
           </sv:property>
           <sv:property sv:name="jcr:uuid" sv:type="String">
-            <sv:value>ad088290-d2fa-407f-95d4-afd0bb339c4c</sv:value>
+            <sv:value>e68b087e-bb7a-4485-9b0d-7c459c81a162</sv:value>
           </sv:property>
-          <sv:property sv:name="ef:expandhint" sv:type="Boolean">
+          <sv:property sv:name="eforms:conditional" sv:type="Boolean">
             <sv:value>false</sv:value>
           </sv:property>
-          <sv:property sv:name="ef:fieldid" sv:type="String">
-            <sv:value>ida4dce09f5a2ad590</sv:value>
+          <sv:property sv:name="eforms:label" sv:type="String">
+            <sv:value>Provide your opinion</sv:value>
           </sv:property>
-          <sv:property sv:name="ef:fieldname" sv:type="String">
-            <sv:value>email</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:hint" sv:type="String">
-            <sv:value>fill in your mail</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:label" sv:type="String">
-            <sv:value>email</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:length" sv:type="Long">
-            <sv:value>60</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:mandatory" sv:type="Boolean">
-            <sv:value>true</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:validationruleid"
-            sv:type="String">
-            <sv:value>email</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:validationrulelabel"
-            sv:type="String">
-            <sv:value>E-mail Address</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:validcasesensitive"
-            sv:type="String">
-            <sv:value>false</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:validexpression" sv:type="String">
-            <sv:value>\b[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b</sv:value>
-          </sv:property>
+          <sv:node sv:name="field0">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>eforms:textarea</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>2d2b4b71-e37c-4813-af39-f5b2eb0f672b</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:cols" sv:type="Long">
+              <sv:value>40</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:expandhint" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldid" sv:type="String">
+              <sv:value>id89f846980056c99d</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldname" sv:type="String">
+              <sv:value>description</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:hint" sv:type="String">
+              <sv:value/>
+            </sv:property>
+            <sv:property sv:name="eforms:label" sv:type="String">
+              <sv:value>description</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:rows" sv:type="Long">
+              <sv:value>10</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validexpression" sv:type="String">
+              <sv:value/>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="fieldgroup0">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>eforms:embeddedfieldgroup</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldnameprefix" sv:type="String">
+              <sv:value>address</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:groupname" sv:type="String">
+              <sv:value>address</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:label" sv:type="String">
+              <sv:value>group_label</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:oneline" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validationhelper" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+            <sv:node sv:name="field0">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>eforms:textfield</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>6ceb3e7b-e382-4dde-a011-59f74c6d2642</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:expandhint" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldid" sv:type="String">
+                <sv:value>id8344849e46dddeda</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldname" sv:type="String">
+                <sv:value>street</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:hint" sv:type="String">
+                <sv:value/>
+              </sv:property>
+              <sv:property sv:name="eforms:label" sv:type="String">
+                <sv:value>Street and house number</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:length" sv:type="Long">
+                <sv:value>40</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+                <sv:value>true</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validexpression" sv:type="String">
+                <sv:value/>
+              </sv:property>
+            </sv:node>
+            <sv:node sv:name="field1">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>eforms:textfield</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>313d6e0d-055f-4590-a3e3-eeeab16d4c9a</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldid" sv:type="String">
+                <sv:value>id81890d6d6f42b0c0</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldname" sv:type="String">
+                <sv:value>postcode</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:hint" sv:type="String">
+                <sv:value/>
+              </sv:property>
+              <sv:property sv:name="eforms:label" sv:type="String">
+                <sv:value>Postcode</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:length" sv:type="Long">
+                <sv:value>40</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+                <sv:value>true</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validexpression" sv:type="String">
+                <sv:value/>
+              </sv:property>
+            </sv:node>
+            <sv:node sv:name="field2">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>eforms:textfield</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>59ac4737-39f7-42bc-8692-19948c729163</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldid" sv:type="String">
+                <sv:value>id8964e4be99647f54</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldname" sv:type="String">
+                <sv:value>city</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:hint" sv:type="String">
+                <sv:value/>
+              </sv:property>
+              <sv:property sv:name="eforms:label" sv:type="String">
+                <sv:value>City</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:length" sv:type="Long">
+                <sv:value>40</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+                <sv:value>true</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validexpression" sv:type="String">
+                <sv:value/>
+              </sv:property>
+            </sv:node>
+          </sv:node>
         </sv:node>
-        <sv:node sv:name="field3">
+      </sv:node>
+    </sv:node>
+    <sv:node sv:name="eform-double-mail-store-groups">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hippo:handle</sv:value>
+      </sv:property>
+      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+        <sv:value>mix:referenceable</sv:value>
+        <sv:value>hippo:translated</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>84e307e7-e362-46af-938b-e45eb67448f3</sv:value>
+      </sv:property>
+      <sv:node sv:name="eform-double-mail-store-groups">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsl:doublemailstoreform</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+          <sv:value>mix:referenceable</sv:value>
+          <sv:value>hippotranslation:translated</sv:value>
+          <sv:value>mix:versionable</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>759fd15f-c2f6-4849-b398-4d9485ea14d1</sv:value>
+        </sv:property>
+        <sv:property sv:name="eforms:action" sv:type="String">
+          <sv:value>mail</sv:value>
+        </sv:property>
+        <sv:property sv:name="eforms:actionurl" sv:type="String">
+          <sv:value>http://test.com/action.do</sv:value>
+        </sv:property>
+        <sv:property sv:name="eforms:confirmationemailfields" sv:type="String">
+          <sv:value>email</sv:value>
+        </sv:property>
+        <sv:property sv:name="eforms:confirmationincludefields" sv:type="String">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:property sv:name="eforms:confirmationsenderaddress" sv:type="String">
+          <sv:value>test@example.com</sv:value>
+        </sv:property>
+        <sv:property sv:name="eforms:confirmationsubject" sv:type="String">
+          <sv:value>Thank you</sv:value>
+        </sv:property>
+        <sv:property sv:name="eforms:confirmationtext" sv:type="String">
+          <sv:value>This text will display before the other form data</sv:value>
+        </sv:property>
+        <sv:property sv:name="eforms:formintro" sv:type="String">
+          <sv:value>This is the form introduction, Beside the article preceding the form some extra information can be added in here and will be displayed before teh form fields</sv:value>
+        </sv:property>
+        <sv:property sv:name="eforms:formname" sv:type="String">
+          <sv:value>Double mail store enterprise form with groups</sv:value>
+        </sv:property>
+        <sv:property sv:name="eforms:mailformdata" sv:type="String">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:property sv:name="eforms:notificationemail" sv:type="String">
+          <sv:value>test@example.com</sv:value>
+        </sv:property>
+        <sv:property sv:name="eforms:storeformdata" sv:type="String">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:property sv:name="eforms:validationhelper" sv:type="Boolean">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
+          <sv:value>preview</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+          <sv:value>formulieren/standard-forms/eform-double-mail-store-groups/eform-double-mail-store-groups[3]</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostd:state" sv:type="String">
+          <sv:value>unpublished</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+          <sv:value>live</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+          <sv:value>admin</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+          <sv:value>2014-08-04T10:01:02.290+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+          <sv:value>2014-08-04T10:48:45.878+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+          <sv:value>admin</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippotranslation:id" sv:type="String">
+          <sv:value>242a8929-3b1f-4f58-b423-c8f6f11ee419</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippotranslation:locale" sv:type="String">
+          <sv:value>nl</sv:value>
+        </sv:property>
+        <sv:node sv:name="page0">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>ef:textarea</sv:value>
+            <sv:value>eforms:page</sv:value>
           </sv:property>
           <sv:property sv:name="jcr:uuid" sv:type="String">
-            <sv:value>ed759df0-1a9a-4988-8ae9-e41c234e122c</sv:value>
+            <sv:value>df1a2a2e-04cf-4213-a815-aae438ca3299</sv:value>
           </sv:property>
-          <sv:property sv:name="ef:cols" sv:type="Long">
-            <sv:value>40</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:expandhint" sv:type="Boolean">
+          <sv:property sv:name="eforms:conditional" sv:type="Boolean">
             <sv:value>false</sv:value>
           </sv:property>
-          <sv:property sv:name="ef:fieldid" sv:type="String">
-            <sv:value>id89f846980056c99d</sv:value>
+          <sv:property sv:name="eforms:label" sv:type="String">
+            <sv:value>Page 1</sv:value>
           </sv:property>
-          <sv:property sv:name="ef:fieldname" sv:type="String">
-            <sv:value>description</sv:value>
+          <sv:node sv:name="field1">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>eforms:textfield</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>bed2c644-b33e-4d2d-a861-52885b1f1707</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldid" sv:type="String">
+              <sv:value>id9018394a6dd808c4</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldname" sv:type="String">
+              <sv:value>name</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:hint" sv:type="String">
+              <sv:value/>
+            </sv:property>
+            <sv:property sv:name="eforms:label" sv:type="String">
+              <sv:value>Name</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:length" sv:type="Long">
+              <sv:value>40</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validexpression" sv:type="String">
+              <sv:value/>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="field2">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>eforms:textfield</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>5aa417ba-153b-4578-b7d0-c5704317d9c6</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldid" sv:type="String">
+              <sv:value>id82352a6a93c0257b</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldname" sv:type="String">
+              <sv:value>email</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:hint" sv:type="String">
+              <sv:value/>
+            </sv:property>
+            <sv:property sv:name="eforms:label" sv:type="String">
+              <sv:value>Email</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:length" sv:type="Long">
+              <sv:value>40</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validationruleclass" sv:type="String">
+              <sv:value/>
+            </sv:property>
+            <sv:property sv:name="eforms:validationruleid" sv:type="String">
+              <sv:value>email</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validationrulelabel" sv:type="String">
+              <sv:value>E-mail Address</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validexpression" sv:type="String">
+              <sv:value>\b[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="field3">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>eforms:textfield</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>a661def0-f3ff-4ee4-8c00-8c087d8ccb88</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldid" sv:type="String">
+              <sv:value>id86ef40d3fc42a69c</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldname" sv:type="String">
+              <sv:value>phone-number</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:hint" sv:type="String">
+              <sv:value/>
+            </sv:property>
+            <sv:property sv:name="eforms:label" sv:type="String">
+              <sv:value>Phone number</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:length" sv:type="Long">
+              <sv:value>40</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validexpression" sv:type="String">
+              <sv:value/>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="fieldgroup0">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>eforms:embeddedfieldgroup</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldnameprefix" sv:type="String">
+              <sv:value>residence-address</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:groupname" sv:type="String">
+              <sv:value>Residence address</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:label" sv:type="String">
+              <sv:value>group_label</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:oneline" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validationhelper" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+            <sv:node sv:name="field0">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>eforms:textfield</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>3a17e288-f264-45cc-9916-1bf685b5adc0</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:expandhint" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldid" sv:type="String">
+                <sv:value>id8344849e46dddeda</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldname" sv:type="String">
+                <sv:value>street</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:hint" sv:type="String">
+                <sv:value/>
+              </sv:property>
+              <sv:property sv:name="eforms:label" sv:type="String">
+                <sv:value>Street and house number</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:length" sv:type="Long">
+                <sv:value>40</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+                <sv:value>true</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validexpression" sv:type="String">
+                <sv:value/>
+              </sv:property>
+            </sv:node>
+            <sv:node sv:name="field1">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>eforms:textfield</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>ee360a29-6585-4a2a-b4c3-e79ef834856a</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldid" sv:type="String">
+                <sv:value>id81890d6d6f42b0c0</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldname" sv:type="String">
+                <sv:value>postcode</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:hint" sv:type="String">
+                <sv:value/>
+              </sv:property>
+              <sv:property sv:name="eforms:label" sv:type="String">
+                <sv:value>Postcode</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:length" sv:type="Long">
+                <sv:value>40</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+                <sv:value>true</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validexpression" sv:type="String">
+                <sv:value/>
+              </sv:property>
+            </sv:node>
+            <sv:node sv:name="field2">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>eforms:textfield</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>34db7c48-8e5c-4a44-aadf-bc2eb9ef4cec</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldid" sv:type="String">
+                <sv:value>id8964e4be99647f54</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldname" sv:type="String">
+                <sv:value>city</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:hint" sv:type="String">
+                <sv:value/>
+              </sv:property>
+              <sv:property sv:name="eforms:label" sv:type="String">
+                <sv:value>City</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:length" sv:type="Long">
+                <sv:value>40</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+                <sv:value>true</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validexpression" sv:type="String">
+                <sv:value/>
+              </sv:property>
+            </sv:node>
+          </sv:node>
+          <sv:node sv:name="field0">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>eforms:radiogroup</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>ea0b89aa-5ef6-44df-bc6c-cdc611c61f1b</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:allowother" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:expandhint" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldid" sv:type="String">
+              <sv:value>id95167713f09feb30</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldname" sv:type="String">
+              <sv:value>delivery-address</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:hint" sv:type="String">
+              <sv:value/>
+            </sv:property>
+            <sv:property sv:name="eforms:label" sv:type="String">
+              <sv:value>Delivery address</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:length" sv:type="Long">
+              <sv:value>40</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validexpression" sv:type="String">
+              <sv:value/>
+            </sv:property>
+            <sv:property sv:multiple="true" sv:name="eforms:values" sv:type="String">
+              <sv:value>Residence address</sv:value>
+              <sv:value>Other address</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="fieldgroup1">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>eforms:embeddedfieldgroup</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:conditionfield" sv:type="String">
+              <sv:value>delivery-address</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:conditionvalue" sv:type="String">
+              <sv:value>Other address</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldnameprefix" sv:type="String">
+              <sv:value>address</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:groupname" sv:type="String">
+              <sv:value>address</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:label" sv:type="String">
+              <sv:value>group_label</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:oneline" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validationhelper" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+            <sv:node sv:name="field0">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>eforms:textfield</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>331cd531-7928-4f3f-af66-22d42a422022</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:expandhint" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldid" sv:type="String">
+                <sv:value>id8344849e46dddeda</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldname" sv:type="String">
+                <sv:value>street</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:hint" sv:type="String">
+                <sv:value/>
+              </sv:property>
+              <sv:property sv:name="eforms:label" sv:type="String">
+                <sv:value>Street and house number</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:length" sv:type="Long">
+                <sv:value>40</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+                <sv:value>true</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validexpression" sv:type="String">
+                <sv:value/>
+              </sv:property>
+            </sv:node>
+            <sv:node sv:name="field1">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>eforms:textfield</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>40953e0b-aae4-4947-9b1b-67fc53404bb4</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldid" sv:type="String">
+                <sv:value>id81890d6d6f42b0c0</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldname" sv:type="String">
+                <sv:value>postcode</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:hint" sv:type="String">
+                <sv:value/>
+              </sv:property>
+              <sv:property sv:name="eforms:label" sv:type="String">
+                <sv:value>Postcode</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:length" sv:type="Long">
+                <sv:value>40</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+                <sv:value>true</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validexpression" sv:type="String">
+                <sv:value/>
+              </sv:property>
+            </sv:node>
+            <sv:node sv:name="field2">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>eforms:textfield</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>49d18b34-4929-4582-be55-f004eedfbccf</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldid" sv:type="String">
+                <sv:value>id8964e4be99647f54</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldname" sv:type="String">
+                <sv:value>city</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:hint" sv:type="String">
+                <sv:value/>
+              </sv:property>
+              <sv:property sv:name="eforms:label" sv:type="String">
+                <sv:value>City</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:length" sv:type="Long">
+                <sv:value>40</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+                <sv:value>true</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validexpression" sv:type="String">
+                <sv:value/>
+              </sv:property>
+            </sv:node>
+          </sv:node>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="eform-double-mail-store-groups">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsl:doublemailstoreform</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+          <sv:value>mix:referenceable</sv:value>
+          <sv:value>hippotranslation:translated</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>08469659-f931-4d2e-96cf-7e012378bdef</sv:value>
+        </sv:property>
+        <sv:property sv:name="eforms:action" sv:type="String">
+          <sv:value>mail</sv:value>
+        </sv:property>
+        <sv:property sv:name="eforms:actionurl" sv:type="String">
+          <sv:value>http://test.com/action.do</sv:value>
+        </sv:property>
+        <sv:property sv:name="eforms:confirmationemailfields" sv:type="String">
+          <sv:value>email</sv:value>
+        </sv:property>
+        <sv:property sv:name="eforms:confirmationincludefields" sv:type="String">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:property sv:name="eforms:confirmationsenderaddress" sv:type="String">
+          <sv:value>test@example.com</sv:value>
+        </sv:property>
+        <sv:property sv:name="eforms:confirmationsubject" sv:type="String">
+          <sv:value>Thank you</sv:value>
+        </sv:property>
+        <sv:property sv:name="eforms:confirmationtext" sv:type="String">
+          <sv:value>This text will display before the other form data</sv:value>
+        </sv:property>
+        <sv:property sv:name="eforms:formintro" sv:type="String">
+          <sv:value>This is the form introduction, Beside the article preceding the form some extra information can be added in here and will be displayed before teh form fields</sv:value>
+        </sv:property>
+        <sv:property sv:name="eforms:formname" sv:type="String">
+          <sv:value>Double mail store enterprise form with groups</sv:value>
+        </sv:property>
+        <sv:property sv:name="eforms:mailformdata" sv:type="String">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:property sv:name="eforms:notificationemail" sv:type="String">
+          <sv:value>test@example.com</sv:value>
+        </sv:property>
+        <sv:property sv:name="eforms:storeformdata" sv:type="String">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:property sv:name="eforms:validationhelper" sv:type="Boolean">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String"/>
+        <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+          <sv:value>formulieren/standard-forms/eform-double-mail-store-groups/eform-double-mail-store-groups</sv:value>
+          <sv:value>formulieren/standard-forms/eform-double-mail-store-groups/eform-double-mail-store-groups[3]</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostd:state" sv:type="String">
+          <sv:value>draft</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+          <sv:value>live</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+          <sv:value>admin</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+          <sv:value>2014-08-04T10:01:02.290+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+          <sv:value>2014-08-04T10:47:49.765+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+          <sv:value>admin</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippotranslation:id" sv:type="String">
+          <sv:value>242a8929-3b1f-4f58-b423-c8f6f11ee419</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippotranslation:locale" sv:type="String">
+          <sv:value>nl</sv:value>
+        </sv:property>
+        <sv:node sv:name="page0">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>eforms:page</sv:value>
           </sv:property>
-          <sv:property sv:name="ef:hint" sv:type="String">
-            <sv:value />
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>608bb62a-c413-4ee7-b8fd-b066577fd0be</sv:value>
           </sv:property>
-          <sv:property sv:name="ef:label" sv:type="String">
-            <sv:value>description</sv:value>
-          </sv:property>
-          <sv:property sv:name="ef:mandatory" sv:type="Boolean">
+          <sv:property sv:name="eforms:conditional" sv:type="Boolean">
             <sv:value>false</sv:value>
           </sv:property>
-          <sv:property sv:name="ef:rows" sv:type="Long">
-            <sv:value>10</sv:value>
+          <sv:property sv:name="eforms:label" sv:type="String">
+            <sv:value>Page 1</sv:value>
           </sv:property>
-          <sv:property sv:name="ef:validcasesensitive"
-            sv:type="String">
+          <sv:node sv:name="field1">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>eforms:textfield</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>3ed707fb-8992-4b1a-ab1a-384a84697d6a</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldid" sv:type="String">
+              <sv:value>id9018394a6dd808c4</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldname" sv:type="String">
+              <sv:value>name</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:hint" sv:type="String">
+              <sv:value/>
+            </sv:property>
+            <sv:property sv:name="eforms:label" sv:type="String">
+              <sv:value>Name</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:length" sv:type="Long">
+              <sv:value>40</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validexpression" sv:type="String">
+              <sv:value/>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="field2">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>eforms:textfield</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>0b4cfea7-d9df-4c16-beb0-1221f6a0b857</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldid" sv:type="String">
+              <sv:value>id82352a6a93c0257b</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldname" sv:type="String">
+              <sv:value>email</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:hint" sv:type="String">
+              <sv:value/>
+            </sv:property>
+            <sv:property sv:name="eforms:label" sv:type="String">
+              <sv:value>Email</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:length" sv:type="Long">
+              <sv:value>40</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validationruleclass" sv:type="String">
+              <sv:value/>
+            </sv:property>
+            <sv:property sv:name="eforms:validationruleid" sv:type="String">
+              <sv:value>email</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validationrulelabel" sv:type="String">
+              <sv:value>E-mail Address</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validexpression" sv:type="String">
+              <sv:value>\b[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="field3">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>eforms:textfield</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>171763b6-173d-40e5-aff2-28ff7e4b0326</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldid" sv:type="String">
+              <sv:value>id86ef40d3fc42a69c</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldname" sv:type="String">
+              <sv:value>phone-number</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:hint" sv:type="String">
+              <sv:value/>
+            </sv:property>
+            <sv:property sv:name="eforms:label" sv:type="String">
+              <sv:value>Phone number</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:length" sv:type="Long">
+              <sv:value>40</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validexpression" sv:type="String">
+              <sv:value/>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="fieldgroup0">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>eforms:embeddedfieldgroup</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldnameprefix" sv:type="String">
+              <sv:value>residence-address</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:groupname" sv:type="String">
+              <sv:value>Residence address</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:label" sv:type="String">
+              <sv:value>group_label</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:oneline" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validationhelper" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+            <sv:node sv:name="field0">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>eforms:textfield</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>dfd80b20-97aa-4eea-ad76-ab2e6148c24c</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:expandhint" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldid" sv:type="String">
+                <sv:value>id8344849e46dddeda</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldname" sv:type="String">
+                <sv:value>street</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:hint" sv:type="String">
+                <sv:value/>
+              </sv:property>
+              <sv:property sv:name="eforms:label" sv:type="String">
+                <sv:value>Street and house number</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:length" sv:type="Long">
+                <sv:value>40</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+                <sv:value>true</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validexpression" sv:type="String">
+                <sv:value/>
+              </sv:property>
+            </sv:node>
+            <sv:node sv:name="field1">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>eforms:textfield</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>8fbe0480-cb4d-4875-86d1-e9fb4e90f68e</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldid" sv:type="String">
+                <sv:value>id81890d6d6f42b0c0</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldname" sv:type="String">
+                <sv:value>postcode</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:hint" sv:type="String">
+                <sv:value/>
+              </sv:property>
+              <sv:property sv:name="eforms:label" sv:type="String">
+                <sv:value>Postcode</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:length" sv:type="Long">
+                <sv:value>40</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+                <sv:value>true</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validexpression" sv:type="String">
+                <sv:value/>
+              </sv:property>
+            </sv:node>
+            <sv:node sv:name="field2">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>eforms:textfield</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>df56f941-7e8e-46b8-9626-c0aa9c39591d</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldid" sv:type="String">
+                <sv:value>id8964e4be99647f54</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldname" sv:type="String">
+                <sv:value>city</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:hint" sv:type="String">
+                <sv:value/>
+              </sv:property>
+              <sv:property sv:name="eforms:label" sv:type="String">
+                <sv:value>City</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:length" sv:type="Long">
+                <sv:value>40</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+                <sv:value>true</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validexpression" sv:type="String">
+                <sv:value/>
+              </sv:property>
+            </sv:node>
+          </sv:node>
+          <sv:node sv:name="field0">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>eforms:radiogroup</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>290f9b36-60d1-49b6-953f-59e16a4ad655</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:allowother" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:expandhint" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldid" sv:type="String">
+              <sv:value>id95167713f09feb30</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldname" sv:type="String">
+              <sv:value>delivery-address</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:hint" sv:type="String">
+              <sv:value/>
+            </sv:property>
+            <sv:property sv:name="eforms:label" sv:type="String">
+              <sv:value>Delivery address</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:length" sv:type="Long">
+              <sv:value>40</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validexpression" sv:type="String">
+              <sv:value/>
+            </sv:property>
+            <sv:property sv:multiple="true" sv:name="eforms:values" sv:type="String">
+              <sv:value>Residence address</sv:value>
+              <sv:value>Other address</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="fieldgroup1">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>eforms:embeddedfieldgroup</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:conditionfield" sv:type="String">
+              <sv:value>delivery-address</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:conditionvalue" sv:type="String">
+              <sv:value>Other address</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldnameprefix" sv:type="String">
+              <sv:value>address</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:groupname" sv:type="String">
+              <sv:value>address</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:label" sv:type="String">
+              <sv:value>group_label</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:oneline" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validationhelper" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+            <sv:node sv:name="field0">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>eforms:textfield</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>1883ff01-e7ed-4f74-8ac7-8ca43f3bc30a</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:expandhint" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldid" sv:type="String">
+                <sv:value>id8344849e46dddeda</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldname" sv:type="String">
+                <sv:value>street</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:hint" sv:type="String">
+                <sv:value/>
+              </sv:property>
+              <sv:property sv:name="eforms:label" sv:type="String">
+                <sv:value>Street and house number</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:length" sv:type="Long">
+                <sv:value>40</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+                <sv:value>true</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validexpression" sv:type="String">
+                <sv:value/>
+              </sv:property>
+            </sv:node>
+            <sv:node sv:name="field1">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>eforms:textfield</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>8ea8dfe2-7c11-45f9-be08-c7bd20264a90</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldid" sv:type="String">
+                <sv:value>id81890d6d6f42b0c0</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldname" sv:type="String">
+                <sv:value>postcode</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:hint" sv:type="String">
+                <sv:value/>
+              </sv:property>
+              <sv:property sv:name="eforms:label" sv:type="String">
+                <sv:value>Postcode</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:length" sv:type="Long">
+                <sv:value>40</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+                <sv:value>true</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validexpression" sv:type="String">
+                <sv:value/>
+              </sv:property>
+            </sv:node>
+            <sv:node sv:name="field2">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>eforms:textfield</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>f425e914-12fb-4f44-b460-d129ec69eaee</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldid" sv:type="String">
+                <sv:value>id8964e4be99647f54</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldname" sv:type="String">
+                <sv:value>city</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:hint" sv:type="String">
+                <sv:value/>
+              </sv:property>
+              <sv:property sv:name="eforms:label" sv:type="String">
+                <sv:value>City</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:length" sv:type="Long">
+                <sv:value>40</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+                <sv:value>true</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validexpression" sv:type="String">
+                <sv:value/>
+              </sv:property>
+            </sv:node>
+          </sv:node>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="hippo:translation">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hippo:translation</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:language" sv:type="String">
+          <sv:value/>
+        </sv:property>
+        <sv:property sv:name="hippo:message" sv:type="String">
+          <sv:value>eform double mail store groups</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="eform-double-mail-store-groups">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsl:doublemailstoreform</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+          <sv:value>mix:referenceable</sv:value>
+          <sv:value>hippotranslation:translated</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>f7345448-18c8-4f03-9be3-e248e404fa1d</sv:value>
+        </sv:property>
+        <sv:property sv:name="eforms:action" sv:type="String">
+          <sv:value>mail</sv:value>
+        </sv:property>
+        <sv:property sv:name="eforms:actionurl" sv:type="String">
+          <sv:value>http://test.com/action.do</sv:value>
+        </sv:property>
+        <sv:property sv:name="eforms:confirmationemailfields" sv:type="String">
+          <sv:value>email</sv:value>
+        </sv:property>
+        <sv:property sv:name="eforms:confirmationincludefields" sv:type="String">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:property sv:name="eforms:confirmationsenderaddress" sv:type="String">
+          <sv:value>test@example.com</sv:value>
+        </sv:property>
+        <sv:property sv:name="eforms:confirmationsubject" sv:type="String">
+          <sv:value>Thank you</sv:value>
+        </sv:property>
+        <sv:property sv:name="eforms:confirmationtext" sv:type="String">
+          <sv:value>This text will display before the other form data</sv:value>
+        </sv:property>
+        <sv:property sv:name="eforms:formintro" sv:type="String">
+          <sv:value>This is the form introduction, Beside the article preceding the form some extra information can be added in here and will be displayed before teh form fields</sv:value>
+        </sv:property>
+        <sv:property sv:name="eforms:formname" sv:type="String">
+          <sv:value>Double mail store enterprise form with groups</sv:value>
+        </sv:property>
+        <sv:property sv:name="eforms:mailformdata" sv:type="String">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:property sv:name="eforms:notificationemail" sv:type="String">
+          <sv:value>test@example.com</sv:value>
+        </sv:property>
+        <sv:property sv:name="eforms:storeformdata" sv:type="String">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:property sv:name="eforms:validationhelper" sv:type="Boolean">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
+          <sv:value>live</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+          <sv:value>formulieren/standard-forms/eform-double-mail-store-groups/eform-double-mail-store-groups</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostd:state" sv:type="String">
+          <sv:value>published</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+          <sv:value>live</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+          <sv:value>admin</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+          <sv:value>2014-08-04T10:01:02.290+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+          <sv:value>2014-08-04T10:48:45.878+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+          <sv:value>admin</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
+          <sv:value>2014-08-04T10:48:48.575+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippotranslation:id" sv:type="String">
+          <sv:value>242a8929-3b1f-4f58-b423-c8f6f11ee419</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippotranslation:locale" sv:type="String">
+          <sv:value>nl</sv:value>
+        </sv:property>
+        <sv:node sv:name="page0">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>eforms:page</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>0f383eea-ffb0-4a59-806e-975a7bc492a4</sv:value>
+          </sv:property>
+          <sv:property sv:name="eforms:conditional" sv:type="Boolean">
             <sv:value>false</sv:value>
           </sv:property>
-          <sv:property sv:name="ef:validexpression" sv:type="String">
-            <sv:value />
+          <sv:property sv:name="eforms:label" sv:type="String">
+            <sv:value>Page 1</sv:value>
           </sv:property>
+          <sv:node sv:name="field1">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>eforms:textfield</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>153cba0a-8b45-403e-bc84-2a749a36953c</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldid" sv:type="String">
+              <sv:value>id9018394a6dd808c4</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldname" sv:type="String">
+              <sv:value>name</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:hint" sv:type="String">
+              <sv:value/>
+            </sv:property>
+            <sv:property sv:name="eforms:label" sv:type="String">
+              <sv:value>Name</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:length" sv:type="Long">
+              <sv:value>40</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validexpression" sv:type="String">
+              <sv:value/>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="field2">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>eforms:textfield</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>edd5f2ac-d662-4e71-912f-93c321d6d53e</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldid" sv:type="String">
+              <sv:value>id82352a6a93c0257b</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldname" sv:type="String">
+              <sv:value>email</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:hint" sv:type="String">
+              <sv:value/>
+            </sv:property>
+            <sv:property sv:name="eforms:label" sv:type="String">
+              <sv:value>Email</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:length" sv:type="Long">
+              <sv:value>40</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validationruleclass" sv:type="String">
+              <sv:value/>
+            </sv:property>
+            <sv:property sv:name="eforms:validationruleid" sv:type="String">
+              <sv:value>email</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validationrulelabel" sv:type="String">
+              <sv:value>E-mail Address</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validexpression" sv:type="String">
+              <sv:value>\b[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="field3">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>eforms:textfield</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>5527923d-42df-487b-acdf-aac159b5814c</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldid" sv:type="String">
+              <sv:value>id86ef40d3fc42a69c</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldname" sv:type="String">
+              <sv:value>phone-number</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:hint" sv:type="String">
+              <sv:value/>
+            </sv:property>
+            <sv:property sv:name="eforms:label" sv:type="String">
+              <sv:value>Phone number</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:length" sv:type="Long">
+              <sv:value>40</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validexpression" sv:type="String">
+              <sv:value/>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="fieldgroup0">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>eforms:embeddedfieldgroup</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldnameprefix" sv:type="String">
+              <sv:value>residence-address</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:groupname" sv:type="String">
+              <sv:value>Residence address</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:label" sv:type="String">
+              <sv:value>group_label</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:oneline" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validationhelper" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+            <sv:node sv:name="field0">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>eforms:textfield</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>a4cda1c6-86d1-47de-9dee-284d3b9bf5c4</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:expandhint" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldid" sv:type="String">
+                <sv:value>id8344849e46dddeda</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldname" sv:type="String">
+                <sv:value>street</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:hint" sv:type="String">
+                <sv:value/>
+              </sv:property>
+              <sv:property sv:name="eforms:label" sv:type="String">
+                <sv:value>Street and house number</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:length" sv:type="Long">
+                <sv:value>40</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+                <sv:value>true</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validexpression" sv:type="String">
+                <sv:value/>
+              </sv:property>
+            </sv:node>
+            <sv:node sv:name="field1">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>eforms:textfield</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>680ecb7b-de64-4839-90f9-6f5c75e5cc3e</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldid" sv:type="String">
+                <sv:value>id81890d6d6f42b0c0</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldname" sv:type="String">
+                <sv:value>postcode</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:hint" sv:type="String">
+                <sv:value/>
+              </sv:property>
+              <sv:property sv:name="eforms:label" sv:type="String">
+                <sv:value>Postcode</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:length" sv:type="Long">
+                <sv:value>40</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+                <sv:value>true</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validexpression" sv:type="String">
+                <sv:value/>
+              </sv:property>
+            </sv:node>
+            <sv:node sv:name="field2">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>eforms:textfield</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>af439485-5a4e-47b8-aac8-848493c47221</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldid" sv:type="String">
+                <sv:value>id8964e4be99647f54</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldname" sv:type="String">
+                <sv:value>city</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:hint" sv:type="String">
+                <sv:value/>
+              </sv:property>
+              <sv:property sv:name="eforms:label" sv:type="String">
+                <sv:value>City</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:length" sv:type="Long">
+                <sv:value>40</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+                <sv:value>true</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validexpression" sv:type="String">
+                <sv:value/>
+              </sv:property>
+            </sv:node>
+          </sv:node>
+          <sv:node sv:name="field0">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>eforms:radiogroup</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:uuid" sv:type="String">
+              <sv:value>bb1cd478-2e00-45ef-be98-b3c745b1bdf6</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:allowother" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:expandhint" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldid" sv:type="String">
+              <sv:value>id95167713f09feb30</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldname" sv:type="String">
+              <sv:value>delivery-address</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:hint" sv:type="String">
+              <sv:value/>
+            </sv:property>
+            <sv:property sv:name="eforms:label" sv:type="String">
+              <sv:value>Delivery address</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:length" sv:type="Long">
+              <sv:value>40</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validexpression" sv:type="String">
+              <sv:value/>
+            </sv:property>
+            <sv:property sv:multiple="true" sv:name="eforms:values" sv:type="String">
+              <sv:value>Residence address</sv:value>
+              <sv:value>Other address</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="fieldgroup1">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>eforms:embeddedfieldgroup</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:conditionfield" sv:type="String">
+              <sv:value>delivery-address</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:conditionvalue" sv:type="String">
+              <sv:value>Other address</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:fieldnameprefix" sv:type="String">
+              <sv:value>address</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:groupname" sv:type="String">
+              <sv:value>address</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:label" sv:type="String">
+              <sv:value>group_label</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:oneline" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="eforms:validationhelper" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+            <sv:node sv:name="field0">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>eforms:textfield</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>e402aebb-d4c1-47c7-a01a-3ed7c9fcdf9b</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:expandhint" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldid" sv:type="String">
+                <sv:value>id8344849e46dddeda</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldname" sv:type="String">
+                <sv:value>street</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:hint" sv:type="String">
+                <sv:value/>
+              </sv:property>
+              <sv:property sv:name="eforms:label" sv:type="String">
+                <sv:value>Street and house number</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:length" sv:type="Long">
+                <sv:value>40</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+                <sv:value>true</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validexpression" sv:type="String">
+                <sv:value/>
+              </sv:property>
+            </sv:node>
+            <sv:node sv:name="field1">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>eforms:textfield</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>825101d5-d746-4900-99b5-5e70607c42d4</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldid" sv:type="String">
+                <sv:value>id81890d6d6f42b0c0</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldname" sv:type="String">
+                <sv:value>postcode</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:hint" sv:type="String">
+                <sv:value/>
+              </sv:property>
+              <sv:property sv:name="eforms:label" sv:type="String">
+                <sv:value>Postcode</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:length" sv:type="Long">
+                <sv:value>40</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+                <sv:value>true</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validexpression" sv:type="String">
+                <sv:value/>
+              </sv:property>
+            </sv:node>
+            <sv:node sv:name="field2">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>eforms:textfield</sv:value>
+              </sv:property>
+              <sv:property sv:name="jcr:uuid" sv:type="String">
+                <sv:value>bf9aab17-dae2-4955-985e-a293faf7ef8a</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:conditional" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldid" sv:type="String">
+                <sv:value>id8964e4be99647f54</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:fieldname" sv:type="String">
+                <sv:value>city</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:hint" sv:type="String">
+                <sv:value/>
+              </sv:property>
+              <sv:property sv:name="eforms:label" sv:type="String">
+                <sv:value>City</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:length" sv:type="Long">
+                <sv:value>40</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:mandatory" sv:type="Boolean">
+                <sv:value>true</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validcasesensitive" sv:type="String">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="eforms:validexpression" sv:type="String">
+                <sv:value/>
+              </sv:property>
+            </sv:node>
+          </sv:node>
         </sv:node>
       </sv:node>
     </sv:node>

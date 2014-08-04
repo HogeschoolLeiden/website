@@ -113,21 +113,7 @@
       <artifactId>content-blocks</artifactId>
     </dependency>
 
-    <!-- easy forms -->
-    <dependency>
-      <groupId>org.onehippo.forge</groupId>
-      <artifactId>easy-forms-repository</artifactId>
-      <version>${forge.easy-forms.version}</version>
-      <type>jar</type>
-    </dependency>
-
-    <dependency>
-      <groupId>org.onehippo.forge</groupId>
-      <artifactId>easy-forms-cms</artifactId>
-      <version>${forge.easy-forms.version}</version>
-      <type>jar</type>
-    </dependency>
-    
+    <!-- enterprise forms -->
     <dependency>
       <groupId>com.onehippo.cms7</groupId>
       <artifactId>hippo-addon-eforms-repository</artifactId>
@@ -139,8 +125,8 @@
       <artifactId>hippo-addon-eforms-cms</artifactId>
       <version>${hippo.addon-eforms.version}</version>
     </dependency>
-    <!-- /easy forms -->
-
+    <!-- /enterprise forms -->
+    
     <!-- Indicating the Enterprise Edition version -->
     <dependency>
       <groupId>com.onehippo.cms7</groupId>

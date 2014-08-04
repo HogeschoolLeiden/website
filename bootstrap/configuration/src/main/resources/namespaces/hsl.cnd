@@ -4,7 +4,7 @@
 <'hippostdpubwf'='http://www.onehippo.org/jcr/hippostdpubwf/nt/1.0'>
 <'hippotranslation'='http://www.onehippo.org/jcr/hippotranslation/nt/1.0'>
 <'hsl'='http://www.onehippo.org/hsl/nt/1.0'>
-<'ef'='http://forge.onehippo.org/ef/1.2'>
+<'eforms'='http://www.onehippo.org/jcr/eforms/nt/1.0'>
 
 [hsl:basedocument] > hippo:document, hippostd:publishableSummary, hippostdpubwf:document
   orderable
@@ -75,10 +75,10 @@
   mixin
   + hsl:calendarEventsCompoundMixin (hsl:CalendarEventsCompoundMixin)
   
-[hsl:doublemailform] > ef:form
-[hsl:doublemailstoreform] > ef:form
-[hsl:mailform] > ef:form
-[hsl:mailstoreform] > ef:form
+[hsl:doublemailform] > eforms:form
+[hsl:doublemailstoreform] > eforms:form
+[hsl:mailform] > eforms:form
+[hsl:mailstoreform] > eforms:form
 
 [hsl:FormComponentMixin]
   mixin
