@@ -9,7 +9,7 @@ public interface TwitterFeedInfo {
     @Parameter(name = Constants.WidgetConstants.FIELD_USER_MIXIN, defaultValue = "false")
     public Boolean getUseMixin();
     
-    @Parameter(name = "title", displayName = "Titel van het component", defaultValue = "Twitter Feed")
+    @Parameter(name = "title", displayName = "Widget Titel", defaultValue = "Twitter Feed")
     String getTitle();
 
     @Parameter(name = "query", displayName = "Zoekopdracht", defaultValue = "")

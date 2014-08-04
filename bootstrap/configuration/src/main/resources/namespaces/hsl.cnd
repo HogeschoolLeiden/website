@@ -84,25 +84,30 @@
   mixin
   + hsl:formCompoundMixin (hsl:FormCompoundMixin)
   
-[hsl:ContactPersonsCompoundMixin] > hippo:compound, hippostd:relaxed
-  orderable
+[hsl:ContactPersonsCompoundMixin] > hippo:compound, hippostd:relaxed orderable
 
 [hsl:ContactPersonsMixin]
   mixin
   + hsl:contactPersonsCompoundMixin (hsl:ContactPersonsCompoundMixin)
   
-[hsl:Quote] > hippo:compound, hippostd:relaxed
-  orderable
+[hsl:Quote] > hippo:compound, hippostd:relaxed orderable
 
-[hsl:QuoteParameters] > hippo:compound, hippostd:relaxed
-  orderable
+[hsl:QuoteParameters] > hippo:compound, hippostd:relaxed orderable
 
-[hsl:ShareParameters] > hippo:compound, hippostd:relaxed
-  orderable
+[hsl:ShareParameters] > hippo:compound, hippostd:relaxed orderable
+  
+[hsl:ExternalLink] > hippo:compound, hippostd:relaxed orderable
 
-[hsl:ExternalLink] > hippo:compound, hippostd:relaxed
-  orderable
+[hsl:ExternalLinks] > hippo:compound, hippostd:relaxed orderable
+  
+[hsl:TwitterCompoundMixin] > hippo:compound, hippostd:relaxed orderable
 
-[hsl:ExternalLinks] > hippo:compound, hippostd:relaxed
-  orderable
+[hsl:TwitterExtraParameters] > hippo:compound, hippostd:relaxed orderable
+
+[hsl:TwitterParameters] > hippo:compound, hippostd:relaxed orderable
+
+[hsl:TwitterMixin]
+  mixin
+  + hsl:twitterCompoundMixin (hsl:TwitterCompoundMixin)
+
 
