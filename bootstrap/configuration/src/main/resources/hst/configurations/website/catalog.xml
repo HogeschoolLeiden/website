@@ -211,5 +211,42 @@
         <sv:value>HST.Item</sv:value>
       </sv:property>
     </sv:node>
+    <sv:node sv:name="twitterfeed">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:containeritemcomponent</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:asyncmode" sv:type="String">
+        <sv:value>true</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentclassname" sv:type="String">
+        <sv:value>nl.hsleiden.components.catalog.TwitterFeed</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:iconpath" sv:type="String">
+        <sv:value>images/catalog-list.png</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:label" sv:type="String">
+        <sv:value>Twitter feed</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+        <sv:value>title</sv:value>
+        <sv:value>query</sv:value>
+        <sv:value>limit</sv:value>
+        <sv:value>from</sv:value>
+        <sv:value>followText</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+        <sv:value>HSLeiden Twitter</sv:value>
+        <sv:value/>
+        <sv:value>3</sv:value>
+        <sv:value>HSLeidenNL</sv:value>
+        <sv:value>Volg ons op ...</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:template" sv:type="String">
+        <sv:value>catalog.twitterfeed</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:xtype" sv:type="String">
+        <sv:value>HST.Item</sv:value>
+      </sv:property>
+    </sv:node>
   </sv:node>
 </sv:node>
