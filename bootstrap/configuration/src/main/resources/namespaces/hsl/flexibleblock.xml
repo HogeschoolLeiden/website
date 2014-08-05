@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <sv:node sv:name="flexibleblock" xmlns:sv="http://www.jcp.org/jcr/sv/1.0">
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>hipposysedit:templatetype</sv:value>
@@ -28,7 +29,7 @@
         <sv:value>hippo:harddocument</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>ee429b0e-eefd-4c8c-af89-971b5075f69e</sv:value>
+        <sv:value>95774ebb-7e13-44e8-98b2-069cf7fd7bd6</sv:value>
       </sv:property>
       <sv:property sv:name="hippo:related___pathreference" sv:type="String"/>
       <sv:property sv:name="hipposysedit:node" sv:type="Boolean">
@@ -177,6 +178,29 @@
         </sv:property>
         <sv:property sv:name="hipposysedit:type" sv:type="String">
           <sv:value>hsl:ExternalLinks</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="publicimages">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hipposysedit:field</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:mandatory" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:multiple" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:ordered" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:path" sv:type="String">
+          <sv:value>hsl:publicimages</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:primary" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:type" sv:type="String">
+          <sv:value>hsl:PublicImages</sv:value>
         </sv:property>
       </sv:node>
     </sv:node>
@@ -361,10 +385,10 @@
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>hsl:ExternalLink</sv:value>
           </sv:property>
-          <sv:property sv:name="hsl:linkTitle" sv:type="String">
+          <sv:property sv:name="hsl:alt" sv:type="String">
             <sv:value/>
           </sv:property>
-          <sv:property sv:name="hsl:alt" sv:type="String">
+          <sv:property sv:name="hsl:linkTitle" sv:type="String">
             <sv:value/>
           </sv:property>
           <sv:property sv:name="hsl:linkUrl" sv:type="String">
@@ -372,6 +396,22 @@
           </sv:property>
           <sv:property sv:name="hsl:newWindow" sv:type="Boolean">
             <sv:value>false</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="hsl:publicimages">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsl:PublicImages</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:imagesPerRow" sv:type="String">
+          <sv:value>3</sv:value>
+        </sv:property>
+        <sv:node sv:name="hsl:imageFolder">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
           </sv:property>
         </sv:node>
       </sv:node>
@@ -415,7 +455,7 @@
           <sv:value>frontend:plugin</sv:value>
         </sv:property>
         <sv:property sv:name="caption" sv:type="String">
-          <sv:value>Image</sv:value>
+          <sv:value>Afbeelding</sv:value>
         </sv:property>
         <sv:property sv:name="field" sv:type="String">
           <sv:value>image</sv:value>
@@ -440,7 +480,7 @@
           <sv:value>frontend:plugin</sv:value>
         </sv:property>
         <sv:property sv:name="caption" sv:type="String">
-          <sv:value>Paragraph</sv:value>
+          <sv:value>Paragraaf</sv:value>
         </sv:property>
         <sv:property sv:name="field" sv:type="String">
           <sv:value>paragraph</sv:value>
@@ -490,7 +530,7 @@
           <sv:value>frontend:plugin</sv:value>
         </sv:property>
         <sv:property sv:name="caption" sv:type="String">
-          <sv:value>Related Assets</sv:value>
+          <sv:value>Gerelateerde Assets</sv:value>
         </sv:property>
         <sv:property sv:name="field" sv:type="String">
           <sv:value>relatedAssets</sv:value>
@@ -544,6 +584,31 @@
         </sv:property>
         <sv:property sv:name="field" sv:type="String">
           <sv:value>externallinks</sv:value>
+        </sv:property>
+        <sv:property sv:name="hint" sv:type="String">
+          <sv:value/>
+        </sv:property>
+        <sv:property sv:name="plugin.class" sv:type="String">
+          <sv:value>org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin</sv:value>
+        </sv:property>
+        <sv:property sv:name="wicket.id" sv:type="String">
+          <sv:value>${cluster.id}.field</sv:value>
+        </sv:property>
+        <sv:node sv:name="cluster.options">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>frontend:pluginconfig</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="publicimages">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>frontend:plugin</sv:value>
+        </sv:property>
+        <sv:property sv:name="caption" sv:type="String">
+          <sv:value>Beeldbank openbaar</sv:value>
+        </sv:property>
+        <sv:property sv:name="field" sv:type="String">
+          <sv:value>publicimages</sv:value>
         </sv:property>
         <sv:property sv:name="hint" sv:type="String">
           <sv:value/>
