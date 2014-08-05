@@ -1,36 +1,46 @@
 package nl.hsleiden.search;
 
+import nl.hsleiden.search.ElasticsearchConfig.Address;
+
 import org.elasticsearch.client.Client;
 import org.elasticsearch.client.transport.TransportClient;
 import org.elasticsearch.common.settings.ImmutableSettings;
 import org.elasticsearch.common.settings.ImmutableSettings.Builder;
 import org.elasticsearch.common.transport.InetSocketTransportAddress;
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.FactoryBean;
 
-public class ElasticSearchClientFactor {
+public class ElasticSearchClientFactor implements FactoryBean<Client>, DisposableBean {
 
-    private static final Builder BUILDER;
-    private static final Client CLIENT;
+    private final Client client;
 
-    private ElasticSearchClientFactor() {
+    public ElasticSearchClientFactor(ElasticsearchConfig config) {
+        Builder builder = ImmutableSettings.settingsBuilder().put("cluster.name", config.getClusterName());
+        TransportClient c = new TransportClient(builder.build());
+        for (Address address : config.getHosts()) {
+            c.addTransportAddress(new InetSocketTransportAddress(address.getHostName(), address.getPortNumber()));
+        }
+        client = c;
     }
 
-    static {
-        // TODO get the cluster.name server location and port number from a
-        // property file.
-        BUILDER = ImmutableSettings.settingsBuilder().put("cluster.name", "hslcluster");
-        TransportClient c = new TransportClient(BUILDER.build());
-        c.addTransportAddress(new InetSocketTransportAddress("localhost", 9300));
-        CLIENT = c;
-        Runtime.getRuntime().addShutdownHook(new Thread() {
-            @Override
-            public void run() {
-                CLIENT.close();
-            }
-        });
+    @Override
+    public Client getObject() throws Exception {
+        return client;
     }
 
-    public static Client getClient() {
-        return CLIENT;
+    @Override
+    public Class<?> getObjectType() {
+        return Client.class;
+    }
+
+    @Override
+    public boolean isSingleton() {
+        return true;
+    }
+
+    @Override
+    public void destroy() throws Exception {
+        this.client.close();
     }
 
 }

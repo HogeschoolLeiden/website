@@ -13,7 +13,8 @@ public class ElasticSearchEventListener implements PersistedHippoEventListener {
 
     private static final Logger LOG = LoggerFactory.getLogger(ElasticSearchEventListener.class);
 
-    Executor executor = Executors.newSingleThreadExecutor();
+    private FieldNameConverter fieldNameConverter;
+    private Executor executor = Executors.newSingleThreadExecutor();
 
     @Override
     public String getChannelName() {
@@ -28,7 +29,8 @@ public class ElasticSearchEventListener implements PersistedHippoEventListener {
     @Override
     public void onHippoEvent(@SuppressWarnings("rawtypes") HippoEvent event) {
         if ("true".equalsIgnoreCase(System.getProperty("repo.bootstrap"))) {
-            executor.execute(new Indexer(event));
+            Indexer indexer = fieldNameConverter == null ? new Indexer(event) : new Indexer(event, fieldNameConverter);
+            executor.execute(indexer);
         } else {
             LOG.info("value of \"repo.bootstrap\" is not true and therefore this node is not going to index anything.");
         }
@@ -37,6 +39,10 @@ public class ElasticSearchEventListener implements PersistedHippoEventListener {
     @Override
     public boolean onlyNewEvents() {
         return false;
+    }
+
+    public void setFieldNameConverter(FieldNameConverter fieldNameConverter) {
+        this.fieldNameConverter = fieldNameConverter;
     }
 
 }

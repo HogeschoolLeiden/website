@@ -6,9 +6,25 @@
                            http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd
                            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
 
-  <bean id="nl.hsleiden.search.ElasticSearchEventListener" class="nl.hsleiden.search.ElasticSearchEventListener"/>
   
-  <bean id="org.elasticsearch.client.Client" class="nl.hsleiden.search.ElasticSearchClientFactor" factory-method="getClient"/>
+  
+  <bean id="nl.hsleiden.search.ElasticsearchConfig" class="nl.hsleiden.search.ConfigFactor">
+    <constructor-arg name="systemPropertyName" value="elasticsearch.config"/>
+    <constructor-arg name="defaultPropertiesFileLocation" value="/nl/hsleiden/search/default-search-config.json"/>
+  </bean>
+  
+  <bean id="nl.hsleiden.search.NamespaceFilterFieldNameConverter" class="nl.hsleiden.search.NamespaceFilterFieldNameConverter">
+    <constructor-arg><value type="java.lang.String">hsl</value></constructor-arg>
+  </bean>
+  
+  
+  <bean id="org.elasticsearch.client.Client" class="nl.hsleiden.search.ElasticSearchClientFactor">
+    <constructor-arg ref="nl.hsleiden.search.ElasticsearchConfig"/>
+  </bean>
+  
+  <bean id="nl.hsleiden.search.ElasticSearchEventListener" class="nl.hsleiden.search.ElasticSearchEventListener">
+    <property name="fieldNameConverter" ref="nl.hsleiden.search.NamespaceFilterFieldNameConverter"/>
+  </bean>
   
   <bean id="sysProps" class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
     <property name="targetClass">

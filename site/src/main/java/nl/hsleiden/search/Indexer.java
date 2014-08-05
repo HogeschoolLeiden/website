@@ -37,6 +37,7 @@ public class Indexer implements Runnable {
     private static final String EVENT_TYPE_DEPUBLISH = "depublish";
     private static final String EVENT_TYPE_PUBLISH = "publish";
 
+    private FieldNameConverter fieldNameConverter;
     @SuppressWarnings("rawtypes")
     private HippoEvent event;
 
@@ -50,7 +51,12 @@ public class Indexer implements Runnable {
     private static final Logger LOG = LoggerFactory.getLogger(Indexer.class);
 
     public Indexer(@SuppressWarnings("rawtypes") HippoEvent event) {
+        this(event, null);
+    }
+
+    public Indexer(@SuppressWarnings("rawtypes") HippoEvent event, FieldNameConverter fieldNameConverter) {
         this.event = event;
+        this.fieldNameConverter = fieldNameConverter;
     }
 
     @Override
@@ -133,10 +139,12 @@ public class Indexer implements Runnable {
             int type = property.getType();
             if (type == PropertyType.STRING || type == PropertyType.DATE || type == PropertyType.BOOLEAN
                     || type == PropertyType.LONG || type == PropertyType.DOUBLE) {
+                String fieldName = fieldNameConverter == null ? property.getName() : fieldNameConverter
+                        .jcrToElasticsearch(property.getName());
                 if (property.isMultiple()) {
-                    result.array(property.getName(), getValuesAsArray(property));
+                    result.array(fieldName, getValuesAsArray(property));
                 } else {
-                    result.field(property.getName(), getValue(property.getValue()));
+                    result.field(fieldName, getValue(property.getValue()));
                 }
             } else {
                 LOG.debug("Only propeties of type String, String[], Calendar, Calendar[], Boolean, Boolean[], Long, Long[], Double and Double[] are being indexed.");
