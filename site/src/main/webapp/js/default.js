@@ -32,7 +32,7 @@ $(document).ready(function(){
 					<div class="pp_content_container"> \
 						<div class="pp_left"> \
 						<div class="pp_right"> \
-							<div class="pp_content" style="height: 355px;"> \
+							<div class="pp_content"> \
 								<div class="pp_loaderIcon"></div> \
 								<div class="pp_fade"> \
 									<a href="#" class="pp_expand" title="Expand the image">Expand</a> \
@@ -79,9 +79,9 @@ $(document).ready(function(){
 		iframe_markup: '<iframe src ="{path}" width="{width}" height="{height}" frameborder="no"></iframe>',
 		inline_markup: '<div class="pp_inline">{content}</div>',
 		custom_markup: '',
-		image_markup: '<img id="fullResImage" src="{path}" /><span class="download-btn"><a href="{path}">Download</a></span>',
+		image_markup: '<img id="fullResImage" src="{path}" /><span class="download-btn"><a href="{path}?forceDownload=true" title="Download">Download</a></span>',
         changepicturecallback: function(){
-            jQuery(".pp_content").css("height", $(".pp_content").height() + jQuery(".download-btn").outerHeight() - 10);
+            jQuery(".pp_content").css("height", $(".pp_content").height() + jQuery(".download-btn").outerHeight() - 23);
         },
 		//social_tools: '<div class="pp_social"><div class="pinterest"><a href="http://pinterest.com/pin/create/button/" class="pinterest-share-button" data-count="none">Pin</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></div> <div class="facebook"><iframe src="http://www.facebook.com/plugins/like.php?locale=en_US&href='+location.href+'&amp;layout=button_count&amp;show_faces=true&amp;width=500&amp;action=like&amp;font&amp;colorscheme=light&amp;height=23" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:500px; height:23px;" allowTransparency="true"></iframe></div></div>' /* html or false to disable */
 		social_tools: 'html' /* html or false to disable */
