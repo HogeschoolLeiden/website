@@ -5330,14 +5330,49 @@ ul.externalLinks li.link {padding-top: 10px; font-size: 15px;}
 /* ---------------------------------- external links style ---------------------------------------- */
 
 /* ---------------------------------- twitter widget style ---------------------------------------- */
-.catalog.twitter.vertical{width: 100%; float: left;  border-style: solid; border-width: 1px; border-color: blue;}
-.catalog.twitter.vertical h2{ text-align: center;}
-.catalog.twitter.vertical hr{width: 100%; float: left; margin-top: 6px; margin-bottom: 6px;}
+.catalog.twitter.horizontal,
+.catalog.twitter.horizontal2{overflow: hidden;}
+
+.catalog.twitter.vertical,
+.catalog.twitter.horizontal,
+.catalog.twitter.horizontal2{width: 100%; float: left;  border-style: solid; border-width: 1px; border-color: blue;}
+
+.catalog.twitter.vertical h2,
+.catalog.twitter.horizontal h2,
+.catalog.twitter.horizontal2 h2{ text-align: center;}
+
+.catalog.twitter.vertical hr{width: 100%; float: left; margin-top: 6px; margin-bottom: 6px; }
 .catalog.twitter.vertical .tweet {width:100%; float:left; }
-.catalog.twitter.vertical .tweet .image {width: 23%; float: left; height: auto;}
-.catalog.twitter.vertical .tweet .text {width: 93%; float: left; margin-left: 4%;}
-.catalog.twitter.vertical .tweet .action {width: 95%; float: left; text-align: center; margin-top: 5px;}
-.catalog.twitter.vertical .button-block{ width:100%; float:left; }
-.catalog.twitter.vertical .button-block a {display: block; margin-left: 4%; margin-bottom: 4%;}
+
+.catalog.twitter.horizontal .tweet {width:32%; float:left; margin-left: 1%; border-left: solid 1px gray; margin-bottom: -99999px;
+	padding-bottom: 99999px; overflow: hidden;}
+.catalog.twitter.horizontal2 .tweet {width:48%; float:left; margin-left: 1%; border-left: solid 1px gray; margin-bottom: -99999px;
+	padding-bottom: 99999px;}
+	
+.catalog.twitter.horizontal .tweet.first,
+.catalog.twitter.horizontal2 .tweet.first {border-left:none;}
+
+.catalog.twitter.vertical .tweet .image,
+.catalog.twitter.horizontal .tweet .image {width: 23%; float: left; height: auto;}
+
+.catalog.twitter.horizontal2 .tweet .image {width: 15%; float: left; height: auto;}
+
+.catalog.twitter.vertical .tweet .text,
+.catalog.twitter.horizontal .tweet .text,
+.catalog.twitter.horizontal2 .tweet .text {width: 93%; float: left; margin-left: 4%;}
+
+.catalog.twitter.vertical .tweet .action,
+.catalog.twitter.horizontal .tweet .action,
+.catalog.twitter.horizontal2 .tweet .action {width: 95%; float: left; text-align: center; margin-top: 5px;}
+
+.catalog.twitter.vertical .button-block,
+.catalog.twitter.horizontal .button-block,
+.catalog.twitter.horizontal2 .button-block { width:100%; float:left; }
+
+.catalog.twitter.vertical .button-block a {display: block; margin-left: 4%; margin-bottom: 4%; font-size: 15px; font-weight: bold;}
+
+.catalog.twitter.horizontal .button-block a,
+.catalog.twitter.horizontal2 .button-block a {display: block; margin-left: 5%; margin-bottom: 1%; font-size: 15px; font-weight: bold;}
+
 /* ---------------------------------- twitter widget style ---------------------------------------- */
 
