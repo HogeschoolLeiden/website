@@ -163,8 +163,16 @@ div.dark_rounded .currentTextHolder,div.dark_square .currentTextHolder{color:#c4
 div.dark_rounded #pp_full_res .pp_inline,div.dark_square #pp_full_res .pp_inline{color:#fff}
 .pp_top,.pp_bottom{height:20px;position:relative}
 * html .pp_top,* html .pp_bottom{padding:0 20px}
-.pp_top .pp_left,.pp_bottom .pp_left{height:20px;left:0;position:absolute;width:20px}
+.pp_top .pp_left,.pp_bottom .pp_left{height:20px;left:0;position:absolute;width:100%}
 .pp_top .pp_middle,.pp_bottom .pp_middle{height:20px;left:20px;position:absolute;right:20px}
 * html .pp_top .pp_middle,* html .pp_bottom .pp_middle{left:0;position:static}
 .pp_top .pp_right,.pp_bottom .pp_right{height:20px;left:auto;position:absolute;right:0;top:0;width:20px}
 .pp_fade,.pp_gallery li.default a img{display:none}
+
+/* ---------------------------------- prettyPhoto style additions ---------------------------------------- */
+.download-btn{ margin-top: 10px; padding: 5px; background: #ccc; float: left; 
+			background-image: url("../images/prettyPhoto/icon_download.png"); background-repeat: no-repeat; background-position: 2px;
+			padding: 5px 5px 5px 20px; }
+a.pp_close{z-index: 10; margin-top: -3px;}
+span.download-btn{ border: gray 2px solid; border-radius: 8px;}
+/* ---------------------------------- prettyPhoto style additions ---------------------------------------- */
