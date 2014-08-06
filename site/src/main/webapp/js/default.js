@@ -20,6 +20,12 @@ $(document).ready(function(){
 		keyboard_shortcuts: true, /* Set to false if you open forms inside prettyPhoto */
 		changepicturecallback: function(){
             jQuery(".pp_content").css("height", $(".pp_content").height() + jQuery(".download-btn").outerHeight() - 23);
+            var pinterest = "http://pinterest.com/pin/create/button/?url=" + encodeURIComponent(location.href.replace(location.hash,"")) +"&media="+$('#fullResImage').attr('src');
+            jQuery(".pp_social").append("<div class='pinterest'>" +
+            		"<a href='"+ pinterest +"' class='pin-it-button' count-layout='horizontal' target='_blank'>" +
+            				"<img src=" + contextPath + "/images/follow/pinterest-icon.png />" +
+            		"</a>" +
+            		"</div>");
         },
 		callback: function(){}, /* Called when prettyPhoto is closed */
 		ie6_fallback: true,
@@ -85,12 +91,6 @@ $(document).ready(function(){
 		iframe_markup: '<iframe src ="{path}" width="{width}" height="{height}" frameborder="no"></iframe>',
 		inline_markup: '<div class="pp_inline">{content}</div>',
 		custom_markup: '',
-        social_tools: '<div class="pp_social">\
-        	<div class="twitter">\
-        	<a href="http://twitter.com/share" class="twitter-share-button" data-count="none">\
-        	Tweet</a>\
-        	<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>\
-        	</div>\
-        </div>'
+        social_tools: ''
 	});
 });

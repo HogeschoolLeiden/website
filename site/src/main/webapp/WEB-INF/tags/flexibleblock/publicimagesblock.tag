@@ -35,12 +35,11 @@
         <div class="singleImagePadding">
 
           <figure class="fexibleblock image">
+          
+          <hst:link fullyQualified="true" hippobean="${image.wideImage }" var="imageLink"></hst:link>
                   
-            <a href="<hst:link hippobean="${image.wideImage }" />" rel="prettyPhoto" class="pin-it-button">
-              <img  src="<hst:link hippobean="${image.wideImage }" />" 
-                    alt="<c:out value="${image.alt }" escapeXml="true" />" 
-                    title="<c:out value="${image.alt }" escapeXml="true" />" 
-              />
+            <a href="${imageLink }" rel="prettyPhoto" class="pin-it-button">
+              <img  src="${imageLink}" alt="${fn:escapeXml(image.alt) }" title="${fn:escapeXml(image.alt) }"/>
             </a>
                       
           </figure>
