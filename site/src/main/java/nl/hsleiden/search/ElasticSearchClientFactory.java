@@ -10,11 +10,11 @@ import org.elasticsearch.common.transport.InetSocketTransportAddress;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.FactoryBean;
 
-public class ElasticSearchClientFactor implements FactoryBean<Client>, DisposableBean {
+public class ElasticSearchClientFactory implements FactoryBean<Client>, DisposableBean {
 
     private final Client client;
 
-    public ElasticSearchClientFactor(ElasticsearchConfig config) {
+    public ElasticSearchClientFactory(ElasticsearchConfig config) {
         Builder builder = ImmutableSettings.settingsBuilder().put("cluster.name", config.getClusterName());
         TransportClient c = new TransportClient(builder.build());
         for (Address address : config.getHosts()) {
