@@ -5,6 +5,7 @@ import java.util.concurrent.ExecutionException;
 
 import javax.jcr.Credentials;
 import javax.jcr.Node;
+import javax.jcr.NodeIterator;
 import javax.jcr.Property;
 import javax.jcr.PropertyIterator;
 import javax.jcr.PropertyType;
@@ -12,7 +13,9 @@ import javax.jcr.Repository;
 import javax.jcr.RepositoryException;
 import javax.jcr.Session;
 import javax.jcr.Value;
+import javax.jcr.ValueFormatException;
 
+import org.apache.commons.lang3.StringUtils;
 import org.elasticsearch.action.deletebyquery.DeleteByQueryResponse;
 import org.elasticsearch.action.index.IndexRequestBuilder;
 import org.elasticsearch.client.Client;
@@ -21,9 +24,13 @@ import org.elasticsearch.common.xcontent.XContentFactory;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.rest.RestStatus;
 import org.hippoecm.hst.site.HstServices;
+import org.hippoecm.repository.HippoStdNodeType;
+import org.hippoecm.repository.api.HippoNodeType;
 import org.onehippo.cms7.event.HippoEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import com.tdclighthouse.commons.utils.general.Html2Text;
 
 public class Indexer implements Runnable {
 
@@ -62,35 +69,38 @@ public class Indexer implements Runnable {
     @Override
     public void run() {
         try {
-            String handleUuid = (String) event.get(EVENT_PARAMETER_HANDLE_UUID);
-            if (LOG.isDebugEnabled()) {
-                LOG.debug("An event of type {} occurred with the flowing values\n{}",
-                        event.get(EVENT_PARAMETER_METHOD_NAME), event.getValues().toString());
-            }
+            String subjectPath = (String) event.get("subjectPath");
+            if (StringUtils.isNotBlank(subjectPath) && subjectPath.startsWith("/content/documents")) {
+                String handleUuid = (String) event.get(EVENT_PARAMETER_HANDLE_UUID);
+                if (LOG.isDebugEnabled()) {
+                    LOG.debug("An event of type {} occurred with the flowing values\n{}",
+                            event.get(EVENT_PARAMETER_METHOD_NAME), event.getValues().toString());
+                }
 
-            switch ((String) event.get(EVENT_PARAMETER_METHOD_NAME)) {
-            case EVENT_TYPE_PUBLISH:
-                createOrUpdateIndex(handleUuid, IndexationType.PUBLIC);
-                break;
-            case EVENT_TYPE_DEPUBLISH:
-                deleteIndex(handleUuid, IndexationType.PUBLIC);
-                break;
-            case EVENT_TYPE_ADD:
-            case EVENT_TYPE_COMMIT_EDITABLE_INSTANCE:
-                createOrUpdateIndex(handleUuid, IndexationType.PIRVATE);
-                break;
-            case EVENT_TYPE_DELETE:
-                deleteIndex(handleUuid, IndexationType.PIRVATE);
-                break;
-            case EVENT_TYPE_COPY:
-                LOG.warn("Copy action is not supported.");
-                break;
-            case EVENT_TYPE_RENAME:
-                createOrUpdateIndex(handleUuid, IndexationType.PIRVATE);
-                break;
+                switch ((String) event.get(EVENT_PARAMETER_METHOD_NAME)) {
+                case EVENT_TYPE_PUBLISH:
+                    createOrUpdateIndex(handleUuid, IndexationType.PUBLIC);
+                    break;
+                case EVENT_TYPE_DEPUBLISH:
+                    deleteIndex(handleUuid, IndexationType.PUBLIC);
+                    break;
+                case EVENT_TYPE_ADD:
+                case EVENT_TYPE_COMMIT_EDITABLE_INSTANCE:
+                    createOrUpdateIndex(handleUuid, IndexationType.PIRVATE);
+                    break;
+                case EVENT_TYPE_DELETE:
+                    deleteIndex(handleUuid, IndexationType.PIRVATE);
+                    break;
+                case EVENT_TYPE_COPY:
+                    LOG.warn("Copy action is not supported.");
+                    break;
+                case EVENT_TYPE_RENAME:
+                    createOrUpdateIndex(handleUuid, IndexationType.PIRVATE);
+                    break;
 
-            default:
-                break;
+                default:
+                    break;
+                }
             }
         } catch (InterruptedException | ExecutionException | RepositoryException | IOException e) {
             LOG.error("An error occurred while trying to index \"" + event.get(EVENT_PARAMETER_HANDLE_UUID)
@@ -104,8 +114,8 @@ public class Indexer implements Runnable {
             Node handel = session.getNodeByIdentifier(uuid);
             Node target = handel.getNode(handel.getName());
 
-            IndexRequestBuilder indexBuilder = client.prepareIndex(type.getIndexName(), target.getPrimaryNodeType()
-                    .getName(), uuid);
+            IndexRequestBuilder indexBuilder = client.prepareIndex(type.getIndexName(), getConvertedName(target
+                    .getPrimaryNodeType().getName()), uuid);
             indexBuilder.setSource(getJson(target));
             indexBuilder.execute();
         } finally {
@@ -134,7 +144,39 @@ public class Indexer implements Runnable {
 
     private XContentBuilder getJson(Node target) throws IOException, RepositoryException {
         XContentBuilder result = XContentFactory.jsonBuilder().startObject();
-        for (PropertyIterator iterator = target.getProperties(); iterator.hasNext();) {
+        indexNodeProperties(target, result);
+        indexSubnodes(target, result);
+        return result.endObject();
+    }
+
+    private void indexSubnodes(Node node, XContentBuilder builder) throws RepositoryException, IOException,
+            ValueFormatException {
+        for (NodeIterator nodes = node.getNodes(); nodes.hasNext();) {
+            Node subnode = nodes.nextNode();
+            if (!subnode.isNodeType(HippoNodeType.NT_TRANSLATION) && !subnode.isNodeType(HippoNodeType.NT_MIRROR)
+                    && !subnode.getName().endsWith("Mixin")) {
+                builder.startObject(getConvertedName(subnode.getName()));
+                if (subnode.isNodeType(HippoStdNodeType.NT_HTML)) {
+
+                    builder.field(getConvertedName(HippoStdNodeType.HIPPOSTD_CONTENT),
+                            Html2Text.getText(subnode.getProperty(HippoStdNodeType.HIPPOSTD_CONTENT).getString()));
+                } else {
+                    indexNodeProperties(subnode, builder);
+                }
+                indexSubnodes(subnode, builder);
+                builder.endObject();
+            }
+        }
+    }
+
+    private String getConvertedName(String name) {
+        String nodeName = fieldNameConverter == null ? name : fieldNameConverter.jcrToElasticsearch(name);
+        return nodeName;
+    }
+
+    private void indexNodeProperties(Node node, XContentBuilder builder) throws RepositoryException, IOException,
+            ValueFormatException {
+        for (PropertyIterator iterator = node.getProperties(); iterator.hasNext();) {
             Property property = iterator.nextProperty();
             int type = property.getType();
             if (type == PropertyType.STRING || type == PropertyType.DATE || type == PropertyType.BOOLEAN
@@ -142,16 +184,14 @@ public class Indexer implements Runnable {
                 String fieldName = fieldNameConverter == null ? property.getName() : fieldNameConverter
                         .jcrToElasticsearch(property.getName());
                 if (property.isMultiple()) {
-                    result.array(fieldName, getValuesAsArray(property));
+                    builder.array(fieldName, getValuesAsArray(property));
                 } else {
-                    result.field(fieldName, getValue(property.getValue()));
+                    builder.field(fieldName, getValue(property.getValue()));
                 }
             } else {
                 LOG.debug("Only propeties of type String, String[], Calendar, Calendar[], Boolean, Boolean[], Long, Long[], Double and Double[] are being indexed.");
             }
         }
-
-        return result.endObject();
     }
 
     private Object getValue(Value value) throws RepositoryException {
