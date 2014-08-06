@@ -6,6 +6,7 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="tag" tagdir="/WEB-INF/tags" %>
 
+<c:if test="${not empty form}">
 <c:if test="${not empty form.title}">
   <h2><c:out value="${form.title}" /></h2>
 </c:if>
@@ -536,3 +537,5 @@ $(document).ready(function() {
 
 });
 </script>
+
+</c:if>
