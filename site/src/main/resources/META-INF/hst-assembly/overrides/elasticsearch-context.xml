@@ -17,12 +17,43 @@
     <constructor-arg><value type="java.lang.String">hsl</value></constructor-arg>
   </bean>
   
+  <bean id="nl.hsleiden.search.NodePropertyFilter" class="nl.hsleiden.search.WhitelistNodeBlacklistPropertyFilter">
+    <property name="nodeWhitelist">
+      <list>
+        <value type="java.lang.String">hsl:NewsPage</value>
+        <value type="java.lang.String">hsl:WebPage</value>
+        <value type="java.lang.String">hsl:ArticlePage</value>
+        <value type="java.lang.String">hsl:EventPage</value>
+        <value type="java.lang.String">hsl:OverviewPage</value>
+        <value type="java.lang.String">hsl:FaqDocument</value>
+        <value type="java.lang.String">hsl:Paragraph</value>
+        <value type="java.lang.String">hippostd:html</value>
+        <value type="java.lang.String">hsl:Quote</value>
+        <value type="java.lang.String">hsl:QuoteParameters</value>
+        <value type="java.lang.String">hsl:ExternalLinks</value>
+        <value type="java.lang.String">hsl:ExternalLink</value>
+      </list>
+    </property>
+    <property name="propertyBlacklist">
+      <list>
+        <value type="java.lang.String">hippostd:stateSummary</value>
+        <value type="java.lang.String">hippo:availability</value>
+        <value type="java.lang.String">hippostd:state</value>
+        <value type="java.lang.String">hippo:modes</value>
+        <value type="java.lang.String">hippo:values</value>
+        <value type="java.lang.String">hippo:facets</value>
+        <value type="java.lang.String">hippotranslation:id</value>
+      </list>
+    </property>
+  </bean>
   
-  <bean id="org.elasticsearch.client.Client" class="nl.hsleiden.search.ElasticSearchClientFactor">
+  
+  <bean id="org.elasticsearch.client.Client" class="nl.hsleiden.search.ElasticSearchClientFactory">
     <constructor-arg ref="nl.hsleiden.search.ElasticsearchConfig"/>
   </bean>
   
   <bean id="nl.hsleiden.search.ElasticSearchEventListener" class="nl.hsleiden.search.ElasticSearchEventListener">
+    <constructor-arg ref="nl.hsleiden.search.NodePropertyFilter"/>
     <property name="fieldNameConverter" ref="nl.hsleiden.search.NamespaceFilterFieldNameConverter"/>
   </bean>
   

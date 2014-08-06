@@ -25,7 +25,6 @@ import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.rest.RestStatus;
 import org.hippoecm.hst.site.HstServices;
 import org.hippoecm.repository.HippoStdNodeType;
-import org.hippoecm.repository.api.HippoNodeType;
 import org.onehippo.cms7.event.HippoEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -45,6 +44,7 @@ public class Indexer implements Runnable {
     private static final String EVENT_TYPE_PUBLISH = "publish";
 
     private FieldNameConverter fieldNameConverter;
+    private NodePropertyFilter nodePropertyFilter;
     @SuppressWarnings("rawtypes")
     private HippoEvent event;
 
@@ -57,13 +57,18 @@ public class Indexer implements Runnable {
 
     private static final Logger LOG = LoggerFactory.getLogger(Indexer.class);
 
-    public Indexer(@SuppressWarnings("rawtypes") HippoEvent event) {
-        this(event, null);
+    public Indexer(@SuppressWarnings("rawtypes") HippoEvent event, NodePropertyFilter nodePropertyFilter) {
+        this(event, nodePropertyFilter, null);
     }
 
-    public Indexer(@SuppressWarnings("rawtypes") HippoEvent event, FieldNameConverter fieldNameConverter) {
+    public Indexer(@SuppressWarnings("rawtypes") HippoEvent event, NodePropertyFilter nodePropertyFilter,
+            FieldNameConverter fieldNameConverter) {
         this.event = event;
+        this.nodePropertyFilter = nodePropertyFilter;
         this.fieldNameConverter = fieldNameConverter;
+        if (event == null || nodePropertyFilter == null) {
+            throw new IllegalArgumentException("event and nodePropertyFilter argument are both required.");
+        }
     }
 
     @Override
@@ -113,11 +118,12 @@ public class Indexer implements Runnable {
         try {
             Node handel = session.getNodeByIdentifier(uuid);
             Node target = handel.getNode(handel.getName());
-
-            IndexRequestBuilder indexBuilder = client.prepareIndex(type.getIndexName(), getConvertedName(target
-                    .getPrimaryNodeType().getName()), uuid);
-            indexBuilder.setSource(getJson(target));
-            indexBuilder.execute();
+            if (!nodePropertyFilter.filterOutNode(target)) {
+                IndexRequestBuilder indexBuilder = client.prepareIndex(type.getIndexName(), getConvertedName(target
+                        .getPrimaryNodeType().getName()), uuid);
+                indexBuilder.setSource(getJson(target));
+                indexBuilder.execute();
+            }
         } finally {
             session.logout();
         }
@@ -153,8 +159,7 @@ public class Indexer implements Runnable {
             ValueFormatException {
         for (NodeIterator nodes = node.getNodes(); nodes.hasNext();) {
             Node subnode = nodes.nextNode();
-            if (!subnode.isNodeType(HippoNodeType.NT_TRANSLATION) && !subnode.isNodeType(HippoNodeType.NT_MIRROR)
-                    && !subnode.getName().endsWith("Mixin")) {
+            if (!nodePropertyFilter.filterOutNode(subnode)) {
                 builder.startObject(getConvertedName(subnode.getName()));
                 if (subnode.isNodeType(HippoStdNodeType.NT_HTML)) {
 
@@ -178,20 +183,25 @@ public class Indexer implements Runnable {
             ValueFormatException {
         for (PropertyIterator iterator = node.getProperties(); iterator.hasNext();) {
             Property property = iterator.nextProperty();
-            int type = property.getType();
-            if (type == PropertyType.STRING || type == PropertyType.DATE || type == PropertyType.BOOLEAN
-                    || type == PropertyType.LONG || type == PropertyType.DOUBLE) {
-                String fieldName = fieldNameConverter == null ? property.getName() : fieldNameConverter
-                        .jcrToElasticsearch(property.getName());
-                if (property.isMultiple()) {
-                    builder.array(fieldName, getValuesAsArray(property));
+            if (!nodePropertyFilter.filterOutProperty(property)) {
+                if (isOfSupportedType(property.getType())) {
+                    String fieldName = fieldNameConverter == null ? property.getName() : fieldNameConverter
+                            .jcrToElasticsearch(property.getName());
+                    if (property.isMultiple()) {
+                        builder.array(fieldName, getValuesAsArray(property));
+                    } else {
+                        builder.field(fieldName, getValue(property.getValue()));
+                    }
                 } else {
-                    builder.field(fieldName, getValue(property.getValue()));
+                    LOG.debug("Only propeties of type String, String[], Calendar, Calendar[], Boolean, Boolean[], Long, Long[], Double and Double[] are being indexed.");
                 }
-            } else {
-                LOG.debug("Only propeties of type String, String[], Calendar, Calendar[], Boolean, Boolean[], Long, Long[], Double and Double[] are being indexed.");
             }
         }
+    }
+
+    private boolean isOfSupportedType(int type) {
+        return type == PropertyType.STRING || type == PropertyType.DATE || type == PropertyType.BOOLEAN
+                || type == PropertyType.LONG || type == PropertyType.DOUBLE;
     }
 
     private Object getValue(Value value) throws RepositoryException {

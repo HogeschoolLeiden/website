@@ -3,87 +3,10 @@ curl -XDELETE  'http://localhost:9200/preview/'
 curl -XPUT 'http://localhost:9200/live/'
 curl -XPUT 'http://localhost:9200/preview/'
 
-# WebPage
+# NewsPage
 
-curl -XPUT 'http://localhost:9200/*/_mapping/WebPage' -d '
+curl -XPUT 'http://localhost:9200/*/_mapping/NewsPage' -d '
 {
-    "WebPage": {
-        "properties": {
-            "author": {
-                "type": "string"
-            },
-            "browserTitle": {
-                "type": "string"
-            },
-            "description": {
-                "type": "string"
-            },
-            "hideFromSearch": {
-                "type": "boolean"
-            },
-            "hideFromSitemap": {
-                "type": "boolean"
-            },
-            "hippo_availability": {
-                "type": "string"
-            },
-            "hippo_paths": {
-                "type": "string"
-            },
-            "hippostd_state": {
-                "type": "string"
-            },
-            "hippostd_stateSummary": {
-                "type": "string"
-            },
-            "hippostdpubwf_createdBy": {
-                "type": "string"
-            },
-            "hippostdpubwf_creationDate": {
-                "type": "date",
-                "format": "dateOptionalTime"
-            },
-            "hippostdpubwf_lastModificationDate": {
-                "type": "date",
-                "format": "dateOptionalTime"
-            },
-            "hippostdpubwf_lastModifiedBy": {
-                "type": "string"
-            },
-            "hippostdpubwf_publicationDate": {
-                "type": "date",
-                "format": "dateOptionalTime"
-            },
-            "hippotranslation_id": {
-                "type": "string"
-            },
-            "hippotranslation_locale": {
-                "type": "string"
-            },
-            "introduction": {
-                "type": "string"
-            },
-            "jcr_uuid": {
-                "type": "string"
-            },
-            "keywords": {
-                "type": "string"
-            },
-            "releaseDate": {
-                "type": "date",
-                "format": "dateOptionalTime"
-            },
-            "share": {
-                "type": "boolean"
-            },
-            "title": {
-                "type": "string"
-            }
-        }
-    }
-}'
-
-curl -XPUT 'http://localhost:9200/*/_mapping/NewsPage' -d '{
     "NewsPage": {
         "properties": {
             "author": {
@@ -120,39 +43,8 @@ curl -XPUT 'http://localhost:9200/*/_mapping/NewsPage' -d '{
                             }
                         }
                     },
-                    "image": {
-                        "properties": {
-                            "hippo_docbase": {
-                                "type": "string"
-                            }
-                        }
-                    },
-                    "paragraphImage": {
-                        "properties": {
-                            "paragraphImageLink": {
-                                "properties": {
-                                    "hippo_docbase": {
-                                        "type": "string"
-                                    }
-                                }
-                            },
-                            "position": {
-                                "type": "string"
-                            },
-                            "staticdropdown": {
-                                "type": "string"
-                            }
-                        }
-                    },
                     "quoteParameters": {
                         "properties": {
-                            "image": {
-                                "properties": {
-                                    "hippo_docbase": {
-                                        "type": "string"
-                                    }
-                                }
-                            },
                             "name": {
                                 "type": "string"
                             },
@@ -161,60 +53,7 @@ curl -XPUT 'http://localhost:9200/*/_mapping/NewsPage' -d '{
                             }
                         }
                     },
-                    "shareParameters": {
-                        "properties": {
-                            "linkedin": {
-                                "type": "boolean"
-                            },
-                            "twitter": {
-                                "type": "boolean"
-                            }
-                        }
-                    },
                     "title": {
-                        "type": "string"
-                    },
-                    "titleIcon": {
-                        "properties": {
-                            "hippo_docbase": {
-                                "type": "string"
-                            }
-                        }
-                    },
-                    "youtubePlayerParameters": {
-                        "properties": {
-                            "allowFullScreen": {
-                                "type": "boolean"
-                            },
-                            "autoplay": {
-                                "type": "boolean"
-                            },
-                            "disablekb": {
-                                "type": "boolean"
-                            },
-                            "rel": {
-                                "type": "boolean"
-                            },
-                            "showinfo": {
-                                "type": "boolean"
-                            }
-                        }
-                    },
-                    "youtubeUrlParameters": {
-                        "properties": {
-                            "theme": {
-                                "type": "string"
-                            },
-                            "youtubeUrl": {
-                                "type": "string"
-                            }
-                        }
-                    }
-                }
-            },
-            "headerImage": {
-                "properties": {
-                    "hippo_docbase": {
                         "type": "string"
                     }
                 }
@@ -225,16 +64,7 @@ curl -XPUT 'http://localhost:9200/*/_mapping/NewsPage' -d '{
             "hideFromSitemap": {
                 "type": "boolean"
             },
-            "hippo_availability": {
-                "type": "string"
-            },
             "hippo_paths": {
-                "type": "string"
-            },
-            "hippostd_state": {
-                "type": "string"
-            },
-            "hippostd_stateSummary": {
                 "type": "string"
             },
             "hippostdpubwf_createdBy": {
@@ -254,9 +84,6 @@ curl -XPUT 'http://localhost:9200/*/_mapping/NewsPage' -d '{
             "hippostdpubwf_publicationDate": {
                 "type": "date",
                 "format": "dateOptionalTime"
-            },
-            "hippotranslation_id": {
-                "type": "string"
             },
             "hippotranslation_locale": {
                 "type": "string"
@@ -290,6 +117,408 @@ curl -XPUT 'http://localhost:9200/*/_mapping/NewsPage' -d '{
                 "type": "string"
             },
             "type": {
+                "type": "string"
+            }
+        }
+    }
+ }'   
+
+# EventPage
+ 
+curl -XPUT 'http://localhost:9200/*/_mapping/EventPage' -d '
+{ 
+    "EventPage": {
+        "properties": {
+            "browserTitle": {
+                "type": "string"
+            },
+            "description": {
+                "type": "string"
+            },
+            "eventDate": {
+                "type": "date",
+                "format": "dateOptionalTime"
+            },
+            "flexibleblock": {
+                "properties": {
+                    "content": {
+                        "properties": {
+                            "hippostd_content": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "title": {
+                        "type": "string"
+                    }
+                }
+            },
+            "hideFromSearch": {
+                "type": "boolean"
+            },
+            "hideFromSitemap": {
+                "type": "boolean"
+            },
+            "hippo_paths": {
+                "type": "string"
+            },
+            "hippostdpubwf_createdBy": {
+                "type": "string"
+            },
+            "hippostdpubwf_creationDate": {
+                "type": "date",
+                "format": "dateOptionalTime"
+            },
+            "hippostdpubwf_lastModificationDate": {
+                "type": "date",
+                "format": "dateOptionalTime"
+            },
+            "hippostdpubwf_lastModifiedBy": {
+                "type": "string"
+            },
+            "hippostdpubwf_publicationDate": {
+                "type": "date",
+                "format": "dateOptionalTime"
+            },
+            "hippotranslation_locale": {
+                "type": "string"
+            },
+            "introduction": {
+                "type": "string"
+            },
+            "jcr_uuid": {
+                "type": "string"
+            },
+            "keywords": {
+                "type": "string"
+            },
+            "releaseDate": {
+                "type": "date",
+                "format": "dateOptionalTime"
+            },
+            "share": {
+                "type": "boolean"
+            },
+            "subjecttags": {
+                "type": "string"
+            },
+            "subtitle": {
+                "type": "string"
+            },
+            "thematags": {
+                "type": "string"
+            },
+            "title": {
+                "type": "string"
+            }
+        }
+    }
+}'
+
+# ArticlePage
+    
+curl -XPUT 'http://localhost:9200/*/_mapping/ArticlePage' -d '
+{
+    "ArticlePage": {
+        "properties": {
+            "author": {
+                "type": "string"
+            },
+            "browserTitle": {
+                "type": "string"
+            },
+            "description": {
+                "type": "string"
+            },
+            "flexibleblock": {
+                "properties": {
+                    "content": {
+                        "properties": {
+                            "hippostd_content": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "quoteParameters": {
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "quoteText": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "title": {
+                        "type": "string"
+                    }
+                }
+            },
+            "hideFromSearch": {
+                "type": "boolean"
+            },
+            "hideFromSitemap": {
+                "type": "boolean"
+            },
+            "hippo_paths": {
+                "type": "string"
+            },
+            "hippostdpubwf_createdBy": {
+                "type": "string"
+            },
+            "hippostdpubwf_creationDate": {
+                "type": "date",
+                "format": "dateOptionalTime"
+            },
+            "hippostdpubwf_lastModificationDate": {
+                "type": "date",
+                "format": "dateOptionalTime"
+            },
+            "hippostdpubwf_lastModifiedBy": {
+                "type": "string"
+            },
+            "hippostdpubwf_publicationDate": {
+                "type": "date",
+                "format": "dateOptionalTime"
+            },
+            "hippotranslation_locale": {
+                "type": "string"
+            },
+            "introduction": {
+                "type": "string"
+            },
+            "jcr_uuid": {
+                "type": "string"
+            },
+            "keywords": {
+                "type": "string"
+            },
+            "releaseDate": {
+                "type": "date",
+                "format": "dateOptionalTime"
+            },
+            "share": {
+                "type": "boolean"
+            },
+            "subjecttags": {
+                "type": "string"
+            },
+            "subtitle": {
+                "type": "string"
+            },
+            "thematags": {
+                "type": "string"
+            },
+            "title": {
+                "type": "string"
+            }
+        }
+    }
+}'
+
+# WebPage
+
+curl -XPUT 'http://localhost:9200/*/_mapping/WebPage' -d '
+{
+    "WebPage": {
+        "properties": {
+            "author": {
+                "type": "string"
+            },
+            "browserTitle": {
+                "type": "string"
+            },
+            "description": {
+                "type": "string"
+            },
+            "hideFromSearch": {
+                "type": "boolean"
+            },
+            "hideFromSitemap": {
+                "type": "boolean"
+            },
+            "hippo_paths": {
+                "type": "string"
+            },
+            "hippostdpubwf_createdBy": {
+                "type": "string"
+            },
+            "hippostdpubwf_creationDate": {
+                "type": "date",
+                "format": "dateOptionalTime"
+            },
+            "hippostdpubwf_lastModificationDate": {
+                "type": "date",
+                "format": "dateOptionalTime"
+            },
+            "hippostdpubwf_lastModifiedBy": {
+                "type": "string"
+            },
+            "hippostdpubwf_publicationDate": {
+                "type": "date",
+                "format": "dateOptionalTime"
+            },
+            "hippotranslation_locale": {
+                "type": "string"
+            },
+            "introduction": {
+                "type": "string"
+            },
+            "jcr_uuid": {
+                "type": "string"
+            },
+            "keywords": {
+                "type": "string"
+            },
+            "releaseDate": {
+                "type": "date",
+                "format": "dateOptionalTime"
+            },
+            "share": {
+                "type": "boolean"
+            },
+            "title": {
+                "type": "string"
+            }
+        }
+    }
+}'
+
+# OverviewPage
+
+curl -XPUT 'http://localhost:9200/*/_mapping/OverviewPage' -d '
+{
+    "OverviewPage": {
+        "properties": {
+            "author": {
+                "type": "string"
+            },
+            "browserTitle": {
+                "type": "string"
+            },
+            "description": {
+                "type": "string"
+            },
+            "hideFromSearch": {
+                "type": "boolean"
+            },
+            "hideFromSitemap": {
+                "type": "boolean"
+            },
+            "hippo_paths": {
+                "type": "string"
+            },
+            "hippostdpubwf_createdBy": {
+                "type": "string"
+            },
+            "hippostdpubwf_creationDate": {
+                "type": "date",
+                "format": "dateOptionalTime"
+            },
+            "hippostdpubwf_lastModificationDate": {
+                "type": "date",
+                "format": "dateOptionalTime"
+            },
+            "hippostdpubwf_lastModifiedBy": {
+                "type": "string"
+            },
+            "hippostdpubwf_publicationDate": {
+                "type": "date",
+                "format": "dateOptionalTime"
+            },
+            "hippotranslation_locale": {
+                "type": "string"
+            },
+            "jcr_uuid": {
+                "type": "string"
+            },
+            "keywords": {
+                "type": "string"
+            },
+            "releaseDate": {
+                "type": "date",
+                "format": "dateOptionalTime"
+            },
+            "share": {
+                "type": "boolean"
+            },
+            "subjecttags": {
+                "type": "string"
+            },
+            "thematags": {
+                "type": "string"
+            },
+            "title": {
+                "type": "string"
+            }
+        }
+    }
+}'
+
+# FaqDocument
+
+curl -XPUT 'http://localhost:9200/*/_mapping/FaqDocument' -d '
+{
+    "FaqDocument": {
+        "properties": {
+            "author": {
+                "type": "string"
+            },
+            "flexibleblock": {
+                "properties": {
+                    "content": {
+                        "properties": {
+                            "hippostd_content": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            },
+            "hideFromSearch": {
+                "type": "boolean"
+            },
+            "hideFromSitemap": {
+                "type": "boolean"
+            },
+            "hippo_paths": {
+                "type": "string"
+            },
+            "hippostdpubwf_createdBy": {
+                "type": "string"
+            },
+            "hippostdpubwf_creationDate": {
+                "type": "date",
+                "format": "dateOptionalTime"
+            },
+            "hippostdpubwf_lastModificationDate": {
+                "type": "date",
+                "format": "dateOptionalTime"
+            },
+            "hippostdpubwf_lastModifiedBy": {
+                "type": "string"
+            },
+            "hippostdpubwf_publicationDate": {
+                "type": "date",
+                "format": "dateOptionalTime"
+            },
+            "hippotranslation_locale": {
+                "type": "string"
+            },
+            "jcr_uuid": {
+                "type": "string"
+            },
+            "releaseDate": {
+                "type": "date",
+                "format": "dateOptionalTime"
+            },
+            "subjecttags": {
+                "type": "string"
+            },
+            "thematags": {
+                "type": "string"
+            },
+            "title": {
                 "type": "string"
             }
         }
