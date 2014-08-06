@@ -44,7 +44,6 @@
   <link rel="stylesheet" href="<hst:link path="/css/style.css" />" type="text/css" />
   <script src="<hst:link path="/js/jquery.min.js" />" type="text/javascript"></script>
   <script src="<hst:link path="/js/jquery.browser.min.js" />" type="text/javascript"></script>
-  <script src="<hst:link path="/js/default.js" />" type="text/javascript"></script>
   
   <hst:headContributions categoryExcludes="scripts" xhtml="true" />
   

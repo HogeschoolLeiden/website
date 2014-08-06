@@ -1,4 +1,5 @@
-<%@tag description="display image in header width" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
+<%@ page contentType="text/html; charset=UTF-8" language="java"
+  trimDirectiveWhitespaces="true" pageEncoding="UTF-8"%>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
@@ -8,10 +9,9 @@
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 <%@ taglib prefix="opw" uri="http://open-web.nl/hippo/prototype"%>
 
-<%@ attribute name="content" rtexprvalue="true" required="true" type="nl.hsleiden.beans.PublicImagesBean" %>
+<%-- <%@ attribute name="content" rtexprvalue="true" required="true" type="nl.hsleiden.beans.PublicImagesBean" %> --%>
 
-<c:if test="${fn:length(content.images) > 0 }">
-
+<c:if test="${not empty model.items and fn:length(model.items) > 0 }">
   <hst:headContribution keyHint="ppinit">
     <script type="text/javascript" src="<hst:link path="/js/pretty-photo-inizialization.js"/>" charset="utf-8"></script>
   </hst:headContribution>
@@ -28,9 +28,9 @@
     <script type="text/javascript" src="<hst:link path="/js/jquery.prettyPhoto.js"/>" charset="utf-8"></script>
   </hst:headContribution>
   
-  <div class="images${content.imagesPerRow}">
+  <div class="images${model.info.imagesPerRow}">
     
-    <c:forEach items="${content.images}" var="image" varStatus="loop">
+    <c:forEach items="${model.items}" var="image" varStatus="loop">
       
       <div class="singleImage">
         <div class="singleImagePadding">
@@ -51,5 +51,5 @@
     </c:forEach>
     
   </div>
-
+  
 </c:if>
