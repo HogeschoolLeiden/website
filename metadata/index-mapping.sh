@@ -105,13 +105,15 @@ curl -XPUT 'http://localhost:9200/*/_mapping/NewsPage' -d '
                 "type": "boolean"
             },
             "subjecttags": {
-                "type": "string"
+                "type": "string",
+                "index" : "not_analyzed"
             },
             "subtitle": {
                 "type": "string"
             },
             "thematags": {
-                "type": "string"
+                "type": "string",
+                "index" : "not_analyzed"
             },
             "title": {
                 "type": "string"
@@ -200,13 +202,15 @@ curl -XPUT 'http://localhost:9200/*/_mapping/EventPage' -d '
                 "type": "boolean"
             },
             "subjecttags": {
-                "type": "string"
+                "type": "string",
+                "index" : "not_analyzed"
             },
             "subtitle": {
                 "type": "string"
             },
             "thematags": {
-                "type": "string"
+                "type": "string",
+                "index" : "not_analyzed"
             },
             "title": {
                 "type": "string"
@@ -301,13 +305,15 @@ curl -XPUT 'http://localhost:9200/*/_mapping/ArticlePage' -d '
                 "type": "boolean"
             },
             "subjecttags": {
-                "type": "string"
+                "type": "string",
+                "index" : "not_analyzed"
             },
             "subtitle": {
                 "type": "string"
             },
             "thematags": {
-                "type": "string"
+                "type": "string",
+                "index" : "not_analyzed"
             },
             "title": {
                 "type": "string"
@@ -443,10 +449,12 @@ curl -XPUT 'http://localhost:9200/*/_mapping/OverviewPage' -d '
                 "type": "boolean"
             },
             "subjecttags": {
-                "type": "string"
+                "type": "string",
+                "index" : "not_analyzed"
             },
             "thematags": {
-                "type": "string"
+                "type": "string",
+                "index" : "not_analyzed"
             },
             "title": {
                 "type": "string"
@@ -513,10 +521,12 @@ curl -XPUT 'http://localhost:9200/*/_mapping/FaqDocument' -d '
                 "format": "dateOptionalTime"
             },
             "subjecttags": {
-                "type": "string"
+                "type": "string",
+                "index" : "not_analyzed"
             },
             "thematags": {
-                "type": "string"
+                "type": "string",
+                "index" : "not_analyzed"
             },
             "title": {
                 "type": "string"
