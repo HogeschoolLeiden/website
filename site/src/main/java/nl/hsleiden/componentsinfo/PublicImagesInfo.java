@@ -24,11 +24,7 @@ public interface PublicImagesInfo extends ContentBeanPathInfo {
     @Parameter(name = "imagesPerRow", displayName="Beelden per rij", defaultValue="2")
     public int getImagesPerRow();
     
-    @Parameter(name = WidgetConstants.SIZE, defaultValue = "6", displayName="Aantal beelden")
-    public int getSize();
-    
-    @Parameter(name = "showPaginator", displayName = "Toon paginering", defaultValue = "true")
-    public Boolean getShowPaginator();
-    
+    @Parameter(name = WidgetConstants.SIZE, defaultValue = "6", displayName="Beelden per pagina")
+    public int getSize();   
     
 }

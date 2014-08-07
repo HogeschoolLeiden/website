@@ -40,10 +40,4 @@ public class PublicImagesCompoundMixinBean extends hslbeans.PublicImagesCompound
         return getPublicImagesParameters().getSize().intValue();
     }
 
-    public Boolean getShowPaginator() {
-        return getPublicImagesParameters().getShowPaginator();
-    }
-
-    
-
 }

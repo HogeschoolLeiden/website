@@ -49,7 +49,12 @@
       </div>
       
     </c:forEach>
-    
+        
+  </div>
+   
+  <div class="pager-wrapper">
+      <opw:componentParameterName name="page" var="pageParameterName"/>
+      <opw:simplepaginator paginator="${model.paginator}" pageParamerter="${pageParameterName}"/>
   </div>
   
 </c:if>

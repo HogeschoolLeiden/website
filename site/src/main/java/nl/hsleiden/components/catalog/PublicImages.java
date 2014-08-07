@@ -14,6 +14,7 @@ import nl.hsleiden.componentsinfo.PublicImagesInfo;
 import nl.hsleiden.utils.Constants.Attributes;
 import nl.hsleiden.utils.Constants.WidgetConstants;
 
+import org.apache.commons.lang3.StringUtils;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.content.beans.standard.HippoDocumentBean;
 import org.hippoecm.hst.content.beans.standard.HippoFolderBean;
@@ -26,6 +27,9 @@ import org.slf4j.LoggerFactory;
 
 import com.tdclighthouse.prototype.components.AjaxEnabledComponent;
 import com.tdclighthouse.prototype.utils.BeanUtils;
+import com.tdclighthouse.prototype.utils.ComponentUtils;
+import com.tdclighthouse.prototype.utils.Constants.ParametersConstants;
+import com.tdclighthouse.prototype.utils.PaginatorWidget;
 
 @ParametersInfo(type = PublicImagesInfo.class)
 public class PublicImages extends AjaxEnabledComponent {
@@ -52,27 +56,31 @@ public class PublicImages extends AjaxEnabledComponent {
     private void addItemsToModel(HstRequest request, Map<String, Object> model, PublicImagesInfo parametersInfo) {
         
         HippoBean imageFolder = BeanUtils.getBeanViaAbsolutePath(parametersInfo.getContentBeanPath(), request);
-        List<ImageSet> items = getFolderImages(imageFolder);
+        List<ImageSet> items = getImages(imageFolder, request, parametersInfo);
+                
+        PaginatorWidget paginator = new PaginatorWidget(items.size(), getPageNumber(request),
+                parametersInfo.getSize());
+        model.put(Attributes.PAGINATOR, paginator); 
         
         if (items!=null && !items.isEmpty()) {
-            model.put(Attributes.ITEMS, items);
+            model.put(Attributes.ITEMS, getPageImages(items, getPageNumber(request) - 1, parametersInfo.getSize()));
         } else {
-            request.setAttribute(WidgetConstants.WEB_MASTER_MESSAGE, "webmaster.nocontacts.message");
+            request.setAttribute(WidgetConstants.WEB_MASTER_MESSAGE, "webmaster.noimages.message");
         }
     }
-    
-    private List<ImageSet> getFolderImages(HippoBean imageFolder) {
-        
-        List<ImageSet> result = new ArrayList<ImageSet>();
+
+    private List<ImageSet> getImages(HippoBean imageFolder, HstRequest request, PublicImagesInfo info) {
+        List<ImageSet> allImages = new ArrayList<ImageSet>();
         
         if(imageFolder instanceof HippoFolderBean){
             HippoFolderBean selectedFolder = ((HippoFolderBean) imageFolder);
             List<HippoDocumentBean> documents = selectedFolder.getDocuments();
             LOG.debug("images list size = " + documents.size());
-            addImagesToList(result, documents);
-        }     
-        return result;
+            addImagesToList(allImages, documents);
+        }
+        return allImages;
     }
+
     
     private void addImagesToList(List<ImageSet> result, List<HippoDocumentBean> documents) {
         for (HippoDocumentBean hippoDocumentBean : documents) {
@@ -80,6 +88,15 @@ public class PublicImages extends AjaxEnabledComponent {
                 result.add((ImageSet) hippoDocumentBean);
             }
         }
+    }
+    
+    private List<ImageSet> getPageImages(List<ImageSet> totalItems, int pageNumber, int itemsPerPage){
+        List<ImageSet> result = new ArrayList<ImageSet>();
+        int startFrom = pageNumber*itemsPerPage;
+        for(int i = startFrom; i<startFrom+itemsPerPage && i<totalItems.size(); i++ ){
+            result.add(totalItems.get(i));
+        }
+        return result;
     }
 
     private PublicImagesInfo getConfiguration(HstRequest request) throws RepositoryException {
@@ -91,6 +108,16 @@ public class PublicImages extends AjaxEnabledComponent {
             }
         }
         return paramInfo;
+    }
+    
+    private int getPageNumber(HstRequest request) {
+        int result = 1;
+        String pageString = getPublicRequestParameter(request, 
+                ComponentUtils.getComponentSpecificParameterName(request, ParametersConstants.PAGE));
+        if (StringUtils.isNotBlank(pageString) && StringUtils.isNumeric(pageString)) {
+            result = Integer.parseInt(pageString);
+        }
+        return result;
     }
     
 }
