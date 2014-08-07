@@ -112,3 +112,13 @@
 
 [hsl:PublicImages] > hippo:compound, hippostd:relaxed orderable
 
+[hsl:PublicImagesParameters] > hippo:compound, hippostd:relaxed orderable
+
+[hsl:PublicImagesCompoundMixin] > hippo:compound, hippostd:relaxed orderable
+
+[hsl:PublicImagesMixin]
+  mixin
+  + hsl:publicImagesCompoundMixin (hsl:PublicImagesCompoundMixin)
+
+
+

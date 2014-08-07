@@ -25,5 +25,5 @@
 			<hst:include ref="rightBottom" />
 		</aside>
   	</div>
-  	<%-- <hst:include ref="bottom-container" /> --%>
+  	<hst:include ref="bottom-container" />
 </div>

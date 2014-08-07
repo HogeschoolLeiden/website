@@ -51,12 +51,89 @@
         <sv:value>HST.vBox</sv:value>
       </sv:property>
     </sv:node>
+    <sv:node sv:name="rightTop">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:containercomponent</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>c97ba6f8-397a-4e7d-b384-12e316f4cda6</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:xtype" sv:type="String">
+        <sv:value>HST.vBox</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="rightBottom">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:containercomponent</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>0897964d-1e9a-4dda-8073-1fcd6a1021ff</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:xtype" sv:type="String">
+        <sv:value>HST.vBox</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="bottom-container">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:containercomponent</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>7dc2c259-4f76-460d-b75a-e7d87ab89886</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:lastmodified" sv:type="Date">
+        <sv:value>2014-08-07T11:02:28.192+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:xtype" sv:type="String">
+        <sv:value>HST.vBox</sv:value>
+      </sv:property>
+      <sv:node sv:name="publicImages">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:containeritemcomponent</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>24b5f050-4337-4b36-bd56-4b10b7cc5101</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:asyncmode" sv:type="String">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:componentclassname" sv:type="String">
+          <sv:value>nl.hsleiden.components.catalog.PublicImages</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:iconpath" sv:type="String">
+          <sv:value>images/catalog/public-images.png</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:label" sv:type="String">
+          <sv:value>Beldbank openbaar</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
+          <sv:value>tryToUseMixin</sv:value>
+          <sv:value>contentBeanPath</sv:value>
+          <sv:value>imagesPerRow</sv:value>
+          <sv:value>size</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
+          <sv:value>on</sv:value>
+          <sv:value/>
+          <sv:value/>
+          <sv:value>0</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:template" sv:type="String">
+          <sv:value>catalog.publicimages</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:xtype" sv:type="String">
+          <sv:value>HST.Item</sv:value>
+        </sv:property>
+      </sv:node>
+    </sv:node>
     <sv:node sv:name="contentBottom">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:containercomponent</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>ce807701-daba-4748-a762-93770dbced1f</sv:value>
+        <sv:value>b7d33104-5015-4d90-a0d9-59f961f70b92</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:lastmodified" sv:type="Date">
+        <sv:value>2014-08-07T11:02:28.192+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hst:xtype" sv:type="String">
         <sv:value>HST.vBox</sv:value>
@@ -66,7 +143,7 @@
           <sv:value>hst:containeritemcomponent</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
-          <sv:value>6d5a77a6-79bd-43e7-a6a5-63ae0a9a0762</sv:value>
+          <sv:value>45695692-6fb4-4c50-bf1c-4f5fc28b1387</sv:value>
         </sv:property>
         <sv:property sv:name="hst:componentclassname" sv:type="String">
           <sv:value>nl.hsleiden.components.catalog.FormComponent</sv:value>
@@ -95,33 +172,33 @@
           <sv:value>true</sv:value>
           <sv:value>mail/Session</sv:value>
           <sv:value>&lt;h2&gt;Support form filled&lt;/h2&gt;&#xd;
-            &lt;table&gt;&#xd;
-                  &lt;#list form.getFields() as field&gt;&#xd;
-                    &lt;#if field.multiple&gt;&#xd;
-                      &lt;#assign multiValues = field.multiValues&gt;&#xd;
-                      &lt;#if multiValues??&gt;&#xd;
-                        &lt;#list multiValues?keys as key&gt;&#xd;
-                          &lt;#assign collection = multiValues[key]&gt;&#xd;
-                          &lt;#list collection as itemValue&gt;&#xd;
-                            &lt;#if itemValue??&gt;&#xd;
-                              &lt;tr&gt;&#xd;
-                                &lt;th align="left"&gt;${key}&lt;/th&gt;&#xd;
-                                &lt;td align="left"&gt;${itemValue}&lt;/td&gt;&#xd;
-                              &lt;/tr&gt;&#xd;
-                            &lt;/#if&gt;&#xd;
+              &lt;table&gt;&#xd;
+                    &lt;#list form.getFields() as field&gt;&#xd;
+                      &lt;#if field.multiple&gt;&#xd;
+                        &lt;#assign multiValues = field.multiValues&gt;&#xd;
+                        &lt;#if multiValues??&gt;&#xd;
+                          &lt;#list multiValues?keys as key&gt;&#xd;
+                            &lt;#assign collection = multiValues[key]&gt;&#xd;
+                            &lt;#list collection as itemValue&gt;&#xd;
+                              &lt;#if itemValue??&gt;&#xd;
+                                &lt;tr&gt;&#xd;
+                                  &lt;th align="left"&gt;${key}&lt;/th&gt;&#xd;
+                                  &lt;td align="left"&gt;${itemValue}&lt;/td&gt;&#xd;
+                                &lt;/tr&gt;&#xd;
+                              &lt;/#if&gt;&#xd;
+                            &lt;/#list&gt;&#xd;
                           &lt;/#list&gt;&#xd;
-                        &lt;/#list&gt;&#xd;
-                      &lt;/#if&gt;&#xd;
-                      &lt;#else&gt;&#xd;
-                        &lt;#if field.value?has_content&gt;&#xd;
-                          &lt;tr&gt;&#xd;
-                            &lt;th align="left"&gt;${field.getLabel()}&lt;/th&gt;&#xd;
-                            &lt;td align="left"&gt;${field.getValue()}&lt;/td&gt;&#xd;
-                          &lt;/tr&gt;&#xd;
                         &lt;/#if&gt;&#xd;
-                    &lt;/#if&gt;&#xd;
-                  &lt;/#list&gt;&#xd;
-                &lt;/table&gt;</sv:value>
+                        &lt;#else&gt;&#xd;
+                          &lt;#if field.value?has_content&gt;&#xd;
+                            &lt;tr&gt;&#xd;
+                              &lt;th align="left"&gt;${field.getLabel()}&lt;/th&gt;&#xd;
+                              &lt;td align="left"&gt;${field.getValue()}&lt;/td&gt;&#xd;
+                            &lt;/tr&gt;&#xd;
+                          &lt;/#if&gt;&#xd;
+                      &lt;/#if&gt;&#xd;
+                    &lt;/#list&gt;&#xd;
+                  &lt;/table&gt;</sv:value>
           <sv:value>true</sv:value>
         </sv:property>
         <sv:property sv:name="hst:resourcetemplate" sv:type="String">
@@ -134,39 +211,6 @@
           <sv:value>HST.Item</sv:value>
         </sv:property>
       </sv:node>
-    </sv:node>
-    <sv:node sv:name="rightTop">
-      <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hst:containercomponent</sv:value>
-      </sv:property>
-      <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>c97ba6f8-397a-4e7d-b384-12e316f4cda6</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:xtype" sv:type="String">
-        <sv:value>HST.vBox</sv:value>
-      </sv:property>
-    </sv:node>
-    <sv:node sv:name="rightBottom">
-      <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hst:containercomponent</sv:value>
-      </sv:property>
-      <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>0897964d-1e9a-4dda-8073-1fcd6a1021ff</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:xtype" sv:type="String">
-        <sv:value>HST.vBox</sv:value>
-      </sv:property>
-    </sv:node>
-    <sv:node sv:name="bottom-container">
-      <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hst:containercomponent</sv:value>
-      </sv:property>
-      <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>e4fa8eb1-ebf2-476c-a4e7-0cb91796d00c</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:xtype" sv:type="String">
-        <sv:value>HST.vBox</sv:value>
-      </sv:property>
     </sv:node>
   </sv:node>
   <sv:node sv:name="eventpage">
@@ -401,9 +445,6 @@
     <sv:node sv:name="top-container">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:containercomponent</sv:value>
-      </sv:property>
-      <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>505130bb-0d23-4973-a83b-0930ea4bab0c</sv:value>
       </sv:property>
       <sv:property sv:name="hst:xtype" sv:type="String">
         <sv:value>HST.vBox</sv:value>

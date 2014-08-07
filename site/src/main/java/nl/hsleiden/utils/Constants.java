@@ -34,6 +34,7 @@ public class Constants {
         public static final String SIZE = "size";
         public static final String CONTENT_BEAN_PATH = "contentBeanPath";
         public static final String CONTENT_BEAN_PATH_SELECTABLE = "hippostd:folder";
+        public static final String IMAGE_FOLDER_SELECTABLE = "hippogallery:stdImageGallery";
 
         public static final String SHOW_OVERVIEW = "showOverviewLink";
         public static final String OVERVIEW_BEAN_PATH = "overviewBeanPath";
@@ -51,6 +52,7 @@ public class Constants {
         public static final String OVER_FILTER = "overFilter";
 
         public static final String INITIAL_LOCATION = "/content/documents/hsl/pages";
+        public static final String INITIAL_IMAGE_FOLDER_LOCATION = "/content/gallery/hsl/beeldbank-openbaar";
         public static final String FORMS_INITIAL_LOCATION = "/content/documents/hsl/componenten/formulieren";
         public static final String CONTACTS_INITIAL_LOCATION = "/content/documents/hsl/componenten/personen";
 
