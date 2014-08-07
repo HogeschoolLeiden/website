@@ -38,11 +38,6 @@
 			<tag:externallinksblock content="${block }"/>
       		<div class="hr"><hr /></div>
 		</c:when>
-		<c:when test="${block['class'].name == 'nl.hsleiden.beans.PublicImagesBean' }">
-			<tag:publicimagesblock content="${block }"/>
-      		<div class="hr"><hr /></div>
-            <div class="clear"></div>
-		</c:when>
 	</c:choose>
 	<c:set var="tagcount" value="${tagcount + 1 }" />
 </c:forEach>
