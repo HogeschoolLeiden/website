@@ -27,5 +27,5 @@
 <tag:toolbox document="${document }" />
 
 <div class="paginator-style">
-  <opw:simplepaginator paginator="${paginator}"/>
+  <opw:simplepaginator paginator="${paginator}" namespaced="false"/>
 </div>

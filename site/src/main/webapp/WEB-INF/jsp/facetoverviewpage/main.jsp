@@ -73,7 +73,7 @@
 		      </c:forEach>
 					
 			  <div class="paginator-style">
-			    <opw:simplepaginator paginator="${model.paginator}"/>
+			    <opw:simplepaginator paginator="${model.paginator}" namespaced="false"/>
 			  </div>
 			
 			</c:otherwise>
