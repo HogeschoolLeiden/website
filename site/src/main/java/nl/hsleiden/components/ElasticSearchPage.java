@@ -9,12 +9,13 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.ExecutionException;
 
-import nl.hsleiden.beans.FacetConfig;
 import nl.hsleiden.beans.ElasticSearchFacetsBean;
+import nl.hsleiden.beans.ElasticSearchResults;
+import nl.hsleiden.beans.FacetConfig;
 import nl.hsleiden.utils.Constants.Attributes;
 import nl.hsleiden.utils.Constants.Parameters;
-import nl.hsleiden.utils.FacetMapException;
 import nl.hsleiden.utils.ElasticSearchUtils;
+import nl.hsleiden.utils.FacetMapException;
 
 import org.elasticsearch.action.search.SearchRequestBuilder;
 import org.elasticsearch.action.search.SearchResponse;
@@ -51,18 +52,20 @@ public class ElasticSearchPage extends BaseHstComponent {
             FilterBuilder filter = getFilter(selectedFacetsMap);
             FacetConfig[] facetConfigs = getFacetConfig();
             List<FacetBuilder> facets = getFacets(filter, facetConfigs);
-            SearchRequestBuilder searchBuilder = client.prepareSearch("live").setTypes("NewsPage");
-            
+            SearchRequestBuilder searchBuilder = client.prepareSearch(getIndex(request)).setTypes("NewsPage");
+
             searchBuilder.setQuery(QueryBuilders.queryString(getUserQuery(request)));
             searchBuilder.setPostFilter(filter);
             for (FacetBuilder facetBuilder : facets) {
                 searchBuilder.addFacet(facetBuilder);
             }
-            
+
             SearchResponse searchResponse = searchBuilder.execute().get();
             Map<String, Object> model = new HashMap<String, Object>();
-            model.put("facets", new ElasticSearchFacetsBean(searchResponse.getFacets(), selectedFacetsMap, facetConfigs));
-            model.put("items", searchResponse.getHits());
+            model.put("facets",
+                    new ElasticSearchFacetsBean(searchResponse.getFacets(), selectedFacetsMap, facetConfigs));
+            model.put("searchResults", new ElasticSearchResults(searchResponse.getHits(), request.getRequestContext()
+                    .getObjectBeanManager()));
             request.setAttribute(Attributes.MODEL, model);
         } catch (FacetMapException e) {
             redirectToNotFound(request, response);
@@ -70,34 +73,34 @@ public class ElasticSearchPage extends BaseHstComponent {
             throw new HstComponentException(e.getMessage(), e);
         }
     }
-    
-    
+
+    private String getIndex(HstRequest request) {
+        return request.getRequestContext().isPreview() ? "preview" : "live";
+    }
 
     private String getUserQuery(HstRequest request) {
         String parameter = request.getRequestContext().getServletRequest().getParameter(Parameters.QUERY);
-        //TODO some sort of filtering to bad characters and injection attacks.
+        // TODO some sort of filtering to bad characters and injection attacks.
         return parameter + "*";
-        
+
     }
-
-
 
     private FilterBuilder getFilter(Map<String, List<String>> selectedFacetsMap) throws FacetMapException {
         BoolFilterBuilder filter = selectedFacetsMap.size() > 0 ? FilterBuilders.boolFilter() : null;
-        for(Iterator<Entry<String, List<String>>> iterator = selectedFacetsMap.entrySet().iterator(); iterator.hasNext();) {
+        for (Iterator<Entry<String, List<String>>> iterator = selectedFacetsMap.entrySet().iterator(); iterator
+                .hasNext();) {
             Entry<String, List<String>> entry = iterator.next();
             filter.must(FilterBuilders.termFilter(entry.getKey(), entry.getValue()));
         }
         return filter;
     }
 
-
-
-    private List<FacetBuilder> getFacets(FilterBuilder filter, FacetConfig[] facetConfigs) throws JsonParseException, JsonMappingException,
-            IOException {
+    private List<FacetBuilder> getFacets(FilterBuilder filter, FacetConfig[] facetConfigs) throws JsonParseException,
+            JsonMappingException, IOException {
         List<FacetBuilder> result = new ArrayList<FacetBuilder>();
         for (FacetConfig facetConfig : facetConfigs) {
-            TermsFacetBuilder facetBuilder = FacetBuilders.termsFacet(facetConfig.getTitle()).field(facetConfig.getTerm());
+            TermsFacetBuilder facetBuilder = FacetBuilders.termsFacet(facetConfig.getTitle()).field(
+                    facetConfig.getTerm());
             if (filter != null) {
                 facetBuilder.facetFilter(filter);
             }
@@ -105,8 +108,6 @@ public class ElasticSearchPage extends BaseHstComponent {
         }
         return result;
     }
-
-
 
     private FacetConfig[] getFacetConfig() throws IOException, JsonParseException, JsonMappingException {
         String facetsParameter = getComponentParameter("facets");
