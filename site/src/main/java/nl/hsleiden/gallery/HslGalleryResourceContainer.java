@@ -4,9 +4,9 @@ import org.hippoecm.hst.core.linking.AbstractResourceContainer;
 
 public class HslGalleryResourceContainer extends AbstractResourceContainer {
 
-	@Override
-	public String getNodeType() {
-		return "hsl:ImageSet";
-	}
+    @Override
+    public String getNodeType() {
+        return "hsl:ImageSet";
+    }
 
 }

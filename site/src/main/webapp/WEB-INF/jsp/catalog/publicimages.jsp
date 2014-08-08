@@ -9,7 +9,7 @@
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 <%@ taglib prefix="opw" uri="http://open-web.nl/hippo/prototype"%>
 
-<%-- <%@ attribute name="content" rtexprvalue="true" required="true" type="nl.hsleiden.beans.PublicImagesBean" %> --%>
+<hst:setBundle basename="nl.hsleiden.channelmanager.Messages, nl.hsleiden.widget.Messages"/>
 
 <c:if test="${not empty model.items and fn:length(model.items) > 0 }">
   <hst:headContribution keyHint="ppinit">
@@ -29,6 +29,16 @@
   </hst:headContribution>
   
   <div class="images${model.info.imagesPerRow}">
+  
+    <c:if test="${not empty model.hasParentFolder and model.hasParentFolder }">
+        <hst:renderURL var="parentFolderUrl">
+          <hst:param name="folder" value="${model.parentFolder}"/>
+          <hst:param name="page" value="1"/>
+        </hst:renderURL>
+        <a class="backToParentFolder" href="${parentFolderUrl }" title="<fmt:message key="back.parent.images.folder" />">
+          <span><fmt:message key="back.parent.images.folder" /></span>
+        </a>
+    </c:if>
     
     <c:forEach items="${model.items}" var="image" varStatus="loop">
       
@@ -37,11 +47,35 @@
 
           <figure class="fexibleblock image">
           
-            <hst:link fullyQualified="true" hippobean="${image.wideImage }" var="imageLink"></hst:link>
-                  
-            <a href="${imageLink }" rel="prettyPhoto" class="pin-it-button">
-              <img  src="${imageLink}" alt="${fn:escapeXml(image.alt) }" title="${fn:escapeXml(image.alt) }"/>
-            </a>
+            <c:choose>
+              <c:when test="${fn:contains(image.name, '/') }">
+                
+                <opw:public-parameter var="hasPageParam" parameterName="page"/>
+                
+                <hst:renderURL var="url">
+                  <hst:param name="folder" value="${image.name}"/>
+                </hst:renderURL>
+                
+                <hst:link fullyQualified="true" hippobean="${model.imageFolderBeanPath.wideImage }" var="folderImageLink"></hst:link>
+                     
+                <a href="${url }" title="${image.localizedName}">
+                    <img src="${folderImageLink}"
+                         alt="${fn:escapeXml(image.localizedName)}"
+                         title="${fn:escapeXml(image.localizedName)}" />
+                </a> 
+
+                <span class="images subfolder">
+                  <c:out value="${image.localizedName}"></c:out>
+                </span> 
+              </c:when>
+              <c:otherwise>
+                 <hst:link fullyQualified="true" hippobean="${image.wideImage }" var="imageLink"></hst:link>
+                 
+                 <a href="${imageLink }" rel="prettyPhoto" class="pin-it-button">
+                   <img  src="${imageLink}" alt="${fn:escapeXml(image.alt) }" title="${fn:escapeXml(image.alt) }"/>
+                 </a>
+              </c:otherwise>
+            </c:choose>
                       
           </figure>
        
@@ -53,8 +87,7 @@
   </div>
    
   <div class="pager-wrapper">
-      <opw:componentParameterName name="page" var="pageParameterName"/>
-      <opw:simplepaginator paginator="${model.paginator}" pageParamerter="${pageParameterName}"/>
+      <opw:simplepaginator paginator="${model.paginator}"/>
   </div>
   
 </c:if>
