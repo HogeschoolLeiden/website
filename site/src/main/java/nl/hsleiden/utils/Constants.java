@@ -53,6 +53,8 @@ public class Constants {
 
         public static final String INITIAL_LOCATION = "/content/documents/hsl/pages";
         public static final String INITIAL_IMAGE_FOLDER_LOCATION = "/content/gallery/hsl/beeldbank-openbaar";
+        public static final String ROOT_IMAGE_FOLDER = "/content/gallery/hsl";
+        public static final String DEFAULT_IMAGE_FOLDER = "/content/gallery/hsl/folder-icon.jpg";
         public static final String FORMS_INITIAL_LOCATION = "/content/documents/hsl/componenten/formulieren";
         public static final String CONTACTS_INITIAL_LOCATION = "/content/documents/hsl/componenten/personen";
 
@@ -74,6 +76,8 @@ public class Constants {
 
     public static class HstParameters extends HstParametersConstants {
 
+        public static final String IMAGE_FOLDER_PATH = "imageFolderBeanPath";
+        
         private HstParameters() {
         }
     }
@@ -96,6 +100,10 @@ public class Constants {
 
     public static class Parameters extends ParametersConstants {
 
+        public static final String PARENT_IMAGE_FOLDER = "parentFolder";
+        public static final String HAS_PARENT_FOLDER = "hasParentFolder";
+        public static final String IMAGE_FOLDER_PARAM = "folder";
+        
         private Parameters() {
         }
     }
@@ -111,6 +119,8 @@ public class Constants {
     }
 
     public static class NodeName extends NodeNameConstants {
+        
+        public static final String HSL_IMAGE_SET = "hsl:ImageSet";
         
         private NodeName() {
         }
