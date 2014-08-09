@@ -89,6 +89,7 @@
     <jcr.mock.version>1.0-SNAPSHOT</jcr.mock.version>
     <es.version>1.2.2</es.version>
     <twitter4j.version>4.0.2</twitter4j.version>
+    <elasticsearch.plugin.version>1.0-SNAPSHOT</elasticsearch.plugin.version>
   </properties>
 
   <repositories>
@@ -305,6 +306,11 @@
         <groupId>org.elasticsearch</groupId>
         <artifactId>elasticsearch</artifactId>
         <version>${es.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>nl.openweb.hippo</groupId>
+        <artifactId>hippo-elasticsearch-plugin</artifactId>
+        <version>${elasticsearch.plugin.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>

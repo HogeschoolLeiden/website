@@ -141,19 +141,19 @@
       <artifactId>urlrewriter-module-hst</artifactId>
     </dependency>
 
-    <!-- enterprise forms -->    
+    <!-- enterprise forms -->
     <dependency>
       <groupId>com.onehippo.cms7</groupId>
       <artifactId>hippo-addon-eforms-hst</artifactId>
     </dependency>
     <!-- /enterprise forms -->
-    
+
     <!-- Twitter4j dependencies -->
-      <dependency>
-         <groupId>org.twitter4j</groupId>
-         <artifactId>twitter4j-core</artifactId>
-         <version>${twitter4j.version}</version>
-      </dependency>
+    <dependency>
+      <groupId>org.twitter4j</groupId>
+      <artifactId>twitter4j-core</artifactId>
+      <version>${twitter4j.version}</version>
+    </dependency>
 
     <!-- pdf -->
     <dependency>
@@ -166,6 +166,11 @@
     <dependency>
       <groupId>org.elasticsearch</groupId>
       <artifactId>elasticsearch</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>nl.openweb.hippo</groupId>
+      <artifactId>hippo-elasticsearch-plugin</artifactId>
     </dependency>
 
   </dependencies>
