@@ -36,7 +36,8 @@ curl -XPUT 'http://localhost:9200/*/_mapping/NewsPage' -d '
                                 "type": "string"
                             },
                             "linkUrl": {
-                                "type": "string"
+                                "type": "string",
+                				"index" : "not_analyzed"
                             },
                             "newWindow": {
                                 "type": "boolean"
@@ -69,7 +70,8 @@ curl -XPUT 'http://localhost:9200/*/_mapping/NewsPage' -d '
                 "index" : "not_analyzed"
             },
             "hippostdpubwf_createdBy": {
-                "type": "string"
+                "type": "string",
+                "index" : "not_analyzed"
             },
             "hippostdpubwf_creationDate": {
                 "type": "date",
@@ -80,20 +82,23 @@ curl -XPUT 'http://localhost:9200/*/_mapping/NewsPage' -d '
                 "format": "dateOptionalTime"
             },
             "hippostdpubwf_lastModifiedBy": {
-                "type": "string"
+                "type": "string",
+                "index" : "not_analyzed"
             },
             "hippostdpubwf_publicationDate": {
                 "type": "date",
                 "format": "dateOptionalTime"
             },
             "hippotranslation_locale": {
-                "type": "string"
+                "type": "string",
+                "index" : "not_analyzed"
             },
             "introduction": {
                 "type": "string"
             },
             "jcr_uuid": {
-                "type": "string"
+                "type": "string",
+                "index" : "not_analyzed"
             },
             "keywords": {
                 "type": "string"
@@ -167,7 +172,8 @@ curl -XPUT 'http://localhost:9200/*/_mapping/EventPage' -d '
                 "index" : "not_analyzed"
             },
             "hippostdpubwf_createdBy": {
-                "type": "string"
+                "type": "string",
+                "index" : "not_analyzed"
             },
             "hippostdpubwf_creationDate": {
                 "type": "date",
@@ -178,20 +184,23 @@ curl -XPUT 'http://localhost:9200/*/_mapping/EventPage' -d '
                 "format": "dateOptionalTime"
             },
             "hippostdpubwf_lastModifiedBy": {
-                "type": "string"
+                "type": "string",
+                "index" : "not_analyzed"
             },
             "hippostdpubwf_publicationDate": {
                 "type": "date",
                 "format": "dateOptionalTime"
             },
             "hippotranslation_locale": {
-                "type": "string"
+                "type": "string",
+                "index" : "not_analyzed"
             },
             "introduction": {
                 "type": "string"
             },
             "jcr_uuid": {
-                "type": "string"
+                "type": "string",
+                "index" : "not_analyzed"
             },
             "keywords": {
                 "type": "string"
@@ -271,7 +280,8 @@ curl -XPUT 'http://localhost:9200/*/_mapping/ArticlePage' -d '
                 "index" : "not_analyzed"
             },
             "hippostdpubwf_createdBy": {
-                "type": "string"
+                "type": "string",
+                "index" : "not_analyzed"
             },
             "hippostdpubwf_creationDate": {
                 "type": "date",
@@ -282,20 +292,23 @@ curl -XPUT 'http://localhost:9200/*/_mapping/ArticlePage' -d '
                 "format": "dateOptionalTime"
             },
             "hippostdpubwf_lastModifiedBy": {
-                "type": "string"
+                "type": "string",
+                "index" : "not_analyzed"
             },
             "hippostdpubwf_publicationDate": {
                 "type": "date",
                 "format": "dateOptionalTime"
             },
             "hippotranslation_locale": {
-                "type": "string"
+                "type": "string",
+                "index" : "not_analyzed"
             },
             "introduction": {
                 "type": "string"
             },
             "jcr_uuid": {
-                "type": "string"
+                "type": "string",
+                "index" : "not_analyzed"
             },
             "keywords": {
                 "type": "string"
@@ -351,7 +364,8 @@ curl -XPUT 'http://localhost:9200/*/_mapping/WebPage' -d '
                 "index" : "not_analyzed"
             },
             "hippostdpubwf_createdBy": {
-                "type": "string"
+                "type": "string",
+                "index" : "not_analyzed"
             },
             "hippostdpubwf_creationDate": {
                 "type": "date",
@@ -362,20 +376,23 @@ curl -XPUT 'http://localhost:9200/*/_mapping/WebPage' -d '
                 "format": "dateOptionalTime"
             },
             "hippostdpubwf_lastModifiedBy": {
-                "type": "string"
+                "type": "string",
+                "index" : "not_analyzed"
             },
             "hippostdpubwf_publicationDate": {
                 "type": "date",
                 "format": "dateOptionalTime"
             },
             "hippotranslation_locale": {
-                "type": "string"
+                "type": "string",
+                "index" : "not_analyzed"
             },
             "introduction": {
                 "type": "string"
             },
             "jcr_uuid": {
-                "type": "string"
+                "type": "string",
+                "index" : "not_analyzed"
             },
             "keywords": {
                 "type": "string"
@@ -420,7 +437,8 @@ curl -XPUT 'http://localhost:9200/*/_mapping/OverviewPage' -d '
                 "index" : "not_analyzed"
             },
             "hippostdpubwf_createdBy": {
-                "type": "string"
+                "type": "string",
+                "index" : "not_analyzed"
             },
             "hippostdpubwf_creationDate": {
                 "type": "date",
@@ -431,17 +449,21 @@ curl -XPUT 'http://localhost:9200/*/_mapping/OverviewPage' -d '
                 "format": "dateOptionalTime"
             },
             "hippostdpubwf_lastModifiedBy": {
-                "type": "string"
+                "type": "string",
+                "index" : "not_analyzed"
             },
             "hippostdpubwf_publicationDate": {
                 "type": "date",
                 "format": "dateOptionalTime"
             },
             "hippotranslation_locale": {
-                "type": "string"
+                "type": "string",
+                "index" : "not_analyzed"
+                
             },
             "jcr_uuid": {
-                "type": "string"
+                "type": "string",
+                "index" : "not_analyzed"
             },
             "keywords": {
                 "type": "string"
@@ -499,7 +521,8 @@ curl -XPUT 'http://localhost:9200/*/_mapping/FaqDocument' -d '
                 "index" : "not_analyzed"
             },
             "hippostdpubwf_createdBy": {
-                "type": "string"
+                "type": "string",
+                "index" : "not_analyzed"
             },
             "hippostdpubwf_creationDate": {
                 "type": "date",
@@ -510,17 +533,20 @@ curl -XPUT 'http://localhost:9200/*/_mapping/FaqDocument' -d '
                 "format": "dateOptionalTime"
             },
             "hippostdpubwf_lastModifiedBy": {
-                "type": "string"
+                "type": "string",
+                "index" : "not_analyzed"
             },
             "hippostdpubwf_publicationDate": {
                 "type": "date",
                 "format": "dateOptionalTime"
             },
             "hippotranslation_locale": {
-                "type": "string"
+                "type": "string",
+                "index" : "not_analyzed"
             },
             "jcr_uuid": {
-                "type": "string"
+                "type": "string",
+                "index" : "not_analyzed"
             },
             "releaseDate": {
                 "type": "date",
