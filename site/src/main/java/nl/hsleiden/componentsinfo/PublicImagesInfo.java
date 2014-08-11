@@ -5,7 +5,6 @@ import nl.hsleiden.utils.Constants.HstParameters;
 import nl.hsleiden.utils.Constants.NodeName;
 import nl.hsleiden.utils.Constants.WidgetConstants;
 
-import org.hippoecm.hst.core.parameters.DropDownList;
 import org.hippoecm.hst.core.parameters.JcrPath;
 import org.hippoecm.hst.core.parameters.Parameter;
 
@@ -14,7 +13,7 @@ import com.tdclighthouse.prototype.utils.Constants.HstParametersConstants;
 
 public interface PublicImagesInfo extends ContentBeanPathInfo {
 
-    @Parameter(name = WidgetConstants.FIELD_USER_MIXIN, defaultValue = "true")
+    @Parameter(name = WidgetConstants.FIELD_USER_MIXIN, defaultValue = "true", displayName=WidgetConstants.FIELD_USER_MIXIN_MESSAGE)
     public Boolean getUseMixin();
     
     @JcrPath(isRelative = false, pickerInitialPath = WidgetConstants.INITIAL_IMAGE_FOLDER_LOCATION, 
@@ -28,8 +27,7 @@ public interface PublicImagesInfo extends ContentBeanPathInfo {
     @Parameter(name = HstParameters.IMAGE_FOLDER_PATH, displayName = "Map afbeelding", defaultValue = WidgetConstants.DEFAULT_IMAGE_FOLDER)
     public String getImageFolderBeanPath();
     
-    @DropDownList(value={"2","3","4"})
-    @Parameter(name = "imagesPerRow", displayName="Beelden per rij", defaultValue="2")
+    @Parameter(name = "imagesPerRow", displayName="Beelden per rij (allen 2, 3 of 4)", defaultValue="2")
     public int getImagesPerRow();
     
     @Parameter(name = WidgetConstants.SIZE, defaultValue = "6", displayName="Beelden per pagina")

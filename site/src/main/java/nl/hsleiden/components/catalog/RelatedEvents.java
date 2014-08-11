@@ -40,16 +40,22 @@ public class RelatedEvents extends RelatedItems {
     @Override
     public Map<String, Object> getModel(HstRequest request, HstResponse response) {
         try {
-            RelatedItemsInfo parametersInfo = this.<RelatedEventsInfo> getComponentParametersInfo(request);
-            if (parametersInfo.getUseMixin()) {
-                HippoBean proxy = BeanUtils.getMixinProxy(request.getRequestContext().getContentBean());
-                if (proxy instanceof RelatedEventsMixin) {
-                    parametersInfo = ((RelatedEventsMixin) proxy).getRelatedEventsCompoundMixin();
-                }
-            }
+            RelatedItemsInfo parametersInfo = getConfiguration(request);
             return populateModel(request, parametersInfo);
         } catch (RepositoryException e) {
             throw new HstComponentException(e.getMessage(), e);
         }
+    }
+
+    private RelatedItemsInfo getConfiguration(HstRequest request) throws RepositoryException {
+        RelatedItemsInfo parametersInfo = this.<RelatedEventsInfo> getComponentParametersInfo(request);
+        if (parametersInfo.getUseMixin() != null && parametersInfo.getUseMixin() 
+                && request.getRequestContext().getContentBean() != null) {
+            HippoBean proxy = BeanUtils.getMixinProxy(request.getRequestContext().getContentBean());
+            if (proxy instanceof RelatedEventsMixin) {
+                parametersInfo = ((RelatedEventsMixin) proxy).getRelatedEventsCompoundMixin();
+            }
+        }
+        return parametersInfo;
     }
 }

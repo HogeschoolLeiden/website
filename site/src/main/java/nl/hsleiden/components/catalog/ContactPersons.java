@@ -67,7 +67,8 @@ public class ContactPersons extends AjaxEnabledComponent {
 
     private ContactPersonsInfo getConfiguration(HstRequest request) throws RepositoryException {
         ContactPersonsInfo paramInfo = this.<ContactPersonsInfo> getComponentParametersInfo(request);
-        if (paramInfo.getUseMixin() != null && paramInfo.getUseMixin()) {
+        if (paramInfo.getUseMixin() != null && paramInfo.getUseMixin() 
+            && request.getRequestContext().getContentBean() != null) {
             HippoBean proxy = BeanUtils.getMixinProxy(request.getRequestContext().getContentBean());
             if (proxy instanceof ContactPersonsMixin) {
                 paramInfo = ((ContactPersonsMixin) proxy).getContactPersonsCompoundMixinBean();
