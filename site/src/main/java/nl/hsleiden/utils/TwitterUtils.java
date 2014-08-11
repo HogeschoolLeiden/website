@@ -10,7 +10,8 @@ import twitter4j.UserMentionEntity;
 public class TwitterUtils {
     
     private static final String TWEET_URL = "<a href={0} target=_blank>{1}</a>";
-    private static final String TWEET_MENTIONED_URL = "<a href=http://twitter.com/#!/search?q={0} target=_blank>{1}</a>";
+    private static final String TWEET_HASH_URL = "<a href=https://twitter.com/#!/search?q=%23{0}&src=typd target=_blank>{1}</a>";
+    private static final String TWEET_MENTIONED_URL = "<a href=https://twitter.com/#!/search?q=from:{0}&src=typd target=_blank>{1}</a>";
 
     private TwitterUtils() {
         super();
@@ -19,7 +20,7 @@ public class TwitterUtils {
 
     public static String convertMessage(String message, EntitySupport entity) {
         MessageFormat urlFormatter = new MessageFormat(TWEET_URL);
-        MessageFormat hashFormatter = new MessageFormat(TWEET_MENTIONED_URL);
+        MessageFormat hashFormatter = new MessageFormat(TWEET_HASH_URL);
         MessageFormat userFormatter = new MessageFormat(TWEET_MENTIONED_URL);
             
         String formattedMessage = message;
@@ -27,8 +28,9 @@ public class TwitterUtils {
         URLEntity[] urlEntities = entity.getURLEntities(); 
         if(urlEntities != null) {
             for(URLEntity urlEntity : urlEntities) {
-                String url = urlEntity.getURL();
-                formattedMessage = formattedMessage.replace(url, urlFormatter.format(new Object[]{url,url}));
+                String query = urlEntity.getText();
+                String url = urlEntity.getDisplayURL();
+                formattedMessage = formattedMessage.replace(url, urlFormatter.format(new Object[]{query,url}));
             }
         }
         
