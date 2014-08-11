@@ -42,17 +42,23 @@ public abstract class RelatedItems extends AjaxEnabledComponent {
 
     public Map<String, Object> getModel(HstRequest request, HstResponse response) {
         try {
-            RelatedItemsInfo parametersInfo = this.<RelatedItemsInfo> getComponentParametersInfo(request);
-            if (parametersInfo.getUseMixin()) {
-                HippoBean proxy = BeanUtils.getMixinProxy(request.getRequestContext().getContentBean());
-                if (proxy instanceof RelatedItemsMixin) {
-                    parametersInfo = ((RelatedItemsMixin) proxy).getRelatedCompoundMixin();
-                }
-            }
+            RelatedItemsInfo parametersInfo = getConfiguration(request);
             return populateModel(request, parametersInfo);
         } catch (RepositoryException e) {
             throw new HstComponentException(e.getMessage(), e);
         }
+    }
+
+    private RelatedItemsInfo getConfiguration(HstRequest request) throws RepositoryException {
+        RelatedItemsInfo parametersInfo = this.<RelatedItemsInfo> getComponentParametersInfo(request);
+        if (parametersInfo.getUseMixin() != null && parametersInfo.getUseMixin() 
+                && request.getRequestContext().getContentBean() != null) {
+            HippoBean proxy = BeanUtils.getMixinProxy(request.getRequestContext().getContentBean());
+            if (proxy instanceof RelatedItemsMixin) {
+                parametersInfo = ((RelatedItemsMixin) proxy).getRelatedCompoundMixin();
+            }
+        }
+        return parametersInfo;
     }
 
     protected Map<String, Object> populateModel(HstRequest request, RelatedItemsInfo parametersInfo) {

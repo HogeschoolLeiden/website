@@ -34,7 +34,7 @@ public class FormComponent extends FormStoringEformComponent {
     @Override
     public FormBean getFormBean(final HstRequest request) {
         FormBean result = null;
-        FormComponentInfo parametersInfo = getFormParametersInfo(request);
+        FormComponentInfo parametersInfo = getConfiguration(request);
 
         HippoBean selectedForm = BeanUtils.getBeanViaAbsolutePath(parametersInfo.getContentBeanPath(), request);      
         if (selectedForm == null || !(selectedForm.isHippoDocumentBean()) || !(selectedForm instanceof FormBean)) {
@@ -53,10 +53,11 @@ public class FormComponent extends FormStoringEformComponent {
 
     }
     
-    private FormComponentInfo getFormParametersInfo(final HstRequest request) {
+    private FormComponentInfo getConfiguration(final HstRequest request) {
         FormComponentInfo parametersInfo = this.<FormComponentInfo> getComponentParametersInfo(request);
         try {
-            if (parametersInfo.getUseMixin()) {
+            if (parametersInfo.getUseMixin() != null && parametersInfo.getUseMixin() 
+                    && request.getRequestContext().getContentBean() != null) {
                 HippoBean proxy = dynamicProxyFactory.getProxy(request.getRequestContext().getContentBean());
 
                 if (proxy instanceof FormComponentMixin) {
@@ -71,7 +72,7 @@ public class FormComponent extends FormStoringEformComponent {
 
     private String getRedirectionSitemap(final HstRequest request) {
         String result = getComponentParameter(request, ATTRIBUTE_DONE_REDIRECT, null);
-        FormComponentInfo parametersInfo = getFormParametersInfo(request);
+        FormComponentInfo parametersInfo = getConfiguration(request);
         String beanPath = parametersInfo.getThanksBeanPath();
         if (beanPath!=null && !beanPath.isEmpty()) {
             result = HslUtils.getMatchingSitemap(request, beanPath);

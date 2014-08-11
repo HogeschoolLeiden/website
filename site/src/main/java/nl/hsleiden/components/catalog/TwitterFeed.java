@@ -78,12 +78,7 @@ public class TwitterFeed extends AjaxEnabledComponent {
             try {
                 queryResult = twitter.search(query);
                 List<Status> statuses = queryResult.getTweets();
-                for (Status status : statuses) {
-                    TweetStatus ts = new TweetStatus();
-                    ts.setStatus(status);
-                    ts.setText(TwitterUtils.convertMessage(status.getText(), status));
-                    result.add(ts);
-                }
+                populateTweetsList(result, statuses);
                 
             } catch (TwitterException e) {
                 LOG.error("Error while retrieving Tweets.", e);
@@ -93,10 +88,20 @@ public class TwitterFeed extends AjaxEnabledComponent {
         }
         return result;
     }
+
+    private void populateTweetsList(List<TweetStatus> result, List<Status> statuses) {
+        for (Status status : statuses) {
+            TweetStatus ts = new TweetStatus();
+            ts.setStatus(status);
+            ts.setText(TwitterUtils.convertMessage(status.getText(), status));
+            result.add(ts);
+        }
+    }
     
     private TwitterFeedInfo getConfiguration(HstRequest request) throws RepositoryException {
         TwitterFeedInfo paramInfo = this.<TwitterFeedInfo> getComponentParametersInfo(request);
-        if (paramInfo.getUseMixin() != null && paramInfo.getUseMixin()) {
+        if (paramInfo.getUseMixin() != null && paramInfo.getUseMixin() 
+                && request.getRequestContext().getContentBean() != null) {
             HippoBean proxy = BeanUtils.getMixinProxy(request.getRequestContext().getContentBean());
             if (proxy instanceof TwitterMixin) {
                 paramInfo = ((TwitterMixin) proxy).getTwitterCompoundMixin();

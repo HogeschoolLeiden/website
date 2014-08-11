@@ -34,7 +34,6 @@ import com.tdclighthouse.prototype.utils.PaginatorWidget;
 @ParametersInfo(type = PublicImagesInfo.class)
 public class PublicImages extends AjaxEnabledComponent {
 
-    
     private static final Logger LOG = LoggerFactory.getLogger(PublicImages.class);
 
     public Map<String, Object> getModel(HstRequest request, HstResponse response) {
@@ -50,7 +49,8 @@ public class PublicImages extends AjaxEnabledComponent {
     protected Map<String, Object> populateModel(HstRequest request, PublicImagesInfo parametersInfo) {
         Map<String, Object> model = new HashMap<String, Object>();
         model.put("info", parametersInfo);
-        model.put("imageFolderBeanPath", BeanUtils.getBeanViaAbsolutePath(parametersInfo.getImageFolderBeanPath(), request));
+        model.put("imageFolderBeanPath",
+                BeanUtils.getBeanViaAbsolutePath(parametersInfo.getImageFolderBeanPath(), request));
         addItemsToModel(request, model, parametersInfo);
         return model;
     }
@@ -58,7 +58,7 @@ public class PublicImages extends AjaxEnabledComponent {
     private void addItemsToModel(HstRequest request, Map<String, Object> model, PublicImagesInfo parametersInfo) {
 
         HippoBean imageFolder = getImageFolder(request, model, parametersInfo);
-        List<ImageSet> items = getImages(imageFolder);
+        List<ImageSet> items = getImages(imageFolder, parametersInfo.getSize());
 
         PaginatorWidget paginator = new PaginatorWidget(items.size(), getPageNumber(request), parametersInfo.getSize());
         model.put(Attributes.PAGINATOR, paginator);
@@ -73,7 +73,7 @@ public class PublicImages extends AjaxEnabledComponent {
     private HippoBean getImageFolder(HstRequest request, Map<String, Object> model, PublicImagesInfo parametersInfo) {
         HippoBean imageFolder;
         String publicPathParameter = request.getParameter(Parameters.IMAGE_FOLDER_PARAM);
-                
+
         if (publicPathParameter != null && !publicPathParameter.isEmpty()
                 && publicPathParameter.startsWith(parametersInfo.getContentBeanPath())) {
             imageFolder = BeanUtils.getBeanViaAbsolutePath(publicPathParameter, request);
@@ -95,10 +95,10 @@ public class PublicImages extends AjaxEnabledComponent {
         }
     }
 
-    private List<ImageSet> getImages(HippoBean imageFolder) {
+    private List<ImageSet> getImages(HippoBean imageFolder, int size) {
         List<ImageSet> allImages = new ArrayList<ImageSet>();
 
-        if (imageFolder instanceof HippoFolderBean) {
+        if (imageFolder instanceof HippoFolderBean && size > 0) {
             HippoFolderBean selectedFolder = (HippoFolderBean) imageFolder;
             addImagesToList(allImages, selectedFolder);
             addFoldersToList(allImages, selectedFolder);
@@ -141,7 +141,8 @@ public class PublicImages extends AjaxEnabledComponent {
 
     private PublicImagesInfo getConfiguration(HstRequest request) throws RepositoryException {
         PublicImagesInfo paramInfo = this.<PublicImagesInfo> getComponentParametersInfo(request);
-        if (paramInfo.getUseMixin() != null && paramInfo.getUseMixin()) {
+        if (paramInfo.getUseMixin() != null && paramInfo.getUseMixin()
+                && request.getRequestContext().getContentBean() != null) {
             HippoBean proxy = BeanUtils.getMixinProxy(request.getRequestContext().getContentBean());
             if (proxy instanceof PublicImagesMixin) {
                 paramInfo = ((PublicImagesMixin) proxy).getPublicImagesCompoundMixinBean();
@@ -151,7 +152,7 @@ public class PublicImages extends AjaxEnabledComponent {
     }
 
     private int getPageNumber(HstRequest request) {
-        int result = 1;      
+        int result = 1;
         String pageParameter = request.getParameter(ParametersConstants.PAGE);
         if (StringUtils.isNotBlank(pageParameter) && StringUtils.isNumeric(pageParameter)) {
             result = Integer.parseInt(pageParameter);
