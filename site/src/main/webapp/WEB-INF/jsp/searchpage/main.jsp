@@ -9,13 +9,15 @@
 <%@ taglib prefix="opw" uri="http://open-web.nl/hippo/prototype"%>
 <%@ taglib prefix="esl" uri="http://open-web.nl/hippo/elasticsearch"%>
 
+<hst:setBundle basename="nl.hsleiden.general.Messages"/>
+
 <div class="container-fluid">
 	<%-- <hst:include ref="top-container" />     --%>
   	<div class="row-fluid">
 		<nav class="span2">
 <div id="searchresult-category-container">
 	<div id="facets">
-			<h4>refine results:</h4>
+			<h4><fmt:message key="refine.results" /></h4>
 			<div class="form">
 				<hst:link siteMapItemRefId="search" var="searchPageUrl" navigationStateful="false"/>
 				<esl:facets facets="${model.facets}" searchPageUrl="${searchPageUrl}" facetsCssClass="fieldset" />

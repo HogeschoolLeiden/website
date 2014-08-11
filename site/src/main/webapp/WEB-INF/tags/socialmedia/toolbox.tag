@@ -79,7 +79,7 @@
     </a>
   </li>
   <c:set var="email">
-    mailto:?subject=Ter kennisneming doorgestuurd&body=De informatie op de volgende pagina is mogelijk voor u van belang:%0D%0A${url }
+    mailto:?subject=<fmt:message key="forward.mail.subject"/>&body=<fmt:message key="forward.mail.body"/>${url }
   </c:set>
   <li>
     <a class="email" title="${forward}" 

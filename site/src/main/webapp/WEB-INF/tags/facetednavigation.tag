@@ -10,8 +10,11 @@
 <%@ attribute name="facetnav" required="true" type="org.hippoecm.hst.content.beans.standard.HippoFacetNavigationBean"%>
 <%@ attribute name="labels" required="false" type="java.util.Map"%>
 
-<%-- <properties:property var="facetnavtitle" name="facet.navigation.title" documentPath="labels"/> --%>
-<c:set var="facetnavtitle" value="refine results:"/>
+<hst:setBundle basename="nl.hsleiden.general.Messages"/>
+
+<c:set var="facetnavtitle">
+  <fmt:message key="refine.results" />
+</c:set>
 
 <div id="searchresult-category-container">
 	<c:if test="${facetnav.count gt 0}">

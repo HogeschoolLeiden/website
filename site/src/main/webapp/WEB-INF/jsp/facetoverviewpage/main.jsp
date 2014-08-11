@@ -7,6 +7,8 @@
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 <%@ taglib prefix="opw" uri="http://open-web.nl/hippo/prototype"%>
 
+<hst:setBundle basename="nl.hsleiden.general.Messages"/>
+
 <div class="container-fluid">
   <hst:include ref="top-container" />    
   	<div class="row-fluid">
