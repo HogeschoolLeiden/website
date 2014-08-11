@@ -59,24 +59,28 @@ public class PublicImages extends AjaxEnabledComponent {
         HippoBean imageFolder = getImageFolder(request, model, parametersInfo);
         List<ImageSet> items = getImages(imageFolder, parametersInfo.getSize());
 
-        PaginatorWidget paginator = new PaginatorWidget(items.size(), OverviewUtils.getPageNumber(request), parametersInfo.getSize());
+        PaginatorWidget paginator = new PaginatorWidget(items.size(), OverviewUtils.getPageNumber(request),
+                parametersInfo.getSize());
         model.put(Attributes.PAGINATOR, paginator);
 
         if (items != null && !items.isEmpty()) {
-            model.put(Attributes.ITEMS, getPageImages(items, OverviewUtils.getPageNumber(request) - 1, parametersInfo.getSize()));
+            model.put(Attributes.ITEMS,
+                    getPageImages(items, OverviewUtils.getPageNumber(request) - 1, parametersInfo.getSize()));
         } else {
             request.setAttribute(WidgetConstants.WEB_MASTER_MESSAGE, "webmaster.noimages.message");
         }
     }
 
     private HippoBean getImageFolder(HstRequest request, Map<String, Object> model, PublicImagesInfo parametersInfo) {
-        HippoBean imageFolder;
+        HippoBean imageFolder = null;
         String publicPathParameter = request.getParameter(Parameters.IMAGE_FOLDER_PARAM);
 
-        if (publicPathParameter != null && !publicPathParameter.isEmpty()
-                && publicPathParameter.startsWith(parametersInfo.getContentBeanPath())) {
-            imageFolder = BeanUtils.getBeanViaAbsolutePath(publicPathParameter, request);
-            handleParentFolderLink(model, parametersInfo, imageFolder);
+        if (publicPathParameter != null && !publicPathParameter.isEmpty()) {
+            if (BeanUtils.getBeanViaAbsolutePath(publicPathParameter, request).getCanonicalPath()
+                    .startsWith(parametersInfo.getContentBeanPath())) {
+                imageFolder = BeanUtils.getBeanViaAbsolutePath(publicPathParameter, request);
+                handleParentFolderLink(model, parametersInfo, imageFolder);
+            }
         } else {
             imageFolder = BeanUtils.getBeanViaAbsolutePath(parametersInfo.getContentBeanPath(), request);
         }
