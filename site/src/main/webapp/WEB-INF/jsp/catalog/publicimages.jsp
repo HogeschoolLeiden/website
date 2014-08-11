@@ -11,13 +11,6 @@
 
 <hst:setBundle basename="nl.hsleiden.channelmanager.Messages, nl.hsleiden.widget.Messages"/>
 
-<hst:defineObjects />
-<c:set var="isCmsRequest" value="${hstRequest.requestContext.cmsRequest}" />
-
-<c:if test="${(empty model.items or fn:length(model.items) eq 0) and not empty webMasterMessage and isCmsRequest}">
-  <p class="error-message"><fmt:message key="${webMasterMessage}" /></p>
-</c:if>
-  
 <c:if test="${not empty model.items and fn:length(model.items) > 0 }">
   <hst:headContribution keyHint="ppinit">
     <script type="text/javascript" src="<hst:link path="/js/pretty-photo-inizialization.js"/>" charset="utf-8"></script>
@@ -57,8 +50,6 @@
             <c:choose>
               <c:when test="${fn:contains(image.name, '/') }">
                 
-                <opw:public-parameter var="hasPageParam" parameterName="page"/>
-                
                 <hst:renderURL var="url">
                   <hst:param name="folder" value="${image.name}"/>
                 </hst:renderURL>
@@ -94,7 +85,14 @@
   </div>
    
   <div class="pager-wrapper">
-      <opw:simplepaginator paginator="${model.paginator}"/>
+      <c:choose>
+        <c:when test="${tag:hasParameter(pageContext.request, 'folder') }">
+          <tag:publicImagesPaginator paginator="${model.paginator}" folder="${tag:getParameter(pageContext.request, 'folder')}"/>
+        </c:when>
+        <c:otherwise>
+          <tag:publicImagesPaginator paginator="${model.paginator}"/>
+        </c:otherwise>
+      </c:choose>
   </div>
   
 </c:if>

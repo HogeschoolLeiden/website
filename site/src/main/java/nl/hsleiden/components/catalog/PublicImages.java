@@ -15,7 +15,6 @@ import nl.hsleiden.utils.Constants.Attributes;
 import nl.hsleiden.utils.Constants.Parameters;
 import nl.hsleiden.utils.Constants.WidgetConstants;
 
-import org.apache.commons.lang3.StringUtils;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.content.beans.standard.HippoDocumentBean;
 import org.hippoecm.hst.content.beans.standard.HippoFolderBean;
@@ -28,7 +27,7 @@ import org.slf4j.LoggerFactory;
 
 import com.tdclighthouse.prototype.components.AjaxEnabledComponent;
 import com.tdclighthouse.prototype.utils.BeanUtils;
-import com.tdclighthouse.prototype.utils.Constants.ParametersConstants;
+import com.tdclighthouse.prototype.utils.OverviewUtils;
 import com.tdclighthouse.prototype.utils.PaginatorWidget;
 
 @ParametersInfo(type = PublicImagesInfo.class)
@@ -60,11 +59,11 @@ public class PublicImages extends AjaxEnabledComponent {
         HippoBean imageFolder = getImageFolder(request, model, parametersInfo);
         List<ImageSet> items = getImages(imageFolder, parametersInfo.getSize());
 
-        PaginatorWidget paginator = new PaginatorWidget(items.size(), getPageNumber(request), parametersInfo.getSize());
+        PaginatorWidget paginator = new PaginatorWidget(items.size(), OverviewUtils.getPageNumber(request), parametersInfo.getSize());
         model.put(Attributes.PAGINATOR, paginator);
 
         if (items != null && !items.isEmpty()) {
-            model.put(Attributes.ITEMS, getPageImages(items, getPageNumber(request) - 1, parametersInfo.getSize()));
+            model.put(Attributes.ITEMS, getPageImages(items, OverviewUtils.getPageNumber(request) - 1, parametersInfo.getSize()));
         } else {
             request.setAttribute(WidgetConstants.WEB_MASTER_MESSAGE, "webmaster.noimages.message");
         }
@@ -149,14 +148,5 @@ public class PublicImages extends AjaxEnabledComponent {
             }
         }
         return paramInfo;
-    }
-
-    private int getPageNumber(HstRequest request) {
-        int result = 1;
-        String pageParameter = request.getParameter(ParametersConstants.PAGE);
-        if (StringUtils.isNotBlank(pageParameter) && StringUtils.isNumeric(pageParameter)) {
-            result = Integer.parseInt(pageParameter);
-        }
-        return result;
     }
 }

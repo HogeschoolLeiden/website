@@ -57,4 +57,16 @@ public class Functions {
         }
         return result;
     }
+    
+    public static boolean hasParameter(HttpServletRequest request, String paramName){
+        boolean result = false;
+        if(request.getParameter(paramName)!=null){
+            result=true;
+        }
+        return result;
+    }
+
+    public static String getParameter(HttpServletRequest request, String paramName){
+        return request.getParameter(paramName);
+    }
 }
