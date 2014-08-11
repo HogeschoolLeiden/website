@@ -39,18 +39,18 @@
         </c:if>
         <div ${loop.index==0 ? 'class="tweet first"': 'class="tweet"'}>
             <div class="image">
-                <img src="${tweet.user.profileImageURL}" alt="profile image" />
+                <img src="${tweet.status.user.profileImageURL}" alt="profile image" />
             </div>
             <div class="user">
-                <a href="http://www.twitter.com/${tweet.user.screenName}" target="_BLANK" class="username">${tweet.user.name}</a>
-                <a href="http://www.twitter.com/${tweet.user.screenName}" target="_BLANK" class="screen-name">@${tweet.user.screenName}</a>
+                <a href="http://www.twitter.com/${tweet.status.user.screenName}" target="_BLANK" class="username">${tweet.status.user.name}</a>
+                <a href="http://www.twitter.com/${tweet.status.user.screenName}" target="_BLANK" class="screen-name">@${tweet.status.user.screenName}</a>
             </div>
-            <span class="date"><fmt:formatDate value="${tweet.createdAt}" pattern="dd MMM"/></span> <br/>
+            <span class="date"><fmt:formatDate value="${tweet.status.createdAt}" pattern="dd MMM"/></span> <br/>
             <span class="text">${tweet.text}</span>
             <div class="action">
-                <span><a href="https://twitter.com/intent/tweet?in_reply_to=${tweet.id}" target="_BLANK">reply</a></span> ·
-                <span><a href="https://twitter.com/intent/retweet?tweet_id=${tweet.id}" target="_BLANK">retweet</a></span> ·
-                <span><a href="https://twitter.com/intent/favorite?tweet_id=${tweet.id}" target="_BLANK">favorite</a></span>
+                <span><a href="https://twitter.com/intent/tweet?in_reply_to=${tweet.status.id}" target="_BLANK">reply</a></span> ·
+                <span><a href="https://twitter.com/intent/retweet?tweet_id=${tweet.status.id}" target="_BLANK">retweet</a></span> ·
+                <span><a href="https://twitter.com/intent/favorite?tweet_id=${tweet.status.id}" target="_BLANK">favorite</a></span>
             </div>
             <div class="clear"></div>
         </div>
