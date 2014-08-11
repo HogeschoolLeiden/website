@@ -29,7 +29,7 @@
                   <opw:assettype asset="${doc.asset }" />
                 </c:set>
 				<li class="${filetype }">
-                  <a href="<hst:link hippobean="${doc.asset }" />" target="_blank" title="<c:out value="${tag:getAssetTitle(doc.asset)}"/>">
+                  <a href="<hst:link hippobean="${doc.asset }" />?forceDownload=true" target="_blank" title="<c:out value="${tag:getAssetTitle(doc.asset)}"/>">
                     <c:out value="${tag:getAssetTitle(doc.asset)}"/>
                      ( ${filetype }, <opw:assetsize asset="${doc.asset }" /> )
                   </a>
