@@ -86,6 +86,10 @@
       <name>landingOverviewItem</name>
       <path>/WEB-INF/tags/landingOverviewItem.tag</path>
     </tag-file>
+    <tag-file>
+      <name>publicImagesPaginator</name>
+      <path>/WEB-INF/tags/publicImagesPaginator.tag</path>
+    </tag-file>
 	
 	<function>
 		<description>get browser title from channel configuration</description>
@@ -117,6 +121,18 @@
       <name>getFirstFlexibleBlockImage</name>
       <function-class>nl.hsleiden.tags.Functions</function-class>
       <function-signature>org.hippoecm.hst.content.beans.standard.HippoBean getFirstFlexibleBlockImage(hslbeans.WebPage)</function-signature>
+    </function>
+
+    <function>
+      <name>hasParameter</name>
+      <function-class>nl.hsleiden.tags.Functions</function-class>
+      <function-signature>boolean hasParameter(javax.servlet.http.HttpServletRequest, java.lang.String)</function-signature>
+    </function>
+
+    <function>
+      <name>getParameter</name>
+      <function-class>nl.hsleiden.tags.Functions</function-class>
+      <function-signature>java.lang.String getParameter(javax.servlet.http.HttpServletRequest, java.lang.String)</function-signature>
     </function>
 
 </taglib>
