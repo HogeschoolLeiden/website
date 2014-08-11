@@ -65,7 +65,8 @@ curl -XPUT 'http://localhost:9200/*/_mapping/NewsPage' -d '
                 "type": "boolean"
             },
             "hippo_paths": {
-                "type": "string"
+                "type": "string",
+                "index" : "not_analyzed"
             },
             "hippostdpubwf_createdBy": {
                 "type": "string"
@@ -162,7 +163,8 @@ curl -XPUT 'http://localhost:9200/*/_mapping/EventPage' -d '
                 "type": "boolean"
             },
             "hippo_paths": {
-                "type": "string"
+                "type": "string",
+                "index" : "not_analyzed"
             },
             "hippostdpubwf_createdBy": {
                 "type": "string"
@@ -265,7 +267,8 @@ curl -XPUT 'http://localhost:9200/*/_mapping/ArticlePage' -d '
                 "type": "boolean"
             },
             "hippo_paths": {
-                "type": "string"
+                "type": "string",
+                "index" : "not_analyzed"
             },
             "hippostdpubwf_createdBy": {
                 "type": "string"
@@ -344,7 +347,8 @@ curl -XPUT 'http://localhost:9200/*/_mapping/WebPage' -d '
                 "type": "boolean"
             },
             "hippo_paths": {
-                "type": "string"
+                "type": "string",
+                "index" : "not_analyzed"
             },
             "hippostdpubwf_createdBy": {
                 "type": "string"
@@ -412,7 +416,8 @@ curl -XPUT 'http://localhost:9200/*/_mapping/OverviewPage' -d '
                 "type": "boolean"
             },
             "hippo_paths": {
-                "type": "string"
+                "type": "string",
+                "index" : "not_analyzed"
             },
             "hippostdpubwf_createdBy": {
                 "type": "string"
@@ -490,7 +495,8 @@ curl -XPUT 'http://localhost:9200/*/_mapping/FaqDocument' -d '
                 "type": "boolean"
             },
             "hippo_paths": {
-                "type": "string"
+                "type": "string",
+                "index" : "not_analyzed"
             },
             "hippostdpubwf_createdBy": {
                 "type": "string"
