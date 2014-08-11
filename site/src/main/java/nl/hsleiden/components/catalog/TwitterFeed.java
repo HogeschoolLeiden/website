@@ -7,9 +7,11 @@ import java.util.Map;
 
 import javax.jcr.RepositoryException;
 
+import nl.hsleiden.beans.TweetStatus;
 import nl.hsleiden.beans.mixin.TwitterMixin;
 import nl.hsleiden.componentsinfo.TwitterFeedInfo;
 import nl.hsleiden.utils.Constants;
+import nl.hsleiden.utils.TwitterUtils;
 import nl.hsleiden.utils.Constants.WidgetConstants;
 
 import org.hippoecm.hst.content.beans.standard.HippoBean;
@@ -63,9 +65,9 @@ public class TwitterFeed extends AjaxEnabledComponent {
         }
     }
     
-    private List<Status> getTweets(String completeQuery, TwitterFeedInfo info, HstRequest request) {
+    private List<TweetStatus> getTweets(String completeQuery, TwitterFeedInfo info, HstRequest request) {
         
-        List<Status> result = new ArrayList<Status>();
+        List<TweetStatus> result = new ArrayList<TweetStatus>();
         
         if(!completeQuery.isEmpty()){
             Twitter twitter = TwitterFactory.getSingleton();
@@ -75,7 +77,13 @@ public class TwitterFeed extends AjaxEnabledComponent {
             QueryResult queryResult = null;
             try {
                 queryResult = twitter.search(query);
-                result = queryResult.getTweets();
+                List<Status> statuses = queryResult.getTweets();
+                for (Status status : statuses) {
+                    TweetStatus ts = new TweetStatus();
+                    ts.setStatus(status);
+                    ts.setText(TwitterUtils.convertMessage(status.getText(), status));
+                    result.add(ts);
+                }
                 
             } catch (TwitterException e) {
                 LOG.error("Error while retrieving Tweets.", e);
