@@ -75,4 +75,9 @@ public class Functions {
         HstRequestContext requestContext = ((HstRequest) request).getRequestContext();
         return requestContext.getResolvedSiteMapItem().getLocalParameter(paramName);
     }
+
+    public static String getComponentConfigParameter(HttpServletRequest request, String paramName){
+        HstRequestContext requestContext = ((HstRequest) request).getRequestContext();
+        return requestContext.getResolvedSiteMapItem().getHstComponentConfiguration().getParameter(paramName);
+    }
 }
