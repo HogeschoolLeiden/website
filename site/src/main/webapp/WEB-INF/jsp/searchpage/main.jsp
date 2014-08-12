@@ -72,6 +72,7 @@
                   </c:if>
 				</article>
 			</c:forEach>
+			<opw:simplepaginator paginator="${model.paginator}"/>
 		</div>
 		<aside class="span2">
 			<hst:include ref="rightTop" />
