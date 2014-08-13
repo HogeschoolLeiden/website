@@ -11,9 +11,7 @@ MAPPING='{
                "max_gram": 20,
                "token_chars": [
                   "letter",
-                  "digit",
-                  "punctuation",
-                  "symbol"
+                  "digit"
                ]
             }
          },
@@ -40,19 +38,29 @@ MAPPING='{
     },
     "mappings": {
         "NewsPage": {
-	        "_all": {
-	            "index_analyzer": "nGram_analyzer",
-	            "search_analyzer": "whitespace_analyzer"
-	         },
             "properties": {
                 "author": {
                     "type": "string"
                 },
                 "browserTitle": {
-                    "type": "string"
+                	"type" : "multi_field",
+                	"path": "just_name",
+                	"fields" : {
+                		"browserTitle" : {"type": "string"},
+                		"nGram" : {"type" : "string", 
+                			"index_analyzer": "nGram_analyzer",
+	            			"search_analyzer": "whitespace_analyzer"}
+                	}
                 },
                 "description": {
-                    "type": "string"
+                	"type" : "multi_field",
+                	"path": "just_name",
+                	"fields" : {
+                		"description" : {"type": "string"},
+                		"nGram" : {"type" : "string", 
+                			"index_analyzer": "nGram_analyzer",
+	            			"search_analyzer": "whitespace_analyzer"}
+                	}
                 },
                 "flexibleblock": {
                     "properties": {
@@ -130,14 +138,28 @@ MAPPING='{
                     "index": "not_analyzed"
                 },
                 "introduction": {
-                    "type": "string"
+                	"type" : "multi_field",
+                	"path": "just_name",
+                	"fields" : {
+                		"introduction" : {"type": "string"},
+                		"nGram" : {"type" : "string", 
+                			"index_analyzer": "nGram_analyzer",
+	            			"search_analyzer": "whitespace_analyzer"}
+                	}
                 },
                 "jcr_uuid": {
                     "type": "string",
                     "index": "not_analyzed"
                 },
                 "keywords": {
-                    "type": "string"
+                	"type" : "multi_field",
+                	"path": "just_name",
+                	"fields" : {
+                		"keywords" : {"type": "string"},
+                		"nGram" : {"type" : "string", 
+                			"index_analyzer": "nGram_analyzer",
+	            			"search_analyzer": "whitespace_analyzer"}
+                	}
                 },
                 "releaseDate": {
                     "type": "date",
@@ -151,14 +173,28 @@ MAPPING='{
                     "index": "not_analyzed"
                 },
                 "subtitle": {
-                    "type": "string"
+                	"type" : "multi_field",
+                	"path": "just_name",
+                	"fields" : {
+                		"subtitle" : {"type": "string"},
+                		"nGram" : {"type" : "string", 
+                			"index_analyzer": "nGram_analyzer",
+	            			"search_analyzer": "whitespace_analyzer"}
+                	}
                 },
                 "thematags": {
                     "type": "string",
                     "index": "not_analyzed"
                 },
                 "title": {
-                    "type": "string"
+                	"type" : "multi_field",
+                	"path": "just_name",
+                	"fields" : {
+                		"title" : {"type": "string"},
+                		"nGram" : {"type" : "string", 
+                			"index_analyzer": "nGram_analyzer",
+	            			"search_analyzer": "whitespace_analyzer"}
+                	}
                 },
                 "type": {
                     "type": "string"
