@@ -14,6 +14,7 @@ import org.hippoecm.hst.configuration.hosting.Mount;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.content.beans.standard.HippoResource;
 import org.hippoecm.hst.core.component.HstRequest;
+import org.hippoecm.hst.core.request.HstRequestContext;
 
 public class Functions {
     
@@ -68,5 +69,15 @@ public class Functions {
 
     public static String getParameter(HttpServletRequest request, String paramName){
         return request.getParameter(paramName);
+    }
+
+    public static String getSitemapConfigParameter(HttpServletRequest request, String paramName){
+        HstRequestContext requestContext = ((HstRequest) request).getRequestContext();
+        return requestContext.getResolvedSiteMapItem().getLocalParameter(paramName);
+    }
+
+    public static String getComponentConfigParameter(HttpServletRequest request, String paramName){
+        HstRequestContext requestContext = ((HstRequest) request).getRequestContext();
+        return requestContext.getResolvedSiteMapItem().getHstComponentConfiguration().getParameter(paramName);
     }
 }

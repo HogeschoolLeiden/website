@@ -15,18 +15,29 @@
       
       <hst:cmseditlink hippobean="${document}" />
       
-      <div class="threeFourth">
-        <h1><c:out value="${document.title}"/></h1>
-        <hst:include ref="content" />
-      </div>
-      
-      <div class="widgets column">
-        <hst:include ref="rightTop" />
-        <hst:include ref="rightBottom" />
-      </div>
-      
-      <div class="clear"></div>
-      
+      <c:choose>
+        <c:when test="${tag:getSitemapConfigParameter(pageContext.request, 'columnNr') eq '3' }">
+          <div class="threeFourth">
+            <h1><c:out value="${document.title}"/></h1>
+            <hst:include ref="content" />
+          </div>
+          
+          <div class="widgets column">
+            <hst:include ref="rightTop" />
+            <hst:include ref="rightBottom" />
+          </div>
+          
+          <div class="clear"></div>
+        </c:when>
+        <c:when test="${tag:getSitemapConfigParameter(pageContext.request, 'columnNr') eq '4' }">
+          <div class="fourFourth">
+            <h1><c:out value="${document.title}"/></h1>
+            <hst:include ref="content"/>
+          </div>
+        </c:when>
+        <c:otherwise></c:otherwise>
+      </c:choose>
+            
       <hst:include ref="contentBottom" />
       
       <tag:toolbox document="${document }"/>
