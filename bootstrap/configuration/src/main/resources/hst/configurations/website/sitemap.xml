@@ -43,14 +43,14 @@
     <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
       <sv:value>hst:pages/actueellandingpage</sv:value>
     </sv:property>
-    <sv:property sv:name="hst:relativecontentpath" sv:type="String">
-      <sv:value>pages/actueel/actueel</sv:value>
-    </sv:property>
-    <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
+    <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
       <sv:value>columnNr</sv:value>
     </sv:property>
-    <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
+    <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
       <sv:value>3</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+      <sv:value>pages/actueel/actueel</sv:value>
     </sv:property>
     <sv:node sv:name="nieuws">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -381,5 +381,38 @@
         <sv:value>pages/service/zoek</sv:value>
       </sv:property>
     </sv:node>
+  </sv:node>
+  <sv:node sv:name="rss-nieuws">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:sitemapitem</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:namedpipeline" sv:type="String">
+      <sv:value>JaxrsRestFeedPipeline</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+      <sv:value>componenten/rss/nieuws</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="rss-peers">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:sitemapitem</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:namedpipeline" sv:type="String">
+      <sv:value>JaxrsRestFeedPipeline</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+      <sv:value>componenten/rss/peers</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="rss-agenda">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:sitemapitem</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:namedpipeline" sv:type="String">
+      <sv:value>JaxrsRestFeedPipeline</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+      <sv:value>componenten/rss/agenda</sv:value>
+    </sv:property>
   </sv:node>
 </sv:node>

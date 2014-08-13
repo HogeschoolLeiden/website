@@ -84,8 +84,9 @@
     <webdriver.version>2.42.2</webdriver.version>
 
     <forge.urlrewriter.version>1.05.01</forge.urlrewriter.version>
-
     <forge.hstpdfrenderer.version>1.01.00</forge.hstpdfrenderer.version>
+    <forge.feed.version>2.02.00</forge.feed.version>
+    
     <jcr.mock.version>1.0-SNAPSHOT</jcr.mock.version>
     <es.version>1.2.2</es.version>
     <twitter4j.version>4.0.2</twitter4j.version>
@@ -260,6 +261,24 @@
         <artifactId>hippo-maven-plugin</artifactId>
         <version>${hippo.maven.plugin.version}</version>
         <scope>provided</scope>
+      </dependency>
+      
+      <!-- Feed plugin dependencies -->
+      <dependency>
+        <groupId>org.onehippo.forge</groupId>
+        <artifactId>feed-cms-addon</artifactId>
+        <version>${forge.feed.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.onehippo.forge</groupId>
+        <artifactId>feed-hst</artifactId>
+        <version>${forge.feed.version}</version>
+        <type>jar</type>
+      </dependency>
+      <dependency>
+        <groupId>rome</groupId>
+        <artifactId>rome</artifactId>
+        <version>1.0</version>
       </dependency>
 
       <!-- integration testing dependencies -->
