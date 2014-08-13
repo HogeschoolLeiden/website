@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<sv:node sv:name="hst:configurations" xmlns:sv="http://www.jcp.org/jcr/sv/1.0">
+<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="hst:configurations">
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>hst:configurations</sv:value>
   </sv:property>
@@ -37,21 +36,11 @@
         <sv:value>hst:sitemapitemhandlers</sv:value>
       </sv:property>
     </sv:node>
-    <sv:node sv:name="hst:catalog">
-      <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hst:catalog</sv:value>
-      </sv:property>
-    </sv:node>
   </sv:node>
   <sv:node sv:name="common">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:configuration</sv:value>
     </sv:property>
-    <sv:node sv:name="hst:sitemap">
-      <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hst:sitemap</sv:value>
-      </sv:property>
-    </sv:node>
     <sv:node sv:name="hst:abstractpages">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:pages</sv:value>
@@ -61,31 +50,11 @@
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:workspace</sv:value>
       </sv:property>
-      <sv:node sv:name="hst:containers" xmlns:sv="http://www.jcp.org/jcr/sv/1.0">
+      <sv:node sv:name="hst:containers">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hst:containercomponentfolder</sv:value>
         </sv:property>
       </sv:node>
-    </sv:node>
-    <sv:node sv:name="hst:pages">
-      <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hst:pages</sv:value>
-      </sv:property>
-    </sv:node>
-    <sv:node sv:name="hst:components">
-      <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hst:components</sv:value>
-      </sv:property>
-    </sv:node>
-    <sv:node sv:name="hst:templates">
-      <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hst:templates</sv:value>
-      </sv:property>
-    </sv:node>
-    <sv:node sv:name="hst:sitemenus">
-      <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hst:sitemenus</sv:value>
-      </sv:property>
     </sv:node>
     <sv:node sv:name="hst:sitemapitemhandlers">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -98,11 +67,11 @@
       </sv:property>
     </sv:node>
   </sv:node>
-  <sv:node sv:name="website">
+  <sv:node sv:name="hsl">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:configuration</sv:value>
     </sv:property>
-    <sv:property sv:multiple="true" sv:name="hst:inheritsfrom" sv:type="String">
+    <sv:property sv:name="hst:inheritsfrom" sv:type="String" sv:multiple="true">
       <sv:value>../common</sv:value>
     </sv:property>
   </sv:node>

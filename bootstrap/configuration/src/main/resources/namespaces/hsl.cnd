@@ -1,10 +1,10 @@
+<'eforms'='http://www.onehippo.org/jcr/eforms/nt/1.0'>
 <'hippo'='http://www.onehippo.org/jcr/hippo/nt/2.0.4'>
 <'hippogallery'='http://www.onehippo.org/jcr/hippogallery/nt/2.0'>
 <'hippostd'='http://www.onehippo.org/jcr/hippostd/nt/2.0'>
 <'hippostdpubwf'='http://www.onehippo.org/jcr/hippostdpubwf/nt/1.0'>
 <'hippotranslation'='http://www.onehippo.org/jcr/hippotranslation/nt/1.0'>
 <'hsl'='http://www.onehippo.org/hsl/nt/1.0'>
-<'eforms'='http://www.onehippo.org/jcr/eforms/nt/1.0'>
 
 [hsl:basedocument] > hippo:document, hippostd:publishableSummary, hippostdpubwf:document
   orderable
@@ -15,110 +15,157 @@
 [hsl:ArticlePage] > hsl:WebPage, hippostd:relaxed, hippotranslation:translated
   orderable
 
-[hsl:OverviewPage] > hsl:WebPage, hippostd:relaxed, hippotranslation:translated
+[hsl:CalendarEventsCompoundMixin] > hippo:compound, hippostd:relaxed
   orderable
-  
-[hsl:ContactPerson] > hsl:basedocument, hippostd:relaxed, hippotranslation:translated
-  orderable
-
-[hsl:Image] > hippo:compound, hippostd:relaxed orderable
-
-[hsl:ImageSet] > hippogallery:imageset, hippogallery:relaxed orderable
-
-[hsl:NewsPage] > hsl:ArticlePage, hippostd:relaxed, hippotranslation:translated orderable
-
-[hsl:EventPage] > hsl:ArticlePage, hippostd:relaxed, hippotranslation:translated orderable
-
-[hsl:FaqDocument] > hsl:ArticlePage, hippostd:relaxed, hippotranslation:translated orderable
-
-[hsl:Paragraph] > hippo:compound, hippostd:relaxed orderable
-
-[hsl:ParagraphImage] > hippo:compound, hippostd:relaxed orderable
-
-[hsl:YoutubePlayerParameters] > hippo:compound, hippostd:relaxed orderable
-
-[hsl:YoutubeUrlParameters] > hippo:compound, hippostd:relaxed orderable
-
-[hsl:Youtube] > hippo:compound, hippostd:relaxed orderable
-
-[hsl:Documents] > hippo:compound, hippostd:relaxed orderable
-  
-[hsl:flexibleblock] > hippo:compound, hippostd:relaxed orderable
-
-[hsl:RelatedCompoundMixin] > hippo:compound, hippostd:relaxed orderable
-
-[hsl:RelatedEventsCompoundMixin] > hippo:compound, hippostd:relaxed orderable
-
-[hsl:CalendarEventsCompoundMixin] > hippo:compound, hippostd:relaxed orderable
-
-[hsl:FormCompoundMixin] > hippo:compound, hippostd:relaxed orderable
-
-[hsl:RelatedFilterParameters] > hippo:compound, hippostd:relaxed orderable
-
-[hsl:FormWidgetParameters] > hippo:compound, hippostd:relaxed orderable
-
-[hsl:RelatedOverviewParameters] > hippo:compound, hippostd:relaxed orderable
-
-[hsl:RelatedSortParameters] > hippo:compound, hippostd:relaxed orderable
-
-[hsl:RelatedWidgetParameters] > hippo:compound, hippostd:relaxed orderable
-
-[hsl:RelatedItemsMixin]
-  mixin
-  + hsl:relatedCompoundMixin (hsl:RelatedCompoundMixin)
-
-[hsl:RelatedEventsMixin]
-  mixin
-  + hsl:relatedEventsCompoundMixin (hsl:RelatedEventsCompoundMixin)
 
 [hsl:CalendarEventsMixin]
   mixin
   + hsl:calendarEventsCompoundMixin (hsl:CalendarEventsCompoundMixin)
-  
-[hsl:doublemailform] > eforms:form
-[hsl:doublemailstoreform] > eforms:form
-[hsl:mailform] > eforms:form
-[hsl:mailstoreform] > eforms:form
 
-[hsl:FormComponentMixin]
-  mixin
-  + hsl:formCompoundMixin (hsl:FormCompoundMixin)
-  
-[hsl:ContactPersonsCompoundMixin] > hippo:compound, hippostd:relaxed orderable
+[hsl:ContactPerson] > hsl:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hsl:ContactPersonsCompoundMixin] > hippo:compound, hippostd:relaxed
+  orderable
 
 [hsl:ContactPersonsMixin]
   mixin
   + hsl:contactPersonsCompoundMixin (hsl:ContactPersonsCompoundMixin)
-  
-[hsl:Quote] > hippo:compound, hippostd:relaxed orderable
 
-[hsl:QuoteParameters] > hippo:compound, hippostd:relaxed orderable
+[hsl:Documents] > hippo:compound, hippostd:relaxed
+  orderable
 
-[hsl:ShareParameters] > hippo:compound, hippostd:relaxed orderable
-  
-[hsl:ExternalLink] > hippo:compound, hippostd:relaxed orderable
+[hsl:EventPage] > hsl:ArticlePage, hippostd:relaxed, hippotranslation:translated
+  orderable
 
-[hsl:ExternalLinks] > hippo:compound, hippostd:relaxed orderable
-  
-[hsl:TwitterCompoundMixin] > hippo:compound, hippostd:relaxed orderable
+[hsl:ExternalLink] > hippo:compound, hippostd:relaxed
+  orderable
 
-[hsl:TwitterExtraParameters] > hippo:compound, hippostd:relaxed orderable
+[hsl:ExternalLinks] > hippo:compound, hippostd:relaxed
+  orderable
 
-[hsl:TwitterParameters] > hippo:compound, hippostd:relaxed orderable
+[hsl:FaqDocument] > hsl:ArticlePage, hippostd:relaxed, hippotranslation:translated
+  orderable
 
-[hsl:TwitterMixin]
+[hsl:FormCompoundMixin] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hsl:FormComponentMixin]
   mixin
-  + hsl:twitterCompoundMixin (hsl:TwitterCompoundMixin)
+  + hsl:formCompoundMixin (hsl:FormCompoundMixin)
 
-[hsl:PublicImages] > hippo:compound, hippostd:relaxed orderable
+[hsl:FormWidgetParameters] > hippo:compound, hippostd:relaxed
+  orderable
 
-[hsl:PublicImagesParameters] > hippo:compound, hippostd:relaxed orderable
+[hsl:Image] > hippo:compound, hippostd:relaxed
+  orderable
 
-[hsl:PublicImagesCompoundMixin] > hippo:compound, hippostd:relaxed orderable
+[hsl:ImageSet] > hippogallery:imageset, hippogallery:relaxed
+  orderable
+
+[hsl:NewsPage] > hsl:ArticlePage, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hsl:OverviewPage] > hsl:WebPage, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hsl:Paragraph] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hsl:ParagraphImage] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hsl:PublicImages] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hsl:PublicImagesCompoundMixin] > hippo:compound, hippostd:relaxed
+  orderable
 
 [hsl:PublicImagesMixin]
   mixin
   + hsl:publicImagesCompoundMixin (hsl:PublicImagesCompoundMixin)
 
+[hsl:PublicImagesParameters] > hippo:compound, hippostd:relaxed
+  orderable
 
+[hsl:Quote] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hsl:QuoteParameters] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hsl:RelatedCompoundMixin] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hsl:RelatedEventsCompoundMixin] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hsl:RelatedEventsMixin]
+  mixin
+  + hsl:relatedEventsCompoundMixin (hsl:RelatedEventsCompoundMixin)
+
+[hsl:RelatedFilterParameters] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hsl:RelatedItemsMixin]
+  mixin
+  + hsl:relatedCompoundMixin (hsl:RelatedCompoundMixin)
+
+[hsl:RelatedOverviewParameters] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hsl:RelatedSortParameters] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hsl:RelatedWidgetParameters] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hsl:ShareParameters] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hsl:TwitterCompoundMixin] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hsl:TwitterExtraParameters] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hsl:TwitterMixin]
+  mixin
+  + hsl:twitterCompoundMixin (hsl:TwitterCompoundMixin)
+
+[hsl:TwitterParameters] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hsl:Youtube] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hsl:YoutubePlayerParameters] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hsl:YoutubeUrlParameters] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hsl:account] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hsl:author] > hsl:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hsl:blogpost] > hsl:basedocument, hippostd:relaxed, hippostd:taggable, hippotranslation:translated
+  orderable
+
+[hsl:doublemailform] > eforms:form
+  orderable
+
+[hsl:doublemailstoreform] > eforms:form
+  orderable
+
+[hsl:flexibleblock] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hsl:mailform] > eforms:form
+  orderable
+
+[hsl:mailstoreform] > eforms:form
+  orderable
 
