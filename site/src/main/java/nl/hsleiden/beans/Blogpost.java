@@ -1,5 +1,5 @@
 package nl.hsleiden.beans;
-/*
+/**
  * Copyright 2014 Hippo B.V. (http://www.onehippo.com)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,7 +13,7 @@ package nl.hsleiden.beans;
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- */
+ **/
 import java.util.Calendar;
 import java.util.List;
 
