@@ -1,4 +1,4 @@
-<%@ include file="/WEB-INF/jsp/include/imports.jsp" %>
+<%@ include file="/WEB-INF/jsp/include/imports.jsp"%>
 <%--
   Copyright 2014 Hippo B.V. (http://www.onehippo.com)
 
@@ -15,11 +15,22 @@
   limitations under the License.
   --%>
 
-<div>
-  <div class="col-md-9">
-    <hst:include ref="detailcontainer"/>
-  </div>
-  <div class="col-md-3">
-    <hst:include ref="sidebarcontainer"/>
+
+<hst:headContributions categoryIncludes="componentsCss" xhtml="true" />
+<hst:headContributions categoryIncludes="globalJavascript" xhtml="true" />
+
+<hst:headContribution keyHint="blogstyling">
+  <link rel="stylesheet" href="<hst:link  path="/css/bootstrap.css"/>"
+    type="text/css" />
+</hst:headContribution>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-9">
+      <hst:include ref="detailcontainer" />
+    </div>
+    <div class="col-md-3">
+      <hst:include ref="sidebarcontainer" />
+    </div>
   </div>
 </div>
