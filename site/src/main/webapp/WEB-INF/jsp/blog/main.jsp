@@ -20,17 +20,8 @@
   limitations under the License.
   --%>
 
-
-<hst:headContributions categoryIncludes="componentsCss" xhtml="true" />
-<hst:headContributions categoryIncludes="globalJavascript" xhtml="true" />
-
-<hst:headContribution keyHint="blogstyling">
-  <link rel="stylesheet" href="<hst:link  path="/css/bootstrap.css"/>"
-    type="text/css" />
-</hst:headContribution>
-
 <div class="container-fluid">
-  <div class="row">
+  <div class="row-fluid">
     <div class="col-md-9">
       <hst:include ref="detailcontainer" />
     </div>
