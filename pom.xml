@@ -90,7 +90,9 @@
     <jcr.mock.version>1.0-SNAPSHOT</jcr.mock.version>
     <es.version>1.2.2</es.version>
     <twitter4j.version>4.0.2</twitter4j.version>
+    <hsl-private-config.version>1.1</hsl-private-config.version>
     <elasticsearch.plugin.version>1.0-SNAPSHOT</elasticsearch.plugin.version>
+    
   </properties>
 
   <repositories>
@@ -192,6 +194,12 @@
         <groupId>org.onehippo.cms7.essentials</groupId>
         <artifactId>hippo-components-plugin-library</artifactId>
         <version>${essentials.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>nl.openweb.hsl</groupId>
+        <artifactId>hsl-private-config</artifactId>
+        <version>${hsl-private-config.version}</version>
       </dependency>
 
       <!-- other predefined runtime scope versioned dependencies -->
