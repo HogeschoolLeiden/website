@@ -19,7 +19,7 @@ import javax.jcr.query.Query;
 import javax.jcr.query.QueryManager;
 import javax.jcr.query.QueryResult;
 
-import nl.hsleiden.beans.EventPageBean;
+import hslbeans.EventPage;
 import nl.hsleiden.components.catalog.EventCalendar.Event;
 import nl.hsleiden.componentsinfo.EventCalendarInfo;
 import nl.hsleiden.utils.Constants;
@@ -114,7 +114,7 @@ public class EventCalendarTest {
         MockHstRequest request = getMockRequest(calendarInfo, session, createMockHippoBeanContentBean(CONTENT_BEAN_PATH));
         MockHstRequestContext requestContext = (MockHstRequestContext) request.getRequestContext();
         Map<String, Class<? extends HippoBean>> jcrPrimaryNodeTypeBeanPairs = new HashMap<String, Class<? extends HippoBean>>();
-        jcrPrimaryNodeTypeBeanPairs.put(EVENT_PAGE_TYPE, EventPageBean.class);
+        jcrPrimaryNodeTypeBeanPairs.put(EVENT_PAGE_TYPE, EventPage.class);
         requestContext.setDefaultHstQueryManager(new HstQueryManagerImpl(session, new ObjectConverterImpl(
                 jcrPrimaryNodeTypeBeanPairs, null), null));
         @SuppressWarnings("unchecked")
@@ -139,7 +139,7 @@ public class EventCalendarTest {
         MockHstRequest request = getMockRequest(calendarInfo, session, createMockArticlePageContentBean(CONTENT_BEAN_PATH));
         MockHstRequestContext requestContext = (MockHstRequestContext) request.getRequestContext();
         Map<String, Class<? extends HippoBean>> jcrPrimaryNodeTypeBeanPairs = new HashMap<String, Class<? extends HippoBean>>();
-        jcrPrimaryNodeTypeBeanPairs.put(EVENT_PAGE_TYPE, EventPageBean.class);
+        jcrPrimaryNodeTypeBeanPairs.put(EVENT_PAGE_TYPE, EventPage.class);
         requestContext.setDefaultHstQueryManager(new HstQueryManagerImpl(session, new ObjectConverterImpl(
                 jcrPrimaryNodeTypeBeanPairs, null), null));
         @SuppressWarnings("unchecked")
@@ -164,7 +164,7 @@ public class EventCalendarTest {
         MockHstRequest request = getMockRequest(calendarInfo, session, createMockHippoBeanContentBean(CONTENT_BEAN_PATH));
         MockHstRequestContext requestContext = (MockHstRequestContext) request.getRequestContext();
         Map<String, Class<? extends HippoBean>> jcrPrimaryNodeTypeBeanPairs = new HashMap<String, Class<? extends HippoBean>>();
-        jcrPrimaryNodeTypeBeanPairs.put(EVENT_PAGE_TYPE, EventPageBean.class);
+        jcrPrimaryNodeTypeBeanPairs.put(EVENT_PAGE_TYPE, EventPage.class);
         requestContext.setDefaultHstQueryManager(new HstQueryManagerImpl(session, new ObjectConverterImpl(
                 jcrPrimaryNodeTypeBeanPairs, null), null));
         @SuppressWarnings("unchecked")
@@ -264,7 +264,7 @@ public class EventCalendarTest {
     private HstLinkCreator createMockLinkCreator() {
         HstLinkCreator linkCreator = EasyMock.createMock(HstLinkCreator.class);
         EasyMock.expect(
-                linkCreator.create(EasyMock.anyObject(EventPageBean.class), EasyMock.anyObject(HstRequestContext.class)))
+                linkCreator.create(EasyMock.anyObject(EventPage.class), EasyMock.anyObject(HstRequestContext.class)))
                 .andReturn(createMockHstLink("/my/link/")).anyTimes();
         EasyMock.replay(linkCreator);
         return linkCreator;

@@ -13,7 +13,7 @@ import java.util.Map;
 
 import javax.jcr.RepositoryException;
 
-import nl.hsleiden.beans.EventPageBean;
+import hslbeans.EventPage;
 import nl.hsleiden.beans.mixin.EventsCalendarMixin;
 import nl.hsleiden.componentsinfo.EventCalendarInfo;
 import nl.hsleiden.utils.Constants;
@@ -100,7 +100,7 @@ public class EventCalendar extends AjaxEnabledComponent {
         Date startDate = format.parse(request.getParameter("start"));
         Date endDate = format.parse(request.getParameter("end"));
 
-        HstQuery query = request.getRequestContext().getQueryManager().createQuery(scope, EventPageBean.class);
+        HstQuery query = request.getRequestContext().getQueryManager().createQuery(scope, EventPage.class);
 
         Filter baseFilter = getDateFilter(startDate, endDate, query);
         addTaggingFilter(baseFilter, query, request, info);
@@ -115,7 +115,7 @@ public class EventCalendar extends AjaxEnabledComponent {
         HstRequestContext requestContext = request.getRequestContext();
         HstLinkCreator linkCreator = requestContext.getHstLinkCreator();
         for (HippoBeanIterator hippoBeans = queryResult.getHippoBeans(); hippoBeans.hasNext();) {
-            EventPageBean event = (EventPageBean) hippoBeans.nextHippoBean();
+            EventPage event = (EventPage) hippoBeans.nextHippoBean();
             HstLink link = linkCreator.create(event, requestContext);
             result.add(new Event(event.getTitle(), link.toUrlForm(requestContext, false), format.format(event
                     .getEventDate().getTime())));
