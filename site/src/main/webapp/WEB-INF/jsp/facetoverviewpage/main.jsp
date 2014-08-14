@@ -30,7 +30,7 @@
                 <tag:highlightedItem highLightedItem="${model.document.highLightedItem }"/>
               </c:if>
 
-              <c:if test="${not empty model.document.rssItem }">
+              <c:if test="${hst:isReadable(model.document, 'rssItem') && not empty model.document.rssItem }">
                 <c:set var="rssLink">
                   <hst:link var="link" hippobean="${model.document.rssItem}"/>
                 </c:set>

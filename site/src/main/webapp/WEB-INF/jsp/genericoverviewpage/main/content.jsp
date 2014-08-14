@@ -9,7 +9,16 @@
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 
 <tag:overviewIntrodution doc="${document }"></tag:overviewIntrodution>
-        
+
+<c:if test="${hst:isReadable(document, 'rssItem') && not empty document.rssItem }">
+  <c:set var="rssLink">
+    <hst:link var="link" hippobean="${document.rssItem}"/>
+  </c:set>
+  <hst:headContribution keyHint="rssItem">
+    <link title="${document.rssItem.title}" rel="alternate" type="application/rss+xml" href="${rssLink}"/>
+  </hst:headContribution>
+</c:if>
+                      
 <c:forEach var="item" items="${items}">
     <hst:link var="link" hippobean="${item}"/>
     <article class="well well-large">
