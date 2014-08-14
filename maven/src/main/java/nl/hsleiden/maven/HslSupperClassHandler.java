@@ -66,8 +66,10 @@ public class HslSupperClassHandler extends SupperClassHandler {
                 result = new ClassReference(TdcDocument.class);
             } else {
                 List<String> supertypes = contentTypeBean.getSupertypes();
-                result = extendsGeneratedBean(packageName, supertypes);
-
+                result = extendsInProjectBean(supertypes);
+                if (result == null) {
+                    result = extendsGeneratedBean(packageName, supertypes);
+                }
                 if (result == null) {
                     result = extendsExistingBeans(null, supertypes);
                 }
@@ -104,6 +106,17 @@ public class HslSupperClassHandler extends SupperClassHandler {
         return result;
     }
 
+    private ClassReference extendsInProjectBean(List<String> supertypes) {
+        ClassReference result = null;
+        for (String superType : supertypes) {
+            if (getBeansInProject().containsKey(superType)) {
+                HippoBeanClass beanClass = getBeansInProject().get(superType);
+                result = new ClassReference(beanClass.getFullyQualifiedName());
+            }
+        }
+        return result;
+    }
+    
     private ClassReference extendsGeneratedBean(String packageName, List<String> supertypes) {
         ClassReference result = null;
         for (String superType : supertypes) {
