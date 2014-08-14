@@ -1,6 +1,6 @@
 package nl.hsleiden.beans;
 
-import hslbeans.NewsPage;
+import hslbeans.WebPage;
 
 import java.util.Calendar;
 
@@ -12,8 +12,8 @@ import org.onehippo.forge.feed.api.transform.CalendarToDateConverter;
 import org.onehippo.forge.feed.api.transform.DocumentLinkResolver;
 import org.onehippo.forge.feed.api.transform.rss.StringToDescriptionConverter;
 
-@Node(jcrType = "hsl:NewsPage")
-public class NewsPageBean extends NewsPage{
+@Node(jcrType = "hsl:WebPage")
+public class WebPageBean extends WebPage {
     
     @Override
     @SyndicationElement(type = FeedType.RSS, name = "title")
