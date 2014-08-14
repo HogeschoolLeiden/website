@@ -29,8 +29,19 @@
               <c:if test="${pageContext.request.requestContext.contentBean['class'].name == 'hslbeans.OverviewPage'}">
                 <tag:highlightedItem highLightedItem="${model.document.highLightedItem }"/>
               </c:if>
+
+              <c:if test="${not empty model.document.rssItem }">
+                <c:set var="rssLink">
+                  <hst:link var="link" hippobean="${model.document.rssItem}"/>
+                </c:set>
+                <hst:headContribution keyHint="rssItem">
+                  <link title="${model.document.rssItem.title}" rel="alternate" type="application/rss+xml" href="${rssLink}"/>
+                </hst:headContribution>
+              </c:if>
               	
 			  <c:forEach var="item" items="${model.items}">
+                
+                
 				<hst:link var="link" hippobean="${item}" />
 				<article class="well well-large">
 				  <hst:cmseditlink hippobean="${item}" />
