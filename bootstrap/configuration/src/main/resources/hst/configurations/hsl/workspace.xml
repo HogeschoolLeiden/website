@@ -893,88 +893,6 @@
         </sv:property>
       </sv:node>
     </sv:node>
-    <sv:node sv:name="base">
-      <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hst:containercomponentfolder</sv:value>
-      </sv:property>
-      <sv:node sv:name="top">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hst:containercomponent</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:xtype" sv:type="String">
-          <sv:value>HST.Span</sv:value>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="menu">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hst:containercomponent</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:componentclassname" sv:type="String">
-          <sv:value>org.onehippo.cms7.essentials.components.EssentialsMenuComponent</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
-          <sv:value>selectedMenu</sv:value>
-          <sv:value>level</sv:value>
-          <sv:value>menu</sv:value>
-          <sv:value>menuName</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
-          <sv:value>on</sv:value>
-          <sv:value>1</sv:value>
-          <sv:value>main</sv:value>
-          <sv:value>main</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:template" sv:type="String">
-          <sv:value>base-top-menu</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:xtype" sv:type="String">
-          <sv:value>HST.Item</sv:value>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="footer">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hst:containercomponent</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:xtype" sv:type="String">
-          <sv:value>HST.vBox</sv:value>
-        </sv:property>
-        <sv:node sv:name="content">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>hst:containeritemcomponent</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:template" sv:type="String">
-            <sv:value>base-footer-content</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:xtype" sv:type="String">
-            <sv:value>HST.Item</sv:value>
-          </sv:property>
-        </sv:node>
-      </sv:node>
-    </sv:node>
-    <sv:node sv:name="homepage">
-      <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hst:containercomponentfolder</sv:value>
-      </sv:property>
-      <sv:node sv:name="main">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hst:containercomponent</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:xtype" sv:type="String">
-          <sv:value>HST.vBox</sv:value>
-        </sv:property>
-        <sv:node sv:name="content">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>hst:containeritemcomponent</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:template" sv:type="String">
-            <sv:value>homepage-main-content</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:xtype" sv:type="String">
-            <sv:value>HST.Item</sv:value>
-          </sv:property>
-        </sv:node>
-      </sv:node>
-    </sv:node>
     <sv:node sv:name="bloglistdetail">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:containercomponentfolder</sv:value>
@@ -1011,7 +929,7 @@
             <sv:value>desc</sv:value>
             <sv:value>on</sv:value>
             <sv:value>off</sv:value>
-            <sv:value>1</sv:value>
+            <sv:value>2</sv:value>
             <sv:value/>
           </sv:property>
           <sv:property sv:name="hst:template" sv:type="String">

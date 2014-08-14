@@ -1,20 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="blogFacets">
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node sv:name="blogFacets" xmlns:sv="http://www.jcp.org/jcr/sv/1.0">
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>hippofacnav:facetnavigation</sv:value>
   </sv:property>
   <sv:property sv:name="hippo:count" sv:type="Long">
-    <sv:value>2</sv:value>
+    <sv:value>5</sv:value>
   </sv:property>
   <sv:property sv:name="hippo:docbase" sv:type="String">
     <sv:value>980777db-0ce3-48a4-99a5-1dc3df5da8e5</sv:value>
   </sv:property>
-  <sv:property sv:name="hippofacnav:facetnodenames" sv:type="String" sv:multiple="true">
+  <sv:property sv:multiple="true" sv:name="hippofacnav:facetnodenames" sv:type="String">
     <sv:value>Authors</sv:value>
     <sv:value>Categories</sv:value>
     <sv:value>Tags</sv:value>
     <sv:value>Date</sv:value>
   </sv:property>
-  <sv:property sv:name="hippofacnav:facets" sv:type="String" sv:multiple="true">
+  <sv:property sv:multiple="true" sv:name="hippofacnav:facets" sv:type="String">
     <sv:value>hsl:authornames</sv:value>
     <sv:value>hsl:categories</sv:value>
     <sv:value>hippostd:tags</sv:value>
@@ -26,16 +27,16 @@
                 {name:'Last year',resolution:'day', begin:-365, end:1}
                 ]</sv:value>
   </sv:property>
-  <sv:property sv:name="hippofacnav:filters" sv:type="String" sv:multiple="true">
+  <sv:property sv:multiple="true" sv:name="hippofacnav:filters" sv:type="String">
     <sv:value>jcr:primaryType = hsl:blogpost</sv:value>
   </sv:property>
   <sv:property sv:name="hippofacnav:limit" sv:type="Long">
     <sv:value>100</sv:value>
   </sv:property>
-  <sv:property sv:name="hippofacnav:sortby" sv:type="String" sv:multiple="true">
+  <sv:property sv:multiple="true" sv:name="hippofacnav:sortby" sv:type="String">
     <sv:value>hsl:publicationdate</sv:value>
   </sv:property>
-  <sv:property sv:name="hippofacnav:sortorder" sv:type="String" sv:multiple="true">
+  <sv:property sv:multiple="true" sv:name="hippofacnav:sortorder" sv:type="String">
     <sv:value>descending</sv:value>
   </sv:property>
 </sv:node>

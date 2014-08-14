@@ -169,6 +169,29 @@
           <sv:value>required</sv:value>
         </sv:property>
       </sv:node>
+      <sv:node sv:name="rssItem">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hipposysedit:field</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:mandatory" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:multiple" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:ordered" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:path" sv:type="String">
+          <sv:value>hsl:rssItem</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:primary" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:type" sv:type="String">
+          <sv:value>hippo:mirror</sv:value>
+        </sv:property>
+      </sv:node>
     </sv:node>
   </sv:node>
   <sv:node sv:name="hipposysedit:prototypes">
@@ -254,6 +277,14 @@
         <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
       </sv:node>
       <sv:node sv:name="hsl:highLightedItem">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hippo:mirror</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:docbase" sv:type="String">
+          <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="hsl:rssItem">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hippo:mirror</sv:value>
         </sv:property>
@@ -608,6 +639,40 @@
           </sv:property>
           <sv:property sv:name="last.visited.nodetypes" sv:type="String">
             <sv:value>hsl:WebPage</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="rssItem">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>frontend:plugin</sv:value>
+        </sv:property>
+        <sv:property sv:name="caption" sv:type="String">
+          <sv:value>RSS Items</sv:value>
+        </sv:property>
+        <sv:property sv:name="field" sv:type="String">
+          <sv:value>rssItem</sv:value>
+        </sv:property>
+        <sv:property sv:name="hint" sv:type="String">
+          <sv:value>Select the rss document for these overview items</sv:value>
+        </sv:property>
+        <sv:property sv:name="plugin.class" sv:type="String">
+          <sv:value>org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin</sv:value>
+        </sv:property>
+        <sv:property sv:name="wicket.id" sv:type="String">
+          <sv:value>${cluster.id}.left.item</sv:value>
+        </sv:property>
+        <sv:node sv:name="cluster.options">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>frontend:pluginconfig</sv:value>
+          </sv:property>
+          <sv:property sv:name="base.uuid" sv:type="String">
+            <sv:value>0ffc4277-7392-460c-85b0-4e3ed38b4c38</sv:value>
+          </sv:property>
+          <sv:property sv:name="last.visited.enabled" sv:type="String">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="last.visited.nodetypes" sv:type="String">
+            <sv:value>feed:rss20descriptor</sv:value>
           </sv:property>
         </sv:node>
       </sv:node>
