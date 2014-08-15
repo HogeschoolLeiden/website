@@ -56,17 +56,6 @@
     </ul>
   </div>
   
-  <div class="search-box">
-    
-    <fmt:message var="submitText" key="search.submit.text" /> <hst:link var="link" siteMapItemRefId="search"/>
-    <form class="navbar-search form-search" action="${link}" method="get">
-      <p>
-        <input type="text" name="q" class="search-query input-xlarge" placeholder="${submitText}" required="required" />
-        <button class="btn btn-primary inline" type="submit" value="${submitText}">${submitText}</button>
-      </p>
-    </form> 
-
-  </div>
-  <div class="clear"></div>   
+  <hst:include ref="searchbox"/>   
 </div>
 
