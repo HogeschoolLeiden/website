@@ -22,7 +22,7 @@ public interface TwitterFeedInfo {
     @Parameter(name = "limit", displayName = "Max aantal tweets", defaultValue = "5")
     int getLimit();
 
-    @Parameter(name = "followText", displayName = "Volg ons tekst", defaultValue = "Volg ons op: ")
+    @Parameter(name = "followText", displayName = "Volg ons tekst", defaultValue = "")
     String getFollowText();
 
     @Parameter(name = "horizontal", displayName = "Tonen horizontaal", defaultValue = "false")

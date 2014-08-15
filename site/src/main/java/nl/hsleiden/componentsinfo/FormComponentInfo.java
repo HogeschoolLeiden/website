@@ -12,7 +12,7 @@ public interface FormComponentInfo {
     public Boolean getUseMixin();
     
     @Parameter(name = Constants.WidgetConstants.CONTENT_BEAN_PATH, defaultValue = "")
-    @JcrPath(isRelative = false, pickerInitialPath = Constants.WidgetConstants.FORMS_INITIAL_LOCATION, pickerRemembersLastVisited=false, pickerSelectableNodeTypes = {"ef:form"})
+    @JcrPath(isRelative = false, pickerInitialPath = Constants.WidgetConstants.FORMS_INITIAL_LOCATION, pickerRemembersLastVisited=false, pickerSelectableNodeTypes = {"eforms:form"})
     public String getContentBeanPath();
 
     @Parameter(name = Constants.WidgetConstants.THANKS_BEAN_PATH, defaultValue = "")
