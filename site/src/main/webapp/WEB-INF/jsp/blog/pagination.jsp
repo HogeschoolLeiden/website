@@ -21,8 +21,13 @@
   --%>
 
 <%--@elvariable id="pageable" type="org.onehippo.cms7.essentials.components.paging.Pageable"--%>
+
+
+<hst:setBundle basename="nl.hsleiden.channelmanager.Messages, nl.hsleiden.blog.Messages"/>
+
+
 <ul class="pagination">
-  <li class="disabled"><a href="#">${pageable.total} document(s)</a></li>
+  <li class="disabled"><a href="#">${pageable.total} <fmt:message key="paginated.items"/></a></li>
   <c:forEach var="pageNr" items="${pageable.pageNumbersArray}" varStatus="index">
     <hst:renderURL var="pageUrl">
       <hst:param name="page" value="${pageNr}"/>
@@ -33,7 +38,7 @@
         <hst:param name="page" value="${pageable.previousPage}"/>
         <hst:param name="pageSize" value="${pageable.pageSize}"/>
       </hst:renderURL>
-      <li><a href="${pageUrlPrevious}">previous</a></li>
+      <li><a href="${pageUrlPrevious}"><fmt:message key="blog.paginator.previous" /></a></li>
     </c:if>
     <c:choose>
       <c:when test="${pageable.currentPage eq pageNr}">
@@ -48,7 +53,7 @@
         <hst:param name="page" value="${pageable.nextPage}"/>
         <hst:param name="pageSize" value="${pageable.pageSize}"/>
       </hst:renderURL>
-      <li><a href="${pageUrlNext}">next</a></li>
+      <li><a href="${pageUrlNext}"><fmt:message key="blog.paginator.next" /></a></li>
     </c:if>
   </c:forEach>
 </ul>

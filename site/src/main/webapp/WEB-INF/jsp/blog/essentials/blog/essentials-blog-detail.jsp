@@ -21,9 +21,12 @@
   --%>
 
 <%--@elvariable id="document" type="nl.hsleiden.beans.Blogpost"--%>
+
+<hst:setBundle basename="nl.hsleiden.channelmanager.Messages, nl.hsleiden.blog.Messages"/>
+
 <div class="main-column">
   <h1><c:out value="${document.title}"/></h1>
-  <h2>by: <c:out value="${document.author}"/></h2>
+  <h2><fmt:message key="before.author.name"/> <c:out value="${document.author}"/></h2>
   <strong>
     <c:if test="${document.publicationDate ne null}">
       <fmt:formatDate type="date" pattern="yyyy-MM-dd" value="${document.publicationDate.time}"/>

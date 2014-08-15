@@ -23,10 +23,13 @@
 <%--@elvariable id="item" type="nl.hsleiden.beans.Blogpost"--%>
 <%--@elvariable id="author" type="nl.hsleiden.beans.Author"--%>
 <%--@elvariable id="pageable" type="org.onehippo.cms7.essentials.components.paging.Pageable"--%>
+
+<hst:setBundle basename="nl.hsleiden.channelmanager.Messages, nl.hsleiden.blog.Messages"/>
+
 <div class="panel panel-default">
   <c:if test="${(pageable ne null)}">
     <div class="panel-heading">
-      <h3 class="panel-title">More by ${author.fullName}</h3>
+      <h3 class="panel-title"><fmt:message key="more.by"/> ${author.fullName}</h3>
     </div>
     <c:choose>
       <c:when test="${pageable.total gt 0}">
