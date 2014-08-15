@@ -64,4 +64,5 @@
         </div>
     </c:if>
   </div>
+  <div class="clear"></div>
 </c:if>
