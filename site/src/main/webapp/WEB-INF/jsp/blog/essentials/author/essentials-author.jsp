@@ -21,4 +21,38 @@
   --%>
 
 <%--@elvariable id="document" type="nl.hsleiden.beans.Author"--%>
-<h1><c:out value="${document.fullName}"/></h1>
+
+<hst:setBundle basename="nl.hsleiden.channelmanager.Messages, nl.hsleiden.blog.Messages"/>
+
+<div class="author info">
+  <h2><fmt:message key="more.about"/><c:out value="${model.author.fullName}"/></h2>
+
+  <div class="media">
+    <c:if test="${not empty model.author.image }">
+      <div class="pull-left">
+        <hst:link var="image" hippobean="${model.author.image.listImageMedium}"/>
+        <img class="media-object" src="${image}" alt="${model.author.fullName}">
+      </div>
+    </c:if>
+    
+    <div class="media-body">
+      <h4 class="media-heading">
+        <c:out value="${model.author.fullName}"/>
+      </h4>
+
+      <p><i><c:out value="${model.author.role}"/></i></p>
+    </div>
+
+    <hst:html hippohtml="${model.author.content}"></hst:html>
+    <c:if test="${fn:length(model.author.accounts)>0}">
+      <div class="social-links">
+        <c:forEach var="item" items="${model.author.accounts}" varStatus="zebra">
+          <a href="${item.link}" class="${item.type}" title="<fmt:message key="follow.author"/> ${item.type}" target="_blank">
+          </a>
+        </c:forEach>
+        <div class="clear"></div>
+      </div>
+    </c:if>
+        
+  </div>
+</div>

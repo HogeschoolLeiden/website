@@ -16,12 +16,13 @@ package nl.hsleiden.beans;
  * limitations under the License.
  **/
 
+import java.util.List;
+
 import org.hippoecm.hst.content.beans.Node;
 import org.hippoecm.hst.content.beans.standard.HippoDocument;
-import org.onehippo.cms7.essentials.components.model.AuthorEntry;
-import org.hippoecm.hst.content.beans.standard.HippoGalleryImage;
+import org.hippoecm.hst.content.beans.standard.HippoGalleryImageSetBean;
 import org.hippoecm.hst.content.beans.standard.HippoHtml;
-
+import org.onehippo.cms7.essentials.components.model.AuthorEntry;
 import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
 
 @HippoEssentialsGenerated(internalName = "hsl:author")
@@ -50,8 +51,13 @@ public class Author extends HippoDocument implements AuthorEntry {
     }
 
     @HippoEssentialsGenerated(internalName = "hsl:image")
-    public HippoGalleryImage getImage() {
-        return getLinkedBean(IMAGE, HippoGalleryImage.class);
+    public HippoGalleryImageSetBean getImage() {
+        return getLinkedBean(IMAGE, HippoGalleryImageSetBean.class);
+    }
+    
+    @HippoEssentialsGenerated(internalName = "hsl:account")
+    public List<Account> getAccounts() {
+        return getChildBeansByName(ACCOUNTS, Account.class);
     }
 
 }
