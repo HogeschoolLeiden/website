@@ -22,9 +22,7 @@
 
 <%--@elvariable id="pageable" type="org.onehippo.cms7.essentials.components.paging.Pageable"--%>
 
-
 <hst:setBundle basename="nl.hsleiden.channelmanager.Messages, nl.hsleiden.blog.Messages"/>
-
 
 <ul class="pagination">
   <li class="disabled"><a href="#">${pageable.total} <fmt:message key="paginated.items"/></a></li>
