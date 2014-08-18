@@ -7,23 +7,74 @@
 <%@ taglib prefix="hst" uri="http://www.hippoecm.org/jsp/hst/core"%>
 <%@ taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml"%>
 <hst:setBundle basename="nl.hsleiden.general.Messages" />
-<hst:resourceURL fullyQualified="true" var="resourceUrl"/>
-<%-- <script type="text/javascript">
-$.getJSON( "${resourceUrl}", function( data ) {
-	  alert(data);
-	});
-</script> --%>
+
+
+<hst:resourceURL var="resourceUrl"/>
+<hst:link path="/js/typeahead.bundle.js" var="typeaheadLink" />
+<hst:headContribution category="scripts" keyHint="typeahead.bundle">
+	<script type="text/javascript" src="${typeaheadLink}"></script>
+</hst:headContribution>
+
+<hst:headContribution category="scripts" keyHint="typeahead.config">
+	<script type="text/javascript">
+			
+			
+			$('.typeahead').typeahead({
+			  hint: true,
+			  highlight: true,
+			  minLength: 1
+			},
+			{
+			  name: 'Search',
+			  displayKey: 'value',
+			  source: function(q, cb) {
+				    var matches, substrRegex;
+					 
+				    matches = [];
+				    var url = '${resourceUrl}';
+				    if (url.indexOf('?') > 0) {
+						url = url.substring(0, url.indexOf('?')) + '?q=' + q;
+				    } else {
+				    	url = url + '?q=' + q;
+				    }
+				    
+				 	var strs;
+					$.ajax({
+						  dataType: "json",
+						  url: url,
+						  async: false,
+						  success: function(data) {
+							  strs = data;
+						  }
+					});
+				    substrRegex = new RegExp(q, 'i');
+				 
+				    $.each(strs, function(i, str) {
+				      if (substrRegex.test(str)) {
+				        matches.push({ value: str });
+				      }
+				    });
+				 
+				    cb(matches);
+				  }
+			});
+	</script>
+</hst:headContribution>
 <div class="search-box">
 
 	<fmt:message var="submitText" key="search.submit.text" />
 	<hst:link var="link" siteMapItemRefId="search" />
 	<form class="navbar-search form-search" action="${link}" method="get">
 		<p>
-		
-			<input type="text" name="q" class="search-query input-xlarge"
-				placeholder="${fn:escapeXml(submitText)}" required="required" ${not empty model.query? 'value=\"' : ''}${model.query}${not empty model.query? '\"' : ''} }/>
+
+			<input type="text" name="q"
+				class="search-query input-xlarge typeahead"
+				placeholder="${fn:escapeXml(submitText)}" required="required"
+				${not empty model.query? 'value=\"' : ''} ${model.query} ${not empty model.query? '\"' : ''} }/>
 			<button class="btn btn-primary inline" type="submit"
-				value="${submitText}"><c:out value="${submitText}"/></button>
+				value="${submitText}">
+				<c:out value="${submitText}" />
+			</button>
 		</p>
 	</form>
 
