@@ -4,6 +4,7 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="hst" uri="http://www.hippoecm.org/jsp/hst/core" %>
 <%@ taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml" %>
+<%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 <%--
   Copyright 2014 Hippo B.V. (http://www.onehippo.com)
 
@@ -33,5 +34,7 @@
     </c:if>
   </strong>
   <p><c:out value="${document.introduction}"/></p>
-  <div><hst:html hippohtml="${document.content}"/></div>
+  
+  <tag:flexibleblock content="${document.flexibleblock }"/>
+  
 </div>

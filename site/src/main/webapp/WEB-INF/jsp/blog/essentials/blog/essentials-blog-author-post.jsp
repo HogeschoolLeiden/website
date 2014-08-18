@@ -26,6 +26,7 @@
 
 <hst:setBundle basename="nl.hsleiden.channelmanager.Messages, nl.hsleiden.blog.Messages"/>
 
+<div class="other blogs author">
 <div class="panel panel-default">
   <c:if test="${(pageable ne null)}">
     <div class="panel-heading">
@@ -42,9 +43,10 @@
       </c:when>
       <c:otherwise>
         <div class="panel-body">
-          <p>No other posts found.</p>
+          <p><fmt:message key="no.other.blogs"/> </p>
         </div>
       </c:otherwise>
     </c:choose>
   </c:if>
+</div>
 </div>

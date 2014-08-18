@@ -23,6 +23,7 @@
 <%--@elvariable id="facets" type="org.hippoecm.hst.content.beans.standard.HippoFacetNavigationBean"--%>
 <%--@elvariable id="facetLimit" type="java.lang.Integer"--%>
 <%--@elvariable id="query" type="java.lang.String"--%>
+<div class="blog facet">
 <form action="<hst:actionURL />" method="get">
   <div class="row form-group">
     <div class="col-xs-8">
@@ -78,3 +79,4 @@
     </c:forEach>
   </ul>
 </c:if>
+</div>

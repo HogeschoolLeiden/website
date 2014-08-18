@@ -18,8 +18,8 @@ import java.util.Calendar;
 import java.util.List;
 
 import org.hippoecm.hst.content.beans.Node;
+import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.content.beans.standard.HippoDocument;
-import org.hippoecm.hst.content.beans.standard.HippoHtml;
 import org.onehippo.cms7.essentials.components.model.Authors;
 import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
 
@@ -29,7 +29,6 @@ public class Blogpost extends HippoDocument implements Authors {
 
     public static final String TITLE = "hsl:title";
     public static final String INTRODUCTION = "hsl:introduction";
-    public static final String CONTENT = "hsl:content";
     public static final String PUBLICATION_DATE = "hsl:publicationdate";
     public static final String CATEGORIES = "hsl:categories";
     public static final String AUTHOR = "hsl:author";
@@ -38,7 +37,15 @@ public class Blogpost extends HippoDocument implements Authors {
     public static final String AUTHORS = "hsl:authors";
     public static final String TAGS = "hippostd:tags";
 
-
+    private List<HippoBean> flexibleblock;
+    
+    public List<HippoBean> getFlexibleblock() {
+        if (this.flexibleblock == null) {
+            this.flexibleblock = getChildBeansByName("hsl:flexibleblock");
+        }
+        return this.flexibleblock;
+    }
+    
    @HippoEssentialsGenerated(internalName = "hsl:publicationdate")
     public Calendar getPublicationDate() {
         return getProperty(PUBLICATION_DATE);
@@ -57,22 +64,15 @@ public class Blogpost extends HippoDocument implements Authors {
         return null;
     }
 
-
     @HippoEssentialsGenerated(internalName = "hsl:title")
     public String getTitle() {
         return getProperty(TITLE);
-    }
-
-    @HippoEssentialsGenerated(internalName = "hsl:content")
-    public HippoHtml getContent() {
-        return getHippoHtml(CONTENT);
     }
 
     @HippoEssentialsGenerated(internalName = "hsl:introduction")
     public String getIntroduction() {
         return getProperty(INTRODUCTION);
     }
-
 
     @HippoEssentialsGenerated(internalName = "hsl:link")
     public String getLink() {

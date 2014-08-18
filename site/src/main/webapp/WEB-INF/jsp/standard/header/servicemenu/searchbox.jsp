@@ -8,11 +8,11 @@
 <%@ taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml"%>
 <hst:setBundle basename="nl.hsleiden.general.Messages" />
 <hst:resourceURL fullyQualified="true" var="resourceUrl"/>
-<script type="text/javascript">
+<%-- <script type="text/javascript">
 $.getJSON( "${resourceUrl}", function( data ) {
 	  alert(data);
 	});
-</script>
+</script> --%>
 <div class="search-box">
 
 	<fmt:message var="submitText" key="search.submit.text" />

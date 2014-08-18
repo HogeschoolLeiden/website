@@ -22,7 +22,7 @@
     </c:set>
 	
     <div class="mod box closed downloads">
-		<h3 class="head">${title}</h3>
+		<h2 class="head">${title}</h2>
 		<ul class="downloads">
 			<c:forEach items="${content.asset }" var="doc">
 				<c:set var="filetype">
