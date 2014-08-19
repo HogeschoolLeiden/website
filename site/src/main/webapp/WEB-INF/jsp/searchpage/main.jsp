@@ -28,7 +28,13 @@
 		</nav>
 		<div class="span8">
 			<hst:include ref="content" />
-			${model.searchResults.totalHits}<br/>
+            <p>
+              <opw:public-parameter parameterName="q" var="query"/>
+              <fmt:message key="found.results.message" >
+                <fmt:param value="${model.searchResults.totalHits}"/>
+                <fmt:param value="${fn:escapeXml(query)}"/>
+              </fmt:message>
+            </p>
 			<c:forEach items="${model.searchResults.hits}" var="hit">
 				<c:set var="item" value="${hit.bean}"/>
 				<hst:link hippobean="${hit.bean}" var="link"/>
