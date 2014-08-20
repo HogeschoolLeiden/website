@@ -15,9 +15,12 @@ import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.content.beans.standard.HippoResource;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.request.HstRequestContext;
+import org.hippoecm.hst.core.sitemenu.EditableMenuItem;
+
+import com.tdclighthouse.prototype.provider.RepoBasedMenuProvider;
 
 public class Functions {
-    
+
     private Functions() {
     }
 
@@ -47,36 +50,44 @@ public class Functions {
 
     public static HippoBean getFirstFlexibleBlockImage(WebPage bean) {
         HippoBean result = null;
-        if(bean instanceof ArticlePage){
-            ArticlePage article = (ArticlePage) bean;         
+        if (bean instanceof ArticlePage) {
+            ArticlePage article = (ArticlePage) bean;
             List<HippoBean> flexibleblock = article.getFlexibleblock();
             for (HippoBean hippoBean : flexibleblock) {
-                if (hippoBean instanceof Image && ((Image) hippoBean).getImage()!=null) {
+                if (hippoBean instanceof Image && ((Image) hippoBean).getImage() != null) {
                     result = hippoBean;
                 }
             }
         }
         return result;
     }
-    
-    public static boolean hasParameter(HttpServletRequest request, String paramName){
+
+    public static boolean hasParameter(HttpServletRequest request, String paramName) {
         boolean result = false;
-        if(request.getParameter(paramName)!=null){
-            result=true;
+        if (request.getParameter(paramName) != null) {
+            result = true;
         }
         return result;
     }
 
-    public static String getParameter(HttpServletRequest request, String paramName){
+    public static String getParameter(HttpServletRequest request, String paramName) {
         return request.getParameter(paramName);
     }
 
-    public static String getSitemapConfigParameter(HttpServletRequest request, String paramName){
+    public static String getSitemapConfigParameter(HttpServletRequest request, String paramName) {
         HstRequestContext requestContext = ((HstRequest) request).getRequestContext();
         return requestContext.getResolvedSiteMapItem().getLocalParameter(paramName);
     }
 
-    public static String getComponentConfigParameter(HttpServletRequest request, String paramName){
+    public static String getSitemenuConfigParameter(EditableMenuItem menuItem, String paramName) {
+        String result = "";
+        if(menuItem != null && paramName!=null && !paramName.isEmpty()){            
+            result = RepoBasedMenuProvider.getParameterValue(paramName, menuItem);
+        }
+        return result;
+    }
+
+    public static String getComponentConfigParameter(HttpServletRequest request, String paramName) {
         HstRequestContext requestContext = ((HstRequest) request).getRequestContext();
         return requestContext.getResolvedSiteMapItem().getHstComponentConfiguration().getParameter(paramName);
     }

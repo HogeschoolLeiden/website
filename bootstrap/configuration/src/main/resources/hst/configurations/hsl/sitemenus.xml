@@ -211,8 +211,8 @@
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:sitemenuitem</sv:value>
       </sv:property>
-      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
-      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
+      <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String"/>
+      <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String"/>
       <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
         <sv:value>actueel</sv:value>
       </sv:property>
@@ -226,11 +226,11 @@
         <sv:property sv:name="hst:depth" sv:type="Long">
           <sv:value>3</sv:value>
         </sv:property>
-        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
           <sv:value>root</sv:value>
           <sv:value>root</sv:value>
         </sv:property>
-        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
           <sv:value>{"relativeContentPath": "pages/actueel/nieuws/news-facetnav", "invisible": "false", "disabled": "false"}</sv:value>
           <sv:value>{"relativeContentPath": "pages/actueel/nieuws", "invisible": "true", "disabled": "false","showFacetNavigations":"false"}</sv:value>
         </sv:property>
@@ -248,15 +248,15 @@
         <sv:property sv:name="hst:depth" sv:type="Long">
           <sv:value>5</sv:value>
         </sv:property>
-        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String"/>
+        <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String"/>
         <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
           <sv:value>actueel/evenementen</sv:value>
         </sv:property>
         <sv:property sv:name="hst:repobased" sv:type="Boolean">
           <sv:value>true</sv:value>
         </sv:property>
-        <sv:node sv:name="Agenda overview">
+        <sv:node sv:name="Agenda overzicht">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>hst:sitemenuitem</sv:value>
           </sv:property>
@@ -269,23 +269,25 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hst:sitemenuitem</sv:value>
         </sv:property>
-        <sv:property sv:name="hst:depth" sv:type="Long">
-          <sv:value>5</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
           <sv:value>invisible</sv:value>
           <sv:value>disabled</sv:value>
         </sv:property>
-        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
           <sv:value>false</sv:value>
           <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
           <sv:value>actueel/pers</sv:value>
         </sv:property>
-        <sv:property sv:name="hst:repobased" sv:type="Boolean">
-          <sv:value>false</sv:value>
-        </sv:property>
+        <sv:node sv:name="Persberichten">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:sitemenuitem</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+            <sv:value>actueel/pers</sv:value>
+          </sv:property>
+        </sv:node>
         <sv:node sv:name="Pers one">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>hst:sitemenuitem</sv:value>
@@ -300,6 +302,44 @@
           </sv:property>
           <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
             <sv:value>actueel/pers/pers-two.html</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="Artikelen">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:sitemenuitem</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
+          <sv:value>invisible</sv:value>
+          <sv:value>disabled</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
+          <sv:value>true</sv:value>
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+          <sv:value>actueel/artikelen</sv:value>
+        </sv:property>
+        <sv:node sv:name="Studium generale">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:sitemenuitem</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+            <sv:value>actueel/artikelen/studium-generale.html</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:repobased" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="Open Dagen">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:sitemenuitem</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+            <sv:value>actueel/artikelen/open-dagen.html</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:repobased" sv:type="Boolean">
+            <sv:value>false</sv:value>
           </sv:property>
         </sv:node>
       </sv:node>
