@@ -23,14 +23,31 @@
   </c:if>
   
   <c:set var="parentItem" value="${not empty menu.deepestExpandedItem.parentItem ? menu.deepestExpandedItem.parentItem : menu.deepestExpandedItem}"/>
-  <c:set var="grandparentItem" value="${not empty parentItem.parentItem ? parentItem.parentItem : parentItem}"/>
+
+  <c:choose>
+    <c:when test="${tag:getSitemenuConfigParameter(parentItem, 'invisible') eq true}">
+      <h3>&nbsp;</h3>
+    </c:when>
+    <c:otherwise>
+      <c:choose>
+        <c:when test="${tag:getSitemenuConfigParameter(parentItem, 'disabled') eq true}">
+          <h3><c:out value=" ${parentItem.name}"/></h3>
+        </c:when>
+        <c:otherwise>
+          <hst:link var="link" link="${parentItem.hstLink}"/>
+          <h3><a href="${link}"><c:out value=" ${parentItem.name}"/></a></h3>
+        </c:otherwise>
+      </c:choose> 
+    </c:otherwise>
+  </c:choose>
+  
   <ul class="nav nav-pills nav-stacked">
-    <c:forEach items="${hst:isReadable(grandparentItem, 'childMenuItems') ? grandparentItem.childMenuItems : grandparentItem.menuItems}" var="item">
-          <opw:menuitem siteMenuItem="${item}" depth="1"
-            expandedClass="current arrow-down"
-            selectedClass="active arrow-down"
-            unexpandedClass="unexpanded arrow-side" leafClass="arrow-side" 
-            recurseOnlyExpanded="true"/>
+    <c:forEach items="${hst:isReadable(parentItem, 'childMenuItems') ? parentItem.childMenuItems : parentItem.menuItems}" var="item">
+      <opw:menuitem siteMenuItem="${item}" depth="1"
+        expandedClass="current arrow-down"
+        selectedClass="active arrow-down"
+        unexpandedClass="unexpanded arrow-side" leafClass="arrow-side" 
+        recurseOnlyExpanded="false"/>
     </c:forEach>
   </ul>
 </div>

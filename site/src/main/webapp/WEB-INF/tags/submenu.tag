@@ -7,11 +7,25 @@
 <%@ taglib prefix='opw' uri="http://open-web.nl/hippo/prototype"%>
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 
-<%@ attribute name="menuItem" type="org.hippoecm.hst.core.sitemenu.EditableMenuItemImpl" rtexprvalue="true" required="true"%>
+<%@ attribute name="menuItem" type="org.hippoecm.hst.core.sitemenu.EditableMenuItem" rtexprvalue="true" required="true"%>
 <%@ attribute name="columNr" type="java.lang.Integer" rtexprvalue="true" required="true" %>
 
-<hst:link var="link" link="${menuItem.childMenuItems[columNr].hstLink}"/>
-<h3><a href="${link}"><c:out value=" ${menuItem.childMenuItems[columNr].name}"/></a></h3> 
+<c:choose>
+  <c:when test="${tag:getSitemenuConfigParameter(menuItem.childMenuItems[columNr], 'invisible') eq true}">
+    <h3>&nbsp;</h3>
+  </c:when>
+  <c:otherwise>
+    <c:choose>
+    <c:when test="${tag:getSitemenuConfigParameter(menuItem.childMenuItems[columNr], 'disabled') eq true}">
+      <h3><c:out value=" ${menuItem.childMenuItems[columNr].name}"/></h3>
+    </c:when>
+    <c:otherwise>
+      <hst:link var="link" link="${menuItem.childMenuItems[columNr].hstLink}"/>
+      <h3><a href="${link}"><c:out value=" ${menuItem.childMenuItems[columNr].name}"/></a></h3>
+    </c:otherwise>
+    </c:choose> 
+  </c:otherwise>
+</c:choose>
 
 <ul class="sub-menu">
  

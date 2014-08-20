@@ -54,16 +54,18 @@ public class LandingPage extends Navigation {
         for (EditableMenuItem sitemenuItem : deepestExpandedItem.getChildMenuItems()) {
             OverviewBean ob = new OverviewBean();
             ResolvedSiteMapItem resolveToSiteMapItem = sitemenuItem.resolveToSiteMapItem(request);
-            HippoBean bean = BeanUtils.getBean(resolveToSiteMapItem.getHstSiteMapItem().getRelativeContentPath(),
-                    request);
-
-            if (bean instanceof OverviewPage) {
-                ob.setHighLighted(((OverviewPage) bean).getHighLightedItem());
-                ob.setMenuItem(sitemenuItem);
-                ob.setOverviewBean((OverviewPage) bean);
-                overviewBeans.add(ob);
-            } else {
-                LOG.error("Document referenced by sub menu item is not an OverviewPage. Skipping it.");
+            if(resolveToSiteMapItem!=null){                
+                HippoBean bean = BeanUtils.getBean(resolveToSiteMapItem.getHstSiteMapItem().getRelativeContentPath(),
+                        request);
+                
+                if (bean instanceof OverviewPage) {
+                    ob.setHighLighted(((OverviewPage) bean).getHighLightedItem());
+                    ob.setMenuItem(sitemenuItem);
+                    ob.setOverviewBean((OverviewPage) bean);
+                    overviewBeans.add(ob);
+                } else {
+                    LOG.error("Document referenced by sub menu item is not an OverviewPage. Skipping it.");
+                }
             }
         }
         return overviewBeans;

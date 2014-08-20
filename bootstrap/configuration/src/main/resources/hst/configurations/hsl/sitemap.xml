@@ -49,6 +49,9 @@
     <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
       <sv:value>3</sv:value>
     </sv:property>
+    <sv:property sv:name="hst:refId" sv:type="String">
+      <sv:value>actueel</sv:value>
+    </sv:property>
     <sv:property sv:name="hst:relativecontentpath" sv:type="String">
       <sv:value>pages/actueel/actueel</sv:value>
     </sv:property>
@@ -255,47 +258,265 @@
         </sv:property>
       </sv:node>
     </sv:node>
+    <sv:node sv:name="artikelen">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:sitemapitem</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+        <sv:value>hst:pages/genericoverview</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+        <sv:value>contentBeanPath</sv:value>
+        <sv:value>showTypes</sv:value>
+        <sv:value>defaultPageSize</sv:value>
+        <sv:value>sortBy</sv:value>
+        <sv:value>sortOrder</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+        <sv:value>pages/actueel/artikelen</sv:value>
+        <sv:value>hslbeans.ArticlePage</sv:value>
+        <sv:value>4</sv:value>
+        <sv:value>hsl:releaseDate</sv:value>
+        <sv:value>descending</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+        <sv:value>pages/actueel/artikelen/index</sv:value>
+      </sv:property>
+      <sv:node sv:name="_any_.html">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:sitemapitem</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+          <sv:value>hst:pages/pagenotfound</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:componentconfigurationmappingnames" sv:type="String" sv:multiple="true">
+          <sv:value>hsl:ArticlePage</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:componentconfigurationmappingvalues" sv:type="String" sv:multiple="true">
+          <sv:value>hst:pages/articlepage</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+          <sv:value>overviewSitemapRefId</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+          <sv:value>actueel</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+          <sv:value>pages/actueel/artikelen/${1}</sv:value>
+        </sv:property>
+      </sv:node>
+    </sv:node>
   </sv:node>
   <sv:node sv:name="over-hl">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:sitemapitem</sv:value>
     </sv:property>
     <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
-      <sv:value>hst:pages/genericoverview</sv:value>
+      <sv:value>hst:pages/actueellandingpage</sv:value>
     </sv:property>
     <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
-      <sv:value>contentBeanPath</sv:value>
-      <sv:value>showTypes</sv:value>
-      <sv:value>defaultPageSize</sv:value>
-      <sv:value>sortBy</sv:value>
-      <sv:value>sortOrder</sv:value>
+      <sv:value>columnNr</sv:value>
     </sv:property>
     <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
-      <sv:value>pages/over-hl</sv:value>
-      <sv:value>hslbeans.ArticlePage</sv:value>
-      <sv:value>3</sv:value>
-      <sv:value>hsl:releaseDate</sv:value>
-      <sv:value>descending</sv:value>
+      <sv:value>4</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:refId" sv:type="String">
+      <sv:value>over-hl</sv:value>
     </sv:property>
     <sv:property sv:name="hst:relativecontentpath" sv:type="String">
       <sv:value>pages/over-hl/index</sv:value>
     </sv:property>
-    <sv:node sv:name="_any_">
+    <sv:node sv:name="profiel">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:sitemapitem</sv:value>
       </sv:property>
       <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
-        <sv:value>hst:pages/pagenotfound</sv:value>
+        <sv:value>hst:pages/genericoverview</sv:value>
       </sv:property>
-      <sv:property sv:name="hst:componentconfigurationmappingnames" sv:type="String" sv:multiple="true">
-        <sv:value>hsl:ArticlePage</sv:value>
+      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+        <sv:value>contentBeanPath</sv:value>
+        <sv:value>showTypes</sv:value>
+        <sv:value>defaultPageSize</sv:value>
+        <sv:value>sortBy</sv:value>
+        <sv:value>sortOrder</sv:value>
       </sv:property>
-      <sv:property sv:name="hst:componentconfigurationmappingvalues" sv:type="String" sv:multiple="true">
-        <sv:value>hst:pages/articlepage</sv:value>
+      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+        <sv:value>pages/over-hl/profiel</sv:value>
+        <sv:value>hslbeans.ArticlePage</sv:value>
+        <sv:value>4</sv:value>
+        <sv:value>hsl:releaseDate</sv:value>
+        <sv:value>descending</sv:value>
       </sv:property>
       <sv:property sv:name="hst:relativecontentpath" sv:type="String">
-        <sv:value>pages/over-hl/${1}</sv:value>
+        <sv:value>pages/over-hl/profiel/index</sv:value>
       </sv:property>
+      <sv:node sv:name="_any_">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:sitemapitem</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+          <sv:value>hst:pages/pagenotfound</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:componentconfigurationmappingnames" sv:type="String" sv:multiple="true">
+          <sv:value>hsl:ArticlePage</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:componentconfigurationmappingvalues" sv:type="String" sv:multiple="true">
+          <sv:value>hst:pages/articlepage</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+          <sv:value>overviewSitemapRefId</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+          <sv:value>over-hl</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+          <sv:value>pages/over-hl/profiel/${1}</sv:value>
+        </sv:property>
+      </sv:node>
+    </sv:node>
+    <sv:node sv:name="organisatie">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:sitemapitem</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+        <sv:value>hst:pages/genericoverview</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+        <sv:value>contentBeanPath</sv:value>
+        <sv:value>showTypes</sv:value>
+        <sv:value>defaultPageSize</sv:value>
+        <sv:value>sortBy</sv:value>
+        <sv:value>sortOrder</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+        <sv:value>pages/over-hl/organisatie</sv:value>
+        <sv:value>hslbeans.ArticlePage</sv:value>
+        <sv:value>4</sv:value>
+        <sv:value>hsl:releaseDate</sv:value>
+        <sv:value>descending</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+        <sv:value>pages/over-hl/organisatie/index</sv:value>
+      </sv:property>
+      <sv:node sv:name="_any_">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:sitemapitem</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+          <sv:value>hst:pages/pagenotfound</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:componentconfigurationmappingnames" sv:type="String" sv:multiple="true">
+          <sv:value>hsl:ArticlePage</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:componentconfigurationmappingvalues" sv:type="String" sv:multiple="true">
+          <sv:value>hst:pages/articlepage</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+          <sv:value>overviewSitemapRefId</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+          <sv:value>over-hl</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+          <sv:value>pages/over-hl/organisatie/${1}</sv:value>
+        </sv:property>
+      </sv:node>
+    </sv:node>
+    <sv:node sv:name="werken-bij-hsl">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:sitemapitem</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+        <sv:value>hst:pages/genericoverview</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+        <sv:value>contentBeanPath</sv:value>
+        <sv:value>showTypes</sv:value>
+        <sv:value>defaultPageSize</sv:value>
+        <sv:value>sortBy</sv:value>
+        <sv:value>sortOrder</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+        <sv:value>pages/over-hl/werken-bij-hsl</sv:value>
+        <sv:value>hslbeans.ArticlePage</sv:value>
+        <sv:value>4</sv:value>
+        <sv:value>hsl:releaseDate</sv:value>
+        <sv:value>descending</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+        <sv:value>pages/over-hl/werken-bij-hsl/index</sv:value>
+      </sv:property>
+      <sv:node sv:name="_any_">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:sitemapitem</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+          <sv:value>hst:pages/pagenotfound</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:componentconfigurationmappingnames" sv:type="String" sv:multiple="true">
+          <sv:value>hsl:ArticlePage</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:componentconfigurationmappingvalues" sv:type="String" sv:multiple="true">
+          <sv:value>hst:pages/articlepage</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+          <sv:value>overviewSitemapRefId</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+          <sv:value>over-hl</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+          <sv:value>pages/over-hl/werken-bij-hsl/${1}</sv:value>
+        </sv:property>
+      </sv:node>
+    </sv:node>
+    <sv:node sv:name="contactgegevens">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:sitemapitem</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+        <sv:value>hst:pages/genericoverview</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+        <sv:value>contentBeanPath</sv:value>
+        <sv:value>showTypes</sv:value>
+        <sv:value>defaultPageSize</sv:value>
+        <sv:value>sortBy</sv:value>
+        <sv:value>sortOrder</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+        <sv:value>pages/over-hl/contactgegevens</sv:value>
+        <sv:value>hslbeans.ArticlePage</sv:value>
+        <sv:value>4</sv:value>
+        <sv:value>hsl:releaseDate</sv:value>
+        <sv:value>descending</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+        <sv:value>pages/over-hl/contactgegevens/index</sv:value>
+      </sv:property>
+      <sv:node sv:name="_any_">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:sitemapitem</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+          <sv:value>hst:pages/pagenotfound</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:componentconfigurationmappingnames" sv:type="String" sv:multiple="true">
+          <sv:value>hsl:ArticlePage</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:componentconfigurationmappingvalues" sv:type="String" sv:multiple="true">
+          <sv:value>hst:pages/articlepage</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+          <sv:value>overviewSitemapRefId</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+          <sv:value>over-hl</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+          <sv:value>pages/over-hl/contactgegevens/${1}</sv:value>
+        </sv:property>
+      </sv:node>
     </sv:node>
   </sv:node>
   <sv:node sv:name="bedank">
