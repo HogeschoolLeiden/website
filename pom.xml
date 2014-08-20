@@ -92,7 +92,7 @@
     <twitter4j.version>4.0.2</twitter4j.version>
     <hsl-private-config.version>1.2</hsl-private-config.version>
     <elasticsearch.plugin.version>1.0-SNAPSHOT</elasticsearch.plugin.version>
-    
+    <omnikassa.plugin.version>1.0-SNAPSHOT</omnikassa.plugin.version>    
   </properties>
 
   <repositories>
@@ -348,6 +348,16 @@
         <groupId>nl.openweb.hippo</groupId>
         <artifactId>hippo-elasticsearch-plugin</artifactId>
         <version>${elasticsearch.plugin.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>nl.openweb.omnikassa</groupId>
+        <artifactId>hippo-omnikassa-plugin-hst</artifactId>
+        <version>${omnikassa.plugin.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>nl.openweb.omnikassa</groupId>
+        <artifactId>hippo-omnikassa-plugin-repository</artifactId>
+        <version>${omnikassa.plugin.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
