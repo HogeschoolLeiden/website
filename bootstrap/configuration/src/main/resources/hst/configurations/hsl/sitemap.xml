@@ -49,6 +49,9 @@
     <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
       <sv:value>3</sv:value>
     </sv:property>
+    <sv:property sv:name="hst:refId" sv:type="String">
+      <sv:value>actueel</sv:value>
+    </sv:property>
     <sv:property sv:name="hst:relativecontentpath" sv:type="String">
       <sv:value>pages/actueel/actueel</sv:value>
     </sv:property>
@@ -276,9 +279,6 @@
         <sv:value>hsl:releaseDate</sv:value>
         <sv:value>descending</sv:value>
       </sv:property>
-      <sv:property sv:name="hst:refId" sv:type="String">
-        <sv:value>actueel-artikelen</sv:value>
-      </sv:property>
       <sv:property sv:name="hst:relativecontentpath" sv:type="String">
         <sv:value>pages/actueel/artikelen/index</sv:value>
       </sv:property>
@@ -299,7 +299,7 @@
           <sv:value>overviewSitemapRefId</sv:value>
         </sv:property>
         <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
-          <sv:value>actueel-artikelen</sv:value>
+          <sv:value>actueel</sv:value>
         </sv:property>
         <sv:property sv:name="hst:relativecontentpath" sv:type="String">
           <sv:value>pages/actueel/artikelen/${1}</sv:value>
