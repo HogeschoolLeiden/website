@@ -11,11 +11,20 @@
 <%@ attribute name="columNr" type="java.lang.Integer" rtexprvalue="true" required="true" %>
 
 <c:choose>
-<c:when test="${not tag:getSitemenuConfigParameter(menuItem.childMenuItems[columNr], 'invisible') eq true}">
-  <hst:link var="link" link="${menuItem.childMenuItems[columNr].hstLink}"/>
-  <h3><a href="${link}"><c:out value=" ${menuItem.childMenuItems[columNr].name}"/></a></h3> 
-</c:when>
-<c:otherwise><h3>&nbsp;</h3></c:otherwise>
+  <c:when test="${tag:getSitemenuConfigParameter(menuItem.childMenuItems[columNr], 'invisible') eq true}">
+    <h3>&nbsp;</h3>
+  </c:when>
+  <c:otherwise>
+    <c:choose>
+    <c:when test="${tag:getSitemenuConfigParameter(menuItem.childMenuItems[columNr], 'disabled') eq true}">
+      <h3><c:out value=" ${menuItem.childMenuItems[columNr].name}"/></h3>
+    </c:when>
+    <c:otherwise>
+      <hst:link var="link" link="${menuItem.childMenuItems[columNr].hstLink}"/>
+      <h3><a href="${link}"><c:out value=" ${menuItem.childMenuItems[columNr].name}"/></a></h3>
+    </c:otherwise>
+    </c:choose> 
+  </c:otherwise>
 </c:choose>
 
 <ul class="sub-menu">
