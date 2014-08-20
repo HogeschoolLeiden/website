@@ -4,8 +4,8 @@
   </sv:property>
   <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
     <sv:value>hippotranslation:translated</sv:value>
-    <sv:value>hippo:translated</sv:value>
     <sv:value>mix:versionable</sv:value>
+    <sv:value>hippo:translated</sv:value>
   </sv:property>
   <sv:property sv:name="jcr:uuid" sv:type="String">
     <sv:value>29f88bf5-14ae-4c5b-bfc7-48e007e8b04f</sv:value>
@@ -104,6 +104,7 @@
       <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
         <sv:value>hsl:RelatedEventsMixin</sv:value>
         <sv:value>mix:referenceable</sv:value>
+        <sv:value>hsl:TwitterMixin</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
         <sv:value>37a641be-c009-4750-ba50-eacbeb41bad6</sv:value>
@@ -126,7 +127,7 @@
         <sv:value>2014-06-11T10:35:29.565+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-        <sv:value>2014-07-03T18:04:57.785+02:00</sv:value>
+        <sv:value>2014-08-20T17:25:16.709+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
         <sv:value>admin</sv:value>
@@ -160,6 +161,9 @@
       </sv:property>
       <sv:property sv:name="hsl:releaseDate" sv:type="Date">
         <sv:value>2014-06-11T10:35:00.000+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:share" sv:type="Boolean">
+        <sv:value>false</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:title" sv:type="String">
         <sv:value>Over HL landing page</sv:value>
@@ -232,6 +236,39 @@
           </sv:property>
         </sv:node>
       </sv:node>
+      <sv:node sv:name="hsl:twitterCompoundMixin">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsl:TwitterCompoundMixin</sv:value>
+        </sv:property>
+        <sv:node sv:name="hsl:twitterParameters">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:TwitterParameters</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:from" sv:type="String">
+            <sv:value>HSLeidenNL</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:limit" sv:type="Long">
+            <sv:value>2</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:title" sv:type="String">
+            <sv:value>HSLeiden Twitter</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="hsl:twitterExtraParameters">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:TwitterExtraParameters</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:followText" sv:type="String">
+            <sv:value/>
+          </sv:property>
+          <sv:property sv:name="hsl:horizontal" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:query" sv:type="String">
+            <sv:value/>
+          </sv:property>
+        </sv:node>
+      </sv:node>
     </sv:node>
     <sv:node sv:name="index">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -240,6 +277,7 @@
       <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
         <sv:value>hsl:RelatedEventsMixin</sv:value>
         <sv:value>mix:referenceable</sv:value>
+        <sv:value>hsl:TwitterMixin</sv:value>
         <sv:value>mix:versionable</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
@@ -264,7 +302,7 @@
         <sv:value>2014-06-11T10:35:29.565+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-        <sv:value>2014-07-03T18:05:05.480+02:00</sv:value>
+        <sv:value>2014-08-20T17:26:18.010+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
         <sv:value>admin</sv:value>
@@ -298,6 +336,9 @@
       </sv:property>
       <sv:property sv:name="hsl:releaseDate" sv:type="Date">
         <sv:value>2014-06-11T10:35:00.000+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:share" sv:type="Boolean">
+        <sv:value>false</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:title" sv:type="String">
         <sv:value>Over HL landing page</sv:value>
@@ -370,6 +411,39 @@
           </sv:property>
         </sv:node>
       </sv:node>
+      <sv:node sv:name="hsl:twitterCompoundMixin">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsl:TwitterCompoundMixin</sv:value>
+        </sv:property>
+        <sv:node sv:name="hsl:twitterParameters">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:TwitterParameters</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:from" sv:type="String">
+            <sv:value>HSLeidenNL</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:limit" sv:type="Long">
+            <sv:value>2</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:title" sv:type="String">
+            <sv:value>HSLeiden Twitter</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="hsl:twitterExtraParameters">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:TwitterExtraParameters</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:followText" sv:type="String">
+            <sv:value/>
+          </sv:property>
+          <sv:property sv:name="hsl:horizontal" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:query" sv:type="String">
+            <sv:value/>
+          </sv:property>
+        </sv:node>
+      </sv:node>
     </sv:node>
     <sv:node sv:name="index">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -378,6 +452,7 @@
       <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
         <sv:value>hsl:RelatedEventsMixin</sv:value>
         <sv:value>mix:referenceable</sv:value>
+        <sv:value>hsl:TwitterMixin</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
         <sv:value>0e2e6644-39a8-4a2c-8d18-6c755af74108</sv:value>
@@ -401,13 +476,13 @@
         <sv:value>2014-06-11T10:35:29.565+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-        <sv:value>2014-07-03T18:05:05.480+02:00</sv:value>
+        <sv:value>2014-08-20T17:26:18.010+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
         <sv:value>admin</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-        <sv:value>2014-07-03T18:05:09.461+02:00</sv:value>
+        <sv:value>2014-08-20T17:26:20.588+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippotranslation:id" sv:type="String">
         <sv:value>636ff1bf-32ba-4fe5-89bc-234b4cfd6e32</sv:value>
@@ -438,6 +513,9 @@
       </sv:property>
       <sv:property sv:name="hsl:releaseDate" sv:type="Date">
         <sv:value>2014-06-11T10:35:00.000+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:share" sv:type="Boolean">
+        <sv:value>false</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:title" sv:type="String">
         <sv:value>Over HL landing page</sv:value>
@@ -510,6 +588,39 @@
           </sv:property>
         </sv:node>
       </sv:node>
+      <sv:node sv:name="hsl:twitterCompoundMixin">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsl:TwitterCompoundMixin</sv:value>
+        </sv:property>
+        <sv:node sv:name="hsl:twitterParameters">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:TwitterParameters</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:from" sv:type="String">
+            <sv:value>HSLeidenNL</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:limit" sv:type="Long">
+            <sv:value>2</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:title" sv:type="String">
+            <sv:value>HSLeiden Twitter</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="hsl:twitterExtraParameters">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:TwitterExtraParameters</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:followText" sv:type="String">
+            <sv:value/>
+          </sv:property>
+          <sv:property sv:name="hsl:horizontal" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:query" sv:type="String">
+            <sv:value/>
+          </sv:property>
+        </sv:node>
+      </sv:node>
     </sv:node>
   </sv:node>
   <sv:node sv:name="profiel">
@@ -518,8 +629,8 @@
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
       <sv:value>hippotranslation:translated</sv:value>
-      <sv:value>hippo:translated</sv:value>
       <sv:value>mix:versionable</sv:value>
+      <sv:value>hippo:translated</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>afc788e1-e38f-4e17-a493-fa4ac7aff384</sv:value>
@@ -2228,8 +2339,8 @@
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
       <sv:value>hippotranslation:translated</sv:value>
-      <sv:value>hippo:translated</sv:value>
       <sv:value>mix:versionable</sv:value>
+      <sv:value>hippo:translated</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>91b31691-315d-4e4b-b750-cac71cfa0755</sv:value>
@@ -3151,8 +3262,8 @@
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
       <sv:value>hippotranslation:translated</sv:value>
-      <sv:value>hippo:translated</sv:value>
       <sv:value>mix:versionable</sv:value>
+      <sv:value>hippo:translated</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>c6f870ec-5c21-4fd6-951d-b93f50aebe3e</sv:value>
@@ -5057,8 +5168,8 @@
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
       <sv:value>hippotranslation:translated</sv:value>
-      <sv:value>hippo:translated</sv:value>
       <sv:value>mix:versionable</sv:value>
+      <sv:value>hippo:translated</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>1bf804cc-8b95-460d-b4ff-fef90be95da8</sv:value>
