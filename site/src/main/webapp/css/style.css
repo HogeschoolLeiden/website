@@ -5067,8 +5067,8 @@ div.clear {clear: both;}
 .gcsc-branding {display: none;}
 
 /* ---------------------------------- images in the list widgets ---------------------------------------- */
-.item-with-image{ margin: 15px 0;}
-.image-space{width: 15%; float: left;  padding-top: 5px; padding-right: 6px;}
+.item-with-image{ margin: 10px 0;}
+.image-space{width: 25%; float: left;  padding-top: 5px; padding-right: 6px;}
 /* ---------------------------------- images in the list widgets ---------------------------------------- */
 
 /* ---------------------------------- header style ---------------------------------------- */
@@ -5152,6 +5152,17 @@ div.service-menu .search-box form { width: 51%; float: left; margin-left: 49%}
 			/* ------- mega menu ---------- */
 /* ---------------------------------- headder style ---------------------------------------- */
 
+.catalog{
+	margin-bottom: 5px;
+}
+
+.catalog.relatedEvents .widget-title, .catalog.relatedNews .widget-title,
+.catalog.relatedEvents .read_more, .catalog.relatedNews .read_more
+{ text-align: center;}
+.catalog.relatedEvents .item-with-image, .catalog.relatedNews .item-with-image{ margin-left: 3%;}
+.catalog.relatedEvents hr, .catalog.relatedNews hr{ margin: 0;}
+.catalog.relatedEvents, .catalog.relatedNews{ width: 100%;}
+
 /* ---------------------------------- breadcrumb style ---------------------------------------- */
 .breadcrumb { margin-top: -15px; padding: 0; border: none;}
 .breadcrumb ul { margin-top: 5px; margin-bottom: 5px;}
@@ -5163,13 +5174,14 @@ div.catalog.calendarEvents{ max-width: 216px; }
 td.fc-header-right2{display: block; float: right;}
 /* ---------------------------------- calendar widget style ---------------------------------------- */
 
-/* ---------------------------------- contact persons style ---------------------------------------- */
+/* --------------------------- contact persons style + blue border catalog ------------------------- */
 .image-space.contact { width: 23%; }
 .catalog.contactPersons .itemContent, h3.contact, .image-space.contact { padding: 6px 6px 0 6px; text-align: center;}
-.catalog.contactPersons .item-with-image { border-style: solid; border-width: 1px; border-color: blue;}
+.catalog.contactPersons .item-with-image, .catalog.relatedEvents, .catalog.relatedNews { 
+	border-style: solid; border-width: 1px; border-color: blue;}
 .catalog.contactPersons .itemContent {margin-left: 23%;} 
 .catalog.contactPersons p {text-align: center; margin-bottom: 3px;}
-/* ---------------------------------- contact persons style ---------------------------------------- */
+/* --------------------------- contact persons style + blue border catalog ------------------------- */
 
 /* ---------------------------------- quote style ---------------------------------------- */
 .quote.item-with-image{border-style: solid; border-width: 1px; border-color: blue;}
@@ -5314,7 +5326,7 @@ ul.social.follow li{ width:20%; float: left;}
 .higlighted-itemContent .date,
 .higlighted-itemContent .introduction{ margin-left: 10px;}
 
-.list-item-content{float: left; width: 84%;}
+.list-item-content{float: left; width: 74%;}
 /* ---------------------------------- overview page style ---------------------------------------- */
 
 /* ---------------------------------- back to overview page style ---------------------------------------- */
