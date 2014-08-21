@@ -28,13 +28,5 @@
 </c:choose>
 
 <ul class="sub-menu">
- 
-  <c:forEach items="${menuItem.childMenuItems[columNr].childMenuItems}" var="item">
-    <opw:menuitem siteMenuItem="${item}" depth="1"
-      expandedClass="current arrow-down"
-      selectedClass="active arrow-down"
-      unexpandedClass="unexpanded arrow-side" leafClass="arrow-side" 
-      recurseOnlyExpanded="false"/>
-  </c:forEach>
-
+  <tag:topmenu menuItem="${menuItem.childMenuItems[columNr]}"/>
 </ul>

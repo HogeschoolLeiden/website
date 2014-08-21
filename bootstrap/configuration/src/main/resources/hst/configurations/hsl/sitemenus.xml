@@ -546,6 +546,12 @@
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:sitemenuitem</sv:value>
       </sv:property>
+      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+        <sv:value>disabled</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+        <sv:value>true</sv:value>
+      </sv:property>
       <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
         <sv:value>actueel</sv:value>
       </sv:property>
@@ -564,7 +570,7 @@
         <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
           <sv:value>{"relativeContentPath": "pages/actueel/nieuws/news-facetnav", "invisible": "false", "disabled": "false"}</sv:value>
           <sv:value>{"relativeContentPath": "pages/actueel/nieuws", "invisible": "true", "disabled": "false","showFacetNavigations":"false"}</sv:value>
-          <sv:value>true</sv:value>
+          <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
           <sv:value>actueel/nieuws</sv:value>
@@ -715,10 +721,12 @@
         <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
           <sv:value>disabled</sv:value>
           <sv:value>root</sv:value>
+          <sv:value>levelOneOnly</sv:value>
         </sv:property>
         <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
           <sv:value>true</sv:value>
           <sv:value>{"relativeContentPath": "pages/over-hl/profiel/index", "invisible": "false", "disabled": "false","showFacetNavigations":"false"}</sv:value>
+          <sv:value>true</sv:value>
         </sv:property>
         <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
           <sv:value>over-hl/profiel</sv:value>
