@@ -11,18 +11,19 @@
 
 <hst:setBundle basename="nl.hsleiden.channelmanager.Messages, nl.hsleiden.widget.Messages"/>
 
-<div class="catalog relatedNews">
-  <hst:defineObjects />
-  <c:set var="isCmsRequest" value="${hstRequest.requestContext.cmsRequest}" />
+<hst:defineObjects />
+<c:set var="isCmsRequest" value="${hstRequest.requestContext.cmsRequest}" />
 
-  <c:if test="${(empty model.items or fn:length(model.items) eq 0) and not empty webMasterMessage and isCmsRequest}">
-  	<p class="error-message"><fmt:message key="${webMasterMessage}" ></fmt:message></p>
-  </c:if>
+<c:if test="${(empty model.items or fn:length(model.items) eq 0) and not empty webMasterMessage and isCmsRequest}">
+	<p class="error-message"><fmt:message key="${webMasterMessage}" ></fmt:message></p>
+</c:if>
 
-  <c:if test="${not empty model.items }">
+<c:if test="${not empty model.items }">
+  <div class="catalog relatedNews">
     <div class="widget-title">
       <h2><c:out value="${model.info.widgetTitle}" escapeXml="true" /></h2>
     </div>
+    <hr>
     <%-- Items in-inlined for better performance --%>
     <c:forEach var="item" items="${model.items}" varStatus="zebra">
       <div class="item-with-image">
@@ -80,5 +81,5 @@
         </h3>
       </div>
     </c:if>
-  </c:if>
-</div>
+  </div>
+</c:if>
