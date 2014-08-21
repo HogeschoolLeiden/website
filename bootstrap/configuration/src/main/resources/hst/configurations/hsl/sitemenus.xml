@@ -157,23 +157,23 @@
           <sv:value>blog</sv:value>
         </sv:property>
       </sv:node>
-      <sv:node sv:name="Bedrijf een">
+      <sv:node sv:name="Regioregisseur">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hst:sitemenuitem</sv:value>
         </sv:property>
         <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-          <sv:value>bedrijven/bedrijf-een</sv:value>
+          <sv:value>bedrijven/contact/regioregisseur</sv:value>
         </sv:property>
         <sv:property sv:name="hst:repobased" sv:type="Boolean">
           <sv:value>false</sv:value>
         </sv:property>
       </sv:node>
-      <sv:node sv:name="Bedrijf twee">
+      <sv:node sv:name="Uw toegepast onderzoek">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hst:sitemenuitem</sv:value>
         </sv:property>
         <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-          <sv:value>bedrijven/bedrijf-twee</sv:value>
+          <sv:value>bedrijven/stages-en-bedrijfsopdrachten/uw-toegepast-onderzoek</sv:value>
         </sv:property>
         <sv:property sv:name="hst:repobased" sv:type="Boolean">
           <sv:value>false</sv:value>
@@ -445,52 +445,101 @@
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:sitemenuitem</sv:value>
       </sv:property>
-      <sv:property sv:name="hst:depth" sv:type="Long">
-        <sv:value>5</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
-        <sv:value>root</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
-        <sv:value>{"relativeContentPath": "bedrijven"}</sv:value>
-      </sv:property>
       <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
         <sv:value>bedrijven</sv:value>
       </sv:property>
-      <sv:property sv:name="hst:repobased" sv:type="Boolean">
-        <sv:value>true</sv:value>
-      </sv:property>
-      <sv:node sv:name="T. B. D.">
+      <sv:node sv:name="Stages en Bedrijfsopdrachten">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hst:sitemenuitem</sv:value>
         </sv:property>
+        <sv:property sv:name="hst:depth" sv:type="Long">
+          <sv:value>3</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+          <sv:value>disabled</sv:value>
+          <sv:value>root</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+          <sv:value>true</sv:value>
+          <sv:value>{"relativeContentPath": "pages/bedrijven/stages-en-bedrijfsopdrachten/index", "invisible": "false", "disabled": "false","showFacetNavigations":"false"}</sv:value>
+        </sv:property>
         <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-          <sv:value>over-hl/onderwijs/tbd</sv:value>
+          <sv:value>bedrijven/stages-en-bedrijfsopdrachten</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:repobased" sv:type="Boolean">
+          <sv:value>true</sv:value>
         </sv:property>
       </sv:node>
-      <sv:node sv:name="T. B. D. 2">
+      <sv:node sv:name="Samenwerken met HL">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hst:sitemenuitem</sv:value>
         </sv:property>
+        <sv:property sv:name="hst:depth" sv:type="Long">
+          <sv:value>3</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+          <sv:value>disabled</sv:value>
+          <sv:value>root</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+          <sv:value>true</sv:value>
+          <sv:value>{"relativeContentPath": "pages/bedrijven/samenwerken-met-hl/index", "invisible": "false", "disabled": "false","showFacetNavigations":"false"}</sv:value>
+        </sv:property>
         <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-          <sv:value>over-hl/onderwijs/tbd</sv:value>
+          <sv:value>bedrijven/samenwerken-met-hl</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:repobased" sv:type="Boolean">
+          <sv:value>true</sv:value>
         </sv:property>
       </sv:node>
-      <sv:node sv:name="T. B. D. 3">
+      <sv:node sv:name="Contact">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hst:sitemenuitem</sv:value>
         </sv:property>
-        <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-          <sv:value>over-hl/onderwijs/tbd</sv:value>
+        <sv:property sv:name="hst:depth" sv:type="Long">
+          <sv:value>3</sv:value>
         </sv:property>
+        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+          <sv:value>disabled</sv:value>
+          <sv:value>root</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+          <sv:value>true</sv:value>
+          <sv:value>{"relativeContentPath": "pages/bedrijven/contact/index", "invisible": "false", "disabled": "false","showFacetNavigations":"false"}</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+          <sv:value>bedrijven/contact</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:repobased" sv:type="Boolean">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:node sv:name="Vacaturebank alumni">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:sitemenuitem</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:externallink" sv:type="String">
+            <sv:value>http://www.hsleiden.alumni-net.nl/vacatures.asp</sv:value>
+          </sv:property>
+        </sv:node>
       </sv:node>
-      <sv:node sv:name="T. B. D. 4">
+      <sv:node sv:name="Vacaturebank">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hst:sitemenuitem</sv:value>
         </sv:property>
-        <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-          <sv:value>over-hl/onderwijs/tbd</sv:value>
+        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+          <sv:value>disabled</sv:value>
         </sv:property>
+        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:node sv:name="Vacaturebank alumni">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:sitemenuitem</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:externallink" sv:type="String">
+            <sv:value>http://www.hsleiden.alumni-net.nl/vacatures.asp</sv:value>
+          </sv:property>
+        </sv:node>
       </sv:node>
     </sv:node>
     <sv:node sv:name="Actueel">
@@ -545,6 +594,20 @@
         <sv:property sv:name="hst:repobased" sv:type="Boolean">
           <sv:value>true</sv:value>
         </sv:property>
+        <sv:node sv:name="Agenda Overzicht">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:sitemenuitem</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+            <sv:value>disabled</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+            <sv:value>actueel/evenementen</sv:value>
+          </sv:property>
+        </sv:node>
       </sv:node>
       <sv:node sv:name="Pers">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -561,6 +624,20 @@
         <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
           <sv:value>actueel/pers</sv:value>
         </sv:property>
+        <sv:node sv:name="Persberichten">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:sitemenuitem</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+            <sv:value>disabled</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+            <sv:value>actueel/pers</sv:value>
+          </sv:property>
+        </sv:node>
         <sv:node sv:name="Pers one">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>hst:sitemenuitem</sv:value>
