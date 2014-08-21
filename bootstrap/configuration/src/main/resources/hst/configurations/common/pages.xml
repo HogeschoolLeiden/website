@@ -437,4 +437,20 @@
       </sv:property>
     </sv:node>
   </sv:node>
+  <sv:node sv:name="omnikassapagecommon">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:component</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:referencecomponent" sv:type="String">
+      <sv:value>hst:pages/standardcommon</sv:value>
+    </sv:property>
+    <sv:node sv:name="main">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:component</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:referencecomponent" sv:type="String">
+        <sv:value>hst:components/omnikassaform</sv:value>
+      </sv:property>
+    </sv:node>
+  </sv:node>
 </sv:node>
