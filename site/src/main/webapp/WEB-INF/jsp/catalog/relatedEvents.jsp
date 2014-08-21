@@ -23,6 +23,7 @@
     <div class="widget-title">
       <h2><c:out value="${model.info.widgetTitle}" escapeXml="true" /></h2>
     </div>
+    <hr>
     <%-- Items in-inlined for better performance --%>
     <c:forEach var="item" items="${model.items}" varStatus="zebra">
       <div class="item-with-image">

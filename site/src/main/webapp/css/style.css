@@ -5067,8 +5067,8 @@ div.clear {clear: both;}
 .gcsc-branding {display: none;}
 
 /* ---------------------------------- images in the list widgets ---------------------------------------- */
-.item-with-image{ margin: 15px 0;}
-.image-space{width: 15%; float: left;  padding-top: 5px; padding-right: 6px;}
+.item-with-image{ margin: 10px 0;}
+.image-space{width: 25%; float: left;  padding-top: 5px; padding-right: 6px;}
 /* ---------------------------------- images in the list widgets ---------------------------------------- */
 
 /* ---------------------------------- header style ---------------------------------------- */
@@ -5152,6 +5152,14 @@ div.service-menu .search-box form { width: 51%; float: left; margin-left: 49%}
 			/* ------- mega menu ---------- */
 /* ---------------------------------- headder style ---------------------------------------- */
 
+.catalog{
+	margin-bottom: 5px;
+}
+
+.catalog.relatedEvents .widget-title{ text-align: center;}
+.catalog.relatedEvents .item-with-image{ margin-left: 3%;}
+.catalog.relatedEvents hr{ margin: 0;}
+
 /* ---------------------------------- breadcrumb style ---------------------------------------- */
 .breadcrumb { margin-top: -15px; padding: 0; border: none;}
 .breadcrumb ul { margin-top: 5px; margin-bottom: 5px;}
@@ -5163,13 +5171,14 @@ div.catalog.calendarEvents{ max-width: 216px; }
 td.fc-header-right2{display: block; float: right;}
 /* ---------------------------------- calendar widget style ---------------------------------------- */
 
-/* ---------------------------------- contact persons style ---------------------------------------- */
+/* --------------------------- contact persons style + blue border catalog ------------------------- */
 .image-space.contact { width: 23%; }
 .catalog.contactPersons .itemContent, h3.contact, .image-space.contact { padding: 6px 6px 0 6px; text-align: center;}
-.catalog.contactPersons .item-with-image { border-style: solid; border-width: 1px; border-color: blue;}
+.catalog.contactPersons .item-with-image, .catalog.relatedEvents, .catalog.relatedNews { 
+	border-style: solid; border-width: 1px; border-color: blue;}
 .catalog.contactPersons .itemContent {margin-left: 23%;} 
 .catalog.contactPersons p {text-align: center; margin-bottom: 3px;}
-/* ---------------------------------- contact persons style ---------------------------------------- */
+/* --------------------------- contact persons style + blue border catalog ------------------------- */
 
 /* ---------------------------------- quote style ---------------------------------------- */
 .quote.item-with-image{border-style: solid; border-width: 1px; border-color: blue;}
