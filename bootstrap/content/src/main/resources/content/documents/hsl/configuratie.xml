@@ -119,14 +119,25 @@
       <sv:value>Configuratie</sv:value>
     </sv:property>
   </sv:node>
+  <sv:node sv:name="hippo:translation">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hippo:translation</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:language" sv:type="String">
+      <sv:value/>
+    </sv:property>
+    <sv:property sv:name="hippo:message" sv:type="String">
+      <sv:value>Configuratie</sv:value>
+    </sv:property>
+  </sv:node>
   <sv:node sv:name="valuelists">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hippostd:folder</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
       <sv:value>hippotranslation:translated</sv:value>
-      <sv:value>hippo:translated</sv:value>
       <sv:value>mix:versionable</sv:value>
+      <sv:value>hippo:translated</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>0710213c-430e-44b9-871c-dabb4f22d510</sv:value>
@@ -702,6 +713,318 @@
         <sv:value>Valuelists</sv:value>
       </sv:property>
     </sv:node>
+    <sv:node sv:name="blog-administratie">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hippostd:folder</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:value>hippo:harddocument</sv:value>
+        <sv:value>hippo:translated</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>ef527cf1-b66c-4fd1-802e-eb00b69c2c70</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:related___pathreference" sv:type="String"/>
+      <sv:property sv:name="hippostd:foldertype" sv:type="String" sv:multiple="true">
+        <sv:value>new-document</sv:value>
+        <sv:value>new-folder</sv:value>
+      </sv:property>
+      <sv:node sv:name="account-types">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hippo:handle</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+          <sv:value>hippo:hardhandle</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>ebc405ab-437c-4bdd-ba8e-7b9a71e54b63</sv:value>
+        </sv:property>
+        <sv:node sv:name="account-types">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>selection:valuelist</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+            <sv:value>hippo:harddocument</sv:value>
+            <sv:value>hippotranslation:translated</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>512d347f-bf91-4379-8c9c-8572927ac67f</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+            <sv:value>live</sv:value>
+            <sv:value>preview</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:related___pathreference" sv:type="String"/>
+          <sv:property sv:name="hippotranslation:id" sv:type="String">
+            <sv:value>dd1fa305-8e7d-44cb-b5bb-a89c0c8515b1</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippotranslation:locale" sv:type="String">
+            <sv:value>inherited - from query</sv:value>
+          </sv:property>
+          <sv:node sv:name="hippotranslation:translations">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippotranslation:translations</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="selection:listitem">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>selection:listitem</sv:value>
+            </sv:property>
+            <sv:property sv:name="selection:key" sv:type="String">
+              <sv:value>github</sv:value>
+            </sv:property>
+            <sv:property sv:name="selection:label" sv:type="String">
+              <sv:value>GitHub</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="selection:listitem">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>selection:listitem</sv:value>
+            </sv:property>
+            <sv:property sv:name="selection:key" sv:type="String">
+              <sv:value>facebook</sv:value>
+            </sv:property>
+            <sv:property sv:name="selection:label" sv:type="String">
+              <sv:value>Facebook</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="selection:listitem">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>selection:listitem</sv:value>
+            </sv:property>
+            <sv:property sv:name="selection:key" sv:type="String">
+              <sv:value>twitter</sv:value>
+            </sv:property>
+            <sv:property sv:name="selection:label" sv:type="String">
+              <sv:value>Twitter</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="selection:listitem">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>selection:listitem</sv:value>
+            </sv:property>
+            <sv:property sv:name="selection:key" sv:type="String">
+              <sv:value>googleplus</sv:value>
+            </sv:property>
+            <sv:property sv:name="selection:label" sv:type="String">
+              <sv:value>Google+</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="selection:listitem">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>selection:listitem</sv:value>
+            </sv:property>
+            <sv:property sv:name="selection:key" sv:type="String">
+              <sv:value>linkedin</sv:value>
+            </sv:property>
+            <sv:property sv:name="selection:label" sv:type="String">
+              <sv:value>LinkedIn</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="blog-categories">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hippo:handle</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+          <sv:value>hippo:hardhandle</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>ed4e72d3-8f03-4e70-b1e6-bf2dff8b9723</sv:value>
+        </sv:property>
+        <sv:node sv:name="blog-categories">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>selection:valuelist</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+            <sv:value>hippo:harddocument</sv:value>
+            <sv:value>hippotranslation:translated</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>dbf0c708-aff6-43c1-8642-e4955dd06c11</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:related___pathreference" sv:type="String"/>
+          <sv:property sv:name="hippotranslation:id" sv:type="String">
+            <sv:value>c220fe8d-7313-4e28-af4f-00c6709354cd</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippotranslation:locale" sv:type="String">
+            <sv:value>en</sv:value>
+          </sv:property>
+          <sv:node sv:name="hippotranslation:translations">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippotranslation:translations</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="selection:listitem">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>selection:listitem</sv:value>
+            </sv:property>
+            <sv:property sv:name="selection:key" sv:type="String">
+              <sv:value>cms</sv:value>
+            </sv:property>
+            <sv:property sv:name="selection:label" sv:type="String">
+              <sv:value>CMS</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="selection:listitem">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>selection:listitem</sv:value>
+            </sv:property>
+            <sv:property sv:name="selection:key" sv:type="String">
+              <sv:value>life</sv:value>
+            </sv:property>
+            <sv:property sv:name="selection:label" sv:type="String">
+              <sv:value>Life</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
+      </sv:node>
+    </sv:node>
+    <sv:node sv:name="currency-code">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hippo:handle</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:value>mix:referenceable</sv:value>
+        <sv:value>hippo:translated</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>9f0e0de4-d00f-4919-8936-c13e5b042005</sv:value>
+      </sv:property>
+      <sv:node sv:name="currency-code">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>selection:valuelist</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+          <sv:value>mix:referenceable</sv:value>
+          <sv:value>hippotranslation:translated</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>9a26cc0e-57b4-47c4-9223-db67a28e2c55</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+          <sv:value>live</sv:value>
+          <sv:value>preview</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippotranslation:id" sv:type="String">
+          <sv:value>08d53b15-d50b-482f-b9cd-fa144c4e431f</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippotranslation:locale" sv:type="String">
+          <sv:value>nl</sv:value>
+        </sv:property>
+        <sv:node sv:name="selection:listitem">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>selection:listitem</sv:value>
+          </sv:property>
+          <sv:property sv:name="selection:key" sv:type="String">
+            <sv:value>978</sv:value>
+          </sv:property>
+          <sv:property sv:name="selection:label" sv:type="String">
+            <sv:value>Euro</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="selection:listitem">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>selection:listitem</sv:value>
+          </sv:property>
+          <sv:property sv:name="selection:key" sv:type="String">
+            <sv:value>840</sv:value>
+          </sv:property>
+          <sv:property sv:name="selection:label" sv:type="String">
+            <sv:value>American dollar</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="selection:listitem">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>selection:listitem</sv:value>
+          </sv:property>
+          <sv:property sv:name="selection:key" sv:type="String">
+            <sv:value>756</sv:value>
+          </sv:property>
+          <sv:property sv:name="selection:label" sv:type="String">
+            <sv:value>Swiss Franc</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="selection:listitem">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>selection:listitem</sv:value>
+          </sv:property>
+          <sv:property sv:name="selection:key" sv:type="String">
+            <sv:value>826</sv:value>
+          </sv:property>
+          <sv:property sv:name="selection:label" sv:type="String">
+            <sv:value>Pound Sterling</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="selection:listitem">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>selection:listitem</sv:value>
+          </sv:property>
+          <sv:property sv:name="selection:key" sv:type="String">
+            <sv:value>124</sv:value>
+          </sv:property>
+          <sv:property sv:name="selection:label" sv:type="String">
+            <sv:value>Canadian Dollar</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="selection:listitem">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>selection:listitem</sv:value>
+          </sv:property>
+          <sv:property sv:name="selection:key" sv:type="String">
+            <sv:value>036</sv:value>
+          </sv:property>
+          <sv:property sv:name="selection:label" sv:type="String">
+            <sv:value>Australian Dollar</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="selection:listitem">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>selection:listitem</sv:value>
+          </sv:property>
+          <sv:property sv:name="selection:key" sv:type="String">
+            <sv:value>578</sv:value>
+          </sv:property>
+          <sv:property sv:name="selection:label" sv:type="String">
+            <sv:value>Norwegian Crown</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="selection:listitem">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>selection:listitem</sv:value>
+          </sv:property>
+          <sv:property sv:name="selection:key" sv:type="String">
+            <sv:value>752</sv:value>
+          </sv:property>
+          <sv:property sv:name="selection:label" sv:type="String">
+            <sv:value>Swedish Crown</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="selection:listitem">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>selection:listitem</sv:value>
+          </sv:property>
+          <sv:property sv:name="selection:key" sv:type="String">
+            <sv:value>208</sv:value>
+          </sv:property>
+          <sv:property sv:name="selection:label" sv:type="String">
+            <sv:value>Danish Crown</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="hippo:translation">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hippo:translation</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:language" sv:type="String">
+          <sv:value/>
+        </sv:property>
+        <sv:property sv:name="hippo:message" sv:type="String">
+          <sv:value>currency code</sv:value>
+        </sv:property>
+      </sv:node>
+    </sv:node>
   </sv:node>
   <sv:node sv:name="resource-bundles">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -709,8 +1032,8 @@
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
       <sv:value>hippotranslation:translated</sv:value>
-      <sv:value>hippo:translated</sv:value>
       <sv:value>mix:versionable</sv:value>
+      <sv:value>hippo:translated</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>9d40f53f-c9e7-4a90-9a4f-706c3396eaf5</sv:value>
@@ -1606,28 +1929,24 @@
           <sv:value>page.not.found</sv:value>
           <sv:value>search.submit.text</sv:value>
           <sv:value>refine.results</sv:value>
-          <sv:value>found.results.message</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages" sv:type="String" sv:multiple="true">
           <sv:value>Available Downloads</sv:value>
           <sv:value>Not Found</sv:value>
           <sv:value>Zoek</sv:value>
           <sv:value>Refine results:</sv:value>
-          <sv:value>Found {0} items for query: "{1}"</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages_en" sv:type="String" sv:multiple="true">
           <sv:value>Available Downloads</sv:value>
           <sv:value>Not Found</sv:value>
           <sv:value>Search</sv:value>
           <sv:value>Refine results:</sv:value>
-          <sv:value>Found {0} items for query: "{1}"</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages_nl" sv:type="String" sv:multiple="true">
           <sv:value>Available Downloads</sv:value>
           <sv:value>Not Found</sv:value>
           <sv:value>Zoek</sv:value>
           <sv:value>Refine results:</sv:value>
-          <sv:value>Found {0} items for query: "{1}"</sv:value>
         </sv:property>
       </sv:node>
       <sv:node sv:name="general-messages">
@@ -1684,28 +2003,24 @@
           <sv:value>page.not.found</sv:value>
           <sv:value>search.submit.text</sv:value>
           <sv:value>refine.results</sv:value>
-          <sv:value>found.results.message</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages" sv:type="String" sv:multiple="true">
           <sv:value>Available Downloads</sv:value>
           <sv:value>Not Found</sv:value>
           <sv:value>Zoek</sv:value>
           <sv:value>Refine results:</sv:value>
-          <sv:value>Found {0} items for query: "{1}"</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages_en" sv:type="String" sv:multiple="true">
           <sv:value>Available Downloads</sv:value>
           <sv:value>Not Found</sv:value>
           <sv:value>Search</sv:value>
           <sv:value>Refine results:</sv:value>
-          <sv:value>Found {0} items for query: "{1}"</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages_nl" sv:type="String" sv:multiple="true">
           <sv:value>Available Downloads</sv:value>
           <sv:value>Not Found</sv:value>
           <sv:value>Zoek</sv:value>
           <sv:value>Refine results:</sv:value>
-          <sv:value>Found {0} items for query: "{1}"</sv:value>
         </sv:property>
       </sv:node>
       <sv:node sv:name="general-messages">
@@ -1764,28 +2079,24 @@
           <sv:value>page.not.found</sv:value>
           <sv:value>search.submit.text</sv:value>
           <sv:value>refine.results</sv:value>
-          <sv:value>found.results.message</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages" sv:type="String" sv:multiple="true">
           <sv:value>Available Downloads</sv:value>
           <sv:value>Not Found</sv:value>
           <sv:value>Zoek</sv:value>
           <sv:value>Refine results:</sv:value>
-          <sv:value>Found {0} items for query: "{1}"</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages_en" sv:type="String" sv:multiple="true">
           <sv:value>Available Downloads</sv:value>
           <sv:value>Not Found</sv:value>
           <sv:value>Search</sv:value>
           <sv:value>Refine results:</sv:value>
-          <sv:value>Found {0} items for query: "{1}"</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages_nl" sv:type="String" sv:multiple="true">
           <sv:value>Available Downloads</sv:value>
           <sv:value>Not Found</sv:value>
           <sv:value>Zoek</sv:value>
           <sv:value>Refine results:</sv:value>
-          <sv:value>Found {0} items for query: "{1}"</sv:value>
         </sv:property>
       </sv:node>
     </sv:node>
@@ -1856,41 +2167,36 @@
           <sv:value>webmaster.nofolder.message</sv:value>
           <sv:value>webmaster.notweets.message</sv:value>
           <sv:value>webmaster.noimages.message</sv:value>
-          <sv:value>webmaster.disqus.only.blogs</sv:value>
-          <sv:value>webmaster.disqus.forumname</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages" sv:type="String" sv:multiple="true">
-          <sv:value>This document has no over or thema tags. Filtering can not be applied. Remove filter checkboxes for having any items displayed</sv:value>
+          <sv:value>This document has no over or thema tags. Filtering can not be applied. Remove filter checkboxes for having any items displayed
+          </sv:value>
           <sv:value>There are no items to display under the selected folder or the items do not match the required filtering.</sv:value>
           <sv:value>There is no form connected to this page or this document</sv:value>
           <sv:value>No contacts have been selected neither in the widget configuration nor in the mixin. No items will be displayed.</sv:value>
           <sv:value>No root folder has been selected neither in the widget configuration nor in the mixin. No items will be displayed.</sv:value>
           <sv:value>There are no tweets to display for this widget configuration. The widget will not be rendered.</sv:value>
           <sv:value>There are no images to display for the provided configuration. The widget will not be rendered.</sv:value>
-          <sv:value>DISQUS commenting enabled only for blog pages</sv:value>
-          <sv:value>DISQUS forum shortname is not correct. The widget will not be rendered</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages_en" sv:type="String" sv:multiple="true">
-          <sv:value>This document has no over or thema tags. Filtering can not be applied. Remove filter checkboxes for having any items displayed</sv:value>
+          <sv:value>This document has no over or thema tags. Filtering can not be applied. Remove filter checkboxes for having any items displayed
+          </sv:value>
           <sv:value>There are no items to display under the selected folder or the items do not match the required filtering.</sv:value>
           <sv:value>There is no form connected to this page or this document</sv:value>
           <sv:value>No contacts have been selected neither in the widget configuration nor in the mixin. No items will be displayed.</sv:value>
           <sv:value>No root folder has been selected neither in the widget configuration nor in the mixin. No items will be displayed.</sv:value>
           <sv:value>There are no tweets to display for this widget configuration. The widget will not be rendered.</sv:value>
           <sv:value>There are no images to display for the provided configuration. The widget will not be rendered.</sv:value>
-          <sv:value>DISQUS commenting enabled only for blog pages</sv:value>
-          <sv:value>DISQUS forum shortname is not correct. The widget will not be rendered</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages_nl" sv:type="String" sv:multiple="true">
-          <sv:value>This document has no over or thema tags. Filtering can not be applied. Remove filter checkboxes for having any items displayed</sv:value>
+          <sv:value>This document has no over or thema tags. Filtering can not be applied. Remove filter checkboxes for having any items displayed
+          </sv:value>
           <sv:value>There are no items to display under the selected folder or the items do not match the required filtering.</sv:value>
           <sv:value>There is no form connected to this page or this document</sv:value>
           <sv:value>No contacts have been selected neither in the widget configuration nor in the mixin. No items will be displayed.</sv:value>
           <sv:value>No root folder has been selected neither in the widget configuration nor in the mixin. No items will be displayed.</sv:value>
           <sv:value>There are no tweets to display for this widget configuration. The widget will not be rendered.</sv:value>
           <sv:value>There are no images to display for the provided configuration. The widget will not be rendered.</sv:value>
-          <sv:value>DISQUS commenting enabled only for blog pages</sv:value>
-          <sv:value>DISQUS forum shortname is not correct. The widget will not be rendered</sv:value>
         </sv:property>
       </sv:node>
       <sv:node sv:name="hippo:translation">
@@ -1962,41 +2268,36 @@
           <sv:value>webmaster.nofolder.message</sv:value>
           <sv:value>webmaster.notweets.message</sv:value>
           <sv:value>webmaster.noimages.message</sv:value>
-          <sv:value>webmaster.disqus.only.blogs</sv:value>
-          <sv:value>webmaster.disqus.forumname</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages" sv:type="String" sv:multiple="true">
-          <sv:value>This document has no over or thema tags. Filtering can not be applied. Remove filter checkboxes for having any items displayed</sv:value>
+          <sv:value>This document has no over or thema tags. Filtering can not be applied. Remove filter checkboxes for having any items displayed
+          </sv:value>
           <sv:value>There are no items to display under the selected folder or the items do not match the required filtering.</sv:value>
           <sv:value>There is no form connected to this page or this document</sv:value>
           <sv:value>No contacts have been selected neither in the widget configuration nor in the mixin. No items will be displayed.</sv:value>
           <sv:value>No root folder has been selected neither in the widget configuration nor in the mixin. No items will be displayed.</sv:value>
           <sv:value>There are no tweets to display for this widget configuration. The widget will not be rendered.</sv:value>
           <sv:value>There are no images to display for the provided configuration. The widget will not be rendered.</sv:value>
-          <sv:value>DISQUS commenting enabled only for blog pages</sv:value>
-          <sv:value>DISQUS forum shortname is not correct. The widget will not be rendered</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages_en" sv:type="String" sv:multiple="true">
-          <sv:value>This document has no over or thema tags. Filtering can not be applied. Remove filter checkboxes for having any items displayed</sv:value>
+          <sv:value>This document has no over or thema tags. Filtering can not be applied. Remove filter checkboxes for having any items displayed
+          </sv:value>
           <sv:value>There are no items to display under the selected folder or the items do not match the required filtering.</sv:value>
           <sv:value>There is no form connected to this page or this document</sv:value>
           <sv:value>No contacts have been selected neither in the widget configuration nor in the mixin. No items will be displayed.</sv:value>
           <sv:value>No root folder has been selected neither in the widget configuration nor in the mixin. No items will be displayed.</sv:value>
           <sv:value>There are no tweets to display for this widget configuration. The widget will not be rendered.</sv:value>
           <sv:value>There are no images to display for the provided configuration. The widget will not be rendered.</sv:value>
-          <sv:value>DISQUS commenting enabled only for blog pages</sv:value>
-          <sv:value>DISQUS forum shortname is not correct. The widget will not be rendered</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages_nl" sv:type="String" sv:multiple="true">
-          <sv:value>This document has no over or thema tags. Filtering can not be applied. Remove filter checkboxes for having any items displayed</sv:value>
+          <sv:value>This document has no over or thema tags. Filtering can not be applied. Remove filter checkboxes for having any items displayed
+          </sv:value>
           <sv:value>There are no items to display under the selected folder or the items do not match the required filtering.</sv:value>
           <sv:value>There is no form connected to this page or this document</sv:value>
           <sv:value>No contacts have been selected neither in the widget configuration nor in the mixin. No items will be displayed.</sv:value>
           <sv:value>No root folder has been selected neither in the widget configuration nor in the mixin. No items will be displayed.</sv:value>
           <sv:value>There are no tweets to display for this widget configuration. The widget will not be rendered.</sv:value>
           <sv:value>There are no images to display for the provided configuration. The widget will not be rendered.</sv:value>
-          <sv:value>DISQUS commenting enabled only for blog pages</sv:value>
-          <sv:value>DISQUS forum shortname is not correct. The widget will not be rendered</sv:value>
         </sv:property>
       </sv:node>
       <sv:node sv:name="channel-manager-messages">
@@ -2059,41 +2360,36 @@
           <sv:value>webmaster.nofolder.message</sv:value>
           <sv:value>webmaster.notweets.message</sv:value>
           <sv:value>webmaster.noimages.message</sv:value>
-          <sv:value>webmaster.disqus.only.blogs</sv:value>
-          <sv:value>webmaster.disqus.forumname</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages" sv:type="String" sv:multiple="true">
-          <sv:value>This document has no over or thema tags. Filtering can not be applied. Remove filter checkboxes for having any items displayed</sv:value>
+          <sv:value>This document has no over or thema tags. Filtering can not be applied. Remove filter checkboxes for having any items displayed
+          </sv:value>
           <sv:value>There are no items to display under the selected folder or the items do not match the required filtering.</sv:value>
           <sv:value>There is no form connected to this page or this document</sv:value>
           <sv:value>No contacts have been selected neither in the widget configuration nor in the mixin. No items will be displayed.</sv:value>
           <sv:value>No root folder has been selected neither in the widget configuration nor in the mixin. No items will be displayed.</sv:value>
           <sv:value>There are no tweets to display for this widget configuration. The widget will not be rendered.</sv:value>
           <sv:value>There are no images to display for the provided configuration. The widget will not be rendered.</sv:value>
-          <sv:value>DISQUS commenting enabled only for blog pages</sv:value>
-          <sv:value>DISQUS forum shortname is not correct. The widget will not be rendered</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages_en" sv:type="String" sv:multiple="true">
-          <sv:value>This document has no over or thema tags. Filtering can not be applied. Remove filter checkboxes for having any items displayed</sv:value>
+          <sv:value>This document has no over or thema tags. Filtering can not be applied. Remove filter checkboxes for having any items displayed
+          </sv:value>
           <sv:value>There are no items to display under the selected folder or the items do not match the required filtering.</sv:value>
           <sv:value>There is no form connected to this page or this document</sv:value>
           <sv:value>No contacts have been selected neither in the widget configuration nor in the mixin. No items will be displayed.</sv:value>
           <sv:value>No root folder has been selected neither in the widget configuration nor in the mixin. No items will be displayed.</sv:value>
           <sv:value>There are no tweets to display for this widget configuration. The widget will not be rendered.</sv:value>
           <sv:value>There are no images to display for the provided configuration. The widget will not be rendered.</sv:value>
-          <sv:value>DISQUS commenting enabled only for blog pages</sv:value>
-          <sv:value>DISQUS forum shortname is not correct. The widget will not be rendered</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages_nl" sv:type="String" sv:multiple="true">
-          <sv:value>This document has no over or thema tags. Filtering can not be applied. Remove filter checkboxes for having any items displayed</sv:value>
+          <sv:value>This document has no over or thema tags. Filtering can not be applied. Remove filter checkboxes for having any items displayed
+          </sv:value>
           <sv:value>There are no items to display under the selected folder or the items do not match the required filtering.</sv:value>
           <sv:value>There is no form connected to this page or this document</sv:value>
           <sv:value>No contacts have been selected neither in the widget configuration nor in the mixin. No items will be displayed.</sv:value>
           <sv:value>No root folder has been selected neither in the widget configuration nor in the mixin. No items will be displayed.</sv:value>
           <sv:value>There are no tweets to display for this widget configuration. The widget will not be rendered.</sv:value>
           <sv:value>There are no images to display for the provided configuration. The widget will not be rendered.</sv:value>
-          <sv:value>DISQUS commenting enabled only for blog pages</sv:value>
-          <sv:value>DISQUS forum shortname is not correct. The widget will not be rendered</sv:value>
         </sv:property>
       </sv:node>
     </sv:node>
@@ -2136,7 +2432,7 @@
           <sv:value>2014-07-09T11:47:12.308+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-08-21T11:03:07.849+02:00</sv:value>
+          <sv:value>2014-07-31T15:34:24.398+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -2153,10 +2449,6 @@
           <sv:value/>
           <sv:value/>
           <sv:value/>
-          <sv:value/>
-          <sv:value/>
-          <sv:value/>
-          <sv:value/>
         </sv:property>
         <sv:property sv:name="resourcebundle:id" sv:type="String">
           <sv:value>nl.hsleiden.widget.Messages</sv:value>
@@ -2168,42 +2460,30 @@
           <sv:value>back.overview.pers</sv:value>
           <sv:value>back.overview.nieuws</sv:value>
           <sv:value>back.parent.images.folder</sv:value>
-          <sv:value>back.overview.actueel</sv:value>
-          <sv:value>back.overview.over-hl</sv:value>
-          <sv:value>back.overview.bedrijven</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages" sv:type="String" sv:multiple="true">
           <sv:value>Overview</sv:value>
           <sv:value>Define it in property: contact person subject</sv:value>
-          <sv:value>back to overview agenda</sv:value>
-          <sv:value>back to overview pers</sv:value>
-          <sv:value>back to overview nieuws</sv:value>
-          <sv:value>back to parent images folder</sv:value>
-          <sv:value>back to actueel</sv:value>
-          <sv:value>back to Over HL</sv:value>
-          <sv:value>back to bedrijven</sv:value>
+          <sv:value>wdg sms back.overview.agenda</sv:value>
+          <sv:value>wdg sms back.overview.pers</sv:value>
+          <sv:value>wdg sms back.overview.nieuws</sv:value>
+          <sv:value>wdg sms back.parent.images.folder</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages_en" sv:type="String" sv:multiple="true">
           <sv:value>Overview</sv:value>
           <sv:value>Define it in property: contact person subject</sv:value>
-          <sv:value>back to overview agenda</sv:value>
-          <sv:value>back to overview pers</sv:value>
-          <sv:value>back to overview nieuws</sv:value>
-          <sv:value>back to parent images folder</sv:value>
-          <sv:value>back to actueel</sv:value>
-          <sv:value>back to Over HL</sv:value>
-          <sv:value>back to bedrijven</sv:value>
+          <sv:value>wdg sms back.overview.agenda</sv:value>
+          <sv:value>wdg sms back.overview.pers</sv:value>
+          <sv:value>wdg sms back.overview.nieuws</sv:value>
+          <sv:value>wdg sms back.parent.images.folder</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages_nl" sv:type="String" sv:multiple="true">
           <sv:value>Overview</sv:value>
           <sv:value>Define it in property: contact person subject</sv:value>
-          <sv:value>back to overview agenda</sv:value>
-          <sv:value>back to overview pers</sv:value>
-          <sv:value>back to overview nieuws</sv:value>
-          <sv:value>back to parent images folder</sv:value>
-          <sv:value>back to actueel</sv:value>
-          <sv:value>back to Over HL</sv:value>
-          <sv:value>back to bedrijven</sv:value>
+          <sv:value>wdg sms back.overview.agenda</sv:value>
+          <sv:value>wdg sms back.overview.pers</sv:value>
+          <sv:value>wdg sms back.overview.nieuws</sv:value>
+          <sv:value>wdg sms back.parent.images.folder</sv:value>
         </sv:property>
       </sv:node>
       <sv:node sv:name="hippo:translation">
@@ -2247,7 +2527,7 @@
           <sv:value>2014-07-09T11:47:12.308+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-08-21T11:03:42.591+02:00</sv:value>
+          <sv:value>2014-07-31T15:35:13.683+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -2264,10 +2544,6 @@
           <sv:value/>
           <sv:value/>
           <sv:value/>
-          <sv:value/>
-          <sv:value/>
-          <sv:value/>
-          <sv:value/>
         </sv:property>
         <sv:property sv:name="resourcebundle:id" sv:type="String">
           <sv:value>nl.hsleiden.widget.Messages</sv:value>
@@ -2279,42 +2555,30 @@
           <sv:value>back.overview.pers</sv:value>
           <sv:value>back.overview.nieuws</sv:value>
           <sv:value>back.parent.images.folder</sv:value>
-          <sv:value>back.overview.actueel</sv:value>
-          <sv:value>back.overview.over-hl</sv:value>
-          <sv:value>back.overview.bedrijven</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages" sv:type="String" sv:multiple="true">
           <sv:value>Overview</sv:value>
           <sv:value>Define it in property: contact person subject</sv:value>
-          <sv:value>back to overview agenda</sv:value>
-          <sv:value>back to overview pers</sv:value>
-          <sv:value>back to overview nieuws</sv:value>
-          <sv:value>back to parent images folder</sv:value>
-          <sv:value>back to actueel</sv:value>
-          <sv:value>back to Over HL</sv:value>
-          <sv:value>back to bedrijven</sv:value>
+          <sv:value>wdg sms back.overview.agenda</sv:value>
+          <sv:value>wdg sms back.overview.pers</sv:value>
+          <sv:value>wdg sms back.overview.nieuws</sv:value>
+          <sv:value>wdg sms back.parent.images.folder</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages_en" sv:type="String" sv:multiple="true">
           <sv:value>Overview</sv:value>
           <sv:value>Define it in property: contact person subject</sv:value>
-          <sv:value>back to overview agenda</sv:value>
-          <sv:value>back to overview pers</sv:value>
-          <sv:value>back to overview nieuws</sv:value>
-          <sv:value>back to parent images folder</sv:value>
-          <sv:value>back to actueel</sv:value>
-          <sv:value>back to Over HL</sv:value>
-          <sv:value>back to bedrijven</sv:value>
+          <sv:value>wdg sms back.overview.agenda</sv:value>
+          <sv:value>wdg sms back.overview.pers</sv:value>
+          <sv:value>wdg sms back.overview.nieuws</sv:value>
+          <sv:value>wdg sms back.parent.images.folder</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages_nl" sv:type="String" sv:multiple="true">
           <sv:value>Overview</sv:value>
           <sv:value>Define it in property: contact person subject</sv:value>
-          <sv:value>back to overview agenda</sv:value>
-          <sv:value>back to overview pers</sv:value>
-          <sv:value>back to overview nieuws</sv:value>
-          <sv:value>back to parent images folder</sv:value>
-          <sv:value>back to actueel</sv:value>
-          <sv:value>back to Over HL</sv:value>
-          <sv:value>back to bedrijven</sv:value>
+          <sv:value>wdg sms back.overview.agenda</sv:value>
+          <sv:value>wdg sms back.overview.pers</sv:value>
+          <sv:value>wdg sms back.overview.nieuws</sv:value>
+          <sv:value>wdg sms back.parent.images.folder</sv:value>
         </sv:property>
       </sv:node>
       <sv:node sv:name="widget-messages">
@@ -2346,13 +2610,13 @@
           <sv:value>2014-07-09T11:47:12.308+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-08-21T11:03:42.591+02:00</sv:value>
+          <sv:value>2014-07-31T15:35:13.683+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-          <sv:value>2014-08-21T11:03:44.777+02:00</sv:value>
+          <sv:value>2014-07-31T15:35:15.442+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:id" sv:type="String">
           <sv:value>a624d81b-1d29-4fa5-a54c-22baa0004a2a</sv:value>
@@ -2362,10 +2626,6 @@
         </sv:property>
         <sv:property sv:name="resourcebundle:descriptions" sv:type="String" sv:multiple="true">
           <sv:value>Default value for label of the overview links in the widgets</sv:value>
-          <sv:value/>
-          <sv:value/>
-          <sv:value/>
-          <sv:value/>
           <sv:value/>
           <sv:value/>
           <sv:value/>
@@ -2381,339 +2641,30 @@
           <sv:value>back.overview.pers</sv:value>
           <sv:value>back.overview.nieuws</sv:value>
           <sv:value>back.parent.images.folder</sv:value>
-          <sv:value>back.overview.actueel</sv:value>
-          <sv:value>back.overview.over-hl</sv:value>
-          <sv:value>back.overview.bedrijven</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages" sv:type="String" sv:multiple="true">
           <sv:value>Overview</sv:value>
           <sv:value>Define it in property: contact person subject</sv:value>
-          <sv:value>back to overview agenda</sv:value>
-          <sv:value>back to overview pers</sv:value>
-          <sv:value>back to overview nieuws</sv:value>
-          <sv:value>back to parent images folder</sv:value>
-          <sv:value>back to actueel</sv:value>
-          <sv:value>back to Over HL</sv:value>
-          <sv:value>back to bedrijven</sv:value>
+          <sv:value>wdg sms back.overview.agenda</sv:value>
+          <sv:value>wdg sms back.overview.pers</sv:value>
+          <sv:value>wdg sms back.overview.nieuws</sv:value>
+          <sv:value>wdg sms back.parent.images.folder</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages_en" sv:type="String" sv:multiple="true">
           <sv:value>Overview</sv:value>
           <sv:value>Define it in property: contact person subject</sv:value>
-          <sv:value>back to overview agenda</sv:value>
-          <sv:value>back to overview pers</sv:value>
-          <sv:value>back to overview nieuws</sv:value>
-          <sv:value>back to parent images folder</sv:value>
-          <sv:value>back to actueel</sv:value>
-          <sv:value>back to Over HL</sv:value>
-          <sv:value>back to bedrijven</sv:value>
+          <sv:value>wdg sms back.overview.agenda</sv:value>
+          <sv:value>wdg sms back.overview.pers</sv:value>
+          <sv:value>wdg sms back.overview.nieuws</sv:value>
+          <sv:value>wdg sms back.parent.images.folder</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages_nl" sv:type="String" sv:multiple="true">
           <sv:value>Overview</sv:value>
           <sv:value>Define it in property: contact person subject</sv:value>
-          <sv:value>back to overview agenda</sv:value>
-          <sv:value>back to overview pers</sv:value>
-          <sv:value>back to overview nieuws</sv:value>
-          <sv:value>back to parent images folder</sv:value>
-          <sv:value>back to actueel</sv:value>
-          <sv:value>back to Over HL</sv:value>
-          <sv:value>back to bedrijven</sv:value>
-        </sv:property>
-      </sv:node>
-    </sv:node>
-    <sv:node sv:name="blog-messages">
-      <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hippo:handle</sv:value>
-      </sv:property>
-      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
-        <sv:value>mix:referenceable</sv:value>
-        <sv:value>hippo:translated</sv:value>
-      </sv:property>
-      <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>6b86b068-0f6a-444b-864e-834683405aaa</sv:value>
-      </sv:property>
-      <sv:node sv:name="blog-messages">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>resourcebundle:resourcebundle</sv:value>
-        </sv:property>
-        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
-          <sv:value>mix:referenceable</sv:value>
-        </sv:property>
-        <sv:property sv:name="jcr:uuid" sv:type="String">
-          <sv:value>9e6e3a57-5e3a-4411-a73a-db99a496aaae</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hippo:related___pathreference" sv:type="String">
-          <sv:value>configuratie/resource-bundles/blog-messages/blog-messages[2]</sv:value>
-          <sv:value>configuratie/resource-bundles/blog-messages/blog-messages[3]</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippostd:state" sv:type="String">
-          <sv:value>draft</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippostd:stateSummary" sv:type="String">
-          <sv:value>live</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
-          <sv:value>boogaard.joris</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
-          <sv:value>2014-07-09T11:47:12.308+02:00</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-31T15:34:24.398+02:00</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
-          <sv:value>admin</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippotranslation:id" sv:type="String">
-          <sv:value>a624d81b-1d29-4fa5-a54c-22baa0004aaa</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippotranslation:locale" sv:type="String">
-          <sv:value>nl</sv:value>
-        </sv:property>
-        <sv:property sv:name="resourcebundle:descriptions" sv:type="String" sv:multiple="true">
-          <sv:value/>
-          <sv:value/>
-          <sv:value/>
-          <sv:value/>
-          <sv:value/>
-        </sv:property>
-        <sv:property sv:name="resourcebundle:id" sv:type="String">
-          <sv:value>nl.hsleiden.blog.Messages</sv:value>
-        </sv:property>
-        <sv:property sv:name="resourcebundle:keys" sv:type="String" sv:multiple="true">
-          <sv:value>paginated.items</sv:value>
-          <sv:value>before.author.name</sv:value>
-          <sv:value>more.by</sv:value>
-          <sv:value>blog.paginator.next</sv:value>
-          <sv:value>blog.paginator.previous</sv:value>
-          <sv:value>more.about</sv:value>
-          <sv:value>follow.author</sv:value>
-          <sv:value>no.other.blogs</sv:value>
-        </sv:property>
-        <sv:property sv:name="resourcebundle:messages" sv:type="String" sv:multiple="true">
-          <sv:value>blog(s)</sv:value>
-          <sv:value>by: </sv:value>
-          <sv:value>More by</sv:value>
-          <sv:value>next</sv:value>
-          <sv:value>previous</sv:value>
-          <sv:value>More about &amp;nbsp;</sv:value>
-          <sv:value>Follow author on &amp;nbsp;</sv:value>
-          <sv:value>There are no other blog posts from this author</sv:value>
-        </sv:property>
-        <sv:property sv:name="resourcebundle:messages_en" sv:type="String" sv:multiple="true">
-          <sv:value>blog(s)</sv:value>
-          <sv:value>by: </sv:value>
-          <sv:value>More by</sv:value>
-          <sv:value>next</sv:value>
-          <sv:value>previous</sv:value>
-          <sv:value>More about &amp;nbsp;</sv:value>
-          <sv:value>Follow author on &amp;nbsp;</sv:value>
-          <sv:value>There are no other blog posts from this author</sv:value>
-        </sv:property>
-        <sv:property sv:name="resourcebundle:messages_nl" sv:type="String" sv:multiple="true">
-          <sv:value>blog(s)</sv:value>
-          <sv:value>by: </sv:value>
-          <sv:value>More by</sv:value>
-          <sv:value>next</sv:value>
-          <sv:value>previous</sv:value>
-          <sv:value>More about &amp;nbsp;</sv:value>
-          <sv:value>Follow author on &amp;nbsp;</sv:value>
-          <sv:value>There are no other blog posts from this author</sv:value>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="hippo:translation">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hippo:translation</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippo:language" sv:type="String">
-          <sv:value/>
-        </sv:property>
-        <sv:property sv:name="hippo:message" sv:type="String">
-          <sv:value>blog messages</sv:value>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="blog-messages">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>resourcebundle:resourcebundle</sv:value>
-        </sv:property>
-        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
-          <sv:value>mix:referenceable</sv:value>
-          <sv:value>mix:versionable</sv:value>
-        </sv:property>
-        <sv:property sv:name="jcr:uuid" sv:type="String">
-          <sv:value>4c56b761-b681-4bf4-b23c-d38f6325c222</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
-          <sv:value>preview</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippo:related___pathreference" sv:type="String">
-          <sv:value>configuratie/resource-bundles/blog-messages/blog-messages[3]</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippostd:state" sv:type="String">
-          <sv:value>unpublished</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippostd:stateSummary" sv:type="String">
-          <sv:value>live</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
-          <sv:value>boogaard.joris</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
-          <sv:value>2014-07-09T11:47:12.308+02:00</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-31T15:35:13.683+02:00</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
-          <sv:value>admin</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippotranslation:id" sv:type="String">
-          <sv:value>a624d81b-1d29-4fa5-a54c-22baa0004aaa</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippotranslation:locale" sv:type="String">
-          <sv:value>nl</sv:value>
-        </sv:property>
-        <sv:property sv:name="resourcebundle:descriptions" sv:type="String" sv:multiple="true">
-          <sv:value/>
-          <sv:value/>
-          <sv:value/>
-          <sv:value/>
-        </sv:property>
-        <sv:property sv:name="resourcebundle:id" sv:type="String">
-          <sv:value>nl.hsleiden.blog.Messages</sv:value>
-        </sv:property>
-        <sv:property sv:name="resourcebundle:keys" sv:type="String" sv:multiple="true">
-          <sv:value>paginated.items</sv:value>
-          <sv:value>before.author.name</sv:value>
-          <sv:value>more.by</sv:value>
-          <sv:value>blog.paginator.next</sv:value>
-          <sv:value>blog.paginator.previous</sv:value>
-          <sv:value>more.about</sv:value>
-          <sv:value>follow.author</sv:value>
-          <sv:value>no.other.blogs</sv:value>
-        </sv:property>
-        <sv:property sv:name="resourcebundle:messages" sv:type="String" sv:multiple="true">
-          <sv:value>blog(s)</sv:value>
-          <sv:value>by: </sv:value>
-          <sv:value>More by</sv:value>
-          <sv:value>next</sv:value>
-          <sv:value>previous</sv:value>
-          <sv:value>More about &amp;nbsp;</sv:value>
-          <sv:value>Follow author on &amp;nbsp;</sv:value>
-          <sv:value>There are no other blog posts from this author</sv:value>
-        </sv:property>
-        <sv:property sv:name="resourcebundle:messages_en" sv:type="String" sv:multiple="true">
-          <sv:value>blog(s)</sv:value>
-          <sv:value>by: </sv:value>
-          <sv:value>More by</sv:value>
-          <sv:value>next</sv:value>
-          <sv:value>previous</sv:value>
-          <sv:value>More about &amp;nbsp;</sv:value>
-          <sv:value>Follow author on &amp;nbsp;</sv:value>
-          <sv:value>There are no other blog posts from this author</sv:value>
-        </sv:property>
-        <sv:property sv:name="resourcebundle:messages_nl" sv:type="String" sv:multiple="true">
-          <sv:value>blog(s)</sv:value>
-          <sv:value>by: </sv:value>
-          <sv:value>More by</sv:value>
-          <sv:value>next</sv:value>
-          <sv:value>previous</sv:value>
-          <sv:value>More about &amp;nbsp;</sv:value>
-          <sv:value>Follow author on &amp;nbsp;</sv:value>
-          <sv:value>There are no other blog posts from this author</sv:value>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="blog-messages">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>resourcebundle:resourcebundle</sv:value>
-        </sv:property>
-        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
-          <sv:value>mix:referenceable</sv:value>
-        </sv:property>
-        <sv:property sv:name="jcr:uuid" sv:type="String">
-          <sv:value>6e159050-d0d7-41e2-b49b-3be83c81aab4</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
-          <sv:value>live</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippo:related___pathreference" sv:type="String">
-          <sv:value>configuratie/resource-bundles/blog-messages/blog-messages[2]</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippostd:state" sv:type="String">
-          <sv:value>published</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippostd:stateSummary" sv:type="String">
-          <sv:value>live</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
-          <sv:value>boogaard.joris</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
-          <sv:value>2014-07-09T11:47:12.308+02:00</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-31T15:35:13.683+02:00</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
-          <sv:value>admin</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-          <sv:value>2014-07-31T15:35:15.442+02:00</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippotranslation:id" sv:type="String">
-          <sv:value>a624d81b-1d29-4fa5-a54c-22baa0004aaa</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippotranslation:locale" sv:type="String">
-          <sv:value>nl</sv:value>
-        </sv:property>
-        <sv:property sv:name="resourcebundle:descriptions" sv:type="String" sv:multiple="true">
-          <sv:value/>
-          <sv:value/>
-          <sv:value/>
-          <sv:value/>
-        </sv:property>
-        <sv:property sv:name="resourcebundle:id" sv:type="String">
-          <sv:value>nl.hsleiden.blog.Messages</sv:value>
-        </sv:property>
-        <sv:property sv:name="resourcebundle:keys" sv:type="String" sv:multiple="true">
-          <sv:value>paginated.items</sv:value>
-          <sv:value>before.author.name</sv:value>
-          <sv:value>more.by</sv:value>
-          <sv:value>blog.paginator.next</sv:value>
-          <sv:value>blog.paginator.previous</sv:value>
-          <sv:value>more.about</sv:value>
-          <sv:value>follow.author</sv:value>
-          <sv:value>no.other.blogs</sv:value>
-        </sv:property>
-        <sv:property sv:name="resourcebundle:messages" sv:type="String" sv:multiple="true">
-          <sv:value>blog(s)</sv:value>
-          <sv:value>by: </sv:value>
-          <sv:value>More by</sv:value>
-          <sv:value>next</sv:value>
-          <sv:value>previous</sv:value>
-          <sv:value>More about &amp;nbsp;</sv:value>
-          <sv:value>Follow author on &amp;nbsp;</sv:value>
-          <sv:value>There are no other blog posts from this author</sv:value>
-        </sv:property>
-        <sv:property sv:name="resourcebundle:messages_en" sv:type="String" sv:multiple="true">
-          <sv:value>blog(s)</sv:value>
-          <sv:value>by: </sv:value>
-          <sv:value>More by</sv:value>
-          <sv:value>next</sv:value>
-          <sv:value>previous</sv:value>
-          <sv:value>More about &amp;nbsp;</sv:value>
-          <sv:value>Follow author on &amp;nbsp;</sv:value>
-          <sv:value>There are no other blog posts from this author</sv:value>
-        </sv:property>
-        <sv:property sv:name="resourcebundle:messages_nl" sv:type="String" sv:multiple="true">
-          <sv:value>blog(s)</sv:value>
-          <sv:value>by: </sv:value>
-          <sv:value>More by</sv:value>
-          <sv:value>next</sv:value>
-          <sv:value>previous</sv:value>
-          <sv:value>More about &amp;nbsp;</sv:value>
-          <sv:value>Follow author on &amp;nbsp;</sv:value>
-          <sv:value>There are no other blog posts from this author</sv:value>
+          <sv:value>wdg sms back.overview.agenda</sv:value>
+          <sv:value>wdg sms back.overview.pers</sv:value>
+          <sv:value>wdg sms back.overview.nieuws</sv:value>
+          <sv:value>wdg sms back.parent.images.folder</sv:value>
         </sv:property>
       </sv:node>
     </sv:node>
