@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="configuratie">
+<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="configuratie">
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>hippostd:folder</sv:value>
   </sv:property>
@@ -26,7 +25,7 @@
       <sv:value>hippo:translation</sv:value>
     </sv:property>
     <sv:property sv:name="hippo:language" sv:type="String">
-      <sv:value />
+      <sv:value/>
     </sv:property>
     <sv:property sv:name="hippo:message" sv:type="String">
       <sv:value>Configuratie</sv:value>
@@ -37,7 +36,7 @@
       <sv:value>hippo:translation</sv:value>
     </sv:property>
     <sv:property sv:name="hippo:language" sv:type="String">
-      <sv:value />
+      <sv:value/>
     </sv:property>
     <sv:property sv:name="hippo:message" sv:type="String">
       <sv:value>Configuratie</sv:value>
@@ -48,7 +47,7 @@
       <sv:value>hippo:translation</sv:value>
     </sv:property>
     <sv:property sv:name="hippo:language" sv:type="String">
-      <sv:value />
+      <sv:value/>
     </sv:property>
     <sv:property sv:name="hippo:message" sv:type="String">
       <sv:value>Configuratie</sv:value>
@@ -59,7 +58,7 @@
       <sv:value>hippo:translation</sv:value>
     </sv:property>
     <sv:property sv:name="hippo:language" sv:type="String">
-      <sv:value />
+      <sv:value/>
     </sv:property>
     <sv:property sv:name="hippo:message" sv:type="String">
       <sv:value>Configuratie</sv:value>
@@ -70,7 +69,7 @@
       <sv:value>hippo:translation</sv:value>
     </sv:property>
     <sv:property sv:name="hippo:language" sv:type="String">
-      <sv:value />
+      <sv:value/>
     </sv:property>
     <sv:property sv:name="hippo:message" sv:type="String">
       <sv:value>Configuratie</sv:value>
@@ -81,7 +80,7 @@
       <sv:value>hippo:translation</sv:value>
     </sv:property>
     <sv:property sv:name="hippo:language" sv:type="String">
-      <sv:value />
+      <sv:value/>
     </sv:property>
     <sv:property sv:name="hippo:message" sv:type="String">
       <sv:value>Configuratie</sv:value>
@@ -92,7 +91,7 @@
       <sv:value>hippo:translation</sv:value>
     </sv:property>
     <sv:property sv:name="hippo:language" sv:type="String">
-      <sv:value />
+      <sv:value/>
     </sv:property>
     <sv:property sv:name="hippo:message" sv:type="String">
       <sv:value>Configuratie</sv:value>
@@ -103,7 +102,7 @@
       <sv:value>hippo:translation</sv:value>
     </sv:property>
     <sv:property sv:name="hippo:language" sv:type="String">
-      <sv:value />
+      <sv:value/>
     </sv:property>
     <sv:property sv:name="hippo:message" sv:type="String">
       <sv:value>Configuratie</sv:value>
@@ -114,7 +113,18 @@
       <sv:value>hippo:translation</sv:value>
     </sv:property>
     <sv:property sv:name="hippo:language" sv:type="String">
-      <sv:value />
+      <sv:value/>
+    </sv:property>
+    <sv:property sv:name="hippo:message" sv:type="String">
+      <sv:value>Configuratie</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="hippo:translation">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hippo:translation</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:language" sv:type="String">
+      <sv:value/>
     </sv:property>
     <sv:property sv:name="hippo:message" sv:type="String">
       <sv:value>Configuratie</sv:value>
@@ -126,8 +136,8 @@
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
       <sv:value>hippotranslation:translated</sv:value>
-      <sv:value>hippo:translated</sv:value>
       <sv:value>mix:versionable</sv:value>
+      <sv:value>hippo:translated</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>0710213c-430e-44b9-871c-dabb4f22d510</sv:value>
@@ -697,155 +707,323 @@
         <sv:value>hippo:translation</sv:value>
       </sv:property>
       <sv:property sv:name="hippo:language" sv:type="String">
-        <sv:value />
+        <sv:value/>
       </sv:property>
       <sv:property sv:name="hippo:message" sv:type="String">
         <sv:value>Valuelists</sv:value>
       </sv:property>
     </sv:node>
-  </sv:node>
-  <sv:node sv:name="currency-code">
-    <sv:property sv:name="jcr:primaryType" sv:type="Name">
-      <sv:value>hippo:handle</sv:value>
-    </sv:property>
-    <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
-      <sv:value>mix:referenceable</sv:value>
-      <sv:value>hippo:translated</sv:value>
-    </sv:property>
-    <sv:property sv:name="jcr:uuid" sv:type="String">
-      <sv:value>9f0e0de4-d00f-4919-8936-c13e5b042005</sv:value>
-    </sv:property>
+    <sv:node sv:name="blog-administratie">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hippostd:folder</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:value>hippo:harddocument</sv:value>
+        <sv:value>hippo:translated</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>ef527cf1-b66c-4fd1-802e-eb00b69c2c70</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:related___pathreference" sv:type="String"/>
+      <sv:property sv:name="hippostd:foldertype" sv:type="String" sv:multiple="true">
+        <sv:value>new-document</sv:value>
+        <sv:value>new-folder</sv:value>
+      </sv:property>
+      <sv:node sv:name="account-types">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hippo:handle</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+          <sv:value>hippo:hardhandle</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>ebc405ab-437c-4bdd-ba8e-7b9a71e54b63</sv:value>
+        </sv:property>
+        <sv:node sv:name="account-types">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>selection:valuelist</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+            <sv:value>hippo:harddocument</sv:value>
+            <sv:value>hippotranslation:translated</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>512d347f-bf91-4379-8c9c-8572927ac67f</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+            <sv:value>live</sv:value>
+            <sv:value>preview</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:related___pathreference" sv:type="String"/>
+          <sv:property sv:name="hippotranslation:id" sv:type="String">
+            <sv:value>dd1fa305-8e7d-44cb-b5bb-a89c0c8515b1</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippotranslation:locale" sv:type="String">
+            <sv:value>inherited - from query</sv:value>
+          </sv:property>
+          <sv:node sv:name="hippotranslation:translations">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippotranslation:translations</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="selection:listitem">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>selection:listitem</sv:value>
+            </sv:property>
+            <sv:property sv:name="selection:key" sv:type="String">
+              <sv:value>github</sv:value>
+            </sv:property>
+            <sv:property sv:name="selection:label" sv:type="String">
+              <sv:value>GitHub</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="selection:listitem">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>selection:listitem</sv:value>
+            </sv:property>
+            <sv:property sv:name="selection:key" sv:type="String">
+              <sv:value>facebook</sv:value>
+            </sv:property>
+            <sv:property sv:name="selection:label" sv:type="String">
+              <sv:value>Facebook</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="selection:listitem">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>selection:listitem</sv:value>
+            </sv:property>
+            <sv:property sv:name="selection:key" sv:type="String">
+              <sv:value>twitter</sv:value>
+            </sv:property>
+            <sv:property sv:name="selection:label" sv:type="String">
+              <sv:value>Twitter</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="selection:listitem">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>selection:listitem</sv:value>
+            </sv:property>
+            <sv:property sv:name="selection:key" sv:type="String">
+              <sv:value>googleplus</sv:value>
+            </sv:property>
+            <sv:property sv:name="selection:label" sv:type="String">
+              <sv:value>Google+</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="selection:listitem">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>selection:listitem</sv:value>
+            </sv:property>
+            <sv:property sv:name="selection:key" sv:type="String">
+              <sv:value>linkedin</sv:value>
+            </sv:property>
+            <sv:property sv:name="selection:label" sv:type="String">
+              <sv:value>LinkedIn</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="blog-categories">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hippo:handle</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+          <sv:value>hippo:hardhandle</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>ed4e72d3-8f03-4e70-b1e6-bf2dff8b9723</sv:value>
+        </sv:property>
+        <sv:node sv:name="blog-categories">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>selection:valuelist</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+            <sv:value>hippo:harddocument</sv:value>
+            <sv:value>hippotranslation:translated</sv:value>
+          </sv:property>
+          <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>dbf0c708-aff6-43c1-8642-e4955dd06c11</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:related___pathreference" sv:type="String"/>
+          <sv:property sv:name="hippotranslation:id" sv:type="String">
+            <sv:value>c220fe8d-7313-4e28-af4f-00c6709354cd</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippotranslation:locale" sv:type="String">
+            <sv:value>en</sv:value>
+          </sv:property>
+          <sv:node sv:name="hippotranslation:translations">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippotranslation:translations</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="selection:listitem">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>selection:listitem</sv:value>
+            </sv:property>
+            <sv:property sv:name="selection:key" sv:type="String">
+              <sv:value>cms</sv:value>
+            </sv:property>
+            <sv:property sv:name="selection:label" sv:type="String">
+              <sv:value>CMS</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="selection:listitem">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>selection:listitem</sv:value>
+            </sv:property>
+            <sv:property sv:name="selection:key" sv:type="String">
+              <sv:value>life</sv:value>
+            </sv:property>
+            <sv:property sv:name="selection:label" sv:type="String">
+              <sv:value>Life</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
+      </sv:node>
+    </sv:node>
     <sv:node sv:name="currency-code">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>selection:valuelist</sv:value>
+        <sv:value>hippo:handle</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
         <sv:value>mix:referenceable</sv:value>
-        <sv:value>hippotranslation:translated</sv:value>
+        <sv:value>hippo:translated</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>9a26cc0e-57b4-47c4-9223-db67a28e2c55</sv:value>
+        <sv:value>9f0e0de4-d00f-4919-8936-c13e5b042005</sv:value>
       </sv:property>
-      <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
-        <sv:value>live</sv:value>
-        <sv:value>preview</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippotranslation:id" sv:type="String">
-        <sv:value>08d53b15-d50b-482f-b9cd-fa144c4e431f</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippotranslation:locale" sv:type="String">
-        <sv:value>nl</sv:value>
-      </sv:property>
-      <sv:node sv:name="selection:listitem">
+      <sv:node sv:name="currency-code">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>selection:listitem</sv:value>
+          <sv:value>selection:valuelist</sv:value>
         </sv:property>
-        <sv:property sv:name="selection:key" sv:type="String">
-          <sv:value>978</sv:value>
+        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+          <sv:value>mix:referenceable</sv:value>
+          <sv:value>hippotranslation:translated</sv:value>
         </sv:property>
-        <sv:property sv:name="selection:label" sv:type="String">
-          <sv:value>Euro</sv:value>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>9a26cc0e-57b4-47c4-9223-db67a28e2c55</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+          <sv:value>live</sv:value>
+          <sv:value>preview</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippotranslation:id" sv:type="String">
+          <sv:value>08d53b15-d50b-482f-b9cd-fa144c4e431f</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippotranslation:locale" sv:type="String">
+          <sv:value>nl</sv:value>
+        </sv:property>
+        <sv:node sv:name="selection:listitem">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>selection:listitem</sv:value>
+          </sv:property>
+          <sv:property sv:name="selection:key" sv:type="String">
+            <sv:value>978</sv:value>
+          </sv:property>
+          <sv:property sv:name="selection:label" sv:type="String">
+            <sv:value>Euro</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="selection:listitem">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>selection:listitem</sv:value>
+          </sv:property>
+          <sv:property sv:name="selection:key" sv:type="String">
+            <sv:value>840</sv:value>
+          </sv:property>
+          <sv:property sv:name="selection:label" sv:type="String">
+            <sv:value>American dollar</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="selection:listitem">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>selection:listitem</sv:value>
+          </sv:property>
+          <sv:property sv:name="selection:key" sv:type="String">
+            <sv:value>756</sv:value>
+          </sv:property>
+          <sv:property sv:name="selection:label" sv:type="String">
+            <sv:value>Swiss Franc</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="selection:listitem">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>selection:listitem</sv:value>
+          </sv:property>
+          <sv:property sv:name="selection:key" sv:type="String">
+            <sv:value>826</sv:value>
+          </sv:property>
+          <sv:property sv:name="selection:label" sv:type="String">
+            <sv:value>Pound Sterling</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="selection:listitem">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>selection:listitem</sv:value>
+          </sv:property>
+          <sv:property sv:name="selection:key" sv:type="String">
+            <sv:value>124</sv:value>
+          </sv:property>
+          <sv:property sv:name="selection:label" sv:type="String">
+            <sv:value>Canadian Dollar</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="selection:listitem">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>selection:listitem</sv:value>
+          </sv:property>
+          <sv:property sv:name="selection:key" sv:type="String">
+            <sv:value>036</sv:value>
+          </sv:property>
+          <sv:property sv:name="selection:label" sv:type="String">
+            <sv:value>Australian Dollar</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="selection:listitem">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>selection:listitem</sv:value>
+          </sv:property>
+          <sv:property sv:name="selection:key" sv:type="String">
+            <sv:value>578</sv:value>
+          </sv:property>
+          <sv:property sv:name="selection:label" sv:type="String">
+            <sv:value>Norwegian Crown</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="selection:listitem">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>selection:listitem</sv:value>
+          </sv:property>
+          <sv:property sv:name="selection:key" sv:type="String">
+            <sv:value>752</sv:value>
+          </sv:property>
+          <sv:property sv:name="selection:label" sv:type="String">
+            <sv:value>Swedish Crown</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="selection:listitem">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>selection:listitem</sv:value>
+          </sv:property>
+          <sv:property sv:name="selection:key" sv:type="String">
+            <sv:value>208</sv:value>
+          </sv:property>
+          <sv:property sv:name="selection:label" sv:type="String">
+            <sv:value>Danish Crown</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="hippo:translation">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hippo:translation</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:language" sv:type="String">
+          <sv:value/>
+        </sv:property>
+        <sv:property sv:name="hippo:message" sv:type="String">
+          <sv:value>currency code</sv:value>
         </sv:property>
       </sv:node>
-      <sv:node sv:name="selection:listitem">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>selection:listitem</sv:value>
-        </sv:property>
-        <sv:property sv:name="selection:key" sv:type="String">
-          <sv:value>840</sv:value>
-        </sv:property>
-        <sv:property sv:name="selection:label" sv:type="String">
-          <sv:value>American dollar</sv:value>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="selection:listitem">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>selection:listitem</sv:value>
-        </sv:property>
-        <sv:property sv:name="selection:key" sv:type="String">
-          <sv:value>756</sv:value>
-        </sv:property>
-        <sv:property sv:name="selection:label" sv:type="String">
-          <sv:value>Swiss Franc</sv:value>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="selection:listitem">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>selection:listitem</sv:value>
-        </sv:property>
-        <sv:property sv:name="selection:key" sv:type="String">
-          <sv:value>826</sv:value>
-        </sv:property>
-        <sv:property sv:name="selection:label" sv:type="String">
-          <sv:value>Pound Sterling</sv:value>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="selection:listitem">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>selection:listitem</sv:value>
-        </sv:property>
-        <sv:property sv:name="selection:key" sv:type="String">
-          <sv:value>124</sv:value>
-        </sv:property>
-        <sv:property sv:name="selection:label" sv:type="String">
-          <sv:value>Canadian Dollar</sv:value>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="selection:listitem">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>selection:listitem</sv:value>
-        </sv:property>
-        <sv:property sv:name="selection:key" sv:type="String">
-          <sv:value>036</sv:value>
-        </sv:property>
-        <sv:property sv:name="selection:label" sv:type="String">
-          <sv:value>Australian Dollar</sv:value>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="selection:listitem">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>selection:listitem</sv:value>
-        </sv:property>
-        <sv:property sv:name="selection:key" sv:type="String">
-          <sv:value>578</sv:value>
-        </sv:property>
-        <sv:property sv:name="selection:label" sv:type="String">
-          <sv:value>Norwegian Crown</sv:value>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="selection:listitem">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>selection:listitem</sv:value>
-        </sv:property>
-        <sv:property sv:name="selection:key" sv:type="String">
-          <sv:value>752</sv:value>
-        </sv:property>
-        <sv:property sv:name="selection:label" sv:type="String">
-          <sv:value>Swedish Crown</sv:value>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="selection:listitem">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>selection:listitem</sv:value>
-        </sv:property>
-        <sv:property sv:name="selection:key" sv:type="String">
-          <sv:value>208</sv:value>
-        </sv:property>
-        <sv:property sv:name="selection:label" sv:type="String">
-          <sv:value>Danish Crown</sv:value>
-        </sv:property>
-      </sv:node>
-    </sv:node>
-    <sv:node sv:name="hippo:translation">
-      <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hippo:translation</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippo:language" sv:type="String">
-        <sv:value />
-      </sv:property>
-      <sv:property sv:name="hippo:message" sv:type="String">
-        <sv:value>currency code</sv:value>
-      </sv:property>
     </sv:node>
   </sv:node>
   <sv:node sv:name="resource-bundles">
@@ -854,8 +1032,8 @@
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
       <sv:value>hippotranslation:translated</sv:value>
-      <sv:value>hippo:translated</sv:value>
       <sv:value>mix:versionable</sv:value>
+      <sv:value>hippo:translated</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>9d40f53f-c9e7-4a90-9a4f-706c3396eaf5</sv:value>
@@ -875,7 +1053,7 @@
         <sv:value>hippo:translation</sv:value>
       </sv:property>
       <sv:property sv:name="hippo:language" sv:type="String">
-        <sv:value />
+        <sv:value/>
       </sv:property>
       <sv:property sv:name="hippo:message" sv:type="String">
         <sv:value>Resource Bundles</sv:value>
@@ -902,7 +1080,7 @@
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>72841bb1-7d68-4928-8cec-6a791cfe48ad</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true" />
+        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true"/>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
           <sv:value>configuratie/resource-bundles/share-box-messages/share-box-messages[3]</sv:value>
           <sv:value>configuratie/resource-bundles/share-box-messages/share-box-messages[2]</sv:value>
@@ -932,22 +1110,22 @@
           <sv:value>nl</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:descriptions" sv:type="String" sv:multiple="true">
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
         </sv:property>
         <sv:property sv:name="resourcebundle:id" sv:type="String">
           <sv:value>nl.hsleiden.sharebox.Messages</sv:value>
@@ -1079,22 +1257,22 @@
           <sv:value>nl</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:descriptions" sv:type="String" sv:multiple="true">
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
         </sv:property>
         <sv:property sv:name="resourcebundle:id" sv:type="String">
           <sv:value>nl.hsleiden.sharebox.Messages</sv:value>
@@ -1228,22 +1406,22 @@
           <sv:value>nl</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:descriptions" sv:type="String" sv:multiple="true">
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
         </sv:property>
         <sv:property sv:name="resourcebundle:id" sv:type="String">
           <sv:value>nl.hsleiden.sharebox.Messages</sv:value>
@@ -1338,7 +1516,7 @@
           <sv:value>hippo:translation</sv:value>
         </sv:property>
         <sv:property sv:name="hippo:language" sv:type="String">
-          <sv:value />
+          <sv:value/>
         </sv:property>
         <sv:property sv:name="hippo:message" sv:type="String">
           <sv:value>share box messages</sv:value>
@@ -1366,7 +1544,7 @@
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>517eb859-35e0-4321-84f8-46db7ec8a352</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true" />
+        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true"/>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
           <sv:value>configuratie/resource-bundles/prototype-messages/prototype-messages[3]</sv:value>
           <sv:value>configuratie/resource-bundles/prototype-messages/prototype-messages[2]</sv:value>
@@ -1398,12 +1576,12 @@
         <sv:property sv:name="resourcebundle:descriptions" sv:type="String" sv:multiple="true">
           <sv:value>used for the paginator in overview pages and lists</sv:value>
           <sv:value>used for the paginator in overview pages and list</sv:value>
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
         </sv:property>
         <sv:property sv:name="resourcebundle:id" sv:type="String">
           <sv:value>nl.openweb.prototype.Messages</sv:value>
@@ -1462,7 +1640,7 @@
           <sv:value>hippo:translation</sv:value>
         </sv:property>
         <sv:property sv:name="hippo:language" sv:type="String">
-          <sv:value />
+          <sv:value/>
         </sv:property>
         <sv:property sv:name="hippo:message" sv:type="String">
           <sv:value>prototype messages</sv:value>
@@ -1512,12 +1690,12 @@
         <sv:property sv:name="resourcebundle:descriptions" sv:type="String" sv:multiple="true">
           <sv:value>used for the paginator in overview pages and lists</sv:value>
           <sv:value>used for the paginator in overview pages and list</sv:value>
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
         </sv:property>
         <sv:property sv:name="resourcebundle:id" sv:type="String">
           <sv:value>nl.openweb.prototype.Messages</sv:value>
@@ -1617,12 +1795,12 @@
         <sv:property sv:name="resourcebundle:descriptions" sv:type="String" sv:multiple="true">
           <sv:value>used for the paginator in overview pages and lists</sv:value>
           <sv:value>used for the paginator in overview pages and list</sv:value>
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
         </sv:property>
         <sv:property sv:name="resourcebundle:id" sv:type="String">
           <sv:value>nl.openweb.prototype.Messages</sv:value>
@@ -1693,7 +1871,7 @@
           <sv:value>hippo:translation</sv:value>
         </sv:property>
         <sv:property sv:name="hippo:language" sv:type="String">
-          <sv:value />
+          <sv:value/>
         </sv:property>
         <sv:property sv:name="hippo:message" sv:type="String">
           <sv:value>general messages</sv:value>
@@ -1709,7 +1887,7 @@
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>1d28b8bc-4f2e-44a2-8cab-c5b755e6023b</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true" />
+        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true"/>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
           <sv:value>configuratie/resource-bundles/general-messages/general-messages[3]</sv:value>
           <sv:value>configuratie/resource-bundles/general-messages/general-messages[2]</sv:value>
@@ -1739,9 +1917,9 @@
           <sv:value>nl</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:descriptions" sv:type="String" sv:multiple="true">
-          <sv:value />
-          <sv:value />
-          <sv:value />
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
         </sv:property>
         <sv:property sv:name="resourcebundle:id" sv:type="String">
           <sv:value>nl.hsleiden.general.Messages</sv:value>
@@ -1813,9 +1991,9 @@
           <sv:value>nl</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:descriptions" sv:type="String" sv:multiple="true">
-          <sv:value />
-          <sv:value />
-          <sv:value />
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
         </sv:property>
         <sv:property sv:name="resourcebundle:id" sv:type="String">
           <sv:value>nl.hsleiden.general.Messages</sv:value>
@@ -1889,9 +2067,9 @@
           <sv:value>nl</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:descriptions" sv:type="String" sv:multiple="true">
-          <sv:value />
-          <sv:value />
-          <sv:value />
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
         </sv:property>
         <sv:property sv:name="resourcebundle:id" sv:type="String">
           <sv:value>nl.hsleiden.general.Messages</sv:value>
@@ -1943,7 +2121,7 @@
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>90b33a03-4db9-4359-b1ec-ab230ce1974b</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true" />
+        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true"/>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
           <sv:value>configuratie/resource-bundles/channel-manager-messages/channel-manager-messages[2]</sv:value>
           <sv:value>configuratie/resource-bundles/channel-manager-messages/channel-manager-messages[3]</sv:value>
@@ -1973,10 +2151,10 @@
           <sv:value>nl</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:descriptions" sv:type="String" sv:multiple="true">
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
         </sv:property>
         <sv:property sv:name="resourcebundle:id" sv:type="String">
           <sv:value>nl.hsleiden.channelmanager.Messages</sv:value>
@@ -2026,7 +2204,7 @@
           <sv:value>hippo:translation</sv:value>
         </sv:property>
         <sv:property sv:name="hippo:language" sv:type="String">
-          <sv:value />
+          <sv:value/>
         </sv:property>
         <sv:property sv:name="hippo:message" sv:type="String">
           <sv:value>channel manager messages</sv:value>
@@ -2074,10 +2252,10 @@
           <sv:value>nl</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:descriptions" sv:type="String" sv:multiple="true">
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
         </sv:property>
         <sv:property sv:name="resourcebundle:id" sv:type="String">
           <sv:value>nl.hsleiden.channelmanager.Messages</sv:value>
@@ -2166,10 +2344,10 @@
           <sv:value>nl</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:descriptions" sv:type="String" sv:multiple="true">
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
         </sv:property>
         <sv:property sv:name="resourcebundle:id" sv:type="String">
           <sv:value>nl.hsleiden.channelmanager.Messages</sv:value>
@@ -2236,7 +2414,7 @@
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>9e6e3a57-5e3a-4411-a73a-db99a496210e</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true" />
+        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true"/>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
           <sv:value>configuratie/resource-bundles/widget-messages/widget-messages[2]</sv:value>
           <sv:value>configuratie/resource-bundles/widget-messages/widget-messages[3]</sv:value>
@@ -2267,10 +2445,10 @@
         </sv:property>
         <sv:property sv:name="resourcebundle:descriptions" sv:type="String" sv:multiple="true">
           <sv:value>Default value for label of the overview links in the widgets</sv:value>
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
         </sv:property>
         <sv:property sv:name="resourcebundle:id" sv:type="String">
           <sv:value>nl.hsleiden.widget.Messages</sv:value>
@@ -2313,7 +2491,7 @@
           <sv:value>hippo:translation</sv:value>
         </sv:property>
         <sv:property sv:name="hippo:language" sv:type="String">
-          <sv:value />
+          <sv:value/>
         </sv:property>
         <sv:property sv:name="hippo:message" sv:type="String">
           <sv:value>widget messages</sv:value>
@@ -2362,10 +2540,10 @@
         </sv:property>
         <sv:property sv:name="resourcebundle:descriptions" sv:type="String" sv:multiple="true">
           <sv:value>Default value for label of the overview links in the widgets</sv:value>
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
         </sv:property>
         <sv:property sv:name="resourcebundle:id" sv:type="String">
           <sv:value>nl.hsleiden.widget.Messages</sv:value>
@@ -2448,10 +2626,10 @@
         </sv:property>
         <sv:property sv:name="resourcebundle:descriptions" sv:type="String" sv:multiple="true">
           <sv:value>Default value for label of the overview links in the widgets</sv:value>
-          <sv:value />
-          <sv:value />
-          <sv:value />
-          <sv:value />
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
         </sv:property>
         <sv:property sv:name="resourcebundle:id" sv:type="String">
           <sv:value>nl.hsleiden.widget.Messages</sv:value>
