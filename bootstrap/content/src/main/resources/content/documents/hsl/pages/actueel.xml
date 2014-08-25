@@ -479,7 +479,7 @@
           <sv:value>2014-06-10T10:58:07.247+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-08-01T13:59:35.083+02:00</sv:value>
+          <sv:value>2014-08-21T12:13:20.841+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -1820,6 +1820,7 @@
           <sv:value>hsl:NewsPage</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+          <sv:value>hsl:RelatedItemsMixin</sv:value>
           <sv:value>mix:referenceable</sv:value>
           <sv:value>mix:versionable</sv:value>
         </sv:property>
@@ -1845,7 +1846,7 @@
           <sv:value>2014-06-10T10:58:07.247+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-09T14:22:04.493+02:00</sv:value>
+          <sv:value>2014-08-21T12:11:16.426+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -1881,6 +1882,9 @@
         </sv:property>
         <sv:property sv:name="hsl:releaseDate" sv:type="Date">
           <sv:value>2014-06-10T10:58:00.000+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:share" sv:type="Boolean">
+          <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:subjecttags" sv:type="String" sv:multiple="true">
           <sv:value>actueel</sv:value>
@@ -1969,6 +1973,9 @@
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>hsl:Documents</sv:value>
           </sv:property>
+          <sv:property sv:name="hsl:title" sv:type="String">
+            <sv:value/>
+          </sv:property>
           <sv:node sv:name="hsl:asset">
             <sv:property sv:name="jcr:primaryType" sv:type="Name">
               <sv:value>hippo:mirror</sv:value>
@@ -1994,6 +2001,74 @@
             </sv:property>
           </sv:node>
         </sv:node>
+        <sv:node sv:name="hsl:relatedCompoundMixin">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:RelatedCompoundMixin</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:sortParameters">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:RelatedSortParameters</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:sortBy" sv:type="String">
+              <sv:value>Publicatiedatum</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:sortOrder" sv:type="String">
+              <sv:value>ascending</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="hsl:overviewParameters">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:RelatedOverviewParameters</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:overviewLinkLabel" sv:type="String">
+              <sv:value>naar alle nieuws items</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:showOverview" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+            <sv:node sv:name="hsl:overviewBeanPath">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hippo:mirror</sv:value>
+              </sv:property>
+              <sv:property sv:name="hippo:docbase" sv:type="String">
+                <sv:value>5d2a4541-9160-4f34-9992-50282d10b65c</sv:value>
+              </sv:property>
+            </sv:node>
+          </sv:node>
+          <sv:node sv:name="hsl:widgetParameters">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:RelatedWidgetParameters</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:size" sv:type="Long">
+              <sv:value>2</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:widgetTitle" sv:type="String">
+              <sv:value>Gerelateerde Nieuws</sv:value>
+            </sv:property>
+            <sv:node sv:name="hsl:contentBeanPath">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hippo:mirror</sv:value>
+              </sv:property>
+              <sv:property sv:name="hippo:docbase" sv:type="String">
+                <sv:value>68657a00-650d-4be1-b773-e4f03f263be2</sv:value>
+              </sv:property>
+            </sv:node>
+          </sv:node>
+          <sv:node sv:name="hsl:filterParameters">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:RelatedFilterParameters</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:overFilter" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:themaFilter" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:typeFilter" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
       </sv:node>
       <sv:node sv:name="hippo:translation">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -2011,6 +2086,7 @@
           <sv:value>hsl:NewsPage</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+          <sv:value>hsl:RelatedItemsMixin</sv:value>
           <sv:value>mix:referenceable</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
@@ -2034,7 +2110,7 @@
           <sv:value>2014-06-10T10:58:07.247+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-09T14:21:47.267+02:00</sv:value>
+          <sv:value>2014-08-21T12:11:03.995+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -2070,6 +2146,9 @@
         </sv:property>
         <sv:property sv:name="hsl:releaseDate" sv:type="Date">
           <sv:value>2014-06-10T10:58:00.000+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:share" sv:type="Boolean">
+          <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:subjecttags" sv:type="String" sv:multiple="true">
           <sv:value>actueel</sv:value>
@@ -2158,6 +2237,9 @@
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>hsl:Documents</sv:value>
           </sv:property>
+          <sv:property sv:name="hsl:title" sv:type="String">
+            <sv:value/>
+          </sv:property>
           <sv:node sv:name="hsl:asset">
             <sv:property sv:name="jcr:primaryType" sv:type="Name">
               <sv:value>hippo:mirror</sv:value>
@@ -2183,12 +2265,81 @@
             </sv:property>
           </sv:node>
         </sv:node>
+        <sv:node sv:name="hsl:relatedCompoundMixin">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:RelatedCompoundMixin</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:sortParameters">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:RelatedSortParameters</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:sortBy" sv:type="String">
+              <sv:value>Publicatiedatum</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:sortOrder" sv:type="String">
+              <sv:value>ascending</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="hsl:overviewParameters">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:RelatedOverviewParameters</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:overviewLinkLabel" sv:type="String">
+              <sv:value>naar alle nieuws items</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:showOverview" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+            <sv:node sv:name="hsl:overviewBeanPath">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hippo:mirror</sv:value>
+              </sv:property>
+              <sv:property sv:name="hippo:docbase" sv:type="String">
+                <sv:value>5d2a4541-9160-4f34-9992-50282d10b65c</sv:value>
+              </sv:property>
+            </sv:node>
+          </sv:node>
+          <sv:node sv:name="hsl:widgetParameters">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:RelatedWidgetParameters</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:size" sv:type="Long">
+              <sv:value>2</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:widgetTitle" sv:type="String">
+              <sv:value>Gerelateerde Nieuws</sv:value>
+            </sv:property>
+            <sv:node sv:name="hsl:contentBeanPath">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hippo:mirror</sv:value>
+              </sv:property>
+              <sv:property sv:name="hippo:docbase" sv:type="String">
+                <sv:value>68657a00-650d-4be1-b773-e4f03f263be2</sv:value>
+              </sv:property>
+            </sv:node>
+          </sv:node>
+          <sv:node sv:name="hsl:filterParameters">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:RelatedFilterParameters</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:overFilter" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:themaFilter" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:typeFilter" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
       </sv:node>
       <sv:node sv:name="news-item-2">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hsl:NewsPage</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+          <sv:value>hsl:RelatedItemsMixin</sv:value>
           <sv:value>mix:referenceable</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
@@ -2213,13 +2364,13 @@
           <sv:value>2014-06-10T10:58:07.247+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-09T14:22:04.493+02:00</sv:value>
+          <sv:value>2014-08-21T12:11:16.426+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-          <sv:value>2014-07-09T14:22:07.134+02:00</sv:value>
+          <sv:value>2014-08-21T12:11:22.138+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:id" sv:type="String">
           <sv:value>96f8110b-2d1a-4dbc-af27-f15770334e33</sv:value>
@@ -2252,6 +2403,9 @@
         </sv:property>
         <sv:property sv:name="hsl:releaseDate" sv:type="Date">
           <sv:value>2014-06-10T10:58:00.000+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:share" sv:type="Boolean">
+          <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:subjecttags" sv:type="String" sv:multiple="true">
           <sv:value>actueel</sv:value>
@@ -2340,6 +2494,9 @@
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>hsl:Documents</sv:value>
           </sv:property>
+          <sv:property sv:name="hsl:title" sv:type="String">
+            <sv:value/>
+          </sv:property>
           <sv:node sv:name="hsl:asset">
             <sv:property sv:name="jcr:primaryType" sv:type="Name">
               <sv:value>hippo:mirror</sv:value>
@@ -2362,6 +2519,74 @@
             </sv:property>
             <sv:property sv:name="hippo:docbase" sv:type="String">
               <sv:value>b8380e5f-c63b-4753-b14f-ac3dd704f6b5</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="hsl:relatedCompoundMixin">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:RelatedCompoundMixin</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:sortParameters">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:RelatedSortParameters</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:sortBy" sv:type="String">
+              <sv:value>Publicatiedatum</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:sortOrder" sv:type="String">
+              <sv:value>ascending</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="hsl:overviewParameters">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:RelatedOverviewParameters</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:overviewLinkLabel" sv:type="String">
+              <sv:value>naar alle nieuws items</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:showOverview" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+            <sv:node sv:name="hsl:overviewBeanPath">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hippo:mirror</sv:value>
+              </sv:property>
+              <sv:property sv:name="hippo:docbase" sv:type="String">
+                <sv:value>5d2a4541-9160-4f34-9992-50282d10b65c</sv:value>
+              </sv:property>
+            </sv:node>
+          </sv:node>
+          <sv:node sv:name="hsl:widgetParameters">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:RelatedWidgetParameters</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:size" sv:type="Long">
+              <sv:value>2</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:widgetTitle" sv:type="String">
+              <sv:value>Gerelateerde Nieuws</sv:value>
+            </sv:property>
+            <sv:node sv:name="hsl:contentBeanPath">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hippo:mirror</sv:value>
+              </sv:property>
+              <sv:property sv:name="hippo:docbase" sv:type="String">
+                <sv:value>68657a00-650d-4be1-b773-e4f03f263be2</sv:value>
+              </sv:property>
+            </sv:node>
+          </sv:node>
+          <sv:node sv:name="hsl:filterParameters">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:RelatedFilterParameters</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:overFilter" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:themaFilter" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:typeFilter" sv:type="Boolean">
+              <sv:value>false</sv:value>
             </sv:property>
           </sv:node>
         </sv:node>

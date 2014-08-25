@@ -44,13 +44,7 @@
   
   <div class="hr"><hr /></div>
  
-  <c:forEach items="${item.menuItem.childMenuItems}" var="item">
-    <opw:menuitem siteMenuItem="${item}" depth="1"
-        expandedClass="current arrow-down"
-        selectedClass="active arrow-down"
-        unexpandedClass="unexpanded arrow-side" leafClass="arrow-side" 
-        recurseOnlyExpanded="false"/>
-  </c:forEach>
+  <tag:topmenu menuItem="${item.menuItem}"/>
   
   <div class="hr"><hr /></div>
     

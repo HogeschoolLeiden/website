@@ -9,17 +9,17 @@
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 <%@ taglib prefix='opw' uri="http://open-web.nl/hippo/prototype"%>
 
-<hst:setBundle basename="nl.hsleiden.channelmanager.Messages, nl.hsleiden.widget.Messages"/>
+<hst:setBundle basename="nl.hsleiden.channelmanager.Messages, nl.hsleiden.widget.Messages, nl.hsleiden.blog.Messages"/>
 
-<div itemscope itemtype="http://data-vocabulary.org/Person" class="catalog contactPersons">
-  <hst:defineObjects />
-  <c:set var="isCmsRequest" value="${hstRequest.requestContext.cmsRequest}" />
+<hst:defineObjects />
+<c:set var="isCmsRequest" value="${hstRequest.requestContext.cmsRequest}" />
 
-  <c:if test="${(empty model.items or fn:length(model.items) eq 0) and not empty webMasterMessage and isCmsRequest}">
-  	<p class="error-message"><fmt:message key="${webMasterMessage}" /></p>
-  </c:if>
+<c:if test="${(empty model.items or fn:length(model.items) eq 0) and not empty webMasterMessage and isCmsRequest}">
+	<p class="error-message"><fmt:message key="${webMasterMessage}" /></p>
+</c:if>
 
-  <c:if test="${not empty model.items and fn:length(model.items)>0}">
+<c:if test="${not empty model.items and fn:length(model.items)>0}">
+  <div itemscope itemtype="http://data-vocabulary.org/Person" class="catalog contactPersons">
     <div class="widget-title">
       <h2><c:out value="${model.info.widgetTitle}" escapeXml="true" /></h2>
     </div>
@@ -50,12 +50,23 @@
             </p>
           </c:if>
           <p>${item.phone }</p>
+          
+          <c:if test="${fn:length(item.accounts)>0}">
+            <div class="social-links">
+              <c:forEach var="account" items="${item.accounts}" varStatus="zebra">
+                <a href="${account.link}" class="${account.type}" title="<fmt:message key="follow.author"/> ${account.type}" target="_blank">
+                </a>
+              </c:forEach>
+              <div class="clear"></div>
+            </div>
+          </c:if>
         </div>
+        
         
         <div class="clear"></div>
       </div>
       </c:if>
     </c:forEach>
     
-  </c:if>
-</div>
+  </div>
+</c:if>
