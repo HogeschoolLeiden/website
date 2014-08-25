@@ -6,7 +6,44 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="tag" tagdir="/WEB-INF/tags" %>
 
-Test
+<c:choose>
+  <c:when test="${empty document}">
+    <tag:pagenotfound/>
+  </c:when>
+  <c:otherwise>
+
+    <article class="well well-large">
+      <hst:cmseditlink hippobean="${document}"/>
+      <header>
+        
+        <c:if test="${hst:isReadable(document, 'title') }">
+          <h1><c:out value="${document.title}"/></h1>
+        </c:if>
+        <c:if test="${hst:isReadable(document, 'subtitle') }">
+          <h2><c:out value="${document.subtitle}"/></h2>
+        </c:if>
+        <c:if test="${hst:isReadable(document, 'introduction') }">
+          <p><c:out value="${document.introduction}"/></p> 
+        </c:if>
+      </header>
+      
+      
+    </article>
+
+  </c:otherwise>
+</c:choose>
+
+<c:if test="${not empty omnikassaRequest}">
+	${omnikassaRequest}
+	<form method="post" action="${omnikassaRequest.url}">
+		<input type="hidden" name="Data" value="${omnikassaRequest.data}"> 
+		<input type="hidden" name="InterfaceVersion" value="${omnikassaRequest.interfaceVersion}"> 
+		<input type="hidden" name="Seal" value="${omnikassaRequest.seal}">
+		<input type="submit" value="betal"/>
+	</form>
+
+</c:if>
+
 
 <c:if test="${not empty form}">
 <c:if test="${not empty form.title}">
