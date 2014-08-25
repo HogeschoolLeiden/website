@@ -352,11 +352,9 @@
         </sv:property>
         <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
           <sv:value>disabled</sv:value>
-          <sv:value>levelOneOnly</sv:value>
           <sv:value>root</sv:value>
         </sv:property>
         <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
-          <sv:value>true</sv:value>
           <sv:value>true</sv:value>
           <sv:value>{"relativeContentPath": "pages/onderwijs/bacheloropleidingen/index", "invisible": "false", "disabled": "false","showFacetNavigations":"false"}</sv:value>
         </sv:property>
@@ -472,9 +470,45 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hst:sitemenuitem</sv:value>
         </sv:property>
-        <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-          <sv:value>over-hl/onderwijs/tbd</sv:value>
+        <sv:property sv:name="hst:depth" sv:type="Long">
+          <sv:value>3</sv:value>
         </sv:property>
+        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+          <sv:value>root</sv:value>
+          <sv:value>disabled</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+          <sv:value>{"relativeContentPath": "pages/onderwijs/nascholingen/nascholing-facetnav", "invisible": "false", "disabled": "false"}</sv:value>
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+          <sv:value>onderwijs/opleidingen-voor-professionals</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:repobased" sv:type="Boolean">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:node sv:name="Masters">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:sitemenuitem</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:depth" sv:type="Long">
+            <sv:value>3</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+            <sv:value>disabled</sv:value>
+            <sv:value>root</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+            <sv:value>true</sv:value>
+            <sv:value>{"relativeContentPath": "pages/onderwijs/masters/index", "invisible": "false", "disabled": "false","showFacetNavigations":"false"}</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+            <sv:value>onderwijs/masters</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:repobased" sv:type="Boolean">
+            <sv:value>true</sv:value>
+          </sv:property>
+        </sv:node>
       </sv:node>
       <sv:node sv:name="Studeren bij HL">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -485,11 +519,9 @@
         </sv:property>
         <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
           <sv:value>disabled</sv:value>
-          <sv:value>levelOneOnly</sv:value>
           <sv:value>root</sv:value>
         </sv:property>
         <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
-          <sv:value>true</sv:value>
           <sv:value>true</sv:value>
           <sv:value>{"relativeContentPath": "pages/onderwijs/studeren-bij-hl/index", "invisible": "false", "disabled": "false","showFacetNavigations":"false"}</sv:value>
         </sv:property>
@@ -509,11 +541,9 @@
         </sv:property>
         <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
           <sv:value>disabled</sv:value>
-          <sv:value>levelOneOnly</sv:value>
           <sv:value>root</sv:value>
         </sv:property>
         <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
-          <sv:value>true</sv:value>
           <sv:value>true</sv:value>
           <sv:value>{"relativeContentPath": "pages/onderwijs/onderwijsvisie/index", "invisible": "false", "disabled": "false","showFacetNavigations":"false"}</sv:value>
         </sv:property>
@@ -857,12 +887,10 @@
         <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
           <sv:value>disabled</sv:value>
           <sv:value>root</sv:value>
-          <sv:value>levelOneOnly</sv:value>
         </sv:property>
         <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
           <sv:value>true</sv:value>
           <sv:value>{"relativeContentPath": "pages/over-hl/profiel/index", "invisible": "false", "disabled": "false","showFacetNavigations":"false"}</sv:value>
-          <sv:value>true</sv:value>
         </sv:property>
         <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
           <sv:value>over-hl/profiel</sv:value>
