@@ -350,9 +350,123 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hst:sitemenuitem</sv:value>
         </sv:property>
-        <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-          <sv:value>over-hl/onderwijs/tbd</sv:value>
+        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+          <sv:value>disabled</sv:value>
+          <sv:value>levelOneOnly</sv:value>
+          <sv:value>root</sv:value>
         </sv:property>
+        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+          <sv:value>true</sv:value>
+          <sv:value>true</sv:value>
+          <sv:value>{"relativeContentPath": "pages/onderwijs/bacheloropleidingen/index", "invisible": "false", "disabled": "false","showFacetNavigations":"false"}</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+          <sv:value>onderwijs/bacheloropleidingen</sv:value>
+        </sv:property>
+        <sv:node sv:name="Vindt je studie">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:sitemenuitem</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
+          <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
+          <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+            <sv:value>onderwijs/bacheloropleidingen/vindt-je-studie</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="Inschrijfinformatie">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:sitemenuitem</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:depth" sv:type="Long">
+            <sv:value>2</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+            <sv:value>levelOneonly</sv:value>
+            <sv:value>root</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+            <sv:value>true</sv:value>
+            <sv:value>{"relativeContentPath": "pages/onderwijs/bacheloropleidingen/inschrijfinformatie/index", "invisible": "false", "disabled": "false","showFacetNavigations":"false"}</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+            <sv:value>onderwijs/bacheloropleidingen/inschrijfinformatie/index</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:repobased" sv:type="Boolean">
+            <sv:value>true</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="Open dagen">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:sitemenuitem</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
+          <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
+          <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+            <sv:value>onderwijs/bacheloropleidingen/open-dagen</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="Proefstuderen">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:sitemenuitem</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
+          <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
+          <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+            <sv:value>onderwijs/bacheloropleidingen/proefstuderen</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="Meelopen">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:sitemenuitem</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
+          <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
+          <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+            <sv:value>onderwijs/bacheloropleidingen/meelopen</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="Introductiedagen">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:sitemenuitem</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
+          <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
+          <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+            <sv:value>onderwijs/bacheloropleidingen/introductiedagen</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="Minoren">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:sitemenuitem</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:depth" sv:type="Long">
+            <sv:value>2</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+            <sv:value>root</sv:value>
+            <sv:value>levelOneonly</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+            <sv:value>{"relativeContentPath": "pages/onderwijs/bacheloropleidingen/minoren/index", "invisible": "false", "disabled": "false","showFacetNavigations":"false"}</sv:value>
+            <sv:value>true</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+            <sv:value>onderwijs/bacheloropleidingen/minoren/index</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:repobased" sv:type="Boolean">
+            <sv:value>true</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="Studiekeuzecheck">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:sitemenuitem</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
+          <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
+          <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+            <sv:value>onderwijs/bacheloropleidingen/studiekeuzecheck</sv:value>
+          </sv:property>
+        </sv:node>
       </sv:node>
       <sv:node sv:name="Opleidingen voor professionals">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
