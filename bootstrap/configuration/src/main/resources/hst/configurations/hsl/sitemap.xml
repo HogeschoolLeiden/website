@@ -953,7 +953,7 @@
         </sv:property>
         <sv:property sv:name="hst:componentconfigurationmappingvalues" sv:type="String" sv:multiple="true">
           <sv:value>hst:pages/articlepage</sv:value>
-          <sv:value>hst:pages/unfacetdeventpage</sv:value>
+          <sv:value>hst:pages/eventpage</sv:value>
         </sv:property>
         <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
         <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
@@ -995,9 +995,11 @@
         </sv:property>
         <sv:property sv:name="hst:componentconfigurationmappingnames" sv:type="String" sv:multiple="true">
           <sv:value>hsl:ArticlePage</sv:value>
+          <sv:value>hsl:EventPage</sv:value>
         </sv:property>
         <sv:property sv:name="hst:componentconfigurationmappingvalues" sv:type="String" sv:multiple="true">
           <sv:value>hst:pages/articlepage</sv:value>
+          <sv:value>hst:pages/eventpage</sv:value>
         </sv:property>
         <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
         <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
@@ -1043,14 +1045,12 @@
         <sv:property sv:name="hst:componentconfigurationmappingnames" sv:type="String" sv:multiple="true">
           <sv:value>hsl:ArticlePage</sv:value>
           <sv:value>hsl:EducationPage</sv:value>
-          <sv:value>hsl:OverviewPage</sv:value>
           <sv:value>hsl:EventPage</sv:value>
         </sv:property>
         <sv:property sv:name="hst:componentconfigurationmappingvalues" sv:type="String" sv:multiple="true">
           <sv:value>hst:pages/articlepage</sv:value>
-          <sv:value>hst:pages/eduactionpage</sv:value>
-          <sv:value>hst:pages/genericoverview</sv:value>
-          <sv:value>hst:pages/unfacetdeventpage</sv:value>
+          <sv:value>hst:pages/educationpage</sv:value>
+          <sv:value>hst:pages/eventpage</sv:value>
         </sv:property>
         <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
         <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
@@ -1116,9 +1116,13 @@
           </sv:property>
           <sv:property sv:name="hst:componentconfigurationmappingnames" sv:type="String" sv:multiple="true">
             <sv:value>hsl:EducationPage</sv:value>
+            <sv:value>hsl:EventPage</sv:value>
+            <sv:value>hsl:ArticlePage</sv:value>
           </sv:property>
           <sv:property sv:name="hst:componentconfigurationmappingvalues" sv:type="String" sv:multiple="true">
             <sv:value>hst:pages/educationpage</sv:value>
+            <sv:value>hst:pages/educationeventpage</sv:value>
+            <sv:value>hst:pages/educationarticlepage</sv:value>
           </sv:property>
           <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
           <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>

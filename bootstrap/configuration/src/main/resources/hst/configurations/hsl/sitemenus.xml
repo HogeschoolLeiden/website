@@ -365,10 +365,16 @@
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>hst:sitemenuitem</sv:value>
           </sv:property>
+          <sv:property sv:name="hst:depth" sv:type="Long">
+            <sv:value>3</sv:value>
+          </sv:property>
           <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
           <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
           <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
             <sv:value>onderwijs/bacheloropleidingen/vindt-je-studie</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:repobased" sv:type="Boolean">
+            <sv:value>true</sv:value>
           </sv:property>
         </sv:node>
         <sv:node sv:name="Inschrijfinformatie">
@@ -504,6 +510,30 @@
           </sv:property>
           <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
             <sv:value>onderwijs/opleidingen-voor-professionals/masters</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:repobased" sv:type="Boolean">
+            <sv:value>true</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="Nascholingen">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:sitemenuitem</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:depth" sv:type="Long">
+            <sv:value>2</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+            <sv:value>disabled</sv:value>
+            <sv:value>root</sv:value>
+            <sv:value>invisible</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+            <sv:value>true</sv:value>
+            <sv:value>{"relativeContentPath": "pages/onderwijs/opleidingen-voor-professionals/nascholingen/index", "invisible": "false", "disabled": "false","showFacetNavigations":"false"}</sv:value>
+            <sv:value>true</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+            <sv:value>onderwijs/opleidingen-voor-professionals/nascholingen</sv:value>
           </sv:property>
           <sv:property sv:name="hst:repobased" sv:type="Boolean">
             <sv:value>true</sv:value>
