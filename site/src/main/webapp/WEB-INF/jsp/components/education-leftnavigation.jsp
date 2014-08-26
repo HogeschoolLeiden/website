@@ -12,8 +12,6 @@
 
 <div class="left">
   
-  <p> <strong> SHOULD USE DIFFERENT LOGIC and TEMPLATE </strong> </p>  
-  
   <c:if test="${not empty paramInfo.overviewSitemapRefId}">
     <div class="backToOverview">
       <c:set var="refId" value="${paramInfo.overviewSitemapRefId}"/>
@@ -24,13 +22,19 @@
     </div>
   </c:if>
   
-  <c:set var="parentItem" value="${tag:getSitemenuConfigParameter(parentItem, 'invisible')}"/>
-
-   <c:forEach items="${menu.menuItems }" var="menuItem">
+  <c:forEach items="${menu.menuItems }" var="menuItem">
     <c:if test="${menuItem.expanded}">
       <c:forEach items="${menuItem.childMenuItems }" var="secondMenuItem">
         <c:if test="${secondMenuItem.expanded}">
-           <c:set var="parentItem" value="${secondMenuItem}"/>
+           <c:forEach items="${secondMenuItem.childMenuItems }" var="thirdMenuItem">
+              <c:if test="${thirdMenuItem.expanded}">
+                 <c:forEach items="${thirdMenuItem.childMenuItems }" var="fourthMenuItem">
+                    <c:if test="${fourthMenuItem.expanded}">
+                       <c:set var="parentItem" value="${fourthMenuItem}"/>
+                    </c:if>
+                  </c:forEach>
+              </c:if>
+            </c:forEach>
         </c:if>
       </c:forEach>
     </c:if>
