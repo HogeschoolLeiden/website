@@ -22,7 +22,19 @@
     </div>
   </c:if>
   
+  <%--
   <c:set var="parentItem" value="${not empty menu.deepestExpandedItem.parentItem ? menu.deepestExpandedItem.parentItem : menu.deepestExpandedItem}"/>
+  --%>
+
+   <c:forEach items="${menu.menuItems }" var="menuItem">
+    <c:if test="${menuItem.expanded}">
+      <c:forEach items="${menuItem.childMenuItems }" var="secondMenuItem">
+        <c:if test="${secondMenuItem.expanded}">
+           <c:set var="parentItem" value="${secondMenuItem}"/>
+        </c:if>
+      </c:forEach>
+    </c:if>
+  </c:forEach> 
 
   <c:choose>
     <c:when test="${tag:getSitemenuConfigParameter(parentItem, 'invisible') eq true}">

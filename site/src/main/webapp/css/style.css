@@ -5041,6 +5041,12 @@ ul.toolbox li {width:33%; float: left; height: 27.5px; line-height: 25px; }
 }
 .left ul.nav li a:hover { color: #0088cc; background-color: #eeeeee; }
 .left ul.nav li ul li.active.arrow-down a {color: #ffffff; background-color: #0088cc; }
+
+.left ul.nav li.arrow-side a{ background-color: inherit; color: #0088cc;}
+.left ul.nav li.arrow-side a:hover { color: #0088cc; background-color: #eeeeee; }
+
+.left ul.nav li ul li.active.arrow-down li.arrow-side a { background-color: inherit; color: #0088cc;}
+.left ul.nav li ul li.active.arrow-down li.arrow-side a:hover { color: #0088cc; background-color: #eeeeee;}
 /* ---------------------------------- style left side navigation ---------------------------------------- */
 
 /* ---------------------------------- linkedin widgets---------------------------------------- */
