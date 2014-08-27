@@ -40,24 +40,27 @@
     </c:if>
   </c:forEach> 
 
-  <c:choose>
-    <c:when test="${tag:getSitemenuConfigParameter(parentItem, 'invisible') eq true}">
-      <h3>&nbsp;</h3>
-    </c:when>
-    <c:otherwise>
-      <c:choose>
-        <c:when test="${tag:getSitemenuConfigParameter(parentItem, 'disabled') eq true}">
-          <h3><c:out value=" ${parentItem.name}"/></h3>
-        </c:when>
-        <c:otherwise>
-          <hst:link var="link" link="${parentItem.hstLink}"/>
-          <h3><a href="${link}"><c:out value=" ${parentItem.name}"/></a></h3>
-        </c:otherwise>
-      </c:choose> 
-    </c:otherwise>
-  </c:choose>
-  
   <ul class="nav nav-pills nav-stacked">
+    
+    <c:choose>
+      <c:when test="${tag:getSitemenuConfigParameter(parentItem, 'invisible') eq true}">
+        <li><h3>&nbsp;</h3></li>
+      </c:when>
+      <c:otherwise>
+        <c:choose>
+          <c:when test="${tag:getSitemenuConfigParameter(parentItem, 'disabled') eq true}">
+            <li><h3><c:out value=" ${parentItem.name}"/></h3></li>
+          </c:when>
+          <c:otherwise>
+            <hst:link var="link" link="${parentItem.hstLink}"/>
+            <li><h3 ${parentItem.selected ? "class='selectedItem'" : ""}>
+              <a href="${link}"><c:out value=" ${parentItem.name}"/></a>
+            </h3></li>
+          </c:otherwise>
+        </c:choose> 
+      </c:otherwise>
+    </c:choose>
+  
     <c:forEach items="${hst:isReadable(parentItem, 'childMenuItems') ? parentItem.childMenuItems : parentItem.menuItems}" var="item">
       <opw:menuitem siteMenuItem="${item}" depth="1"
         expandedClass="current arrow-down"
