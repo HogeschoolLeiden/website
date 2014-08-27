@@ -55,11 +55,22 @@
   
   <ul class="nav nav-pills nav-stacked">
     <c:forEach items="${hst:isReadable(parentItem, 'childMenuItems') ? parentItem.childMenuItems : parentItem.menuItems}" var="item">
-      <opw:menuitem siteMenuItem="${item}" depth="1"
-        expandedClass="current arrow-down"
-        selectedClass="active arrow-down"
-        unexpandedClass="unexpanded arrow-side" leafClass="arrow-side" 
-        recurseOnlyExpanded="false"/>
+       <c:choose>
+          <c:when test="${tag:getSitemenuConfigParameter(item, 'doNotShowChildren') eq true}">
+            <opw:menuitem siteMenuItem="${item}" depth="0"
+              expandedClass="current arrow-down"
+              selectedClass="active arrow-down"
+              unexpandedClass="unexpanded arrow-side" leafClass="arrow-side" 
+              recurseOnlyExpanded="false"/>
+          </c:when>
+          <c:otherwise>
+             <opw:menuitem siteMenuItem="${item}" depth="1"
+              expandedClass="current arrow-down"
+              selectedClass="active arrow-down"
+              unexpandedClass="unexpanded arrow-side" leafClass="arrow-side" 
+              recurseOnlyExpanded="false"/>
+          </c:otherwise>
+        </c:choose>
     </c:forEach>
   </ul>
 </div>
