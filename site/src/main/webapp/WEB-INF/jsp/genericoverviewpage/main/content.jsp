@@ -12,7 +12,7 @@
 
 <c:if test="${hst:isReadable(document, 'rssItem') && not empty document.rssItem }">
   <c:set var="rssLink">
-    <hst:link var="link" hippobean="${document.rssItem}"/>
+    <hst:link hippobean="${document.rssItem}"/>
   </c:set>
   <hst:headContribution keyHint="rssItem">
     <link title="${document.rssItem.title}" rel="alternate" type="application/rss+xml" href="${rssLink}"/>
