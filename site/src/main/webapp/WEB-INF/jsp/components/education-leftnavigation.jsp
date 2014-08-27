@@ -12,54 +12,13 @@
 
 <div class="left">
   
-  <c:if test="${not empty paramInfo.overviewSitemapRefId}">
-    <div class="backToOverview">
-      <c:set var="refId" value="${paramInfo.overviewSitemapRefId}"/>
-      <hst:link siteMapItemRefId="${refId}" var="overviewLink"/>
-      <a href="${overviewLink}" title="<fmt:message key="back.overview.${refId}" />">
-        <fmt:message key="back.overview.${refId}"/>
-      </a>
-    </div>
-  </c:if>
-  
-  <c:forEach items="${menu.menuItems }" var="menuItem">
-    <c:if test="${menuItem.expanded}">
-      <c:forEach items="${menuItem.childMenuItems }" var="secondMenuItem">
-        <c:if test="${secondMenuItem.expanded}">
-           <c:forEach items="${secondMenuItem.childMenuItems }" var="thirdMenuItem">
-              <c:if test="${thirdMenuItem.expanded}">
-                 <c:forEach items="${thirdMenuItem.childMenuItems }" var="fourthMenuItem">
-                    <c:if test="${fourthMenuItem.expanded}">
-                       <c:set var="parentItem" value="${fourthMenuItem}"/>
-                    </c:if>
-                  </c:forEach>
-              </c:if>
-            </c:forEach>
-        </c:if>
-      </c:forEach>
-    </c:if>
-  </c:forEach> 
+  <tag:renderBackLink sitemapRefId="${paramInfo.overviewSitemapRefId}"/>
+     
+  <c:set var="parentItem" value="${tag:getTopMenuItem(menu, 3)}"/>
 
   <ul class="nav nav-pills nav-stacked">
     
-    <c:choose>
-      <c:when test="${tag:getSitemenuConfigParameter(parentItem, 'invisible') eq true}">
-        <li><h3>&nbsp;</h3></li>
-      </c:when>
-      <c:otherwise>
-        <c:choose>
-          <c:when test="${tag:getSitemenuConfigParameter(parentItem, 'disabled') eq true}">
-            <li><h3><c:out value=" ${parentItem.name}"/></h3></li>
-          </c:when>
-          <c:otherwise>
-            <hst:link var="link" link="${parentItem.hstLink}"/>
-            <li><h3 ${parentItem.selected ? "class='selectedItem'" : ""}>
-              <a href="${link}"><c:out value=" ${parentItem.name}"/></a>
-            </h3></li>
-          </c:otherwise>
-        </c:choose> 
-      </c:otherwise>
-    </c:choose>
+    <tag:renderTopMenuItem menuItem="${parentItem}"/>
   
     <c:forEach items="${hst:isReadable(parentItem, 'childMenuItems') ? parentItem.childMenuItems : parentItem.menuItems}" var="item">
       <opw:menuitem siteMenuItem="${item}" depth="1"

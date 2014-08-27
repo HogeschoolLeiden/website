@@ -90,6 +90,14 @@
       <name>publicImagesPaginator</name>
       <path>/WEB-INF/tags/publicImagesPaginator.tag</path>
     </tag-file>
+    <tag-file>
+      <name>renderTopMenuItem</name>
+      <path>/WEB-INF/tags/renderTopMenuItem.tag</path>
+    </tag-file>
+    <tag-file>
+      <name>renderBackLink</name>
+      <path>/WEB-INF/tags/renderBackLink.tag</path>
+    </tag-file>
 	
 	<function>
 		<description>get browser title from channel configuration</description>
@@ -153,9 +161,10 @@
       <function-signature>java.lang.String getSitemenuConfigParameter(org.hippoecm.hst.core.sitemenu.EditableMenuItem, java.lang.String)</function-signature>
     </function>
 
-    <!-- <function>
-      <name>getEducationMenuRoot</name>
+    <function>
+      <name>getTopMenuItem</name>
       <function-class>nl.hsleiden.tags.Functions</function-class>
-      <function-signature>java.lang.String getEducationMenuRoot(org.hippoecm.hst.core.sitemenu.EditableMenuItem)</function-signature>
-    </function> -->
+      <function-signature>org.hippoecm.hst.core.sitemenu.EditableMenuItem getTopMenuItem(org.hippoecm.hst.core.sitemenu.EditableMenu, java.lang.Integer )</function-signature>
+    </function>
+
 </taglib>
