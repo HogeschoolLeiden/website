@@ -28,7 +28,7 @@
       <c:if test="${not tag:getSitemenuConfigParameter(item, 'disabled') eq true}">
 	    <li>
           <a itemprop="url" href="<hst:link link="${item.hstLink}"/>">
-            <span itemprop="title"><c:out value="${item.name} / "/></span> 
+            <span itemprop="title"><c:out value="${item.name}"/></span> 
           </a>
         </li>
       </c:if>

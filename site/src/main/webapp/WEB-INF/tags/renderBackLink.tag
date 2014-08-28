@@ -12,12 +12,15 @@
 <hst:setBundle basename="nl.hsleiden.widget.Messages" />
 
 <c:if test="${not empty sitemapRefId}">
-  <div class="backToOverview">
-    <c:set var="refId" value="${sitemapRefId}"/>
-    <hst:link siteMapItemRefId="${refId}" var="overviewLink"/>
-    <a href="${overviewLink}" title="<fmt:message key="back.overview.${refId}" />">
-      <fmt:message key="back.overview.${refId}"/>
-    </a>
+  <div class="container">
+    <div class="row">
+      <c:set var="refId" value="${sitemapRefId}"/>
+      <hst:link siteMapItemRefId="${refId}" var="overviewLink"/>
+      <a class="btn back" href="${overviewLink}" title="<fmt:message key="back.overview.${refId}" />">
+        <fmt:message key="back.overview.${refId}"/>
+      </a>
+    </div>
   </div>
 </c:if>
+
 

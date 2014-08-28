@@ -34,23 +34,17 @@
     <c:out value="${content.title }" escapeXml="true" />
   </h2>
 </c:if>
-
+                
 <c:choose>
   <c:when test="${not empty content.paragraphImage }">
     <c:choose>
-      <c:when test="${position == 'bottom' }">
-        <div class="image">
-          <hst:html hippohtml="${content.content }"/>
-          <tag:paragraphImage position="${position }" image="${content.paragraphImage }" />
-          <div class="clear"></div>
-        </div>
+      <c:when test="${position == 'left' || position == 'right' || position == 'top'}"> 
+        <tag:paragraphImage position="${position }" image="${content.paragraphImage }" />
+        <hst:html hippohtml="${content.content }"/>
       </c:when>
       <c:otherwise>
-        <div class="image">
-          <tag:paragraphImage position="${position }" image="${content.paragraphImage }" />
-          <hst:html hippohtml="${content.content }"/>
-          <div class="clear"></div>
-        </div>
+        <hst:html hippohtml="${content.content }"/>
+        <tag:paragraphImage position="${position }" image="${content.paragraphImage }" />
       </c:otherwise>
     </c:choose>
   </c:when>

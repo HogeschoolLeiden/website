@@ -8,9 +8,8 @@
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 <%@ taglib prefix='opw' uri="http://open-web.nl/hippo/prototype"%>
 
-<div class="main-menu">
 
-  <ul class="nav mainMenuLink main-menu">
+  <ul class="nav navbar-nav" id="mainnav">
 	<c:forEach items="${menu.menuItems}" var="siteMenuItem" varStatus="loop">
 		<c:choose>
 			<c:when test="${not empty siteMenuItem.hstLink }">
@@ -39,22 +38,17 @@
 			<a href="${link}"> 
 			  <c:out value="${siteMenuItem.name}" />
 			</a>
-            <div class="showOnHover">
-              <div class="column one">
-                <tag:submenu menuItem="${siteMenuItem}" columNr="0"/>
-              </div>
-              <div class="column two">
-                <tag:submenu menuItem="${siteMenuItem}" columNr="1"/>
-              </div>
-              <div class="column three">
-                <tag:submenu menuItem="${siteMenuItem}" columNr="2"/>
-              </div>
-              <div class="column four">
-                <tag:submenu menuItem="${siteMenuItem}" columNr="3"/>
-              </div>  
-            </div>
+            
+            <ul class="dropdownmenu visible-lg visible-md clearfix">
+            
+            
+            <tag:submenu menuItem="${siteMenuItem}" columNr="0"/>
+            <tag:submenu menuItem="${siteMenuItem}" columNr="1"/>
+            <tag:submenu menuItem="${siteMenuItem}" columNr="2"/>
+            <tag:submenu menuItem="${siteMenuItem}" columNr="3"/>
+            
+            </ul>
 		</li> 
                        
 	</c:forEach>  
   </ul> 
-</div>

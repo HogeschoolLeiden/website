@@ -14,11 +14,11 @@
 	<c:set var="lastItemClass" value="last"/>
 </c:if>
 
-<ul>
+<ol class="breadcrumb">
   <hst:link path="/" var="home"/>
   <li>
     <a itemprop="url" href="${home }" >
-      <span itemprop="title"><c:out value="Home / "/></span>
+      <span itemprop="title"><c:out value="Home "/></span>
     </a>
   </li>
   <c:forEach items="${menu.menuItems}" var="item">
@@ -33,11 +33,11 @@
       <c:when test="${item.expanded}">
       	<li>
           <a itemprop="url" href="<hst:link link="${item.hstLink}"/>">
-             <span itemprop="title"><c:out value="${item.name}" /><c:out  value=" / " /></span>
+             <span itemprop="title"><c:out value="${item.name}" /></span>
           </a>
         </li>
       	<tag:breadcrumbitem parentItem="${item}" lastItemClass="${lastItemClass} " />
       </c:when>
     </c:choose>
   </c:forEach>
-</ul>
+</ol>

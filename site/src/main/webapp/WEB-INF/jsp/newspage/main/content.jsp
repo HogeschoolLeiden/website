@@ -1,4 +1,5 @@
-<%@ page contentType="text/html; charset=UTF-8" language="java"	trimDirectiveWhitespaces="true" pageEncoding="UTF-8"%>
+<%@ page contentType="text/html; charset=UTF-8" language="java"
+  trimDirectiveWhitespaces="true" pageEncoding="UTF-8"%>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
@@ -8,40 +9,49 @@
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 
 <c:choose>
-	<c:when test="${empty document}">
-		<tag:pagenotfound />
-	</c:when>
-	<c:otherwise>
-       <div itemscope itemtype="http://schema.org/NewsArticle">
-	   <article class="well well-large">
-		 <hst:cmseditlink hippobean="${document}" />
-		 <header>
-		   <h1 itemprop="headline">
-			 <c:out value="${document.title }" escapeXml="true" />
-		   </h1>
-		   <h2>
-			 <c:out value="${document.subtitle }" escapeXml="true" />
-		   </h2>
-		   <c:if test="${hst:isReadable(document, 'releaseDate.time')}">
-			 <p class="badge badge-info">
-			   <fmt:formatDate value="${document.releaseDate.time}" type="both"
-							dateStyle="medium" timeStyle="short" />
-			 </p>
-		    </c:if>
-		  </header>
+  <c:when test="${empty document}">
+    <tag:pagenotfound />
+  </c:when>
+  <c:otherwise>
+    <div class="container">
+      <div class="row" itemscope itemtype="http://schema.org/NewsArticle">
 
-		  <div class="inner">
-			<c:if test="${not empty document.introduction }">
-			  <p class="intro">
-			    <c:out value="${document.introduction }" />
-			  </p>
-			</c:if>
+        <article class="col-md-9 detail-content">
+          <hst:cmseditlink hippobean="${document}" />
 
-	         <tag:flexibleblock content="${document.flexibleblock }"/>
+          <div class="row">
+            <div class="col-md-8 col-sm-8 contentarea">
+              <div class="content">
 
-             <tag:toolbox document="${document }" />
-		  </div>
-	   </article>
-       </div>
-    </c:otherwise>
+                <h1 itemprop="headline">
+                  <c:out value="${document.title }" escapeXml="true" />
+                </h1>
+
+                <c:if test="${hst:isReadable(document, 'releaseDate.time')}">
+                  <fmt:formatDate value="${document.releaseDate.time}"
+                                  type="date" pattern="dd" dateStyle="medium" timeStyle="short" var="day" />
+                  <fmt:formatDate value="${document.releaseDate.time}"
+                                  type="date" pattern="MMM" dateStyle="medium" timeStyle="short" var="month" />
+                  
+                  <time datetime="${time}" class="datum">${fn:escapeXml(day)}<span>${fn:escapeXml(month)}</span></time>
+                </c:if>
+
+                <p class="intro">
+                  <c:out value="${document.introduction }" />
+                </p>
+                
+                <tag:flexibleblock content="${document.flexibleblock }" />
+
+                <tag:toolbox document="${document }" />
+
+              </div>
+            </div>
+          </div>
+
+        </article>
+
+      </div>
+    </div>
+
+  </c:otherwise>
 </c:choose>

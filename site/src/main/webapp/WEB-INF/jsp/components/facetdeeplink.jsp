@@ -8,14 +8,6 @@
 
 <hst:setBundle basename="nl.hsleiden.widget.Messages" />
 
-<c:if test="${not empty model.paramInfo.overviewSitemapRefId}">
-  <div class="backToOverview">
-    <c:set var="refId" value="${model.paramInfo.overviewSitemapRefId}" />
-    <hst:link siteMapItemRefId="${refId}" var="overviewLink" />
-    <a href="${overviewLink}" title="<fmt:message key="back.overview.${refId}" />">
-      <fmt:message key="back.overview.${refId}" />
-    </a>
-  </div>
-</c:if>
+<tag:renderBackLink sitemapRefId="${model.paramInfo.overviewSitemapRefId}"/>
 
 <tag:facetednavigation facetnav="${model.facetBean}" labels="${model.labels}" />

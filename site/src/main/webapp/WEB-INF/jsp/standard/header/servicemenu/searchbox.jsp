@@ -60,23 +60,18 @@
 			});
 	</script>
 </hst:headContribution>
-<div class="search-box">
 
-	<fmt:message var="submitText" key="search.submit.text" />
-	<hst:link var="link" siteMapItemRefId="search" />
-	<form class="navbar-search form-search" action="${link}" method="get">
-		<p>
 
-			<input type="text" name="q"
-				class="search-query input-xlarge typeahead"
-				placeholder="${fn:escapeXml(submitText)}" required="required"
-				${not empty model.query? 'value=\"' : ''} ${model.query} ${not empty model.query? '\"' : ''} }/>
-			<button class="btn btn-primary inline" type="submit"
-				value="${submitText}">
-				<c:out value="${submitText}" />
-			</button>
-		</p>
-	</form>
-
-</div>
-<div class="clear"></div>
+<fmt:message var="submitText" key="search.submit.text" />
+<hst:link var="link" siteMapItemRefId="search" />
+<form role="form" class="navbar-form" action="${link}" method="get">
+  <div class="form-group">
+	<input type="text" name="q"
+		   class="search-query input-xlarge typeahead form-control"
+		   placeholder="${fn:escapeXml(submitText)}" required="required"
+		   ${not empty model.query? 'value=\"' : ''} ${model.query} ${not empty model.query? '\"' : ''} />
+  </div>
+  <button class="btn fa fa-search no-radius btn-primary inline" type="submit" value="${submitText}">
+	<span><c:out value="${submitText}" /></span>
+  </button>
+</form>

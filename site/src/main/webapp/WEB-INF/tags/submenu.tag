@@ -10,31 +10,34 @@
 <%@ attribute name="menuItem" type="org.hippoecm.hst.core.sitemenu.EditableMenuItem" rtexprvalue="true" required="true"%>
 <%@ attribute name="columNr" type="java.lang.Integer" rtexprvalue="true" required="true" %>
 
-<c:choose>
-  <c:when test="${tag:getSitemenuConfigParameter(menuItem.childMenuItems[columNr], 'invisible') eq true}">
-    <h3>&nbsp;</h3>
-  </c:when>
-  <c:otherwise>
-    <c:choose>
-    <c:when test="${tag:getSitemenuConfigParameter(menuItem.childMenuItems[columNr], 'disabled') eq true}">
-      <h3><c:out value=" ${menuItem.childMenuItems[columNr].name}"/></h3>
-    </c:when>
-    <c:otherwise>
-      <hst:link var="link" link="${menuItem.childMenuItems[columNr].hstLink}"/>
-      <h3><a href="${link}"><c:out value=" ${menuItem.childMenuItems[columNr].name}"/></a></h3>
-    </c:otherwise>
-    </c:choose> 
-  </c:otherwise>
-</c:choose>
-
-<ul class="sub-menu">
+<li>
+    <ul>
+      
+      <c:choose>
+        <c:when test="${tag:getSitemenuConfigParameter(menuItem.childMenuItems[columNr], 'invisible') eq true}">
+          <li class="h2"><h2>&nbsp;</h2></li>
+        </c:when>
+        <c:otherwise>
+          <c:choose>
+          <c:when test="${tag:getSitemenuConfigParameter(menuItem.childMenuItems[columNr], 'disabled') eq true}">
+            <li class="h2"><h2><c:out value=" ${menuItem.childMenuItems[columNr].name}"/></h2></li>
+          </c:when>
+          <c:otherwise>
+            <hst:link var="link" link="${menuItem.childMenuItems[columNr].hstLink}"/>
+            <li class="h2"><h2><a href="${link}"><c:out value=" ${menuItem.childMenuItems[columNr].name}"/></a></h2></li>
+          </c:otherwise>
+          </c:choose> 
+        </c:otherwise>
+      </c:choose>
  
- <c:forEach items="${menuItem.childMenuItems[columNr].childMenuItems}" var="item">
+      <c:forEach items="${menuItem.childMenuItems[columNr].childMenuItems}" var="item">
         <opw:menuitem siteMenuItem="${item}" depth="0"
           expandedClass="current arrow-down"
           selectedClass="active arrow-down"
           unexpandedClass="unexpanded arrow-side" leafClass="arrow-side" 
           recurseOnlyExpanded="false"/>
       </c:forEach>
-  
-</ul>
+    
+    </ul>
+    </li>
+

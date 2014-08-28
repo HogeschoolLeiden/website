@@ -12,18 +12,17 @@
 
 <c:if test="${hst:isReadable(document, 'headerImage')}">
   <c:if test="${not empty document.headerImage }">
-    <div class="container-fluid">
-      <div class="row-fluid">
-        <div class="header image span8">
-          <hst:link var="img" hippobean="${document.headerImage.allWidthImage}"/>
-          <c:if test="${not empty img }">
-            <figure>
-              <img src="${img}" title="<c:out value="${document.headerImage.alt}"/>"
-              alt="<c:out value="${document.headerImage.alt}"/>"/>
-            </figure>
-          </c:if>
-        </div>
+    
+    <div class="background img">
+      <div class="img">
+        <%-- afmeting afbeelindg: 1280x621 --%>
+        <hst:link var="img" hippobean="${document.headerImage.allWidthImage}"/>
+        <c:if test="${not empty img }">
+            <img src="${img}" title="<c:out value="${document.headerImage.alt}"/>"
+                 alt="<c:out value="${document.headerImage.alt}"/>"/>
+        </c:if>
       </div>
-    </div>       
+    </div>   
+  
   </c:if>
 </c:if>

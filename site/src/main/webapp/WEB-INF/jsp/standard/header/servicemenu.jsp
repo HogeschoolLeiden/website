@@ -8,21 +8,21 @@
 
 <hst:setBundle basename="nl.hsleiden.general.Messages"/>
 
+<ul class="nav navbar-nav" id="utilities">
+
+<%--
 <div class="service-menu">
   
   <div class="menulinks">
     
-    <%-- <hst:include ref="langaugeswitch" /> --%> 
-    <ul class="nav mainMenuLink international">
+     <hst:include ref="langaugeswitch" />
+    <ul class="nav mainMenuLink international">  --%> 
       <li>
         <a href="#"> 
           <c:out value="international" />
         </a>
       </li>
-    </ul>
-    <%-- <hst:include ref="langaugeswitch" /> --%> 
-    
-    <ul class="nav mainMenuLink">
+
   	  <c:forEach items="${menu.siteMenuItems}" var="siteMenuItem" varStatus="step">
   		<c:choose>
   			<c:when test="${not empty siteMenuItem.hstLink }">
@@ -53,9 +53,8 @@
   			</a>
   		</li>
   	  </c:forEach>
-    </ul>
-  </div>
+</ul>
   
   <hst:include ref="searchbox"/>   
-</div>
+
 

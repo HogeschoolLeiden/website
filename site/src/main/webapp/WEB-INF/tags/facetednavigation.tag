@@ -12,70 +12,61 @@
 
 <hst:setBundle basename="nl.hsleiden.general.Messages"/>
 
-<c:set var="facetnavtitle">
+<%-- <c:set var="facetnavtitle">
   <fmt:message key="refine.results" />
-</c:set>
+</c:set> --%>
 
-<div id="searchresult-category-container">
-	<c:if test="${facetnav.count gt 0}">
-		<div id="facets">
-			<h4><c:out value="${facetnavtitle}" escapeXml="true"/></h4>
-			<div class="form">
-				<c:forEach var="facet" items="${facetnav.folders}">
-					<c:if test="${facet.resultSet.count > 0}">
-						<div class="fieldset">
-							<c:choose>
-								<c:when test="${facet.leaf}">
-									<h5 class="facetName">
-										<c:out value="${facet.name}" escapeXml="true" />
-									</h5>
-								</c:when>
-								<c:otherwise>
-									<h5 class="facetName">
-										<c:out value="${facet.name}" escapeXml="true" />
-									</h5>
-									<c:if test="${not empty facet.folders}">
-										<c:forEach items="${facet.folders}" var="item">
-											<c:choose>
-												<c:when test="${item.leaf and item.count gt 0}">
-													<hst:facetnavigationlink remove="${item}" current="${facetnav}" var="removeLink" />
-													<div class="input selected">
-														<span> 
-															<c:out value="${labels[item.name]}" default="${item.name}" escapeXml="true" />
-														</span> 
-														<a href="${removeLink}" class="removeLink"></a>
-													</div>
-												</c:when>
-												<c:when test="${item.leaf and item.count eq 0}">
-												</c:when>
-												<c:otherwise>
-													<hst:link var="link" hippobean="${item}" navigationStateful="true" />
-													<div class="input">
-														<c:choose>
-															<c:when test="${query eq null}">
-																<a href="${link }"> 
-																	<c:out value="${labels[item.name]}" default="${item.name}" escapeXml="true" />
-																</a>
-                            	  								(${item.count })
-                          									</c:when>
-															<c:otherwise>
-																<a href="${link }"> 
-																	<c:out value="${labels[item.name]}" default="${item.name}" escapeXml="true" />
-																</a>
-						                            	  		(${item.count })
-						                          			</c:otherwise>
-														</c:choose>
-													</div>
-												</c:otherwise>
-											</c:choose>
-										</c:forEach>
-									</c:if>
-								</c:otherwise>
-							</c:choose>
-						</div>
-					</c:if>
-				</c:forEach>
-			</div>
-		</div>
-	</c:if>
+<div class="filter filter-collapse collapse clearfix algemeenfilter">
+  <c:if test="${facetnav.count gt 0}">
+
+<%--     <h4><c:out value="${facetnavtitle}" escapeXml="true"/></h4> --%>
+
+      <c:forEach var="facet" items="${facetnav.folders}">
+		<c:if test="${facet.resultSet.count > 0}">
+		  
+          <section class="filtergroup col-md-3">
+		    <h2><c:out value="${facet.name}" escapeXml="true" /></h2>
+		    <c:if test="${not empty facet.folders}">
+              
+              <div class="filterlist">
+                
+                <c:forEach items="${facet.folders}" var="item">
+			        
+                  <c:set var="inputID">
+                    <c:out value="${facet.name}"/>
+                    <c:out value="-"/>
+                    <c:out value="${item.name}"/>
+                  </c:set>
+                    
+                  <c:choose>
+                    <c:when test="${item.leaf and item.count gt 0}">
+                      <%-- what to do with this 
+                      <hst:facetnavigationlink remove="${item}" current="${facetnav}" var="removeLink" />
+                      --%>
+                      <div class="checkbox">
+                        <input type="checkbox" id="${inputID}" value="${item.name}" name="${facet.name}" checked>
+                        <label for="${inputID}">
+                          <c:out value="${labels[item.name]}" default="${item.name}" escapeXml="true" />
+                        </label>
+                      </div>
+                    </c:when>
+                    <c:otherwise>
+                      <div class="checkbox">
+                        <input type="checkbox" id="${inputID}" value="${item.name}" name="${facet.name}">
+                        <label for="${inputID}">
+                          <c:out value="${labels[item.name]}" default="${item.name}" escapeXml="true" />
+                        </label>
+                      </div>
+                    </c:otherwise>
+                  </c:choose>
+                </c:forEach>
+                  
+              </div>
+              
+            </c:if>
+          </section>
+               
+	  </c:if>
+	</c:forEach>
+  </c:if>
 </div>

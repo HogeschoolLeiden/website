@@ -19,7 +19,6 @@
 <c:set var="url"><hst:link hippobean="${document }" fullyQualified="true" /></c:set>
 <c:set var="quoteAuthor">
   <c:out value="${content.quoteParameters.name }" />
-  <c:out value=" : " />
 </c:set>
 <c:set var="quoteText">
   <c:out value="${content.quoteParameters.quoteText }" />
@@ -30,25 +29,24 @@
   <c:out value="${content.quoteParameters.quoteText }" />
 </c:set>
 
-<hst:link var="image" hippobean="${content.quoteParameters.image.listImageLarge }" />
-
-<div class="quote item-with-image">
+<hst:link var="image" hippobean="${content.quoteParameters.image.listImageSmall }" />
+                
+<blockquote class="media">
   <c:if test="${not empty image}">
-    <div class="quote image-space">
-      <img alt="${content.quoteParameters.name }" src="${image }" title="${content.quoteParameters.name }"/>
-    </div>
+      <%-- pull-left or pull-right shall come from content model --%>
+      <img class="pull-left" alt="${content.quoteParameters.name }" src="${image }" title="${content.quoteParameters.name }"/>
   </c:if>
 
-  <div ${empty image ? 'class="noimage quote itemContent"' : 'class="quote itemContent"' }>
-
-    <div class="author">
-      <c:out value="${quoteAuthor }" />
-    </div>
+  <div class="media-body">
+    <h2 class="media-heading">
+      <c:out value="${quoteText }"></c:out>
+      <span></span>
+    </h2>
     
-    <div class="text">
-      <c:out value="${quoteText }" />
-    </div>
-
+    <h3>
+      <c:out value="${quoteAuthor }" />
+    </h3>
+    
 
     <c:if test="${content.shareParameters.twitter or content.shareParameters.linkedin }">
     <div class="share">
@@ -84,5 +82,5 @@
 
   </div>
   <div class="clear"></div>
-</div>
+</blockquote>
 

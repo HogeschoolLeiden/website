@@ -9,42 +9,50 @@
 
 <hst:setBundle basename="nl.hsleiden.general.Messages"/>
 
-<div class="container-fluid">
-<div class="row-fluid">
-<div class="header span8">
-  <div class="navbar">
-    <div class="navbar-inner">
-        
-      <div class="container">
-        <hst:link var="homeLink" path="/" />
-        <div class="logo">
-          <a href="${homeLink}"> 
-            <c:choose>
-            <c:when test="${not empty logo}">
-              <img src="<hst:link hippobean="${logo.original}"/>"
-                   alt="<c:out value="${headerName}"/>"
-                   title="<c:out value="${headerName}"/>" />
-            </c:when>
-            <c:otherwise>
-              <img src="<hst:link path="images/logo_big.png"/>"
-                alt="<c:out value="${headerName}"/>"
-                title="<c:out value="${headerName}"/>" />
-            </c:otherwise>
-            </c:choose>
-          </a>
-        </div>
-        
-        <div class="navbar nav pull-right h-menu">
-          <hst:include ref="serviceMenu" /> 
-          <hst:include ref="mainMenu" />
-          <div class="clear"></div>
-        </div>
+<header class="navbar" id="top">
 
-        <div class="clear"></div>
-      </div>
-      	
+  <div class="container">
+	<div class="navbar-header">
+  
+      <button class="navbar-toggle navbar-header" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>       
+      
+      <button class="navbar-toggle navbar-header toggle-filter-button fa fa-filter hidden-lg hidden-md"  data-target=".filter-collapse" data-toggle="collapse" type="button">
+        <span class="sr-only">Toggle filter</span>
+      </button>
+      
+      <hst:link var="homeLink" path="/" />
+
+      <a class="navbar-brand" href="${homeLink}">
+        <c:choose>
+          <c:when test="${not empty logo}">
+            <img src="<hst:link hippobean="${logo.original}"/>"
+                 alt="<c:out value="${headerName}"/>"
+                 title="<c:out value="${headerName}"/>" 
+                 class="img-responsive"/>
+          </c:when>
+          <c:otherwise>
+            <img src="<hst:link path="images/logo-hsleiden-large.png"/>"
+              alt="<c:out value="${headerName}"/>"
+              title="<c:out value="${headerName}"/>" 
+              class="img-responsive"/>
+          </c:otherwise>
+        </c:choose>
+      </a>
     </div>
+        
+    <div class="navbar-collapse collapse" role="navigation">      
+         
+            <hst:include ref="mainMenu" />
+            <hst:include ref="serviceMenu" /> 
+            <div class="clear"></div>
+            
+    </div> <!--- // navbar-collapse -->
+        
   </div>
-</div>
-</div>
-</div>
+
+</header>

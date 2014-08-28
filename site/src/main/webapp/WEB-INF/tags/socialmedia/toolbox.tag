@@ -32,32 +32,36 @@
     <meta property="og:description" content="${document.introduction}"/>
   </hst:headContribution>
 
+<div class="share clearfix">
 
-<ul class="toolbox">
+  <%-- 
+  enable after css
   <c:if test="${not empty document}">
-    <li>
       <hst:link mount="pdf" var="pdfLink"/>
       <a  class="pdf" id="pdflink" title="${pagePdf}" 
           href="${pdfLink}?${pageContext.request.queryString}">
         <c:out value="${pagePdf}"/>
       </a>
-    </li>
-  </c:if>
-  <li>
-    <a class="facebook" id="tool-facebook" title="${pageFacebook}" 
+
+  </c:if> 
+  --%>
+  
+  <a class="fa fa-facebook-square col-md-4 col-sm-4 col-xs-12" id="tool-facebook" title="${pageFacebook}" 
        href="https://www.facebook.com/sharer/sharer.php?u=${url }&amp;t=<c:out value="${document.title }" />"
-       target="_blank"><c:out value="${pageFacebook}"/>
-    </a>
-  </li>
-  <li>
-      <c:url var="googlePlusUrl" value="https://plus.google.com/share">
-        <c:param name="url" value="${url}"/>
-      </c:url>
-      <a class="googleplus" id="tool-googleplus" title="${googleplus}"
-         href="${fn:escapeXml(googlePlusUrl)}" target="_blank"><c:out value="${googleplus}"/>
-      </a>
-    </li>
-    <li>
+       target="_blank">
+       <span><c:out value="${pageFacebook}"/></span>
+  </a>
+  
+  <c:url var="googlePlusUrl" value="https://plus.google.com/share">
+	<c:param name="url" value="${url}"/>
+  </c:url>
+  <a class="fa fa-google-plus col-md-4 col-sm-4 col-xs-12" id="tool-googleplus" title="${googleplus}"
+         href="${fn:escapeXml(googlePlusUrl)}" target="_blank">
+         <span><c:out value="${googleplus}"/></span>
+  </a>
+  
+   <%-- 
+  enable after css
       <c:url var="linkedInUrl" value="http://www.linkedin.com/shareArticle">
         <c:param name="mini" value="true"/>
         <c:param name="url" value="${url}"/>
@@ -70,22 +74,24 @@
         <a class="linkedin" id="tool-linkedin" title="${linkedin}" 
            href="${fn:escapeXml(linkedInUrl)}" target="_blank"><c:out value="${linkedin}"/>
         </a>
-    </li>
-  <li>
-    <a class="twitter" id="tool-twitter" title="${pageTwitter}" 
+     --%>
+    
+    <a class="fa fa-twitter col-md-4 col-sm-4 col-xs-12" id="tool-twitter" title="${pageTwitter}" 
        href="http://twitter.com/home?status=<c:out value="${document.title }" /> - ${url }" 
        target="_blank">
-       <c:out value="${pageTwitter}"/>
+       <span><c:out value="${pageTwitter}"/></span>
     </a>
-  </li>
+  
+  <%-- 
+  enable after css
   <c:set var="email">
     mailto:?subject=<fmt:message key="forward.mail.subject"/>&body=<fmt:message key="forward.mail.body"/>${url }
   </c:set>
-  <li>
     <a class="email" title="${forward}" 
        href="<c:out value="${email }" escapeXml="true" />">
        <c:out value="${forward}"/>     
     </a>
-  </li>
-</ul>
+  --%>
+  
+</div>
 </c:if>

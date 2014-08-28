@@ -18,7 +18,7 @@
         <param name="allowScriptAccess" value="always"/>
         <embed src="${content.url}" type="application/x-shockwave-flash" 
             allowfullscreen="${content.youtubePlayerParameters.allowFullScreen}"
-            allowscriptaccess="always" style="width: 605px; height: 300px;"/> 
+            allowscriptaccess="always" style="width: 515px; height: 260px;"/> 
     </object>
     </div>
   </div>
