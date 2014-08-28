@@ -104,13 +104,15 @@
     
     <div id="main" role="main" class="detail"> 
     
+      
       <c:if test="${tag:isSubclassOfWebPage(document)}">
         <tag:headerImage document="${document}"/>
       </c:if>
       
   	  <hst:include ref="main" />
-  	  <hst:include ref="footer" />
     </div>
+  	
+    <hst:include ref="footer" />
 	
     <hst:headContributions categoryIncludes="scripts" xhtml="true" />
 		
