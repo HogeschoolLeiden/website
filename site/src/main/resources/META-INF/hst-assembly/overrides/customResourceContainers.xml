@@ -13,7 +13,7 @@
     <bean id="customResourceContainers" class="org.springframework.beans.factory.config.ListFactoryBean">
           <property name="sourceList">
               <list>
-                  <bean class="nl.hsleiden.gallery.HslGalleryResourceContainer">
+                  <bean class="nl.hsleiden.gallery.RetinaResourceContainer">
                       <property name="primaryItem" value="hippogallery:original"/>
                       <property name="mappings">
                         <bean class="org.springframework.beans.factory.config.MapFactoryBean">
@@ -22,12 +22,19 @@
                               <entry key="hippogallery:thumbnail" value="thumbnail"/>
                               <entry key="hippogallery:original" value="original"/>
                               <entry key="hsl:paragraphImage" value="paragraphImage"/>
+                              <entry key="hsl:paragraphImage2x" value="paragraphImage2x"/>
                               <entry key="hsl:articleImage" value="articleImage"/>
+                              <entry key="hsl:articleImage2x" value="articleImage2x"/>
                               <entry key="hsl:wideImage" value="wideImage"/>
+                              <entry key="hsl:wideImage2x" value="wideImage2x"/>
                               <entry key="hsl:allWidthImage" value="allWidthImage"/>
+                              <entry key="hsl:allWidthImage2x" value="allWidthImage2x"/>
                               <entry key="hsl:listImageSmall" value="listImageSmall"/>
+                              <entry key="hsl:listImageSmall2x" value="listImageSmall2x"/>
                               <entry key="hsl:listImageMedium" value="listImageMedium"/>
+                              <entry key="hsl:listImageMedium2x" value="listImageMedium2x"/>
                               <entry key="hsl:listImageLarge" value="listImageLarge"/>
+                              <entry key="hsl:listImageLarge2x" value="listImageLarge2x"/>
                             </map>
                           </property>
                         </bean>
