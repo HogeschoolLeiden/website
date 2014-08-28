@@ -4,8 +4,8 @@
   </sv:property>
   <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
     <sv:value>hippotranslation:translated</sv:value>
-    <sv:value>mix:versionable</sv:value>
     <sv:value>hippo:translated</sv:value>
+    <sv:value>mix:versionable</sv:value>
   </sv:property>
   <sv:property sv:name="jcr:uuid" sv:type="String">
     <sv:value>05272c29-e5d9-4be2-bd8e-fefdfa0a7a08</sv:value>
@@ -659,78 +659,8 @@
       <sv:value>hippo:translated</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
-      <sv:value>0e71002d-0c3f-4bda-b988-b4b07f956a36</sv:value>
+      <sv:value>785cbacf-7789-4732-93f8-eee4971b0ee4</sv:value>
     </sv:property>
-    <sv:node sv:name="payment-confirmation">
-      <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hsl:WebPage</sv:value>
-      </sv:property>
-      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
-        <sv:value>mix:referenceable</sv:value>
-      </sv:property>
-      <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>ef20ebae-ba1a-4d15-9660-0736a104179f</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true"/>
-      <sv:property sv:name="hippo:related___pathreference" sv:type="String">
-        <sv:value>service/payment-confirmation/payment-confirmation[3]</sv:value>
-        <sv:value>service/payment-confirmation/payment-confirmation[2]</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippostd:state" sv:type="String">
-        <sv:value>draft</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippostd:stateSummary" sv:type="String">
-        <sv:value>live</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
-        <sv:value>admin.ebrahim</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
-        <sv:value>2014-08-25T14:51:48.167+02:00</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-        <sv:value>2014-08-25T14:51:48.316+02:00</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
-        <sv:value>admin.ebrahim</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippotranslation:id" sv:type="String">
-        <sv:value>4a21ef8b-0fe1-443b-9b2d-3100686603f9</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippotranslation:locale" sv:type="String">
-        <sv:value>nl</sv:value>
-      </sv:property>
-      <sv:property sv:name="hsl:author" sv:type="String">
-        <sv:value>author-one</sv:value>
-      </sv:property>
-      <sv:property sv:name="hsl:browserTitle" sv:type="String">
-        <sv:value>Payment Confirmation</sv:value>
-      </sv:property>
-      <sv:property sv:name="hsl:description" sv:type="String">
-        <sv:value/>
-      </sv:property>
-      <sv:property sv:name="hsl:hideFromSearch" sv:type="Boolean">
-        <sv:value>false</sv:value>
-      </sv:property>
-      <sv:property sv:name="hsl:hideFromSitemap" sv:type="Boolean">
-        <sv:value>false</sv:value>
-      </sv:property>
-      <sv:property sv:name="hsl:introduction" sv:type="String">
-        <sv:value>Payment Confirmation</sv:value>
-      </sv:property>
-      <sv:property sv:name="hsl:keywords" sv:type="String">
-        <sv:value/>
-      </sv:property>
-      <sv:property sv:name="hsl:releaseDate" sv:type="Date">
-        <sv:value>2014-08-25T14:51:00.000+02:00</sv:value>
-      </sv:property>
-      <sv:property sv:name="hsl:share" sv:type="Boolean">
-        <sv:value>false</sv:value>
-      </sv:property>
-      <sv:property sv:name="hsl:title" sv:type="String">
-        <sv:value>Payment Confirmation</sv:value>
-      </sv:property>
-    </sv:node>
     <sv:node sv:name="hippo:translation">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hippo:translation</sv:value>
@@ -744,14 +674,104 @@
     </sv:node>
     <sv:node sv:name="payment-confirmation">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hsl:WebPage</sv:value>
+        <sv:value>hsl:ConfirmationPage</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:value>mix:referenceable</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>acab1be0-9877-486d-ad16-b098f9958542</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true"/>
+      <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+        <sv:value>service/payment-confirmation/payment-confirmation[3]</sv:value>
+        <sv:value>service/payment-confirmation/payment-confirmation[2]</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:state" sv:type="String">
+        <sv:value>draft</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+        <sv:value>live</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+        <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+        <sv:value>2014-08-28T17:20:41.476+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+        <sv:value>2014-08-28T17:20:42.472+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+        <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippotranslation:id" sv:type="String">
+        <sv:value>eebccb74-ea5f-4e11-a8d8-c99bc7b64b69</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippotranslation:locale" sv:type="String">
+        <sv:value>nl</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:browserTitle" sv:type="String">
+        <sv:value>Payment Confirmation</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:cancelIntroduction" sv:type="String">
+        <sv:value>Payment Confirmation Cancel Samenvatting</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:cancelTitle" sv:type="String">
+        <sv:value>Payment Canceled</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:description" sv:type="String">
+        <sv:value>Payment Confirmation Inleiding</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:failIntroduction" sv:type="String">
+        <sv:value>Payment Confirmation Fail Samenvatting</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:failTitle" sv:type="String">
+        <sv:value>Payment Failed</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:hideFromSearch" sv:type="Boolean">
+        <sv:value>true</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:hideFromSitemap" sv:type="Boolean">
+        <sv:value>true</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:introduction" sv:type="String">
+        <sv:value>Payment Confirmation Success Samenvatting</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:keywords" sv:type="String">
+        <sv:value>Payment Confirmation Trefwoorden</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:releaseDate" sv:type="Date">
+        <sv:value>2014-08-28T17:22:00.000+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:share" sv:type="Boolean">
+        <sv:value>false</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:title" sv:type="String">
+        <sv:value>Payment Confirmation</sv:value>
+      </sv:property>
+      <sv:node sv:name="hsl:headerImage">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hippogallerypicker:imagelink</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:docbase" sv:type="String">
+          <sv:value>2847485e-292a-42ed-9f1d-6f0893ee141b</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+      </sv:node>
+    </sv:node>
+    <sv:node sv:name="payment-confirmation">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hsl:ConfirmationPage</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
         <sv:value>mix:referenceable</sv:value>
         <sv:value>mix:versionable</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>ba8bc920-fcc4-442f-b2b8-e2801a00e0f6</sv:value>
+        <sv:value>f3f213ef-9592-4bf0-9070-764440c236ce</sv:value>
       </sv:property>
       <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
         <sv:value>preview</sv:value>
@@ -766,46 +786,55 @@
         <sv:value>live</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
-        <sv:value>admin.ebrahim</sv:value>
+        <sv:value>admin</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
-        <sv:value>2014-08-25T14:51:48.167+02:00</sv:value>
+        <sv:value>2014-08-28T17:20:41.476+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-        <sv:value>2014-08-25T14:51:55.276+02:00</sv:value>
+        <sv:value>2014-08-28T17:22:34.525+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
-        <sv:value>admin.ebrahim</sv:value>
+        <sv:value>admin</sv:value>
       </sv:property>
       <sv:property sv:name="hippotranslation:id" sv:type="String">
-        <sv:value>4a21ef8b-0fe1-443b-9b2d-3100686603f9</sv:value>
+        <sv:value>eebccb74-ea5f-4e11-a8d8-c99bc7b64b69</sv:value>
       </sv:property>
       <sv:property sv:name="hippotranslation:locale" sv:type="String">
         <sv:value>nl</sv:value>
       </sv:property>
-      <sv:property sv:name="hsl:author" sv:type="String">
-        <sv:value>author-one</sv:value>
-      </sv:property>
       <sv:property sv:name="hsl:browserTitle" sv:type="String">
         <sv:value>Payment Confirmation</sv:value>
       </sv:property>
+      <sv:property sv:name="hsl:cancelIntroduction" sv:type="String">
+        <sv:value>Payment Confirmation Cancel Samenvatting</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:cancelTitle" sv:type="String">
+        <sv:value>Payment Canceled</sv:value>
+      </sv:property>
       <sv:property sv:name="hsl:description" sv:type="String">
-        <sv:value/>
+        <sv:value>Payment Confirmation Inleiding</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:failIntroduction" sv:type="String">
+        <sv:value>Payment Confirmation Fail Samenvatting</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:failTitle" sv:type="String">
+        <sv:value>Payment Failed</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:hideFromSearch" sv:type="Boolean">
-        <sv:value>false</sv:value>
+        <sv:value>true</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:hideFromSitemap" sv:type="Boolean">
-        <sv:value>false</sv:value>
+        <sv:value>true</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:introduction" sv:type="String">
-        <sv:value>Payment Confirmation</sv:value>
+        <sv:value>Payment Confirmation Success Samenvatting</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:keywords" sv:type="String">
-        <sv:value/>
+        <sv:value>Payment Confirmation Trefwoorden</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:releaseDate" sv:type="Date">
-        <sv:value>2014-08-25T14:51:00.000+02:00</sv:value>
+        <sv:value>2014-08-28T17:22:00.000+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:share" sv:type="Boolean">
         <sv:value>false</sv:value>
@@ -813,16 +842,27 @@
       <sv:property sv:name="hsl:title" sv:type="String">
         <sv:value>Payment Confirmation</sv:value>
       </sv:property>
+      <sv:node sv:name="hsl:headerImage">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hippogallerypicker:imagelink</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:docbase" sv:type="String">
+          <sv:value>2847485e-292a-42ed-9f1d-6f0893ee141b</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+      </sv:node>
     </sv:node>
     <sv:node sv:name="payment-confirmation">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hsl:WebPage</sv:value>
+        <sv:value>hsl:ConfirmationPage</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
         <sv:value>mix:referenceable</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>349d00dd-78c8-43dc-847c-9442b077f9b3</sv:value>
+        <sv:value>203579e5-f676-4875-8a5d-435ffdf2f77c</sv:value>
       </sv:property>
       <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
         <sv:value>live</sv:value>
@@ -837,49 +877,58 @@
         <sv:value>live</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
-        <sv:value>admin.ebrahim</sv:value>
+        <sv:value>admin</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
-        <sv:value>2014-08-25T14:51:48.167+02:00</sv:value>
+        <sv:value>2014-08-28T17:20:41.476+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-        <sv:value>2014-08-25T14:51:55.276+02:00</sv:value>
+        <sv:value>2014-08-28T17:22:34.525+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
-        <sv:value>admin.ebrahim</sv:value>
+        <sv:value>admin</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-        <sv:value>2014-08-25T14:52:00.398+02:00</sv:value>
+        <sv:value>2014-08-28T17:23:18.636+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippotranslation:id" sv:type="String">
-        <sv:value>4a21ef8b-0fe1-443b-9b2d-3100686603f9</sv:value>
+        <sv:value>eebccb74-ea5f-4e11-a8d8-c99bc7b64b69</sv:value>
       </sv:property>
       <sv:property sv:name="hippotranslation:locale" sv:type="String">
         <sv:value>nl</sv:value>
       </sv:property>
-      <sv:property sv:name="hsl:author" sv:type="String">
-        <sv:value>author-one</sv:value>
-      </sv:property>
       <sv:property sv:name="hsl:browserTitle" sv:type="String">
         <sv:value>Payment Confirmation</sv:value>
       </sv:property>
+      <sv:property sv:name="hsl:cancelIntroduction" sv:type="String">
+        <sv:value>Payment Confirmation Cancel Samenvatting</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:cancelTitle" sv:type="String">
+        <sv:value>Payment Canceled</sv:value>
+      </sv:property>
       <sv:property sv:name="hsl:description" sv:type="String">
-        <sv:value/>
+        <sv:value>Payment Confirmation Inleiding</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:failIntroduction" sv:type="String">
+        <sv:value>Payment Confirmation Fail Samenvatting</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:failTitle" sv:type="String">
+        <sv:value>Payment Failed</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:hideFromSearch" sv:type="Boolean">
-        <sv:value>false</sv:value>
+        <sv:value>true</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:hideFromSitemap" sv:type="Boolean">
-        <sv:value>false</sv:value>
+        <sv:value>true</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:introduction" sv:type="String">
-        <sv:value>Payment Confirmation</sv:value>
+        <sv:value>Payment Confirmation Success Samenvatting</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:keywords" sv:type="String">
-        <sv:value/>
+        <sv:value>Payment Confirmation Trefwoorden</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:releaseDate" sv:type="Date">
-        <sv:value>2014-08-25T14:51:00.000+02:00</sv:value>
+        <sv:value>2014-08-28T17:22:00.000+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:share" sv:type="Boolean">
         <sv:value>false</sv:value>
@@ -887,6 +936,17 @@
       <sv:property sv:name="hsl:title" sv:type="String">
         <sv:value>Payment Confirmation</sv:value>
       </sv:property>
+      <sv:node sv:name="hsl:headerImage">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hippogallerypicker:imagelink</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:docbase" sv:type="String">
+          <sv:value>2847485e-292a-42ed-9f1d-6f0893ee141b</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+      </sv:node>
     </sv:node>
   </sv:node>
 </sv:node>
