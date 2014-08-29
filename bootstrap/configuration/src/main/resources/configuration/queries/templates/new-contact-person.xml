@@ -1,8 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="new-blogauthor-document">
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="new-contact-person">
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>hippostd:templatequery</sv:value>
   </sv:property>
   <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+    <sv:value>hippostd:translated</sv:value>
     <sv:value>hippo:translated</sv:value>
   </sv:property>
   <sv:property sv:name="hippostd:icon" sv:type="String">
@@ -25,12 +27,14 @@
     <sv:value>$now</sv:value>
     <sv:value>./hippostd:holder</sv:value>
     <sv:value>$holder</sv:value>
+    <sv:value>./hsl:releaseDate</sv:value>
+    <sv:value>$now</sv:value>
   </sv:property>
   <sv:property sv:name="jcr:language" sv:type="String">
     <sv:value>xpath</sv:value>
   </sv:property>
   <sv:property sv:name="jcr:statement" sv:type="String">
-    <sv:value>//element(*,hipposysedit:namespacefolder)/element(*,mix:referenceable)/element(*,hipposysedit:templatetype)/hipposysedit:prototypes/element(hipposysedit:prototype,hsl:author)</sv:value>
+    <sv:value>//hippo:namespaces/hsl/ContactPerson/hipposysedit:prototypes/hipposysedit:prototype</sv:value>
   </sv:property>
   <sv:node sv:name="hippo:translation">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -43,7 +47,7 @@
       <sv:value>en</sv:value>
     </sv:property>
     <sv:property sv:name="hippo:message" sv:type="String">
-      <sv:value>new blog author</sv:value>
+      <sv:value>new contact person</sv:value>
     </sv:property>
   </sv:node>
   <sv:node sv:name="hippo:translation">
@@ -57,7 +61,7 @@
       <sv:value>nl</sv:value>
     </sv:property>
     <sv:property sv:name="hippo:message" sv:type="String">
-      <sv:value>nieuw blog author</sv:value>
+      <sv:value>nieuwe contact person</sv:value>
     </sv:property>
   </sv:node>
 </sv:node>

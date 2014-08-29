@@ -15,15 +15,15 @@
 [hsl:ArticlePage] > hsl:WebPage, hippostd:relaxed, hippotranslation:translated
   orderable
 
-[hsl:ConfirmationPage] > hsl:WebPage, hippostd:relaxed, hippotranslation:translated
-  orderable
-
 [hsl:CalendarEventsCompoundMixin] > hippo:compound, hippostd:relaxed
   orderable
 
 [hsl:CalendarEventsMixin]
   mixin
   + hsl:calendarEventsCompoundMixin (hsl:CalendarEventsCompoundMixin)
+
+[hsl:ConfirmationPage] > hsl:WebPage, hippostd:relaxed, hippotranslation:translated
+  orderable
 
 [hsl:ContactPerson] > hsl:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
@@ -67,6 +67,9 @@
   orderable
 
 [hsl:ImageSet] > hippogallery:imageset, hippogallery:relaxed
+  orderable
+
+[hsl:Lectorat] > hsl:WebPage, hippostd:relaxed, hippotranslation:translated
   orderable
 
 [hsl:NewsPage] > hsl:ArticlePage, hippostd:relaxed, hippotranslation:translated

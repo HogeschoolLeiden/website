@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="new-blogauthor-folder">
+<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="new-lectorat-folder">
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>hippostd:templatequery</sv:value>
   </sv:property>
@@ -24,7 +24,7 @@
     <sv:value>xpath</sv:value>
   </sv:property>
   <sv:property sv:name="jcr:statement" sv:type="String">
-    <sv:value>/jcr:root/hippo:configuration/hippo:queries/hippo:templates/new-blogauthor-folder/hippostd:templates/node()</sv:value>
+    <sv:value>/jcr:root/hippo:configuration/hippo:queries/hippo:templates/new-lectorat-folder/hippostd:templates/node()</sv:value>
   </sv:property>
   <sv:node sv:name="hippostd:templates">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -39,12 +39,15 @@
         <sv:value>hippotranslation:translated</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>4330139d-0aec-4274-8c3e-b41a20a9ebc6</sv:value>
+        <sv:value>36bc56e7-35bf-4f7e-9716-31abaf464e99</sv:value>
       </sv:property>
       <sv:property sv:name="hippo:related___pathreference" sv:type="String"/>
       <sv:property sv:name="hippostd:foldertype" sv:type="String" sv:multiple="true">
-        <sv:value>new-blogauthor-document</sv:value>
-        <sv:value>new-blogauthor-folder</sv:value>
+        <sv:value>new-article-page</sv:value>
+        <sv:value>new-event-page</sv:value>
+        <sv:value>new-news-page</sv:value>
+        <sv:value>new-lectorat-folder</sv:value>
+        <sv:value>new-contact-person</sv:value>
       </sv:property>
       <sv:property sv:name="hippotranslation:id" sv:type="String">
         <sv:value>generated id</sv:value>
@@ -70,7 +73,7 @@
       <sv:value>en</sv:value>
     </sv:property>
     <sv:property sv:name="hippo:message" sv:type="String">
-      <sv:value>new blogauthor folder</sv:value>
+      <sv:value>new lectorat folder</sv:value>
     </sv:property>
   </sv:node>
   <sv:node sv:name="hippo:translation">
@@ -84,7 +87,7 @@
       <sv:value>nl</sv:value>
     </sv:property>
     <sv:property sv:name="hippo:message" sv:type="String">
-      <sv:value>nieuwe blog author map</sv:value>
+      <sv:value>nieuwe lectoraat map</sv:value>
     </sv:property>
-  </sv:node> 
+  </sv:node>
 </sv:node>
