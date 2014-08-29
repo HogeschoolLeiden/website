@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="education-navigation">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>hst:component</sv:value>
+  </sv:property>
+  <sv:property sv:name="hst:componentclassname" sv:type="String">
+    <sv:value>nl.hsleiden.components.NavigationComponent</sv:value>
+  </sv:property>
+  <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+    <sv:value>overviewSitemapRefId</sv:value>
+  </sv:property>
+  <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+    <sv:value>${overviewSitemapRefId}</sv:value>
+  </sv:property>
+  <sv:property sv:name="hst:template" sv:type="String">
+    <sv:value>components.education-leftnavigation</sv:value>
+  </sv:property>
+</sv:node>

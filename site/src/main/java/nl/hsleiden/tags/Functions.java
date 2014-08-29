@@ -15,6 +15,7 @@ import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.content.beans.standard.HippoResource;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.request.HstRequestContext;
+import org.hippoecm.hst.core.sitemenu.EditableMenu;
 import org.hippoecm.hst.core.sitemenu.EditableMenuItem;
 
 import com.tdclighthouse.prototype.provider.RepoBasedMenuProvider;
@@ -91,4 +92,30 @@ public class Functions {
         HstRequestContext requestContext = ((HstRequest) request).getRequestContext();
         return requestContext.getResolvedSiteMapItem().getHstComponentConfiguration().getParameter(paramName);
     }
+    
+    public static EditableMenuItem getTopMenuItem(EditableMenu menu, Integer levels) {
+        EditableMenuItem result = null;
+        
+        for (EditableMenuItem menuItem : menu.getMenuItems()) {
+            if(menuItem.isExpanded()){
+                while(levels!=0){
+                    levels--;
+                    menuItem = recurseMenuItems(menuItem);
+                }
+                result = menuItem;
+            }
+        }        
+        return result;
+    }
+    
+    private static EditableMenuItem recurseMenuItems(EditableMenuItem menuItem) {
+        EditableMenuItem result = null;
+        for (EditableMenuItem child : menuItem.getChildMenuItems()) {
+            if(child.isExpanded()){
+                result = child;
+            }
+        }
+        return result;
+    }
+    
 }

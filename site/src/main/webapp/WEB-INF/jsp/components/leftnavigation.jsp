@@ -11,55 +11,21 @@
 <hst:setBundle basename="nl.hsleiden.widget.Messages" />
 
 <div class="left">
+   
+  <tag:renderBackLink sitemapRefId="${paramInfo.overviewSitemapRefId}"/>
   
-  <c:if test="${not empty paramInfo.overviewSitemapRefId}">
-    <div class="backToOverview">
-      <c:set var="refId" value="${paramInfo.overviewSitemapRefId}"/>
-      <hst:link siteMapItemRefId="${refId}" var="overviewLink"/>
-      <a href="${overviewLink}" title="<fmt:message key="back.overview.${refId}" />">
-        <fmt:message key="back.overview.${refId}"/>
-      </a>
-    </div>
-  </c:if>
-  
-  <%--
-  <c:set var="parentItem" value="${not empty menu.deepestExpandedItem.parentItem ? menu.deepestExpandedItem.parentItem : menu.deepestExpandedItem}"/>
-  --%>
-
-   <c:forEach items="${menu.menuItems }" var="menuItem">
-    <c:if test="${menuItem.expanded}">
-      <c:forEach items="${menuItem.childMenuItems }" var="secondMenuItem">
-        <c:if test="${secondMenuItem.expanded}">
-           <c:set var="parentItem" value="${secondMenuItem}"/>
-        </c:if>
-      </c:forEach>
-    </c:if>
-  </c:forEach> 
-
-  <c:choose>
-    <c:when test="${tag:getSitemenuConfigParameter(parentItem, 'invisible') eq true}">
-      <h3>&nbsp;</h3>
-    </c:when>
-    <c:otherwise>
-      <c:choose>
-        <c:when test="${tag:getSitemenuConfigParameter(parentItem, 'disabled') eq true}">
-          <h3><c:out value=" ${parentItem.name}"/></h3>
-        </c:when>
-        <c:otherwise>
-          <hst:link var="link" link="${parentItem.hstLink}"/>
-          <h3><a href="${link}"><c:out value=" ${parentItem.name}"/></a></h3>
-        </c:otherwise>
-      </c:choose> 
-    </c:otherwise>
-  </c:choose>
+  <c:set var="parentItem" value="${tag:getTopMenuItem(menu, 1)}"/>
   
   <ul class="nav nav-pills nav-stacked">
+    
+    <tag:renderTopMenuItem menuItem="${parentItem}"/>
+    
     <c:forEach items="${hst:isReadable(parentItem, 'childMenuItems') ? parentItem.childMenuItems : parentItem.menuItems}" var="item">
-      <opw:menuitem siteMenuItem="${item}" depth="1"
-        expandedClass="current arrow-down"
-        selectedClass="active arrow-down"
-        unexpandedClass="unexpanded arrow-side" leafClass="arrow-side" 
-        recurseOnlyExpanded="false"/>
+         <opw:menuitem siteMenuItem="${item}" depth="1"
+          expandedClass="current arrow-down"
+          selectedClass="active arrow-down"
+          unexpandedClass="unexpanded arrow-side" leafClass="arrow-side" 
+          recurseOnlyExpanded="true"/>
     </c:forEach>
   </ul>
 </div>
