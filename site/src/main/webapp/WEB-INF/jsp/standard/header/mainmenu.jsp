@@ -12,19 +12,22 @@
 
   <ul class="nav mainMenuLink main-menu">
 	<c:forEach items="${menu.menuItems}" var="siteMenuItem" varStatus="loop">
-		<c:choose>
-			<c:when test="${not empty tag:getMenuItem(pageContext.request, siteMenuItem).hstLink }">
-				<hst:link var="link" link="${tag:getMenuItem(pageContext.request, siteMenuItem).hstLink}" />
+		
+        <c:set var="myMenuItem" value="${tag:getMenuItem(pageContext.request, siteMenuItem) }"/>
+          
+        <c:choose>
+			<c:when test="${not empty myMenuItem.hstLink }">
+				<hst:link var="link" link="${myMenuItem.hstLink}" />
 			</c:when>
 			<c:otherwise>
-				<c:set var="link" value="${tag:getMenuItem(pageContext.request, siteMenuItem).externalLink}" />
+				<c:set var="link" value="${myMenuItem.externalLink}" />
 			</c:otherwise>
 		</c:choose>
 		<c:choose>
-			<c:when test="${tag:getMenuItem(pageContext.request, siteMenuItem).expanded and loop.last}">
+			<c:when test="${myMenuItem.expanded and loop.last}">
 				<c:set var="cssClass" value="active last"/>
 			</c:when>
-			<c:when test="${tag:getMenuItem(pageContext.request, siteMenuItem).expanded}">
+			<c:when test="${myMenuItem.expanded}">
 				<c:set var="cssClass" value="active"/>
 			</c:when>
 			<c:when test="${loop.last}">
@@ -37,20 +40,20 @@
 		
 		<li ${not empty cssClass ? ' class=\"': ''}${cssClass}${not empty cssClass ? '\"': ''}>
 			<a href="${link}"> 
-			  <c:out value="${tag:getMenuItem(pageContext.request, siteMenuItem).name}" />
+			  <c:out value="${myMenuItem.name}" />
 			</a>
             <div class="showOnHover">
               <div class="column one">
-                <tag:submenu menuItem="${tag:getMenuItem(pageContext.request, siteMenuItem)}" columNr="0"/>
+                <tag:submenu menuItem="${myMenuItem}" columNr="0"/>
               </div>
               <div class="column two">
-                <tag:submenu menuItem="${tag:getMenuItem(pageContext.request, siteMenuItem)}" columNr="1"/>
+                <tag:submenu menuItem="${myMenuItem}" columNr="1"/>
               </div>
               <div class="column three">
-                <tag:submenu menuItem="${tag:getMenuItem(pageContext.request, siteMenuItem)}" columNr="2"/>
+                <tag:submenu menuItem="${myMenuItem}" columNr="2"/>
               </div>
               <div class="column four">
-                <tag:submenu menuItem="${tag:getMenuItem(pageContext.request, siteMenuItem)}" columNr="3"/>
+                <tag:submenu menuItem="${myMenuItem}" columNr="3"/>
               </div>  
             </div>
 		</li> 
