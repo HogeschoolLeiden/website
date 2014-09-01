@@ -9,6 +9,12 @@
     <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
       <sv:value>hst:pages/lectoratpage</sv:value>
     </sv:property>
+    <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+      <sv:value>menuName</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+      <sv:value>lectoraten</sv:value>
+    </sv:property>
     <sv:property sv:name="hst:relativecontentpath" sv:type="String">
       <sv:value>pages/homepage</sv:value>
     </sv:property>
@@ -34,9 +40,11 @@
     </sv:property>
     <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
       <sv:value>level</sv:value>
+      <sv:value>menuName</sv:value>
     </sv:property>
     <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
       <sv:value>0</sv:value>
+      <sv:value>lectoraten</sv:value>
     </sv:property>
     <sv:property sv:name="hst:relativecontentpath" sv:type="String">
       <sv:value>pages/${1}</sv:value>

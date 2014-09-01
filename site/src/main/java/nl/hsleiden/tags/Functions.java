@@ -123,4 +123,25 @@ public class Functions {
         return result;
     }
     
+    public static EditableMenuItem getMenuItem(HttpServletRequest req, EditableMenuItem originalMenuItem){
+        EditableMenuItem result = originalMenuItem;
+        
+        String sitemenuConfigParameter = getSitemenuConfigParameter(originalMenuItem, "useMainMenuConfig");
+        
+        if(sitemenuConfigParameter!=null && sitemenuConfigParameter.equalsIgnoreCase("true")){
+            HstRequest request = (HstRequest) req;
+            String originalMenuItemName = originalMenuItem.getName();
+            
+            EditableMenu mainMenu = request.getRequestContext().getHstSiteMenus().getSiteMenu("main").getEditableMenu();
+            for (EditableMenuItem menuItem : mainMenu.getMenuItems()) {
+                if(originalMenuItemName.equals(menuItem.getName())){
+                    result = menuItem;
+                    break;
+                }
+            }
+        }
+
+        return result;
+    }
+    
 }

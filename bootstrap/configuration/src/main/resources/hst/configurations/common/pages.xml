@@ -26,8 +26,12 @@
         <sv:property sv:name="hst:componentclassname" sv:type="String">
           <sv:value>com.tdclighthouse.prototype.components.Navigation</sv:value>
         </sv:property>
-        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+          <sv:value>menuName</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+          <sv:value>${menuName}</sv:value>
+        </sv:property>
         <sv:property sv:name="hst:template" sv:type="String">
           <sv:value>standard.header.mainmenu</sv:value>
         </sv:property>
@@ -117,7 +121,7 @@
           <sv:value>hst:component</sv:value>
         </sv:property>
         <sv:property sv:name="hst:componentclassname" sv:type="String">
-          <sv:value>nl.hsleiden.components.SubsiteNavigation</sv:value>
+          <sv:value>com.tdclighthouse.prototype.components.SimpleNavigation</sv:value>
         </sv:property>
         <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
           <sv:value>menuName</sv:value>
@@ -134,7 +138,7 @@
           <sv:value>hst:component</sv:value>
         </sv:property>
         <sv:property sv:name="hst:componentclassname" sv:type="String">
-          <sv:value>nl.hsleiden.components.SubsiteNavigation</sv:value>
+          <sv:value>com.tdclighthouse.prototype.components.SimpleNavigation</sv:value>
         </sv:property>
         <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
           <sv:value>menuName</sv:value>
