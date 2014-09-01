@@ -13,6 +13,12 @@
     <sv:property sv:name="hst:relativecontentpath" sv:type="String">
       <sv:value>pages/homepage</sv:value>
     </sv:property>
+    <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
+      <sv:value>menuName</sv:value>
+    </sv:property>
+    <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
+      <sv:value>lectoraten</sv:value>
+    </sv:property>
   </sv:node>
   <sv:node sv:name="_any_">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -37,9 +43,11 @@
     </sv:property>
     <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
       <sv:value>level</sv:value>
+      <sv:value>menuName</sv:value>
     </sv:property>
     <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
       <sv:value>0</sv:value>
+      <sv:value>lectoraten</sv:value>
     </sv:property>
     <sv:property sv:name="hst:relativecontentpath" sv:type="String">
       <sv:value>pages/${1}</sv:value>
