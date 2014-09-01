@@ -97,7 +97,7 @@ public class Functions {
         EditableMenuItem result = null;
         
         for (EditableMenuItem menuItem : menu.getMenuItems()) {
-            if(menuItem.isExpanded()){
+            if(menuItem!=null && menuItem.isExpanded()){
                 while(levels!=0){
                     levels--;
                     menuItem = recurseMenuItems(menuItem);
@@ -110,10 +110,15 @@ public class Functions {
     
     private static EditableMenuItem recurseMenuItems(EditableMenuItem menuItem) {
         EditableMenuItem result = null;
-        for (EditableMenuItem child : menuItem.getChildMenuItems()) {
-            if(child.isExpanded()){
-                result = child;
+        if(menuItem!=null){            
+            for (EditableMenuItem child : menuItem.getChildMenuItems()) {
+                if(child.isExpanded()){
+                    result = child;
+                }
             }
+        }
+        if(result==null){
+            result = menuItem;
         }
         return result;
     }

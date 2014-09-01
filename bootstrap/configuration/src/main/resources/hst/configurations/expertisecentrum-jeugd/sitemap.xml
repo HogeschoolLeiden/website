@@ -12,5 +12,43 @@
     <sv:property sv:name="hst:relativecontentpath" sv:type="String">
       <sv:value>pages/homepage</sv:value>
     </sv:property>
+    <sv:node sv:name="_any_">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:sitemapitem</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+        <sv:value>hst:pages/pagenotfound</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentconfigurationmappingnames" sv:type="String" sv:multiple="true">
+        <sv:value>hsl:ArticlePage</sv:value>
+        <sv:value>hsl:NewsPage</sv:value>
+        <sv:value>hsl:EventPage</sv:value>
+        <sv:value>hsl:Lectorat</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentconfigurationmappingvalues" sv:type="String" sv:multiple="true">
+        <sv:value>hst:pages/articlepage</sv:value>
+        <sv:value>hst:pages/newspage</sv:value>
+        <sv:value>hst:pages/eventpage</sv:value>
+        <sv:value>hst:pages/lectoratpage</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
+      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
+      <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+        <sv:value>pages/${1}</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="pagenotfound">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:sitemapitem</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+        <sv:value>hst:pages/pagenotfound</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
+      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
+      <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+        <sv:value>pages/service/not-found</sv:value>
+      </sv:property>
+    </sv:node>
   </sv:node>
 </sv:node>

@@ -21,11 +21,11 @@
     <tag:renderTopMenuItem menuItem="${parentItem}"/>
     
     <c:forEach items="${hst:isReadable(parentItem, 'childMenuItems') ? parentItem.childMenuItems : parentItem.menuItems}" var="item">
-         <opw:menuitem siteMenuItem="${item}" depth="1"
-          expandedClass="current arrow-down"
-          selectedClass="active arrow-down"
-          unexpandedClass="unexpanded arrow-side" leafClass="arrow-side" 
-          recurseOnlyExpanded="true"/>
+      <opw:menuitem siteMenuItem="${item}" depth="1"
+        expandedClass="current arrow-down"
+        selectedClass="active arrow-down"
+        unexpandedClass="unexpanded arrow-side" leafClass="arrow-side" 
+        recurseOnlyExpanded="true"/>
     </c:forEach>
   </ul>
 </div>
