@@ -14,7 +14,7 @@
    
   <tag:renderBackLink sitemapRefId="${paramInfo.overviewSitemapRefId}"/>
   
-  <c:set var="parentItem" value="${tag:getTopMenuItem(menu, 1)}"/>
+  <c:set var="parentItem" value="${tag:getTopMenuItem(menu, paramInfo.level)}"/>
   
   <ul class="nav nav-pills nav-stacked">
     

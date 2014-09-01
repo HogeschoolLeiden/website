@@ -93,13 +93,13 @@ public class Functions {
         return requestContext.getResolvedSiteMapItem().getHstComponentConfiguration().getParameter(paramName);
     }
     
-    public static EditableMenuItem getTopMenuItem(EditableMenu menu, Integer levels) {
+    public static EditableMenuItem getTopMenuItem(EditableMenu menu, Integer level) {
         EditableMenuItem result = null;
         
         for (EditableMenuItem menuItem : menu.getMenuItems()) {
             if(menuItem!=null && menuItem.isExpanded()){
-                while(levels!=0){
-                    levels--;
+                while(level!=0){
+                    level--;
                     menuItem = recurseMenuItems(menuItem);
                 }
                 result = menuItem;
