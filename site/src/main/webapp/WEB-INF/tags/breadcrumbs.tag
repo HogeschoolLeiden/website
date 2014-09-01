@@ -15,7 +15,7 @@
 </c:if>
 
 <ul>
-  <hst:link path="/" var="home"/>
+  <hst:link path="/" var="home" mount="hsl"/>
   <li>
     <a itemprop="url" href="${home }" >
       <span itemprop="title"><c:out value="Home / "/></span>

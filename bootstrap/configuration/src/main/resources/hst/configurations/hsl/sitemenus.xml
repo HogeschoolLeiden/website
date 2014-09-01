@@ -574,36 +574,68 @@
       <sv:property sv:name="hst:repobased" sv:type="Boolean">
         <sv:value>true</sv:value>
       </sv:property>
-      <sv:node sv:name="T. B. D.">
+      <sv:node sv:name="Jeugd">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hst:sitemenuitem</sv:value>
         </sv:property>
+        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+          <sv:value>disabled</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+          <sv:value>true</sv:value>
+        </sv:property>
         <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-          <sv:value>over-hl/onderwijs/tbd</sv:value>
+          <sv:value>onderzoek/jeugd</sv:value>
+        </sv:property>
+        <sv:node sv:name="Expertisecentrum Jeugd">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:sitemenuitem</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+            <sv:value>expertisecentrum-jeugd</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="Zorg">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:sitemenuitem</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+          <sv:value>disabled</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+          <sv:value>onderzoek/zorg</sv:value>
         </sv:property>
       </sv:node>
-      <sv:node sv:name="T. B. D. 2">
+      <sv:node sv:name="Life Science">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hst:sitemenuitem</sv:value>
         </sv:property>
+        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+          <sv:value>disabled</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+          <sv:value>true</sv:value>
+        </sv:property>
         <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-          <sv:value>over-hl/onderwijs/tbd</sv:value>
+          <sv:value>onderzoek/life-science</sv:value>
         </sv:property>
       </sv:node>
-      <sv:node sv:name="T. B. D. 3">
+      <sv:node sv:name="Overige lectoraten en kennisnetwerken">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hst:sitemenuitem</sv:value>
         </sv:property>
-        <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-          <sv:value>over-hl/onderwijs/tbd</sv:value>
+        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+          <sv:value>disabled</sv:value>
         </sv:property>
-      </sv:node>
-      <sv:node sv:name="T. B. D. 4">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hst:sitemenuitem</sv:value>
+        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+          <sv:value>true</sv:value>
         </sv:property>
         <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-          <sv:value>over-hl/onderwijs/tbd</sv:value>
+          <sv:value>onderzoek/overige-lectoraten-en-kennisnetwerken</sv:value>
         </sv:property>
       </sv:node>
     </sv:node>
