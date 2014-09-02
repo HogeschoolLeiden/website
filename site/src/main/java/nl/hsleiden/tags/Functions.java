@@ -11,12 +11,15 @@ import javax.servlet.http.HttpServletRequest;
 import nl.hsleiden.channels.WebsiteInfo;
 
 import org.hippoecm.hst.configuration.hosting.Mount;
+import org.hippoecm.hst.configuration.site.HstSite;
+import org.hippoecm.hst.configuration.sitemenu.HstSiteMenuConfiguration;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.content.beans.standard.HippoResource;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.request.HstRequestContext;
 import org.hippoecm.hst.core.sitemenu.EditableMenu;
 import org.hippoecm.hst.core.sitemenu.EditableMenuItem;
+import org.hippoecm.hst.core.sitemenu.HstSiteMenuImpl;
 
 import com.tdclighthouse.prototype.provider.RepoBasedMenuProvider;
 
@@ -130,9 +133,10 @@ public class Functions {
         
         if(sitemenuConfigParameter!=null && sitemenuConfigParameter.equalsIgnoreCase("true")){
             HstRequest request = (HstRequest) req;
-            String originalMenuItemName = originalMenuItem.getName();
             
-            EditableMenu mainMenu = request.getRequestContext().getHstSiteMenus().getSiteMenu("main").getEditableMenu();
+            EditableMenu mainMenu = getSiteMainMenu(request);
+            
+            String originalMenuItemName = originalMenuItem.getName();
             for (EditableMenuItem menuItem : mainMenu.getMenuItems()) {
                 if(originalMenuItemName.equals(menuItem.getName())){
                     result = menuItem;
@@ -142,6 +146,17 @@ public class Functions {
         }
 
         return result;
+    }
+
+    private static EditableMenu getSiteMainMenu(HstRequest request) {
+        HstRequestContext requestContext = request.getRequestContext();
+        Mount mount = requestContext.getMount("hsl");
+        HstSite hstSite = mount.getHstSite();
+        HstSiteMenuConfiguration siteMenuConfiguration = hstSite
+                .getSiteMenusConfiguration().getSiteMenuConfiguration("main");
+        
+        EditableMenu mainMenu = new HstSiteMenuImpl(null, siteMenuConfiguration, requestContext).getEditableMenu();
+        return mainMenu;
     }
     
 }
