@@ -5,38 +5,41 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="hst" uri="http://www.hippoecm.org/jsp/hst/core"%>
 <%@ taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml"%>
+<%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
+<%@ taglib prefix="opw" uri="http://open-web.nl/hippo/prototype"%>
 
 <div class="main-menu">
   <ul class="nav">
   	<c:forEach items="${menu.siteMenuItems}" var="siteMenuItem" varStatus="step">
-  		<c:choose>
-  			<c:when test="${not empty siteMenuItem.hstLink }">
-  				<hst:link var="link" link="${siteMenuItem.hstLink}" />
-  			</c:when>
-  			<c:otherwise>
-  				<c:set var="link" value="${siteMenuItem.externalLink}" />
-  			</c:otherwise>
-  		</c:choose>
-  		<c:choose>
-  			<c:when test="${siteMenuItem.expanded and step.last}">
-  				<c:set var="cssClass" value="active last"/>
-  			</c:when>
-  			<c:when test="${siteMenuItem.expanded}">
-  				<c:set var="cssClass" value="active"/>
-  			</c:when>
-  			<c:when test="${step.last}">
-  				<c:set var="cssClass" value="last"/>
-  			</c:when>
-  			<c:otherwise>
-  				<c:set var="cssClass" value=""/>
-  			</c:otherwise>
-  		</c:choose>
+  	  <c:choose>
+  		<c:when test="${not empty siteMenuItem.hstLink }">
+          <c:set var="path" value="${siteMenuItem.hstLink.path}"/>
+  		  <c:set var="link"><hst:link path="${path}" mount="hsl"/></c:set>
+  		</c:when>
+  		<c:otherwise>
+  		  <c:set var="link" value="${siteMenuItem.externalLink}" />
+  		</c:otherwise>
+  	  </c:choose>
+  	  <c:choose>
+  		<c:when test="${siteMenuItem.expanded and step.last}">
+  		  <c:set var="cssClass" value="active last"/>
+  		</c:when>
+  		<c:when test="${siteMenuItem.expanded}">
+  		  <c:set var="cssClass" value="active"/>
+  		</c:when>
+  		<c:when test="${step.last}">
+  		  <c:set var="cssClass" value="last"/>
+  		</c:when>
+  		<c:otherwise>
+  		  <c:set var="cssClass" value=""/>
+  		</c:otherwise>
+  	  </c:choose>
   		
-  		<li ${not empty cssClass ? ' class=\"': ''}${cssClass}${not empty cssClass ? '\"': ''}>
-  			<a href="${link}"> 
-  				<c:out value="${siteMenuItem.name}" />
-  			</a>
-  		</li>
+  	  <li ${not empty cssClass ? ' class=\"': ''}${cssClass}${not empty cssClass ? '\"': ''}>
+        <a href="${link}"> 
+  		  <c:out value="${siteMenuItem.name}" />
+  		</a>
+  	  </li>
   	</c:forEach>
   </ul>
 </div>

@@ -64,7 +64,7 @@ public class LandingPage extends Navigation {
                     ob.setOverviewBean((OverviewPage) bean);
                     overviewBeans.add(ob);
                 } else {
-                    LOG.error("Document referenced by sub menu item is not an OverviewPage. Skipping it.");
+                    LOG.error("Document referenced by sub menu {} is not an OverviewPage. Skipping it.", sitemenuItem.getName());
                 }
             }
         }

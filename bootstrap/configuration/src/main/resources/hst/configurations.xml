@@ -61,13 +61,24 @@
         <sv:value>hst:sitemapitemhandlers</sv:value>
       </sv:property>
     </sv:node>
-    <sv:node sv:name="hst:catalog">
-      <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hst:catalog</sv:value>
-      </sv:property>
-    </sv:node>
   </sv:node>
   <sv:node sv:name="hsl">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:configuration</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:inheritsfrom" sv:type="String" sv:multiple="true">
+      <sv:value>../common</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="website-subsite-common">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:configuration</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:inheritsfrom" sv:type="String" sv:multiple="true">
+      <sv:value>../common</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="expertisecentrum-jeugd">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:configuration</sv:value>
     </sv:property>

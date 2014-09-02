@@ -460,7 +460,7 @@
         <module>cms</module>
         <module>maven</module>
         <module>site</module>
-        <module>essentials</module>
+        <!-- <module>essentials</module> -->
       </modules>
     </profile>
 
@@ -471,7 +471,7 @@
         <module>cms</module>
         <module>maven</module>
         <module>site</module>
-        <module>essentials</module>
+        <!-- <module>essentials</module> -->
         <module>release</module>
         <module>integration</module>
       </modules>
@@ -512,13 +512,13 @@
                     <context>/site</context>
                   </properties>
                 </deployable>
-                <deployable>
+                <!-- <deployable>
                   <location>${project.basedir}/essentials/target/essentials.war</location>
                   <type>war</type>
                   <properties>
                     <context>/essentials</context>
                   </properties>
-                </deployable>
+                </deployable> -->
               </deployables>
               <container>
                 <systemProperties>

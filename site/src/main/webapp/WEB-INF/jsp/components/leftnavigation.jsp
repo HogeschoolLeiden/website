@@ -11,32 +11,21 @@
 <hst:setBundle basename="nl.hsleiden.widget.Messages" />
 
 <div class="left">
-  
+   
   <tag:renderBackLink sitemapRefId="${paramInfo.overviewSitemapRefId}"/>
   
-  <c:set var="parentItem" value="${tag:getTopMenuItem(menu, 1)}"/>
+  <c:set var="parentItem" value="${tag:getTopMenuItem(menu, paramInfo.level)}"/>
   
   <ul class="nav nav-pills nav-stacked">
     
     <tag:renderTopMenuItem menuItem="${parentItem}"/>
     
     <c:forEach items="${hst:isReadable(parentItem, 'childMenuItems') ? parentItem.childMenuItems : parentItem.menuItems}" var="item">
-       <c:choose>
-          <c:when test="${tag:getSitemenuConfigParameter(item, 'doNotShowChildren') eq true}">
-            <opw:menuitem siteMenuItem="${item}" depth="0"
-              expandedClass="current arrow-down"
-              selectedClass="active arrow-down"
-              unexpandedClass="unexpanded arrow-side" leafClass="arrow-side" 
-              recurseOnlyExpanded="false"/>
-          </c:when>
-          <c:otherwise>
-             <opw:menuitem siteMenuItem="${item}" depth="1"
-              expandedClass="current arrow-down"
-              selectedClass="active arrow-down"
-              unexpandedClass="unexpanded arrow-side" leafClass="arrow-side" 
-              recurseOnlyExpanded="false"/>
-          </c:otherwise>
-        </c:choose>
+      <opw:menuitem siteMenuItem="${item}" depth="1"
+        expandedClass="current arrow-down"
+        selectedClass="active arrow-down"
+        unexpandedClass="unexpanded arrow-side" leafClass="arrow-side" 
+        recurseOnlyExpanded="true"/>
     </c:forEach>
   </ul>
 </div>

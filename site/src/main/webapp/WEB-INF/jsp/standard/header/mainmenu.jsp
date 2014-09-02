@@ -11,19 +11,22 @@
 
   <ul class="nav navbar-nav" id="mainnav">
 	<c:forEach items="${menu.menuItems}" var="siteMenuItem" varStatus="loop">
-		<c:choose>
-			<c:when test="${not empty siteMenuItem.hstLink }">
-				<hst:link var="link" link="${siteMenuItem.hstLink}" />
+		
+        <c:set var="myMenuItem" value="${tag:getMenuItem(pageContext.request, siteMenuItem) }"/>
+          
+        <c:choose>
+			<c:when test="${not empty myMenuItem.hstLink }">
+				<hst:link var="link" link="${myMenuItem.hstLink}" />
 			</c:when>
 			<c:otherwise>
-				<c:set var="link" value="${siteMenuItem.externalLink}" />
+				<c:set var="link" value="${myMenuItem.externalLink}" />
 			</c:otherwise>
 		</c:choose>
 		<c:choose>
-			<c:when test="${siteMenuItem.expanded and loop.last}">
+			<c:when test="${myMenuItem.expanded and loop.last}">
 				<c:set var="cssClass" value="active last"/>
 			</c:when>
-			<c:when test="${siteMenuItem.expanded}">
+			<c:when test="${myMenuItem.expanded}">
 				<c:set var="cssClass" value="active"/>
 			</c:when>
 			<c:when test="${loop.last}">
@@ -36,18 +39,22 @@
 		
 		<li ${not empty cssClass ? ' class=\"': ''}${cssClass}${not empty cssClass ? '\"': ''}>
 			<a href="${link}"> 
-			  <c:out value="${siteMenuItem.name}" />
+			  <c:out value="${myMenuItem.name}" />
 			</a>
-            
-            <ul class="dropdownmenu visible-lg visible-md clearfix">
-            
-            
-            <tag:submenu menuItem="${siteMenuItem}" columNr="0"/>
-            <tag:submenu menuItem="${siteMenuItem}" columNr="1"/>
-            <tag:submenu menuItem="${siteMenuItem}" columNr="2"/>
-            <tag:submenu menuItem="${siteMenuItem}" columNr="3"/>
-            
-            </ul>
+            <div class="showOnHover">
+              <div class="column one">
+                <tag:submenu menuItem="${myMenuItem}" columNr="0"/>
+              </div>
+              <div class="column two">
+                <tag:submenu menuItem="${myMenuItem}" columNr="1"/>
+              </div>
+              <div class="column three">
+                <tag:submenu menuItem="${myMenuItem}" columNr="2"/>
+              </div>
+              <div class="column four">
+                <tag:submenu menuItem="${myMenuItem}" columNr="3"/>
+              </div>  
+            </div>
 		</li> 
                        
 	</c:forEach>  

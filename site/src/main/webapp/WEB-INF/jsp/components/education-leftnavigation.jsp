@@ -25,7 +25,7 @@
         expandedClass="current arrow-down"
         selectedClass="active arrow-down"
         unexpandedClass="unexpanded arrow-side" leafClass="arrow-side" 
-        recurseOnlyExpanded="false"/>
+        recurseOnlyExpanded="true"/>
     </c:forEach>
   </ul>
 </div>

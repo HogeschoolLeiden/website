@@ -261,21 +261,7 @@
         <sv:value>hst:sitemapitem</sv:value>
       </sv:property>
       <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
-        <sv:value>hst:pages/genericoverview</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
-        <sv:value>contentBeanPath</sv:value>
-        <sv:value>showTypes</sv:value>
-        <sv:value>defaultPageSize</sv:value>
-        <sv:value>sortBy</sv:value>
-        <sv:value>sortOrder</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
-        <sv:value>pages/actueel/artikelen</sv:value>
-        <sv:value>hslbeans.ArticlePage</sv:value>
-        <sv:value>4</sv:value>
-        <sv:value>hsl:releaseDate</sv:value>
-        <sv:value>descending</sv:value>
+        <sv:value>hst:pages/pagenotfound</sv:value>
       </sv:property>
       <sv:property sv:name="hst:relativecontentpath" sv:type="String">
         <sv:value>pages/actueel/artikelen/index</sv:value>
@@ -1013,48 +999,11 @@
         <sv:value>hst:sitemapitem</sv:value>
       </sv:property>
       <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
-        <sv:value>hst:pages/genericoverview</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
-        <sv:value>contentBeanPath</sv:value>
-        <sv:value>showTypes</sv:value>
-        <sv:value>defaultPageSize</sv:value>
-        <sv:value>sortBy</sv:value>
-        <sv:value>sortOrder</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
-        <sv:value>pages/onderwijs/bacheloropleidingen</sv:value>
-        <sv:value>hslbeans.ArticlePage,hslbeans.EducationPage,hslbeans.OverviewPage</sv:value>
-        <sv:value>4</sv:value>
-        <sv:value>hsl:releaseDate</sv:value>
-        <sv:value>descending</sv:value>
+        <sv:value>hst:pages/pagenotfound</sv:value>
       </sv:property>
       <sv:property sv:name="hst:relativecontentpath" sv:type="String">
         <sv:value>pages/onderwijs/bacheloropleidingen/index</sv:value>
       </sv:property>
-      <sv:node sv:name="_any_">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hst:sitemapitem</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
-          <sv:value>hst:pages/pagenotfound</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:componentconfigurationmappingnames" sv:type="String" sv:multiple="true">
-          <sv:value>hsl:ArticlePage</sv:value>
-          <sv:value>hsl:EducationPage</sv:value>
-          <sv:value>hsl:EventPage</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:componentconfigurationmappingvalues" sv:type="String" sv:multiple="true">
-          <sv:value>hst:pages/articlepage</sv:value>
-          <sv:value>hst:pages/educationpage</sv:value>
-          <sv:value>hst:pages/unfacetedeventpage</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hst:relativecontentpath" sv:type="String">
-          <sv:value>pages/onderwijs/bacheloropleidingen/${1}</sv:value>
-        </sv:property>
-      </sv:node>
       <sv:node sv:name="vindt-je-studie">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hst:sitemapitem</sv:value>
@@ -1135,30 +1084,39 @@
           </sv:property>
         </sv:node>
       </sv:node>
+      <sv:node sv:name="_any_">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:sitemapitem</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+          <sv:value>hst:pages/pagenotfound</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:componentconfigurationmappingnames" sv:type="String" sv:multiple="true">
+          <sv:value>hsl:ArticlePage</sv:value>
+          <sv:value>hsl:EducationPage</sv:value>
+          <sv:value>hsl:EventPage</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:componentconfigurationmappingvalues" sv:type="String" sv:multiple="true">
+          <sv:value>hst:pages/articlepage</sv:value>
+          <sv:value>hst:pages/educationpage</sv:value>
+          <sv:value>hst:pages/unfacetedeventpage</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+          <sv:value>pages/onderwijs/bacheloropleidingen/${1}</sv:value>
+        </sv:property>
+      </sv:node>
     </sv:node>
     <sv:node sv:name="opleidingen-voor-professionals">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:sitemapitem</sv:value>
       </sv:property>
       <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
-        <sv:value>hst:pages/genericoverview</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
-        <sv:value>contentBeanPath</sv:value>
-        <sv:value>showTypes</sv:value>
-        <sv:value>defaultPageSize</sv:value>
-        <sv:value>sortBy</sv:value>
-        <sv:value>sortOrder</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
-        <sv:value>pages/onderwijs/opleidingen-voor-professionals/nascholingen</sv:value>
-        <sv:value>hslbeans.ArticlePage,hslbeans.EducationPage,hslbeans.EventPage</sv:value>
-        <sv:value>4</sv:value>
-        <sv:value>hsl:releaseDate</sv:value>
-        <sv:value>descending</sv:value>
+        <sv:value>hst:pages/pagenotfound</sv:value>
       </sv:property>
       <sv:property sv:name="hst:relativecontentpath" sv:type="String">
-        <sv:value>pages/onderwijs/opleidingen-voor-professionals/nascholingen/index</sv:value>
+        <sv:value>pages/onderwijs/opleidingen-voor-professionals/index</sv:value>
       </sv:property>
       <sv:node sv:name="_any_">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -1180,7 +1138,7 @@
         <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
         <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
         <sv:property sv:name="hst:relativecontentpath" sv:type="String">
-          <sv:value>pages/onderwijs/opleidingen-voor-professionals/nascholingen/${1}</sv:value>
+          <sv:value>pages/onderwijs/opleidingen-voor-professionals/${1}</sv:value>
         </sv:property>
       </sv:node>
       <sv:node sv:name="masters">
