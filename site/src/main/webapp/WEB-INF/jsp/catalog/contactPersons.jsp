@@ -32,7 +32,7 @@
         <c:if test="${not empty item.image }">
           <div class="image-space contact">
             <hst:link var="image" hippobean="${item.image.listImageMedium }" />
-            <img itemprop="photo" alt="${item.name }" src="${image }" />
+            <img itemprop="photo" alt="${item.name }" src="${image }" title="${item.name }"/>
           </div>
         </c:if>   
 
