@@ -8,23 +8,15 @@
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 <%@ taglib prefix='opw' uri="http://open-web.nl/hippo/prototype"%>
 
-<%-- <div class="container-fluid">
-  <div class="row-fluid">
-    <div itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="header breadcrumb span8">
-      <tag:breadcrumbs menu="${menu }" />
-    </div>
-  </div>
-</div> --%>
-
 
 <div id="breadcrumbs" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-9 col-md-offset-3">
-          
-          <tag:breadcrumbs menu="${menu }" />
-                    
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 col-md-offset-3">
+
+        <tag:breadcrumbs menu="${menu }" />
+
       </div>
     </div>
   </div>
+</div>

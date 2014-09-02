@@ -41,20 +41,16 @@
 			<a href="${link}"> 
 			  <c:out value="${myMenuItem.name}" />
 			</a>
-            <div class="showOnHover">
-              <div class="column one">
-                <tag:submenu menuItem="${myMenuItem}" columNr="0"/>
-              </div>
-              <div class="column two">
-                <tag:submenu menuItem="${myMenuItem}" columNr="1"/>
-              </div>
-              <div class="column three">
-                <tag:submenu menuItem="${myMenuItem}" columNr="2"/>
-              </div>
-              <div class="column four">
-                <tag:submenu menuItem="${myMenuItem}" columNr="3"/>
-              </div>  
-            </div>
+            
+            <ul class="dropdownmenu visible-lg visible-md clearfix">
+            
+              <tag:submenu menuItem="${myMenuItem}" columNr="0"/>
+              <tag:submenu menuItem="${myMenuItem}" columNr="1"/>
+              <tag:submenu menuItem="${myMenuItem}" columNr="2"/>
+              <tag:submenu menuItem="${myMenuItem}" columNr="3"/>
+            
+            </ul>
+            
 		</li> 
                        
 	</c:forEach>  

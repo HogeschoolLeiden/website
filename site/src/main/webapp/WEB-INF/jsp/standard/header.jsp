@@ -27,7 +27,7 @@
         <span class="sr-only">Toggle filter</span>
       </button>
       
-      <hst:link var="homeLink" path="/" />
+      <hst:link var="homeLink" path="/" mount="hsl"/>
 
       <a class="navbar-brand" href="${homeLink}">
         <c:choose>
