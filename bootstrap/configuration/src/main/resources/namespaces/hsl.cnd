@@ -69,7 +69,13 @@
 [hsl:ImageSet] > hippogallery:imageset, hippogallery:relaxed
   orderable
 
+[hsl:InternalLink] > hippo:compound, hippostd:relaxed
+  orderable
+
 [hsl:Lectorat] > hsl:WebPage, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hsl:Link] > hippo:compound, hippostd:relaxed
   orderable
 
 [hsl:NewsPage] > hsl:ArticlePage, hippostd:relaxed, hippotranslation:translated
@@ -133,6 +139,9 @@
   orderable
 
 [hsl:ShareParameters] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hsl:TeaserDocument] > hsl:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
 [hsl:TwitterCompoundMixin] > hippo:compound, hippostd:relaxed
