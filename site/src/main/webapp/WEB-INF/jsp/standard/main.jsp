@@ -19,13 +19,19 @@
         
     <%-- <hst:include ref="top-container" />      --%>
     
-    <hst:include ref="contentTop" />
-    <hst:include ref="content" />
-    <hst:include ref="contentBottom" />
-  
-    <hst:include ref="leftTop" />
-    <hst:include ref="left" />
-    <hst:include ref="leftBottom" />
+    <div class="container">
+      <div class="row">
+      
+        <hst:include ref="contentTop" />
+        <hst:include ref="content" />
+        <hst:include ref="contentBottom" />
+      
+        <hst:include ref="leftTop" />
+        <hst:include ref="left" />
+        <hst:include ref="leftBottom" />
+    
+      </div>
+    </div>
   
    <%--  <hst:include ref="rightTop" />
     <hst:include ref="right" />

@@ -21,52 +21,67 @@
 
 <%--     <h4><c:out value="${facetnavtitle}" escapeXml="true"/></h4> --%>
 
-      <c:forEach var="facet" items="${facetnav.folders}">
-		<c:if test="${facet.resultSet.count > 0}">
+    <c:forEach var="facet" items="${facetnav.folders}">
+	  <c:if test="${facet.resultSet.count > 0}">
 		  
-          <section class="filtergroup col-md-3">
-		    <h2><c:out value="${facet.name}" escapeXml="true" /></h2>
-		    <c:if test="${not empty facet.folders}">
+        <section class="filtergroup col-md-3">
+		  <h2><c:out value="${facet.name}" escapeXml="true" /></h2>
+		  <c:if test="${not empty facet.folders}">
               
-              <div class="filterlist">
+            <div class="filterlist">
                 
-                <c:forEach items="${facet.folders}" var="item">
+              <c:forEach items="${facet.folders}" var="item">
 			        
-                  <c:set var="inputID">
-                    <c:out value="${facet.name}"/>
-                    <c:out value="-"/>
-                    <c:out value="${item.name}"/>
-                  </c:set>
+                <c:set var="inputID">
+                  <c:out value="${facet.name}"/>
+                  <c:out value="-"/>
+                  <c:out value="${item.name}"/>
+                </c:set>
                     
-                  <c:choose>
-                    <c:when test="${item.leaf and item.count gt 0}">
-                      <%-- what to do with this 
+                <c:choose>
+                  <c:when test="${item.leaf and item.count gt 0}">
+                  <%-- what to do with this 
                       <hst:facetnavigationlink remove="${item}" current="${facetnav}" var="removeLink" />
                       --%>
-                      <div class="checkbox">
-                        <input type="checkbox" id="${inputID}" value="${item.name}" name="${facet.name}" checked>
-                        <label for="${inputID}">
-                          <c:out value="${labels[item.name]}" default="${item.name}" escapeXml="true" />
-                        </label>
-                      </div>
-                    </c:when>
-                    <c:otherwise>
-                      <div class="checkbox">
-                        <input type="checkbox" id="${inputID}" value="${item.name}" name="${facet.name}">
-                        <label for="${inputID}">
-                          <c:out value="${labels[item.name]}" default="${item.name}" escapeXml="true" />
-                        </label>
-                      </div>
-                    </c:otherwise>
-                  </c:choose>
-                </c:forEach>
+                    <div class="checkbox">
+                      <input type="checkbox" id="${inputID}" value="${item.name}" name="${facet.name}" checked>
+                      <label for="${inputID}">
+                        <c:out value="${labels[item.name]}" default="${item.name}" escapeXml="true" />
+                      </label>
+                    </div>
+                  </c:when>
+                  <c:otherwise>
+                    <div class="checkbox">
+                      <input type="checkbox" id="${inputID}" value="${item.name}" name="${facet.name}">
+                      <label for="${inputID}">
+                        <c:out value="${labels[item.name]}" default="${item.name}" escapeXml="true" />
+                      </label>
+                    </div>
+                  </c:otherwise>
+                </c:choose>
+              </c:forEach>
                   
-              </div>
+            </div>
               
-            </c:if>
-          </section>
+          </c:if>  
+        </section>
                
 	  </c:if>
 	</c:forEach>
+  
+    <section class="filtergroup col-md-3">
+      <h2>Filter op trefwoord</h2>                                              <%-- use property --%>
+      <div class="filterlist">
+        <form role="form" class="form">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="">
+              </div>
+              <button class="btn fa fa-search no-radius" type="submit">
+                <span>Zoeken</span>                                             <%-- use property --%>
+              </button> 
+         </form>
+      </div>
+    </section>
+          
   </c:if>
 </div>

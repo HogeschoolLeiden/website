@@ -15,8 +15,6 @@
   </c:when>
   <c:otherwise>
 
-    <div class="container">
-      <div class="row">
         <article class="col-md-9 detail-content">
 
           <hst:cmseditlink hippobean="${document}" />
@@ -48,7 +46,5 @@
 
         </article>
 
-      </div>
-    </div>
   </c:otherwise>
 </c:choose>

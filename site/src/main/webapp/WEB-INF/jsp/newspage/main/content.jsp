@@ -13,8 +13,8 @@
     <tag:pagenotfound />
   </c:when>
   <c:otherwise>
-    <div class="container">
-      <div class="row" itemscope itemtype="http://schema.org/NewsArticle">
+
+      <div itemscope itemtype="http://schema.org/NewsArticle">
 
         <article class="col-md-9 detail-content">
           <hst:cmseditlink hippobean="${document}" />
@@ -51,7 +51,6 @@
         </article>
 
       </div>
-    </div>
 
   </c:otherwise>
 </c:choose>
