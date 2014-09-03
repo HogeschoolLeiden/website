@@ -15,36 +15,41 @@
 <fmt:message key="follow.twitter" var="twitter"/>
 <fmt:message key="follow.pinterest" var="pinterest"/>
 <fmt:message key="follow.instagram" var="instagram"/>
+<fmt:message key="follow.youtube" var="youtube"/>
 
-<ul class="social follow">
-<li>
-  <a href="http://www.facebook.com/HSLeidenNL" target="_blank" title="${facebook}">
-    <img src="<hst:link path="images/follow/facebook-icon.png"/>">
+
+<li class="facebook">
+  <a href="http://www.facebook.com/HSLeidenNL" target="_blank" title="${facebook}" class="fa fa-facebook">
+    <span>${facebook}</span>
   </a>
 </li>
-<li>
-  <a href="http://www.twitter.com/HSLeidenNL" target="_blank" title="${twitter}">
-    <img src="<hst:link path="images/follow/twitter-icon.png"/>">
+
+<li class="twitter">
+  <a href="http://www.twitter.com/HSLeidenNL" target="_blank" title="${twitter}" class="fa fa-twitter">
+    <span>${twitter}</span>
   </a>
 </li>
-<li>
-  <a href="http://www.linkedin.com/company/hogeschool-leiden" target="_blank" title="${linkedin}">
-    <img src="<hst:link path="images/follow/linkedin-icon.png"/>">
+
+<li class="googleplus">
+  <a href="https://plus.google.com/+HSLeidenNL" rel="publisher" target="_blank" title="${googleplus}" class="fa fa-google-plus">
+    <span>${googleplus}</span>
   </a>
 </li>
-<li>
-  <a href="https://plus.google.com/+HSLeidenNL" rel="publisher" target="_blank" title="${googleplus}">
-    <img src="<hst:link path="images/follow/googleplus-icon.png"/>">
+
+<li class="linkedin">
+  <a href="http://www.linkedin.com/company/hogeschool-leiden" target="_blank" title="${linkedin}" class="fa fa-linkedin">
+    <span>${linkedin}</span>
   </a>
 </li>
-<li>
-  <a href="https://instagram.com/hsleiden" target="_blank" title="${instagram}">
-    <img src="<hst:link path="images/follow/instagram-icon.png"/>">
+<li class="instagram">
+  <a href="https://instagram.com/hsleiden" target="_blank" title="${instagram}" class="fa fa-instagram">
+    <span>${instagram}</span>
   </a>
 </li>
-<%-- <li>
-  <a href="http://www.pinterest.com/ivanderent/hogeschool-leiden" target="_blank" title="${pinterest}">
-    <img src="<hst:link path="images/follow/pinterest-icon.png"/>">
+
+<li class="instagram">
+  <a href="https://www.youtube.com/user/hogeschoolleiden" target="_blank" title="${youtube}" class="fa fa-youtube">
+    <span>${youtube}</span>
   </a>
-</li> --%>
-</ul>
+</li>
+

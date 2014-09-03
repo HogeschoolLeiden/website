@@ -37,12 +37,12 @@
           <sv:value>onderwijs/opleidingen-voor-professionals/nascholingen</sv:value>
         </sv:property>
       </sv:node>
-      <sv:node sv:name="Masters">
+      <sv:node sv:name="Open Dagen">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hst:sitemenuitem</sv:value>
         </sv:property>
         <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-          <sv:value>onderwijs/opleidingen-voor-professionals/masters</sv:value>
+          <sv:value>onderwijs/bacheloropleidingen/open-dagen</sv:value>
         </sv:property>
       </sv:node>
     </sv:node>
@@ -110,7 +110,7 @@
         </sv:property>
       </sv:node>
     </sv:node>
-    <sv:node sv:name="Actueel">
+    <sv:node sv:name="News &amp; Agenda">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:sitemenuitem</sv:value>
       </sv:property>
@@ -142,7 +142,7 @@
         </sv:property>
       </sv:node>
     </sv:node>
-    <sv:node sv:name="Over HL">
+    <sv:node sv:name="Over Hogeschool Leiden">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:sitemenuitem</sv:value>
       </sv:property>
@@ -171,6 +171,22 @@
         </sv:property>
         <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
           <sv:value>veelgestelde-vragen</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="Maatschappelijke betrokkenheid">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:sitemenuitem</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+          <sv:value>over-hl/profiel/maatschappelijke-betrokkenheid</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="Route">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:sitemenuitem</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+          <sv:value>over-hl/contactgegevens/route</sv:value>
         </sv:property>
       </sv:node>
     </sv:node>
@@ -211,30 +227,6 @@
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:sitemenu</sv:value>
     </sv:property>
-    <sv:node sv:name="Disclaimer">
-      <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hst:sitemenuitem</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-        <sv:value>service/disclaimer</sv:value>
-      </sv:property>
-    </sv:node>
-    <sv:node sv:name="Privacy">
-      <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hst:sitemenuitem</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-        <sv:value>service/privacy</sv:value>
-      </sv:property>
-    </sv:node>
-    <sv:node sv:name="Sitemap">
-      <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hst:sitemenuitem</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-        <sv:value>service/sitemap</sv:value>
-      </sv:property>
-    </sv:node>
     <sv:node sv:name="RSS Nieuws">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:sitemenuitem</sv:value>
@@ -1002,6 +994,35 @@
       </sv:property>
       <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
         <sv:value>contact</sv:value>
+      </sv:property>
+    </sv:node>
+  </sv:node>
+  <sv:node sv:name="footerExtra">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:sitemenu</sv:value>
+    </sv:property>
+    <sv:node sv:name="Disclaimer">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:sitemenuitem</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+        <sv:value>service/disclaimer</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="Privacy">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:sitemenuitem</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+        <sv:value>service/privacy</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="Sitemap">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:sitemenuitem</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+        <sv:value>service/sitemap</sv:value>
       </sv:property>
     </sv:node>
   </sv:node>
