@@ -14,7 +14,7 @@
         <sv:value>hst:containercomponentreference</sv:value>
       </sv:property>
       <sv:property sv:name="hst:referencecomponent" sv:type="String">
-        <sv:value>genericoverview/top-container</sv:value>
+        <sv:value>faqoverview/top-container</sv:value>
       </sv:property>
     </sv:node>
     <sv:node sv:name="leftTop">
@@ -22,7 +22,7 @@
         <sv:value>hst:containercomponentreference</sv:value>
       </sv:property>
       <sv:property sv:name="hst:referencecomponent" sv:type="String">
-        <sv:value>genericoverview/leftTop</sv:value>
+        <sv:value>faqoverview/leftTop</sv:value>
       </sv:property>
     </sv:node>
     <sv:node sv:name="leftBottom">
@@ -30,7 +30,7 @@
         <sv:value>hst:containercomponentreference</sv:value>
       </sv:property>
       <sv:property sv:name="hst:referencecomponent" sv:type="String">
-        <sv:value>genericoverview/leftBottom</sv:value>
+        <sv:value>faqoverview/leftBottom</sv:value>
       </sv:property>
     </sv:node>
     <sv:node sv:name="contentTop">
@@ -38,31 +38,36 @@
         <sv:value>hst:containercomponentreference</sv:value>
       </sv:property>
       <sv:property sv:name="hst:referencecomponent" sv:type="String">
-        <sv:value>genericoverview/contentTop</sv:value>
+        <sv:value>faqoverview/contentTop</sv:value>
       </sv:property>
+    </sv:node>
+    <sv:node sv:name="content">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:component</sv:value>
+      </sv:property>
+      <sv:node sv:name="rightTop">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:containercomponentreference</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencecomponent" sv:type="String">
+          <sv:value>faqoverview/rightTop</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="rightBottom">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:containercomponentreference</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencecomponent" sv:type="String">
+          <sv:value>faqoverview/rightBottom</sv:value>
+        </sv:property>
+      </sv:node>
     </sv:node>
     <sv:node sv:name="contentBottom">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:containercomponentreference</sv:value>
       </sv:property>
       <sv:property sv:name="hst:referencecomponent" sv:type="String">
-        <sv:value>genericoverview/contentBottom</sv:value>
-      </sv:property>
-    </sv:node>
-    <sv:node sv:name="rightTop">
-      <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hst:containercomponentreference</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:referencecomponent" sv:type="String">
-        <sv:value>genericoverview/rightTop</sv:value>
-      </sv:property>
-    </sv:node>
-    <sv:node sv:name="rightBottom">
-      <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hst:containercomponentreference</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:referencecomponent" sv:type="String">
-        <sv:value>genericoverview/rightBottom</sv:value>
+        <sv:value>faqoverview/contentBottom</sv:value>
       </sv:property>
     </sv:node>
     <sv:node sv:name="bottom-container">
@@ -70,7 +75,7 @@
         <sv:value>hst:containercomponentreference</sv:value>
       </sv:property>
       <sv:property sv:name="hst:referencecomponent" sv:type="String">
-        <sv:value>genericoverview/bottom-container</sv:value>
+        <sv:value>faqoverview/bottom-container</sv:value>
       </sv:property>
     </sv:node>
   </sv:node>

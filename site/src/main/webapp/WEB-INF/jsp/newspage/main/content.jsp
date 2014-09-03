@@ -46,6 +46,11 @@
 
               </div>
             </div>
+            
+            <hst:include ref="rightTop" />
+            <hst:include ref="right" />
+            <hst:include ref="rightBottom" />
+    
           </div>
 
         </article>
