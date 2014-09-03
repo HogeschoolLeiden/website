@@ -28,12 +28,7 @@
                 </h1>
 
                 <c:if test="${hst:isReadable(document, 'releaseDate.time')}">
-                  <fmt:formatDate value="${document.releaseDate.time}"
-                                  type="date" pattern="dd" dateStyle="medium" timeStyle="short" var="day" />
-                  <fmt:formatDate value="${document.releaseDate.time}"
-                                  type="date" pattern="MMM" dateStyle="medium" timeStyle="short" var="month" />
-                  
-                  <time datetime="${time}" class="datum">${fn:escapeXml(day)}<span>${fn:escapeXml(month)}</span></time>
+                  <tag:renderDate document="${document}"/>
                 </c:if>
 
                 <p class="intro">

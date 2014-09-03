@@ -1,0 +1,42 @@
+<%@tag trimDirectiveWhitespaces="true" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ taglib prefix="hst" uri="http://www.hippoecm.org/jsp/hst/core"%>
+<%@ taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml"%>
+<%@ taglib prefix='opw' uri="http://open-web.nl/hippo/prototype"%>
+<%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
+
+<%@ attribute name="document" type="hslbeans.WebPage" rtexprvalue="true" required="true"%>
+<%@ attribute name="dateClass" type="java.lang.String" rtexprvalue="true"%>
+
+<hst:setBundle basename="nl.hsleiden.widget.Messages" />
+
+<c:set var="cssDateClass">
+  <c:choose>
+    <c:when test="${not empty dateClass }">
+      <c:out value="${dateClass }"/>
+    </c:when>
+    <c:otherwise>
+      <c:out value="datum"/>
+    </c:otherwise>
+  </c:choose>
+</c:set>
+
+<c:choose>
+  <c:when test="${document['class'].name=='hslbeans.EventPage' }">
+    <fmt:formatDate value="${document.eventDate.time}"
+                    type="date" pattern="dd" dateStyle="medium" timeStyle="short" var="day" />
+    <fmt:formatDate value="${document.eventDate.time}"
+                    type="date" pattern="MMM" dateStyle="medium" timeStyle="short" var="month" />
+  </c:when>
+  <c:otherwise>
+    <fmt:formatDate value="${document.releaseDate.time}"
+                    type="date" pattern="dd" dateStyle="medium" timeStyle="short" var="day" />
+    <fmt:formatDate value="${document.releaseDate.time}"
+                    type="date" pattern="MMM" dateStyle="medium" timeStyle="short" var="month" />
+ </c:otherwise>
+</c:choose>      
+                 
+<time datetime="${time}" class="${cssDateClass}">${fn:escapeXml(day)}<span>${fn:escapeXml(month)}</span></time>
+

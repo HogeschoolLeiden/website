@@ -9,49 +9,16 @@
 
 <%@ attribute name="highLightedItem" type="hslbeans.WebPage" required="true" %>
 
-<article class="well well-large">
+<article class="highlighted col-md-9">
   <hst:cmseditlink hippobean="${highLightedItem}" />
-  <hst:link var="image" hippobean="${highLightedItem.headerImage.wideImage}" />
   <hst:link hippobean="${highLightedItem }" var="link" />
-
-  <div class="higlighted-image">
-      <a href="${link }" title="${title }">
-        <img alt="${highLightedItem.title }" title="${highLightedItem.title }" src="${image }" />
-      </a>
+  <div class="row">
+	<a href="${link }" title="${fn:escapeXml(highLightedItem.title)}">
+	  <div class="media-body col-md-5">
+	    <h1 class="media-heading"><c:out value="${highLightedItem.title}"/></h1>
+	    <tag:renderDate document="${highLightedItem}" dateClass="datum start large"/>
+	    <p><c:out value="${highLightedItem.introduction}"/></p>
+	  </div>		
+    </a>		
   </div>
-  
-  <div class="higlighted-itemContent">
-    <div class=higlighted-itemTitle>
-      <c:set var="title">
-        <c:out value="${highLightedItem.title }" escapeXml="true" />
-      </c:set>
-      <h3><a href="${link }" title="${title }">${title }</a></h3>
-    </div>
-    
-    <c:choose>
-      <c:when test="${highLightedItem['class'].name=='hslbeans.EventPage' }">
-        <div class="date">
-          <fmt:formatDate value="${highLightedItem.eventDate.time}" type="date" dateStyle="long"/>
-        </div>
-      </c:when>
-      <c:otherwise>
-        <div class="date">
-          <fmt:formatDate value="${highLightedItem.releaseDate.time}" type="date" dateStyle="long"/>
-        </div>
-      </c:otherwise>
-    </c:choose>
-    
-    <c:if test="${not empty highLightedItem.introduction }">
-      <div class=introduction>
-        <p>
-          <opw:string-chopper
-            maxLength="250" bean="${highLightedItem }"
-            stringPath="introduction"
-            allowedLengthTolerance="10"
-            showDots="true" />
-        </p>
-      </div>
-    </c:if>
-  </div>
-
 </article>

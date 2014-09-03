@@ -9,97 +9,85 @@
 
 <hst:setBundle basename="nl.hsleiden.general.Messages"/>
 
-<div class="container-fluid">
-  <hst:include ref="top-container" />    
-  	<div class="row-fluid">
-		<nav class="span2">
-		  <hst:include ref="leftTop" />
-		  <tag:facetednavigation facetnav="${model.facetBean}" labels="${model.labels}"></tag:facetednavigation>
-		  <hst:include ref="leftBottom" />
-		</nav>
-		<div class="span8">
-		  <hst:include ref="contentTop" />
-		  <%--content in-lined for better performance --%>
-		  <c:choose>
-			<c:when test="${empty model.document}">
-			  <tag:pagenotfound />
-			</c:when>
-			<c:otherwise>
-              
-              <c:if test="${pageContext.request.requestContext.contentBean['class'].name == 'hslbeans.OverviewPage'}">
-                <tag:highlightedItem highLightedItem="${model.document.highLightedItem }"/>
-              </c:if>
+<div id="main" role="main" class="">
+    
+  <c:if test="${tag:isSubclassOfWebPage(model.document)}">
+    <tag:headerImage document="${model.document}"/>
+  </c:if>
+    
+  <%-- <hst:include ref="top-container" /> --%>
+  <div class="container">
+	<div class="row">
 
-              <c:if test="${hst:isReadable(model.document, 'rssItem') && not empty model.document.rssItem }">
-                <c:set var="rssLink">
-                  <hst:link hippobean="${model.document.rssItem}"/>
-                </c:set>
-                <hst:headContribution keyHint="rssItem">
-                  <link title="${model.document.rssItem.title}" rel="alternate" type="application/rss+xml" href="${rssLink}"/>
-                </hst:headContribution>
-              </c:if>
-              	
-			  <c:forEach var="item" items="${model.items}">
+	  <c:if test="${pageContext.request.requestContext.contentBean['class'].name == 'hslbeans.OverviewPage'}">
+        <tag:highlightedItem highLightedItem="${model.document.highLightedItem }"/>
+      </c:if>
+       
+      <c:choose>
+        <c:when test="${empty model.document}">
+          <tag:pagenotfound />
+        </c:when>
+        <c:otherwise>
+          <section class="overzicht col-md-9">
+            
+            <h1 class="hidden"><c:out value="${model.document.title}"></c:out> </h1>
+            
+            <hst:include ref="contentTop" />
+            
+            <tag:rssReader document="${model.document}"/>
                 
-                
-				<hst:link var="link" hippobean="${item}" />
-				<article class="well well-large">
-				  <hst:cmseditlink hippobean="${item}" />
-        
+            <div class="overzichtlijst">
+              <c:forEach var="item" items="${model.items}">
+              
+                <hst:link var="link" hippobean="${item}" />
+                <article class="media clearfix">
+                  <hst:cmseditlink hippobean="${item}" />
+                  <c:set var="image" value=""/>
                   <c:if test="${not empty tag:getFirstFlexibleBlockImage(item) }">
                     <div class="image-space">
-                      <hst:link var="image" hippobean="${tag:getFirstFlexibleBlockImage(item).image.paragraphImage}" />
-                      <img alt="${item.title }" title="${item.title }" src="${image }" />
+                      <hst:link var="image" hippobean="${tag:getFirstFlexibleBlockImage(item).image.listImageMedium}" />  
                     </div>
                   </c:if>
-
-                  <div ${not empty tag:getFirstFlexibleBlockImage(item) ? 'class="list-item-content"' : 'class="item-content"' } >
-    			    <h3>
-    				  <a href="${link}"><c:out value="${item.title}"/></a>
-    				</h3>
-              
-                    <c:choose>
-                      <c:when test="${item['class'].name=='hslbeans.EventPage' }">
-  					   <c:if test="${hst:isReadable(item, 'eventDate.time')}">
-  					     <p class="badge badge-info">
-  						   <fmt:formatDate value="${item.eventDate.time}" type="both" dateStyle="medium" timeStyle="short" />
-  					     </p>
-  					   </c:if>
-                      </c:when>
-                      <c:otherwise>
-                        <c:if test="${hst:isReadable(item, 'releaseDate.time')}">
-                          <p class="badge badge-info">
-                            <fmt:formatDate value="${item.releaseDate.time}" type="both" dateStyle="medium" timeStyle="short" />
-                          </p>
-                        </c:if>
-                      </c:otherwise>
-                    </c:choose>
-  			       
-        			<p><c:out value="${item.introduction}"/></p>
-                  </div>
-                  
-                  <c:if test="${not empty tag:getFirstFlexibleBlockImage(item) }">
-                    <div class="clear"></div>
-                  </c:if>
-				</article>
                 
-		      </c:forEach>
-					
-			  <div class="paginator-style">
-			    <opw:simplepaginator paginator="${model.paginator}" namespaced="false"/>
-			  </div>
-			
-			</c:otherwise>
-		  </c:choose>
+                  <a href="">
+                    <!-- afmeting afbeelding: 100x100 -->
+                    <figure class="media-object pull-left">
+                      <c:if test="${not empty image}">
+                        <img alt="${item.title }" title="${item.title }" src="${image }" />
+                      </c:if>
+                    </figure>
+                    <tag:renderDate document="${item}" dateClass="datum start"/>
+                    <%-- a content type addition, (end date for events probably)  and after it
+                    modify the renderDate tag and uncomment the following line
+                    <tag:renderDate document="${item}" dateClass="datum start"/>
+                    --%>
+                    <div class="media-body">
+                      <h1 class="media-heading"><c:out value="${item.title }"/></h1>
+                      <p><c:out value="${item.introduction }"/></p>
+                    </div>   
+                  </a>     
 
-		  <hst:include ref="contentBottom" />
-          <tag:toolbox document="${document }" />
-		</div>
-		<aside class="span2">
-			<hst:include ref="rightTop" />
-			<hst:include ref="right" />
-			<hst:include ref="rightBottom" />
-		</aside>
+                </article>
+              </c:forEach>
+            </div>  
+          
+            <div class="paginator-style">
+              <opw:simplepaginator paginator="${model.paginator}" namespaced="false"/>
+            </div>
+      
+            <hst:include ref="contentBottom" />
+            
+            <tag:toolbox document="${document }" />
+            
+          </section>
+        </c:otherwise>
+      </c:choose>
+
+	  <hst:include ref="leftTop" />  <%-- maybe can pass a class name to the following tag --%>
+	  <tag:facetednavigation facetnav="${model.facetBean}" labels="${model.labels}"/>
+	  <hst:include ref="leftBottom" />
+
 	</div>
-	<hst:include ref="bottom-container" />
+  </div>
+  <hst:include ref="bottom-container" />
 </div>
