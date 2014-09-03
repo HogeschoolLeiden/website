@@ -6,20 +6,31 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="hst" uri="http://www.hippoecm.org/jsp/hst/core"%>
 <%@ taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml"%>
-
-  <%-- <hst:include ref="top-container" />      --%>
-
-  <hst:include ref="leftTop" />
-  <hst:include ref="left" />
-  <hst:include ref="leftBottom" />
-
-  <hst:include ref="contentTop" />
-  <hst:include ref="content" />
-  <hst:include ref="contentBottom" />
+<%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
+<%@ taglib prefix="opw" uri="http://open-web.nl/hippo/prototype"%>
 
 
-  <hst:include ref="rightTop" />
-  <hst:include ref="right" />
-  <hst:include ref="rightBottom" />
-
-  <hst:include ref="bottom-container" />
+  <div id="main" role="main" class="detail"> 
+    <tag:renderBackLink sitemapRefId="${paramInfo.overviewSitemapRefId}"/>
+          
+    <c:if test="${tag:isSubclassOfWebPage(document)}">
+      <tag:headerImage document="${document}"/>
+    </c:if>
+        
+    <%-- <hst:include ref="top-container" />      --%>
+    
+    <hst:include ref="contentTop" />
+    <hst:include ref="content" />
+    <hst:include ref="contentBottom" />
+  
+    <hst:include ref="leftTop" />
+    <hst:include ref="left" />
+    <hst:include ref="leftBottom" />
+  
+   <%--  <hst:include ref="rightTop" />
+    <hst:include ref="right" />
+    <hst:include ref="rightBottom" /> --%>
+  
+    <hst:include ref="bottom-container" />
+  
+  </div>

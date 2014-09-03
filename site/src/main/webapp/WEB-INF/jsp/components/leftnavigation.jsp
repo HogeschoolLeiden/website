@@ -11,8 +11,6 @@
 <hst:setBundle basename="nl.hsleiden.widget.Messages" />
 
 <div class="left">
-   
-  <tag:renderBackLink sitemapRefId="${paramInfo.overviewSitemapRefId}"/>
   
   <c:set var="parentItem" value="${tag:getTopMenuItem(menu, paramInfo.level)}"/>
   

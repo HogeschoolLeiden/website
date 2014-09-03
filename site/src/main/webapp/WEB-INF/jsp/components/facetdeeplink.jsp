@@ -8,6 +8,4 @@
 
 <hst:setBundle basename="nl.hsleiden.widget.Messages" />
 
-<tag:renderBackLink sitemapRefId="${model.paramInfo.overviewSitemapRefId}"/>
-
 <tag:facetednavigation facetnav="${model.facetBean}" labels="${model.labels}" />

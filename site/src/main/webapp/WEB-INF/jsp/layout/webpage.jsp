@@ -3,7 +3,8 @@
 
 <!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="${pageContext.request.locale.language}" 
+      xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml"> <!--<![endif]-->
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
@@ -13,10 +14,6 @@
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 <%@ taglib prefix="opw" uri="http://open-web.nl/hippo/prototype"%>
 <%@ taglib prefix="ga" uri="http://www.onehippo.org/jsp/google-analytics"%>
-
-<html lang="${pageContext.request.locale.language}" 
-      xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml"
-      class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths">
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -101,17 +98,9 @@
     <c:if test="${tag:isSubclassOfWebPage(document)}">
         <hst:include ref="breadcrumb"/>
     </c:if>
-    
-    <div id="main" role="main" class="detail"> 
-    
-      
-      <c:if test="${tag:isSubclassOfWebPage(document)}">
-        <tag:headerImage document="${document}"/>
-      </c:if>
-      
-  	  <hst:include ref="main" />
-    </div>
-  	
+        
+  	<hst:include ref="main" />
+      	
     <hst:include ref="footer" />
 	
     <hst:headContributions categoryIncludes="scripts" xhtml="true" />
