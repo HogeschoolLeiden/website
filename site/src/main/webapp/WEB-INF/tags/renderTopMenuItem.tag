@@ -11,18 +11,20 @@
 
 <c:choose>
   <c:when test="${tag:getSitemenuConfigParameter(menuItem, 'invisible') eq true}">
-    <li><h3>&nbsp;</h3></li>
+    <li><h2>&nbsp;</h2></li>
   </c:when>
   <c:otherwise>
     <c:choose>
       <c:when test="${tag:getSitemenuConfigParameter(menuItem, 'disabled') eq true}">
-        <li><h3><c:out value=" ${menuItem.name}"/></h3></li>
+        <li><h2><c:out value=" ${menuItem.name}"/></h2></li>
       </c:when>
       <c:otherwise>
         <hst:link var="link" link="${menuItem.hstLink}"/>
-        <li><h3 ${menuItem.selected ? "class='selectedItem'" : ""}>
-          <a href="${link}"><c:out value=" ${menuItem.name}"/></a>
-        </h3></li>
+        <li>
+          <h2 ${menuItem.selected ? "class='selectedItem'" : ""}>
+            <a href="${link}"><c:out value=" ${menuItem.name}"/></a>
+          </h2>
+        </li>
       </c:otherwise>
     </c:choose> 
   </c:otherwise>

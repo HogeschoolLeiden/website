@@ -10,20 +10,23 @@
 
 <hst:setBundle basename="nl.hsleiden.widget.Messages" />
 
-<div class="left">
-  
-  <c:set var="parentItem" value="${tag:getTopMenuItem(menu, paramInfo.level)}"/>
-  
-  <ul class="nav nav-pills nav-stacked">
+<nav class="col-md-3 col-xs-12" role="navigation"/>
+  <div class="subnav">
     
-    <tag:renderTopMenuItem menuItem="${parentItem}"/>
+    <c:set var="parentItem" value="${tag:getTopMenuItem(menu, paramInfo.level)}"/>
     
-    <c:forEach items="${hst:isReadable(parentItem, 'childMenuItems') ? parentItem.childMenuItems : parentItem.menuItems}" var="item">
-      <opw:menuitem siteMenuItem="${item}" depth="1"
-        expandedClass="current arrow-down"
-        selectedClass="active arrow-down"
-        unexpandedClass="unexpanded arrow-side" leafClass="arrow-side" 
-        recurseOnlyExpanded="true"/>
-    </c:forEach>
-  </ul>
-</div>
+    <ul>  
+      <tag:renderTopMenuItem menuItem="${parentItem}"/>
+      <c:forEach items="${hst:isReadable(parentItem, 'childMenuItems') ? parentItem.childMenuItems : parentItem.menuItems}" var="item">
+        <opw:menuitem siteMenuItem="${item}" depth="1"
+          expandedClass="current"
+          selectedClass="active"
+          unexpandedClass="unexpanded arrow-side" leafClass="arrow-side" 
+          recurseOnlyExpanded="true"/>
+      </c:forEach>
+    </ul>
+    
+  </div>
+</nav>
+
+        
