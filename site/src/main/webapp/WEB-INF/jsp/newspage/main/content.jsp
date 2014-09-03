@@ -47,9 +47,11 @@
               </div>
             </div>
             
-            <hst:include ref="rightTop" />
-            <hst:include ref="right" />
-            <hst:include ref="rightBottom" />
+            <aside class="col-md-4 col-sm-4 aside">
+              <hst:include ref="rightTop" />
+              <hst:include ref="right" />
+              <hst:include ref="rightBottom" />
+            </aside>
     
           </div>
 

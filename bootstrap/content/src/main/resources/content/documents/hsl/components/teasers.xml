@@ -13,6 +13,7 @@
   <sv:property sv:name="hippo:related___pathreference" sv:type="String"/>
   <sv:property sv:name="hippostd:foldertype" sv:type="String" sv:multiple="true">
     <sv:value>new-teaser-document</sv:value>
+    <sv:value>new-textteaser-document</sv:value>
   </sv:property>
   <sv:property sv:name="hippotranslation:id" sv:type="String">
     <sv:value>847a03eb-10e2-4322-84b5-9c821882e6c6</sv:value>
@@ -36,7 +37,7 @@
       <sv:value>Teasers</sv:value>
     </sv:property>
   </sv:node>
-  <sv:node sv:name="teaser-test-one">
+  <sv:node sv:name="open-dag-teaser">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hippo:handle</sv:value>
     </sv:property>
@@ -45,22 +46,22 @@
       <sv:value>hippo:translated</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
-      <sv:value>5c7c71b3-e2fe-49da-933b-11709e742a7b</sv:value>
+      <sv:value>495538d2-8953-4231-832a-c587434f8ae5</sv:value>
     </sv:property>
-    <sv:node sv:name="teaser-test-one">
+    <sv:node sv:name="open-dag-teaser">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hsl:TeaserDocument</sv:value>
+        <sv:value>hsl:TextTeaser</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
         <sv:value>mix:referenceable</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>f7d04c08-665f-4c3e-9433-caa14e3d8a33</sv:value>
+        <sv:value>6ae7600f-6205-47e5-aa3c-79ff8a9466df</sv:value>
       </sv:property>
       <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true"/>
       <sv:property sv:name="hippo:related___pathreference" sv:type="String">
-        <sv:value>teasers/teaser-test-one/teaser-test-one[2]</sv:value>
-        <sv:value>teasers/teaser-test-one/teaser-test-one[3]</sv:value>
+        <sv:value>teasers/open-dag-teaser/open-dag-teaser[3]</sv:value>
+        <sv:value>teasers/open-dag-teaser/open-dag-teaser[2]</sv:value>
       </sv:property>
       <sv:property sv:name="hippostd:state" sv:type="String">
         <sv:value>draft</sv:value>
@@ -72,84 +73,46 @@
         <sv:value>admin</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
-        <sv:value>2014-09-02T12:53:07.728+02:00</sv:value>
+        <sv:value>2014-09-03T14:09:30.484+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-        <sv:value>2014-09-03T11:39:01.239+02:00</sv:value>
+        <sv:value>2014-09-03T14:09:31.475+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
         <sv:value>admin</sv:value>
       </sv:property>
       <sv:property sv:name="hippotranslation:id" sv:type="String">
-        <sv:value>644c703e-9895-4c50-bbaf-55e01557adb8</sv:value>
+        <sv:value>367f380a-4423-4775-b6d7-d47651a21ca7</sv:value>
       </sv:property>
       <sv:property sv:name="hippotranslation:locale" sv:type="String">
         <sv:value>nl</sv:value>
       </sv:property>
+      <sv:property sv:name="hsl:body" sv:type="String">
+        <sv:value>Kom naar de open dag op woensdag 23 juli</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:color" sv:type="String">
+        <sv:value>blauw</sv:value>
+      </sv:property>
       <sv:property sv:name="hsl:title" sv:type="String">
         <sv:value>Open Dag</sv:value>
       </sv:property>
-      <sv:node sv:name="hsl:image">
+      <sv:node sv:name="hsl:link">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hippogallerypicker:imagelink</sv:value>
+          <sv:value>hsl:InternalLink</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:docbase" sv:type="String">
-          <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
+        <sv:property sv:name="hsl:alt" sv:type="String">
+          <sv:value>Open Dagen</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
-      </sv:node>
-      <sv:node sv:name="hsl:body">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hippostd:html</sv:value>
+        <sv:property sv:name="hsl:linkTitle" sv:type="String">
+          <sv:value>Meer informatie</sv:value>
         </sv:property>
-        <sv:property sv:name="hippostd:content" sv:type="String">
-          <sv:value>&lt;p&gt;This is the body of the teaser.
-&lt;br /&gt; 
-&lt;strong&gt;By default&lt;/strong&gt; the teaser will 
-&lt;strong&gt;display both&lt;/strong&gt; the 
-&lt;strong&gt;html &lt;/strong&gt;edited here and the 
-&lt;strong&gt;image &lt;/strong&gt;selected on the right side.
-&lt;br /&gt; 
-&lt;br /&gt; Maybe in the future some checkboxes can be added on the right side for deciding what to display and in what order.
-&lt;br /&gt; 
-&lt;br /&gt; After the image and the body of the teaser the list of the following links will be displayed. Some other checkboxes can be added also for them for deciding in what past of the teaser to be displayed.&lt;/p&gt;</sv:value>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="hsl:icon">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hippogallerypicker:imagelink</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippo:docbase" sv:type="String">
-          <sv:value>5fb52229-991d-4253-9759-446328a1b5f6</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
-      </sv:node>
-      <sv:node sv:name="hsl:links">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hsl:Link</sv:value>
-        </sv:property>
-        <sv:node sv:name="hsl:internallink">
+        <sv:node sv:name="hsl:link">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>hsl:InternalLink</sv:value>
+            <sv:value>hippo:mirror</sv:value>
           </sv:property>
-          <sv:property sv:name="hsl:alt" sv:type="String">
-            <sv:value>go to Open Dagen</sv:value>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>fc452a8b-7fc6-4198-a1a6-d120e7663ce2</sv:value>
           </sv:property>
-          <sv:property sv:name="hsl:linkTitle" sv:type="String">
-            <sv:value>meer informatie</sv:value>
-          </sv:property>
-          <sv:node sv:name="hsl:link">
-            <sv:property sv:name="jcr:primaryType" sv:type="Name">
-              <sv:value>hippo:mirror</sv:value>
-            </sv:property>
-            <sv:property sv:name="hippo:docbase" sv:type="String">
-              <sv:value>fc452a8b-7fc6-4198-a1a6-d120e7663ce2</sv:value>
-            </sv:property>
-          </sv:node>
         </sv:node>
       </sv:node>
     </sv:node>
@@ -161,25 +124,25 @@
         <sv:value/>
       </sv:property>
       <sv:property sv:name="hippo:message" sv:type="String">
-        <sv:value>Teaser test one</sv:value>
+        <sv:value>Open dag teaser</sv:value>
       </sv:property>
     </sv:node>
-    <sv:node sv:name="teaser-test-one">
+    <sv:node sv:name="open-dag-teaser">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hsl:TeaserDocument</sv:value>
+        <sv:value>hsl:TextTeaser</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
         <sv:value>mix:referenceable</sv:value>
         <sv:value>mix:versionable</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>230237f1-26d2-4dd9-800a-913c7120f266</sv:value>
+        <sv:value>78ceab79-ce44-48b1-b39d-5fd9ba92c111</sv:value>
       </sv:property>
       <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
         <sv:value>preview</sv:value>
       </sv:property>
       <sv:property sv:name="hippo:related___pathreference" sv:type="String">
-        <sv:value>teasers/teaser-test-one/teaser-test-one[3]</sv:value>
+        <sv:value>teasers/open-dag-teaser/open-dag-teaser[3]</sv:value>
       </sv:property>
       <sv:property sv:name="hippostd:state" sv:type="String">
         <sv:value>unpublished</sv:value>
@@ -191,102 +154,64 @@
         <sv:value>admin</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
-        <sv:value>2014-09-02T12:53:07.728+02:00</sv:value>
+        <sv:value>2014-09-03T14:09:30.484+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-        <sv:value>2014-09-03T11:41:08.265+02:00</sv:value>
+        <sv:value>2014-09-03T14:10:17.777+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
         <sv:value>admin</sv:value>
       </sv:property>
       <sv:property sv:name="hippotranslation:id" sv:type="String">
-        <sv:value>644c703e-9895-4c50-bbaf-55e01557adb8</sv:value>
+        <sv:value>367f380a-4423-4775-b6d7-d47651a21ca7</sv:value>
       </sv:property>
       <sv:property sv:name="hippotranslation:locale" sv:type="String">
         <sv:value>nl</sv:value>
       </sv:property>
+      <sv:property sv:name="hsl:body" sv:type="String">
+        <sv:value>Kom naar de open dag op woensdag 23 juli</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:color" sv:type="String">
+        <sv:value>blauw</sv:value>
+      </sv:property>
       <sv:property sv:name="hsl:title" sv:type="String">
         <sv:value>Open Dag</sv:value>
       </sv:property>
-      <sv:node sv:name="hsl:image">
+      <sv:node sv:name="hsl:link">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hippogallerypicker:imagelink</sv:value>
+          <sv:value>hsl:InternalLink</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:docbase" sv:type="String">
-          <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
+        <sv:property sv:name="hsl:alt" sv:type="String">
+          <sv:value>Open Dagen</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
-      </sv:node>
-      <sv:node sv:name="hsl:body">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hippostd:html</sv:value>
+        <sv:property sv:name="hsl:linkTitle" sv:type="String">
+          <sv:value>Meer informatie</sv:value>
         </sv:property>
-        <sv:property sv:name="hippostd:content" sv:type="String">
-          <sv:value>&lt;p&gt;This is the body of the teaser.
-&lt;br /&gt; 
-&lt;strong&gt;By default&lt;/strong&gt; the teaser will 
-&lt;strong&gt;display both&lt;/strong&gt; the 
-&lt;strong&gt;html &lt;/strong&gt;edited here and the 
-&lt;strong&gt;image &lt;/strong&gt;selected on the right side.
-&lt;br /&gt; 
-&lt;br /&gt; Maybe in the future some checkboxes can be added on the right side for deciding what to display and in what order.
-&lt;br /&gt; 
-&lt;br /&gt; After the image and the body of the teaser the list of the following links will be displayed. Some other checkboxes can be added also for them for deciding in what past of the teaser to be displayed.&lt;/p&gt;</sv:value>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="hsl:icon">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hippogallerypicker:imagelink</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippo:docbase" sv:type="String">
-          <sv:value>5fb52229-991d-4253-9759-446328a1b5f6</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
-      </sv:node>
-      <sv:node sv:name="hsl:links">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hsl:Link</sv:value>
-        </sv:property>
-        <sv:node sv:name="hsl:internallink">
+        <sv:node sv:name="hsl:link">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>hsl:InternalLink</sv:value>
+            <sv:value>hippo:mirror</sv:value>
           </sv:property>
-          <sv:property sv:name="hsl:alt" sv:type="String">
-            <sv:value>go to Open Dagen</sv:value>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>fc452a8b-7fc6-4198-a1a6-d120e7663ce2</sv:value>
           </sv:property>
-          <sv:property sv:name="hsl:linkTitle" sv:type="String">
-            <sv:value>meer informatie</sv:value>
-          </sv:property>
-          <sv:node sv:name="hsl:link">
-            <sv:property sv:name="jcr:primaryType" sv:type="Name">
-              <sv:value>hippo:mirror</sv:value>
-            </sv:property>
-            <sv:property sv:name="hippo:docbase" sv:type="String">
-              <sv:value>fc452a8b-7fc6-4198-a1a6-d120e7663ce2</sv:value>
-            </sv:property>
-          </sv:node>
         </sv:node>
       </sv:node>
     </sv:node>
-    <sv:node sv:name="teaser-test-one">
+    <sv:node sv:name="open-dag-teaser">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hsl:TeaserDocument</sv:value>
+        <sv:value>hsl:TextTeaser</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
         <sv:value>mix:referenceable</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>50169249-388f-4db8-87b8-83071e0c894e</sv:value>
+        <sv:value>04018b5c-c641-4d6f-808c-f85b5e1148ff</sv:value>
       </sv:property>
       <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
         <sv:value>live</sv:value>
       </sv:property>
       <sv:property sv:name="hippo:related___pathreference" sv:type="String">
-        <sv:value>teasers/teaser-test-one/teaser-test-one[2]</sv:value>
+        <sv:value>teasers/open-dag-teaser/open-dag-teaser[2]</sv:value>
       </sv:property>
       <sv:property sv:name="hippostd:state" sv:type="String">
         <sv:value>published</sv:value>
@@ -298,92 +223,54 @@
         <sv:value>admin</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
-        <sv:value>2014-09-02T12:53:07.728+02:00</sv:value>
+        <sv:value>2014-09-03T14:09:30.484+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-        <sv:value>2014-09-03T11:41:08.265+02:00</sv:value>
+        <sv:value>2014-09-03T14:10:17.777+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
         <sv:value>admin</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-        <sv:value>2014-09-03T11:41:11.100+02:00</sv:value>
+        <sv:value>2014-09-03T14:10:20.568+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippotranslation:id" sv:type="String">
-        <sv:value>644c703e-9895-4c50-bbaf-55e01557adb8</sv:value>
+        <sv:value>367f380a-4423-4775-b6d7-d47651a21ca7</sv:value>
       </sv:property>
       <sv:property sv:name="hippotranslation:locale" sv:type="String">
         <sv:value>nl</sv:value>
       </sv:property>
+      <sv:property sv:name="hsl:body" sv:type="String">
+        <sv:value>Kom naar de open dag op woensdag 23 juli</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:color" sv:type="String">
+        <sv:value>blauw</sv:value>
+      </sv:property>
       <sv:property sv:name="hsl:title" sv:type="String">
         <sv:value>Open Dag</sv:value>
       </sv:property>
-      <sv:node sv:name="hsl:image">
+      <sv:node sv:name="hsl:link">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hippogallerypicker:imagelink</sv:value>
+          <sv:value>hsl:InternalLink</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:docbase" sv:type="String">
-          <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
+        <sv:property sv:name="hsl:alt" sv:type="String">
+          <sv:value>Open Dagen</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
-      </sv:node>
-      <sv:node sv:name="hsl:body">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hippostd:html</sv:value>
+        <sv:property sv:name="hsl:linkTitle" sv:type="String">
+          <sv:value>Meer informatie</sv:value>
         </sv:property>
-        <sv:property sv:name="hippostd:content" sv:type="String">
-          <sv:value>&lt;p&gt;This is the body of the teaser.
-&lt;br /&gt; 
-&lt;strong&gt;By default&lt;/strong&gt; the teaser will 
-&lt;strong&gt;display both&lt;/strong&gt; the 
-&lt;strong&gt;html &lt;/strong&gt;edited here and the 
-&lt;strong&gt;image &lt;/strong&gt;selected on the right side.
-&lt;br /&gt; 
-&lt;br /&gt; Maybe in the future some checkboxes can be added on the right side for deciding what to display and in what order.
-&lt;br /&gt; 
-&lt;br /&gt; After the image and the body of the teaser the list of the following links will be displayed. Some other checkboxes can be added also for them for deciding in what past of the teaser to be displayed.&lt;/p&gt;</sv:value>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="hsl:icon">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hippogallerypicker:imagelink</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippo:docbase" sv:type="String">
-          <sv:value>5fb52229-991d-4253-9759-446328a1b5f6</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
-      </sv:node>
-      <sv:node sv:name="hsl:links">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hsl:Link</sv:value>
-        </sv:property>
-        <sv:node sv:name="hsl:internallink">
+        <sv:node sv:name="hsl:link">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>hsl:InternalLink</sv:value>
+            <sv:value>hippo:mirror</sv:value>
           </sv:property>
-          <sv:property sv:name="hsl:alt" sv:type="String">
-            <sv:value>go to Open Dagen</sv:value>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>fc452a8b-7fc6-4198-a1a6-d120e7663ce2</sv:value>
           </sv:property>
-          <sv:property sv:name="hsl:linkTitle" sv:type="String">
-            <sv:value>meer informatie</sv:value>
-          </sv:property>
-          <sv:node sv:name="hsl:link">
-            <sv:property sv:name="jcr:primaryType" sv:type="Name">
-              <sv:value>hippo:mirror</sv:value>
-            </sv:property>
-            <sv:property sv:name="hippo:docbase" sv:type="String">
-              <sv:value>fc452a8b-7fc6-4198-a1a6-d120e7663ce2</sv:value>
-            </sv:property>
-          </sv:node>
         </sv:node>
       </sv:node>
     </sv:node>
   </sv:node>
-  <sv:node sv:name="teaser-test-two">
+  <sv:node sv:name="inschrijven-teaser">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hippo:handle</sv:value>
     </sv:property>
@@ -392,22 +279,22 @@
       <sv:value>hippo:translated</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
-      <sv:value>27d44fa6-2b97-45cd-8956-27915954dcbf</sv:value>
+      <sv:value>6a93bc89-dc4e-407e-9740-a1d7263fbb68</sv:value>
     </sv:property>
-    <sv:node sv:name="teaser-test-two">
+    <sv:node sv:name="inschrijven-teaser">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hsl:TeaserDocument</sv:value>
+        <sv:value>hsl:TextTeaser</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
         <sv:value>mix:referenceable</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>5fac8fc7-25f6-4855-b37a-9b4f18180bd2</sv:value>
+        <sv:value>97af7d6b-4606-4894-858a-1156321de621</sv:value>
       </sv:property>
       <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true"/>
       <sv:property sv:name="hippo:related___pathreference" sv:type="String">
-        <sv:value>teasers/teaser-test-two/teaser-test-two[3]</sv:value>
-        <sv:value>teasers/teaser-test-two/teaser-test-two[2]</sv:value>
+        <sv:value>teasers/inschrijven-teaser/inschrijven-teaser[2]</sv:value>
+        <sv:value>teasers/inschrijven-teaser/inschrijven-teaser[3]</sv:value>
       </sv:property>
       <sv:property sv:name="hippostd:state" sv:type="String">
         <sv:value>draft</sv:value>
@@ -419,75 +306,46 @@
         <sv:value>admin</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
-        <sv:value>2014-09-02T15:33:28.390+02:00</sv:value>
+        <sv:value>2014-09-03T14:10:54.079+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-        <sv:value>2014-09-02T15:35:41.843+02:00</sv:value>
+        <sv:value>2014-09-03T14:18:39.524+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
         <sv:value>admin</sv:value>
       </sv:property>
       <sv:property sv:name="hippotranslation:id" sv:type="String">
-        <sv:value>8a1b2a72-3c55-476e-9184-29b6a3a4633c</sv:value>
+        <sv:value>e492ee2f-c549-496b-a8ff-fe87237e50e2</sv:value>
       </sv:property>
       <sv:property sv:name="hippotranslation:locale" sv:type="String">
         <sv:value>nl</sv:value>
       </sv:property>
-      <sv:property sv:name="hsl:title" sv:type="String">
-        <sv:value>Image T. Title</sv:value>
+      <sv:property sv:name="hsl:body" sv:type="String">
+        <sv:value>Lees alles over het hoe en wat van inschrijven</sv:value>
       </sv:property>
-      <sv:node sv:name="hsl:image">
+      <sv:property sv:name="hsl:color" sv:type="String">
+        <sv:value>groen</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:title" sv:type="String">
+        <sv:value>Info over inschrijven</sv:value>
+      </sv:property>
+      <sv:node sv:name="hsl:link">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hippogallerypicker:imagelink</sv:value>
+          <sv:value>hsl:InternalLink</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:docbase" sv:type="String">
-          <sv:value>8d154015-2946-4d43-9003-ca8a31640797</sv:value>
+        <sv:property sv:name="hsl:alt" sv:type="String">
+          <sv:value>Info over inschrijven</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
-      </sv:node>
-      <sv:node sv:name="hsl:body">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hippostd:html</sv:value>
+        <sv:property sv:name="hsl:linkTitle" sv:type="String">
+          <sv:value>Meer informatie</sv:value>
         </sv:property>
-        <sv:property sv:name="hippostd:content" sv:type="String">
-          <sv:value/>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="hsl:icon">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hippogallerypicker:imagelink</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippo:docbase" sv:type="String">
-          <sv:value>2b3a5f59-47cd-41fb-ad05-a712a72a1d3e</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
-      </sv:node>
-      <sv:node sv:name="hsl:links">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hsl:Link</sv:value>
-        </sv:property>
-        <sv:node sv:name="hsl:internallink">
+        <sv:node sv:name="hsl:link">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>hsl:InternalLink</sv:value>
+            <sv:value>hippo:mirror</sv:value>
           </sv:property>
-          <sv:property sv:name="hsl:alt" sv:type="String">
-            <sv:value>Over HL</sv:value>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>db0484fc-60bc-4e61-a6ed-1d7777e09f43</sv:value>
           </sv:property>
-          <sv:property sv:name="hsl:linkTitle" sv:type="String">
-            <sv:value>Over HL</sv:value>
-          </sv:property>
-          <sv:node sv:name="hsl:link">
-            <sv:property sv:name="jcr:primaryType" sv:type="Name">
-              <sv:value>hippo:mirror</sv:value>
-            </sv:property>
-            <sv:property sv:name="hippo:docbase" sv:type="String">
-              <sv:value>6c27f3b6-2fd2-448d-827c-0fdefab1f675</sv:value>
-            </sv:property>
-          </sv:node>
         </sv:node>
       </sv:node>
     </sv:node>
@@ -499,25 +357,25 @@
         <sv:value/>
       </sv:property>
       <sv:property sv:name="hippo:message" sv:type="String">
-        <sv:value>Teaser test two</sv:value>
+        <sv:value>Inschrijven teaser</sv:value>
       </sv:property>
     </sv:node>
-    <sv:node sv:name="teaser-test-two">
+    <sv:node sv:name="inschrijven-teaser">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hsl:TeaserDocument</sv:value>
+        <sv:value>hsl:TextTeaser</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
         <sv:value>mix:referenceable</sv:value>
         <sv:value>mix:versionable</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>c5a5c517-d67d-47be-bcf8-d26982583a52</sv:value>
+        <sv:value>97fcfb00-6e74-40f3-b27e-ede378fdbc51</sv:value>
       </sv:property>
       <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
         <sv:value>preview</sv:value>
       </sv:property>
       <sv:property sv:name="hippo:related___pathreference" sv:type="String">
-        <sv:value>teasers/teaser-test-two/teaser-test-two[3]</sv:value>
+        <sv:value>teasers/inschrijven-teaser/inschrijven-teaser[3]</sv:value>
       </sv:property>
       <sv:property sv:name="hippostd:state" sv:type="String">
         <sv:value>unpublished</sv:value>
@@ -529,93 +387,64 @@
         <sv:value>admin</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
-        <sv:value>2014-09-02T15:33:28.390+02:00</sv:value>
+        <sv:value>2014-09-03T14:10:54.079+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-        <sv:value>2014-09-02T15:35:48.863+02:00</sv:value>
+        <sv:value>2014-09-03T14:11:30.120+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
         <sv:value>admin</sv:value>
       </sv:property>
       <sv:property sv:name="hippotranslation:id" sv:type="String">
-        <sv:value>8a1b2a72-3c55-476e-9184-29b6a3a4633c</sv:value>
+        <sv:value>e492ee2f-c549-496b-a8ff-fe87237e50e2</sv:value>
       </sv:property>
       <sv:property sv:name="hippotranslation:locale" sv:type="String">
         <sv:value>nl</sv:value>
       </sv:property>
-      <sv:property sv:name="hsl:title" sv:type="String">
-        <sv:value>Image T. Title</sv:value>
+      <sv:property sv:name="hsl:body" sv:type="String">
+        <sv:value>Lees alles over het hoe en wat van inschrijven</sv:value>
       </sv:property>
-      <sv:node sv:name="hsl:image">
+      <sv:property sv:name="hsl:color" sv:type="String">
+        <sv:value>groen</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:title" sv:type="String">
+        <sv:value>Info over inschrijven</sv:value>
+      </sv:property>
+      <sv:node sv:name="hsl:link">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hippogallerypicker:imagelink</sv:value>
+          <sv:value>hsl:InternalLink</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:docbase" sv:type="String">
-          <sv:value>8d154015-2946-4d43-9003-ca8a31640797</sv:value>
+        <sv:property sv:name="hsl:alt" sv:type="String">
+          <sv:value>Info over inschrijven</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
-      </sv:node>
-      <sv:node sv:name="hsl:body">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hippostd:html</sv:value>
+        <sv:property sv:name="hsl:linkTitle" sv:type="String">
+          <sv:value>Meer informatie</sv:value>
         </sv:property>
-        <sv:property sv:name="hippostd:content" sv:type="String">
-          <sv:value/>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="hsl:icon">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hippogallerypicker:imagelink</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippo:docbase" sv:type="String">
-          <sv:value>2b3a5f59-47cd-41fb-ad05-a712a72a1d3e</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
-      </sv:node>
-      <sv:node sv:name="hsl:links">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hsl:Link</sv:value>
-        </sv:property>
-        <sv:node sv:name="hsl:internallink">
+        <sv:node sv:name="hsl:link">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>hsl:InternalLink</sv:value>
+            <sv:value>hippo:mirror</sv:value>
           </sv:property>
-          <sv:property sv:name="hsl:alt" sv:type="String">
-            <sv:value>Over HL</sv:value>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>db0484fc-60bc-4e61-a6ed-1d7777e09f43</sv:value>
           </sv:property>
-          <sv:property sv:name="hsl:linkTitle" sv:type="String">
-            <sv:value>Over HL</sv:value>
-          </sv:property>
-          <sv:node sv:name="hsl:link">
-            <sv:property sv:name="jcr:primaryType" sv:type="Name">
-              <sv:value>hippo:mirror</sv:value>
-            </sv:property>
-            <sv:property sv:name="hippo:docbase" sv:type="String">
-              <sv:value>6c27f3b6-2fd2-448d-827c-0fdefab1f675</sv:value>
-            </sv:property>
-          </sv:node>
         </sv:node>
       </sv:node>
     </sv:node>
-    <sv:node sv:name="teaser-test-two">
+    <sv:node sv:name="inschrijven-teaser">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hsl:TeaserDocument</sv:value>
+        <sv:value>hsl:TextTeaser</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
         <sv:value>mix:referenceable</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>ab2f5c12-8801-4dc7-9af9-eb1f41059cc0</sv:value>
+        <sv:value>b368b7a3-faa2-4661-858f-8ff8fe2accdb</sv:value>
       </sv:property>
       <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
         <sv:value>live</sv:value>
       </sv:property>
       <sv:property sv:name="hippo:related___pathreference" sv:type="String">
-        <sv:value>teasers/teaser-test-two/teaser-test-two[2]</sv:value>
+        <sv:value>teasers/inschrijven-teaser/inschrijven-teaser[2]</sv:value>
       </sv:property>
       <sv:property sv:name="hippostd:state" sv:type="String">
         <sv:value>published</sv:value>
@@ -627,398 +456,49 @@
         <sv:value>admin</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
-        <sv:value>2014-09-02T15:33:28.390+02:00</sv:value>
+        <sv:value>2014-09-03T14:10:54.079+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-        <sv:value>2014-09-02T15:35:48.863+02:00</sv:value>
+        <sv:value>2014-09-03T14:11:30.120+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
         <sv:value>admin</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-        <sv:value>2014-09-02T15:35:50.659+02:00</sv:value>
+        <sv:value>2014-09-03T14:11:32.179+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippotranslation:id" sv:type="String">
-        <sv:value>8a1b2a72-3c55-476e-9184-29b6a3a4633c</sv:value>
+        <sv:value>e492ee2f-c549-496b-a8ff-fe87237e50e2</sv:value>
       </sv:property>
       <sv:property sv:name="hippotranslation:locale" sv:type="String">
         <sv:value>nl</sv:value>
       </sv:property>
-      <sv:property sv:name="hsl:title" sv:type="String">
-        <sv:value>Image T. Title</sv:value>
+      <sv:property sv:name="hsl:body" sv:type="String">
+        <sv:value>Lees alles over het hoe en wat van inschrijven</sv:value>
       </sv:property>
-      <sv:node sv:name="hsl:image">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hippogallerypicker:imagelink</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippo:docbase" sv:type="String">
-          <sv:value>8d154015-2946-4d43-9003-ca8a31640797</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
-      </sv:node>
-      <sv:node sv:name="hsl:body">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hippostd:html</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippostd:content" sv:type="String">
-          <sv:value/>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="hsl:icon">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hippogallerypicker:imagelink</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippo:docbase" sv:type="String">
-          <sv:value>2b3a5f59-47cd-41fb-ad05-a712a72a1d3e</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
-      </sv:node>
-      <sv:node sv:name="hsl:links">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hsl:Link</sv:value>
-        </sv:property>
-        <sv:node sv:name="hsl:internallink">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>hsl:InternalLink</sv:value>
-          </sv:property>
-          <sv:property sv:name="hsl:alt" sv:type="String">
-            <sv:value>Over HL</sv:value>
-          </sv:property>
-          <sv:property sv:name="hsl:linkTitle" sv:type="String">
-            <sv:value>Over HL</sv:value>
-          </sv:property>
-          <sv:node sv:name="hsl:link">
-            <sv:property sv:name="jcr:primaryType" sv:type="Name">
-              <sv:value>hippo:mirror</sv:value>
-            </sv:property>
-            <sv:property sv:name="hippo:docbase" sv:type="String">
-              <sv:value>6c27f3b6-2fd2-448d-827c-0fdefab1f675</sv:value>
-            </sv:property>
-          </sv:node>
-        </sv:node>
-      </sv:node>
-    </sv:node>
-  </sv:node>
-  <sv:node sv:name="teaser-test-three">
-    <sv:property sv:name="jcr:primaryType" sv:type="Name">
-      <sv:value>hippo:handle</sv:value>
-    </sv:property>
-    <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
-      <sv:value>mix:referenceable</sv:value>
-      <sv:value>hippo:translated</sv:value>
-    </sv:property>
-    <sv:property sv:name="jcr:uuid" sv:type="String">
-      <sv:value>d7ace69a-49f5-4451-8955-255f3550b510</sv:value>
-    </sv:property>
-    <sv:node sv:name="teaser-test-three">
-      <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hsl:TeaserDocument</sv:value>
-      </sv:property>
-      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
-        <sv:value>mix:referenceable</sv:value>
-        <sv:value>mix:versionable</sv:value>
-      </sv:property>
-      <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>4fe2a89b-3e69-4c39-9eb5-d1c37923a5da</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
-        <sv:value>preview</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippo:related___pathreference" sv:type="String">
-        <sv:value>teasers/teaser-test-three/teaser-test-three[3]</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippostd:state" sv:type="String">
-        <sv:value>unpublished</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippostd:stateSummary" sv:type="String">
-        <sv:value>live</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
-        <sv:value>admin</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
-        <sv:value>2014-09-02T12:53:07.728+02:00</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-        <sv:value>2014-09-03T11:43:08.657+02:00</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
-        <sv:value>admin</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippotranslation:id" sv:type="String">
-        <sv:value>db70bccc-069e-488f-ba52-dffe3f9c87d9</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippotranslation:locale" sv:type="String">
-        <sv:value>nl</sv:value>
+      <sv:property sv:name="hsl:color" sv:type="String">
+        <sv:value>groen</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:title" sv:type="String">
         <sv:value>Info over inschrijven</sv:value>
       </sv:property>
-      <sv:node sv:name="hsl:image">
+      <sv:node sv:name="hsl:link">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hippogallerypicker:imagelink</sv:value>
+          <sv:value>hsl:InternalLink</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:docbase" sv:type="String">
-          <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
+        <sv:property sv:name="hsl:alt" sv:type="String">
+          <sv:value>Info over inschrijven</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
-      </sv:node>
-      <sv:node sv:name="hsl:body">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hippostd:html</sv:value>
+        <sv:property sv:name="hsl:linkTitle" sv:type="String">
+          <sv:value>Meer informatie</sv:value>
         </sv:property>
-        <sv:property sv:name="hippostd:content" sv:type="String">
-          <sv:value>&lt;p&gt;Lees alles over het hoe en wat van inschrijven&lt;/p&gt;</sv:value>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="hsl:icon">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hippogallerypicker:imagelink</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippo:docbase" sv:type="String">
-          <sv:value>5fb52229-991d-4253-9759-446328a1b5f6</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
-      </sv:node>
-      <sv:node sv:name="hsl:links">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hsl:Link</sv:value>
-        </sv:property>
-        <sv:node sv:name="hsl:internallink">
+        <sv:node sv:name="hsl:link">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>hsl:InternalLink</sv:value>
+            <sv:value>hippo:mirror</sv:value>
           </sv:property>
-          <sv:property sv:name="hsl:alt" sv:type="String">
-            <sv:value>go to Inschrijfinformatie</sv:value>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>db0484fc-60bc-4e61-a6ed-1d7777e09f43</sv:value>
           </sv:property>
-          <sv:property sv:name="hsl:linkTitle" sv:type="String">
-            <sv:value>meer informatie</sv:value>
-          </sv:property>
-          <sv:node sv:name="hsl:link">
-            <sv:property sv:name="jcr:primaryType" sv:type="Name">
-              <sv:value>hippo:mirror</sv:value>
-            </sv:property>
-            <sv:property sv:name="hippo:docbase" sv:type="String">
-              <sv:value>db0484fc-60bc-4e61-a6ed-1d7777e09f43</sv:value>
-            </sv:property>
-          </sv:node>
-        </sv:node>
-      </sv:node>
-    </sv:node>
-    <sv:node sv:name="hippo:translation">
-      <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hippo:translation</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippo:language" sv:type="String">
-        <sv:value/>
-      </sv:property>
-      <sv:property sv:name="hippo:message" sv:type="String">
-        <sv:value>Teaser test three</sv:value>
-      </sv:property>
-    </sv:node>
-    <sv:node sv:name="teaser-test-three">
-      <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hsl:TeaserDocument</sv:value>
-      </sv:property>
-      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
-        <sv:value>mix:referenceable</sv:value>
-      </sv:property>
-      <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>6685f019-9e45-48fa-a356-171a08d9732e</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true"/>
-      <sv:property sv:name="hippo:related___pathreference" sv:type="String">
-        <sv:value>teasers/teaser-test-three/teaser-test-three</sv:value>
-        <sv:value>teasers/teaser-test-three/teaser-test-three[3]</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippostd:state" sv:type="String">
-        <sv:value>draft</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippostd:stateSummary" sv:type="String">
-        <sv:value>live</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
-        <sv:value>admin</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
-        <sv:value>2014-09-02T12:53:07.728+02:00</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-        <sv:value>2014-09-03T11:42:12.881+02:00</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
-        <sv:value>admin</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippotranslation:id" sv:type="String">
-        <sv:value>db70bccc-069e-488f-ba52-dffe3f9c87d9</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippotranslation:locale" sv:type="String">
-        <sv:value>nl</sv:value>
-      </sv:property>
-      <sv:property sv:name="hsl:title" sv:type="String">
-        <sv:value>Info over inschrijven</sv:value>
-      </sv:property>
-      <sv:node sv:name="hsl:image">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hippogallerypicker:imagelink</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippo:docbase" sv:type="String">
-          <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
-      </sv:node>
-      <sv:node sv:name="hsl:body">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hippostd:html</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippostd:content" sv:type="String">
-          <sv:value>&lt;p&gt;Lees alles over het hoe en wat van inschrijven&lt;/p&gt;</sv:value>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="hsl:icon">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hippogallerypicker:imagelink</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippo:docbase" sv:type="String">
-          <sv:value>5fb52229-991d-4253-9759-446328a1b5f6</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
-      </sv:node>
-      <sv:node sv:name="hsl:links">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hsl:Link</sv:value>
-        </sv:property>
-        <sv:node sv:name="hsl:internallink">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>hsl:InternalLink</sv:value>
-          </sv:property>
-          <sv:property sv:name="hsl:alt" sv:type="String">
-            <sv:value>go to Inschrijfinformatie</sv:value>
-          </sv:property>
-          <sv:property sv:name="hsl:linkTitle" sv:type="String">
-            <sv:value>meer informatie</sv:value>
-          </sv:property>
-          <sv:node sv:name="hsl:link">
-            <sv:property sv:name="jcr:primaryType" sv:type="Name">
-              <sv:value>hippo:mirror</sv:value>
-            </sv:property>
-            <sv:property sv:name="hippo:docbase" sv:type="String">
-              <sv:value>db0484fc-60bc-4e61-a6ed-1d7777e09f43</sv:value>
-            </sv:property>
-          </sv:node>
-        </sv:node>
-      </sv:node>
-    </sv:node>
-    <sv:node sv:name="teaser-test-three">
-      <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hsl:TeaserDocument</sv:value>
-      </sv:property>
-      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
-        <sv:value>mix:referenceable</sv:value>
-      </sv:property>
-      <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>fb23890f-e339-42d5-be1a-77a1991dab54</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
-        <sv:value>live</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippo:related___pathreference" sv:type="String">
-        <sv:value>teasers/teaser-test-three/teaser-test-three</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippostd:state" sv:type="String">
-        <sv:value>published</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippostd:stateSummary" sv:type="String">
-        <sv:value>live</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
-        <sv:value>admin</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
-        <sv:value>2014-09-02T12:53:07.728+02:00</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-        <sv:value>2014-09-03T11:43:08.657+02:00</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
-        <sv:value>admin</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-        <sv:value>2014-09-03T11:43:10.659+02:00</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippotranslation:id" sv:type="String">
-        <sv:value>db70bccc-069e-488f-ba52-dffe3f9c87d9</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippotranslation:locale" sv:type="String">
-        <sv:value>nl</sv:value>
-      </sv:property>
-      <sv:property sv:name="hsl:title" sv:type="String">
-        <sv:value>Info over inschrijven</sv:value>
-      </sv:property>
-      <sv:node sv:name="hsl:image">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hippogallerypicker:imagelink</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippo:docbase" sv:type="String">
-          <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
-      </sv:node>
-      <sv:node sv:name="hsl:body">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hippostd:html</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippostd:content" sv:type="String">
-          <sv:value>&lt;p&gt;Lees alles over het hoe en wat van inschrijven&lt;/p&gt;</sv:value>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="hsl:icon">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hippogallerypicker:imagelink</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippo:docbase" sv:type="String">
-          <sv:value>5fb52229-991d-4253-9759-446328a1b5f6</sv:value>
-        </sv:property>
-        <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
-        <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
-      </sv:node>
-      <sv:node sv:name="hsl:links">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hsl:Link</sv:value>
-        </sv:property>
-        <sv:node sv:name="hsl:internallink">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>hsl:InternalLink</sv:value>
-          </sv:property>
-          <sv:property sv:name="hsl:alt" sv:type="String">
-            <sv:value>go to Inschrijfinformatie</sv:value>
-          </sv:property>
-          <sv:property sv:name="hsl:linkTitle" sv:type="String">
-            <sv:value>meer informatie</sv:value>
-          </sv:property>
-          <sv:node sv:name="hsl:link">
-            <sv:property sv:name="jcr:primaryType" sv:type="Name">
-              <sv:value>hippo:mirror</sv:value>
-            </sv:property>
-            <sv:property sv:name="hippo:docbase" sv:type="String">
-              <sv:value>db0484fc-60bc-4e61-a6ed-1d7777e09f43</sv:value>
-            </sv:property>
-          </sv:node>
         </sv:node>
       </sv:node>
     </sv:node>

@@ -19,6 +19,7 @@
 </c:if>
 
 <c:if test="${not empty model.items and fn:length(model.items)>0}">
+
   <div class="catalog teasers">
     <div class="widget-title">
       <h2><c:out value="${model.info.widgetTitle}" escapeXml="true" /></h2>
@@ -26,44 +27,32 @@
     
     <c:forEach var="item" items="${model.items}" varStatus="zebra">
       <c:if test="${not empty item }">
-        <div class="item-with-image">
         
-          <%-- teaser title --%>
-          <c:if test="${not empty item.title }">
-            <h2>
-              <c:if test="${not empty item.icon }">
-                <img src="<hst:link hippobean="${item.icon.paragraphImage }" />" 
-                     alt="<c:out value="${item.title }" escapeXml="true" />" 
-                     title="<c:out value="${item.title }" escapeXml="true" />" 
-                     class="title-icon"/>
-              </c:if>
-              <c:out value="${item.title }" escapeXml="true" />
-            </h2>
-          </c:if>
-          
-          <%-- teaser image --%>
-          <c:if test="${not empty item.image }">
-            <div class="teaser-image">
-              <hst:link var="image" hippobean="${item.image.listImageLarge }" />
-              <img alt="${item.title }" src="${image }" title="${item.title }"/>
-            </div>
-          </c:if>
-          
-          <%-- teaser text --%>
-          <c:if test="${not empty item.body }">
-            <hst:html hippohtml="${item.body }"/>
-          </c:if>
-                      
-          <%-- teaser list of links --%>
-          <c:if test="${not empty item.links }">
-            <ul class="teaserLinks">
-              <c:forEach items="${item.links }" var="link">
-                <tag:renderLink link="${link}"/>
-              </c:forEach>
-            </ul>
-          </c:if>
-          
-        </div>
+        <c:set var="sectionClass">
+          <c:choose>
+            <c:when test="${item.color eq 'blauw'}">
+              <c:out value="colorbg blauw large"/>
+            </c:when>
+            <c:when test="${item.color eq 'groen'}"> 
+              <c:out value="colorbg groen medium"/>
+            </c:when>
+            <c:otherwise>
+               <c:out value="colorbg"/>
+            </c:otherwise>
+          </c:choose>
+        </c:set> 
+        
+        <section class="blok ${sectionClass}">
+            <c:set var="displayLink"><hst:link hippobean="${link.internallink.link }" /></c:set>
+            <a href="${displayLink}" title="${item.link.alt}">
+              <h1>
+                <c:out value="${item.title}"/>
+              </h1>
+              <h2><c:out value="${item.body}"/></h2>
+              <span class="btn"><c:out value="${item.link.linkTitle}"/></span>
+            </a>
+        </section>
+        
       </c:if>
     </c:forEach>
     

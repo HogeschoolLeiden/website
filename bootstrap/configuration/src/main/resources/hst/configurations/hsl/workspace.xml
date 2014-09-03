@@ -1004,14 +1004,6 @@
           <sv:value>HST.vBox</sv:value>
         </sv:property>
       </sv:node>
-      <sv:node sv:name="leftTop">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hst:containercomponent</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:xtype" sv:type="String">
-          <sv:value>HST.vBox</sv:value>
-        </sv:property>
-      </sv:node>
       <sv:node sv:name="leftBottom">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hst:containercomponent</sv:value>
@@ -1048,9 +1040,6 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hst:containercomponent</sv:value>
         </sv:property>
-        <sv:property sv:name="hst:lastmodified" sv:type="Date">
-          <sv:value>2014-07-25T11:16:42.096+02:00</sv:value>
-        </sv:property>
         <sv:property sv:name="hst:xtype" sv:type="String">
           <sv:value>HST.vBox</sv:value>
         </sv:property>
@@ -1067,7 +1056,7 @@
           <sv:property sv:name="hst:label" sv:type="String">
             <sv:value>Gerelateerde Nieuws</sv:value>
           </sv:property>
-          <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+          <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
             <sv:value>contentBeanPath</sv:value>
             <sv:value>sortBy</sv:value>
             <sv:value>overviewBeanPath</sv:value>
@@ -1080,7 +1069,7 @@
             <sv:value>overFilter</sv:value>
             <sv:value>size</sv:value>
           </sv:property>
-          <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+          <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
             <sv:value/>
             <sv:value>Publicatiedatum</sv:value>
             <sv:value/>
@@ -1101,16 +1090,55 @@
           </sv:property>
         </sv:node>
       </sv:node>
-      <sv:node sv:name="rightTop">
+      <sv:node sv:name="leftTop">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hst:containercomponent</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:lastmodified" sv:type="Date">
-          <sv:value>2014-07-25T11:16:42.096+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hst:xtype" sv:type="String">
           <sv:value>HST.vBox</sv:value>
         </sv:property>
+      </sv:node>
+      <sv:node sv:name="rightTop">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:containercomponent</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:xtype" sv:type="String">
+          <sv:value>HST.vBox</sv:value>
+        </sv:property>
+        <sv:node sv:name="teasers">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:containeritemcomponent</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:componentclassname" sv:type="String">
+            <sv:value>nl.hsleiden.components.catalog.Teasers</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:iconpath" sv:type="String">
+            <sv:value>images/catalog/teaser-icon.jpg</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:label" sv:type="String">
+            <sv:value>Teasers</sv:value>
+          </sv:property>
+          <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
+            <sv:value>thirdTeaser</sv:value>
+            <sv:value>tryToUseMixin</sv:value>
+            <sv:value>widgetTitle</sv:value>
+            <sv:value>firstTeaser</sv:value>
+            <sv:value>secondTeaser</sv:value>
+          </sv:property>
+          <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
+            <sv:value/>
+            <sv:value>on</sv:value>
+            <sv:value>Teasers</sv:value>
+            <sv:value/>
+            <sv:value/>
+          </sv:property>
+          <sv:property sv:name="hst:template" sv:type="String">
+            <sv:value>catalog.teasers</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:xtype" sv:type="String">
+            <sv:value>HST.Item</sv:value>
+          </sv:property>
+        </sv:node>
         <sv:node sv:name="calendar">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>hst:containeritemcomponent</sv:value>
@@ -1124,14 +1152,14 @@
           <sv:property sv:name="hst:label" sv:type="String">
             <sv:value>Evenementen Kalender</sv:value>
           </sv:property>
-          <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+          <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
             <sv:value>title</sv:value>
             <sv:value>scope</sv:value>
             <sv:value>themaFilter</sv:value>
             <sv:value>overFilter</sv:value>
             <sv:value>tryToUseMixin</sv:value>
           </sv:property>
-          <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+          <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
             <sv:value>Related Items</sv:value>
             <sv:value/>
             <sv:value>off</sv:value>
@@ -1161,14 +1189,14 @@
           <sv:property sv:name="hst:label" sv:type="String">
             <sv:value>Contactpersonen</sv:value>
           </sv:property>
-          <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+          <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
             <sv:value>firstContact</sv:value>
             <sv:value>secondContact</sv:value>
             <sv:value>tryToUseMixin</sv:value>
             <sv:value>widgetTitle</sv:value>
             <sv:value>thirdContact</sv:value>
           </sv:property>
-          <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+          <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
             <sv:value/>
             <sv:value/>
             <sv:value>on</sv:value>
