@@ -1314,4 +1314,55 @@
       <sv:value>pages/service/payment-confirmation</sv:value>
     </sv:property>
   </sv:node>
+  <sv:node sv:name="medewerkers">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:sitemapitem</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+      <sv:value>hst:pages/genericoverview</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+      <sv:value>contentBeanPath</sv:value>
+      <sv:value>showTypes</sv:value>
+      <sv:value>defaultPageSize</sv:value>
+      <sv:value>sortBy</sv:value>
+      <sv:value>sortOrder</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+      <sv:value>pages/medewerkers</sv:value>
+      <sv:value>hslbeans.PersonnelPage</sv:value>
+      <sv:value>4</sv:value>
+      <sv:value>hsl:title</sv:value>
+      <sv:value>descending</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:refId" sv:type="String">
+      <sv:value>medewerkers</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+      <sv:value>pages/medewerkers/index</sv:value>
+    </sv:property>
+    <sv:node sv:name="_any_">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:sitemapitem</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+        <sv:value>hst:pages/pagenotfound</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentconfigurationmappingnames" sv:type="String" sv:multiple="true">
+        <sv:value>hsl:PersonnelPage</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentconfigurationmappingvalues" sv:type="String" sv:multiple="true">
+        <sv:value>hst:pages/personnelpage</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+        <sv:value>overviewSitemapRefId</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+        <sv:value>medewerkers</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+        <sv:value>pages/medewerkers/${1}</sv:value>
+      </sv:property>
+    </sv:node>
+  </sv:node>
 </sv:node>

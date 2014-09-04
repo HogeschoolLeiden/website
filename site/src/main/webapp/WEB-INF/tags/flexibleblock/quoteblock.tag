@@ -33,8 +33,16 @@
                 
 <blockquote class="media">
   <c:if test="${not empty image}">
-      <%-- pull-left or pull-right shall come from content model --%>
-      <img class="pull-left" alt="${content.quoteParameters.name }" src="${image }" title="${content.quoteParameters.name }"/>
+      <c:choose>
+        <c:when test="${content.quoteParameters.position eq 'right' }">
+          <img class="pull-right" alt="${content.quoteParameters.name }" src="${image }" 
+              title="${content.quoteParameters.name }"/>
+        </c:when>
+        <c:otherwise>
+          <img class="pull-left" alt="${content.quoteParameters.name }" src="${image }" 
+              title="${content.quoteParameters.name }"/>
+        </c:otherwise>
+      </c:choose>
   </c:if>
 
   <div class="media-body">
@@ -46,7 +54,6 @@
     <h3>
       <c:out value="${quoteAuthor }" />
     </h3>
-    
 
     <c:if test="${content.shareParameters.twitter or content.shareParameters.linkedin }">
     <div class="share">
@@ -80,11 +87,11 @@
           <c:param name="status" value="${twitterQuote}"/>
         </c:url>
   
-      <li>
-        <a class="twitter" target="_blank" title="${twitter}" href="${fn:escapeXml(twQuoteUrl)}" > 
-           <c:out value="${twitter}" />
-        </a>
-      </li>
+        <li>
+          <a class="twitter" target="_blank" title="${twitter}" href="${fn:escapeXml(twQuoteUrl)}" > 
+             <c:out value="${twitter}" />
+          </a>
+        </li>
       </c:if>
     </ul>
     </div>
