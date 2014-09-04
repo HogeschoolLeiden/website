@@ -2,23 +2,6 @@
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>hst:sitemap</sv:value>
   </sv:property>
-  <sv:node sv:name="root">
-    <sv:property sv:name="jcr:primaryType" sv:type="Name">
-      <sv:value>hst:sitemapitem</sv:value>
-    </sv:property>
-    <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
-      <sv:value>hst:pages/lectoratpage</sv:value>
-    </sv:property>
-    <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
-      <sv:value>menuName</sv:value>
-    </sv:property>
-    <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
-      <sv:value>lectoraten</sv:value>
-    </sv:property>
-    <sv:property sv:name="hst:relativecontentpath" sv:type="String">
-      <sv:value>pages/homepage</sv:value>
-    </sv:property>
-  </sv:node>
   <sv:node sv:name="_any_">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:sitemapitem</sv:value>
@@ -31,23 +14,52 @@
       <sv:value>hsl:EventPage</sv:value>
       <sv:value>hsl:ArticlePage</sv:value>
       <sv:value>hsl:Lectorat</sv:value>
+      <sv:value>hsl:OverviewPage</sv:value>
+      <sv:value>hsl:PersonnelPage</sv:value>
     </sv:property>
     <sv:property sv:name="hst:componentconfigurationmappingvalues" sv:type="String" sv:multiple="true">
       <sv:value>hst:pages/newspage</sv:value>
       <sv:value>hst:pages/eventpage</sv:value>
       <sv:value>hst:pages/articlepage</sv:value>
       <sv:value>hst:pages/lectoratpage</sv:value>
+      <sv:value>hst:pages/medewerkersoverview</sv:value>
+      <sv:value>hst:pages/personnelpage</sv:value>
     </sv:property>
     <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
       <sv:value>level</sv:value>
-      <sv:value>menuName</sv:value>
+      <sv:value>topMenuName</sv:value>
+      <sv:value>leftMenuName</sv:value>
+      <sv:value>breadcrumbMenuName</sv:value>
     </sv:property>
     <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
       <sv:value>0</sv:value>
-      <sv:value>lectoraten</sv:value>
+      <sv:value>lectoratenTop</sv:value>
+      <sv:value>lectoratenLeft</sv:value>
+      <sv:value>lectoratenLeft</sv:value>
     </sv:property>
     <sv:property sv:name="hst:relativecontentpath" sv:type="String">
       <sv:value>pages/${1}</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="root">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:sitemapitem</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+      <sv:value>hst:pages/lectoratpage</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+      <sv:value>topMenuName</sv:value>
+      <sv:value>leftMenuName</sv:value>
+      <sv:value>breadcrumbMenuName</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+      <sv:value>lectoratenTop</sv:value>
+      <sv:value>lectoratenLeft</sv:value>
+      <sv:value>lectoratenLeft</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+      <sv:value>pages/homepage</sv:value>
     </sv:property>
   </sv:node>
 </sv:node>

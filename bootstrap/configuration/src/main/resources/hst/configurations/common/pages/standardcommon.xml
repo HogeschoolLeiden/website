@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<sv:node sv:name="standardcommon" xmlns:sv="http://www.jcp.org/jcr/sv/1.0">
+<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="standardcommon">
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>hst:component</sv:value>
   </sv:property>
@@ -23,11 +22,11 @@
       <sv:property sv:name="hst:componentclassname" sv:type="String">
         <sv:value>com.tdclighthouse.prototype.components.Navigation</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
+      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
         <sv:value>menuName</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
-        <sv:value>${menuName}</sv:value>
+      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+        <sv:value>${topMenuName}</sv:value>
       </sv:property>
       <sv:property sv:name="hst:template" sv:type="String">
         <sv:value>standard.header.mainmenu</sv:value>
@@ -40,10 +39,10 @@
       <sv:property sv:name="hst:componentclassname" sv:type="String">
         <sv:value>com.tdclighthouse.prototype.components.SimpleNavigation</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
+      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
         <sv:value>menuName</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
+      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
         <sv:value>service</sv:value>
       </sv:property>
       <sv:property sv:name="hst:template" sv:type="String">
@@ -56,10 +55,10 @@
         <sv:property sv:name="hst:componentclassname" sv:type="String">
           <sv:value>nl.openweb.hippo.components.ElasticSearchBox</sv:value>
         </sv:property>
-        <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
+        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
           <sv:value>facets</sv:value>
         </sv:property>
-        <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
+        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
           <sv:value>{"types":["NewsPage","WebPage"],"scope":"pages","facets":[{"title":"Subject","term":"subjecttags"},{"title":"Thema","term":"thematags"}],"suggestions":{"ngramFileds":["nGram"],"numberOfDocuments":5,"maxSuggestions":10}}</sv:value>
         </sv:property>
         <sv:property sv:name="hst:resourcetemplate" sv:type="String">
@@ -78,10 +77,10 @@
     <sv:property sv:name="hst:componentclassname" sv:type="String">
       <sv:value>nl.hsleiden.components.MainComponent</sv:value>
     </sv:property>
-    <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
+    <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
       <sv:value>overviewSitemapRefId</sv:value>
     </sv:property>
-    <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
+    <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
       <sv:value>${overviewSitemapRefId}</sv:value>
     </sv:property>
     <sv:property sv:name="hst:template" sv:type="String">
@@ -129,10 +128,10 @@
       <sv:property sv:name="hst:componentclassname" sv:type="String">
         <sv:value>nl.hsleiden.components.CrossDomainNavigation</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
+      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
         <sv:value>menuName</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
+      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
         <sv:value>footer</sv:value>
       </sv:property>
       <sv:property sv:name="hst:template" sv:type="String">
@@ -146,10 +145,10 @@
       <sv:property sv:name="hst:componentclassname" sv:type="String">
         <sv:value>nl.hsleiden.components.CrossDomainNavigation</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
+      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
         <sv:value>menuName</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
+      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
         <sv:value>footerService</sv:value>
       </sv:property>
       <sv:property sv:name="hst:template" sv:type="String">
@@ -162,10 +161,10 @@
         <sv:property sv:name="hst:componentclassname" sv:type="String">
           <sv:value>nl.hsleiden.components.CrossDomainNavigation</sv:value>
         </sv:property>
-        <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
+        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
           <sv:value>menuName</sv:value>
         </sv:property>
-        <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
+        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
           <sv:value>footerExtra</sv:value>
         </sv:property>
         <sv:property sv:name="hst:template" sv:type="String">

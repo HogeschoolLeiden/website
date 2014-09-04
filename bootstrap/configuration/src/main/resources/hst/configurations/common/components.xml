@@ -50,11 +50,9 @@
     </sv:property>
     <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
       <sv:value>level</sv:value>
-      <sv:value>menuName</sv:value>
     </sv:property>
     <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
       <sv:value>${level}</sv:value>
-      <sv:value>${menuName}</sv:value>
     </sv:property>
     <sv:property sv:name="hst:template" sv:type="String">
       <sv:value>components.leftnavigation</sv:value>
@@ -88,7 +86,7 @@
       <sv:value>menuName</sv:value>
     </sv:property>
     <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
-      <sv:value>${menuName}</sv:value>
+      <sv:value>${breadcrumbMenuName}</sv:value>
     </sv:property>
     <sv:property sv:name="hst:template" sv:type="String">
       <sv:value>components.breadcrumb</sv:value>

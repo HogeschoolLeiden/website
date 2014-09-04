@@ -2,12 +2,12 @@
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>hst:pages</sv:value>
   </sv:property>
-  <sv:node sv:name="searchpage">
+  <sv:node sv:name="articlepage">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:component</sv:value>
     </sv:property>
     <sv:property sv:name="hst:referencecomponent" sv:type="String">
-      <sv:value>hst:pages/searchpagecommon</sv:value>
+      <sv:value>hst:pages/articlepagecommon</sv:value>
     </sv:property>
     <sv:node sv:name="main">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -18,7 +18,7 @@
           <sv:value>hst:containercomponentreference</sv:value>
         </sv:property>
         <sv:property sv:name="hst:referencecomponent" sv:type="String">
-          <sv:value>subsitesearchpage/top-container</sv:value>
+          <sv:value>subsitearticlepage/top-container</sv:value>
         </sv:property>
       </sv:node>
       <sv:node sv:name="leftTop">
@@ -26,7 +26,7 @@
           <sv:value>hst:containercomponentreference</sv:value>
         </sv:property>
         <sv:property sv:name="hst:referencecomponent" sv:type="String">
-          <sv:value>subsitesearchpage/leftTop</sv:value>
+          <sv:value>subsitearticlepage/leftTop</sv:value>
         </sv:property>
       </sv:node>
       <sv:node sv:name="leftBottom">
@@ -34,7 +34,7 @@
           <sv:value>hst:containercomponentreference</sv:value>
         </sv:property>
         <sv:property sv:name="hst:referencecomponent" sv:type="String">
-          <sv:value>subsitesearchpage/leftBottom</sv:value>
+          <sv:value>subsitearticlepage/leftBottom</sv:value>
         </sv:property>
       </sv:node>
       <sv:node sv:name="contentTop">
@@ -42,7 +42,7 @@
           <sv:value>hst:containercomponentreference</sv:value>
         </sv:property>
         <sv:property sv:name="hst:referencecomponent" sv:type="String">
-          <sv:value>subsitesearchpage/contentTop</sv:value>
+          <sv:value>subsitearticlepage/contentTop</sv:value>
         </sv:property>
       </sv:node>
       <sv:node sv:name="content">
@@ -54,7 +54,7 @@
             <sv:value>hst:containercomponentreference</sv:value>
           </sv:property>
           <sv:property sv:name="hst:referencecomponent" sv:type="String">
-            <sv:value>subsitesearchpage/rightTop</sv:value>
+            <sv:value>subsitearticlepage/rightTop</sv:value>
           </sv:property>
         </sv:node>
         <sv:node sv:name="rightBottom">
@@ -62,7 +62,7 @@
             <sv:value>hst:containercomponentreference</sv:value>
           </sv:property>
           <sv:property sv:name="hst:referencecomponent" sv:type="String">
-            <sv:value>subsitesearchpage/rightBottom</sv:value>
+            <sv:value>subsitearticlepage/rightBottom</sv:value>
           </sv:property>
         </sv:node>
       </sv:node>
@@ -71,7 +71,7 @@
           <sv:value>hst:containercomponentreference</sv:value>
         </sv:property>
         <sv:property sv:name="hst:referencecomponent" sv:type="String">
-          <sv:value>subsitesearchpage/contentBottom</sv:value>
+          <sv:value>subsitearticlepage/contentBottom</sv:value>
         </sv:property>
       </sv:node>
       <sv:node sv:name="bottom-container">
@@ -79,7 +79,7 @@
           <sv:value>hst:containercomponentreference</sv:value>
         </sv:property>
         <sv:property sv:name="hst:referencecomponent" sv:type="String">
-          <sv:value>subsitesearchpage/bottom-container</sv:value>
+          <sv:value>subsitearticlepage/bottom-container</sv:value>
         </sv:property>
       </sv:node>
     </sv:node>
@@ -166,170 +166,6 @@
       </sv:node>
     </sv:node>
   </sv:node>
-  <sv:node sv:name="lectoratpage">
-    <sv:property sv:name="jcr:primaryType" sv:type="Name">
-      <sv:value>hst:component</sv:value>
-    </sv:property>
-    <sv:property sv:name="hst:referencecomponent" sv:type="String">
-      <sv:value>hst:pages/lectoratpagecommon</sv:value>
-    </sv:property>
-    <sv:node sv:name="main">
-      <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hst:component</sv:value>
-      </sv:property>
-      <sv:node sv:name="top-container">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hst:containercomponentreference</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:referencecomponent" sv:type="String">
-          <sv:value>lectoratpage/top-container</sv:value>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="leftTop">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hst:containercomponentreference</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:referencecomponent" sv:type="String">
-          <sv:value>lectoratpage/leftTop</sv:value>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="leftBottom">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hst:containercomponentreference</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:referencecomponent" sv:type="String">
-          <sv:value>lectoratpage/leftBottom</sv:value>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="contentTop">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hst:containercomponentreference</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:referencecomponent" sv:type="String">
-          <sv:value>lectoratpage/contentTop</sv:value>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="content">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hst:component</sv:value>
-        </sv:property>
-        <sv:node sv:name="rightTop">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>hst:containercomponentreference</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:referencecomponent" sv:type="String">
-            <sv:value>lectoratpage/rightTop</sv:value>
-          </sv:property>
-        </sv:node>
-        <sv:node sv:name="rightBottom">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>hst:containercomponentreference</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:referencecomponent" sv:type="String">
-            <sv:value>lectoratpage/rightBottom</sv:value>
-          </sv:property>
-        </sv:node>
-      </sv:node>
-      <sv:node sv:name="contentBottom">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hst:containercomponentreference</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:referencecomponent" sv:type="String">
-          <sv:value>lectoratpage/contentBottom</sv:value>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="bottom-container">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hst:containercomponentreference</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:referencecomponent" sv:type="String">
-          <sv:value>lectoratpage/bottom-container</sv:value>
-        </sv:property>
-      </sv:node>
-    </sv:node>
-  </sv:node>
-  <sv:node sv:name="articlepage">
-    <sv:property sv:name="jcr:primaryType" sv:type="Name">
-      <sv:value>hst:component</sv:value>
-    </sv:property>
-    <sv:property sv:name="hst:referencecomponent" sv:type="String">
-      <sv:value>hst:pages/articlepagecommon</sv:value>
-    </sv:property>
-    <sv:node sv:name="main">
-      <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hst:component</sv:value>
-      </sv:property>
-      <sv:node sv:name="top-container">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hst:containercomponentreference</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:referencecomponent" sv:type="String">
-          <sv:value>subsitearticlepage/top-container</sv:value>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="leftTop">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hst:containercomponentreference</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:referencecomponent" sv:type="String">
-          <sv:value>subsitearticlepage/leftTop</sv:value>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="leftBottom">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hst:containercomponentreference</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:referencecomponent" sv:type="String">
-          <sv:value>subsitearticlepage/leftBottom</sv:value>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="contentTop">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hst:containercomponentreference</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:referencecomponent" sv:type="String">
-          <sv:value>subsitearticlepage/contentTop</sv:value>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="content">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hst:component</sv:value>
-        </sv:property>
-        <sv:node sv:name="rightTop">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>hst:containercomponentreference</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:referencecomponent" sv:type="String">
-            <sv:value>subsitearticlepage/rightTop</sv:value>
-          </sv:property>
-        </sv:node>
-        <sv:node sv:name="rightBottom">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>hst:containercomponentreference</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:referencecomponent" sv:type="String">
-            <sv:value>subsitearticlepage/rightBottom</sv:value>
-          </sv:property>
-        </sv:node>
-      </sv:node>
-      <sv:node sv:name="contentBottom">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hst:containercomponentreference</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:referencecomponent" sv:type="String">
-          <sv:value>subsitearticlepage/contentBottom</sv:value>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="bottom-container">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hst:containercomponentreference</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:referencecomponent" sv:type="String">
-          <sv:value>subsitearticlepage/bottom-container</sv:value>
-        </sv:property>
-      </sv:node>
-    </sv:node>
-  </sv:node>
   <sv:node sv:name="eventpage">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:component</sv:value>
@@ -412,6 +248,170 @@
       </sv:node>
     </sv:node>
   </sv:node>
+  <sv:node sv:name="lectoratpage">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:component</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:referencecomponent" sv:type="String">
+      <sv:value>hst:pages/lectoratpagecommon</sv:value>
+    </sv:property>
+    <sv:node sv:name="main">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:component</sv:value>
+      </sv:property>
+      <sv:node sv:name="top-container">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:containercomponentreference</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencecomponent" sv:type="String">
+          <sv:value>lectoratpage/top-container</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="leftTop">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:containercomponentreference</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencecomponent" sv:type="String">
+          <sv:value>lectoratpage/leftTop</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="leftBottom">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:containercomponentreference</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencecomponent" sv:type="String">
+          <sv:value>lectoratpage/leftBottom</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="contentTop">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:containercomponentreference</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencecomponent" sv:type="String">
+          <sv:value>lectoratpage/contentTop</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="content">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:component</sv:value>
+        </sv:property>
+        <sv:node sv:name="rightTop">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:containercomponentreference</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:referencecomponent" sv:type="String">
+            <sv:value>lectoratpage/rightTop</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="rightBottom">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:containercomponentreference</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:referencecomponent" sv:type="String">
+            <sv:value>lectoratpage/rightBottom</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="contentBottom">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:containercomponentreference</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencecomponent" sv:type="String">
+          <sv:value>lectoratpage/contentBottom</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="bottom-container">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:containercomponentreference</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencecomponent" sv:type="String">
+          <sv:value>lectoratpage/bottom-container</sv:value>
+        </sv:property>
+      </sv:node>
+    </sv:node>
+  </sv:node>
+  <sv:node sv:name="searchpage">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:component</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:referencecomponent" sv:type="String">
+      <sv:value>hst:pages/searchpagecommon</sv:value>
+    </sv:property>
+    <sv:node sv:name="main">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:component</sv:value>
+      </sv:property>
+      <sv:node sv:name="top-container">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:containercomponentreference</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencecomponent" sv:type="String">
+          <sv:value>subsitesearchpage/top-container</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="leftTop">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:containercomponentreference</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencecomponent" sv:type="String">
+          <sv:value>subsitesearchpage/leftTop</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="leftBottom">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:containercomponentreference</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencecomponent" sv:type="String">
+          <sv:value>subsitesearchpage/leftBottom</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="contentTop">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:containercomponentreference</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencecomponent" sv:type="String">
+          <sv:value>subsitesearchpage/contentTop</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="content">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:component</sv:value>
+        </sv:property>
+        <sv:node sv:name="rightTop">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:containercomponentreference</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:referencecomponent" sv:type="String">
+            <sv:value>subsitesearchpage/rightTop</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="rightBottom">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:containercomponentreference</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:referencecomponent" sv:type="String">
+            <sv:value>subsitesearchpage/rightBottom</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="contentBottom">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:containercomponentreference</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencecomponent" sv:type="String">
+          <sv:value>subsitesearchpage/contentBottom</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="bottom-container">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:containercomponentreference</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencecomponent" sv:type="String">
+          <sv:value>subsitesearchpage/bottom-container</sv:value>
+        </sv:property>
+      </sv:node>
+    </sv:node>
+  </sv:node>
   <sv:node sv:name="pagenotfound">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:component</sv:value>
@@ -490,6 +490,184 @@
         </sv:property>
         <sv:property sv:name="hst:referencecomponent" sv:type="String">
           <sv:value>pagenotfound/bottom-container</sv:value>
+        </sv:property>
+      </sv:node>
+    </sv:node>
+  </sv:node>
+  <sv:node sv:name="medewerkersoverview">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:component</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:referencecomponent" sv:type="String">
+      <sv:value>hst:pages/genericoverviewcommon</sv:value>
+    </sv:property>
+    <sv:node sv:name="main">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:component</sv:value>
+      </sv:property>
+      <sv:node sv:name="top-container">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:containercomponentreference</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencecomponent" sv:type="String">
+          <sv:value>medewerkersoverview/top-container</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="leftTop">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:containercomponentreference</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencecomponent" sv:type="String">
+          <sv:value>medewerkersoverview/leftTop</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="leftBottom">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:containercomponentreference</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencecomponent" sv:type="String">
+          <sv:value>medewerkersoverview/leftBottom</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="contentTop">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:containercomponentreference</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencecomponent" sv:type="String">
+          <sv:value>medewerkersoverview/contentTop</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="content">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:component</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+          <sv:value>contentBeanPath</sv:value>
+          <sv:value>showTypes</sv:value>
+          <sv:value>defaultPageSize</sv:value>
+          <sv:value>sortBy</sv:value>
+          <sv:value>sortOrder</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+          <sv:value>pages/medewerkers</sv:value>
+          <sv:value>hslbeans.PersonnelPage</sv:value>
+          <sv:value>5</sv:value>
+          <sv:value>hsl:title</sv:value>
+          <sv:value>ascending</sv:value>
+        </sv:property>
+        <sv:node sv:name="rightTop">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:containercomponentreference</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:referencecomponent" sv:type="String">
+            <sv:value>medewerkersoverview/rightTop</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="rightBottom">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:containercomponentreference</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:referencecomponent" sv:type="String">
+            <sv:value>medewerkersoverview/rightBottom</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="contentBottom">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:containercomponentreference</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencecomponent" sv:type="String">
+          <sv:value>medewerkersoverview/contentBottom</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="bottom-container">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:containercomponentreference</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencecomponent" sv:type="String">
+          <sv:value>medewerkersoverview/bottom-container</sv:value>
+        </sv:property>
+      </sv:node>
+    </sv:node>
+  </sv:node>
+  <sv:node sv:name="personnelpage">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:component</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:referencecomponent" sv:type="String">
+      <sv:value>hst:pages/personnelpagecommon</sv:value>
+    </sv:property>
+    <sv:node sv:name="main">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:component</sv:value>
+      </sv:property>
+      <sv:node sv:name="top-container">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:containercomponentreference</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencecomponent" sv:type="String">
+          <sv:value>personnelpage/top-container</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="leftTop">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:containercomponentreference</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencecomponent" sv:type="String">
+          <sv:value>personnelpage/leftTop</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="leftBottom">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:containercomponentreference</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencecomponent" sv:type="String">
+          <sv:value>personnelpage/leftBottom</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="contentTop">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:containercomponentreference</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencecomponent" sv:type="String">
+          <sv:value>personnelpage/contentTop</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="content">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:component</sv:value>
+        </sv:property>
+        <sv:node sv:name="rightTop">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:containercomponentreference</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:referencecomponent" sv:type="String">
+            <sv:value>personnelpage/rightTop</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="rightBottom">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:containercomponentreference</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:referencecomponent" sv:type="String">
+            <sv:value>personnelpage/rightBottom</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="contentBottom">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:containercomponentreference</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencecomponent" sv:type="String">
+          <sv:value>personnelpage/contentBottom</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="bottom-container">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:containercomponentreference</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencecomponent" sv:type="String">
+          <sv:value>personnelpage/bottom-container</sv:value>
         </sv:property>
       </sv:node>
     </sv:node>
