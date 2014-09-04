@@ -8,33 +8,51 @@
 <%@ taglib prefix="opw" uri="http://open-web.nl/hippo/prototype"%>
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 
-<tag:overviewIntrodution doc="${document }"></tag:overviewIntrodution>
-
-<c:if test="${hst:isReadable(document, 'rssItem') && not empty document.rssItem }">
-  <c:set var="rssLink">
-    <hst:link hippobean="${document.rssItem}"/>
-  </c:set>
-  <hst:headContribution keyHint="rssItem">
-    <link title="${document.rssItem.title}" rel="alternate" type="application/rss+xml" href="${rssLink}"/>
-  </hst:headContribution>
-</c:if>
-                      
-<c:forEach var="item" items="${items}">
-    <hst:link var="link" hippobean="${item}"/>
-    <article class="well well-large">
-        <hst:cmseditlink hippobean="${item}"/>
-        <h3><a href="${link}"><c:out value="${item.title}"/></a></h3>
-        <c:if test="${hst:isReadable(item, 'releaseDate.time')}">
-            <p class="badge badge-info">
-              <fmt:formatDate value="${item.releaseDate.time}" type="both" dateStyle="medium" timeStyle="short"/>
-            </p>
+<section class="overzicht col-md-9">
+   <h1 class="hidden"><c:out value="${document.title}"></c:out> </h1>
+   <hst:include ref="contentTop" />
+   
+   <tag:rssReader document="${document}"/>
+   
+   <div class="overzichtlijst">
+    <c:forEach var="item" items="${items}">
+    
+      <hst:link var="link" hippobean="${item}" />
+      <article class="media clearfix">
+        <hst:cmseditlink hippobean="${item}" />
+        <c:set var="image" value=""/>
+        <c:if test="${not empty tag:getFirstFlexibleBlockImage(item) }">
+          <div class="image-space">
+            <hst:link var="image" hippobean="${tag:getFirstFlexibleBlockImage(item).image.listImageMedium}" />  
+          </div>
         </c:if>
-        <p><c:out value="${item.introduction}"/></p>
-  </article>
-</c:forEach>
+      
+        <a href="${link}">
+          <!-- afmeting afbeelding: 100x100 -->
+          <figure class="media-object pull-left">
+            <c:if test="${not empty image}">
+              <img alt="${item.title }" title="${item.title }" src="${image }" />
+            </c:if>
+          </figure>
+          <tag:renderDate document="${item}" dateClass="datum start"/>
+          <div class="media-body">
+            <h1 class="media-heading"><c:out value="${item.title }"/></h1>
+            <p><c:out value="${item.introduction }"/></p>
+          </div>   
+        </a>     
 
-<tag:toolbox document="${document }" />
+      </article>
+    </c:forEach>
+  </div> 
+  
+  <div class="paginator-style">
+    <opw:simplepaginator paginator="${model.paginator}" namespaced="false"/>
+  </div>
 
-<div class="paginator-style">
-  <opw:simplepaginator paginator="${paginator}" namespaced="false"/>
-</div>
+  <hst:include ref="contentBottom" />
+  
+  <tag:toolbox document="${document }" /> 
+  
+</section>
+
+                      
