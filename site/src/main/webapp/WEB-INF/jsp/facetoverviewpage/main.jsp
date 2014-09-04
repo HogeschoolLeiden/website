@@ -49,7 +49,7 @@
                     </div>
                   </c:if>
                 
-                  <a href="">
+                  <a href="${link}">
                     <!-- afmeting afbeelding: 100x100 -->
                     <figure class="media-object pull-left">
                       <c:if test="${not empty image}">

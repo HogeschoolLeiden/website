@@ -77,7 +77,7 @@
   <hst:headContributions categoryExcludes="scripts" xhtml="true" />
   
   <c:choose>
-    <c:when test="${tag:isSubclassOfWebPage(document)}">
+    <c:when test="${tag:isSubclassOfWebPage(document) and not empty document.browserTitle}">
 	 <title><c:out value="${document.browserTitle}" escapeXml="true" /></title>
     </c:when>
     <c:otherwise>
