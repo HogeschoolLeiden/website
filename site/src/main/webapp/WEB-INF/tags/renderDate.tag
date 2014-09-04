@@ -29,14 +29,16 @@
                     type="date" pattern="dd" dateStyle="medium" timeStyle="short" var="day" />
     <fmt:formatDate value="${document.eventDate.time}"
                     type="date" pattern="MMM" dateStyle="medium" timeStyle="short" var="month" />
+    <fmt:formatDate type="date" pattern="yyyy-MM-dd" var="dateTime" value="${document.eventDate.time}"/>
   </c:when>
   <c:otherwise>
     <fmt:formatDate value="${document.releaseDate.time}"
                     type="date" pattern="dd" dateStyle="medium" timeStyle="short" var="day" />
     <fmt:formatDate value="${document.releaseDate.time}"
                     type="date" pattern="MMM" dateStyle="medium" timeStyle="short" var="month" />
+    <fmt:formatDate type="date" pattern="yyyy-MM-dd" var="dateTime" value="${document.releaseDate.time}"/>
  </c:otherwise>
 </c:choose>      
                  
-<time datetime="${time}" class="${cssDateClass}">${fn:escapeXml(day)}<span>${fn:escapeXml(month)}</span></time>
+<time datetime="${dateTime}" class="${cssDateClass}">${fn:escapeXml(day)}<span>${fn:escapeXml(month)}</span></time>
 

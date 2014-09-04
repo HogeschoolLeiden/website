@@ -45,10 +45,13 @@
 
   </c:if> 
   --%>
+  <c:url var="fbUrl" value="https://www.facebook.com/sharer/sharer.php">
+    <c:param name="u" value="${url}"/>
+    <c:param name="t" value="=${document.title}"/>
+  </c:url>
   
-  <a class="fa fa-facebook-square col-md-4 col-sm-4 col-xs-12" id="tool-facebook" title="${pageFacebook}" 
-       href="https://www.facebook.com/sharer/sharer.php?u=${url }&amp;t=<c:out value="${document.title }" />"
-       target="_blank">
+  <a class="fa fa-facebook-square col-md-4 col-sm-4 col-xs-12" id="tool-facebook" 
+      title="${pageFacebook}" target="_blank" href="${fn:escapeXml(fbUrl)}" >
        <span><c:out value="${pageFacebook}"/></span>
   </a>
   
@@ -75,23 +78,26 @@
            href="${fn:escapeXml(linkedInUrl)}" target="_blank"><c:out value="${linkedin}"/>
         </a>
      --%>
-    
-    <a class="fa fa-twitter col-md-4 col-sm-4 col-xs-12" id="tool-twitter" title="${pageTwitter}" 
-       href="http://twitter.com/home?status=<c:out value="${document.title }" /> - ${url }" 
-       target="_blank">
+  
+  <c:url var="twUrl" value="https://twitter.com/home">
+    <c:param name="status" value="${document.title } - ${url}"/>
+  </c:url>
+        
+    <a class="fa fa-twitter col-md-4 col-sm-4 col-xs-12" id="tool-twitter" title="${pageTwitter}" target="_blank"
+       href="${fn:escapeXml(twUrl)}">
        <span><c:out value="${pageTwitter}"/></span>
     </a>
-  
+    
   <%-- 
   enable after css
   <c:set var="email">
-    mailto:?subject=<fmt:message key="forward.mail.subject"/>&body=<fmt:message key="forward.mail.body"/>${url }
+    mailto:?subject=<fmt:message key="forward.mail.subject"/>&body=<fmt:message key="forward.mail.body"/>${fn:replace(url, ' ', '%20')}
   </c:set>
     <a class="email" title="${forward}" 
        href="<c:out value="${email }" escapeXml="true" />">
        <c:out value="${forward}"/>     
     </a>
   --%>
-  
+    
 </div>
 </c:if>

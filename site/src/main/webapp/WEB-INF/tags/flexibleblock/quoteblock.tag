@@ -18,7 +18,7 @@
 
 <c:set var="url"><hst:link hippobean="${document }" fullyQualified="true" /></c:set>
 <c:set var="quoteAuthor">
-  <c:out value="${content.quoteParameters.name }" />
+  <c:out value="${content.quoteParameters.name}" />
 </c:set>
 <c:set var="quoteText">
   <c:out value="${content.quoteParameters.quoteText }" />
@@ -52,10 +52,17 @@
     <div class="share">
     <ul>
       <c:if test="${content.shareParameters.linkedin}">
+      
+      <c:url var="linkedinQuoteUrl" value="http://www.linkedin.com/shareArticle">
+          <c:param name="mini" value="true"/>
+          <c:param name="url" value="${url}"/>
+          <c:param name="title" value="${quoteAuthor}"/>
+          <c:param name="summary" value="${completeQuote}"/>
+        </c:url>
+        
       <li>
-       <a class="linkedin" title="${linkedin}"
-           href="http://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${quoteAuthor}&summary=${completeQuote}" 
-           target="_blank"><c:out value="${linkedin}" /> 
+       <a class="linkedin" title="${linkedin}" target="_blank" href="${fn:escapeXml(linkedinQuoteUrl)}">
+           <c:out value="${linkedin}" /> 
         </a>
       </li>
       </c:if>
@@ -69,10 +76,13 @@
         </c:otherwise>
         </c:choose>
         
+        <c:url var="twQuoteUrl" value="http://twitter.com/home">
+          <c:param name="status" value="${twitterQuote}"/>
+        </c:url>
+  
       <li>
-        <a class="twitter" title="${twitter}"
-           href="http://twitter.com/home?status=${twitterQuote}"
-           target="_blank"> <c:out value="${twitter}" />
+        <a class="twitter" target="_blank" title="${twitter}" href="${fn:escapeXml(twQuoteUrl)}" > 
+           <c:out value="${twitter}" />
         </a>
       </li>
       </c:if>

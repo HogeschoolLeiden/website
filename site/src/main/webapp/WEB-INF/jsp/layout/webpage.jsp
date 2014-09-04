@@ -3,8 +3,9 @@
 
 <!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="${pageContext.request.locale.language}" 
-      xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="${pageContext.request.locale.language}"> <!--<![endif]-->
+
+<%-- xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" removed from html declaration --%>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
@@ -23,7 +24,7 @@
        
   <c:if test="${tag:isSubclassOfWebPage(document)}">
     <c:if test="${not empty document.title }">
-      <meta name="title" content="<c:out value="${document.title}" escapeXml="true" />" />
+      <%-- <meta name="title" content="<c:out value="${document.title}" escapeXml="true" />" /> --%>
       <meta property="og:title" content="${document.title}"/>
     </c:if>
     <c:if test="${hst:isReadable(document, 'description') && not empty document.description }">
