@@ -4,8 +4,8 @@
   </sv:property>
   <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
     <sv:value>hippotranslation:translated</sv:value>
-    <sv:value>mix:versionable</sv:value>
     <sv:value>hippo:translated</sv:value>
+    <sv:value>mix:versionable</sv:value>
   </sv:property>
   <sv:property sv:name="jcr:uuid" sv:type="String">
     <sv:value>a89b93ea-664d-422e-8106-91c78c0e91b2</sv:value>
@@ -42,6 +42,7 @@
         <sv:value>mix:referenceable</sv:value>
         <sv:value>hsl:ContactPersonsMixin</sv:value>
         <sv:value>hsl:TwitterMixin</sv:value>
+        <sv:value>hsl:TeasersMixin</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
         <sv:value>8b29289a-d7cd-4b67-84eb-78ff5ddb9440</sv:value>
@@ -68,13 +69,13 @@
         <sv:value>2011-11-29T11:18:14.995+01:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-        <sv:value>2014-09-05T11:15:32.860+02:00</sv:value>
+        <sv:value>2014-09-05T12:46:03.832+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
         <sv:value>admin</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-        <sv:value>2014-09-05T11:15:35.078+02:00</sv:value>
+        <sv:value>2014-09-05T12:46:06.195+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippotranslation:id" sv:type="String">
         <sv:value/>
@@ -219,7 +220,7 @@
             <sv:value>hippo:mirror</sv:value>
           </sv:property>
           <sv:property sv:name="hippo:docbase" sv:type="String">
-            <sv:value>561b5a1a-f054-489a-b116-fcb98e415477</sv:value>
+            <sv:value>3605bb2c-4728-41dc-90ef-b86e23113f06</sv:value>
           </sv:property>
         </sv:node>
       </sv:node>
@@ -230,6 +231,14 @@
         <sv:property sv:name="hsl:widgetTitle" sv:type="String">
           <sv:value/>
         </sv:property>
+        <sv:node sv:name="hsl:teasers">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>83483213-9fdb-4d41-8d3e-360791b5db0d</sv:value>
+          </sv:property>
+        </sv:node>
       </sv:node>
     </sv:node>
     <sv:node sv:name="hippo:translation">
@@ -251,6 +260,7 @@
         <sv:value>mix:referenceable</sv:value>
         <sv:value>hsl:ContactPersonsMixin</sv:value>
         <sv:value>hsl:TwitterMixin</sv:value>
+        <sv:value>hsl:TeasersMixin</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
         <sv:value>9f3fe717-f004-4167-a94f-ad47302e4b16</sv:value>
@@ -273,7 +283,7 @@
         <sv:value>2011-11-29T11:18:14.995+01:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-        <sv:value>2014-09-05T11:15:17.474+02:00</sv:value>
+        <sv:value>2014-09-05T12:45:57.461+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
         <sv:value>admin</sv:value>
@@ -421,7 +431,7 @@
             <sv:value>hippo:mirror</sv:value>
           </sv:property>
           <sv:property sv:name="hippo:docbase" sv:type="String">
-            <sv:value>561b5a1a-f054-489a-b116-fcb98e415477</sv:value>
+            <sv:value>3605bb2c-4728-41dc-90ef-b86e23113f06</sv:value>
           </sv:property>
         </sv:node>
       </sv:node>
@@ -432,6 +442,14 @@
         <sv:property sv:name="hsl:widgetTitle" sv:type="String">
           <sv:value/>
         </sv:property>
+        <sv:node sv:name="hsl:teasers">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>83483213-9fdb-4d41-8d3e-360791b5db0d</sv:value>
+          </sv:property>
+        </sv:node>
       </sv:node>
     </sv:node>
     <sv:node sv:name="homepage">
@@ -442,6 +460,7 @@
         <sv:value>mix:referenceable</sv:value>
         <sv:value>hsl:ContactPersonsMixin</sv:value>
         <sv:value>hsl:TwitterMixin</sv:value>
+        <sv:value>hsl:TeasersMixin</sv:value>
         <sv:value>mix:versionable</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
@@ -466,7 +485,7 @@
         <sv:value>2011-11-29T11:18:14.995+01:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-        <sv:value>2014-09-05T11:15:32.860+02:00</sv:value>
+        <sv:value>2014-09-05T12:46:03.832+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
         <sv:value>admin</sv:value>
@@ -614,7 +633,7 @@
             <sv:value>hippo:mirror</sv:value>
           </sv:property>
           <sv:property sv:name="hippo:docbase" sv:type="String">
-            <sv:value>561b5a1a-f054-489a-b116-fcb98e415477</sv:value>
+            <sv:value>3605bb2c-4728-41dc-90ef-b86e23113f06</sv:value>
           </sv:property>
         </sv:node>
       </sv:node>
@@ -625,6 +644,14 @@
         <sv:property sv:name="hsl:widgetTitle" sv:type="String">
           <sv:value/>
         </sv:property>
+        <sv:node sv:name="hsl:teasers">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>83483213-9fdb-4d41-8d3e-360791b5db0d</sv:value>
+          </sv:property>
+        </sv:node>
       </sv:node>
     </sv:node>
   </sv:node>
@@ -2571,8 +2598,8 @@
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
       <sv:value>hippotranslation:translated</sv:value>
-      <sv:value>mix:versionable</sv:value>
       <sv:value>hippo:translated</sv:value>
+      <sv:value>mix:versionable</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>9d3f2503-3155-4d37-890d-45e7e8df2762</sv:value>

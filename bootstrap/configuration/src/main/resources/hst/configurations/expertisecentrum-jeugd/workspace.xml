@@ -179,14 +179,6 @@
           <sv:value>HST.vBox</sv:value>
         </sv:property>
       </sv:node>
-      <sv:node sv:name="leftBottom">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hst:containercomponent</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:xtype" sv:type="String">
-          <sv:value>HST.vBox</sv:value>
-        </sv:property>
-      </sv:node>
       <sv:node sv:name="contentTop">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hst:containercomponent</sv:value>
@@ -202,6 +194,74 @@
         <sv:property sv:name="hst:xtype" sv:type="String">
           <sv:value>HST.vBox</sv:value>
         </sv:property>
+        <sv:node sv:name="teasers">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:containeritemcomponent</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:componentclassname" sv:type="String">
+            <sv:value>nl.hsleiden.components.catalog.Teasers</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:iconpath" sv:type="String">
+            <sv:value>images/catalog/teaser-icon.jpg</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:label" sv:type="String">
+            <sv:value>Teasers</sv:value>
+          </sv:property>
+          <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
+            <sv:value>thirdTeaser</sv:value>
+            <sv:value>tryToUseMixin</sv:value>
+            <sv:value>widgetTitle</sv:value>
+            <sv:value>firstTeaser</sv:value>
+            <sv:value>secondTeaser</sv:value>
+          </sv:property>
+          <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
+            <sv:value/>
+            <sv:value>on</sv:value>
+            <sv:value>Teasers</sv:value>
+            <sv:value/>
+            <sv:value/>
+          </sv:property>
+          <sv:property sv:name="hst:template" sv:type="String">
+            <sv:value>catalog.teasers</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:xtype" sv:type="String">
+            <sv:value>HST.Item</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="contactPersons">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:containeritemcomponent</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:componentclassname" sv:type="String">
+            <sv:value>nl.hsleiden.components.catalog.ContactPersons</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:iconpath" sv:type="String">
+            <sv:value>images/catalog/contact-icon.png</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:label" sv:type="String">
+            <sv:value>Contactpersonen</sv:value>
+          </sv:property>
+          <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
+            <sv:value>firstContact</sv:value>
+            <sv:value>secondContact</sv:value>
+            <sv:value>tryToUseMixin</sv:value>
+            <sv:value>widgetTitle</sv:value>
+            <sv:value>thirdContact</sv:value>
+          </sv:property>
+          <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
+            <sv:value/>
+            <sv:value/>
+            <sv:value>on</sv:value>
+            <sv:value>Contacts</sv:value>
+            <sv:value/>
+          </sv:property>
+          <sv:property sv:name="hst:template" sv:type="String">
+            <sv:value>catalog.contactpersons</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:xtype" sv:type="String">
+            <sv:value>HST.Item</sv:value>
+          </sv:property>
+        </sv:node>
       </sv:node>
       <sv:node sv:name="bottom-container">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -214,9 +274,6 @@
       <sv:node sv:name="contentBottom">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hst:containercomponent</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:lastmodified" sv:type="Date">
-          <sv:value>2014-09-02T11:54:56.417+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hst:xtype" sv:type="String">
           <sv:value>HST.vBox</sv:value>
@@ -237,7 +294,7 @@
           <sv:property sv:name="hst:label" sv:type="String">
             <sv:value>Twitter feed</sv:value>
           </sv:property>
-          <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+          <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
             <sv:value>limit</sv:value>
             <sv:value>title</sv:value>
             <sv:value>horizontal</sv:value>
@@ -246,7 +303,7 @@
             <sv:value>followText</sv:value>
             <sv:value>from</sv:value>
           </sv:property>
-          <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+          <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
             <sv:value>5</sv:value>
             <sv:value>Twitter Feed</sv:value>
             <sv:value>off</sv:value>
@@ -267,46 +324,17 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hst:containercomponent</sv:value>
         </sv:property>
-        <sv:property sv:name="hst:lastmodified" sv:type="Date">
-          <sv:value>2014-09-02T11:55:51.972+02:00</sv:value>
+        <sv:property sv:name="hst:xtype" sv:type="String">
+          <sv:value>HST.vBox</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="leftBottom">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:containercomponent</sv:value>
         </sv:property>
         <sv:property sv:name="hst:xtype" sv:type="String">
           <sv:value>HST.vBox</sv:value>
         </sv:property>
-        <sv:node sv:name="contactPersons">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>hst:containeritemcomponent</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:componentclassname" sv:type="String">
-            <sv:value>nl.hsleiden.components.catalog.ContactPersons</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:iconpath" sv:type="String">
-            <sv:value>images/catalog/contact-icon.png</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:label" sv:type="String">
-            <sv:value>Contactpersonen</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
-            <sv:value>firstContact</sv:value>
-            <sv:value>secondContact</sv:value>
-            <sv:value>tryToUseMixin</sv:value>
-            <sv:value>widgetTitle</sv:value>
-            <sv:value>thirdContact</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
-            <sv:value/>
-            <sv:value/>
-            <sv:value>on</sv:value>
-            <sv:value>Contacts</sv:value>
-            <sv:value/>
-          </sv:property>
-          <sv:property sv:name="hst:template" sv:type="String">
-            <sv:value>catalog.contactpersons</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:xtype" sv:type="String">
-            <sv:value>HST.Item</sv:value>
-          </sv:property>
-        </sv:node>
       </sv:node>
     </sv:node>
     <sv:node sv:name="subsitearticlepage">
