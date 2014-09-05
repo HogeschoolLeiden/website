@@ -1,16 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="componenten">
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node sv:name="componenten" xmlns:sv="http://www.jcp.org/jcr/sv/1.0">
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>hippostd:folder</sv:value>
   </sv:property>
-  <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+  <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
     <sv:value>hippotranslation:translated</sv:value>
-    <sv:value>hippo:translated</sv:value>
     <sv:value>mix:versionable</sv:value>
+    <sv:value>hippo:translated</sv:value>
   </sv:property>
   <sv:property sv:name="jcr:uuid" sv:type="String">
     <sv:value>4d592309-e45f-4400-9396-a9254142f4be</sv:value>
   </sv:property>
-  <sv:property sv:name="hippostd:foldertype" sv:type="String" sv:multiple="true">
+  <sv:property sv:multiple="true" sv:name="hippostd:foldertype" sv:type="String">
     <sv:value>new-forms-folder</sv:value>
     <sv:value>new-rss-folder</sv:value>
     <sv:value>new-teaser-folder</sv:value>
@@ -37,7 +38,7 @@
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hippostd:folder</sv:value>
     </sv:property>
-    <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+    <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
       <sv:value>hippo:harddocument</sv:value>
       <sv:value>hippotranslation:translated</sv:value>
     </sv:property>
@@ -45,7 +46,7 @@
       <sv:value>b1a8bd09-751a-44ec-977e-df49ec490843</sv:value>
     </sv:property>
     <sv:property sv:name="hippo:related___pathreference" sv:type="String"/>
-    <sv:property sv:name="hippostd:foldertype" sv:type="String" sv:multiple="true">
+    <sv:property sv:multiple="true" sv:name="hippostd:foldertype" sv:type="String">
       <sv:value>new-teaser-document</sv:value>
       <sv:value>new-textteaser-document</sv:value>
     </sv:property>
@@ -64,7 +65,7 @@
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hippo:handle</sv:value>
       </sv:property>
-      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
         <sv:value>mix:referenceable</sv:value>
         <sv:value>hippo:translated</sv:value>
       </sv:property>
@@ -75,13 +76,13 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hsl:TextTeaser</sv:value>
         </sv:property>
-        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
           <sv:value>mix:referenceable</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>feb692b7-6da3-420b-9d82-31736ed33758</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String"/>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
           <sv:value>componenten/teasers/lectoraat-textt-teaser/lectoraat-textt-teaser[3]</sv:value>
           <sv:value>componenten/teasers/lectoraat-textt-teaser/lectoraat-textt-teaser[2]</sv:value>
@@ -99,7 +100,7 @@
           <sv:value>2014-09-05T12:36:31.928+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-09-05T13:18:23.247+02:00</sv:value>
+          <sv:value>2014-09-05T17:08:33.000+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -111,7 +112,7 @@
           <sv:value>nl</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:body" sv:type="String">
-          <sv:value>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan.</sv:value>
+          <sv:value>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan.</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:color" sv:type="String">
           <sv:value>blauw</sv:value>
@@ -154,14 +155,14 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hsl:TextTeaser</sv:value>
         </sv:property>
-        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
           <sv:value>mix:referenceable</sv:value>
           <sv:value>mix:versionable</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>c84c80b0-8f6b-4c87-bfdc-ac4e501aff53</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
           <sv:value>preview</sv:value>
         </sv:property>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
@@ -180,7 +181,7 @@
           <sv:value>2014-09-05T12:36:31.928+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-09-05T13:18:32.567+02:00</sv:value>
+          <sv:value>2014-09-05T17:08:42.337+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -192,7 +193,7 @@
           <sv:value>nl</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:body" sv:type="String">
-          <sv:value>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan.</sv:value>
+          <sv:value>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan.</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:color" sv:type="String">
           <sv:value>blauw</sv:value>
@@ -224,13 +225,13 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hsl:TextTeaser</sv:value>
         </sv:property>
-        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
           <sv:value>mix:referenceable</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>aee2b70e-cc22-49a5-8f50-1217f5e934d8</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
           <sv:value>live</sv:value>
         </sv:property>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
@@ -249,13 +250,13 @@
           <sv:value>2014-09-05T12:36:31.928+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-09-05T13:18:32.567+02:00</sv:value>
+          <sv:value>2014-09-05T17:08:42.337+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-          <sv:value>2014-09-05T13:18:34.686+02:00</sv:value>
+          <sv:value>2014-09-05T17:08:44.447+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:id" sv:type="String">
           <sv:value>718ec25e-41da-419d-99ed-4e22ae6a4486</sv:value>
@@ -264,7 +265,7 @@
           <sv:value>nl</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:body" sv:type="String">
-          <sv:value>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan.</sv:value>
+          <sv:value>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan.</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:color" sv:type="String">
           <sv:value>blauw</sv:value>
@@ -298,7 +299,7 @@
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hippostd:folder</sv:value>
     </sv:property>
-    <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+    <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
       <sv:value>hippo:harddocument</sv:value>
       <sv:value>hippotranslation:translated</sv:value>
     </sv:property>
@@ -306,7 +307,7 @@
       <sv:value>5208e4e7-6c55-46f1-9d21-bb3e370ee544</sv:value>
     </sv:property>
     <sv:property sv:name="hippo:related___pathreference" sv:type="String"/>
-    <sv:property sv:name="hippostd:foldertype" sv:type="String" sv:multiple="true">
+    <sv:property sv:multiple="true" sv:name="hippostd:foldertype" sv:type="String">
       <sv:value>new-contact-person</sv:value>
     </sv:property>
     <sv:property sv:name="hippotranslation:id" sv:type="String">
@@ -324,7 +325,7 @@
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hippo:handle</sv:value>
       </sv:property>
-      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
         <sv:value>mix:referenceable</sv:value>
         <sv:value>hippo:translated</sv:value>
       </sv:property>
@@ -346,13 +347,13 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hsl:ContactPerson</sv:value>
         </sv:property>
-        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
           <sv:value>mix:referenceable</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>45438982-5c08-4ec3-91bd-bf7969f2400c</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String"/>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
           <sv:value>componenten/contacts/lectoren-two/lectoren-two[2]</sv:value>
           <sv:value>componenten/contacts/lectoren-two/lectoren-two[3]</sv:value>
@@ -370,7 +371,7 @@
           <sv:value>2014-08-31T12:45:05.109+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-08-31T12:45:05.165+02:00</sv:value>
+          <sv:value>2014-09-05T17:24:15.940+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -400,9 +401,9 @@
           <sv:property sv:name="hippo:docbase" sv:type="String">
             <sv:value>00e66dd6-aec5-44d6-bada-0534d76d1a9a</sv:value>
           </sv:property>
-          <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
-          <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
-          <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+          <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
+          <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
+          <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
         </sv:node>
         <sv:node sv:name="hsl:accounts">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -426,19 +427,41 @@
             <sv:value>googleplus</sv:value>
           </sv:property>
         </sv:node>
+        <sv:node sv:name="hsl:accounts">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:account</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:link" sv:type="String">
+            <sv:value>http://google.com</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:type" sv:type="String">
+            <sv:value>facebook</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="hsl:accounts">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:account</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:link" sv:type="String">
+            <sv:value>http://google.com</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:type" sv:type="String">
+            <sv:value>twitter</sv:value>
+          </sv:property>
+        </sv:node>
       </sv:node>
       <sv:node sv:name="lectoren-two">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hsl:ContactPerson</sv:value>
         </sv:property>
-        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
           <sv:value>mix:referenceable</sv:value>
           <sv:value>mix:versionable</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>5aa10cc1-6c19-4f47-9763-0d4b94ba4ba8</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
           <sv:value>preview</sv:value>
         </sv:property>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
@@ -457,7 +480,7 @@
           <sv:value>2014-08-31T12:45:05.109+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-08-31T12:46:10.420+02:00</sv:value>
+          <sv:value>2014-09-05T17:24:37.848+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -487,9 +510,9 @@
           <sv:property sv:name="hippo:docbase" sv:type="String">
             <sv:value>00e66dd6-aec5-44d6-bada-0534d76d1a9a</sv:value>
           </sv:property>
-          <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
-          <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
-          <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+          <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
+          <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
+          <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
         </sv:node>
         <sv:node sv:name="hsl:accounts">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -513,18 +536,40 @@
             <sv:value>googleplus</sv:value>
           </sv:property>
         </sv:node>
+        <sv:node sv:name="hsl:accounts">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:account</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:link" sv:type="String">
+            <sv:value>http://google.com</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:type" sv:type="String">
+            <sv:value>facebook</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="hsl:accounts">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:account</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:link" sv:type="String">
+            <sv:value>http://google.com</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:type" sv:type="String">
+            <sv:value>twitter</sv:value>
+          </sv:property>
+        </sv:node>
       </sv:node>
       <sv:node sv:name="lectoren-two">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hsl:ContactPerson</sv:value>
         </sv:property>
-        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
           <sv:value>mix:referenceable</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>ad6c2d50-9a23-4ca6-8e4b-a75ed1a735fe</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
           <sv:value>live</sv:value>
         </sv:property>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
@@ -543,13 +588,13 @@
           <sv:value>2014-08-31T12:45:05.109+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-08-31T12:46:10.420+02:00</sv:value>
+          <sv:value>2014-09-05T17:24:37.848+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-          <sv:value>2014-09-05T12:41:04.578+02:00</sv:value>
+          <sv:value>2014-09-05T17:24:40.066+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:id" sv:type="String">
           <sv:value>6c43f3c9-800c-40eb-8f2b-e76a62a4b5cf</sv:value>
@@ -576,9 +621,9 @@
           <sv:property sv:name="hippo:docbase" sv:type="String">
             <sv:value>00e66dd6-aec5-44d6-bada-0534d76d1a9a</sv:value>
           </sv:property>
-          <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
-          <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
-          <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+          <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
+          <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
+          <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
         </sv:node>
         <sv:node sv:name="hsl:accounts">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -600,6 +645,28 @@
           </sv:property>
           <sv:property sv:name="hsl:type" sv:type="String">
             <sv:value>googleplus</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="hsl:accounts">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:account</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:link" sv:type="String">
+            <sv:value>http://google.com</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:type" sv:type="String">
+            <sv:value>facebook</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="hsl:accounts">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:account</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:link" sv:type="String">
+            <sv:value>http://google.com</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:type" sv:type="String">
+            <sv:value>twitter</sv:value>
           </sv:property>
         </sv:node>
       </sv:node>

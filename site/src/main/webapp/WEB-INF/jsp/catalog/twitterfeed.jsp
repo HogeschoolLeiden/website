@@ -11,6 +11,10 @@
 
 <hst:setBundle basename="nl.hsleiden.channelmanager.Messages, nl.hsleiden.widget.Messages"/>
 
+
+<%-- 
+lost position
+ 
 <c:set var="position">
   <c:choose>
     <c:when test="${hst:isReadable(model.paramInfo, 'horizontal') and model.paramInfo.horizontal}">
@@ -21,7 +25,9 @@
     </c:when>
     <c:otherwise>vertical</c:otherwise>
   </c:choose>
-</c:set>
+</c:set> 
+
+--%>
 
 <hst:defineObjects />
   <c:set var="isCmsRequest" value="${hstRequest.requestContext.cmsRequest}" />
@@ -31,38 +37,31 @@
   </c:if>
   
 <c:if test="${fn:length(model.tweets)>0}">
-  <div class="catalog twitter ${position}">
-    <h2><c:out value="${model.paramInfo.title}"/></h2>
+      
+    <%-- <h2><c:out value="${model.paramInfo.title}"/></h2> --%>
     <c:forEach items="${model.tweets}" var="tweet" varStatus="loop">
-        <c:if test="${position eq 'vertical' }">
-          <hr/>
-        </c:if>
-        <div ${loop.index==0 ? 'class="tweet first"': 'class="tweet"'}>
-            <div class="image">
-                <img src="${tweet.status.user.profileImageURL}" alt="profile image" />
-            </div>
-            <div class="user">
-                <a href="http://www.twitter.com/${tweet.status.user.screenName}" target="_BLANK" class="username">${tweet.status.user.name}</a>
-                <a href="http://www.twitter.com/${tweet.status.user.screenName}" target="_BLANK" class="screen-name">@${tweet.status.user.screenName}</a>
-            </div>
-            <span class="date"><fmt:formatDate value="${tweet.status.createdAt}" pattern="dd MMM"/></span> <br/>
-            <span class="text">${tweet.text}</span>
-            <div class="action">
-                <span><a href="https://twitter.com/intent/tweet?in_reply_to=${tweet.status.id}" target="_BLANK">reply</a></span> ·
-                <span><a href="https://twitter.com/intent/retweet?tweet_id=${tweet.status.id}" target="_BLANK">retweet</a></span> ·
-                <span><a href="https://twitter.com/intent/favorite?tweet_id=${tweet.status.id}" target="_BLANK">favorite</a></span>
-            </div>
-            <div class="clear"></div>
-        </div>
+      <div class="col-sm-4">
+        <article class="twitteritem">
+          <figure>
+            <img src="${tweet.status.user.profileImageURL}" alt="profile image" /> <%-- get it from properties --%> 
+          </figure>
+          <h2><a href="http://www.twitter.com/${tweet.status.user.screenName}" target="_BLANK" class="username">${tweet.status.user.name}</a></h2>
+          <h2><a href="http://www.twitter.com/${tweet.status.user.screenName}" target="_BLANK" class="screen-name">@${tweet.status.user.screenName}</a></h2>
+          <span class="date"><fmt:formatDate value="${tweet.status.createdAt}" pattern="dd MMM"/></span> <br/>
+          <p>${tweet.text}</p>
+          <div class="action">
+            <span><a href="https://twitter.com/intent/tweet?in_reply_to=${tweet.status.id}" target="_BLANK">reply</a></span> ·
+            <span><a href="https://twitter.com/intent/retweet?tweet_id=${tweet.status.id}" target="_BLANK">retweet</a></span> ·
+            <span><a href="https://twitter.com/intent/favorite?tweet_id=${tweet.status.id}" target="_BLANK">favorite</a></span>
+          </div>
+        </article>
+      </div>
     </c:forEach>
-    <c:if test="${position eq 'vertical' }">
-      <hr/>
-    </c:if>
+
     <c:if test="${not empty model.paramInfo.followText and not empty model.paramInfo.from}">
         <div class="button-block">
             <a href="http://www.twitter.com/${model.paramInfo.from}" target="_BLANK">${model.paramInfo.followText}</a>
         </div>
     </c:if>
-  </div>
-  <div class="clear"></div>
+ 
 </c:if>

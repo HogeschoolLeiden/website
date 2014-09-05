@@ -7,37 +7,51 @@
 <%@ taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml"%>
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 
-<article class="col-md-9 detail-content">
-  <div class="row lectorat">
-    
-    <div class="col-md-8 col-sm-8 contentarea">
-      <div class="content">
+<section class="col-md-9 detail-content">
+  <div class="row">
+    <div class="col-md-8 col-sm-8 contentarea">               
+      <div class="overzichtlijst">
         
         <hst:cmseditlink hippobean="${document}" />
         <h1><span><c:out value="${document.title }" /></span></h1>
         <hst:include ref="contentTop" />
-        <%-- <h2> <c:out value="${document.subtitle }" escapeXml="true" />  </h2> --%>
         
+        <%-- 
+        <h2> <c:out value="${document.subtitle }" escapeXml="true" />  </h2> 
+        --%>
+        
+        
+        <tag:listItems document="${document}"/>
+        
+        <%--
+        <div class="row lectorat">
         <c:if test="${hst:isReadable(document, 'releaseDate.time') and hst:isReadable(document, 'introduction')}">
           <tag:renderDate document="${document}"/>
           <p class="intro">
             <c:out value="${document.introduction }" />
           </p>
         </c:if>
+        </div>
 
-        <tag:listItems document="${document}" listTitle=""/>
-
-        <hst:include ref="contentBottom" />
-        <tag:toolbox document="${document }" />
+        
+        <tag:toolbox document="${document }" /> 
+        --%>
+        
+        
       </div>
     </div>
-
+    
     <aside class="col-md-4 col-sm-4 aside">
         <hst:include ref="rightTop" />
         <hst:include ref="right" />
         <hst:include ref="rightBottom" />
     </aside>
+
+    <div class="row border-top">
+      <hst:include ref="contentBottom" /> 
+    </div>
     
-<%--   </div> --%>
-</article>
+  </div>
+</section>
+       
 

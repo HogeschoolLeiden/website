@@ -10,7 +10,7 @@
 
 <hst:setBundle basename="nl.hsleiden.widget.Messages" />
 
-<nav class="col-md-3 col-xs-12" role="navigation"/> 
+<nav class="col-md-3 col-xs-12" role="navigation"> 
   <div class="subnav">
        
   <c:set var="parentItem" value="${tag:getTopMenuItem(menu, 3)}"/>
