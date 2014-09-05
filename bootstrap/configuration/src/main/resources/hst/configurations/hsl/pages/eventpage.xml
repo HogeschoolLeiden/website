@@ -33,18 +33,18 @@
         <sv:value>eventpage/leftBottom</sv:value>
       </sv:property>
     </sv:node>
-    <sv:node sv:name="contentTop">
-      <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hst:containercomponentreference</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:referencecomponent" sv:type="String">
-        <sv:value>eventpage/contentTop</sv:value>
-      </sv:property>
-    </sv:node>
     <sv:node sv:name="content">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:component</sv:value>
       </sv:property>
+      <sv:node sv:name="contentTop">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:containercomponentreference</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencecomponent" sv:type="String">
+          <sv:value>eventpage/contentTop</sv:value>
+        </sv:property>
+      </sv:node>
       <sv:node sv:name="rightTop">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hst:containercomponentreference</sv:value>
@@ -61,14 +61,14 @@
           <sv:value>eventpage/rightBottom</sv:value>
         </sv:property>
       </sv:node>
-    </sv:node>
-    <sv:node sv:name="contentBottom">
-      <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hst:containercomponentreference</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:referencecomponent" sv:type="String">
-        <sv:value>eventpage/contentBottom</sv:value>
-      </sv:property>
+      <sv:node sv:name="contentBottom">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:containercomponentreference</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencecomponent" sv:type="String">
+          <sv:value>eventpage/contentBottom</sv:value>
+        </sv:property>
+      </sv:node>
     </sv:node>
     <sv:node sv:name="bottom-container">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">

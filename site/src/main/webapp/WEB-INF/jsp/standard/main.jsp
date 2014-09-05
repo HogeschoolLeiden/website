@@ -21,11 +21,16 @@
     
     <div class="container">
       <div class="row">
-      
-        <hst:include ref="contentTop" />
-        <hst:include ref="content" />
-        <hst:include ref="contentBottom" />
-      
+              
+        <c:choose>
+          <c:when test="${empty document}">
+            <tag:pagenotfound />
+          </c:when>
+          <c:otherwise>
+            <hst:include ref="content"/>
+          </c:otherwise>
+        </c:choose>
+             
         <hst:include ref="leftTop" />
         <hst:include ref="left" />
         <hst:include ref="leftBottom" />

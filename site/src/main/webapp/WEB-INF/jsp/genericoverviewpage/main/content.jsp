@@ -9,6 +9,8 @@
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 
 <section class="overzicht col-md-9">
+   
+   <hst:cmseditlink hippobean="${document}" />
    <h1 class="hidden"><c:out value="${document.title}"></c:out> </h1>
    <hst:include ref="contentTop" />
    
@@ -50,7 +52,6 @@
   </div>
 
   <hst:include ref="contentBottom" />
-  
   <tag:toolbox document="${document }" /> 
   
 </section>

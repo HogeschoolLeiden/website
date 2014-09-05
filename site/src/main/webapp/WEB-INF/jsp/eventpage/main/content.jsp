@@ -8,54 +8,43 @@
 <%@ taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml"%>
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 
-<c:choose>
-  <c:when test="${empty document}">
-    <tag:pagenotfound />
-  </c:when>
-  <c:otherwise>
+<div itemscope itemtype="http://data-vocabulary.org/Event">
 
-      <div itemscope itemtype="http://data-vocabulary.org/Event">
+  <article class="col-md-9 detail-content">
+    <div class="row">
+      
+      <div class="col-md-8 col-sm-8 contentarea">
+        <div class="content">
 
-        <article class="col-md-9 detail-content">
           <hst:cmseditlink hippobean="${document}" />
+          <h1><span itemprop="summary"><c:out value="${document.title }" /></span></h1>
+          <%-- <h2> <c:out value="${document.subtitle }" escapeXml="true" /> </h2> --%>
+          <hst:include ref="contentTop" />
+           
+          <c:if test="${hst:isReadable(document, 'eventDate.time')}">
+            <tag:renderDate document="${document}"/>
+          </c:if>
 
-          <div class="row">
-            <div class="col-md-8 col-sm-8 contentarea">
-              <div class="content">
+          <p class="intro">
+            <c:out value="${document.introduction }" />
+          </p>
 
-                <h1><span itemprop="summary"><c:out value="${document.title }" /></span></h1>
-                
-                <%-- 
-                <h2>
-                  <c:out value="${document.subtitle }" escapeXml="true" />
-                </h2>
-                 --%>
-                 
-                <c:if test="${hst:isReadable(document, 'eventDate.time')}">
-                  <tag:renderDate document="${document}"/>
-                </c:if>
+          <tag:flexibleblock content="${document.flexibleblock }" />
 
-                <p class="intro">
-                  <c:out value="${document.introduction }" />
-                </p>
+          <hst:include ref="contentBottom" />
+          <tag:toolbox document="${document }" />
 
-                <tag:flexibleblock content="${document.flexibleblock }" />
-
-                <tag:toolbox document="${document }" />
-
-              </div>
-            </div>
-          
-            <hst:include ref="rightTop" />
-            <hst:include ref="right" />
-            <hst:include ref="rightBottom" />
-          
-          
-          </div>
-
-        </article>
-
+        </div>
       </div>
 
-  </c:otherwise>
-</c:choose>
+      <aside class="col-md-4 col-sm-4 aside">
+        <hst:include ref="rightTop" />
+        <hst:include ref="right" />
+        <hst:include ref="rightBottom" />
+      </aside>
+
+    </div>
+  </article>
+
+</div>
+

@@ -9,42 +9,34 @@
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 <%@ taglib prefix='opw' uri="http://open-web.nl/hippo/prototype"%>
 
-<c:choose>
-  <c:when test="${empty document}">
-    <tag:pagenotfound />
-  </c:when>
-  <c:otherwise>
+<article class="col-md-9 detail-content">
+  <div class="row">
+    
+    <div class="col-md-8 col-sm-8 contentarea">
+      <div class="content">
 
-        <article class="col-md-9 detail-content">
+        <hst:cmseditlink hippobean="${document}" />
+        <h1><c:out value="${document.title }" escapeXml="true" /></h1>
+        <%-- <h2> <c:out value="${document.subtitle }" escapeXml="true" /> </h2> --%>
+        <hst:include ref="contentTop" />
 
-          <hst:cmseditlink hippobean="${document}" />
+        <p class="intro">
+          <c:out value="${document.introduction }" />
+        </p>
 
-          <div class="row">
-            <div class="col-md-8 col-sm-8 contentarea">
-              <div class="content">
+        <tag:flexibleblock content="${document.flexibleblock }" />
 
-                <h1>
-                  <c:out value="${document.title }" escapeXml="true" />
-                </h1>
-                <%-- 		   
-                <h2>
-    			 <c:out value="${document.subtitle }" escapeXml="true" />
-    		    </h2> 
-                --%>
-
-                <p class="intro">
-                  <c:out value="${document.introduction }" />
-                </p>
-
-                <tag:flexibleblock content="${document.flexibleblock }" />
-
-                <tag:toolbox document="${document }" />
-
-              </div>
-            </div>
-          </div>
-
-        </article>
-
-  </c:otherwise>
-</c:choose>
+        <hst:include ref="contentBottom" />
+        <tag:toolbox document="${document }" />
+        
+      </div>
+    </div>
+      
+    <aside class="col-md-4 col-sm-4 aside">
+        <hst:include ref="rightTop" />
+        <hst:include ref="right" />
+        <hst:include ref="rightBottom" />
+    </aside>
+      
+  </div>
+</article>

@@ -30,8 +30,7 @@
         <c:otherwise>
           <section class="overzicht col-md-9">
             
-            <h1 class="hidden"><c:out value="${model.document.title}"></c:out> </h1>
-            
+            <h1 class="hidden"><c:out value="${model.document.title}"></c:out> </h1> 
             <hst:include ref="contentTop" />
             
             <tag:rssReader document="${model.document}"/>
@@ -76,7 +75,6 @@
             </div>
       
             <hst:include ref="contentBottom" />
-            
             <tag:toolbox document="${document }" />
             
           </section>

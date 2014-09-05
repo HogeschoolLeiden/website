@@ -8,51 +8,43 @@
 <%@ taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml"%>
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 
-<c:choose>
-  <c:when test="${empty document}">
-    <tag:pagenotfound />
-  </c:when>
-  <c:otherwise>
 
-      <div itemscope itemtype="http://schema.org/NewsArticle">
+<div itemscope itemtype="http://schema.org/NewsArticle">
+  
+  <article class="col-md-9 detail-content">
+    <div class="row">
+      
+      <div class="col-md-8 col-sm-8 contentarea">
+        <div class="content">
 
-        <article class="col-md-9 detail-content">
           <hst:cmseditlink hippobean="${document}" />
+          <h1 itemprop="headline"><c:out value="${document.title }" escapeXml="true" /></h1>
+          <hst:include ref="contentTop" />
 
-          <div class="row">
-            <div class="col-md-8 col-sm-8 contentarea">
-              <div class="content">
+          <c:if test="${hst:isReadable(document, 'releaseDate.time')}">
+            <tag:renderDate document="${document}"/>
+          </c:if>
 
-                <h1 itemprop="headline">
-                  <c:out value="${document.title }" escapeXml="true" />
-                </h1>
+          <p class="intro">
+            <c:out value="${document.introduction }" />
+          </p>
+          
+          <tag:flexibleblock content="${document.flexibleblock }" />
 
-                <c:if test="${hst:isReadable(document, 'releaseDate.time')}">
-                  <tag:renderDate document="${document}"/>
-                </c:if>
+          <hst:include ref="contentBottom" />
+          <tag:toolbox document="${document }" />
 
-                <p class="intro">
-                  <c:out value="${document.introduction }" />
-                </p>
-                
-                <tag:flexibleblock content="${document.flexibleblock }" />
-
-                <tag:toolbox document="${document }" />
-
-              </div>
-            </div>
-            
-            <aside class="col-md-4 col-sm-4 aside">
-              <hst:include ref="rightTop" />
-              <hst:include ref="right" />
-              <hst:include ref="rightBottom" />
-            </aside>
-    
-          </div>
-
-        </article>
-
+        </div>
       </div>
+      
+      <aside class="col-md-4 col-sm-4 aside">
+          <hst:include ref="rightTop" />
+          <hst:include ref="right" />
+          <hst:include ref="rightBottom" />
+      </aside>
 
-  </c:otherwise>
-</c:choose>
+    </div>
+  </article>
+
+</div>
+
