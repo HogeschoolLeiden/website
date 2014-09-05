@@ -98,6 +98,10 @@
       <name>renderBackLink</name>
       <path>/WEB-INF/tags/renderBackLink.tag</path>
     </tag-file>
+    <tag-file>
+      <name>eformsrenderfield</name>
+      <path>/WEB-INF/tags/eformsrenderfield.tag</path>
+    </tag-file>
 	
 	<function>
 		<description>get browser title from channel configuration</description>
@@ -171,6 +175,12 @@
       <name>getMenuItem</name>
       <function-class>nl.hsleiden.tags.Functions</function-class>
       <function-signature>org.hippoecm.hst.core.sitemenu.EditableMenuItem getMenuItem(javax.servlet.http.HttpServletRequest, org.hippoecm.hst.core.sitemenu.EditableMenuItem)</function-signature>
+    </function>
+    
+    <function>
+      <name>indexOf</name>
+      <function-class>nl.hsleiden.tags.Functions</function-class>
+      <function-signature>java.lang.Integer indexOf(java.util.List, java.lang.String)</function-signature>
     </function>
 
 </taglib>
