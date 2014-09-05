@@ -1,5 +1,4 @@
-<%@ page contentType="text/html; charset=UTF-8" language="java"
-  trimDirectiveWhitespaces="true" pageEncoding="UTF-8"%>
+<%@ page contentType="text/html; charset=UTF-8" language="java" trimDirectiveWhitespaces="true" pageEncoding="UTF-8"%>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
@@ -9,15 +8,15 @@
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 
 <article class="col-md-9 detail-content">
-  <div class="row">
+  <div class="row lectorat">
     
     <div class="col-md-8 col-sm-8 contentarea">
       <div class="content">
-            
+        
         <hst:cmseditlink hippobean="${document}" />
         <h1><span><c:out value="${document.title }" /></span></h1>
-        <%-- <h2> <c:out value="${document.subtitle }" escapeXml="true" />  </h2> --%>
         <hst:include ref="contentTop" />
+        <%-- <h2> <c:out value="${document.subtitle }" escapeXml="true" />  </h2> --%>
         
         <c:if test="${hst:isReadable(document, 'releaseDate.time') and hst:isReadable(document, 'introduction')}">
           <tag:renderDate document="${document}"/>
@@ -25,6 +24,8 @@
             <c:out value="${document.introduction }" />
           </p>
         </c:if>
+
+        <tag:listItems document="${document}" listTitle=""/>
 
         <hst:include ref="contentBottom" />
         <tag:toolbox document="${document }" />
@@ -37,6 +38,6 @@
         <hst:include ref="rightBottom" />
     </aside>
     
-  </div>
+<%--   </div> --%>
 </article>
 
