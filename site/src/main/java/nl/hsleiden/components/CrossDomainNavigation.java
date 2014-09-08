@@ -3,6 +3,7 @@ package nl.hsleiden.components;
 import org.hippoecm.hst.configuration.hosting.Mount;
 import org.hippoecm.hst.configuration.site.HstSite;
 import org.hippoecm.hst.configuration.sitemenu.HstSiteMenuConfiguration;
+import org.hippoecm.hst.configuration.sitemenu.HstSiteMenusConfiguration;
 import org.hippoecm.hst.core.component.HstComponentException;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
@@ -23,17 +24,21 @@ public class CrossDomainNavigation extends WebDocumentDetail {
     public void doBeforeRender(HstRequest request, HstResponse response) throws HstComponentException {
 
         SimpleNavigationInfo parametersInfo = getComponentParametersInfo(request);
-        
         HstRequestContext requestContext = request.getRequestContext();
-        
         Mount mount = requestContext.getMount("hsl");
         HstSite hstSite = mount.getHstSite();
-        HstSiteMenuConfiguration siteMenuConfiguration = hstSite
-                .getSiteMenusConfiguration().getSiteMenuConfiguration(parametersInfo.getMenuName());
         
-        HstSiteMenu menu = new HstSiteMenuImpl(null, siteMenuConfiguration, requestContext);
+        HstSiteMenuConfiguration siteMenuConfiguration = getSimeMenuConfiguration(parametersInfo, hstSite);
 
+        HstSiteMenu menu = new HstSiteMenuImpl(null, siteMenuConfiguration, requestContext);
         request.setAttribute(Constants.AttributesConstants.MENU, menu);
         request.setAttribute(AttributesConstants.PARAM_INFO, getComponentParametersInfo(request));
+    }
+
+    protected HstSiteMenuConfiguration getSimeMenuConfiguration(SimpleNavigationInfo parametersInfo, HstSite hstSite) {
+
+        HstSiteMenusConfiguration menusConfig = hstSite.getSiteMenusConfiguration();
+        HstSiteMenuConfiguration menuConfig = menusConfig.getSiteMenuConfiguration(parametersInfo.getMenuName());
+        return menuConfig;
     }
 }
