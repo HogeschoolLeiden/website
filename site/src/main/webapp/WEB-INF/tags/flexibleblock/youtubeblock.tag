@@ -10,17 +10,15 @@
 <%@ attribute name="content" rtexprvalue="true" required="true" type="nl.hsleiden.beans.YoutubeBean" %>
 
 <c:if test="${not empty content.url}">
-  <div class="catalog video">
-    <div class="align center">
-    <object class="youtube">
-      <param name="movie" value="${fn:escapeXml(content.url)}"/>
-        <param name="allowFullScreen" value="${content.youtubePlayerParameters.allowFullScreen}"/>
-        <param name="allowScriptAccess" value="always"/>
-        <embed src="${fn:escapeXml(content.url)}" type="application/x-shockwave-flash" 
-            allowfullscreen="${content.youtubePlayerParameters.allowFullScreen}"
-            allowscriptaccess="always" style="width: 515px; height: 260px;"/> 
-    </object>
-    </div>
-  </div>
+  
+  <figure>
+    <iframe width="515" height="290" src="${fn:escapeXml(content.url)}" ${content.youtubePlayerParameters.allowFullScreen ? 'allowfullscreen' : ''}></iframe>
+    <%--
+    <figcaption>
+      <span>       Bijschrift bij video      </span>  where does this come from?? add new field to data model
+    </figcaption>
+    --%>
+  </figure>
+  
 </c:if>
 
