@@ -38,6 +38,7 @@ lost position
   
 <c:if test="${fn:length(model.tweets)>0}">
       
+  <div class="button-block twitter">
     <%-- <h2><c:out value="${model.paramInfo.title}"/></h2> --%>
     <c:forEach items="${model.tweets}" var="tweet" varStatus="loop">
       <div class="col-sm-4">
@@ -58,10 +59,9 @@ lost position
       </div>
     </c:forEach>
 
-    <c:if test="${not empty model.paramInfo.followText and not empty model.paramInfo.from}">
-        <div class="button-block">
-            <a href="http://www.twitter.com/${model.paramInfo.from}" target="_BLANK">${model.paramInfo.followText}</a>
-        </div>
-    </c:if>
+    <%-- <c:if test="${not empty model.paramInfo.followText and not empty model.paramInfo.from}">
+       <a class="follow" href="http://www.twitter.com/${model.paramInfo.from}" target="_BLANK">${model.paramInfo.followText}</a>
+    </c:if> --%>
+  </div>
  
 </c:if>

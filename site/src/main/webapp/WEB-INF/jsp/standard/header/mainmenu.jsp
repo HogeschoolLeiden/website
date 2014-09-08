@@ -42,14 +42,16 @@
 			  <c:out value="${myMenuItem.name}" />
 			</a>
             
-            <ul class="dropdownmenu visible-lg visible-md clearfix">
-            
-              <tag:submenu menuItem="${myMenuItem}" columNr="0"/>
-              <tag:submenu menuItem="${myMenuItem}" columNr="1"/>
-              <tag:submenu menuItem="${myMenuItem}" columNr="2"/>
-              <tag:submenu menuItem="${myMenuItem}" columNr="3"/>
-            
-            </ul>
+            <c:if test="${not empty myMenuItem.childMenuItems}">
+              <ul class="dropdownmenu visible-lg visible-md clearfix">
+              
+                <tag:submenu menuItem="${myMenuItem}" columNr="0"/>
+                <tag:submenu menuItem="${myMenuItem}" columNr="1"/>
+                <tag:submenu menuItem="${myMenuItem}" columNr="2"/>
+                <tag:submenu menuItem="${myMenuItem}" columNr="3"/>
+              
+              </ul>
+            </c:if>
             
 		</li> 
                        
