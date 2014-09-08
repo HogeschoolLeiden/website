@@ -41,7 +41,7 @@
             <c:if test="${not empty item.mail }">
               <li>
                 <c:set var="email">mailto:${item.mail}?subject=<fmt:message key="contact.person.subject"/></c:set>
-                <a title="${item.mail }" href="${fn:escapeXml(email)}">
+                <a title="${item.mail }" href="${fn:replace(email, ' ', '%20')}">
                     <c:out value="${item.mail }" />
                   </a>
               </li>
