@@ -47,11 +47,13 @@
         <hst:include ref="rightBottom" />
     </aside>
 
-    <div class="row border-top">
-      <hst:include ref="contentBottom" /> 
-    </div>
     
   </div>
+  
+  <div class="row border-top">
+    <hst:include ref="contentBottom" /> 
+  </div>
+  
 </section>
        
 

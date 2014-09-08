@@ -21,15 +21,18 @@
 
 <c:if test="${not empty model.items and fn:length(model.items)>0}">
   
+  <c:forEach var="item" items="${model.items}" varStatus="zebra">
   
-  <section class="blok colorbg lichtpaars contacts">
-    <h1>
-      <span class="col-md-8 col-xs-8 col-md-offset-4 col-xs-offset-4">
-      <c:out value="${model.info.widgetTitle}" escapeXml="true" />
-      </span>
-    </h1>
+    <section class="blok colorbg lichtpaars contacts">
+      
+      <%-- should it be part of the contact item or common 
+            through all the contacts added from the same widget --%>
+      <h1>
+        <span class="col-md-8 col-xs-8 col-md-offset-4 col-xs-offset-4">
+        <c:out value="${model.info.widgetTitle}" escapeXml="true" />
+        </span>
+      </h1>
     
-    <c:forEach var="item" items="${model.items}" varStatus="zebra">
       <c:if test="${not empty item }">
         <div itemscope itemtype="http://data-vocabulary.org/Person" class="contact clearfix">
           <ul class="col-md-8 col-xs-8 pull-right">
@@ -60,7 +63,7 @@
                     <c:choose>
                       <c:when test="${account.type eq 'twitter'}"><c:out value="fa fa-twitter"/></c:when>
                       <c:when test="${account.type eq 'linkedin'}"><c:out value="fa fa-linkedin"/></c:when>
-                      <c:when test="${account.type eq 'facebook'}"><c:out value="fa fa-facebookr"/></c:when>
+                      <c:when test="${account.type eq 'facebook'}"><c:out value="fa fa-facebook"/></c:when>
                       <c:when test="${account.type eq 'googleplus'}"><c:out value="fa fa-google-plus"/></c:when>
                     </c:choose>
                   </c:set>
@@ -79,7 +82,7 @@
                     
         </div>
       </c:if>    
-    </c:forEach>
-
-  </section>
+    
+    </section>
+  </c:forEach>
 </c:if>
