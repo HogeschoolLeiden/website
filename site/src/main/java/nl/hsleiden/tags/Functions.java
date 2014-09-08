@@ -111,6 +111,10 @@ public class Functions {
         return result;
     }
     
+    public static Integer indexOf(List<String> list, String item) {
+        return list.indexOf(item);
+    }
+    
     private static EditableMenuItem recurseMenuItems(EditableMenuItem menuItem) {
         EditableMenuItem result = null;
         if(menuItem!=null){            
