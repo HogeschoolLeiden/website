@@ -81,9 +81,8 @@
         </c:otherwise>
       </c:choose>
 
-	  <hst:include ref="leftTop" />  <%-- maybe can pass a class name to the following tag --%>
+	  <%-- maybe can pass a class name to the following tag --%>
 	  <tag:facetednavigation facetnav="${model.facetBean}" labels="${model.labels}"/>
-	  <hst:include ref="leftBottom" />
 
 	</div>
   </div>

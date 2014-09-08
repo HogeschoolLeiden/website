@@ -17,6 +17,10 @@
 </c:set> --%>
 
 <div class="filter filter-collapse collapse clearfix algemeenfilter">
+  
+  
+  <hst:include ref="leftTop" />
+  
   <c:if test="${facetnav.count gt 0}">
 
 <%--     <h4><c:out value="${facetnavtitle}" escapeXml="true"/></h4> --%>
@@ -32,31 +36,46 @@
                 
               <c:forEach items="${facet.folders}" var="item">
 			        
-                <c:set var="inputID">
+                <%-- <c:set var="inputID">
                   <c:out value="${facet.name}"/>
                   <c:out value="-"/>
                   <c:out value="${item.name}"/>
-                </c:set>
+                </c:set> --%>
                     
                 <c:choose>
                   <c:when test="${item.leaf and item.count gt 0}">
-                  <%-- what to do with this 
-                      <hst:facetnavigationlink remove="${item}" current="${facetnav}" var="removeLink" />
-                      --%>
+                    
+                    <hst:facetnavigationlink remove="${item}" current="${facetnav}" var="removeLink" />
+                    
+                    <a href="${removeLink}">
                     <div class="checkbox">
-                      <input type="checkbox" id="${inputID}" value="${item.name}" name="${facet.name}" checked>
+                      <img class="cbimg" src="<hst:link path="/images/checkbox-checked.png"/>"></img>
+                      <c:out value="${labels[item.name]}" default="${item.name}" escapeXml="true" />
+                      <%-- <input type="checkbox" id="${inputID}" value="${item.name}" name="${facet.name}" checked>
                       <label for="${inputID}">
                         <c:out value="${labels[item.name]}" default="${item.name}" escapeXml="true" />
-                      </label>
+                      </label> --%>
                     </div>
+                    </a>
+                  
                   </c:when>
                   <c:otherwise>
-                    <div class="checkbox">
-                      <input type="checkbox" id="${inputID}" value="${item.name}" name="${facet.name}">
-                      <label for="${inputID}">
+                    
+                    <hst:link var="link" hippobean="${item}" navigationStateful="true"/>
+                    
+                    <a href="${link}">
+                      <div class="checkbox">
+                        <img class="cbimg" src="<hst:link path="/images/checkbox-unchecked.png"/>"></img>
                         <c:out value="${labels[item.name]}" default="${item.name}" escapeXml="true" />
-                      </label>
-                    </div>
+                      </div>
+                     <%-- 
+                        <input type="checkbox" id="${inputID}" value="${item.name}" name="${facet.name}">
+                        <label for="${inputID}">
+                          <c:out value="${labels[item.name]}" default="${item.name}" escapeXml="true" />
+                        </label>
+                       --%>
+                    </a>
+                  
                   </c:otherwise>
                 </c:choose>
               </c:forEach>
@@ -84,4 +103,7 @@
     </section>
           
   </c:if>
+  
+  <hst:include ref="leftBottom" />
+  
 </div>
