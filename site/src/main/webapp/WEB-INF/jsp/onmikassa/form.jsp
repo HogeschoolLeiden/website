@@ -4,7 +4,10 @@
 <%@ taglib prefix='hst' uri="http://www.hippoecm.org/jsp/hst/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-<%@ taglib prefix="tag" tagdir="/WEB-INF/tags" %>
+<%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
+
+<hst:setBundle basename="nl.hsleiden.general.Messages"/>
+
 
 <c:choose>
   <c:when test="${empty document}">
@@ -34,7 +37,44 @@
 </c:choose>
 
 <c:if test="${not empty omnikassaRequest}">
-	${omnikassaRequest}
+<table>
+	<thead>
+		<tr><th colspan="2"><strong><fmt:message key="form.input"/></strong></th></tr>
+	</thead>
+	<c:forEach items="${form.fields}" var="field">
+		<c:choose>
+			<c:when test="${field.type eq 'simpletextfield' or field.type eq 'fieldgroup'}">
+				<tr><th colspan="2"><c:out value="${field.label}" /></th></tr>
+			</c:when>
+			<c:otherwise>
+				<c:set var="value" value="${formMap.value[field.formRelativeUniqueName].value}"/>
+				<tr><td><c:out value="${field.label}" /></td>
+				<td>
+				<c:choose>
+					<c:when test="${field['class'].name eq 'org.onehippo.forge.easyforms.model.DropDown'}">
+						<c:out value="${field.displayValues[tag:indexOf(field.values, value)]}"/>
+					</c:when>
+					<c:when test="${field['class'].name eq 'org.onehippo.forge.easyforms.model.RadioGroup'}">
+						<c:choose>
+							<c:when test="${not empty value}">
+								<c:out value="${value}"/>
+							</c:when>
+							<c:otherwise>
+								<fmt:message key="form.input.no"/>
+							</c:otherwise>
+						</c:choose>
+					</c:when>
+					<c:otherwise>
+						<c:out value="${value}"/>
+					</c:otherwise>
+				</c:choose>
+				
+				</td>
+				</tr>        
+			</c:otherwise>
+		</c:choose>
+	</c:forEach>
+</table>
 	<form method="post" action="${omnikassaRequest.url}">
 		<input type="hidden" name="Data" value="${omnikassaRequest.data}"> 
 		<input type="hidden" name="InterfaceVersion" value="${omnikassaRequest.interfaceVersion}"> 
@@ -45,7 +85,7 @@
 </c:if>
 
 
-<c:if test="${not empty form}">
+<c:if test="${empty omnikassaRequest}">
 <c:if test="${not empty form.title}">
   <h2><c:out value="${form.title}" /></h2>
 </c:if>

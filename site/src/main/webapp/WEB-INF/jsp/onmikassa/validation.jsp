@@ -15,16 +15,34 @@
     <article class="well well-large">
       <hst:cmseditlink hippobean="${document}"/>
       <header>
+        <c:choose>
+        	<c:when test="${status eq 'SUCCESSFUL' or status eq 'AWAITING_STATUS_REPORT'}">
+				<c:if test="${hst:isReadable(document, 'title') }">
+		          <h1><c:out value="${document.title}"/></h1>
+		        </c:if>
+		        <c:if test="${hst:isReadable(document, 'introduction') }">
+		          <p><c:out value="${document.introduction}"/></p> 
+		        </c:if>        	
+        	</c:when>
+        	<c:when test="${status eq 'CANCELLED'}">
+				<c:if test="${hst:isReadable(document, 'cancelTitle') }">
+		          <h1><c:out value="${document.cancelTitle}"/></h1>
+		        </c:if>
+		        <c:if test="${hst:isReadable(document, 'cancelIntroduction') }">
+		          <p><c:out value="${document.cancelIntroduction}"/></p> 
+		        </c:if>        	
+        	</c:when>
+        	<c:when test="${status eq 'FAILED'}">
+				<c:if test="${hst:isReadable(document, 'failTitle') }">
+		          <h1><c:out value="${document.failTitle}"/></h1>
+		        </c:if>
+		        <c:if test="${hst:isReadable(document, 'failIntroduction') }">
+		          <p><c:out value="${document.failIntroduction}"/></p> 
+		        </c:if>        	
+        	</c:when>
+        </c:choose>
         
-        <c:if test="${hst:isReadable(document, 'title') }">
-          <h1><c:out value="${document.title}"/></h1>
-        </c:if>
-        <c:if test="${hst:isReadable(document, 'subtitle') }">
-          <h2><c:out value="${document.subtitle}"/></h2>
-        </c:if>
-        <c:if test="${hst:isReadable(document, 'introduction') }">
-          <p><c:out value="${document.introduction}"/></p> 
-        </c:if>
+        
       </header>
       
     </article>
