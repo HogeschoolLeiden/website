@@ -4,6 +4,7 @@ import org.hippoecm.hst.content.beans.query.HstQuery;
 import org.hippoecm.hst.content.beans.query.exceptions.FilterException;
 import org.hippoecm.hst.content.beans.query.filter.Filter;
 import org.hippoecm.hst.core.component.HstComponentException;
+import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.parameters.ParametersInfo;
 
 import com.tdclighthouse.prototype.components.GenericOverviewPage;
@@ -13,7 +14,7 @@ import com.tdclighthouse.prototype.componentsinfo.GenericOverviewPageInfo;
 public class GenericOverview extends GenericOverviewPage {
 
     @Override
-    protected void addFilter(HstQuery query) {
+    protected void addFilter(HstQuery query, HstRequest request) {
         Filter globalFilter = query.createFilter();
         try {
             globalFilter.addEqualTo("hsl:hideFromSearch", false);
