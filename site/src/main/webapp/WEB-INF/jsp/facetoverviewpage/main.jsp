@@ -41,6 +41,7 @@
                 <hst:link var="link" hippobean="${item}" />
                 <article class="media clearfix">
                   <hst:cmseditlink hippobean="${item}" />
+                  
                   <c:set var="image" value=""/>
                   <c:if test="${not empty tag:getFirstFlexibleBlockImage(item) }">
                     <div class="image-space">
@@ -75,7 +76,7 @@
             </div>
       
             <hst:include ref="contentBottom" />
-            <tag:toolbox document="${document }" />
+            <%-- <tag:toolbox document="${document }" /> --%>
             
           </section>
         </c:otherwise>

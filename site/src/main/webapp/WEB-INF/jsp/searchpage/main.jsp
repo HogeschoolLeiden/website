@@ -11,23 +11,12 @@
 
 <hst:setBundle basename="nl.hsleiden.general.Messages"/>
 
-<div class="container-fluid">
-	<%-- <hst:include ref="top-container" />     --%>
-  	<div class="row-fluid">
-		<nav class="span2">
-<div id="searchresult-category-container">
-	<div id="facets">
-			<h4><fmt:message key="refine.results" /></h4>
-			<div class="form">
-				<hst:link siteMapItemRefId="search" var="searchPageUrl" navigationStateful="false"/>
-				<esl:facets facets="${model.facets}" searchPageUrl="${searchPageUrl}" facetsCssClass="fieldset" />
-			</div>
-		</div>
-</div>
-			
-		</nav>
-		<div class="span8">
-			<hst:include ref="content" />
+<div id="main" role="main" class="">
+  <div class="container">
+    <div class="row">
+      <section class="overzicht col-md-9">
+          
+          <div class="overzichtlijst">
             <p>
               <opw:public-parameter parameterName="q" var="query"/>
               <fmt:message key="found.results.message" >
@@ -35,56 +24,66 @@
                 <fmt:param value="${fn:escapeXml(query)}"/>
               </fmt:message>
             </p>
-			<c:forEach items="${model.searchResults.hits}" var="hit">
-				<c:set var="item" value="${hit.bean}"/>
-				<hst:link hippobean="${hit.bean}" var="link"/>
-				<article class="well well-large">
-				  <hst:cmseditlink hippobean="${item}" />
-        
-                  <c:if test="${not empty tag:getFirstFlexibleBlockImage(item) }">
-                    <div class="image-space">
-                      <hst:link var="image" hippobean="${tag:getFirstFlexibleBlockImage(item).image.paragraphImage}" />
-                      <img alt="${item.title }" title="${item.title }" src="${image }" />
-                    </div>
-                  </c:if>
-
-                  <div ${not empty tag:getFirstFlexibleBlockImage(item) ? 'class="list-item-content"' : 'class="item-content"' } >
-    			    <h3>
-    				  <a href="${link}"><c:out value="${item.title}"/></a>
-    				</h3>
-              
-                    <c:choose>
-                      <c:when test="${item['class'].name=='hslbeans.EventPage' }">
-  					   <c:if test="${hst:isReadable(item, 'eventDate.time')}">
-  					     <p class="badge badge-info">
-  						   <fmt:formatDate value="${item.eventDate.time}" type="both" dateStyle="medium" timeStyle="short" />
-  					     </p>
-  					   </c:if>
-                      </c:when>
-                      <c:otherwise>
-                        <c:if test="${hst:isReadable(item, 'releaseDate.time')}">
-                          <p class="badge badge-info">
-                            <fmt:formatDate value="${item.releaseDate.time}" type="both" dateStyle="medium" timeStyle="short" />
-                          </p>
-                        </c:if>
-                      </c:otherwise>
-                    </c:choose>
-  			       
-        			<p><c:out value="${item.introduction}"/></p>
-                  </div>
+            
+            <c:forEach items="${model.searchResults.hits}" var="hit">
+              <c:set var="item" value="${hit.bean}"/>
+              <hst:link hippobean="${hit.bean}" var="link"/>
+                
+              <article class="media clearfix">
+                <hst:cmseditlink hippobean="${item}" />
                   
-                  <c:if test="${not empty tag:getFirstFlexibleBlockImage(item) }">
-                    <div class="clear"></div>
-                  </c:if>
-				</article>
-			</c:forEach>
-			<opw:simplepaginator paginator="${model.paginator}" namespaced="false"/>
-		</div>
-		<aside class="span2">
-			<hst:include ref="rightTop" />
-			<hst:include ref="right" />
-			<hst:include ref="rightBottom" />
-		</aside>
-  	</div>
-  	<hst:include ref="bottom-container" />
+                <c:set var="image" value=""/>
+                <c:if test="${not empty tag:getFirstFlexibleBlockImage(item) }">
+                  <div class="image-space">
+                    <hst:link var="image" hippobean="${tag:getFirstFlexibleBlockImage(item).image.listImageMedium}" />  
+                  </div>
+                </c:if>
+                  
+                <a href="${link}">
+                  <!-- afmeting afbeelding: 100x100 -->
+                  <figure class="media-object pull-left">
+                    <c:if test="${not empty image}">
+                      <img alt="${item.title }" title="${item.title }" src="${image }" />
+                    </c:if>
+                  </figure>
+                    <%--
+                    <tag:renderDate document="${item}" dateClass="datum start"/>
+                     a content type addition, (end date for events probably)  and after it
+                    modify the renderDate tag and uncomment the following line
+                    <tag:renderDate document="${item}" dateClass="datum start"/>
+                    --%>
+                  <div class="media-body">
+                    <h1 class="media-heading"><c:out value="${item.title }"/></h1>
+                    <p><c:out value="${item.introduction }"/></p>
+                  </div>   
+                </a>
+                   
+              </article>
+                
+            </c:forEach>
+          </div>
+          
+          <div class="paginator-style">
+              <opw:simplepaginator paginator="${model.paginator}" namespaced="false"/>
+          </div>
+      
+          <hst:include ref="contentBottom" />
+          
+      </section>
+      
+      <%-- bring the esl:facets in the project and make necessary changes --%>
+      <div class="filter filter-collapse collapse clearfix algemeenfilter">
+        <hst:include ref="leftTop" />
+        <h4><fmt:message key="refine.results" /></h4>
+        <div class="form">
+           <hst:link siteMapItemRefId="search" var="searchPageUrl" navigationStateful="false"/>
+           <esl:facets facets="${model.facets}" searchPageUrl="${searchPageUrl}" facetsCssClass="fieldset" />
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <hst:include ref="bottom-container" />
 </div>
+
+
