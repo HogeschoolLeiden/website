@@ -49,7 +49,8 @@
                     
                     <a href="${removeLink}">
                     <div class="checkbox">
-                      <img class="cbimg" src="<hst:link path="/images/checkbox-checked.png"/>"></img>
+                      <img  class="cbimg" src="<hst:link path="/images/checkbox-checked.png"/>" 
+                            alt="<fmt:message key="checkbox.checked" />" title="<fmt:message key="checkbox.checked" />"/>
                       <c:out value="${labels[item.name]}" default="${item.name}" escapeXml="true" />
                       <%-- <input type="checkbox" id="${inputID}" value="${item.name}" name="${facet.name}" checked>
                       <label for="${inputID}">
@@ -65,7 +66,8 @@
                     
                     <a href="${link}">
                       <div class="checkbox">
-                        <img class="cbimg" src="<hst:link path="/images/checkbox-unchecked.png"/>"></img>
+                        <img  class="cbimg" src="<hst:link path="/images/checkbox-unchecked.png"/>" 
+                              alt="<fmt:message key="checkbox.checked" />" title="<fmt:message key="checkbox.unchecked" />"/>
                         <c:out value="${labels[item.name]}" default="${item.name}" escapeXml="true" />
                       </div>
                      <%-- 
