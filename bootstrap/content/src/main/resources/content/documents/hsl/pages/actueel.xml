@@ -4,8 +4,8 @@
   </sv:property>
   <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
     <sv:value>hippotranslation:translated</sv:value>
-    <sv:value>hippo:translated</sv:value>
     <sv:value>mix:versionable</sv:value>
+    <sv:value>hippo:translated</sv:value>
   </sv:property>
   <sv:property sv:name="jcr:uuid" sv:type="String">
     <sv:value>62b8dd7a-ccf9-463a-a770-3f445f2edcef</sv:value>
@@ -37,8 +37,8 @@
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
       <sv:value>hippotranslation:translated</sv:value>
-      <sv:value>hippo:translated</sv:value>
       <sv:value>mix:versionable</sv:value>
+      <sv:value>hippo:translated</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>68657a00-650d-4be1-b773-e4f03f263be2</sv:value>
@@ -480,7 +480,7 @@
           <sv:value>2014-06-10T10:58:07.247+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-09-04T13:42:44.045+02:00</sv:value>
+          <sv:value>2014-09-09T14:14:58.625+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -600,42 +600,6 @@
         </sv:node>
         <sv:node sv:name="hsl:flexibleblock">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>hsl:Youtube</sv:value>
-          </sv:property>
-          <sv:node sv:name="hsl:youtubePlayerParameters">
-            <sv:property sv:name="jcr:primaryType" sv:type="Name">
-              <sv:value>hsl:YoutubePlayerParameters</sv:value>
-            </sv:property>
-            <sv:property sv:name="hsl:allowFullScreen" sv:type="Boolean">
-              <sv:value>false</sv:value>
-            </sv:property>
-            <sv:property sv:name="hsl:autoplay" sv:type="Boolean">
-              <sv:value>false</sv:value>
-            </sv:property>
-            <sv:property sv:name="hsl:disablekb" sv:type="Boolean">
-              <sv:value>true</sv:value>
-            </sv:property>
-            <sv:property sv:name="hsl:rel" sv:type="Boolean">
-              <sv:value>true</sv:value>
-            </sv:property>
-            <sv:property sv:name="hsl:showinfo" sv:type="Boolean">
-              <sv:value>true</sv:value>
-            </sv:property>
-          </sv:node>
-          <sv:node sv:name="hsl:youtubeUrlParameters">
-            <sv:property sv:name="jcr:primaryType" sv:type="Name">
-              <sv:value>hsl:YoutubeUrlParameters</sv:value>
-            </sv:property>
-            <sv:property sv:name="hsl:theme" sv:type="String">
-              <sv:value>dark</sv:value>
-            </sv:property>
-            <sv:property sv:name="hsl:youtubeUrl" sv:type="String">
-              <sv:value>https://www.youtube.com/watch?v=2uIugnAHWiY</sv:value>
-            </sv:property>
-          </sv:node>
-        </sv:node>
-        <sv:node sv:name="hsl:flexibleblock">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>hsl:Quote</sv:value>
           </sv:property>
           <sv:node sv:name="hsl:quoteParameters">
@@ -672,6 +636,83 @@
             </sv:property>
             <sv:property sv:name="hsl:twitter" sv:type="Boolean">
               <sv:value>false</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="hsl:flexibleblock">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:Fotogallery</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:title" sv:type="String">
+            <sv:value>Fotogalerij</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:image">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippogallerypicker:imagelink</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>615d8ea4-c9ef-48b3-81cd-d74d80be7c9f</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+          </sv:node>
+          <sv:node sv:name="hsl:image">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippogallerypicker:imagelink</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>ec577e3e-6d8b-4505-ae8c-ceeb8cd383a7</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+          </sv:node>
+          <sv:node sv:name="hsl:image">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippogallerypicker:imagelink</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>ef302e02-7193-47b3-b111-066d99c55eb4</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="hsl:flexibleblock">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:Youtube</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:youtubePlayerParameters">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:YoutubePlayerParameters</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:allowFullScreen" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:autoplay" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:disablekb" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:rel" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:showinfo" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="hsl:youtubeUrlParameters">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:YoutubeUrlParameters</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:theme" sv:type="String">
+              <sv:value>dark</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:youtubeUrl" sv:type="String">
+              <sv:value>https://www.youtube.com/watch?v=2uIugnAHWiY</sv:value>
             </sv:property>
           </sv:node>
         </sv:node>
@@ -1008,7 +1049,7 @@
           <sv:value>2014-06-10T10:58:07.247+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-09-04T13:42:59.049+02:00</sv:value>
+          <sv:value>2014-09-09T14:15:43.612+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -1128,42 +1169,6 @@
         </sv:node>
         <sv:node sv:name="hsl:flexibleblock">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>hsl:Youtube</sv:value>
-          </sv:property>
-          <sv:node sv:name="hsl:youtubePlayerParameters">
-            <sv:property sv:name="jcr:primaryType" sv:type="Name">
-              <sv:value>hsl:YoutubePlayerParameters</sv:value>
-            </sv:property>
-            <sv:property sv:name="hsl:allowFullScreen" sv:type="Boolean">
-              <sv:value>false</sv:value>
-            </sv:property>
-            <sv:property sv:name="hsl:autoplay" sv:type="Boolean">
-              <sv:value>false</sv:value>
-            </sv:property>
-            <sv:property sv:name="hsl:disablekb" sv:type="Boolean">
-              <sv:value>true</sv:value>
-            </sv:property>
-            <sv:property sv:name="hsl:rel" sv:type="Boolean">
-              <sv:value>true</sv:value>
-            </sv:property>
-            <sv:property sv:name="hsl:showinfo" sv:type="Boolean">
-              <sv:value>true</sv:value>
-            </sv:property>
-          </sv:node>
-          <sv:node sv:name="hsl:youtubeUrlParameters">
-            <sv:property sv:name="jcr:primaryType" sv:type="Name">
-              <sv:value>hsl:YoutubeUrlParameters</sv:value>
-            </sv:property>
-            <sv:property sv:name="hsl:theme" sv:type="String">
-              <sv:value>dark</sv:value>
-            </sv:property>
-            <sv:property sv:name="hsl:youtubeUrl" sv:type="String">
-              <sv:value>https://www.youtube.com/watch?v=2uIugnAHWiY</sv:value>
-            </sv:property>
-          </sv:node>
-        </sv:node>
-        <sv:node sv:name="hsl:flexibleblock">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>hsl:Quote</sv:value>
           </sv:property>
           <sv:node sv:name="hsl:quoteParameters">
@@ -1200,6 +1205,83 @@
             </sv:property>
             <sv:property sv:name="hsl:twitter" sv:type="Boolean">
               <sv:value>false</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="hsl:flexibleblock">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:Fotogallery</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:title" sv:type="String">
+            <sv:value>Fotogalerij</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:image">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippogallerypicker:imagelink</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>615d8ea4-c9ef-48b3-81cd-d74d80be7c9f</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+          </sv:node>
+          <sv:node sv:name="hsl:image">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippogallerypicker:imagelink</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>ec577e3e-6d8b-4505-ae8c-ceeb8cd383a7</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+          </sv:node>
+          <sv:node sv:name="hsl:image">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippogallerypicker:imagelink</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>ef302e02-7193-47b3-b111-066d99c55eb4</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="hsl:flexibleblock">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:Youtube</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:youtubePlayerParameters">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:YoutubePlayerParameters</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:allowFullScreen" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:autoplay" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:disablekb" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:rel" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:showinfo" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="hsl:youtubeUrlParameters">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:YoutubeUrlParameters</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:theme" sv:type="String">
+              <sv:value>dark</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:youtubeUrl" sv:type="String">
+              <sv:value>https://www.youtube.com/watch?v=2uIugnAHWiY</sv:value>
             </sv:property>
           </sv:node>
         </sv:node>
@@ -1524,13 +1606,13 @@
           <sv:value>2014-06-10T10:58:07.247+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-09-04T13:42:59.049+02:00</sv:value>
+          <sv:value>2014-09-09T14:15:43.612+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-          <sv:value>2014-09-04T13:43:01.899+02:00</sv:value>
+          <sv:value>2014-09-09T14:15:47.055+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:id" sv:type="String">
           <sv:value>96f8110b-2d1a-4dbc-af27-f15770334e33</sv:value>
@@ -1647,42 +1729,6 @@
         </sv:node>
         <sv:node sv:name="hsl:flexibleblock">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>hsl:Youtube</sv:value>
-          </sv:property>
-          <sv:node sv:name="hsl:youtubePlayerParameters">
-            <sv:property sv:name="jcr:primaryType" sv:type="Name">
-              <sv:value>hsl:YoutubePlayerParameters</sv:value>
-            </sv:property>
-            <sv:property sv:name="hsl:allowFullScreen" sv:type="Boolean">
-              <sv:value>false</sv:value>
-            </sv:property>
-            <sv:property sv:name="hsl:autoplay" sv:type="Boolean">
-              <sv:value>false</sv:value>
-            </sv:property>
-            <sv:property sv:name="hsl:disablekb" sv:type="Boolean">
-              <sv:value>true</sv:value>
-            </sv:property>
-            <sv:property sv:name="hsl:rel" sv:type="Boolean">
-              <sv:value>true</sv:value>
-            </sv:property>
-            <sv:property sv:name="hsl:showinfo" sv:type="Boolean">
-              <sv:value>true</sv:value>
-            </sv:property>
-          </sv:node>
-          <sv:node sv:name="hsl:youtubeUrlParameters">
-            <sv:property sv:name="jcr:primaryType" sv:type="Name">
-              <sv:value>hsl:YoutubeUrlParameters</sv:value>
-            </sv:property>
-            <sv:property sv:name="hsl:theme" sv:type="String">
-              <sv:value>dark</sv:value>
-            </sv:property>
-            <sv:property sv:name="hsl:youtubeUrl" sv:type="String">
-              <sv:value>https://www.youtube.com/watch?v=2uIugnAHWiY</sv:value>
-            </sv:property>
-          </sv:node>
-        </sv:node>
-        <sv:node sv:name="hsl:flexibleblock">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>hsl:Quote</sv:value>
           </sv:property>
           <sv:node sv:name="hsl:quoteParameters">
@@ -1719,6 +1765,83 @@
             </sv:property>
             <sv:property sv:name="hsl:twitter" sv:type="Boolean">
               <sv:value>false</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="hsl:flexibleblock">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:Fotogallery</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:title" sv:type="String">
+            <sv:value>Fotogalerij</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:image">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippogallerypicker:imagelink</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>615d8ea4-c9ef-48b3-81cd-d74d80be7c9f</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+          </sv:node>
+          <sv:node sv:name="hsl:image">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippogallerypicker:imagelink</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>ec577e3e-6d8b-4505-ae8c-ceeb8cd383a7</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+          </sv:node>
+          <sv:node sv:name="hsl:image">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippogallerypicker:imagelink</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>ef302e02-7193-47b3-b111-066d99c55eb4</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="hsl:flexibleblock">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:Youtube</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:youtubePlayerParameters">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:YoutubePlayerParameters</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:allowFullScreen" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:autoplay" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:disablekb" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:rel" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:showinfo" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="hsl:youtubeUrlParameters">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:YoutubeUrlParameters</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:theme" sv:type="String">
+              <sv:value>dark</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:youtubeUrl" sv:type="String">
+              <sv:value>https://www.youtube.com/watch?v=2uIugnAHWiY</sv:value>
             </sv:property>
           </sv:node>
         </sv:node>
@@ -5392,8 +5515,8 @@
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
       <sv:value>hippotranslation:translated</sv:value>
-      <sv:value>hippo:translated</sv:value>
       <sv:value>mix:versionable</sv:value>
+      <sv:value>hippo:translated</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>bd84f9a1-a22c-4eaa-a332-f057e99efba9</sv:value>
@@ -7116,8 +7239,8 @@
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
       <sv:value>hippotranslation:translated</sv:value>
-      <sv:value>hippo:translated</sv:value>
       <sv:value>mix:versionable</sv:value>
+      <sv:value>hippo:translated</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>2fafa985-fdcc-498a-9cd5-8907a6624f41</sv:value>
@@ -8664,8 +8787,8 @@
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
       <sv:value>hippotranslation:translated</sv:value>
-      <sv:value>hippo:translated</sv:value>
       <sv:value>mix:versionable</sv:value>
+      <sv:value>hippo:translated</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>50bad2ad-0f43-4695-aa5f-61718234f4b1</sv:value>

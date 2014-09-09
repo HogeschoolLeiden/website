@@ -22,13 +22,6 @@
   mixin
   + hsl:calendarEventsCompoundMixin (hsl:CalendarEventsCompoundMixin)
 
-[hsl:TeasersCompoundMixin] > hippo:compound, hippostd:relaxed
-  orderable
-
-[hsl:TeasersMixin]
-  mixin
-  + hsl:teasersCompoundMixin (hsl:TeasersCompoundMixin)
-
 [hsl:ConfirmationPage] > hsl:WebPage, hippostd:relaxed, hippotranslation:translated
   orderable
 
@@ -70,6 +63,9 @@
 [hsl:FormWidgetParameters] > hippo:compound, hippostd:relaxed
   orderable
 
+[hsl:Fotogallery] > hippo:compound, hippostd:relaxed
+  orderable
+
 [hsl:Image] > hippo:compound, hippostd:relaxed
   orderable
 
@@ -88,9 +84,6 @@
 [hsl:NewsPage] > hsl:ArticlePage, hippostd:relaxed, hippotranslation:translated
   orderable
 
-[hsl:PersonnelPage] > hsl:ArticlePage, hippostd:relaxed, hippotranslation:translated
-  orderable
-
 [hsl:OmnikassaPage] > hsl:WebPage, hippostd:relaxed, hippotranslation:translated
   orderable
 
@@ -101,6 +94,9 @@
   orderable
 
 [hsl:ParagraphImage] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hsl:PersonnelPage] > hsl:ArticlePage, hippostd:relaxed, hippotranslation:translated
   orderable
 
 [hsl:PublicImages] > hippo:compound, hippostd:relaxed
@@ -154,6 +150,16 @@
 [hsl:TeaserDocument] > hsl:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
+[hsl:TeasersCompoundMixin] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hsl:TeasersMixin]
+  mixin
+  + hsl:teasersCompoundMixin (hsl:TeasersCompoundMixin)
+
+[hsl:TextTeaser] > hsl:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
 [hsl:TwitterCompoundMixin] > hippo:compound, hippostd:relaxed
   orderable
 
@@ -198,8 +204,5 @@
   orderable
 
 [hsl:mailstoreform] > eforms:form
-  orderable
-  
-[hsl:TextTeaser] > hsl:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
