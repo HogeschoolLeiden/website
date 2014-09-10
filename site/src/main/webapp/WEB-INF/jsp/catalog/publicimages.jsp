@@ -72,7 +72,7 @@
               <c:otherwise>
                  <hst:link fullyQualified="true" hippobean="${image.wideImage }" var="imageLink"></hst:link>
                  
-                 <a href="${imageLink }" rel="prettyPhoto" class="pin-it-button">
+                 <a href="${imageLink }" data-atr="prettyPhoto" class="pin-it-button">
                    <img  src="${imageLink}" alt="${fn:escapeXml(image.alt) }" title="${fn:escapeXml(image.alt) }"/>
                  </a>
               </c:otherwise>

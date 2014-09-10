@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$("a[rel^='prettyPhoto']").prettyPhoto({
+	$("a[data-atr^='prettyPhoto']").prettyPhoto({
 		animation_speed: 'fast', /* fast/slow/normal */
 		slideshow: 5000, /* false OR interval time in ms */
 		autoplay_slideshow: false, /* true/false */

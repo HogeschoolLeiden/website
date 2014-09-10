@@ -36,7 +36,7 @@
     <c:forEach items="${content.image}" var="item">
       <hst:link fullyQualified="true" hippobean="${item.wideImage }" var="imageLink"></hst:link>
          
-      <a href="${imageLink }" rel="prettyPhoto" class="col-xs-6 col-sm-4 col-md-4">
+      <a href="${imageLink }" data-atr="prettyPhoto" class="col-xs-6 col-sm-4 col-md-4">
          <img  src="<hst:link hippobean="${item.listImageLarge }" />" alt="${fn:escapeXml(image.alt) }" title="${fn:escapeXml(image.alt) }"/>
          <span class="fa fa-search"></span>
       </a>
