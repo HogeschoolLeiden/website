@@ -29,23 +29,7 @@
           </div>
         </c:otherwise>
       </c:choose>
-        
-        
-      <%--
-      <div class="row lectorat">
-      <c:if test="${hst:isReadable(document, 'releaseDate.time') and hst:isReadable(document, 'introduction')}">
-        <tag:renderDate document="${document}"/>
-        <p class="intro">
-          <c:out value="${document.introduction }" />
-        </p>
-      </c:if>
-      </div>
-
-      
-      <tag:toolbox document="${document }" /> 
-      --%>
-        
-        
+                
     </div>
     
     <aside class="col-md-4 col-sm-4 aside">
