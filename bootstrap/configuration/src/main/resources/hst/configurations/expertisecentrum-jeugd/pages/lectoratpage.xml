@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="lectoratpage">
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node sv:name="lectoratpage" xmlns:sv="http://www.jcp.org/jcr/sv/1.0">
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>hst:component</sv:value>
   </sv:property>
@@ -36,6 +37,26 @@
     <sv:node sv:name="content">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:component</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentclassname" sv:type="String">
+        <sv:value>nl.hsleiden.components.LectoratComponent</sv:value>
+      </sv:property>
+      <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
+        <sv:value>contentBeanPath</sv:value>
+        <sv:value>showTypes</sv:value>
+        <sv:value>defaultPageSize</sv:value>
+        <sv:value>sortBy</sv:value>
+        <sv:value>sortOrder</sv:value>
+      </sv:property>
+      <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
+        <sv:value>pages</sv:value>
+        <sv:value>hslbeans.NewsPage</sv:value>
+        <sv:value>4</sv:value>
+        <sv:value>hsl:releaseDate</sv:value>
+        <sv:value>descending</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:template" sv:type="String">
+        <sv:value>lectoratpage.main.content</sv:value>
       </sv:property>
       <sv:node sv:name="contentTop">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
