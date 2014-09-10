@@ -10,9 +10,9 @@ import twitter4j.UserMentionEntity;
 
 public class TwitterUtils {
     
-    private static final String TWEET_URL = "<a href={0} target=_blank>{1}</a>";
-    private static final String TWEET_HASH_URL = "<a href=https://twitter.com/#!/search?q=%23{0}&src=typd target=_blank>{1}</a>";
-    private static final String TWEET_MENTIONED_URL = "<a href=https://twitter.com/#!/search?q=from:{0}&src=typd target=_blank>{1}</a>";
+    private static final String TWEET_URL = "<a target=_blank href=\"{0}\" >{1}</a>";
+    private static final String TWEET_HASH_URL = "<a target=_blank href=\"https://twitter.com/#!/search?q=%23{0}&amp;src=typd\" >{1}</a>";
+    private static final String TWEET_MENTIONED_URL = "<a target=_blank href=\"https://twitter.com/#!/search?q=from:{0}&amp;src=typd\" >{1}</a>";
     private static final String TWEET_IMG = "<img src={0} title={1}></img>";
     
     private TwitterUtils() {
