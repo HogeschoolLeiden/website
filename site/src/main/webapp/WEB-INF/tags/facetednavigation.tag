@@ -9,6 +9,7 @@
 
 <%@ attribute name="facetnav" required="true" type="org.hippoecm.hst.content.beans.standard.HippoFacetNavigationBean"%>
 <%@ attribute name="labels" required="false" type="java.util.Map"%>
+<%@ attribute name="enableSearch" required="false" type="java.lang.Boolean"%>
 
 <hst:setBundle basename="nl.hsleiden.general.Messages"/>
 
@@ -90,19 +91,23 @@
 	  </c:if>
 	</c:forEach>
   
-    <section class="filtergroup col-md-3">
-      <h2>Filter op trefwoord</h2>                                              <%-- use property --%>
-      <div class="filterlist">
-        <form role="form" class="form">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="">
-              </div>
-              <button class="btn fa fa-search no-radius" type="submit">
-                <span>Zoeken</span>                                             <%-- use property --%>
-              </button> 
-         </form>
-      </div>
-    </section>
+    <c:if test="${enableSearch}">
+      <section class="filtergroup col-md-3">
+        <fmt:message var="submitText" key="search.filter.keywords"/>
+        <h2><c:out value="${submitText}" /></h2>
+        <div class="filterlist">
+          <form role="form" class="form" method="get">
+                <div class="form-group">
+                  <input type="text" name="q" class="form-control" placeholder="" required="required"
+                    ${not empty model.query? 'value=\"' : ''} ${model.query} ${not empty model.query? '\"' : ''}>
+                </div>
+                <button class="btn fa fa-search no-radius" type="submit">
+                  <span><c:out value="${submitText}" /></span>                            
+                </button> 
+           </form>
+        </div>
+      </section>
+    </c:if> 
           
   </c:if>
   

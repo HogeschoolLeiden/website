@@ -40,7 +40,6 @@
             
       <hst:include ref="contentBottom" />
       
-      <tag:toolbox document="${document }"/>
     </div>
   </div>
 </div>

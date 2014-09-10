@@ -76,14 +76,12 @@
             </div>
       
             <hst:include ref="contentBottom" />
-            <%-- <tag:toolbox document="${document }" /> --%>
             
           </section>
         </c:otherwise>
       </c:choose>
 
-	  <%-- maybe can pass a class name to the following tag --%>
-	  <tag:facetednavigation facetnav="${model.facetBean}" labels="${model.labels}"/>
+	  <tag:facetednavigation facetnav="${model.facetBean}" labels="${model.labels}" enableSearch="true"/>
 
 	</div>
   </div>

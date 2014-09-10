@@ -52,7 +52,6 @@
   </div>
 
   <hst:include ref="contentBottom" />
-  <tag:toolbox document="${document }" /> 
   
 </section>
 
