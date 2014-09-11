@@ -14,29 +14,88 @@ package nl.hsleiden.beans;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  **/
+import hslbeans.WebPage;
+
 import java.util.Calendar;
 import java.util.List;
 
 import org.hippoecm.hst.content.beans.Node;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
-import org.hippoecm.hst.content.beans.standard.HippoDocument;
+import org.hippoecm.hst.content.beans.standard.HippoGalleryImageSetBean;
 import org.onehippo.cms7.essentials.components.model.Authors;
 import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
 
 @HippoEssentialsGenerated(internalName = "hsl:blogpost")
 @Node(jcrType = "hsl:blogpost")
-public class Blogpost extends HippoDocument implements Authors {
+public class Blogpost extends WebPage implements Authors {
 
     public static final String TITLE = "hsl:title";
     public static final String INTRODUCTION = "hsl:introduction";
-    public static final String PUBLICATION_DATE = "hsl:publicationdate";
     public static final String CATEGORIES = "hsl:categories";
     public static final String AUTHOR = "hsl:author";
     public static final String AUTHOR_NAMES = "hsl:authornames";
     public static final String LINK = "hsl:link";
     public static final String AUTHORS = "hsl:authors";
     public static final String TAGS = "hippostd:tags";
+    
+    private Boolean hideFromSearch;
+    private Boolean hideFromSitemap;
+    private Boolean share;
+    private String keywords;
+    private String description;
+    private Calendar releaseDate;
+    private String browserTitle;
+    
+    public Boolean getHideFromSearch() {
+        if (this.hideFromSearch == null) {
+            this.hideFromSearch = getProperty("hsl:hideFromSearch");
+        }
+        return this.hideFromSearch;
+    }
 
+    public Boolean getHideFromSitemap() {
+        if (this.hideFromSitemap == null) {
+            this.hideFromSitemap = getProperty("hsl:hideFromSitemap");
+        }
+        return this.hideFromSitemap;
+    }
+
+    public Boolean getShare() {
+        if (this.share == null) {
+            this.share = getProperty("hsl:share");
+        }
+        return this.share;
+    }
+
+    public String getKeywords() {
+        if (this.keywords == null) {
+            this.keywords = getProperty("hsl:keywords");
+        }
+        return this.keywords;
+    }
+
+    public String getDescription() {
+        if (this.description == null) {
+            this.description = getProperty("hsl:description");
+        }
+        return this.description;
+    }
+
+    public Calendar getReleaseDate() {
+        if (this.releaseDate == null) {
+            this.releaseDate = getProperty("hsl:releaseDate");
+        }
+        return this.releaseDate;
+    }
+
+    public String getBrowserTitle() {
+        if (this.browserTitle == null) {
+            this.browserTitle = getProperty("hsl:browserTitle");
+        }
+        return this.browserTitle;
+    }
+    
+    private HippoGalleryImageSetBean headerImage;
     private List<HippoBean> flexibleblock;
     
     public List<HippoBean> getFlexibleblock() {
@@ -46,17 +105,19 @@ public class Blogpost extends HippoDocument implements Authors {
         return this.flexibleblock;
     }
     
-   @HippoEssentialsGenerated(internalName = "hsl:publicationdate")
-    public Calendar getPublicationDate() {
-        return getProperty(PUBLICATION_DATE);
+    public HippoGalleryImageSetBean getHeaderImage() {
+        if (this.headerImage == null) {
+            this.headerImage = getLinkedBean("hsl:headerImage", HippoGalleryImageSetBean.class);
+        }
+        return this.headerImage;
     }
-
+    
     @HippoEssentialsGenerated(internalName = "hsl:authornames")
     public String[] getAuthorNames() {
         return getProperty(AUTHOR_NAMES);
     }
 
-    public String getAuthor() {
+    public String getBlogAuthor() {
         final String[] authorNames = getAuthorNames();
         if(authorNames !=null && authorNames.length > 0){
             return authorNames[0];
@@ -69,7 +130,6 @@ public class Blogpost extends HippoDocument implements Authors {
         return getProperty(TITLE);
     }
 
-    @HippoEssentialsGenerated(internalName = "hsl:introduction")
     public String getIntroduction() {
         return getProperty(INTRODUCTION);
     }

@@ -24,12 +24,16 @@
     <hst:link hippobean="${document }" fullyQualified="true" />
   </c:set>
 
+  <c:set var="description">
+    <c:out value="${document.introduction}" escapeXml="true"/>
+  </c:set>
+
   <hst:headContribution category="metadata" keyHint="url">
     <meta property="og:url" content="${url}"/>
   </hst:headContribution>
 
   <hst:headContribution category="metadata" keyHint="description">
-    <meta property="og:description" content="${document.introduction}"/>
+    <meta property="og:description" content="${description}"/>
   </hst:headContribution>
 
 <div class="share clearfix">

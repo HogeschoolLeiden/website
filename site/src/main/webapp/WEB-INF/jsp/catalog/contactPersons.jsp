@@ -55,27 +55,7 @@
             <img itemprop="photo" alt="${item.name }" src="${image }" title="${item.name }" />
             
             <c:if test="${fn:length(item.accounts)>0}">
-              <ul class="social clearfix">
-                <c:forEach var="account" items="${item.accounts}" varStatus="zebra">
-                  
-                  <c:set var="accountClass"><c:out value=""/></c:set>
-                  <c:set var="accountClass">
-                    <c:choose>
-                      <c:when test="${account.type eq 'twitter'}"><c:out value="fa fa-twitter"/></c:when>
-                      <c:when test="${account.type eq 'linkedin'}"><c:out value="fa fa-linkedin"/></c:when>
-                      <c:when test="${account.type eq 'facebook'}"><c:out value="fa fa-facebook"/></c:when>
-                      <c:when test="${account.type eq 'googleplus'}"><c:out value="fa fa-google-plus"/></c:when>
-                    </c:choose>
-                  </c:set>
-                  
-                  <c:if test="${not empty accountClass}">
-                    <li>
-                      <a href="${account.link}" class="${accountClass}" target="_blank"
-                         title="<fmt:message key="follow.author"/> ${account.type}">
-                         <span class="hidden">Twitter</span></a></li>
-                  </c:if>
-                </c:forEach>
-              </ul>
+              <tag:socialaccounts document="${item}"/>
             </c:if>
             
           </figure>

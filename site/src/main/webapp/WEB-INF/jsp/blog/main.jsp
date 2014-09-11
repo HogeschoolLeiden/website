@@ -4,6 +4,8 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="hst" uri="http://www.hippoecm.org/jsp/hst/core" %>
 <%@ taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml" %>
+<%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
+<%@ taglib prefix='opw' uri="http://open-web.nl/hippo/prototype"%>
 <%--
   Copyright 2014 Hippo B.V. (http://www.onehippo.com)
 
@@ -20,13 +22,36 @@
   limitations under the License.
   --%>
 
-<div class="container-fluid">
-  <div class="row-fluid">
-    <div class="col-md-9">
-      <hst:include ref="detailcontainer" />
-    </div>
-    <div class="col-md-3">
-      <hst:include ref="sidebarcontainer" />
+<div id="main" role="main" class="detail">
+
+  
+  <tag:headerImage document="${document}"/>
+
+  <div class="container">
+    <div class="row">
+    <article class="col-md-9 detail-content">
+      
+      <div class="row">
+        
+        <div class="col-md-8 col-sm-8 contentarea">
+          <div class="content">
+      
+            <hst:include ref="detailcontainer" />
+       
+          </div>
+        </div>
+        
+        <aside class="col-md-4 col-sm-4 aside">
+          <hst:include ref="sidebarcontainer" /> 
+        </aside>
+      
+      </div>
+    </article>
+    
+    <hst:include ref="leftTop" /> 
+    <hst:include ref="left"/>
+    <hst:include ref="leftBottom" />
+    
     </div>
   </div>
 </div>

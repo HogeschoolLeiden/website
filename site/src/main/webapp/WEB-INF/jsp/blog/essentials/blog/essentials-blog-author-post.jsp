@@ -26,7 +26,6 @@
 
 <hst:setBundle basename="nl.hsleiden.channelmanager.Messages, nl.hsleiden.blog.Messages"/>
 
-<div class="other blogs author">
 <div class="panel panel-default">
   <c:if test="${(pageable ne null)}">
     <div class="panel-heading">
@@ -48,5 +47,4 @@
       </c:otherwise>
     </c:choose>
   </c:if>
-</div>
 </div>

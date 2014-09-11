@@ -8,7 +8,7 @@
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 <%@ taglib prefix="opw" uri="http://open-web.nl/hippo/prototype"%>
 
-<%@ attribute name="document" rtexprvalue="true" required="true" type="hslbeans.WebPage" %>
+<%@ attribute name="document" rtexprvalue="true" required="true" type="org.hippoecm.hst.content.beans.standard.HippoDocument" %>
 
 <c:if test="${hst:isReadable(document, 'headerImage')}">
   <c:if test="${not empty document.headerImage }">

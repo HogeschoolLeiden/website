@@ -25,16 +25,28 @@
 
 <hst:setBundle basename="nl.hsleiden.channelmanager.Messages, nl.hsleiden.blog.Messages"/>
 
-<div class="main-column">
-  <h1><c:out value="${document.title}"/></h1>
-  <h2><fmt:message key="before.author.name"/> <c:out value="${document.author}"/></h2>
-  <strong>
-    <c:if test="${document.publicationDate ne null}">
-      <fmt:formatDate type="date" pattern="yyyy-MM-dd" value="${document.publicationDate.time}"/>
-    </c:if>
-  </strong>
-  <p><c:out value="${document.introduction}"/></p>
-  
-  <tag:flexibleblock content="${document.flexibleblock }"/>
-  
-</div>
+<hst:cmseditlink hippobean="${document}" />
+<h1> <c:out value="${document.title }" escapeXml="true" /> </h1>
+<h2><fmt:message key="before.author.name"/> <c:out value="${document.blogAuthor}"/></h2>
+
+<c:if test="${hst:isReadable(document, 'eventDate.time')}">
+  <tag:renderDate document="${document}"/>
+</c:if>
+
+<p class="intro">
+  <c:out value="${document.introduction }" />
+</p>
+          
+<%-- make blog a webpage, add metadata fields, breadrumb, date this time also with year 
+
+<strong>
+  <c:if test="${document.publicationDate ne null}">
+    <fmt:formatDate type="date" pattern="yyyy-MM-dd" value="${document.publicationDate.time}"/>
+  </c:if>
+</strong>
+<p><c:out value="${document.introduction}"/></p> --%>
+
+<tag:flexibleblock content="${document.flexibleblock }" />
+<tag:toolbox document="${document }" /> 
+        
+
