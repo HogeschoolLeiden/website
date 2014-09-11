@@ -36,13 +36,7 @@
             <div class="filterlist">
                 
               <c:forEach items="${facet.folders}" var="item">
-			        
-                <%-- <c:set var="inputID">
-                  <c:out value="${facet.name}"/>
-                  <c:out value="-"/>
-                  <c:out value="${item.name}"/>
-                </c:set> --%>
-                    
+			                    
                 <c:choose>
                   <c:when test="${item.leaf and item.count gt 0}">
                     
@@ -53,10 +47,9 @@
                       <img  class="cbimg" src="<hst:link path="/images/checkbox-checked.png"/>" 
                             alt="<fmt:message key="checkbox.checked" />" title="<fmt:message key="checkbox.checked" />"/>
                       <c:out value="${labels[item.name]}" default="${item.name}" escapeXml="true" />
-                      <%-- <input type="checkbox" id="${inputID}" value="${item.name}" name="${facet.name}" checked>
-                      <label for="${inputID}">
-                        <c:out value="${labels[item.name]}" default="${item.name}" escapeXml="true" />
-                      </label> --%>
+                      <c:out value=" ( " escapeXml="true" />
+                      <c:out value="${item.count}" escapeXml="true" />
+                      <c:out value=" )" escapeXml="true" />
                     </div>
                     </a>
                   
@@ -70,13 +63,10 @@
                         <img  class="cbimg" src="<hst:link path="/images/checkbox-unchecked.png"/>" 
                               alt="<fmt:message key="checkbox.checked" />" title="<fmt:message key="checkbox.unchecked" />"/>
                         <c:out value="${labels[item.name]}" default="${item.name}" escapeXml="true" />
+                        <c:out value="    ( " escapeXml="true" />
+                        <c:out value="${item.count}" escapeXml="true" />
+                        <c:out value=" )" escapeXml="true" />
                       </div>
-                     <%-- 
-                        <input type="checkbox" id="${inputID}" value="${item.name}" name="${facet.name}">
-                        <label for="${inputID}">
-                          <c:out value="${labels[item.name]}" default="${item.name}" escapeXml="true" />
-                        </label>
-                       --%>
                     </a>
                   
                   </c:otherwise>

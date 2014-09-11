@@ -1113,12 +1113,7 @@ function Header(calendar, options) {
 						.append(renderSection('center'))
 						.append(renderSection('right'))
 				);
-			element.append(
-					$("<tr/>")
-						.append(renderSection('left2'))
-						.append(renderSection('center2'))
-						.append(renderSection('right2'))
-				);
+			
 			return element;
 		}
 	}

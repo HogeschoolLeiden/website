@@ -32,16 +32,14 @@
 </c:if>
 
 <c:if test="${empty webMasterMessage}">
-  <div class="catalog calendarEvents">
-    <div class="widget-title">
-      <h2><c:out value="${model.paramInfo.widgetTitle}" escapeXml="true" /></h2>
-    </div>
-    <div id='calendar'></div>
+  <section class="filtergroup col-md-3 calendar">
+    <h2 class="hidden"><c:out value="${model.paramInfo.widgetTitle}" escapeXml="true" /></h2>
+    <div id="datepicker" class="hasDatepicker"></div>
     <hst:resourceURL  var="resouceUrl" />
     <script type="text/javascript">
 		$(document).ready(function() {
   		// page is now ready, initialize the calendar...
-  			$('#calendar').fullCalendar({
+  			$('#datepicker').fullCalendar({
   				lang: '${pageContext.request.locale.language}',
             	weekends: true,
             	events: '${resouceUrl}',
@@ -49,15 +47,12 @@
     	        	window.location.href = calEvent.link;
       	    	},
             	header: {
-            	    left:   'title',
-            	    center: '',
-                	right:  '',
-              		left2:   'today',
-              	    center2: '',
-                  	right2:  'prev,next'
+            	    left:   '',
+            	    center: 'prev,title,next',
+                	right:  ''
             	}
         	});
     	});
   	</script>
-  </div>
+  </section>
 </c:if>  

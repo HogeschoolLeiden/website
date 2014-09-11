@@ -901,6 +901,43 @@
         <sv:property sv:name="hst:xtype" sv:type="String">
           <sv:value>HST.vBox</sv:value>
         </sv:property>
+        <sv:node sv:name="calendar">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:containeritemcomponent</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:componentclassname" sv:type="String">
+            <sv:value>nl.hsleiden.components.catalog.EventCalendar</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:iconpath" sv:type="String">
+            <sv:value>images/catalog/events-calendar-icon.png</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:label" sv:type="String">
+            <sv:value>Evenementen Kalender</sv:value>
+          </sv:property>
+          <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
+            <sv:value>title</sv:value>
+            <sv:value>scope</sv:value>
+            <sv:value>themaFilter</sv:value>
+            <sv:value>overFilter</sv:value>
+            <sv:value>tryToUseMixin</sv:value>
+          </sv:property>
+          <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
+            <sv:value>Related Items</sv:value>
+            <sv:value/>
+            <sv:value>off</sv:value>
+            <sv:value>off</sv:value>
+            <sv:value>on</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:resourcetemplate" sv:type="String">
+            <sv:value>blank</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:template" sv:type="String">
+            <sv:value>catalog.calendar</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:xtype" sv:type="String">
+            <sv:value>HST.Item</sv:value>
+          </sv:property>
+        </sv:node>
       </sv:node>
       <sv:node sv:name="leftBottom">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -949,7 +986,7 @@
           <sv:property sv:name="hst:label" sv:type="String">
             <sv:value>Twitter feed</sv:value>
           </sv:property>
-          <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+          <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
             <sv:value>limit</sv:value>
             <sv:value>title</sv:value>
             <sv:value>horizontal</sv:value>
@@ -958,7 +995,7 @@
             <sv:value>followText</sv:value>
             <sv:value>from</sv:value>
           </sv:property>
-          <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+          <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
             <sv:value>0</sv:value>
             <sv:value/>
             <sv:value>off</sv:value>
@@ -1043,52 +1080,6 @@
         <sv:property sv:name="hst:xtype" sv:type="String">
           <sv:value>HST.vBox</sv:value>
         </sv:property>
-        <sv:node sv:name="relatedNews">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>hst:containeritemcomponent</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:componentclassname" sv:type="String">
-            <sv:value>nl.hsleiden.components.catalog.RelatedNews</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:iconpath" sv:type="String">
-            <sv:value>images/catalog/catalog-list.png</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:label" sv:type="String">
-            <sv:value>Gerelateerde Nieuws</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
-            <sv:value>contentBeanPath</sv:value>
-            <sv:value>sortBy</sv:value>
-            <sv:value>overviewBeanPath</sv:value>
-            <sv:value>overviewLinkLabel</sv:value>
-            <sv:value>sortOrder</sv:value>
-            <sv:value>tryToUseMixin</sv:value>
-            <sv:value>showOverviewLink</sv:value>
-            <sv:value>themaFilter</sv:value>
-            <sv:value>widgetTitle</sv:value>
-            <sv:value>overFilter</sv:value>
-            <sv:value>size</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
-            <sv:value/>
-            <sv:value>Publicatiedatum</sv:value>
-            <sv:value/>
-            <sv:value/>
-            <sv:value>descending</sv:value>
-            <sv:value>on</sv:value>
-            <sv:value>on</sv:value>
-            <sv:value>off</sv:value>
-            <sv:value>Related News</sv:value>
-            <sv:value>off</sv:value>
-            <sv:value>1</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:template" sv:type="String">
-            <sv:value>catalog.relatednews</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:xtype" sv:type="String">
-            <sv:value>HST.Item</sv:value>
-          </sv:property>
-        </sv:node>
       </sv:node>
       <sv:node sv:name="leftTop">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -1118,14 +1109,14 @@
           <sv:property sv:name="hst:label" sv:type="String">
             <sv:value>Teasers</sv:value>
           </sv:property>
-          <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+          <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
             <sv:value>thirdTeaser</sv:value>
             <sv:value>tryToUseMixin</sv:value>
             <sv:value>widgetTitle</sv:value>
             <sv:value>firstTeaser</sv:value>
             <sv:value>secondTeaser</sv:value>
           </sv:property>
-          <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+          <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
             <sv:value/>
             <sv:value>on</sv:value>
             <sv:value>Teasers</sv:value>
@@ -1134,43 +1125,6 @@
           </sv:property>
           <sv:property sv:name="hst:template" sv:type="String">
             <sv:value>catalog.teasers</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:xtype" sv:type="String">
-            <sv:value>HST.Item</sv:value>
-          </sv:property>
-        </sv:node>
-        <sv:node sv:name="calendar">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>hst:containeritemcomponent</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:componentclassname" sv:type="String">
-            <sv:value>nl.hsleiden.components.catalog.EventCalendar</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:iconpath" sv:type="String">
-            <sv:value>images/catalog/events-calendar-icon.png</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:label" sv:type="String">
-            <sv:value>Evenementen Kalender</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
-            <sv:value>title</sv:value>
-            <sv:value>scope</sv:value>
-            <sv:value>themaFilter</sv:value>
-            <sv:value>overFilter</sv:value>
-            <sv:value>tryToUseMixin</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
-            <sv:value>Related Items</sv:value>
-            <sv:value/>
-            <sv:value>off</sv:value>
-            <sv:value>off</sv:value>
-            <sv:value>on</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:resourcetemplate" sv:type="String">
-            <sv:value>blank</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:template" sv:type="String">
-            <sv:value>catalog.calendar</sv:value>
           </sv:property>
           <sv:property sv:name="hst:xtype" sv:type="String">
             <sv:value>HST.Item</sv:value>
@@ -1189,14 +1143,14 @@
           <sv:property sv:name="hst:label" sv:type="String">
             <sv:value>Contactpersonen</sv:value>
           </sv:property>
-          <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+          <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
             <sv:value>firstContact</sv:value>
             <sv:value>secondContact</sv:value>
             <sv:value>tryToUseMixin</sv:value>
             <sv:value>widgetTitle</sv:value>
             <sv:value>thirdContact</sv:value>
           </sv:property>
-          <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+          <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
             <sv:value/>
             <sv:value/>
             <sv:value>on</sv:value>

@@ -130,6 +130,7 @@
         </sv:property>
         <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
           <sv:value>mix:referenceable</sv:value>
+          <sv:value>hsl:CalendarEventsMixin</sv:value>
           <sv:value>mix:versionable</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
@@ -154,7 +155,7 @@
           <sv:value>2014-06-05T13:47:15.942+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-08-15T11:22:20.297+02:00</sv:value>
+          <sv:value>2014-09-11T11:13:18.165+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -227,6 +228,28 @@
             <sv:value>1953450a-f493-470f-b861-1b1c02bd8e4c</sv:value>
           </sv:property>
         </sv:node>
+        <sv:node sv:name="hsl:calendarEventsCompoundMixin">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:CalendarEventsCompoundMixin</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:overFilter" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:themaFilter" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:widgetTitle" sv:type="String">
+            <sv:value>Kalender Evenementen</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:contentBeanPath">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippo:mirror</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>62b8dd7a-ccf9-463a-a770-3f445f2edcef</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
       </sv:node>
       <sv:node sv:name="index">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -234,6 +257,7 @@
         </sv:property>
         <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
           <sv:value>mix:referenceable</sv:value>
+          <sv:value>hsl:CalendarEventsMixin</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>e53b8e8e-dc3a-42d2-aca8-5ea58a1b44e6</sv:value>
@@ -256,7 +280,7 @@
           <sv:value>2014-06-05T13:47:15.942+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-08-15T11:22:13.829+02:00</sv:value>
+          <sv:value>2014-09-11T11:12:43.297+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -329,6 +353,28 @@
             <sv:value>1953450a-f493-470f-b861-1b1c02bd8e4c</sv:value>
           </sv:property>
         </sv:node>
+        <sv:node sv:name="hsl:calendarEventsCompoundMixin">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:CalendarEventsCompoundMixin</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:overFilter" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:themaFilter" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:widgetTitle" sv:type="String">
+            <sv:value>Kalender Evenementen</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:contentBeanPath">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippo:mirror</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>62b8dd7a-ccf9-463a-a770-3f445f2edcef</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
       </sv:node>
       <sv:node sv:name="index">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -336,6 +382,7 @@
         </sv:property>
         <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
           <sv:value>mix:referenceable</sv:value>
+          <sv:value>hsl:CalendarEventsMixin</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>ca496472-72f2-4e90-b5f1-cf8f3e8b87c7</sv:value>
@@ -359,13 +406,13 @@
           <sv:value>2014-06-05T13:47:15.942+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-08-15T11:22:20.297+02:00</sv:value>
+          <sv:value>2014-09-11T11:13:18.165+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-          <sv:value>2014-08-15T11:22:22.110+02:00</sv:value>
+          <sv:value>2014-09-11T11:13:20.614+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:id" sv:type="String">
           <sv:value>98809d7e-bad4-4079-b66c-478826f3fc49</sv:value>
@@ -435,6 +482,28 @@
             <sv:value>1953450a-f493-470f-b861-1b1c02bd8e4c</sv:value>
           </sv:property>
         </sv:node>
+        <sv:node sv:name="hsl:calendarEventsCompoundMixin">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:CalendarEventsCompoundMixin</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:overFilter" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:themaFilter" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:widgetTitle" sv:type="String">
+            <sv:value>Kalender Evenementen</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:contentBeanPath">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippo:mirror</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>62b8dd7a-ccf9-463a-a770-3f445f2edcef</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
       </sv:node>
     </sv:node>
     <sv:node sv:name="news-item-1">
@@ -456,7 +525,6 @@
           <sv:value>hsl:RelatedItemsMixin</sv:value>
           <sv:value>mix:referenceable</sv:value>
           <sv:value>hsl:ContactPersonsMixin</sv:value>
-          <sv:value>hsl:CalendarEventsMixin</sv:value>
           <sv:value>hsl:TeasersMixin</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
@@ -480,7 +548,7 @@
           <sv:value>2014-06-10T10:58:07.247+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-09-09T14:14:58.625+02:00</sv:value>
+          <sv:value>2014-09-11T11:14:25.025+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -1023,7 +1091,6 @@
           <sv:value>hsl:RelatedItemsMixin</sv:value>
           <sv:value>mix:referenceable</sv:value>
           <sv:value>hsl:ContactPersonsMixin</sv:value>
-          <sv:value>hsl:CalendarEventsMixin</sv:value>
           <sv:value>hsl:TeasersMixin</sv:value>
           <sv:value>mix:versionable</sv:value>
         </sv:property>
@@ -1049,7 +1116,7 @@
           <sv:value>2014-06-10T10:58:07.247+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-09-09T14:15:43.612+02:00</sv:value>
+          <sv:value>2014-09-11T11:12:34.157+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -1581,7 +1648,6 @@
           <sv:value>hsl:RelatedItemsMixin</sv:value>
           <sv:value>mix:referenceable</sv:value>
           <sv:value>hsl:ContactPersonsMixin</sv:value>
-          <sv:value>hsl:CalendarEventsMixin</sv:value>
           <sv:value>hsl:TeasersMixin</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
@@ -1606,13 +1672,13 @@
           <sv:value>2014-06-10T10:58:07.247+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-09-09T14:15:43.612+02:00</sv:value>
+          <sv:value>2014-09-11T11:12:34.157+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-          <sv:value>2014-09-09T14:15:47.055+02:00</sv:value>
+          <sv:value>2014-09-11T11:12:37.466+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:id" sv:type="String">
           <sv:value>96f8110b-2d1a-4dbc-af27-f15770334e33</sv:value>
@@ -2176,7 +2242,7 @@
           <sv:value>2014-06-10T10:58:07.247+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-08-21T12:11:16.426+02:00</sv:value>
+          <sv:value>2014-09-11T11:15:57.053+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -2304,7 +2370,7 @@
             <sv:value>hsl:Documents</sv:value>
           </sv:property>
           <sv:property sv:name="hsl:title" sv:type="String">
-            <sv:value/>
+            <sv:value>Title can be specified in the cms</sv:value>
           </sv:property>
           <sv:node sv:name="hsl:asset">
             <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -2440,7 +2506,7 @@
           <sv:value>2014-06-10T10:58:07.247+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-08-21T12:11:03.995+02:00</sv:value>
+          <sv:value>2014-09-11T11:34:30.819+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -2568,7 +2634,7 @@
             <sv:value>hsl:Documents</sv:value>
           </sv:property>
           <sv:property sv:name="hsl:title" sv:type="String">
-            <sv:value/>
+            <sv:value>Title can be specified in the cms</sv:value>
           </sv:property>
           <sv:node sv:name="hsl:asset">
             <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -2694,13 +2760,13 @@
           <sv:value>2014-06-10T10:58:07.247+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-08-21T12:11:16.426+02:00</sv:value>
+          <sv:value>2014-09-11T11:15:57.053+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-          <sv:value>2014-08-21T12:11:22.138+02:00</sv:value>
+          <sv:value>2014-09-11T11:16:00.226+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:id" sv:type="String">
           <sv:value>96f8110b-2d1a-4dbc-af27-f15770334e33</sv:value>
@@ -2825,7 +2891,7 @@
             <sv:value>hsl:Documents</sv:value>
           </sv:property>
           <sv:property sv:name="hsl:title" sv:type="String">
-            <sv:value/>
+            <sv:value>Title can be specified in the cms</sv:value>
           </sv:property>
           <sv:node sv:name="hsl:asset">
             <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -2961,7 +3027,7 @@
           <sv:value>2014-06-11T10:37:58.223+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-09T13:55:45.026+02:00</sv:value>
+          <sv:value>2014-09-11T11:16:03.780+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -2996,6 +3062,9 @@
         </sv:property>
         <sv:property sv:name="hsl:releaseDate" sv:type="Date">
           <sv:value>2014-06-11T10:38:00.000+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:share" sv:type="Boolean">
+          <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:subjecttags" sv:type="String" sv:multiple="true">
           <sv:value>onderwijs</sv:value>
@@ -3148,7 +3217,7 @@
           <sv:value>2014-06-11T10:37:58.223+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-09T13:55:56.253+02:00</sv:value>
+          <sv:value>2014-09-11T11:17:22.182+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -3183,6 +3252,9 @@
         </sv:property>
         <sv:property sv:name="hsl:releaseDate" sv:type="Date">
           <sv:value>2014-06-11T10:38:00.000+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:share" sv:type="Boolean">
+          <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:subjecttags" sv:type="String" sv:multiple="true">
           <sv:value>onderwijs</sv:value>
@@ -3323,13 +3395,13 @@
           <sv:value>2014-06-11T10:37:58.223+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-09T13:55:56.253+02:00</sv:value>
+          <sv:value>2014-09-11T11:17:22.182+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-          <sv:value>2014-07-09T13:55:58.172+02:00</sv:value>
+          <sv:value>2014-09-11T11:17:26.289+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:id" sv:type="String">
           <sv:value>f57cf1ca-e447-40f1-a6be-281bc2e10f30</sv:value>
@@ -3361,6 +3433,9 @@
         </sv:property>
         <sv:property sv:name="hsl:releaseDate" sv:type="Date">
           <sv:value>2014-06-11T10:38:00.000+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:share" sv:type="Boolean">
+          <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:subjecttags" sv:type="String" sv:multiple="true">
           <sv:value>onderwijs</sv:value>
@@ -3511,7 +3586,7 @@
           <sv:value>2014-06-17T10:36:17.435+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-09T13:49:05.109+02:00</sv:value>
+          <sv:value>2014-09-11T11:17:29.041+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -3552,6 +3627,9 @@
         </sv:property>
         <sv:property sv:name="hsl:releaseDate" sv:type="Date">
           <sv:value>2014-03-17T10:36:00.000+01:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:share" sv:type="Boolean">
+          <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:subjecttags" sv:type="String" sv:multiple="true">
           <sv:value>hl-media</sv:value>
@@ -3626,7 +3704,7 @@
           <sv:value>2014-06-17T10:36:17.435+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-09T13:49:25.372+02:00</sv:value>
+          <sv:value>2014-09-11T11:18:17.451+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -3667,6 +3745,9 @@
         </sv:property>
         <sv:property sv:name="hsl:releaseDate" sv:type="Date">
           <sv:value>2014-03-17T10:36:00.000+01:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:share" sv:type="Boolean">
+          <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:subjecttags" sv:type="String" sv:multiple="true">
           <sv:value>hl-media</sv:value>
@@ -3740,13 +3821,13 @@
           <sv:value>2014-06-17T10:36:17.435+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-09T13:49:25.372+02:00</sv:value>
+          <sv:value>2014-09-11T11:18:17.451+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-          <sv:value>2014-07-09T13:49:27.214+02:00</sv:value>
+          <sv:value>2014-09-11T11:18:19.324+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:id" sv:type="String">
           <sv:value>87af607e-9ef6-4f8d-b71e-102f38bba138</sv:value>
@@ -3784,6 +3865,9 @@
         </sv:property>
         <sv:property sv:name="hsl:releaseDate" sv:type="Date">
           <sv:value>2014-03-17T10:36:00.000+01:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:share" sv:type="Boolean">
+          <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:subjecttags" sv:type="String" sv:multiple="true">
           <sv:value>hl-media</sv:value>
@@ -3868,7 +3952,7 @@
           <sv:value>2014-06-17T10:39:33.853+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-30T17:43:19.415+02:00</sv:value>
+          <sv:value>2014-09-11T11:18:22.150+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -4359,10 +4443,10 @@
           <sv:value>2014-07-11T13:27:38.129Z</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-11T13:35:26.956Z</sv:value>
+          <sv:value>2014-09-11T11:19:04.829+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
-          <sv:value>boogaard.joris</sv:value>
+          <sv:value>admin</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:id" sv:type="String">
           <sv:value>3ac51413-5053-4a1e-8ba4-5c22064e3fa0</sv:value>
@@ -4393,6 +4477,9 @@
         </sv:property>
         <sv:property sv:name="hsl:releaseDate" sv:type="Date">
           <sv:value>2014-07-11T13:39:00.000Z</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:share" sv:type="Boolean">
+          <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:subjecttags" sv:type="String" sv:multiple="true">
           <sv:value>onderzoek</sv:value>
@@ -4462,10 +4549,10 @@
           <sv:value>2014-07-11T13:27:38.129Z</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-11T13:39:49.234Z</sv:value>
+          <sv:value>2014-09-11T11:19:26.496+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
-          <sv:value>boogaard.joris</sv:value>
+          <sv:value>admin</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:id" sv:type="String">
           <sv:value>3ac51413-5053-4a1e-8ba4-5c22064e3fa0</sv:value>
@@ -4496,6 +4583,9 @@
         </sv:property>
         <sv:property sv:name="hsl:releaseDate" sv:type="Date">
           <sv:value>2014-07-11T13:39:00.000Z</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:share" sv:type="Boolean">
+          <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:subjecttags" sv:type="String" sv:multiple="true">
           <sv:value>onderzoek</sv:value>
@@ -4553,13 +4643,13 @@
           <sv:value>2014-07-11T13:27:38.129Z</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-11T13:39:49.234Z</sv:value>
+          <sv:value>2014-09-11T11:19:26.496+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
-          <sv:value>boogaard.joris</sv:value>
+          <sv:value>admin</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-          <sv:value>2014-07-11T13:39:52.672Z</sv:value>
+          <sv:value>2014-09-11T11:19:28.339+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:id" sv:type="String">
           <sv:value>3ac51413-5053-4a1e-8ba4-5c22064e3fa0</sv:value>
@@ -4590,6 +4680,9 @@
         </sv:property>
         <sv:property sv:name="hsl:releaseDate" sv:type="Date">
           <sv:value>2014-07-11T13:39:00.000Z</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:share" sv:type="Boolean">
+          <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:subjecttags" sv:type="String" sv:multiple="true">
           <sv:value>onderzoek</sv:value>
@@ -4658,10 +4751,10 @@
           <sv:value>2014-07-11T13:51:47.822Z</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-14T13:16:49.038Z</sv:value>
+          <sv:value>2014-09-11T11:19:31.086+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
-          <sv:value>berkouwer.patricia</sv:value>
+          <sv:value>admin</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:id" sv:type="String">
           <sv:value>0ec60f74-f7b4-4c27-a741-8b1455dd2886</sv:value>
@@ -4966,7 +5059,7 @@
           <sv:value>2014-07-14T14:11:31.765Z</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-30T17:58:05.676+02:00</sv:value>
+          <sv:value>2014-09-11T11:19:55.390+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -6055,7 +6148,7 @@
           <sv:value>2014-06-19T12:10:20.307+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-08-21T09:54:01.307+02:00</sv:value>
+          <sv:value>2014-09-11T12:18:21.127+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -6073,7 +6166,7 @@
           <sv:value>Inleiding metadata</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:eventDate" sv:type="Date">
-          <sv:value>2014-08-19T12:10:00.000+02:00</sv:value>
+          <sv:value>2014-07-12T11:51:00.000+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:hideFromSearch" sv:type="Boolean">
           <sv:value>false</sv:value>
@@ -6216,7 +6309,7 @@
           <sv:value>2014-06-19T12:10:20.307+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-30T20:20:43.061+02:00</sv:value>
+          <sv:value>2014-09-11T12:18:25.669+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -6234,7 +6327,7 @@
           <sv:value>Inleiding metadata</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:eventDate" sv:type="Date">
-          <sv:value>2014-08-19T12:10:00.000+02:00</sv:value>
+          <sv:value>2014-07-12T11:51:00.000+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:hideFromSearch" sv:type="Boolean">
           <sv:value>false</sv:value>
@@ -6376,13 +6469,13 @@
           <sv:value>2014-06-19T12:10:20.307+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-30T20:20:43.061+02:00</sv:value>
+          <sv:value>2014-09-11T12:18:25.669+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-          <sv:value>2014-07-30T20:20:45.968+02:00</sv:value>
+          <sv:value>2014-09-11T12:18:27.284+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:id" sv:type="String">
           <sv:value>d1627e32-7bd1-4c24-8cc2-e1828f021bce</sv:value>
@@ -6397,7 +6490,7 @@
           <sv:value>Inleiding metadata</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:eventDate" sv:type="Date">
-          <sv:value>2014-08-19T12:10:00.000+02:00</sv:value>
+          <sv:value>2014-07-12T11:51:00.000+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:hideFromSearch" sv:type="Boolean">
           <sv:value>false</sv:value>
@@ -6549,7 +6642,7 @@
           <sv:value>2014-06-19T12:47:26.920+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-30T20:20:47.959+02:00</sv:value>
+          <sv:value>2014-09-11T12:18:12.095+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -6567,7 +6660,7 @@
           <sv:value/>
         </sv:property>
         <sv:property sv:name="hsl:eventDate" sv:type="Date">
-          <sv:value>2014-05-19T12:47:00.000+02:00</sv:value>
+          <sv:value>2014-07-29T11:51:00.000+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:hideFromSearch" sv:type="Boolean">
           <sv:value>false</sv:value>
@@ -6686,7 +6779,7 @@
           <sv:value>2014-06-19T12:47:26.920+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-30T20:20:55.192+02:00</sv:value>
+          <sv:value>2014-09-11T12:18:17.182+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -6704,7 +6797,7 @@
           <sv:value/>
         </sv:property>
         <sv:property sv:name="hsl:eventDate" sv:type="Date">
-          <sv:value>2014-05-19T12:47:00.000+02:00</sv:value>
+          <sv:value>2014-07-29T11:51:00.000+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:hideFromSearch" sv:type="Boolean">
           <sv:value>false</sv:value>
@@ -6822,13 +6915,13 @@
           <sv:value>2014-06-19T12:47:26.920+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-30T20:20:55.192+02:00</sv:value>
+          <sv:value>2014-09-11T12:18:17.182+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-          <sv:value>2014-07-30T20:20:57.206+02:00</sv:value>
+          <sv:value>2014-09-11T12:18:18.964+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:id" sv:type="String">
           <sv:value>23be660d-8711-433a-9f61-b303a4efb54a</sv:value>
@@ -6843,7 +6936,7 @@
           <sv:value/>
         </sv:property>
         <sv:property sv:name="hsl:eventDate" sv:type="Date">
-          <sv:value>2014-05-19T12:47:00.000+02:00</sv:value>
+          <sv:value>2014-07-29T11:51:00.000+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:hideFromSearch" sv:type="Boolean">
           <sv:value>false</sv:value>
@@ -6971,7 +7064,7 @@
           <sv:value>2014-06-19T12:48:50.332+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-30T20:22:05.720+02:00</sv:value>
+          <sv:value>2014-09-11T12:21:45.622+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -6989,7 +7082,7 @@
           <sv:value/>
         </sv:property>
         <sv:property sv:name="hsl:eventDate" sv:type="Date">
-          <sv:value>2014-06-05T12:48:00.000+02:00</sv:value>
+          <sv:value>2014-07-20T11:52:00.000+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:hideFromSearch" sv:type="Boolean">
           <sv:value>false</sv:value>
@@ -7067,7 +7160,7 @@
           <sv:value>2014-06-19T12:48:50.332+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-30T20:22:11.340+02:00</sv:value>
+          <sv:value>2014-09-11T12:21:51.209+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -7085,7 +7178,7 @@
           <sv:value/>
         </sv:property>
         <sv:property sv:name="hsl:eventDate" sv:type="Date">
-          <sv:value>2014-06-05T12:48:00.000+02:00</sv:value>
+          <sv:value>2014-07-20T11:52:00.000+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:hideFromSearch" sv:type="Boolean">
           <sv:value>false</sv:value>
@@ -7162,13 +7255,13 @@
           <sv:value>2014-06-19T12:48:50.332+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-07-30T20:22:11.340+02:00</sv:value>
+          <sv:value>2014-09-11T12:21:51.209+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-          <sv:value>2014-07-30T20:22:13.221+02:00</sv:value>
+          <sv:value>2014-09-11T12:21:52.849+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:id" sv:type="String">
           <sv:value>ecffcb2b-aac6-44f7-a478-97d74a26a73a</sv:value>
@@ -7183,7 +7276,7 @@
           <sv:value/>
         </sv:property>
         <sv:property sv:name="hsl:eventDate" sv:type="Date">
-          <sv:value>2014-06-05T12:48:00.000+02:00</sv:value>
+          <sv:value>2014-07-20T11:52:00.000+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:hideFromSearch" sv:type="Boolean">
           <sv:value>false</sv:value>
