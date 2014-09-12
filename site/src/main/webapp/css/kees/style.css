@@ -4,44 +4,49 @@
 /* -- my additions -- */
 
 /* topmenu */
-.nav#mainnav ul.dropdownmenu.visible-lg.visible-md.clearfix li ul li ul {padding-left: 0; padding-bottom:  0; padding-top: 0;}
+.nav#mainnav ul.dropdownmenu.visible-lg.visible-md.clearfix li ul li ul { padding-left: 0; padding-bottom: 0; padding-top: 0; }
 
 /* public images */
-.images2 {width: 100%; float: left;}
-.images2 .singleImage{width: 50%; float: left; margin-bottom: 2%; }
-.images2 .singleImagePadding{width: 95%; float: center; margin-left: 2.5%;}
-.images2 .singleImagePadding img {display: block; width: 100%; float: left;}
-.images2 .singleImagePadding img {display: block; width: 100%; float: left;}
+.images2 { width: 100%; float: left; }
+.images2 .singleImage { width: 50%; float: left; margin-bottom: 2%; }
+.images2 .singleImagePadding { width: 95%; float: center; margin-left: 2.5%; }
+.images2 .singleImagePadding img { display: block; width: 100%; float: left; }
+.images2 .singleImagePadding img { display: block; width: 100%; float: left; }
 
-.images3 {width: 100%; float: left;}
-.images3 .singleImage{width: 33.333%; float: left; margin-bottom: 2%;}
-.images3 .singleImagePadding{width: 95%; float: center; margin-left: 2.5%;}
-.images3 .singleImagePadding img {display: block; width: 100%; float: left;}
+.images3 { width: 100%; float: left; }
+.images3 .singleImage { width: 33.333%; float: left; margin-bottom: 2%; }
+.images3 .singleImagePadding { width: 95%; float: center; margin-left: 2.5%; }
+.images3 .singleImagePadding img { display: block; width: 100%; float: left; }
 
-.images4 {width: 100%; float: left;}
-.images4 .singleImage{width: 25%; float: left; margin-bottom: 2%;}
-.images4 .singleImagePadding{width: 95%; float: center; margin-left: 2.5%;}
-.images4 .singleImagePadding img {display: block; width: 100%; float: left;}
+.images4 { width: 100%; float: left; }
+.images4 .singleImage {	width: 25%; float: left; margin-bottom: 2%; }
+.images4 .singleImagePadding { width: 95%; float: center; margin-left: 2.5%; }
+.images4 .singleImagePadding img { display: block; width: 100%; float: left; }
 
 /* flexible block image */
-figure.fexibleblock.image img {width:100%;}
+figure.fexibleblock.image img { width: 100%; }
 
 /* twitter */
-.twitteritem h2{ margin-bottom: 0;}
-.twitteritem h3{ margin-top: 0; margin-bottom: 0;}
+.twitteritem h2 { margin-bottom: 0; }
+.twitteritem h3 { margin-top: 0; margin-bottom: 0; }
 
 /* facet navigation */
-.filterlist .checkbox .cbimg{padding-right: 10px;}
+.filterlist .checkbox .cbimg { padding-right: 10px; }
 
 /* temporary blog author */
-.panel-body p{margin: 0;}
-.panel-body .pull-left{ margin-right: 10px; }
+.panel-body p { margin: 0; }
+.panel-body .pull-left { margin-right: 10px; }
 .panel-body .media-body { width: 50%; padding: 0; }
-.panel-body .media-body ul.social{ list-style-type: none; width: 100%; padding: 0; display: block; float: left; 
-								margin-top: 5px; margin-bottom: 20px;}
-.panel-body .media-body ul.social li{ display: inline; float: left; background: #23114c; width: 20px; height: 20px; text-align: center; margin-left: 7px;}
-.panel-body .media-body ul.social li a{ color: rgb(255, 255, 255); margin-top: 3px;}
+.panel-body .media-body ul.social { list-style-type: none; width: 100%; padding: 0; display: block;
+	float: left; margin-top: 5px; margin-bottom: 20px; }
+.panel-body .media-body ul.social li { display: inline; float: left; background: #23114c; width: 20px;
+	height: 20px; text-align: center; margin-left: 7px; }
+.panel-body .media-body ul.social li a { color: rgb(255, 255, 255);	margin-top: 3px; }
 
 /* date with year*/
-.datum.year{width: 50px; height: 50px; border-radius: 25px;}
+.datum.year { width: 50px; height: 50px; border-radius: 25px; }
 
+/* faq overview page */
+.media-body.accordian h2.media-heading { width: 90%; float: right; }
+.media-body.accordian + div { width: 90%; float: right; }
+.media-body.accordian + div blockquote {float: left;}

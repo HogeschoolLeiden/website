@@ -39,7 +39,6 @@ function createDocumentStructure(className) {
 				return;
 			}
 		}
-		createCollapseExpandAll(elements[0]);
 	}
 }
 
@@ -52,12 +51,21 @@ function createCollapseLink(element, siblingContainer, index) {
 		var link = document.createElement('a');
 		link.collapseDiv = siblingContainer;
 		link.href = '#';
-		link.appendChild(document.createTextNode('expand'));
+		link.appendChild(createImg('images/faq-arrow-right.png','expand','expand'));
 		link.onclick = collapseExpandLink;
 		collapseLinks[index] = link;
 		collapsableDiv.appendChild(link);
 		element.appendChild(collapsableDiv);
 	}
+}
+
+function createImg(src, alt, title) {
+    var img = document.createElement('img');
+    img.src= src;
+    if (alt!=null) img.alt= alt;
+    if (title!=null) img.title= title;
+    
+    return img;
 }
 
 function createClearDiv(element, siblingContainer, index) {
@@ -70,43 +78,16 @@ function createClearDiv(element, siblingContainer, index) {
 
 function collapseExpandLink(evt) {
 	if (this.collapseDiv.style.display == '') {
-		this.parentNode.parentNode.nextSibling.style.display = 'none';
-		this.firstChild.nodeValue = 'expand';
-	} else {
-		this.parentNode.parentNode.nextSibling.style.display = '';
-		this.firstChild.nodeValue = 'collapse';
-	}
-
-	if (evt && evt.preventDefault) {
-		evt.preventDefault();
-	}
-	return false;
-}
-
-function createCollapseExpandAll(firstElement) {
-	var div;
-	if (document.createElement && (div = document.createElement('div'))) {
-		var link = document.createElement('a');
 		
-		link.href = '#';
-		link.appendChild(document.createTextNode('expand all'));
-		link.onclick = expandAll;
-		div.appendChild(link);
-		div.appendChild(document.createTextNode(' '));
-		link = document.createElement('a');
-		link.href = '#';
-		link.appendChild(document.createTextNode('collapse all'));
+		this.parentNode.parentNode.nextSibling.style.display = 'none';		
+		this.removeChild(this.firstChild);
+		this.appendChild(createImg('images/faq-arrow-right.png','expand','expand'));
 
-		link.onclick = collapseAll;
-		div.appendChild(link);
-		firstElement.parentNode.insertBefore(div, firstElement);
-	}
-}
-
-function expandAll(evt) {
-	for (var i = 0; i < collapseDivs.length; i++) {
-		collapseDivs[i].style.display = '';
-		collapseLinks[i].firstChild.nodeValue = 'collapse';
+	} else {
+		
+		this.parentNode.parentNode.nextSibling.style.display = '';
+		this.removeChild(this.firstChild);
+		this.appendChild(createImg('images/faq-arrow-down.png','collapse','collapse'));
 	}
 
 	if (evt && evt.preventDefault) {
@@ -115,14 +96,3 @@ function expandAll(evt) {
 	return false;
 }
 
-function collapseAll(evt) {
-	for (var i = 0; i < collapseDivs.length; i++) {
-		collapseDivs[i].style.display = 'none';
-		collapseLinks[i].firstChild.nodeValue = 'expand';
-	}
-
-	if (evt && evt.preventDefault) {
-		evt.preventDefault();
-	}
-	return false;
-}

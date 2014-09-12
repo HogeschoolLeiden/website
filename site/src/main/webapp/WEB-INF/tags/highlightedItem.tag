@@ -9,16 +9,18 @@
 
 <%@ attribute name="highLightedItem" type="hslbeans.WebPage" required="true" %>
 
-<article class="highlighted col-md-9">
-  <hst:cmseditlink hippobean="${highLightedItem}" />
-  <hst:link hippobean="${highLightedItem }" var="link" />
-  <div class="row">
-	<a href="${link }" title="${fn:escapeXml(highLightedItem.title)}">
-	  <div class="media-body col-md-5">
-	    <h1 class="media-heading"><c:out value="${highLightedItem.title}"/></h1>
-	    <tag:renderDate document="${highLightedItem}" dateClass="datum start large"/>
-	    <p><c:out value="${highLightedItem.introduction}"/></p>
-	  </div>		
-    </a>		
-  </div>
-</article>
+<c:if test="${not empty highLightedItem}">
+  <article class="highlighted col-md-9">
+    <hst:cmseditlink hippobean="${highLightedItem}" />
+    <hst:link hippobean="${highLightedItem }" var="link" />
+    <div class="row">
+  	<a href="${link }" title="${fn:escapeXml(highLightedItem.title)}">
+  	  <div class="media-body col-md-5">
+  	    <h1 class="media-heading"><c:out value="${highLightedItem.title}"/></h1>
+  	    <tag:renderDate document="${highLightedItem}" dateClass="datum start large"/>
+  	    <p><c:out value="${highLightedItem.introduction}"/></p>
+  	  </div>		
+      </a>		
+    </div>
+  </article>
+</c:if>

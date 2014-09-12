@@ -12,27 +12,49 @@
   <script src="<hst:link path="/js/accordian.js"/>" type="text/javascript"></script>
 </hst:headContribution>
 
-<tag:overviewIntrodution doc="${document}" ></tag:overviewIntrodution>
+<section class="col-md-9 detail-content">
+  <div class="row">
+    <div class="col-md-8 col-sm-8 contentarea">   
+    
+    <hst:cmseditlink hippobean="${document}" />
+    <h1 class="hidden"><c:out value="${document.title}"></c:out> </h1>
+    <hst:include ref="contentTop" />
+    
+    
+    <div class="content">
+    
+      <c:forEach var="item" items="${items}">
+          
+          <article class="media clearfix white">
+              <hst:cmseditlink hippobean="${item}"/>
+              
+              <div class="media-body accordian">
+                <h2 class="media-heading"><c:out value="${item.title }"/></h2>
+              </div>
+              
+              <tag:flexibleblock content="${item.faqflexibleblock }"/>
+             
 
-<c:forEach var="item" items="${items}">
-    <article class="well well-large faq">
-        <hst:cmseditlink hippobean="${item}"/>
-        <div class="accordian">
-          <div class="title">
-            <h3><c:out value="${item.title}"/></h3>
-          </div>
-        </div>
-        <c:if test="${hst:isReadable(item, 'releaseDate.time')}">
-            <p class="badge badge-info">
-              <c:out value=" "></c:out>
-            </p>
-        </c:if>
-        <tag:flexibleblock content="${item.flexibleblock }"/>
-        <tag:toolbox document="${document }" />
-  </article>
-</c:forEach>
-<tag:toolbox document="${document }" />
+          </article>
+      </c:forEach>
+      
+    </div>
+    
+    <div class="paginator-style">
+      <opw:simplepaginator paginator="${model.paginator}" namespaced="false"/>
+    </div>
 
-<div class="paginator-style">
-  <opw:simplepaginator paginator="${paginator}"/>
-</div>
+    </div>
+    
+    <aside class="col-md-4 col-sm-4 aside">
+       <hst:include ref="rightTop" />
+       <hst:include ref="right" />
+       <hst:include ref="rightBottom" />
+    </aside>
+  </div>
+    
+  <div class="row border-top">
+     <hst:include ref="contentBottom" /> 
+  </div>
+  
+</section>
