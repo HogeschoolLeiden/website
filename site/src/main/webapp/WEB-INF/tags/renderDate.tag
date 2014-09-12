@@ -9,6 +9,7 @@
 
 <%@ attribute name="document" type="hslbeans.WebPage" rtexprvalue="true" required="true"%>
 <%@ attribute name="dateClass" type="java.lang.String" rtexprvalue="true"%>
+<%@ attribute name="showYear" type="java.lang.Boolean" rtexprvalue="true"%>
 
 <hst:setBundle basename="nl.hsleiden.widget.Messages" />
 
@@ -29,6 +30,8 @@
                     type="date" pattern="dd" dateStyle="medium" timeStyle="short" var="day" />
     <fmt:formatDate value="${document.eventDate.time}"
                     type="date" pattern="MMM" dateStyle="medium" timeStyle="short" var="month" />
+    <fmt:formatDate value="${document.eventDate.time}"
+                    type="date" pattern="yyyy" dateStyle="medium" timeStyle="short" var="year" />
     <fmt:formatDate type="date" pattern="yyyy-MM-dd" var="dateTime" value="${document.eventDate.time}"/>
   </c:when>
   <c:otherwise>
@@ -36,9 +39,25 @@
                     type="date" pattern="dd" dateStyle="medium" timeStyle="short" var="day" />
     <fmt:formatDate value="${document.releaseDate.time}"
                     type="date" pattern="MMM" dateStyle="medium" timeStyle="short" var="month" />
+    <fmt:formatDate value="${document.releaseDate.time}"
+                    type="date" pattern="yyyy" dateStyle="medium" timeStyle="short" var="year" />
     <fmt:formatDate type="date" pattern="yyyy-MM-dd" var="dateTime" value="${document.releaseDate.time}"/>
  </c:otherwise>
 </c:choose>      
-                 
-<time datetime="${dateTime}" class="${cssDateClass}">${fn:escapeXml(day)}<span>${fn:escapeXml(month)}</span></time>
+
+<c:choose>
+  <c:when test="${showYear}">
+    <time datetime="${dateTime}" class="${cssDateClass} year">
+      <span>${fn:escapeXml(day)}</span> 
+      <span>${fn:escapeXml(month)}</span>
+      <span>${fn:escapeXml(year)}</span>
+    </time>
+  </c:when>
+  <c:otherwise>
+    <time datetime="${dateTime}" class="${cssDateClass}">
+      <span>${fn:escapeXml(day)}</span>
+      <span>${fn:escapeXml(month)}</span>
+    </time>
+  </c:otherwise>
+</c:choose>                 
 

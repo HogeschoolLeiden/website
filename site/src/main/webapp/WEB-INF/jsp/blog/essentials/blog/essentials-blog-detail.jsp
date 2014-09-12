@@ -29,8 +29,8 @@
 <h1> <c:out value="${document.title }" escapeXml="true" /> </h1>
 <h2><fmt:message key="before.author.name"/> <c:out value="${document.blogAuthor}"/></h2>
 
-<c:if test="${hst:isReadable(document, 'eventDate.time')}">
-  <tag:renderDate document="${document}"/>
+<c:if test="${hst:isReadable(document, 'releaseDate.time')}">
+  <tag:renderDate document="${document}" showYear="true"/>
 </c:if>
 
 <p class="intro">
