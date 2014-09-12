@@ -2832,3 +2832,8 @@ figure.fexibleblock.image img {
 .col-md-8.col-sm-8.contentarea .content+div.content {
 	padding-top: 0;
 }
+
+/* left naavigation highlighting */
+.subnav ul li.active ul li.arrow-side a:after{ border-top: none; border-bottom: none;}
+.subnav ul li.active a { background: #c8c3d2 }
+.subnav ul li.active ul li.arrow-side a{ background-color: white; font-family: source_sans_prolight;}
