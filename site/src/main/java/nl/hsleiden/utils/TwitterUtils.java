@@ -10,10 +10,10 @@ import twitter4j.UserMentionEntity;
 
 public class TwitterUtils {
     
-    private static final String TWEET_URL = "<a target=_blank href=\"{0}\" >{1}</a>";
-    private static final String TWEET_HASH_URL = "<a target=_blank href=\"https://twitter.com/#!/search?q=%23{0}&amp;src=typd\" >{1}</a>";
-    private static final String TWEET_MENTIONED_URL = "<a target=_blank href=\"https://twitter.com/#!/search?q=from:{0}&amp;src=typd\" >{1}</a>";
-    private static final String TWEET_IMG = "<img src={0} title={1}></img>";
+    private static final String TWEET_URL = "<a target=\"_blank\" href=\"{0}\" >{1}</a>";
+    private static final String TWEET_HASH_URL = "<a target=\"_blank\" href=\"https://twitter.com/#!/search?q=%23{0}&amp;src=typd\" >{1}</a>";
+    private static final String TWEET_MENTIONED_URL = "<a target=\"_blank\" href=\"https://twitter.com/#!/search?q=from:{0}&amp;src=typd\" >{1}</a>";
+    private static final String TWEET_IMG = "<img  alt=\"{1}\" title=\"{1}\" src=\"{0}\"  />";
     
     private TwitterUtils() {
         super();
@@ -21,12 +21,13 @@ public class TwitterUtils {
 
 
     public static String convertMessage(String message, EntitySupport entity) {
+        
         MessageFormat urlFormatter = new MessageFormat(TWEET_URL);
         MessageFormat hashFormatter = new MessageFormat(TWEET_HASH_URL);
         MessageFormat userFormatter = new MessageFormat(TWEET_MENTIONED_URL);
         MessageFormat imgFormatter = new MessageFormat(TWEET_IMG);
             
-        String formattedMessage = message;
+        String formattedMessage = message.replace("&", "&amp;");
         
         URLEntity[] urlEntities = entity.getURLEntities(); 
         if(urlEntities != null) {
@@ -40,9 +41,10 @@ public class TwitterUtils {
         if(mediaEntities!=null){
             for (MediaEntity mediaEntity : mediaEntities) {
                 if(mediaEntity.getType().equals("photo")){
-                    String mediaUrl = mediaEntity.getURL();
                     
-                    formattedMessage = formattedMessage.replace(mediaUrl, imgFormatter.format(new Object[]{mediaEntity.getMediaURL(),mediaUrl}));  
+                    String mediaUrl = mediaEntity.getURL();
+                    formattedMessage = formattedMessage.replace(mediaUrl, imgFormatter.format(new Object[]{mediaEntity.getMediaURL(), mediaUrl}));
+                    
                 }
             }
         }
