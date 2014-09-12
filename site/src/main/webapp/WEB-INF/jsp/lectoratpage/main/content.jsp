@@ -12,8 +12,12 @@
     <div class="col-md-8 col-sm-8 contentarea">               
      
       <hst:cmseditlink hippobean="${document}" />
-      <h1><span><c:out value="${document.title }" /></span></h1>
+      
       <hst:include ref="contentTop" />
+      
+      <div class="content">
+        <h1><span><c:out value="${document.title }" /></span></h1>
+      </div>
       
       <c:choose>
         <c:when test="${not (document.useFlexibleBlock) and fn:length(items)>0}">
