@@ -96,9 +96,7 @@
 
 	<hst:include ref="header" />
     
-    <c:if test="${tag:isSubclassOfWebPage(document)}">
-        <hst:include ref="breadcrumb"/>
-    </c:if>
+    <hst:include ref="breadcrumb"/>
         
   	<hst:include ref="main" />
       	

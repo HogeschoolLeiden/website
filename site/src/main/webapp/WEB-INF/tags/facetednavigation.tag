@@ -39,35 +39,39 @@
 			                    
                 <c:choose>
                   <c:when test="${item.leaf and item.count gt 0}">
-                    
+                   
                     <hst:facetnavigationlink remove="${item}" current="${facetnav}" var="removeLink" />
-                    
+                      
                     <a href="${removeLink}">
-                    <div class="checkbox">
-                      <img  class="cbimg" src="<hst:link path="/images/checkbox-checked.png"/>" 
-                            alt="<fmt:message key="checkbox.checked" />" title="<fmt:message key="checkbox.checked" />"/>
-                      <c:out value="${labels[item.name]}" default="${item.name}" escapeXml="true" />
-                      <c:out value=" ( " escapeXml="true" />
-                      <c:out value="${item.count}" escapeXml="true" />
-                      <c:out value=" )" escapeXml="true" />
-                    </div>
+                      <div class="checkbox">
+                        <img  class="cbimg" src="<hst:link path="/images/checkbox-checked.png"/>" 
+                              alt="<fmt:message key="checkbox.checked" />" title="<fmt:message key="checkbox.checked" />"/>
+                        <c:out value="${labels[item.name]}" default="${item.name}" escapeXml="true" />
+                        <c:out value=" ( " escapeXml="true" />
+                        <c:out value="${item.count}" escapeXml="true" />
+                        <c:out value=" )" escapeXml="true" />
+                      </div>
                     </a>
                   
                   </c:when>
                   <c:otherwise>
                     
-                    <hst:link var="link" hippobean="${item}" navigationStateful="true"/>
+                    <c:if test="${item.count > 0 }">
+                      
+                      <hst:link var="link" hippobean="${item}" navigationStateful="true"/>
+                      
+                      <a href="${link}">
+                        <div class="checkbox">
+                          <img  class="cbimg" src="<hst:link path="/images/checkbox-unchecked.png"/>" 
+                                alt="<fmt:message key="checkbox.checked" />" title="<fmt:message key="checkbox.unchecked" />"/>
+                          <c:out value="${labels[item.name]}" default="${item.name}" escapeXml="true" />
+                          <c:out value="    ( " escapeXml="true" />
+                          <c:out value="${item.count}" escapeXml="true" />
+                          <c:out value=" )" escapeXml="true" />
+                        </div>
+                      </a>
                     
-                    <a href="${link}">
-                      <div class="checkbox">
-                        <img  class="cbimg" src="<hst:link path="/images/checkbox-unchecked.png"/>" 
-                              alt="<fmt:message key="checkbox.checked" />" title="<fmt:message key="checkbox.unchecked" />"/>
-                        <c:out value="${labels[item.name]}" default="${item.name}" escapeXml="true" />
-                        <c:out value="    ( " escapeXml="true" />
-                        <c:out value="${item.count}" escapeXml="true" />
-                        <c:out value=" )" escapeXml="true" />
-                      </div>
-                    </a>
+                    </c:if>
                   
                   </c:otherwise>
                 </c:choose>
@@ -88,7 +92,7 @@
         <div class="filterlist">
           <form role="form" class="form" method="get">
                 <div class="form-group">
-                  <input type="text" name="q" class="form-control" placeholder="" required="required"
+                  <input type="text" name="q" class="form-control" placeholder=""
                     ${not empty model.query? 'value=\"' : ''} ${model.query} ${not empty model.query? '\"' : ''}>
                 </div>
                 <button class="btn fa fa-search no-radius" type="submit">

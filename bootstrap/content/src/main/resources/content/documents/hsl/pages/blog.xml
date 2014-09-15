@@ -798,17 +798,17 @@
         <sv:value>mix:referenceable</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>9371712f-e45b-4a24-91e6-d044602828d3</sv:value>
+        <sv:value>287e1037-1fc9-4165-b881-124132b04f69</sv:value>
       </sv:property>
       <sv:node sv:name="index">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hsl:ArticlePage</sv:value>
+          <sv:value>hsl:OverviewPage</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
           <sv:value>mix:referenceable</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
-          <sv:value>7d9c096b-67c2-493b-bc68-daf32344fb6e</sv:value>
+          <sv:value>9b22765d-e49a-4415-8e42-d217a44fed83</sv:value>
         </sv:property>
         <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true"/>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
@@ -825,19 +825,22 @@
           <sv:value>admin</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
-          <sv:value>2014-09-11T15:21:48.926+02:00</sv:value>
+          <sv:value>2014-09-15T10:50:31.116+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-09-11T15:21:50.428+02:00</sv:value>
+          <sv:value>2014-09-15T10:52:24.347+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:id" sv:type="String">
-          <sv:value>c3c1a4ca-c326-442a-b9bc-553b740dada6</sv:value>
+          <sv:value>6402501e-524b-47a0-9508-32c7721436b1</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:locale" sv:type="String">
           <sv:value>nl</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:author" sv:type="String">
+          <sv:value>author-one</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:browserTitle" sv:type="String">
           <sv:value>Blogs</sv:value>
@@ -851,23 +854,17 @@
         <sv:property sv:name="hsl:hideFromSitemap" sv:type="Boolean">
           <sv:value>false</sv:value>
         </sv:property>
-        <sv:property sv:name="hsl:introduction" sv:type="String">
-          <sv:value>Blogs Samenvatting Blogs Samenvatting Blogs Samenvatting</sv:value>
-        </sv:property>
         <sv:property sv:name="hsl:keywords" sv:type="String">
           <sv:value/>
         </sv:property>
         <sv:property sv:name="hsl:releaseDate" sv:type="Date">
-          <sv:value>2014-09-11T15:22:00.000+02:00</sv:value>
+          <sv:value>2014-09-15T10:50:00.000+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:share" sv:type="Boolean">
           <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:subjecttags" sv:type="String" sv:multiple="true">
           <sv:value>over-hl</sv:value>
-        </sv:property>
-        <sv:property sv:name="hsl:subtitle" sv:type="String">
-          <sv:value>Blogs subtitel</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:thematags" sv:type="String" sv:multiple="true">
           <sv:value>gezondheidszorg</sv:value>
@@ -880,23 +877,39 @@
             <sv:value>hippogallerypicker:imagelink</sv:value>
           </sv:property>
           <sv:property sv:name="hippo:docbase" sv:type="String">
-            <sv:value>8d154015-2946-4d43-9003-ca8a31640797</sv:value>
+            <sv:value>00e66dd6-aec5-44d6-bada-0534d76d1a9a</sv:value>
           </sv:property>
           <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
           <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
           <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
         </sv:node>
+        <sv:node sv:name="hsl:highLightedItem">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>e0928ed7-ecab-4abc-85d1-41fb0fef7e04</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="hsl:rssItem">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
+          </sv:property>
+        </sv:node>
       </sv:node>
       <sv:node sv:name="index">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hsl:ArticlePage</sv:value>
+          <sv:value>hsl:OverviewPage</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
           <sv:value>mix:referenceable</sv:value>
           <sv:value>mix:versionable</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
-          <sv:value>7d769893-c752-443b-ba01-7f70986fab72</sv:value>
+          <sv:value>98caede7-4f79-44d4-b9a0-b0757eb27847</sv:value>
         </sv:property>
         <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
           <sv:value>preview</sv:value>
@@ -914,19 +927,22 @@
           <sv:value>admin</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
-          <sv:value>2014-09-11T15:21:48.926+02:00</sv:value>
+          <sv:value>2014-09-15T10:50:31.116+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-09-11T15:22:29.859+02:00</sv:value>
+          <sv:value>2014-09-15T10:52:31.981+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:id" sv:type="String">
-          <sv:value>c3c1a4ca-c326-442a-b9bc-553b740dada6</sv:value>
+          <sv:value>6402501e-524b-47a0-9508-32c7721436b1</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:locale" sv:type="String">
           <sv:value>nl</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:author" sv:type="String">
+          <sv:value>author-one</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:browserTitle" sv:type="String">
           <sv:value>Blogs</sv:value>
@@ -940,23 +956,17 @@
         <sv:property sv:name="hsl:hideFromSitemap" sv:type="Boolean">
           <sv:value>false</sv:value>
         </sv:property>
-        <sv:property sv:name="hsl:introduction" sv:type="String">
-          <sv:value>Blogs Samenvatting Blogs Samenvatting Blogs Samenvatting</sv:value>
-        </sv:property>
         <sv:property sv:name="hsl:keywords" sv:type="String">
           <sv:value/>
         </sv:property>
         <sv:property sv:name="hsl:releaseDate" sv:type="Date">
-          <sv:value>2014-09-11T15:22:00.000+02:00</sv:value>
+          <sv:value>2014-09-15T10:50:00.000+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:share" sv:type="Boolean">
           <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:subjecttags" sv:type="String" sv:multiple="true">
           <sv:value>over-hl</sv:value>
-        </sv:property>
-        <sv:property sv:name="hsl:subtitle" sv:type="String">
-          <sv:value>Blogs subtitel</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:thematags" sv:type="String" sv:multiple="true">
           <sv:value>gezondheidszorg</sv:value>
@@ -969,22 +979,38 @@
             <sv:value>hippogallerypicker:imagelink</sv:value>
           </sv:property>
           <sv:property sv:name="hippo:docbase" sv:type="String">
-            <sv:value>8d154015-2946-4d43-9003-ca8a31640797</sv:value>
+            <sv:value>00e66dd6-aec5-44d6-bada-0534d76d1a9a</sv:value>
           </sv:property>
           <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
           <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
           <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
         </sv:node>
+        <sv:node sv:name="hsl:highLightedItem">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>e0928ed7-ecab-4abc-85d1-41fb0fef7e04</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="hsl:rssItem">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
+          </sv:property>
+        </sv:node>
       </sv:node>
       <sv:node sv:name="index">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hsl:ArticlePage</sv:value>
+          <sv:value>hsl:OverviewPage</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
           <sv:value>mix:referenceable</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
-          <sv:value>136aed20-ad70-48c6-94c7-d0b9fc8edadd</sv:value>
+          <sv:value>30d6b37a-c36a-4af8-8905-714412476141</sv:value>
         </sv:property>
         <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
           <sv:value>live</sv:value>
@@ -1002,22 +1028,25 @@
           <sv:value>admin</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
-          <sv:value>2014-09-11T15:21:48.926+02:00</sv:value>
+          <sv:value>2014-09-15T10:50:31.116+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-09-11T15:22:29.859+02:00</sv:value>
+          <sv:value>2014-09-15T10:52:31.981+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-          <sv:value>2014-09-11T15:25:47.457+02:00</sv:value>
+          <sv:value>2014-09-15T10:52:34.012+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:id" sv:type="String">
-          <sv:value>c3c1a4ca-c326-442a-b9bc-553b740dada6</sv:value>
+          <sv:value>6402501e-524b-47a0-9508-32c7721436b1</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:locale" sv:type="String">
           <sv:value>nl</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:author" sv:type="String">
+          <sv:value>author-one</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:browserTitle" sv:type="String">
           <sv:value>Blogs</sv:value>
@@ -1031,23 +1060,17 @@
         <sv:property sv:name="hsl:hideFromSitemap" sv:type="Boolean">
           <sv:value>false</sv:value>
         </sv:property>
-        <sv:property sv:name="hsl:introduction" sv:type="String">
-          <sv:value>Blogs Samenvatting Blogs Samenvatting Blogs Samenvatting</sv:value>
-        </sv:property>
         <sv:property sv:name="hsl:keywords" sv:type="String">
           <sv:value/>
         </sv:property>
         <sv:property sv:name="hsl:releaseDate" sv:type="Date">
-          <sv:value>2014-09-11T15:22:00.000+02:00</sv:value>
+          <sv:value>2014-09-15T10:50:00.000+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:share" sv:type="Boolean">
           <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:subjecttags" sv:type="String" sv:multiple="true">
           <sv:value>over-hl</sv:value>
-        </sv:property>
-        <sv:property sv:name="hsl:subtitle" sv:type="String">
-          <sv:value>Blogs subtitel</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:thematags" sv:type="String" sv:multiple="true">
           <sv:value>gezondheidszorg</sv:value>
@@ -1060,11 +1083,27 @@
             <sv:value>hippogallerypicker:imagelink</sv:value>
           </sv:property>
           <sv:property sv:name="hippo:docbase" sv:type="String">
-            <sv:value>8d154015-2946-4d43-9003-ca8a31640797</sv:value>
+            <sv:value>00e66dd6-aec5-44d6-bada-0534d76d1a9a</sv:value>
           </sv:property>
           <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
           <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
           <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+        </sv:node>
+        <sv:node sv:name="hsl:highLightedItem">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>e0928ed7-ecab-4abc-85d1-41fb0fef7e04</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="hsl:rssItem">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
+          </sv:property>
         </sv:node>
       </sv:node>
     </sv:node>
@@ -1123,13 +1162,13 @@
           <sv:value>2014-08-13T13:18:22.574+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-09-12T09:38:42.423+02:00</sv:value>
+          <sv:value>2014-09-15T10:55:06.024+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-          <sv:value>2014-09-12T09:38:44.149+02:00</sv:value>
+          <sv:value>2014-09-15T10:55:08.039+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:id" sv:type="String">
           <sv:value>18a99ee5-8185-48ae-933b-e09a3d5cac52</sv:value>
@@ -1157,7 +1196,7 @@
           <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:introduction" sv:type="String">
-          <sv:value>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</sv:value>
+          <sv:value>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:keywords" sv:type="String">
           <sv:value/>
@@ -1199,7 +1238,9 @@
               <sv:value>hippostd:html</sv:value>
             </sv:property>
             <sv:property sv:name="hippostd:content" sv:type="String">
-              <sv:value>&lt;p&gt;There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don&amp;#39;t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn&amp;#39;t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.&lt;/p&gt; 
+              <sv:value>&lt;p&gt;It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.&amp;nbsp;It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.&lt;/p&gt; 
+&lt;p&gt;&amp;nbsp;&lt;/p&gt; 
+&lt;p&gt;There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don&amp;#39;t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn&amp;#39;t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.&lt;/p&gt; 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt; 
 &lt;p&gt;There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don&amp;#39;t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn&amp;#39;t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.&lt;/p&gt;</sv:value>
             </sv:property>
@@ -1295,7 +1336,7 @@
           <sv:value>2014-08-13T13:18:22.574+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-09-12T09:38:32.894+02:00</sv:value>
+          <sv:value>2014-09-15T10:54:51.148+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -1326,7 +1367,7 @@
           <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:introduction" sv:type="String">
-          <sv:value>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</sv:value>
+          <sv:value>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:keywords" sv:type="String">
           <sv:value/>
@@ -1368,7 +1409,9 @@
               <sv:value>hippostd:html</sv:value>
             </sv:property>
             <sv:property sv:name="hippostd:content" sv:type="String">
-              <sv:value>&lt;p&gt;There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don&amp;#39;t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn&amp;#39;t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.&lt;/p&gt; 
+              <sv:value>&lt;p&gt;It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.&amp;nbsp;It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.&lt;/p&gt; 
+&lt;p&gt;&amp;nbsp;&lt;/p&gt; 
+&lt;p&gt;There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don&amp;#39;t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn&amp;#39;t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.&lt;/p&gt; 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt; 
 &lt;p&gt;There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don&amp;#39;t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn&amp;#39;t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.&lt;/p&gt;</sv:value>
             </sv:property>
@@ -1466,7 +1509,7 @@
           <sv:value>2014-08-13T13:18:22.574+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-09-12T09:38:42.423+02:00</sv:value>
+          <sv:value>2014-09-15T10:55:06.024+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -1497,7 +1540,7 @@
           <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:introduction" sv:type="String">
-          <sv:value>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</sv:value>
+          <sv:value>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:keywords" sv:type="String">
           <sv:value/>
@@ -1539,7 +1582,9 @@
               <sv:value>hippostd:html</sv:value>
             </sv:property>
             <sv:property sv:name="hippostd:content" sv:type="String">
-              <sv:value>&lt;p&gt;There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don&amp;#39;t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn&amp;#39;t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.&lt;/p&gt; 
+              <sv:value>&lt;p&gt;It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.&amp;nbsp;It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.&lt;/p&gt; 
+&lt;p&gt;&amp;nbsp;&lt;/p&gt; 
+&lt;p&gt;There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don&amp;#39;t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn&amp;#39;t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.&lt;/p&gt; 
 &lt;p&gt;&amp;nbsp;&lt;/p&gt; 
 &lt;p&gt;There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don&amp;#39;t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn&amp;#39;t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.&lt;/p&gt;</sv:value>
             </sv:property>
@@ -2632,11 +2677,6 @@
         </sv:node>
       </sv:node>
     </sv:node>
-    <sv:node sv:name="hippotranslation:translations">
-      <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hippotranslation:translations</sv:value>
-      </sv:property>
-    </sv:node>
     <sv:node sv:name="third-blog-post">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hippo:handle</sv:value>
@@ -3322,6 +3362,11 @@
           </sv:node>
         </sv:node>
       </sv:node>
+    </sv:node>
+    <sv:node sv:name="hippotranslation:translations">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hippotranslation:translations</sv:value>
+      </sv:property>
     </sv:node>
   </sv:node>
 </sv:node>

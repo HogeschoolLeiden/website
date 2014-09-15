@@ -2103,43 +2103,6 @@
         <sv:property sv:name="hst:xtype" sv:type="String">
           <sv:value>HST.vBox</sv:value>
         </sv:property>
-        <sv:node sv:name="calendar">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>hst:containeritemcomponent</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:componentclassname" sv:type="String">
-            <sv:value>nl.hsleiden.components.catalog.EventCalendar</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:iconpath" sv:type="String">
-            <sv:value>images/catalog/events-calendar-icon.png</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:label" sv:type="String">
-            <sv:value>Evenementen Kalender</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
-            <sv:value>title</sv:value>
-            <sv:value>scope</sv:value>
-            <sv:value>themaFilter</sv:value>
-            <sv:value>overFilter</sv:value>
-            <sv:value>tryToUseMixin</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
-            <sv:value>Related Items</sv:value>
-            <sv:value/>
-            <sv:value>off</sv:value>
-            <sv:value>off</sv:value>
-            <sv:value>on</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:resourcetemplate" sv:type="String">
-            <sv:value>blank</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:template" sv:type="String">
-            <sv:value>catalog.calendar</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:xtype" sv:type="String">
-            <sv:value>HST.Item</sv:value>
-          </sv:property>
-        </sv:node>
       </sv:node>
       <sv:node sv:name="leftBottom">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -2172,47 +2135,6 @@
         <sv:property sv:name="hst:xtype" sv:type="String">
           <sv:value>HST.vBox</sv:value>
         </sv:property>
-        <sv:node sv:name="twitterfeed">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>hst:containeritemcomponent</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:asyncmode" sv:type="String">
-            <sv:value>true</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:componentclassname" sv:type="String">
-            <sv:value>nl.hsleiden.components.catalog.TwitterFeed</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:iconpath" sv:type="String">
-            <sv:value>images/catalog/twitter-icon.png</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:label" sv:type="String">
-            <sv:value>Twitter feed</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
-            <sv:value>limit</sv:value>
-            <sv:value>title</sv:value>
-            <sv:value>horizontal</sv:value>
-            <sv:value>query</sv:value>
-            <sv:value>tryToUseMixin</sv:value>
-            <sv:value>followText</sv:value>
-            <sv:value>from</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
-            <sv:value>0</sv:value>
-            <sv:value/>
-            <sv:value>off</sv:value>
-            <sv:value/>
-            <sv:value>on</sv:value>
-            <sv:value>Volg ons op ...</sv:value>
-            <sv:value/>
-          </sv:property>
-          <sv:property sv:name="hst:template" sv:type="String">
-            <sv:value>catalog.twitterfeed</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:xtype" sv:type="String">
-            <sv:value>HST.Item</sv:value>
-          </sv:property>
-        </sv:node>
       </sv:node>
       <sv:node sv:name="rightBottom">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
