@@ -7,8 +7,8 @@ import java.util.Map;
 
 import javax.jcr.RepositoryException;
 
-import nl.hsleiden.beans.mixin.TeasersMixin;
-import nl.hsleiden.componentsinfo.TeasersInfo;
+import nl.hsleiden.beans.mixin.HeadTeasersMixin;
+import nl.hsleiden.componentsinfo.HeadTeasersInfo;
 import nl.hsleiden.utils.Constants.Attributes;
 import nl.hsleiden.utils.Constants.WidgetConstants;
 
@@ -23,14 +23,14 @@ import org.slf4j.LoggerFactory;
 import com.tdclighthouse.prototype.components.AjaxEnabledComponent;
 import com.tdclighthouse.prototype.utils.BeanUtils;
 
-@ParametersInfo(type = TeasersInfo.class)
-public class Teasers extends AjaxEnabledComponent {
+@ParametersInfo(type = HeadTeasersInfo.class)
+public class HeadTeasers extends AjaxEnabledComponent {
 
-    private static final Logger LOG = LoggerFactory.getLogger(Teasers.class);
+    private static final Logger LOG = LoggerFactory.getLogger(HeadTeasers.class);
 
     public Map<String, Object> getModel(HstRequest request, HstResponse response) {
         try {
-            TeasersInfo parametersInfo = getConfiguration(request);    
+            HeadTeasersInfo parametersInfo = getConfiguration(request);    
             return populateModel(request, parametersInfo);
         } catch (RepositoryException e) {
             LOG.error(e.getMessage(), e);
@@ -38,14 +38,14 @@ public class Teasers extends AjaxEnabledComponent {
         }
     }
 
-    protected Map<String, Object> populateModel(HstRequest request, TeasersInfo parametersInfo) {
+    protected Map<String, Object> populateModel(HstRequest request, HeadTeasersInfo parametersInfo) {
         Map<String, Object> model = new HashMap<String, Object>();
         model.put("info", parametersInfo);
         addItemsToModel(request, model, parametersInfo);
         return model;
     }
     
-    private void addItemsToModel(HstRequest request, Map<String, Object> model, TeasersInfo parametersInfo) {
+    private void addItemsToModel(HstRequest request, Map<String, Object> model, HeadTeasersInfo parametersInfo) {
         List<HippoBean> items = new ArrayList<HippoBean>();
         
         addItem(request, parametersInfo.getFirstTeaser(), items);
@@ -65,13 +65,13 @@ public class Teasers extends AjaxEnabledComponent {
         }
     }
 
-    private TeasersInfo getConfiguration(HstRequest request) throws RepositoryException {
-        TeasersInfo paramInfo = this.<TeasersInfo> getComponentParametersInfo(request);
+    private HeadTeasersInfo getConfiguration(HstRequest request) throws RepositoryException {
+        HeadTeasersInfo paramInfo = this.<HeadTeasersInfo> getComponentParametersInfo(request);
         if (paramInfo.getUseMixin() != null && request.getRequestContext().getContentBean() != null 
                 && paramInfo.getUseMixin()) {
             HippoBean proxy = BeanUtils.getMixinProxy(request.getRequestContext().getContentBean());
-            if (proxy instanceof TeasersMixin) {
-                paramInfo = ((TeasersMixin) proxy).getTeasersCompoundMixinBean();
+            if (proxy instanceof HeadTeasersMixin) {
+                paramInfo = ((HeadTeasersMixin) proxy).getHeadTeasersCompoundMixinBean();
             }
         }
         return paramInfo;

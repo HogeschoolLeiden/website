@@ -150,14 +150,14 @@
 [hsl:TeaserDocument] > hsl:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
-[hsl:TeasersCompoundMixin] > hippo:compound, hippostd:relaxed
+[hsl:HeadTeasersCompoundMixin] > hippo:compound, hippostd:relaxed
   orderable
 
-[hsl:TeasersMixin]
+[hsl:HeadTeasersMixin]
   mixin
-  + hsl:teasersCompoundMixin (hsl:TeasersCompoundMixin)
+  + hsl:headTeasersCompoundMixin (hsl:HeadTeasersCompoundMixin)
 
-[hsl:TextTeaser] > hsl:basedocument, hippostd:relaxed, hippotranslation:translated
+[hsl:HeadTeaser] > hsl:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
 [hsl:TwitterCompoundMixin] > hippo:compound, hippostd:relaxed

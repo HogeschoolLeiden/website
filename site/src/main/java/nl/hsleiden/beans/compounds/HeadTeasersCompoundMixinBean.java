@@ -1,12 +1,12 @@
 package nl.hsleiden.beans.compounds;
 
-import nl.hsleiden.componentsinfo.TeasersInfo;
+import nl.hsleiden.componentsinfo.HeadTeasersInfo;
 
 import org.hippoecm.hst.content.beans.Node;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 
-@Node(jcrType = "hsl:TeasersCompoundMixin")
-public class TeasersCompoundMixinBean extends hslbeans.TeasersCompoundMixin implements TeasersInfo {
+@Node(jcrType = "hsl:HeadTeasersCompoundMixin")
+public class HeadTeasersCompoundMixinBean extends hslbeans.HeadTeasersCompoundMixin implements HeadTeasersInfo {
 
     public Boolean getUseMixin() {
         throw new UnsupportedOperationException();

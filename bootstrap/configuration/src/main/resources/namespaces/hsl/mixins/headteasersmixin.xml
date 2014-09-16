@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="TeasersMixin">
+<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="HeadTeasersMixin">
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>hipposysedit:templatetype</sv:value>
   </sv:property>
@@ -50,7 +50,7 @@
       <sv:property sv:name="hipposysedit:uri" sv:type="String">
         <sv:value>http://www.onehippo.org/hsl/nt/1.0</sv:value>
       </sv:property>
-      <sv:node sv:name="teasersCompoundMixin">
+      <sv:node sv:name="headTeasersCompoundMixin">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hipposysedit:field</sv:value>
         </sv:property>
@@ -64,10 +64,10 @@
           <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:name="hipposysedit:path" sv:type="String">
-          <sv:value>hsl:teasersCompoundMixin</sv:value>
+          <sv:value>hsl:headTeasersCompoundMixin</sv:value>
         </sv:property>
         <sv:property sv:name="hipposysedit:type" sv:type="String">
-          <sv:value>hsl:TeasersCompoundMixin</sv:value>
+          <sv:value>hsl:HeadTeasersCompoundMixin</sv:value>
         </sv:property>
       </sv:node>
     </sv:node>
@@ -103,21 +103,21 @@
         <sv:value>wicket.id</sv:value>
         <sv:value>validator.id</sv:value>
       </sv:property>
-      <sv:node sv:name="teasersCompoundMixin">
+      <sv:node sv:name="headTeasersCompoundMixin">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>frontend:plugin</sv:value>
         </sv:property>
         <sv:property sv:name="caption" sv:type="String">
-          <sv:value>Teasers configuratie</sv:value>
+          <sv:value>Head Teasers configuratie</sv:value>
         </sv:property>
         <sv:property sv:name="field" sv:type="String">
-          <sv:value>teasersCompoundMixin</sv:value>
+          <sv:value>headTeasersCompoundMixin</sv:value>
         </sv:property>
         <sv:property sv:name="plugin.class" sv:type="String">
           <sv:value>org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin</sv:value>
         </sv:property>
         <sv:property sv:name="type" sv:type="String">
-          <sv:value>hsl:TeasersMixin</sv:value>
+          <sv:value>hsl:HeadTeasersMixin</sv:value>
         </sv:property>
         <sv:node sv:name="cluster.options">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
