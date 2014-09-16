@@ -92,8 +92,9 @@
         <div class="filterlist">
           <form role="form" class="form" method="get">
                 <div class="form-group">
+                <%-- escape js --%>
                   <input type="text" name="q" class="form-control" placeholder=""
-                    ${not empty model.query? 'value=\"' : ''} ${model.query} ${not empty model.query? '\"' : ''}>
+                    ${not empty model.query? 'value=\"' : ''} ${fn:escapeXml(model.query)} ${not empty model.query? '\"' : ''}>
                 </div>
                 <button class="btn fa fa-search no-radius" type="submit">
                   <span><c:out value="${submitText}" /></span>                            
