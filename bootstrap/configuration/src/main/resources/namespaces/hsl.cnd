@@ -147,15 +147,19 @@
 [hsl:ShareParameters] > hippo:compound, hippostd:relaxed
   orderable
 
-[hsl:TeaserDocument] > hsl:basedocument, hippostd:relaxed, hippotranslation:translated
+[hsl:HeadTeasersCompoundMixin] > hippo:compound, hippostd:relaxed
   orderable
 
-[hsl:HeadTeasersCompoundMixin] > hippo:compound, hippostd:relaxed
+[hsl:TextTeasersCompoundMixin] > hippo:compound, hippostd:relaxed
   orderable
 
 [hsl:HeadTeasersMixin]
   mixin
   + hsl:headTeasersCompoundMixin (hsl:HeadTeasersCompoundMixin)
+
+[hsl:TextTeasersMixin]
+  mixin
+  + hsl:textTeasersCompoundMixin (hsl:TextTeasersCompoundMixin)
 
 [hsl:HeadTeaser] > hsl:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
@@ -209,6 +213,6 @@
 [hsl:mailstoreform] > eforms:form
   orderable
 
-[hsl:SmallTextTeaser] > hsl:basedocument, hippostd:relaxed, hippotranslation:translated
+[hsl:TextTeaser] > hsl:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 

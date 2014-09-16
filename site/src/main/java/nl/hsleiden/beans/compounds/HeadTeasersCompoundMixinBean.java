@@ -15,9 +15,9 @@ public class HeadTeasersCompoundMixinBean extends hslbeans.HeadTeasersCompoundMi
     public String getFirstTeaser() {
         String result = null;
         if (!getTeasers().isEmpty()) {
-            HippoBean contactBean = getTeasers().get(0);
-            if (contactBean != null) {
-                result = contactBean.getPath();
+            HippoBean headTeaserBean = getTeasers().get(0);
+            if (headTeaserBean != null) {
+                result = headTeaserBean.getPath();
             }
         }
         return result;
@@ -26,9 +26,9 @@ public class HeadTeasersCompoundMixinBean extends hslbeans.HeadTeasersCompoundMi
     public String getSecondTeaser() {
         String result = null;
         if (getTeasers().size() > 1) {
-            HippoBean contactBean = getTeasers().get(1);
-            if (contactBean != null) {
-                result = contactBean.getPath();
+            HippoBean headTeaserBean = getTeasers().get(1);
+            if (headTeaserBean != null) {
+                result = headTeaserBean.getPath();
             }
         }
         return result;
@@ -37,9 +37,9 @@ public class HeadTeasersCompoundMixinBean extends hslbeans.HeadTeasersCompoundMi
     public String getThirdTeaser() {
         String result = null;
         if (getTeasers().size() > 2) {
-            HippoBean contactBean = getTeasers().get(2);
-            if (contactBean != null) {
-                result = contactBean.getPath();
+            HippoBean headTeaserBean = getTeasers().get(2);
+            if (headTeaserBean != null) {
+                result = headTeaserBean.getPath();
             }
         }
         return result;

@@ -21,40 +21,33 @@
 <c:if test="${not empty model.items and fn:length(model.items)>0}">
 
   <div class="catalog text teasers">
-    
-    <%-- 
-    <div class="widget-title">
-      <h2><c:out value="${model.info.widgetTitle}" escapeXml="true" /></h2>
-    </div>
-     --%>
-    
+        
     <c:forEach var="item" items="${model.items}" varStatus="zebra">
       <c:if test="${not empty item }">
         
-        <c:set var="sectionClass">
-          <c:choose>
-            <c:when test="${item.color eq 'blauw'}">
-              <c:out value="colorbg blauw large"/>
-            </c:when>
-            <c:when test="${item.color eq 'groen'}"> 
-              <c:out value="colorbg groen medium"/>
-            </c:when>
-            <c:otherwise>
-               <c:out value="colorbg"/>
-            </c:otherwise>
-          </c:choose>
-        </c:set> 
+        <div class="col-xs-12 col-sm-6">
         
-        <section class="blok ${sectionClass}">
+        <article class="tekstitem">
+            
+            <h2>
+              <c:if test="${not empty item.titleIcon }">
+                <span class="icon">
+                  <img src="<hst:link hippobean="${item.titleIcon.paragraphImage }" />" 
+                     alt="<c:out value="${item.title }" escapeXml="true" />" 
+                     title="<c:out value="${item.title }" escapeXml="true" />" 
+                     class="title-icon"/>
+                </span>
+              </c:if>
+              <c:out value="${item.title }" escapeXml="true" />
+            </h2>
+            
+            <p><c:out value="${item.body }"/></p>
             <c:set var="displayLink"><hst:link hippobean="${item.link.link }" /></c:set>
-            <a href="${displayLink}" title="${item.link.alt}">
-              <h1>
-                <c:out value="${item.title}"/>
-              </h1>
-              <h2><c:out value="${item.body}"/></h2>
-              <span class="btn"><c:out value="${item.link.linkTitle}"/></span>
-            </a>
-        </section>
+            <a class="more" href="${displayLink}" title="${item.link.alt}"><c:out value="${item.link.linkTitle}"/></a>
+            
+        </article>
+        
+        </div>
         
       </c:if>
     </c:forEach>

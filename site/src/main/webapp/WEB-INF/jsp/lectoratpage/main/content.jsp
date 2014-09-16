@@ -44,7 +44,10 @@
   </div>
     
   <div class="row border-top">
-     <hst:include ref="contentBottom" /> 
+     <hst:include ref="contentBottomOne" /> 
+  </div>
+  <div class="row border-top">
+     <hst:include ref="contentBottomTwo" /> 
   </div>
 </section>
        
