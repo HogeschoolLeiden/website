@@ -1,7 +1,10 @@
 package nl.hsleiden.tags;
 
 import hslbeans.ArticlePage;
+import hslbeans.ExternalLink;
 import hslbeans.Image;
+import hslbeans.ImageTeaser;
+import hslbeans.InternalLink;
 import hslbeans.WebPage;
 
 import java.util.List;
@@ -161,6 +164,24 @@ public class Functions {
         
         EditableMenu mainMenu = new HstSiteMenuImpl(null, siteMenuConfiguration, requestContext).getEditableMenu();
         return mainMenu;
+    }
+    
+    public static String getConfiguredLink(ImageTeaser imgTeaser){
+        String result = "";
+        InternalLink internallink = imgTeaser.getInternallink();
+        ExternalLink externallink = imgTeaser.getExternallink();
+
+        if(internallink !=null && internallink.getLink()!=null && !internallink.getLinkTitle().isEmpty()){
+            result = "int";
+        }
+
+        if(result.isEmpty()){
+            if(externallink !=null && !externallink.getLinkUrl().isEmpty() && !externallink.getLinkTitle().isEmpty()){
+                result = "ext";
+            }
+        }
+
+        return result;
     }
     
 }

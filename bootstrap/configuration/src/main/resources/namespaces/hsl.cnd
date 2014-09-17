@@ -129,6 +129,9 @@
 [hsl:TextTeasersCompoundMixin] > hippo:compound, hippostd:relaxed
   orderable
 
+[hsl:ImageTeasersCompoundMixin] > hippo:compound, hippostd:relaxed
+  orderable
+
 [hsl:ExternalLinksTeasersCompoundMixin] > hippo:compound, hippostd:relaxed
   orderable
 
@@ -186,6 +189,9 @@
 [hsl:TextTeaser] > hsl:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
+[hsl:ImageTeaser] > hsl:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
 [hsl:ExternalLinksTeaser] > hsl:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
@@ -223,6 +229,10 @@
 [hsl:TextTeasersMixin]
   mixin
   + hsl:textTeasersCompoundMixin (hsl:TextTeasersCompoundMixin)
+
+[hsl:ImageTeasersMixin]
+  mixin
+  + hsl:imageTeasersCompoundMixin (hsl:ImageTeasersCompoundMixin)
 
 [hsl:PublicImagesMixin]
   mixin
