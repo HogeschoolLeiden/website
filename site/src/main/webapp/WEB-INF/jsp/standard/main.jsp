@@ -9,13 +9,24 @@
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 <%@ taglib prefix="opw" uri="http://open-web.nl/hippo/prototype"%>
 
+  <c:set var="mainClass">
+    <c:choose>
+      <c:when test="${tag:isSubclassOfWebPage(document) and 
+              hst:isReadable(document, 'headerImage') and 
+              not empty document.headerImage}">
+        <c:out value="detail"/>
+      </c:when>
+      <c:otherwise>
+        <c:out value="landing"/>
+      </c:otherwise>
+    </c:choose>
+  </c:set>
 
-  <div id="main" role="main" class="detail"> 
+  <div id="main" role="main" class="${mainClass}"> 
+    
     <tag:renderBackLink sitemapRefId="${paramInfo.overviewSitemapRefId}"/>
           
-    <c:if test="${tag:isSubclassOfWebPage(document)}">
-      <tag:headerImage document="${document}"/>
-    </c:if>
+    <tag:headerImage document="${document}"/>
         
     <%-- <hst:include ref="top-container" />      --%>
     
