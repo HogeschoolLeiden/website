@@ -18,10 +18,6 @@
 [hsl:CalendarEventsCompoundMixin] > hippo:compound, hippostd:relaxed
   orderable
 
-[hsl:CalendarEventsMixin]
-  mixin
-  + hsl:calendarEventsCompoundMixin (hsl:CalendarEventsCompoundMixin)
-
 [hsl:ConfirmationPage] > hsl:WebPage, hippostd:relaxed, hippotranslation:translated
   orderable
 
@@ -30,10 +26,6 @@
 
 [hsl:ContactPersonsCompoundMixin] > hippo:compound, hippostd:relaxed
   orderable
-
-[hsl:ContactPersonsMixin]
-  mixin
-  + hsl:contactPersonsCompoundMixin (hsl:ContactPersonsCompoundMixin)
 
 [hsl:Documents] > hippo:compound, hippostd:relaxed
   orderable
@@ -55,10 +47,6 @@
 
 [hsl:FormCompoundMixin] > hippo:compound, hippostd:relaxed
   orderable
-
-[hsl:FormComponentMixin]
-  mixin
-  + hsl:formCompoundMixin (hsl:FormCompoundMixin)
 
 [hsl:FormWidgetParameters] > hippo:compound, hippostd:relaxed
   orderable
@@ -105,10 +93,6 @@
 [hsl:PublicImagesCompoundMixin] > hippo:compound, hippostd:relaxed
   orderable
 
-[hsl:PublicImagesMixin]
-  mixin
-  + hsl:publicImagesCompoundMixin (hsl:PublicImagesCompoundMixin)
-
 [hsl:PublicImagesParameters] > hippo:compound, hippostd:relaxed
   orderable
 
@@ -124,16 +108,8 @@
 [hsl:RelatedEventsCompoundMixin] > hippo:compound, hippostd:relaxed
   orderable
 
-[hsl:RelatedEventsMixin]
-  mixin
-  + hsl:relatedEventsCompoundMixin (hsl:RelatedEventsCompoundMixin)
-
 [hsl:RelatedFilterParameters] > hippo:compound, hippostd:relaxed
   orderable
-
-[hsl:RelatedItemsMixin]
-  mixin
-  + hsl:relatedCompoundMixin (hsl:RelatedCompoundMixin)
 
 [hsl:RelatedOverviewParameters] > hippo:compound, hippostd:relaxed
   orderable
@@ -153,13 +129,8 @@
 [hsl:TextTeasersCompoundMixin] > hippo:compound, hippostd:relaxed
   orderable
 
-[hsl:HeadTeasersMixin]
-  mixin
-  + hsl:headTeasersCompoundMixin (hsl:HeadTeasersCompoundMixin)
-
-[hsl:TextTeasersMixin]
-  mixin
-  + hsl:textTeasersCompoundMixin (hsl:TextTeasersCompoundMixin)
+[hsl:ExternalLinksTeasersCompoundMixin] > hippo:compound, hippostd:relaxed
+  orderable
 
 [hsl:HeadTeaser] > hsl:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
@@ -169,10 +140,6 @@
 
 [hsl:TwitterExtraParameters] > hippo:compound, hippostd:relaxed
   orderable
-
-[hsl:TwitterMixin]
-  mixin
-  + hsl:twitterCompoundMixin (hsl:TwitterCompoundMixin)
 
 [hsl:TwitterParameters] > hippo:compound, hippostd:relaxed
   orderable
@@ -216,3 +183,45 @@
 [hsl:TextTeaser] > hsl:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
+[hsl:ExternalLinksTeaser] > hsl:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hsl:CalendarEventsMixin]
+  mixin
+  + hsl:calendarEventsCompoundMixin (hsl:CalendarEventsCompoundMixin)
+  
+[hsl:TwitterMixin]
+  mixin
+  + hsl:twitterCompoundMixin (hsl:TwitterCompoundMixin)
+
+[hsl:ExternalLinksTeasersMixin]
+  mixin
+  + hsl:externalLinksTeasersCompoundMixin (hsl:ExternalLinksTeasersCompoundMixin)
+
+[hsl:ContactPersonsMixin]
+  mixin
+  + hsl:contactPersonsCompoundMixin (hsl:ContactPersonsCompoundMixin)
+  
+[hsl:HeadTeasersMixin]
+  mixin
+  + hsl:headTeasersCompoundMixin (hsl:HeadTeasersCompoundMixin)
+
+[hsl:FormComponentMixin]
+  mixin
+  + hsl:formCompoundMixin (hsl:FormCompoundMixin)
+  
+[hsl:TextTeasersMixin]
+  mixin
+  + hsl:textTeasersCompoundMixin (hsl:TextTeasersCompoundMixin)
+
+[hsl:PublicImagesMixin]
+  mixin
+  + hsl:publicImagesCompoundMixin (hsl:PublicImagesCompoundMixin)
+  
+[hsl:RelatedEventsMixin]
+  mixin
+  + hsl:relatedEventsCompoundMixin (hsl:RelatedEventsCompoundMixin)
+  
+[hsl:RelatedItemsMixin]
+  mixin
+  + hsl:relatedCompoundMixin (hsl:RelatedCompoundMixin)
