@@ -289,9 +289,6 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hst:containercomponent</sv:value>
         </sv:property>
-        <sv:property sv:name="hst:lastmodified" sv:type="Date">
-          <sv:value>2014-09-16T12:06:23.915+02:00</sv:value>
-        </sv:property>
         <sv:property sv:name="hst:xtype" sv:type="String">
           <sv:value>HST.vBox</sv:value>
         </sv:property>
@@ -320,6 +317,36 @@
           </sv:property>
           <sv:property sv:name="hst:template" sv:type="String">
             <sv:value>catalog.textteasers</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:xtype" sv:type="String">
+            <sv:value>HST.Item</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="internalLinksTeasers">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:containeritemcomponent</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:componentclassname" sv:type="String">
+            <sv:value>nl.hsleiden.components.catalog.InternalLinksTeasers</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:iconpath" sv:type="String">
+            <sv:value>images/catalog/teaser-icon.jpg</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:label" sv:type="String">
+            <sv:value>Interne Links Teasers</sv:value>
+          </sv:property>
+          <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
+            <sv:value>tryToUseMixin</sv:value>
+            <sv:value>firstTeaser</sv:value>
+            <sv:value>secondTeaser</sv:value>
+          </sv:property>
+          <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
+            <sv:value>on</sv:value>
+            <sv:value/>
+            <sv:value/>
+          </sv:property>
+          <sv:property sv:name="hst:template" sv:type="String">
+            <sv:value>catalog.internallinksteasers</sv:value>
           </sv:property>
           <sv:property sv:name="hst:xtype" sv:type="String">
             <sv:value>HST.Item</sv:value>

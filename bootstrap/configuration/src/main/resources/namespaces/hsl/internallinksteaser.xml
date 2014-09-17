@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="ExternalLinksTeaser">
+<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="InternalLinksTeaser">
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>hipposysedit:templatetype</sv:value>
   </sv:property>
@@ -85,7 +85,7 @@
           <sv:value>optional</sv:value>
         </sv:property>
       </sv:node>
-      <sv:node sv:name="externallinks">
+      <sv:node sv:name="internallinks">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hipposysedit:field</sv:value>
         </sv:property>
@@ -99,13 +99,13 @@
           <sv:value>true</sv:value>
         </sv:property>
         <sv:property sv:name="hipposysedit:path" sv:type="String">
-          <sv:value>hsl:externallinks</sv:value>
+          <sv:value>hsl:internallinks</sv:value>
         </sv:property>
         <sv:property sv:name="hipposysedit:primary" sv:type="Boolean">
           <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:name="hipposysedit:type" sv:type="String">
-          <sv:value>hsl:ExternalLink</sv:value>
+          <sv:value>hsl:InternalLink</sv:value>
         </sv:property>
       </sv:node>
       <sv:node sv:name="internallink">
@@ -142,7 +142,7 @@
     </sv:property>
     <sv:node sv:name="hipposysedit:prototype">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hsl:ExternalLinksTeaser</sv:value>
+        <sv:value>hsl:InternalLinksTeaser</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
         <sv:value>mix:referenceable</sv:value>
@@ -178,19 +178,24 @@
       <sv:property sv:name="hsl:title" sv:type="String">
         <sv:value/>
       </sv:property>
-      <sv:node sv:name="hsl:externallinks">
+      <sv:node sv:name="hsl:internallinks">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hsl:ExternalLink</sv:value>
+          <sv:value>hsl:InternalLink</sv:value>
+        </sv:property>
+       <sv:property sv:name="hsl:alt" sv:type="String">
+          <sv:value/>
         </sv:property>
         <sv:property sv:name="hsl:linkTitle" sv:type="String">
           <sv:value/>
         </sv:property>
-        <sv:property sv:name="hsl:linkUrl" sv:type="String">
-          <sv:value/>
-        </sv:property>
-        <sv:property sv:name="hsl:newWindow" sv:type="Boolean">
-          <sv:value>false</sv:value>
-        </sv:property>
+        <sv:node sv:name="hsl:link">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
+          </sv:property>
+        </sv:node>
       </sv:node>
       <sv:node sv:name="hsl:link">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -292,15 +297,15 @@
           </sv:property>
         </sv:node>
       </sv:node>
-      <sv:node sv:name="externallinks">
+      <sv:node sv:name="internallinks">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>frontend:plugin</sv:value>
         </sv:property>
         <sv:property sv:name="caption" sv:type="String">
-          <sv:value>Externe Links</sv:value>
+          <sv:value>Interne Links</sv:value>
         </sv:property>
         <sv:property sv:name="field" sv:type="String">
-          <sv:value>externallinks</sv:value>
+          <sv:value>internallinks</sv:value>
         </sv:property>
         <sv:property sv:name="hint" sv:type="String">
           <sv:value/>

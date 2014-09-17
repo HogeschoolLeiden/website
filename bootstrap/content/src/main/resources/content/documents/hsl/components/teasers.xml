@@ -15,6 +15,7 @@
     <sv:value>new-textteaser-document</sv:value>
     <sv:value>new-headteaser-document</sv:value>
     <sv:value>new-externallinksteaser-document</sv:value>
+    <sv:value>new-internallinksteaser-document</sv:value>
   </sv:property>
   <sv:property sv:name="hippotranslation:id" sv:type="String">
     <sv:value>847a03eb-10e2-4322-84b5-9c821882e6c6</sv:value>
@@ -543,7 +544,7 @@
         <sv:value>2014-09-17T09:48:59.028+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-        <sv:value>2014-09-17T09:49:00.212+02:00</sv:value>
+        <sv:value>2014-09-17T11:53:26.955+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
         <sv:value>admin</sv:value>
@@ -1091,7 +1092,7 @@
         <sv:value>admin</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-        <sv:value>2014-09-17T09:54:28.173+02:00</sv:value>
+        <sv:value>2014-09-17T11:55:34.278+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippotranslation:id" sv:type="String">
         <sv:value>792cc1ad-6a9d-411f-8cbb-3a1f92232043</sv:value>
@@ -1134,6 +1135,482 @@
         <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
         <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
         <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+      </sv:node>
+    </sv:node>
+  </sv:node>
+  <sv:node sv:name="waar-staat-hsl-voor-internal">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hippo:handle</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+      <sv:value>mix:referenceable</sv:value>
+      <sv:value>hippo:translated</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>324768f8-c795-405b-a610-67ace02fd30c</sv:value>
+    </sv:property>
+    <sv:node sv:name="waar-staat-hsl-voor-internal">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hsl:InternalLinksTeaser</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:value>mix:referenceable</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>cd16be67-524c-4b38-b5ec-8821271fba13</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true"/>
+      <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+        <sv:value>teasers/waar-staat-hsl-voor-internal/waar-staat-hsl-voor-internal[3]</sv:value>
+        <sv:value>teasers/waar-staat-hsl-voor-internal/waar-staat-hsl-voor-internal[2]</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:state" sv:type="String">
+        <sv:value>draft</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+        <sv:value>live</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+        <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+        <sv:value>2014-09-17T11:50:51.847+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+        <sv:value>2014-09-17T11:54:58.091+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+        <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippotranslation:id" sv:type="String">
+        <sv:value>34341961-1648-43e8-995f-23c51624e166</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippotranslation:locale" sv:type="String">
+        <sv:value>nl</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:title" sv:type="String">
+        <sv:value>Hogeschool Leiden important pages</sv:value>
+      </sv:property>
+      <sv:node sv:name="hsl:internallinks">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsl:InternalLink</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:alt" sv:type="String">
+          <sv:value>News overview</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:linkTitle" sv:type="String">
+          <sv:value>Hogeschool Leiden wint zilveren Sustainabul</sv:value>
+        </sv:property>
+        <sv:node sv:name="hsl:link">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>5d2a4541-9160-4f34-9992-50282d10b65c</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="hsl:link">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsl:InternalLink</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:alt" sv:type="String">
+          <sv:value>Second blog page</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:linkTitle" sv:type="String">
+          <sv:value>Compleet media-overzicht</sv:value>
+        </sv:property>
+        <sv:node sv:name="hsl:link">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>e0928ed7-ecab-4abc-85d1-41fb0fef7e04</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="hsl:titleIcon">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hippogallerypicker:imagelink</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:docbase" sv:type="String">
+          <sv:value>509a0853-75a6-4273-9fe2-fd3a9a6ccb99</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+      </sv:node>
+      <sv:node sv:name="hsl:internallinks">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsl:InternalLink</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:alt" sv:type="String">
+          <sv:value>News item 1</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:linkTitle" sv:type="String">
+          <sv:value>Paul van Maanen vertrekt naar ROC MIdden Nederland</sv:value>
+        </sv:property>
+        <sv:node sv:name="hsl:link">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>3ebd3e74-340e-4de9-aa75-e5d8eefd083c</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="hsl:internallinks">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsl:InternalLink</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:alt" sv:type="String">
+          <sv:value>F.A.Q</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:linkTitle" sv:type="String">
+          <sv:value>Verstandelijk beperkten vaak klem in strafrecht</sv:value>
+        </sv:property>
+        <sv:node sv:name="hsl:link">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>d118860b-35c7-4029-abeb-03396b1ce793</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="hsl:internallinks">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsl:InternalLink</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:alt" sv:type="String">
+          <sv:value>Blogs overview</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:linkTitle" sv:type="String">
+          <sv:value>Netwerkfactor 3: vonk in de motor van Leidse economie</sv:value>
+        </sv:property>
+        <sv:node sv:name="hsl:link">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>287e1037-1fc9-4165-b881-124132b04f69</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+    </sv:node>
+    <sv:node sv:name="hippo:translation">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hippo:translation</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:language" sv:type="String">
+        <sv:value/>
+      </sv:property>
+      <sv:property sv:name="hippo:message" sv:type="String">
+        <sv:value>HSL internal links list</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="waar-staat-hsl-voor-internal">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hsl:InternalLinksTeaser</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:value>mix:referenceable</sv:value>
+        <sv:value>mix:versionable</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>b10f1093-e02a-433a-b824-7d66a53ec5de</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+        <sv:value>preview</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+        <sv:value>teasers/waar-staat-hsl-voor-internal/waar-staat-hsl-voor-internal[3]</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:state" sv:type="String">
+        <sv:value>unpublished</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+        <sv:value>live</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+        <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+        <sv:value>2014-09-17T11:50:51.847+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+        <sv:value>2014-09-17T11:55:17.718+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+        <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippotranslation:id" sv:type="String">
+        <sv:value>34341961-1648-43e8-995f-23c51624e166</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippotranslation:locale" sv:type="String">
+        <sv:value>nl</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:title" sv:type="String">
+        <sv:value>Hogeschool Leiden important pages</sv:value>
+      </sv:property>
+      <sv:node sv:name="hsl:internallinks">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsl:InternalLink</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:alt" sv:type="String">
+          <sv:value>News overview</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:linkTitle" sv:type="String">
+          <sv:value>Hogeschool Leiden wint zilveren Sustainabul</sv:value>
+        </sv:property>
+        <sv:node sv:name="hsl:link">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>5d2a4541-9160-4f34-9992-50282d10b65c</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="hsl:link">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsl:InternalLink</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:alt" sv:type="String">
+          <sv:value>Second blog page</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:linkTitle" sv:type="String">
+          <sv:value>Compleet media-overzicht</sv:value>
+        </sv:property>
+        <sv:node sv:name="hsl:link">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>e0928ed7-ecab-4abc-85d1-41fb0fef7e04</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="hsl:titleIcon">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hippogallerypicker:imagelink</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:docbase" sv:type="String">
+          <sv:value>509a0853-75a6-4273-9fe2-fd3a9a6ccb99</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+      </sv:node>
+      <sv:node sv:name="hsl:internallinks">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsl:InternalLink</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:alt" sv:type="String">
+          <sv:value>News item 1</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:linkTitle" sv:type="String">
+          <sv:value>Paul van Maanen vertrekt naar ROC MIdden Nederland</sv:value>
+        </sv:property>
+        <sv:node sv:name="hsl:link">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>3ebd3e74-340e-4de9-aa75-e5d8eefd083c</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="hsl:internallinks">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsl:InternalLink</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:alt" sv:type="String">
+          <sv:value>F.A.Q</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:linkTitle" sv:type="String">
+          <sv:value>Verstandelijk beperkten vaak klem in strafrecht</sv:value>
+        </sv:property>
+        <sv:node sv:name="hsl:link">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>d118860b-35c7-4029-abeb-03396b1ce793</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="hsl:internallinks">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsl:InternalLink</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:alt" sv:type="String">
+          <sv:value>Blogs overview</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:linkTitle" sv:type="String">
+          <sv:value>Netwerkfactor 3: vonk in de motor van Leidse economie</sv:value>
+        </sv:property>
+        <sv:node sv:name="hsl:link">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>287e1037-1fc9-4165-b881-124132b04f69</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+    </sv:node>
+    <sv:node sv:name="waar-staat-hsl-voor-internal">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hsl:InternalLinksTeaser</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:value>mix:referenceable</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>1ad14025-1537-451d-b3a0-237f30c1fd3f</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+        <sv:value>live</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+        <sv:value>teasers/waar-staat-hsl-voor-internal/waar-staat-hsl-voor-internal[2]</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:state" sv:type="String">
+        <sv:value>published</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+        <sv:value>live</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+        <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+        <sv:value>2014-09-17T11:50:51.847+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+        <sv:value>2014-09-17T11:55:17.718+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+        <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
+        <sv:value>2014-09-17T11:55:20.021+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippotranslation:id" sv:type="String">
+        <sv:value>34341961-1648-43e8-995f-23c51624e166</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippotranslation:locale" sv:type="String">
+        <sv:value>nl</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:title" sv:type="String">
+        <sv:value>Hogeschool Leiden important pages</sv:value>
+      </sv:property>
+      <sv:node sv:name="hsl:internallinks">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsl:InternalLink</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:alt" sv:type="String">
+          <sv:value>News overview</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:linkTitle" sv:type="String">
+          <sv:value>Hogeschool Leiden wint zilveren Sustainabul</sv:value>
+        </sv:property>
+        <sv:node sv:name="hsl:link">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>5d2a4541-9160-4f34-9992-50282d10b65c</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="hsl:link">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsl:InternalLink</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:alt" sv:type="String">
+          <sv:value>Second blog page</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:linkTitle" sv:type="String">
+          <sv:value>Compleet media-overzicht</sv:value>
+        </sv:property>
+        <sv:node sv:name="hsl:link">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>e0928ed7-ecab-4abc-85d1-41fb0fef7e04</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="hsl:titleIcon">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hippogallerypicker:imagelink</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:docbase" sv:type="String">
+          <sv:value>509a0853-75a6-4273-9fe2-fd3a9a6ccb99</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+      </sv:node>
+      <sv:node sv:name="hsl:internallinks">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsl:InternalLink</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:alt" sv:type="String">
+          <sv:value>News item 1</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:linkTitle" sv:type="String">
+          <sv:value>Paul van Maanen vertrekt naar ROC MIdden Nederland</sv:value>
+        </sv:property>
+        <sv:node sv:name="hsl:link">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>3ebd3e74-340e-4de9-aa75-e5d8eefd083c</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="hsl:internallinks">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsl:InternalLink</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:alt" sv:type="String">
+          <sv:value>F.A.Q</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:linkTitle" sv:type="String">
+          <sv:value>Verstandelijk beperkten vaak klem in strafrecht</sv:value>
+        </sv:property>
+        <sv:node sv:name="hsl:link">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>d118860b-35c7-4029-abeb-03396b1ce793</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="hsl:internallinks">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsl:InternalLink</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:alt" sv:type="String">
+          <sv:value>Blogs overview</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:linkTitle" sv:type="String">
+          <sv:value>Netwerkfactor 3: vonk in de motor van Leidse economie</sv:value>
+        </sv:property>
+        <sv:node sv:name="hsl:link">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>287e1037-1fc9-4165-b881-124132b04f69</sv:value>
+          </sv:property>
+        </sv:node>
       </sv:node>
     </sv:node>
   </sv:node>

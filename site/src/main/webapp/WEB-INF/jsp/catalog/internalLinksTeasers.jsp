@@ -19,8 +19,6 @@
 </c:if>
 
 <c:if test="${not empty model.items and fn:length(model.items)>0}">
-
-<%--   <div class="catalog text teasers"> --%>
         
     <c:forEach var="item" items="${model.items}" varStatus="zebra">
       <c:if test="${not empty item }">
@@ -41,7 +39,19 @@
               <c:out value="${item.title }" escapeXml="true" />
             </h2>
             
-            <p><c:out value="${item.body }"/></p>
+            <ul>
+              <c:forEach items="${item.internallinks}" var="linkListItem">
+                <c:if test="${not empty  linkListItem}">
+                  <c:set var="internalLink"><hst:link hippobean="${linkListItem.link }" /></c:set>              
+                  <li>
+                    <a href="${internalLink}" title="${linkListItem.alt}">
+                      <span><c:out value="${linkListItem.linkTitle}"/></span>
+                    </a>
+                  </li>
+                </c:if>
+              </c:forEach>
+            </ul>
+            
             <c:set var="displayLink"><hst:link hippobean="${item.link.link }" /></c:set>
             <a class="more" href="${displayLink}" title="${item.link.alt}"><c:out value="${item.link.linkTitle}"/></a>
             
@@ -52,5 +62,4 @@
       </c:if>
     </c:forEach>
     
-  <%-- </div> --%>
 </c:if>

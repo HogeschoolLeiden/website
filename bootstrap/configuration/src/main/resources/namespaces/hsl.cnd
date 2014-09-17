@@ -132,6 +132,9 @@
 [hsl:ExternalLinksTeasersCompoundMixin] > hippo:compound, hippostd:relaxed
   orderable
 
+[hsl:InternalLinksTeasersCompoundMixin] > hippo:compound, hippostd:relaxed
+  orderable
+
 [hsl:HeadTeaser] > hsl:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
@@ -186,6 +189,9 @@
 [hsl:ExternalLinksTeaser] > hsl:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
+[hsl:InternalLinksTeaser] > hsl:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
 [hsl:CalendarEventsMixin]
   mixin
   + hsl:calendarEventsCompoundMixin (hsl:CalendarEventsCompoundMixin)
@@ -197,6 +203,10 @@
 [hsl:ExternalLinksTeasersMixin]
   mixin
   + hsl:externalLinksTeasersCompoundMixin (hsl:ExternalLinksTeasersCompoundMixin)
+
+[hsl:InternalLinksTeasersMixin]
+  mixin
+  + hsl:internalLinksTeasersCompoundMixin (hsl:InternalLinksTeasersCompoundMixin)
 
 [hsl:ContactPersonsMixin]
   mixin
