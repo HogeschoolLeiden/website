@@ -19,68 +19,61 @@
 </c:if>
 
 <c:if test="${not empty model.items }">
-  <div class="catalog relatedEvents">
-    <div class="widget-title">
-      <h2><c:out value="${model.info.widgetTitle}" escapeXml="true" /></h2>
-    </div>
-    <hr>
-    <%-- Items in-inlined for better performance --%>
-    <c:forEach var="item" items="${model.items}" varStatus="zebra">
-      <div class="item-with-image">
-          <c:if test="${not empty tag:getFirstFlexibleBlockImage(item) }">
-            <div class="image-space">
-              <hst:link var="image" hippobean="${tag:getFirstFlexibleBlockImage(item).image.listImageMedium }" />
-              <img alt="${item.title }" src="${image }" />
-            </div>
-          </c:if>   
-        
-        <div class="itemContent">
-          <div class=itemTitle>
-            <hst:link hippobean="${item }" var="link" />
-            <c:set var="title">
-              <c:out value="${item.title }" escapeXml="true" />
-            </c:set>
-            <a href="${link }" title="${title }">${title }</a>
-          </div>
-          
-          <div class="date">
-            <fmt:formatDate value="${item.eventDate.time}" type="Date" pattern="dd.MM.yyyy" />
-          </div>
 
-          <c:if test="${not empty item.introduction }">
-            <div class=introduction>
-              <p>
-                <opw:string-chopper
-                  maxLength="250" bean="${item }"
-                  stringPath="introduction"
-                  allowedLengthTolerance="10"
-                  showDots="true" />
-              </p>
-            </div>
+
+<div class="overzichtlijst related events">
+  
+  <c:if test="${not empty model.info.widgetTitle}">
+    <h2 class="widgetTitle"><c:out value="${model.info.widgetTitle}" escapeXml="true" /></h2>
+  </c:if>
+  
+  <c:forEach var="item" items="${model.items}">
+    
+    <hst:link var="link" hippobean="${item}" />
+    
+    <article class="media clearfix">
+      <hst:cmseditlink hippobean="${item}" />
+      <c:set var="image" value=""/>
+      
+      <c:if test="${not empty item.headerImage }">
+          <hst:link var="image" hippobean="${item.headerImage.listImageMedium}" />  
+      </c:if>
+    
+      <a href="${link}">
+        <!-- afmeting afbeelding: 100x100 -->
+        <figure class="media-object pull-left">
+          <c:if test="${not empty image}">
+            <img alt="${item.title }" title="${item.title }" src="${image }" />
           </c:if>
-        </div>
-        <div class="clear"></div>
-      </div>
-    </c:forEach>
+        </figure>
+        <tag:renderDate document="${item}" dateClass="datum start"/>
+        <div class="media-body">
+          <h1 class="media-heading"><c:out value="${item.title }"/></h1>
+          <p><c:out value="${item.introduction }"/></p>
+        </div>   
+      </a>     
+  
+    </article> 
+    
+      
+  </c:forEach>
+  
+  <c:if test="${model.info.showOverview && not empty model.overviewLink }">
+    <c:set var="linkTitle">
+      <c:choose>
+        <c:when test="${not empty model.info.overviewLinkLabel }">
+          <c:out value="${model.info.overviewLinkLabel }" escapeXml="true" />
+        </c:when>
+        <c:otherwise>
+          <fmt:message key="overiewlink.default.label" />
+        </c:otherwise>
+      </c:choose>
+    </c:set>
 
-    <c:if test="${model.info.showOverview && not empty model.overviewLink }">
-      <div class="read_more">
-        <c:set var="linkTitle">
-          <c:choose>
-            <c:when test="${not empty model.info.overviewLinkLabel }">
-              <c:out value="${model.info.overviewLinkLabel }" escapeXml="true" />
-            </c:when>
-            <c:otherwise>
-              <fmt:message key="overiewlink.default.label" />
-            </c:otherwise>
-          </c:choose>
-        </c:set>
-        <h3>
-          <a href="<hst:link hippobean="${model.overviewLink }" />" title="${linkTitle}">
-            <span> ${linkTitle} </span>
-          </a>
-        </h3>
-      </div>
-    </c:if>
-  </div>
+    <a class="more" href="<hst:link hippobean="${model.overviewLink }" />" title="${linkTitle}">
+      <span> ${linkTitle} </span>
+    </a>
+  </c:if>
+  
+</div>
 </c:if>
