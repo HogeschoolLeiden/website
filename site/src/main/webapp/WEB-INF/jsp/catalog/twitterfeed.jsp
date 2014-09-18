@@ -11,10 +11,6 @@
 
 <hst:setBundle basename="nl.hsleiden.channelmanager.Messages, nl.hsleiden.widget.Messages"/>
 
-
-<%-- 
-lost position
- 
 <c:set var="position">
   <c:choose>
     <c:when test="${hst:isReadable(model.paramInfo, 'horizontal') and model.paramInfo.horizontal}">
@@ -25,9 +21,7 @@ lost position
     </c:when>
     <c:otherwise>vertical</c:otherwise>
   </c:choose>
-</c:set> 
-
---%>
+</c:set>
 
 <hst:defineObjects />
   <c:set var="isCmsRequest" value="${hstRequest.requestContext.cmsRequest}" />
@@ -39,9 +33,9 @@ lost position
 <c:if test="${fn:length(model.tweets)>0}">
       
   <div class="button-block twitter">
-    <%-- <h2><c:out value="${model.paramInfo.title}"/></h2> --%>
+
     <c:forEach items="${model.tweets}" var="tweet" varStatus="loop">
-      <div class="col-sm-4">
+      <div class="col-sm-4 ${position}">
         <article class="twitteritem">
           <figure>
             <img src="${tweet.status.user.profileImageURL}" alt="profile image" /> <%-- get it from properties --%> 
@@ -59,9 +53,6 @@ lost position
       </div>
     </c:forEach>
 
-    <%-- <c:if test="${not empty model.paramInfo.followText and not empty model.paramInfo.from}">
-       <a class="follow" href="http://www.twitter.com/${model.paramInfo.from}" target="_BLANK">${model.paramInfo.followText}</a>
-    </c:if> --%>
   </div>
  
 </c:if>

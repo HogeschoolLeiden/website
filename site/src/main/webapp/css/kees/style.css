@@ -3025,112 +3025,37 @@ footer .social li a:hover {
 /* -- my additions -- */
 
 /* topmenu */
-.nav#mainnav ul.dropdownmenu.visible-lg.visible-md.clearfix li ul li ul
-	{
-	padding-left: 0;
-	padding-bottom: 0;
-	padding-top: 0;
-}
+.nav#mainnav ul.dropdownmenu.visible-lg.visible-md.clearfix li ul li ul { padding-left: 0; padding-bottom: 0; padding-top: 0;}
 
 /* public images */
-.images2 {
-	width: 100%;
-	float: left;
-}
+.images2 { width: 100%; float: left;}
+.images2 .singleImage {	width: 50%; float: left; margin-bottom: 2%; }
+.images2 .singleImagePadding { width: 95%; float: center; margin-left: 2.5%; }
+.images2 .singleImagePadding img { display: block; width: 100%; float: left; }
+.images2 .singleImagePadding img { display: block; width: 100%; float: left; }
 
-.images2 .singleImage {
-	width: 50%;
-	float: left;
-	margin-bottom: 2%;
-}
+.images3 { width: 100%; float: left; }
+.images3 .singleImage { width: 33.333%; float: left; margin-bottom: 2%; }
+.images3 .singleImagePadding { width: 95%; float: center; margin-left: 2.5%; }
+.images3 .singleImagePadding img { display: block; width: 100%; float: left; }
 
-.images2 .singleImagePadding {
-	width: 95%;
-	float: center;
-	margin-left: 2.5%;
-}
-
-.images2 .singleImagePadding img {
-	display: block;
-	width: 100%;
-	float: left;
-}
-
-.images2 .singleImagePadding img {
-	display: block;
-	width: 100%;
-	float: left;
-}
-
-.images3 {
-	width: 100%;
-	float: left;
-}
-
-.images3 .singleImage {
-	width: 33.333%;
-	float: left;
-	margin-bottom: 2%;
-}
-
-.images3 .singleImagePadding {
-	width: 95%;
-	float: center;
-	margin-left: 2.5%;
-}
-
-.images3 .singleImagePadding img {
-	display: block;
-	width: 100%;
-	float: left;
-}
-
-.images4 {
-	width: 100%;
-	float: left;
-}
-
-.images4 .singleImage {
-	width: 25%;
-	float: left;
-	margin-bottom: 2%;
-}
-
-.images4 .singleImagePadding {
-	width: 95%;
-	float: center;
-	margin-left: 2.5%;
-}
-
-.images4 .singleImagePadding img {
-	display: block;
-	width: 100%;
-	float: left;
-}
+.images4 { width: 100%; float: left; }
+.images4 .singleImage { width: 25%; float: left; margin-bottom: 2%; }
+.images4 .singleImagePadding { width: 95%; float: center; margin-left: 2.5%; }
+.images4 .singleImagePadding img { display: block; width: 100%; float: left; }
 
 /* flexible block image */
-figure.fexibleblock.image img {
-	width: 100%;
-}
+figure.fexibleblock.image img {	width: 100%; }
 
 /* twitter */
-.button-block.twitter {
-	width: 100%;
-	float: left;
-}
+.button-block.twitter { width: 100%; float: left; }
+.button-block.twitter img {	width: 100%; }
 
-.button-block.twitter img {
-	width: 100%;
-}
+.twitteritem h2 { margin-bottom: 0; }
+.twitteritem h3 {margin-top: 0; margin-bottom: 0; }
 
-.twitteritem h2 {
-	margin-bottom: 0;
-}
-
-.twitteritem h3 {
-	margin-top: 0;
-	margin-bottom: 0;
-}
+.col-sm-4.vertical{width: auto;}
+.col-sm-4.horizontal2{width: 50%;}
 
 /* facet navigation */
 .filterlist .checkbox .cbimg {
@@ -3259,4 +3184,4 @@ figure.fexibleblock.image img {
 .aside .overzichtlijst.related a.more {margin-top: 0; margin-bottom: 15px;}
 .aside .widgetTitle { font-size: 1.571em; color: #23114c; font-family: 'source_sans_proregular';
 					font-weight: 400; font-style: normal; font-weight: 400; display: inline-block; 
-					margin: 0 0 0.7em 0;}
+					margin: 0 0 0.7em 0; padding-left: 10px;}

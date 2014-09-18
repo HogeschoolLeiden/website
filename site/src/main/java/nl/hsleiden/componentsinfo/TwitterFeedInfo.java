@@ -10,9 +10,6 @@ public interface TwitterFeedInfo {
     @Parameter(name = Constants.WidgetConstants.FIELD_USER_MIXIN, defaultValue = "false", displayName=WidgetConstants.FIELD_USER_MIXIN_MESSAGE)
     public Boolean getUseMixin();
     
-    @Parameter(name = "title", displayName = "Widget Titel", defaultValue = "Twitter Feed")
-    String getTitle();
-
     @Parameter(name = "query", displayName = "Zoekopdracht", defaultValue = "")
     String getQuery();
 
@@ -21,9 +18,6 @@ public interface TwitterFeedInfo {
 
     @Parameter(name = "limit", displayName = "Max aantal tweets", defaultValue = "5")
     int getLimit();
-
-    @Parameter(name = "followText", displayName = "Volg ons tekst", defaultValue = "")
-    String getFollowText();
 
     @Parameter(name = "horizontal", displayName = "Tonen horizontaal", defaultValue = "false")
     Boolean getHorizontal();
