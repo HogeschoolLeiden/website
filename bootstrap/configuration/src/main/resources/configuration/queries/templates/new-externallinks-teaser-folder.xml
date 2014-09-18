@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="new-teaser-folder">
+<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="new-externallinks-teaser-folder">
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>hippostd:templatequery</sv:value>
   </sv:property>
@@ -25,7 +25,7 @@
     <sv:value>xpath</sv:value>
   </sv:property>
   <sv:property sv:name="jcr:statement" sv:type="String">
-    <sv:value>/jcr:root/hippo:configuration/hippo:queries/hippo:templates/new-teaser-folder/hippostd:templates/node()</sv:value>
+    <sv:value>/jcr:root/hippo:configuration/hippo:queries/hippo:templates/new-externallinks-teaser-folder/hippostd:templates/node()</sv:value>
   </sv:property>
   <sv:node sv:name="hippostd:templates">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -41,11 +41,8 @@
       </sv:property>
       <sv:property sv:name="hippo:related___pathreference" sv:type="String"/>
       <sv:property sv:name="hippostd:foldertype" sv:type="String" sv:multiple="true">
+        <sv:value>new-externallinksteaser-document</sv:value>
         <sv:value>new-externallinks-teaser-folder</sv:value>
-        <sv:value>new-head-teaser-folder</sv:value>
-        <sv:value>new-image-teaser-folder</sv:value>
-        <sv:value>new-internallinks-teaser-folder</sv:value>
-        <sv:value>new-text-teaser-folder</sv:value>
       </sv:property>
       <sv:property sv:name="hippotranslation:id" sv:type="String">
         <sv:value>a222de4f-bdde-48ef-86a0-4a42b4f8657f</sv:value>
@@ -71,7 +68,7 @@
       <sv:value>en</sv:value>
     </sv:property>
     <sv:property sv:name="hippo:message" sv:type="String">
-      <sv:value>new teaser folder</sv:value>
+      <sv:value>new external links teaser folder</sv:value>
     </sv:property>
   </sv:node>
   <sv:node sv:name="hippo:translation">
@@ -85,7 +82,7 @@
       <sv:value>nl</sv:value>
     </sv:property>
     <sv:property sv:name="hippo:message" sv:type="String">
-      <sv:value>nieuwe teaser map</sv:value>
+      <sv:value>nieuwe externe links teaser map</sv:value>
     </sv:property>
   </sv:node>
 </sv:node>

@@ -6,6 +6,138 @@
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:containeritempackage</sv:value>
     </sv:property>
+    <sv:node sv:name="teasers">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:containeritemcomponent</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentclassname" sv:type="String">
+        <sv:value>nl.hsleiden.components.catalog.HeadTeasers</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:iconpath" sv:type="String">
+        <sv:value>images/catalog/teaser-icon.jpg</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:label" sv:type="String">
+        <sv:value>Head Teasers</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
+      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
+      <sv:property sv:name="hst:template" sv:type="String">
+        <sv:value>catalog.headteasers</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:xtype" sv:type="String">
+        <sv:value>HST.Item</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="externalLinksTeasers">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:containeritemcomponent</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentclassname" sv:type="String">
+        <sv:value>nl.hsleiden.components.catalog.ExternalLinksTeasers</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:iconpath" sv:type="String">
+        <sv:value>images/catalog/external-links-icon.png</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:label" sv:type="String">
+        <sv:value>Externe Links Teasers</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
+      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
+      <sv:property sv:name="hst:template" sv:type="String">
+        <sv:value>catalog.externallinksteasers</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:xtype" sv:type="String">
+        <sv:value>HST.Item</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="imageTeasers">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:containeritemcomponent</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentclassname" sv:type="String">
+        <sv:value>nl.hsleiden.components.catalog.ImageTeasers</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:iconpath" sv:type="String">
+        <sv:value>images/catalog/image-teaser-icon.png</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:label" sv:type="String">
+        <sv:value>Afbeelding Teasers</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
+      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
+      <sv:property sv:name="hst:template" sv:type="String">
+        <sv:value>catalog.imageteasers</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:xtype" sv:type="String">
+        <sv:value>HST.Item</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="textTeasers">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:containeritemcomponent</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentclassname" sv:type="String">
+        <sv:value>nl.hsleiden.components.catalog.TextTeasers</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:iconpath" sv:type="String">
+        <sv:value>images/catalog/text-teaser-icon.png</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:label" sv:type="String">
+        <sv:value>Text Teasers</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
+      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
+      <sv:property sv:name="hst:template" sv:type="String">
+        <sv:value>catalog.textteasers</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:xtype" sv:type="String">
+        <sv:value>HST.Item</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="internalLinksTeasers">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:containeritemcomponent</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentclassname" sv:type="String">
+        <sv:value>nl.hsleiden.components.catalog.InternalLinksTeasers</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:iconpath" sv:type="String">
+        <sv:value>images/catalog/internal-links-icon.png</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:label" sv:type="String">
+        <sv:value>Interne Links Teasers</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
+      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
+      <sv:property sv:name="hst:template" sv:type="String">
+        <sv:value>catalog.internallinksteasers</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:xtype" sv:type="String">
+        <sv:value>HST.Item</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="relatedNews">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:containeritemcomponent</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentclassname" sv:type="String">
+        <sv:value>nl.hsleiden.components.catalog.RelatedNews</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:iconpath" sv:type="String">
+        <sv:value>images/catalog/catalog-list.png</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:label" sv:type="String">
+        <sv:value>Gerelateerde Nieuws</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
+      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
+      <sv:property sv:name="hst:template" sv:type="String">
+        <sv:value>catalog.relatednews</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:xtype" sv:type="String">
+        <sv:value>HST.Item</sv:value>
+      </sv:property>
+    </sv:node>
     <sv:node sv:name="disqus">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:containeritemcomponent</sv:value>
@@ -123,28 +255,6 @@
         <sv:value>HST.Item</sv:value>
       </sv:property>
     </sv:node>
-    <sv:node sv:name="contactPersons">
-      <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hst:containeritemcomponent</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:componentclassname" sv:type="String">
-        <sv:value>nl.hsleiden.components.catalog.ContactPersons</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:iconpath" sv:type="String">
-        <sv:value>images/catalog/contact-icon.png</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:label" sv:type="String">
-        <sv:value>Contactpersonen</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
-      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
-      <sv:property sv:name="hst:template" sv:type="String">
-        <sv:value>catalog.contactpersons</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:xtype" sv:type="String">
-        <sv:value>HST.Item</sv:value>
-      </sv:property>
-    </sv:node>
     <sv:node sv:name="calendar">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:containeritemcomponent</sv:value>
@@ -170,67 +280,58 @@
         <sv:value>HST.Item</sv:value>
       </sv:property>
     </sv:node>
-    <sv:node sv:name="companyProfile">
+    <sv:node sv:name="contactPersons">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:containeritemcomponent</sv:value>
       </sv:property>
       <sv:property sv:name="hst:componentclassname" sv:type="String">
-        <sv:value>nl.hsleiden.components.catalog.Linkedin</sv:value>
+        <sv:value>nl.hsleiden.components.catalog.ContactPersons</sv:value>
       </sv:property>
       <sv:property sv:name="hst:iconpath" sv:type="String">
-        <sv:value>images/catalog/linkedin.png</sv:value>
+        <sv:value>images/catalog/contact-icon.png</sv:value>
       </sv:property>
       <sv:property sv:name="hst:label" sv:type="String">
-        <sv:value>Company profile</sv:value>
+        <sv:value>Contactpersonen</sv:value>
       </sv:property>
       <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
       <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
       <sv:property sv:name="hst:template" sv:type="String">
-        <sv:value>catalog.companyProfile</sv:value>
+        <sv:value>catalog.contactpersons</sv:value>
       </sv:property>
       <sv:property sv:name="hst:xtype" sv:type="String">
         <sv:value>HST.Item</sv:value>
       </sv:property>
     </sv:node>
-    <sv:node sv:name="relatedNews">
+    <sv:node sv:name="publicImages">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:containeritemcomponent</sv:value>
       </sv:property>
-      <sv:property sv:name="hst:componentclassname" sv:type="String">
-        <sv:value>nl.hsleiden.components.catalog.RelatedNews</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:iconpath" sv:type="String">
-        <sv:value>images/catalog/catalog-list.png</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:label" sv:type="String">
-        <sv:value>Gerelateerde Nieuws</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
-      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
-      <sv:property sv:name="hst:template" sv:type="String">
-        <sv:value>catalog.relatednews</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:xtype" sv:type="String">
-        <sv:value>HST.Item</sv:value>
-      </sv:property>
-    </sv:node>
-    <sv:node sv:name="companyInsider">
-      <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hst:containeritemcomponent</sv:value>
+      <sv:property sv:name="hst:asyncmode" sv:type="String">
+        <sv:value>true</sv:value>
       </sv:property>
       <sv:property sv:name="hst:componentclassname" sv:type="String">
-        <sv:value>nl.hsleiden.components.catalog.Linkedin</sv:value>
+        <sv:value>nl.hsleiden.components.catalog.PublicImages</sv:value>
       </sv:property>
       <sv:property sv:name="hst:iconpath" sv:type="String">
-        <sv:value>images/catalog/linkedin.png</sv:value>
+        <sv:value>images/catalog/public-images.png</sv:value>
       </sv:property>
       <sv:property sv:name="hst:label" sv:type="String">
-        <sv:value>Company Insider</sv:value>
+        <sv:value>Beldbank openbaar</sv:value>
       </sv:property>
-      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
-      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
+      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+        <sv:value>tryToUseMixin</sv:value>
+        <sv:value>contentBeanPath</sv:value>
+        <sv:value>imagesPerRow</sv:value>
+        <sv:value>size</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+        <sv:value>on</sv:value>
+        <sv:value>/content/gallery/hsl/beeldbank-openbaar</sv:value>
+        <sv:value>2</sv:value>
+        <sv:value>0</sv:value>
+      </sv:property>
       <sv:property sv:name="hst:template" sv:type="String">
-        <sv:value>catalog.companyInsider</sv:value>
+        <sv:value>catalog.publicimages</sv:value>
       </sv:property>
       <sv:property sv:name="hst:xtype" sv:type="String">
         <sv:value>HST.Item</sv:value>
@@ -273,146 +374,85 @@
         <sv:value>HST.Item</sv:value>
       </sv:property>
     </sv:node>
-    <sv:node sv:name="publicImages">
+    <sv:node sv:name="authorinfo">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:containeritemcomponent</sv:value>
       </sv:property>
-      <sv:property sv:name="hst:asyncmode" sv:type="String">
-        <sv:value>true</sv:value>
-      </sv:property>
       <sv:property sv:name="hst:componentclassname" sv:type="String">
-        <sv:value>nl.hsleiden.components.catalog.PublicImages</sv:value>
+        <sv:value>nl.hsleiden.components.catalog.BlogAuthor</sv:value>
       </sv:property>
       <sv:property sv:name="hst:iconpath" sv:type="String">
-        <sv:value>images/catalog/public-images.png</sv:value>
+        <sv:value>images/component-icon-author.png</sv:value>
       </sv:property>
       <sv:property sv:name="hst:label" sv:type="String">
-        <sv:value>Beldbank openbaar</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
-        <sv:value>tryToUseMixin</sv:value>
-        <sv:value>contentBeanPath</sv:value>
-        <sv:value>imagesPerRow</sv:value>
-        <sv:value>size</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
-        <sv:value>on</sv:value>
-        <sv:value>/content/gallery/hsl/beeldbank-openbaar</sv:value>
-        <sv:value>2</sv:value>
-        <sv:value>0</sv:value>
+        <sv:value>Auteur informatie</sv:value>
       </sv:property>
       <sv:property sv:name="hst:template" sv:type="String">
-        <sv:value>catalog.publicimages</sv:value>
+        <sv:value>essentials.author</sv:value>
       </sv:property>
       <sv:property sv:name="hst:xtype" sv:type="String">
         <sv:value>HST.Item</sv:value>
       </sv:property>
     </sv:node>
-    <sv:node sv:name="externalLinksTeasers">
+    <sv:node sv:name="blogauthorposts">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:containeritemcomponent</sv:value>
       </sv:property>
       <sv:property sv:name="hst:componentclassname" sv:type="String">
-        <sv:value>nl.hsleiden.components.catalog.ExternalLinksTeasers</sv:value>
+        <sv:value>org.onehippo.cms7.essentials.components.EssentialsBlogAuthorPostsComponent</sv:value>
       </sv:property>
       <sv:property sv:name="hst:iconpath" sv:type="String">
-        <sv:value>images/catalog/external-links-icon.png</sv:value>
+        <sv:value>images/catalog/blogposts-by-author.png</sv:value>
       </sv:property>
       <sv:property sv:name="hst:label" sv:type="String">
-        <sv:value>Externe Links Teasers</sv:value>
+        <sv:value>Blog posts by author</sv:value>
       </sv:property>
-      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
-      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
       <sv:property sv:name="hst:template" sv:type="String">
-        <sv:value>catalog.externallinksteasers</sv:value>
+        <sv:value>blog-author-posts</sv:value>
       </sv:property>
       <sv:property sv:name="hst:xtype" sv:type="String">
         <sv:value>HST.Item</sv:value>
       </sv:property>
     </sv:node>
-    <sv:node sv:name="teasers">
+    <sv:node sv:name="companyProfile">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:containeritemcomponent</sv:value>
       </sv:property>
       <sv:property sv:name="hst:componentclassname" sv:type="String">
-        <sv:value>nl.hsleiden.components.catalog.HeadTeasers</sv:value>
+        <sv:value>nl.hsleiden.components.catalog.Linkedin</sv:value>
       </sv:property>
       <sv:property sv:name="hst:iconpath" sv:type="String">
-        <sv:value>images/catalog/teaser-icon.jpg</sv:value>
+        <sv:value>images/catalog/linkedin.png</sv:value>
       </sv:property>
       <sv:property sv:name="hst:label" sv:type="String">
-        <sv:value>Head Teasers</sv:value>
+        <sv:value>Company profile</sv:value>
       </sv:property>
       <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
       <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
       <sv:property sv:name="hst:template" sv:type="String">
-        <sv:value>catalog.headteasers</sv:value>
+        <sv:value>catalog.companyProfile</sv:value>
       </sv:property>
       <sv:property sv:name="hst:xtype" sv:type="String">
         <sv:value>HST.Item</sv:value>
       </sv:property>
     </sv:node>
-    <sv:node sv:name="textTeasers">
+    <sv:node sv:name="companyInsider">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:containeritemcomponent</sv:value>
       </sv:property>
       <sv:property sv:name="hst:componentclassname" sv:type="String">
-        <sv:value>nl.hsleiden.components.catalog.TextTeasers</sv:value>
+        <sv:value>nl.hsleiden.components.catalog.Linkedin</sv:value>
       </sv:property>
       <sv:property sv:name="hst:iconpath" sv:type="String">
-        <sv:value>images/catalog/text-teaser-icon.png</sv:value>
+        <sv:value>images/catalog/linkedin.png</sv:value>
       </sv:property>
       <sv:property sv:name="hst:label" sv:type="String">
-        <sv:value>Text Teasers</sv:value>
+        <sv:value>Company Insider</sv:value>
       </sv:property>
       <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
       <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
       <sv:property sv:name="hst:template" sv:type="String">
-        <sv:value>catalog.textteasers</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:xtype" sv:type="String">
-        <sv:value>HST.Item</sv:value>
-      </sv:property>
-    </sv:node>
-    <sv:node sv:name="internalLinksTeasers">
-      <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hst:containeritemcomponent</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:componentclassname" sv:type="String">
-        <sv:value>nl.hsleiden.components.catalog.InternalLinksTeasers</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:iconpath" sv:type="String">
-        <sv:value>images/catalog/internal-links-icon.png</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:label" sv:type="String">
-        <sv:value>Interne Links Teasers</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
-      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
-      <sv:property sv:name="hst:template" sv:type="String">
-        <sv:value>catalog.internallinksteasers</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:xtype" sv:type="String">
-        <sv:value>HST.Item</sv:value>
-      </sv:property>
-    </sv:node>
-    <sv:node sv:name="imageTeasers">
-      <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hst:containeritemcomponent</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:componentclassname" sv:type="String">
-        <sv:value>nl.hsleiden.components.catalog.ImageTeasers</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:iconpath" sv:type="String">
-        <sv:value>images/catalog/teaser-icon.jpg</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:label" sv:type="String">
-        <sv:value>Afbeelding Teasers</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
-      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
-      <sv:property sv:name="hst:template" sv:type="String">
-        <sv:value>catalog.imageteasers</sv:value>
+        <sv:value>catalog.companyInsider</sv:value>
       </sv:property>
       <sv:property sv:name="hst:xtype" sv:type="String">
         <sv:value>HST.Item</sv:value>
