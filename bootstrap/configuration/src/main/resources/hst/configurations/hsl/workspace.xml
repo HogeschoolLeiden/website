@@ -731,38 +731,33 @@
         <sv:property sv:name="hst:xtype" sv:type="String">
           <sv:value>HST.vBox</sv:value>
         </sv:property>
-        <sv:node sv:name="calendar">
+        <sv:node sv:name="teasers">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>hst:containeritemcomponent</sv:value>
           </sv:property>
           <sv:property sv:name="hst:componentclassname" sv:type="String">
-            <sv:value>nl.hsleiden.components.catalog.EventCalendar</sv:value>
+            <sv:value>nl.hsleiden.components.catalog.HeadTeasers</sv:value>
           </sv:property>
           <sv:property sv:name="hst:iconpath" sv:type="String">
-            <sv:value>images/catalog/events-calendar-icon.png</sv:value>
+            <sv:value>images/catalog/teaser-icon.jpg</sv:value>
           </sv:property>
           <sv:property sv:name="hst:label" sv:type="String">
-            <sv:value>Evenementen Kalender</sv:value>
+            <sv:value>Teasers</sv:value>
           </sv:property>
           <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
-            <sv:value>title</sv:value>
-            <sv:value>scope</sv:value>
-            <sv:value>themaFilter</sv:value>
-            <sv:value>overFilter</sv:value>
+            <sv:value>thirdTeaser</sv:value>
             <sv:value>tryToUseMixin</sv:value>
+            <sv:value>firstTeaser</sv:value>
+            <sv:value>secondTeaser</sv:value>
           </sv:property>
           <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
-            <sv:value>Events Calendar</sv:value>
-            <sv:value>/content/documents/hsl/pages/actueel/evenementen</sv:value>
-            <sv:value>off</sv:value>
-            <sv:value>off</sv:value>
-            <sv:value>off</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:resourcetemplate" sv:type="String">
-            <sv:value>blank</sv:value>
+            <sv:value/>
+            <sv:value>on</sv:value>
+            <sv:value/>
+            <sv:value/>
           </sv:property>
           <sv:property sv:name="hst:template" sv:type="String">
-            <sv:value>catalog.calendar</sv:value>
+            <sv:value>catalog.headteasers</sv:value>
           </sv:property>
           <sv:property sv:name="hst:xtype" sv:type="String">
             <sv:value>HST.Item</sv:value>
@@ -800,8 +795,8 @@
             <sv:value>thirdContact</sv:value>
           </sv:property>
           <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+            <sv:value/>
             <sv:value>/content/documents/hsl/componenten/personen/first-contact-person</sv:value>
-            <sv:value>/content/documents/hsl/componenten/personen/second-contact-person</sv:value>
             <sv:value>off</sv:value>
             <sv:value>Contacts</sv:value>
             <sv:value/>
@@ -2212,6 +2207,49 @@
       <sv:node sv:name="bottom-container">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hst:containercomponent</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:xtype" sv:type="String">
+          <sv:value>HST.vBox</sv:value>
+        </sv:property>
+      </sv:node>
+    </sv:node>
+    <sv:node sv:name="onderwijslandingpage">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:containercomponentfolder</sv:value>
+      </sv:property>
+      <sv:node sv:name="contentTop">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:containercomponent</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:xtype" sv:type="String">
+          <sv:value>HST.vBox</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="contentBottom">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:containercomponent</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:xtype" sv:type="String">
+          <sv:value>HST.vBox</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="rightTop">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:containercomponent</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:lastmodified" sv:type="Date">
+          <sv:value>2014-07-30T16:20:37.684+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:xtype" sv:type="String">
+          <sv:value>HST.vBox</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="rightBottom">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:containercomponent</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:lastmodified" sv:type="Date">
+          <sv:value>2014-07-30T16:20:37.684+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hst:xtype" sv:type="String">
           <sv:value>HST.vBox</sv:value>

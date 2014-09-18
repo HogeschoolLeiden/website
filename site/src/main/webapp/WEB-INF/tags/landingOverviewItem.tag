@@ -11,48 +11,34 @@
 
 <hst:setBundle basename="nl.hsleiden.sharebox.Messages" />
 
-<div class="overviewItem">
-  <h2><c:out value="${item.overviewBean.title}"/></h2>
+<section class="col-sm-6 col-md-3 area">
+  <h1><span class="truncate"><c:out value="${item.overviewBean.title}"/></span></h1>
   <hst:link var="link" hippobean="${item.highLighted}" />
-  
-  <a class="highlighted link" href="${link}" title="${item.highLighted.title}">
-     <img src="<hst:link hippobean="${item.highLighted.headerImage.paragraphImage }" />" 
-          alt="<c:out value="${item.highLighted.title }" escapeXml="true" />" 
-          title="<c:out value="${item.highLighted.title }" escapeXml="true" />" />
-  </a>
-  
-  
-  <div class="title">
+  <article class="article">
     <a href="${link}" title="${item.highLighted.title}">
-     <span>
-       <c:out value="${item.highLighted.title}"/>
-     </span>  
+       <h2><c:out value="${item.highLighted.title}"/></h2>
+        
+       <tag:renderDate document="${item.highLighted}" dateClass="datum start large"></tag:renderDate>
+        
+       <figure>
+         <img  class="img-responsive"
+               src="<hst:link hippobean="${item.highLighted.headerImage.paragraphImage }" />" 
+               alt="<c:out value="${item.highLighted.title }" escapeXml="true" />" 
+               title="<c:out value="${item.highLighted.title }" escapeXml="true" />" />
+       </figure>
+        
+       <p><c:out value="${item.highLighted.introduction }"/></p>
     </a>
-  </div>
-  
-  <div class="hr"><hr /></div>
-  
-  <c:if test="${not empty item.highLighted.releaseDate.time }">
-    <p class="highLighted introduction">
-      <fmt:formatDate value="${item.highLighted.releaseDate.time}" type="date" dateStyle="long"/>
-    </p>
-  </c:if>
- 
-  <p class="highLighted introduction">
-    <c:out value="${item.highLighted.introduction }" />
-  </p>
-  
-  <div class="hr"><hr /></div>
- 
-  <c:forEach items="${item.menuItem.childMenuItems}" var="item">
+  </article>
+          
+  <ul>
+     <c:forEach items="${item.menuItem.childMenuItems}" var="item">
         <opw:menuitem siteMenuItem="${item}" depth="0"
           expandedClass="current arrow-down"
           selectedClass="active arrow-down"
           unexpandedClass="unexpanded arrow-side" leafClass="arrow-side" 
           recurseOnlyExpanded="false"/>
-      </c:forEach>
-  
-  <div class="hr"><hr /></div>
-    
-</div>
+     </c:forEach>
+  </ul>
+</section>
 

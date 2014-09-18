@@ -16,28 +16,28 @@
   <c:otherwise>
     <c:choose>
       <c:when test="${tag:getSitemapConfigParameter(pageContext.request, 'columnNr') eq '3' }">
-        <div class="three column container">
+
           <c:forEach items="${items }" var="item" varStatus="loop">
-            <c:if test="${loop.index<3}">
-              <div ${loop.index==0 ? 'class="oneThird first"': 'class="oneThird"'}>
+            <c:if test="${loop.index < 3}">
+                <c:if test="${loop.index eq 2}">
+                  <div class="divider visible-sm"></div>
+                </c:if>
                 <tag:landingOverviewItem item="${item}"/>
-              </div>
             </c:if>
           </c:forEach>
-          <div class="clear"></div>
-        </div>
+
       </c:when>
       <c:when test="${tag:getSitemapConfigParameter(pageContext.request, 'columnNr') eq '4' }">
-        <div class="four column container">
-          <c:forEach items="${items }" var="item" varStatus="loop">
-            <c:if test="${loop.index<4}">
-              <div ${loop.index==0 ? 'class="oneFourth first"': 'class="oneFourth"'}>
-                <tag:landingOverviewItem item="${item}"/>
-              </div>
+        
+        <c:forEach items="${items }" var="item" varStatus="loop">
+          <c:if test="${loop.index < 4}">
+            <c:if test="${loop.index eq 2}">
+              <div class="divider visible-sm"></div>
             </c:if>
-          </c:forEach>
-          <div class="clear"></div>
-        </div>
+            <tag:landingOverviewItem item="${item}"/>
+          </c:if>
+        </c:forEach>
+        
       </c:when>
       <c:otherwise></c:otherwise>
     </c:choose>
