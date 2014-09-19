@@ -14,8 +14,8 @@
     <sv:value>new-article-page</sv:value>
     <sv:value>new-event-page</sv:value>
     <sv:value>new-news-page</sv:value>
+    <sv:value>new-pers-page</sv:value>
     <sv:value>new-lectorat-folder</sv:value>
-    <sv:value>new-contact-person</sv:value>
   </sv:property>
   <sv:property sv:name="hippotranslation:id" sv:type="String">
     <sv:value/>
@@ -175,11 +175,11 @@
           <sv:property sv:name="hsl:from" sv:type="String">
             <sv:value>HSLeidenNL</sv:value>
           </sv:property>
-          <sv:property sv:name="hsl:limit" sv:type="Long">
-            <sv:value>3</sv:value>
-          </sv:property>
           <sv:property sv:name="hsl:horizontal" sv:type="Boolean">
             <sv:value>true</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:limit" sv:type="Long">
+            <sv:value>3</sv:value>
           </sv:property>
           <sv:property sv:name="hsl:query" sv:type="String">
             <sv:value/>
@@ -435,11 +435,11 @@
           <sv:property sv:name="hsl:from" sv:type="String">
             <sv:value>HSLeidenNL</sv:value>
           </sv:property>
+          <sv:property sv:name="hsl:horizontal" sv:type="Boolean">
+            <sv:value>true</sv:value>
+          </sv:property>
           <sv:property sv:name="hsl:limit" sv:type="Long">
             <sv:value>3</sv:value>
-          </sv:property>
-           <sv:property sv:name="hsl:horizontal" sv:type="Boolean">
-            <sv:value>true</sv:value>
           </sv:property>
           <sv:property sv:name="hsl:query" sv:type="String">
             <sv:value/>
@@ -557,9 +557,9 @@
       <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
         <sv:value>mix:referenceable</sv:value>
         <sv:value>hsl:ContactPersonsMixin</sv:value>
-        <sv:value>hsl:InternalLinksTeasersMixin</sv:value>
-        <sv:value>hsl:HeadTeasersMixin</sv:value>
         <sv:value>hsl:TwitterMixin</sv:value>
+        <sv:value>hsl:HeadTeasersMixin</sv:value>
+        <sv:value>hsl:InternalLinksTeasersMixin</sv:value>
         <sv:value>mix:versionable</sv:value>
         <sv:value>hsl:TextTeasersMixin</sv:value>
       </sv:property>
@@ -686,11 +686,11 @@
           <sv:property sv:name="hsl:from" sv:type="String">
             <sv:value>HSLeidenNL</sv:value>
           </sv:property>
-          <sv:property sv:name="hsl:limit" sv:type="Long">
-            <sv:value>3</sv:value>
-          </sv:property>
           <sv:property sv:name="hsl:horizontal" sv:type="Boolean">
             <sv:value>true</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:limit" sv:type="Long">
+            <sv:value>3</sv:value>
           </sv:property>
           <sv:property sv:name="hsl:query" sv:type="String">
             <sv:value/>
@@ -937,8 +937,8 @@
       <sv:value>new-article-page</sv:value>
       <sv:value>new-event-page</sv:value>
       <sv:value>new-news-page</sv:value>
+      <sv:value>new-pers-page</sv:value>
       <sv:value>new-lectorat-folder</sv:value>
-      <sv:value>new-contact-person</sv:value>
     </sv:property>
     <sv:property sv:name="hippotranslation:id" sv:type="String">
       <sv:value>0f1451b1-e0b4-4922-a971-cf5ffe59177d</sv:value>
@@ -4007,8 +4007,7 @@
       <sv:value>7c5ed2eb-8a01-428f-bcfe-cee4bcac8ce8</sv:value>
     </sv:property>
     <sv:property sv:name="hippostd:foldertype" sv:type="String" sv:multiple="true">
-      <sv:value>new-translated-folder</sv:value>
-      <sv:value>new-document</sv:value>
+      <sv:value>new-article-page</sv:value>
     </sv:property>
     <sv:property sv:name="hippotranslation:id" sv:type="String">
       <sv:value>c5073e8f-cf94-48ec-b34d-1c2e61d91199</sv:value>
