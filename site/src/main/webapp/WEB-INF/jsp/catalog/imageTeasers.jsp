@@ -43,8 +43,10 @@
                  <img src="<hst:link hippobean="${item.image.teaserImage }" />" 
                       alt="<c:out value="${item.image.alt }" escapeXml="true" />" />
               </div>
-              <img class="icon imageTeaser" src="<hst:link hippobean="${item.icon.original }" />" 
-                   alt="<c:out value="${item.icon.alt }" escapeXml="true" />" />
+              <c:if test="${not empty item.icon }">
+                <img class="icon imageTeaser" src="<hst:link hippobean="${item.icon.original }" />" 
+                     alt="<c:out value="${item.icon.alt }" escapeXml="true" />" />
+              </c:if>
               <span class="btn"><c:out value="${item.externallink.linkTitle }" escapeXml="true" /></span>
           </a>
         </c:when>
@@ -57,8 +59,10 @@
                  <img src="<hst:link hippobean="${item.image.teaserImage }" />" 
                       alt="<c:out value="${item.image.alt }" escapeXml="true" />" />
               </div>
-              <img class="icon imageTeaser" src="<hst:link hippobean="${item.icon.paragraphImage }" />" 
-                   alt="<c:out value="${item.icon.alt }" escapeXml="true" />" />
+              <c:if test="${not empty item.icon }">
+                <img class="icon imageTeaser" src="<hst:link hippobean="${item.icon.paragraphImage }" />" 
+                     alt="<c:out value="${item.icon.alt }" escapeXml="true" />" />
+              </c:if>
               <span class="btn"><c:out value="${item.internallink.linkTitle }" escapeXml="true" /></span>
           </a>
         </c:when>
@@ -70,8 +74,10 @@
                   alt="<c:out value="${item.image.alt }" escapeXml="true" />" 
                   title="<c:out value="${item.image.alt }" escapeXml="true" />" />
           </div>
-          <img class="icon imageTeaser" src="<hst:link hippobean="${item.icon.paragraphImage }" />" 
+          <c:if test="${not empty item.icon }">
+            <img class="icon imageTeaser" src="<hst:link hippobean="${item.icon.paragraphImage }" />" 
                alt="<c:out value="${item.icon.alt }" escapeXml="true" />" />
+          </c:if>  
         </c:otherwise>
       </c:choose>
       
