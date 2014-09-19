@@ -105,7 +105,5 @@
     </c:if> 
           
   </c:if>
-  
-  <hst:include ref="leftBottom" />
-  
+    
 </div>

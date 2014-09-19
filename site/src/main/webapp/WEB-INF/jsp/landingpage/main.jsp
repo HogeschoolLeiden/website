@@ -12,6 +12,9 @@
 <%-- <hst:include ref="contentTop" /> --%>
       
   <div class="container">
+    
+    <%-- <hst:include ref="top-container" />      --%>
+    
     <div class="row">
       
       <hst:cmseditlink hippobean="${document}" />
@@ -35,8 +38,9 @@
         </c:otherwise>
       </c:choose>
             
-      <hst:include ref="contentBottom" />
-      
     </div>
+    
+    <hst:include ref="contentBottom" />
+    
   </div>
 </div>

@@ -10,7 +10,7 @@
 <hst:setBundle basename="nl.hsleiden.general.Messages"/>
 
 <div id="main" role="main" class="">
-    
+  
   <c:if test="${tag:isSubclassOfWebPage(document)}">
     <tag:headerImage document="${document}"/>
   </c:if>
@@ -20,23 +20,22 @@
   <div class="row">
 
     <c:if test="${pageContext.request.requestContext.contentBean['class'].name == 'hslbeans.OverviewPage'}">
-        <tag:highlightedItem highLightedItem="${document.highLightedItem }"/>
-      </c:if>
+      <tag:highlightedItem highLightedItem="${document.highLightedItem }"/>
+    </c:if>
        
-      <c:choose>
-        <c:when test="${empty document}">
-          <tag:pagenotfound />
-        </c:when>
-        <c:otherwise>
-          <hst:include ref="content"/>
-        </c:otherwise>
-      </c:choose>
+    <c:choose>
+      <c:when test="${empty document}">
+        <tag:pagenotfound />
+      </c:when>
+      <c:otherwise>
+        <hst:include ref="content"/>
+      </c:otherwise>
+    </c:choose>
 
-    <hst:include ref="leftTop" /> 
     <hst:include ref="left"/>
-    <hst:include ref="leftBottom" />
 
   </div>
   </div>
+  
   <hst:include ref="bottom-container" />
 </div>

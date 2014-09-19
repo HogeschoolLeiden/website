@@ -9,46 +9,43 @@
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 <%@ taglib prefix="opw" uri="http://open-web.nl/hippo/prototype"%>
 
-  <c:set var="mainClass">
-    <c:choose>
-      <c:when test="${tag:isSubclassOfWebPage(document) and 
+<c:set var="mainClass">
+  <c:choose>
+    <c:when test="${tag:isSubclassOfWebPage(document) and 
               hst:isReadable(document, 'headerImage') and 
               not empty document.headerImage}">
         <c:out value="detail"/>
-      </c:when>
-      <c:otherwise>
+    </c:when>
+    <c:otherwise>
         <c:out value="landing"/>
-      </c:otherwise>
-    </c:choose>
-  </c:set>
+    </c:otherwise>
+  </c:choose>
+</c:set>
 
-  <div id="main" role="main" class="${mainClass}"> 
+<div id="main" role="main" class="${mainClass}"> 
     
-    <tag:renderBackLink sitemapRefId="${paramInfo.overviewSitemapRefId}"/>
+  <tag:renderBackLink sitemapRefId="${paramInfo.overviewSitemapRefId}"/>
           
-    <tag:headerImage document="${document}"/>
+  <tag:headerImage document="${document}"/>
         
+  <div class="container">
     <%-- <hst:include ref="top-container" />      --%>
-    
-    <div class="container">
-      <div class="row">
+    <div class="row">
               
-        <c:choose>
-          <c:when test="${empty document}">
-            <tag:pagenotfound />
-          </c:when>
-          <c:otherwise>
-            <hst:include ref="content"/>
-          </c:otherwise>
-        </c:choose>
-             
-        <hst:include ref="leftTop" />
-        <hst:include ref="left" />
-        <hst:include ref="leftBottom" />
-    
-      </div>
+      <c:choose>
+        <c:when test="${empty document}">
+           <tag:pagenotfound />
+        </c:when>
+        <c:otherwise>
+          <hst:include ref="content"/>
+        </c:otherwise>
+      </c:choose>
+      
+      <hst:include ref="left" />
+      
     </div>
-  
     <hst:include ref="bottom-container" />
-  
   </div>
+  
+  
+</div>

@@ -28,9 +28,6 @@
     <script type="text/javascript" src="<hst:link path="/js/jquery.prettyPhoto.js"/>" charset="utf-8"></script>
   </hst:headContribution>
 
-<div class="container">
-<div class="row">
-<article class="col-md-9 detail-content">  
   <div class="images${model.info.imagesPerRow}">
   
     <c:if test="${not empty model.hasParentFolder and model.hasParentFolder }">
@@ -97,9 +94,5 @@
         </c:otherwise>
       </c:choose>
   </div>
-
-  </article>
-</div>
-</div>
   
 </c:if>
