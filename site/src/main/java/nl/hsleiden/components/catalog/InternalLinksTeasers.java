@@ -54,7 +54,7 @@ public class InternalLinksTeasers extends AjaxEnabledComponent {
         if (!items.isEmpty()) {
             model.put(Attributes.ITEMS, items);
         } else {
-            request.setAttribute(WidgetConstants.WEB_MASTER_MESSAGE, "webmaster.noteasers.message");
+            request.setAttribute(WidgetConstants.WEB_MASTER_MESSAGE, "webmaster.no.intlinks.teasers.message");
         }
     }
 
