@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="searchpagecommon">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>hst:component</sv:value>
+  </sv:property>
+  <sv:property sv:name="hst:referencecomponent" sv:type="String">
+    <sv:value>hst:pages/standardcommon</sv:value>
+  </sv:property>
+  <sv:node sv:name="main">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:component</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:componentclassname" sv:type="String">
+      <sv:value>nl.openweb.hippo.components.ElasticSearchPage</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:parameternames" sv:type="String"
+      sv:multiple="true">
+      <sv:value>selectedFacets</sv:value>
+      <sv:value>facets</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:parametervalues" sv:type="String"
+      sv:multiple="true">
+      <sv:value>${selectedFacets}</sv:value>
+      <sv:value>{"types":["NewsPage","WebPage"],"scope":"pages","facets":[{"title":"Subject","term":"subjecttags"},{"title":"Thema","term":"thematags"}],"suggestions":{"ngramFileds":["nGram"],"numberOfDocuments":5,"maxSuggestions":10}}</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:resourcetemplate" sv:type="String">
+      <sv:value>blank</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:template" sv:type="String">
+      <sv:value>search.main</sv:value>
+    </sv:property>
+  </sv:node>
+</sv:node>
