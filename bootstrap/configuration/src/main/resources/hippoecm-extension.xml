@@ -2555,6 +2555,20 @@
       <sv:value>/hst:hst/hst:configurations/hsl/hst:pages</sv:value>
     </sv:property>
   </sv:node>
+  <sv:node sv:name="website-hst-hst-hst-configurations-hsl-hst-pages-bachelorpage">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hippo:initializeitem</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:sequence" sv:type="Double">
+      <sv:value>30057.0</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:contentresource" sv:type="String">
+      <sv:value>hst/configurations/hsl/pages/bachelorpage.xml</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:contentroot" sv:type="String">
+      <sv:value>/hst:hst/hst:configurations/hsl/hst:pages</sv:value>
+    </sv:property>
+  </sv:node>
   <sv:node sv:name="website-hst-hst-hst-configurations-hsl-hst-abstractpages">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hippo:initializeitem</sv:value>
@@ -2742,7 +2756,24 @@
       <sv:value>true</sv:value> 
     </sv:property>
   </sv:node>
-<sv:node sv:name="website-hst-hst-hst-configurations-hsl-hst-pages-educationpage">
+  <sv:node sv:name="website-hippo-namespaces-hsl-bachelorpage">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hippo:initializeitem</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:sequence" sv:type="Double">
+      <sv:value>30052.0</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:contentresource" sv:type="String">
+      <sv:value>namespaces/hsl/pages/bachelorpage.xml</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:contentroot" sv:type="String">
+      <sv:value>/hippo:namespaces/hsl</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:reloadonstartup" sv:type="Boolean"> 
+      <sv:value>true</sv:value> 
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="website-hst-hst-hst-configurations-hsl-hst-pages-educationpage">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hippo:initializeitem</sv:value>
     </sv:property>
@@ -2784,9 +2815,7 @@
       <sv:value>/hst:hst/hst:configurations/hsl/hst:pages</sv:value>
     </sv:property>
   </sv:node>
-
-  
-<sv:node sv:name="website-hst-hst-hst-configurations-common-hst-components-education-navigation">
+  <sv:node sv:name="website-hst-hst-hst-configurations-common-hst-components-education-navigation">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hippo:initializeitem</sv:value>
     </sv:property>
@@ -2800,7 +2829,7 @@
       <sv:value>/hst:hst/hst:configurations/common/hst:components</sv:value>
     </sv:property>
   </sv:node>
-<sv:node sv:name="website-hst-hst-hst-configurations-hsl-hst-pages-educationeventpage">
+  <sv:node sv:name="website-hst-hst-hst-configurations-hsl-hst-pages-educationeventpage">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hippo:initializeitem</sv:value>
     </sv:property>
@@ -2851,6 +2880,20 @@
     </sv:property>
     <sv:property sv:name="hippo:contentresource" sv:type="String">
       <sv:value>hst/configurations/common/pages/educationarticlepagecommon.xml</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:contentroot" sv:type="String">
+      <sv:value>/hst:hst/hst:configurations/common/hst:pages</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="website-hst-hst-hst-configurations-common-hst-pages-bachelorpagecommon">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hippo:initializeitem</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:sequence" sv:type="Double">
+      <sv:value>30101.0</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:contentresource" sv:type="String">
+      <sv:value>hst/configurations/common/pages/bachelorpagecommon.xml</sv:value>
     </sv:property>
     <sv:property sv:name="hippo:contentroot" sv:type="String">
       <sv:value>/hst:hst/hst:configurations/common/hst:pages</sv:value>
@@ -3770,6 +3813,20 @@
     </sv:property>
     <sv:property sv:name="hippo:contentresource" sv:type="String">
       <sv:value>hst/configurations/hsl/workspace/actueellandingpage.xml</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:contentroot" sv:type="String">
+      <sv:value>/hst:hst/hst:configurations/hsl/hst:workspace/hst:containers</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="website-hst-configurations-hsl-workspace-contaires-bachelorpage">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hippo:initializeitem</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:sequence" sv:type="Double">
+      <sv:value>30057.0</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:contentresource" sv:type="String">
+      <sv:value>hst/configurations/hsl/workspace/bachelorpage.xml</sv:value>
     </sv:property>
     <sv:property sv:name="hippo:contentroot" sv:type="String">
       <sv:value>/hst:hst/hst:configurations/hsl/hst:workspace/hst:containers</sv:value>
