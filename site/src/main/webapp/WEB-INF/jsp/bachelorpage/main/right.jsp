@@ -11,9 +11,10 @@
 
 
 <section class="blok colorbg lichtpaars info">
-  
-  <%-- should use an icon instead of time --%>
-  <time datetime="2014-06-11" class="datum large">16<span>okt</span></time>
+    
+  <img class="datum large" src="<hst:link hippobean="${document.icon.listImageMedium}"/>"
+       alt="<c:out value="${document.icon.alt}"/>"
+       title="<c:out value="${document.icon.alt}"/>" />
   
   <c:if test="${fn:length(document.infoLines) > 0 }">
     <ul>
