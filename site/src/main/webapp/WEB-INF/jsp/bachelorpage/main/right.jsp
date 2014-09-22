@@ -9,4 +9,28 @@
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 <%@ taglib prefix='opw' uri="http://open-web.nl/hippo/prototype"%>
 
-<p>this is the right column that should be included from content jsp template</p>
+
+<section class="blok colorbg lichtpaars info">
+  
+  <%-- should use an icon instead of time --%>
+  <time datetime="2014-06-11" class="datum large">16<span>okt</span></time>
+  
+  <c:if test="${fn:length(document.infoLines) > 0 }">
+    <ul>
+      <c:forEach items="${document.infoLines}" var="item">
+        <li>
+          <img src="<hst:link hippobean="${item.iconLine.original}"/>"
+               alt="<c:out value="${item.iconLine.alt}"/>"
+               title="<c:out value="${item.iconLine.alt}"/>" />
+          <span class="details"><c:out value="${item.infoLine }"/></span>
+        </li>
+      </c:forEach>
+    </ul>
+  </c:if>
+  
+  <p><c:out value="${document.infoText}"/></p>
+  <c:set var="internalLink"><hst:link hippobean="${document.infoLink.link }" /></c:set>              
+  <a class="btn" href="${internalLink}" title="${document.infoLink.alt}">
+     <span><c:out value="${document.infoLink.linkTitle}"/></span>
+  </a>
+</section>
