@@ -118,7 +118,7 @@
       <artifactId>hst-mock</artifactId>
       <scope>test</scope>
     </dependency>
-    
+
     <dependency>
       <groupId>org.onehippo.cms7.hst.components</groupId>
       <artifactId>hst-core</artifactId>
@@ -167,13 +167,13 @@
       <version>${forge.hstpdfrenderer.version}</version>
     </dependency>
     <!-- /pdf -->
-    
+
     <!-- rss plugin -->
     <dependency>
       <groupId>org.onehippo.forge</groupId>
       <artifactId>feed-hst</artifactId>
     </dependency>
-    
+
     <dependency>
       <groupId>rome</groupId>
       <artifactId>rome</artifactId>
@@ -189,10 +189,15 @@
       <groupId>nl.openweb.hippo</groupId>
       <artifactId>hippo-elasticsearch-plugin</artifactId>
     </dependency>
-    
+
     <dependency>
       <groupId>nl.openweb.omnikassa</groupId>
       <artifactId>hippo-omnikassa-plugin-hst</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.google.zxing</groupId>
+      <artifactId>javase</artifactId>
     </dependency>
 
   </dependencies>
