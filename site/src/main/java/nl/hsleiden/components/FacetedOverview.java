@@ -31,39 +31,39 @@ public class FacetedOverview extends MonolithicFacetedOverview {
         return result;
     }
     
-    @Override
-    protected HstQuery getHstQuery(HstRequest request) throws QueryException {
-        
-        HstQuery query = null;
-        HippoBean contentBean = request.getRequestContext().getContentBean();
-        
-        if(contentBean instanceof OverviewPage){
-            
-            FacetedOverviewPageInfo parametersInfo = getComponentParametersInfo(request);
-            HippoBean scope = BeanUtils.getBean(parametersInfo.getContentBeanPath(), request);
-            
-            if(scope instanceof HippoFacetNavigationBean){             
-                scope = scope.getParentBean();
-                query = request.getRequestContext().getQueryManager().createQuery(scope);
-                
-                String highlightedUuid = ((OverviewPage )contentBean).getHighLightedItem().getIdentifier();
-                
-                Filter globalFilter = query.createFilter();
-                globalFilter.addNotEqualTo("jcr:uuid", highlightedUuid);
-                
-                String queryString = getPublicRequestParameter(request, ParametersConstants.QUERY);
-                if (StringUtils.isNotBlank(queryString)) {
-                    queryString = SearchQueryUtils.parseAndEscapeBadCharacters(enhanceQuery(queryString));
-                    if (StringUtils.isNotBlank(queryString)) {
-                        globalFilter.addContains(".", queryString);
-                    }
-                }
-                query.setFilter(globalFilter);
-            }
-        }
-        
-        return query;
-    }
+//    @Override
+//    protected HstQuery getHstQuery(HstRequest request) throws QueryException {
+//        
+//        HstQuery query = null;
+//        HippoBean contentBean = request.getRequestContext().getContentBean();
+//        
+//        if(contentBean instanceof OverviewPage){
+//            
+//            FacetedOverviewPageInfo parametersInfo = getComponentParametersInfo(request);
+//            HippoBean scope = BeanUtils.getBean(parametersInfo.getContentBeanPath(), request);
+//            
+//            if(scope instanceof HippoFacetNavigationBean){             
+//                scope = scope.getParentBean();
+//                query = request.getRequestContext().getQueryManager().createQuery(scope);
+//                
+//                String highlightedUuid = ((OverviewPage )contentBean).getHighLightedItem().getIdentifier();
+//                
+//                Filter globalFilter = query.createFilter();
+//                globalFilter.addNotEqualTo("jcr:uuid", highlightedUuid);
+//                
+//                String queryString = getPublicRequestParameter(request, ParametersConstants.QUERY);
+//                if (StringUtils.isNotBlank(queryString)) {
+//                    queryString = SearchQueryUtils.parseAndEscapeBadCharacters(enhanceQuery(queryString));
+//                    if (StringUtils.isNotBlank(queryString)) {
+//                        globalFilter.addContains(".", queryString);
+//                    }
+//                }
+//                query.setFilter(globalFilter);
+//            }
+//        }
+//        
+//        return query;
+//    }
     
     
 }
