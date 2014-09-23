@@ -53,7 +53,7 @@
     </aside>
   </div>
     
-  <div class="row border-top">
+  <div class="row">
      <hst:include ref="contentBottom" /> 
   </div>
   

@@ -51,7 +51,7 @@ function createCollapseLink(element, siblingContainer, index) {
 		var link = document.createElement('a');
 		link.collapseDiv = siblingContainer;
 		link.href = '#';
-		link.appendChild(createImg('images/faq-arrow-right.png','expand','expand'));
+		link.appendChild(createImg(contextPath + '/images/faq-arrow-right.png','expand','expand'));
 		link.onclick = collapseExpandLink;
 		collapseLinks[index] = link;
 		collapsableDiv.appendChild(link);
@@ -81,13 +81,13 @@ function collapseExpandLink(evt) {
 		
 		this.parentNode.parentNode.nextSibling.style.display = 'none';		
 		this.removeChild(this.firstChild);
-		this.appendChild(createImg('images/faq-arrow-right.png','expand','expand'));
+		this.appendChild(createImg(contextPath + '/images/faq-arrow-right.png','expand','expand'));
 
 	} else {
 		
 		this.parentNode.parentNode.nextSibling.style.display = '';
 		this.removeChild(this.firstChild);
-		this.appendChild(createImg('images/faq-arrow-down.png','collapse','collapse'));
+		this.appendChild(createImg(contextPath + '/images/faq-arrow-down.png','collapse','collapse'));
 	}
 
 	if (evt && evt.preventDefault) {
