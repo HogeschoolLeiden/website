@@ -28,7 +28,6 @@
             
             <h1 class="hidden"><c:out value="${model.document.title}"></c:out>  </h1> 
  
-
               <tag:facetednavigation-bachelors facetnav="${model.facetBean}" labels="${model.labels}" enableSearch="true"/>
                        
               <tag:rssReader document="${model.document}"/>
@@ -81,6 +80,13 @@
               <hst:include ref="contentBottom" />
 
           </section>
+          
+          <aside class="col-md-3 col-sm-3 aside">
+            <hst:include ref="rightTop" />
+            <hst:include ref="right" />
+            <hst:include ref="rightBottom" />
+          </aside>
+          
         </c:otherwise>
       </c:choose>
 

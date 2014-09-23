@@ -63,7 +63,7 @@
                       <a href="${link}">
                         <div class="checkbox">
                           <img  class="cbimg" src="<hst:link path="/images/checkbox-unchecked.png"/>" 
-                                alt="<fmt:message key="checkbox.checked" />" title="<fmt:message key="checkbox.unchecked" />"/>
+                                alt="<fmt:message key="checkbox.unchecked" />" title="<fmt:message key="checkbox.unchecked" />"/>
                           <c:out value="${labels[item.name]}" default="${item.name}" escapeXml="true" />
                           <c:out value="    ( " escapeXml="true" />
                           <c:out value="${item.count}" escapeXml="true" />
