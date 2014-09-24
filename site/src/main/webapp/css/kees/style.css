@@ -395,6 +395,301 @@ body {
 	height: 100%
 }
 
+.form {
+	margin-top: 20px;
+	position: relative;
+	margin-bottom: 10px
+}
+
+.form .eforms-field,.form div.eforms-field {
+	width: 100%;
+	padding: 0;
+	border: 0;
+	clear: none;
+	height: auto;
+	margin: 0 0 25px 0;
+	position: relative
+}
+
+.form .eforms-field .ui-datepicker-trigger,.form div.eforms-field .ui-datepicker-trigger
+	{
+	position: absolute;
+	right: 7px;
+	bottom: 7px;
+	cursor: pointer;
+	height: 18px;
+	width: auto
+}
+
+.form .eforms-field .eforms-hint,.form div.eforms-field .eforms-hint,.form .eforms-field span.error,.form div.eforms-field span.error
+	{
+	position: absolute;
+	right: 0;
+	top: 0;
+	font-size: 1.3em;
+	color: #666;
+	margin: 0;
+	font-style: normal;
+	font-family: 'source_sans_proregular';
+	font-weight: 400;
+	font-style: normal
+}
+
+.form .eforms-field span.error,.form div.eforms-field span.error {
+	color: red;
+	z-index: 1000;
+	background: #fff;
+	display: block;
+	width: 50%;
+	text-align: right
+}
+
+.form .eforms-field label,.form div.eforms-field label {
+	margin: 0 0 5px 0;
+	display: block;
+	float: none;
+	width: auto;
+	color: #23114c;
+	font-family: 'source_sans_prosemibold';
+	font-weight: 400;
+	font-style: normal
+}
+
+.form .eforms-field .eforms-req,.form div.eforms-field .eforms-req {
+	color: #23114c
+}
+
+.form .eforms-field input,.form div.eforms-field input,.form .eforms-field select,.form div.eforms-field select,.form .eforms-field textarea,.form div.eforms-field textarea
+	{
+	width: 100%;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	border-color: #999;
+	height: 30px;
+	width: 100%;
+	font-family: 'source_sans_prolight';
+	font-weight: 400;
+	font-style: normal;
+	color: #666;
+	padding: 7px 10px 5px;
+	font-size: 14px;
+	background: #fff !important
+}
+
+.form .eforms-field input[type="checkbox"],.form div.eforms-field input[type="checkbox"],.form .eforms-field select[type="checkbox"],.form div.eforms-field select[type="checkbox"],.form .eforms-field textarea[type="checkbox"],.form div.eforms-field textarea[type="checkbox"],.form .eforms-field input[type="radio"],.form div.eforms-field input[type="radio"],.form .eforms-field select[type="radio"],.form div.eforms-field select[type="radio"],.form .eforms-field textarea[type="radio"],.form div.eforms-field textarea[type="radio"]
+	{
+	width: auto;
+	height: auto;
+	padding: 0;
+	border: 0
+}
+
+.form .eforms-field input:focus,.form div.eforms-field input:focus,.form .eforms-field select:focus,.form div.eforms-field select:focus,.form .eforms-field textarea:focus,.form div.eforms-field textarea:focus
+	{
+	outline-width: 0;
+	outline: 0;
+	box-shadow: none
+}
+
+.form .eforms-field input.error,.form div.eforms-field input.error,.form .eforms-field select.error,.form div.eforms-field select.error,.form .eforms-field textarea.error,.form div.eforms-field textarea.error
+	{
+	border-color: red
+}
+
+.form .eforms-field textarea,.form div.eforms-field textarea {
+	min-height: 100px
+}
+
+.form .eforms-field select,.form div.eforms-field select {
+	border: 1px solid #999;
+	padding: 3px 5px
+}
+
+.form .eforms-field input[type="file"],.form div.eforms-field input[type="file"]
+	{
+	padding: 0
+}
+
+.form .eforms-field .bootstrap-filestyle,.form div.eforms-field .bootstrap-filestyle
+	{
+	width: 100%;
+	position: relative
+}
+
+.form .eforms-field .bootstrap-filestyle input,.form div.eforms-field .bootstrap-filestyle input
+	{
+	width: 100%
+}
+
+.form .eforms-field .bootstrap-filestyle .group-span-filestyle,.form div.eforms-field .bootstrap-filestyle .group-span-filestyle
+	{
+	width: 100px;
+	height: auto;
+	display: inline-block;
+	color: #fff;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	margin: 0;
+	padding: 0
+}
+
+.form .eforms-field .bootstrap-filestyle .group-span-filestyle label,.form div.eforms-field .bootstrap-filestyle .group-span-filestyle label
+	{
+	width: 100px;
+	display: block;
+	position: static;
+	background: #23114c;
+	color: #fff;
+	z-index: 1000;
+	position: relative;
+	color: #fff;
+	height: 30px;
+	font-size: 16px !important;
+	font-family: 'source_sans_proregular';
+	font-weight: 400;
+	font-style: normal;
+	padding: 5px 0 0 0;
+	margin: 0
+}
+
+.form .eforms-field.checkboxes input[type="checkbox"],.form div.eforms-field.checkboxes input[type="checkbox"],.form .eforms-field.radiobuttons input[type="checkbox"],.form div.eforms-field.radiobuttons input[type="checkbox"],.form .eforms-field.checkboxes input[type="radio"],.form div.eforms-field.checkboxes input[type="radio"],.form .eforms-field.radiobuttons input[type="radio"],.form div.eforms-field.radiobuttons input[type="radio"]
+	{
+	margin: 0 10px 0 0;
+	display: none
+}
+
+.form .eforms-field.checkboxes p,.form div.eforms-field.checkboxes p {
+	font-size: 1.3em;
+	color: #666;
+	font-family: 'source_sans_proregular';
+	font-weight: 400;
+	font-style: normal;
+	margin: 10px 0
+}
+
+.form .eforms-field.checkboxes p .instant-label,.form div.eforms-field.checkboxes p .instant-label
+	{
+	font-size: 1em;
+	color: #666;
+	font-family: 'source_sans_proregular';
+	font-weight: 400;
+	font-style: normal;
+	cursor: pointer
+}
+
+.form .eforms-field.checkboxes .instant-label:before,.form div.eforms-field.checkboxes .instant-label:before
+	{
+	content: "";
+	width: 20px;
+	height: 20px;
+	background: url("../img/checkbox.png") center center no-repeat;
+	background-size: 20px 20px;
+	display: inline-block;
+	float: left;
+	margin: 0 10px 0 0
+}
+
+.form .eforms-field.checkboxes input[type="checkbox"]:checked+.instant-label:before,.form div.eforms-field.checkboxes input[type="checkbox"]:checked+.instant-label:before
+	{
+	background: url("../img/checkbox-checked.png") center center no-repeat;
+	background-size: 20px 20px
+}
+
+.form .eforms-field.radiobuttons p,.form div.eforms-field.radiobuttons p,.form .eforms-field.radiobuttons li,.form div.eforms-field.radiobuttons li
+	{
+	font-size: 1.3em;
+	color: #666;
+	font-family: 'source_sans_proregular';
+	font-weight: 400;
+	font-style: normal;
+	margin: 10px 0
+}
+
+.form .eforms-field.radiobuttons p .instant-label,.form div.eforms-field.radiobuttons p .instant-label,.form .eforms-field.radiobuttons li .instant-label,.form div.eforms-field.radiobuttons li .instant-label
+	{
+	font-size: 1em;
+	color: #666;
+	font-family: 'source_sans_proregular';
+	font-weight: 400;
+	font-style: normal;
+	cursor: pointer
+}
+
+.form .eforms-field.radiobuttons .radiogroup,.form div.eforms-field.radiobuttons .radiogroup
+	{
+	list-style-type: none
+}
+
+.form .eforms-field.radiobuttons .radiogroup li,.form div.eforms-field.radiobuttons .radiogroup li
+	{
+	padding: 0;
+	background: 0
+}
+
+.form .eforms-field.radiobuttons .instant-label:before,.form div.eforms-field.radiobuttons .instant-label:before
+	{
+	content: "";
+	width: 20px;
+	height: 20px;
+	background: url("../img/radiobutton.png") center center no-repeat;
+	background-size: 20px 20px;
+	display: inline-block;
+	float: left;
+	margin: 0 10px 0 0
+}
+
+.form .eforms-field.radiobuttons input[type="radio"]:checked+.instant-label:before,.form div.eforms-field.radiobuttons input[type="radio"]:checked+.instant-label:before
+	{
+	background: url("../img/radiobutton-checked.png") center center
+		no-repeat;
+	background-size: 20px 20px
+}
+
+.form .eforms-field .eforms-likert-table td,.form div.eforms-field .eforms-likert-table td
+	{
+	font-size: 1.3em
+}
+
+.form .eforms-field:hover,.form div.eforms-field:hover {
+	background: 0;
+	background-color: transparent
+}
+
+.form .eforms-text,.form div.eforms-text {
+	font-size: 1.3em;
+	margin: 10px 0
+}
+
+.form div.eforms-buttons {
+	padding: 0;
+	margin: 10px 0
+}
+
+.form input.btn {
+	position: relative !important;
+	background: #23114c;
+	width: 140px;
+	height: 40px;
+	margin-left: 0;
+	font-family: 'source_sans_prosemibold';
+	font-weight: 400;
+	font-style: normal;
+	font-size: 1.6em
+}
+
+.lt-ie9 .form .eforms-field input[type="checkbox"],.lt-ie9 .form div.eforms-field input[type="checkbox"],.lt-ie9 .form .eforms-field input[type="radio"],.lt-ie9 .form div.eforms-field input[type="radio"]
+	{
+	display: inline-block;
+	float: left
+}
+
+.lt-ie9 .form .eforms-field .instant-label:before,.lt-ie9 .form div.eforms-field .instant-label:before
+	{
+	display: none
+}
+
 .navbar {
 	min-height: 50px;
 	border: 0;
@@ -598,7 +893,8 @@ body {
 	font-weight: 400;
 	font-style: normal;
 	color: #666;
-	padding: 7px 10px 5px
+	padding: 7px 10px 5px;
+	background: #fff
 }
 
 .form .form-group input:focus {
@@ -1650,7 +1946,12 @@ body {
 	width: 90%;
 	border: 0 !important;
 	padding: 0;
-	padding-left: 5px
+	padding-left: 5px;
+	list-style-type: none;
+	background: url("../img/li-groen.png") 0 6px no-repeat;
+	background-size: 6px 6px;
+	margin-left: 0;
+	padding-left: 20px
 }
 
 #main.landing .area ul li a {
@@ -1673,6 +1974,12 @@ body {
 
 #main.landing aside {
 	padding-top: 72px
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	#main.landing aside {
+		padding-top: 71px
+	}
 }
 
 .tekstitem {
@@ -1746,6 +2053,7 @@ body {
 	overflow: hidden;
 	position: relative;
 	padding-bottom: 70px;
+	height: auto;
 	min-height: 240px;
 	cursor: pointer;
 	margin: 20px 0
@@ -1771,7 +2079,7 @@ body {
 	border-image: url('../img/border-dotted-horz-8-wit.png') 0 0 100% 0
 		round;
 	position: absolute;
-	left: 0;
+	left: 5px;
 	bottom: 0
 }
 
@@ -2165,6 +2473,10 @@ body {
 	margin-top: -20px
 }
 
+.lt-ie9 .blok,.lt-ie10 .blok,.lt-ie11 .blok {
+	min-height: 0
+}
+
 footer {
 	border-top: 1px solid #ccc;
 	border-bottom: 40px solid #23114c;
@@ -2222,7 +2534,12 @@ footer .secundnavbar ul li a {
 }
 
 footer .secundnavbar ul.thirdnav {
-	float: right
+	float: right;
+	padding-right: 0
+}
+
+footer .secundnavbar ul.thirdnav li:last-child {
+	margin-right: 0
 }
 
 footer .social {
@@ -2240,7 +2557,6 @@ footer .social li a {
 	width: 30px;
 	height: 30px;
 	display: block;
-	background: #23114c;
 	color: #fff;
 	text-align: center;
 	text-decoration: none
@@ -2256,8 +2572,76 @@ footer .social li a span {
 	text-indent: -9999px
 }
 
-footer .social li a:hover {
-	background: #009fda
+footer .social li a {
+	background: url("../img/icon-social.png") left top no-repeat #23114c;
+	background-size: 90px 60px
+}
+
+footer .social li.twitter a {
+	background-position: -30px 0
+}
+
+footer .social li.googleplus a {
+	background-position: -60px 0
+}
+
+footer .social li.linkedin a {
+	background-position: 0 -30px
+}
+
+footer .social li.instagram a {
+	background-position: -30px -30px
+}
+
+footer .social li.youtube a {
+	background-position: -60px -30px
+}
+
+footer .social li:hover a {
+	background-color: #008383
+}
+
+.lt-ie9 #main.landing .area ul li,.lt-ie9 .navbar .container #mainnav.nav li ul.dropdownmenu li ul li
+	{
+	background-image: url("../img/li-groen-ie.png")
+}
+
+.lt-ie9 .overzichtlijst .media .media-body .tags li,.lt-ie9 .detail-content .contentarea .content ul li,.lt-ie9 .tekstitem ul li
+	{
+	background-image: url("../img/li-ie.png")
+}
+
+.lt-ie9 .more {
+	background-image: url("../img/more-arrow-8.png")
+}
+
+.lt-ie9 footer .social li a {
+	background: url("../img/icon-social-ie8.png") left top no-repeat #23114c;
+	background-size: 90px 60px
+}
+
+.lt-ie9 footer .social li.twitter a {
+	background-position: -30px 0
+}
+
+.lt-ie9 footer .social li.googleplus a {
+	background-position: -60px 0
+}
+
+.lt-ie9 footer .social li.linkedin a {
+	background-position: 0 -30px
+}
+
+.lt-ie9 footer .social li.instagram a {
+	background-position: -30px -30px
+}
+
+.lt-ie9 footer .social li.youtube a {
+	background-position: -60px -30px
+}
+
+.lt-ie9 footer .social li:hover a {
+	background-color: #008383
 }
 
 @media ( max-width :765px) and (orientation:landscape) {
@@ -2638,7 +3022,6 @@ footer .social li a:hover {
 		width: 30px;
 		height: 30px;
 		display: block;
-		background: #23114c;
 		color: #fff;
 		text-align: center;
 		text-decoration: none
@@ -2651,9 +3034,6 @@ footer .social li a:hover {
 	footer .social li a span {
 		display: block;
 		text-indent: -9999px
-	}
-	footer .social li a:hover {
-		background: #008383
 	}
 	footer .secundnavbar {
 		background: #008383;
@@ -2834,7 +3214,12 @@ footer .social li a:hover {
 		width: 90%;
 		border: 0 !important;
 		padding: 0;
-		padding-left: 5px
+		padding-left: 5px;
+		list-style-type: none;
+		background: url("../img/li-groen.png") 0 6px no-repeat;
+		background-size: 6px 6px;
+		margin-left: 0;
+		padding-left: 20px
 	}
 	.navbar .container .nav#mainnav li ul.dropdownmenu li ul li a {
 		color: #666;
@@ -2856,7 +3241,8 @@ footer .social li a:hover {
 		padding: 0;
 		list-style-type: none;
 		margin-left: 0;
-		width: 90%
+		width: 90%;
+		background: 0
 	}
 	.navbar .container .nav#mainnav li:hover ul.dropdownmenu {
 		display: block !important
@@ -3025,100 +3411,345 @@ footer .social li a:hover {
 /* -- my additions -- */
 
 /* topmenu */
-.nav#mainnav ul.dropdownmenu.visible-lg.visible-md.clearfix li ul li ul { padding-left: 0; padding-bottom: 0; padding-top: 0;}
+.nav#mainnav ul.dropdownmenu.visible-lg.visible-md.clearfix li ul li ul
+	{
+	padding-left: 0;
+	padding-bottom: 0;
+	padding-top: 0;
+}
 
 /* public images */
-.images2 { width: 100%; float: left;}
-.images2 .singleImage {	width: 50%; float: left; margin-bottom: 2%; }
-.images2 .singleImagePadding { width: 95%; float: center; margin-left: 2.5%; }
-.images2 .singleImagePadding img { display: block; width: 100%; float: left; }
-.images2 .singleImagePadding img { display: block; width: 100%; float: left; }
+.images2 {
+	width: 100%;
+	float: left;
+}
 
-.images3 { width: 100%; float: left; }
-.images3 .singleImage { width: 33.333%; float: left; margin-bottom: 2%; }
-.images3 .singleImagePadding { width: 95%; float: center; margin-left: 2.5%; }
-.images3 .singleImagePadding img { display: block; width: 100%; float: left; }
+.images2 .singleImage {
+	width: 50%;
+	float: left;
+	margin-bottom: 2%;
+}
 
-.images4 { width: 100%; float: left; }
-.images4 .singleImage { width: 25%; float: left; margin-bottom: 2%; }
-.images4 .singleImagePadding { width: 95%; float: center; margin-left: 2.5%; }
-.images4 .singleImagePadding img { display: block; width: 100%; float: left; }
+.images2 .singleImagePadding {
+	width: 95%;
+	float: center;
+	margin-left: 2.5%;
+}
+
+.images2 .singleImagePadding img {
+	display: block;
+	width: 100%;
+	float: left;
+}
+
+.images2 .singleImagePadding img {
+	display: block;
+	width: 100%;
+	float: left;
+}
+
+.images3 {
+	width: 100%;
+	float: left;
+}
+
+.images3 .singleImage {
+	width: 33.333%;
+	float: left;
+	margin-bottom: 2%;
+}
+
+.images3 .singleImagePadding {
+	width: 95%;
+	float: center;
+	margin-left: 2.5%;
+}
+
+.images3 .singleImagePadding img {
+	display: block;
+	width: 100%;
+	float: left;
+}
+
+.images4 {
+	width: 100%;
+	float: left;
+}
+
+.images4 .singleImage {
+	width: 25%;
+	float: left;
+	margin-bottom: 2%;
+}
+
+.images4 .singleImagePadding {
+	width: 95%;
+	float: center;
+	margin-left: 2.5%;
+}
+
+.images4 .singleImagePadding img {
+	display: block;
+	width: 100%;
+	float: left;
+}
 
 /* flexible block image */
-figure.fexibleblock.image img {	width: 100%; }
+figure.fexibleblock.image img {
+	width: 100%;
+}
 
 /* twitter */
-.button-block.twitter { width: 100%; float: left; }
-.button-block.twitter img {	width: 100%; }
+.button-block.twitter {
+	width: 100%;
+	float: left;
+}
 
-.twitteritem h2 { margin-bottom: 0; }
-.twitteritem h3 {margin-top: 0; margin-bottom: 0; }
+.button-block.twitter img {
+	width: 100%;
+}
 
-.col-sm-4.vertical{width: auto;}
-.col-sm-4.horizontal2{width: 50%;}
+.twitteritem h2 {
+	margin-bottom: 0;
+}
+
+.twitteritem h3 {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.col-sm-4.vertical {
+	width: auto;
+}
+
+.col-sm-4.horizontal2 {
+	width: 50%;
+}
 
 /* facet navigation */
-.filterlist .checkbox .cbimg { padding-right: 10px; }
+.filterlist .checkbox .cbimg {
+	padding-right: 10px;
+}
 
 /* temporary blog author */
-.panel-body p { margin: 0; }
-.panel-body .pull-left { margin-right: 10px; }
-.panel-body .media-body { width: 50%; padding: 0; }
-.panel-body .media-body ul.social { list-style-type: none; width: 100%; padding: 0; display: block;
-	float: left; margin-top: 5px; margin-bottom: 20px; }
-.panel-body .media-body ul.social li { display: inline; float: left; background: #23114c;
-	width: 20px; height: 20px; text-align: center; margin-left: 7px; }
-.panel-body .media-body ul.social li a { color: rgb(255, 255, 255); margin-top: 3px; }
+.panel-body p {
+	margin: 0;
+}
+
+.panel-body .pull-left {
+	margin-right: 10px;
+}
+
+.panel-body .media-body {
+	width: 50%;
+	padding: 0;
+}
+
+.panel-body .media-body ul.social {
+	list-style-type: none;
+	width: 100%;
+	padding: 0;
+	display: block;
+	float: left;
+	margin-top: 5px;
+	margin-bottom: 20px;
+}
+
+.panel-body .media-body ul.social li {
+	display: inline;
+	float: left;
+	background: #23114c;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	margin-left: 7px;
+}
+
+.panel-body .media-body ul.social li a {
+	color: rgb(255, 255, 255);
+	margin-top: 3px;
+}
 
 /* date with year*/
-.datum.year { width: 50px; height: 50px; border-radius: 25px; }
+.datum.year {
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+}
 
 /* faq overview page */
-.media-body.accordian h2.media-heading { width: 90%; float: right; }
-.media-body.accordian + div { width: 90%; float: right; }
-.media-body.accordian + div blockquote { float: left; }
+.media-body.accordian h2.media-heading {
+	width: 90%;
+	float: right;
+}
+
+.media-body.accordian+div {
+	width: 90%;
+	float: right;
+}
+
+.media-body.accordian+div blockquote {
+	float: left;
+}
 
 /* lectorat page */
-.col-md-8.col-sm-8.contentarea .content+div.content { padding-top: 0; }
+.col-md-8.col-sm-8.contentarea .content+div.content {
+	padding-top: 0;
+}
 
 /* left naavigation highlighting */
-.subnav ul li.active ul li.arrow-side a:after { border-top: none; border-bottom: none; }
-.subnav ul li.active a { background: #c8c3d2 }
-.subnav ul li.active ul li.arrow-side a { background-color: white; font-family: source_sans_prolight; }
+.subnav ul li.active ul li.arrow-side a:after {
+	border-top: none;
+	border-bottom: none;
+}
+
+.subnav ul li.active a {
+	background: #c8c3d2
+}
+
+.subnav ul li.active ul li.arrow-side a {
+	background-color: white;
+	font-family: source_sans_prolight;
+}
 
 /* image teaser */
-.blok.beeldbank img.icon.imageTeaser { width: 100px; height: 100px; border-radius: 50%; position: absolute;
-	left: 50%; top: 40%; margin: -50px 0 0 -50px; padding: 15px; background: center #fff;
+.blok.beeldbank img.icon.imageTeaser {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	position: absolute;
+	left: 50%;
+	top: 40%;
+	margin: -50px 0 0 -50px;
+	padding: 15px;
+	background: center #fff;
 }
-.blok.beeldbank div.large.imageTeaser { width: 100%; height: 100%; }
-.blok.beeldbank .icon.imageTeaser +.btn { margin-top: -125px }
+
+.blok.beeldbank div.large.imageTeaser {
+	width: 100%;
+	height: 100%;
+}
+
+.blok.beeldbank .icon.imageTeaser+.btn {
+	margin-top: -125px
+}
 
 /* landing page titels */
-.col-sm-6.col-md-3.area .truncate{display: block; width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.col-sm-6.col-md-3.area .truncate {
+	display: block;
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
 
 /* related items */
-.aside .overzichtlijst.related{ padding: 0; }
-.aside .overzichtlijst.related article { padding-top: 0; padding-bottom: 12px;}
-.aside .overzichtlijst.related article a{ width: 100%; display: block; }
-.aside .overzichtlijst.related figure.media-object.pull-left{ margin-right: 10px; width: 60px; height: 60px; }
-.aside .overzichtlijst.related .media .datum {left: 10px; top: 20px; } 
-.aside .overzichtlijst.related a.more {margin-top: 0; margin-bottom: 15px;}
-.aside .widgetTitle { font-size: 1.571em; color: #23114c; font-family: 'source_sans_proregular'; font-weight: 400; 
-	font-style: normal; font-weight: 400; display: inline-block; margin: 0 0 0.7em 0; padding-left: 10px;}
+.aside .overzichtlijst.related {
+	padding: 0;
+}
+
+.aside .overzichtlijst.related article {
+	padding-top: 0;
+	padding-bottom: 12px;
+}
+
+.aside .overzichtlijst.related article a {
+	width: 100%;
+	display: block;
+}
+
+.aside .overzichtlijst.related figure.media-object.pull-left {
+	margin-right: 10px;
+	width: 60px;
+	height: 60px;
+}
+
+.aside .overzichtlijst.related .media .datum {
+	left: 10px;
+	top: 20px;
+}
+
+.aside .overzichtlijst.related a.more {
+	margin-top: 0;
+	margin-bottom: 15px;
+}
+
+.aside .widgetTitle {
+	font-size: 1.571em;
+	color: #23114c;
+	font-family: 'source_sans_proregular';
+	font-weight: 400;
+	font-style: normal;
+	font-weight: 400;
+	display: inline-block;
+	margin: 0 0 0.7em 0;
+	padding-left: 10px;
+}
 
 /* info block bachelors */
-.aside section.blok.colorbg.lichtpaars.info {display: block; float: left; }
-.aside section.blok.colorbg.lichtpaars.info ul {display: block; float: left; width: 100%; }
-.aside section.blok.colorbg.lichtpaars.info ul li {display: block; float: left; padding-left: 0;}
-.aside section.blok.colorbg.lichtpaars.info ul li img {display: block; float: left;}
-.aside section.blok.colorbg.lichtpaars.info ul li span.details {display: block; float: left; padding-left: 10px;}
-.aside section.blok.colorbg.lichtpaars.info p {display: block; float: left;}
-.aside section.blok.colorbg.lichtpaars.info a {display: block; float: left;}
-.aside section.blok.colorbg.lichtpaars.info img.datum.large {padding-top: 0;}
+.aside section.blok.colorbg.lichtpaars.info {
+	display: block;
+	float: left;
+}
+
+.aside section.blok.colorbg.lichtpaars.info ul {
+	display: block;
+	float: left;
+	width: 100%;
+}
+
+.aside section.blok.colorbg.lichtpaars.info ul li {
+	display: block;
+	float: left;
+	padding-left: 0;
+}
+
+.aside section.blok.colorbg.lichtpaars.info ul li img {
+	display: block;
+	float: left;
+}
+
+.aside section.blok.colorbg.lichtpaars.info ul li span.details {
+	display: block;
+	float: left;
+	padding-left: 10px;
+}
+
+.aside section.blok.colorbg.lichtpaars.info p {
+	display: block;
+	float: left;
+}
+
+.aside section.blok.colorbg.lichtpaars.info a {
+	display: block;
+	float: left;
+}
+
+.aside section.blok.colorbg.lichtpaars.info img.datum.large {
+	padding-top: 0;
+}
 
 /* bachelors facet */
-.studiefilter.filter-collapse ul li {padding-left: 0;}
-.studiefilter.filter-collapse ul li a {display: block; float: left; width: 100%;}
-.studiefilter.filter-collapse ul li a img.cbimg{position: absolute; top: -1px; z-index: 2;}
-.studiefilter ul li label { padding-left: 38px;}
-.studiefilter.filter-collapse ul li a:hover {text-decoration: none; }
+.studiefilter.filter-collapse ul li {
+	padding-left: 0;
+}
+
+.studiefilter.filter-collapse ul li a {
+	display: block;
+	float: left;
+	width: 100%;
+}
+
+.studiefilter.filter-collapse ul li a img.cbimg {
+	position: absolute;
+	top: -1px;
+	z-index: 2;
+}
+
+.studiefilter ul li label {
+	padding-left: 38px;
+}
+
+.studiefilter.filter-collapse ul li a:hover {
+	text-decoration: none;
+}

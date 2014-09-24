@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8" lang="nl"> <![endif]-->
 <!--[if IE 8]> <html class="no-js lt-ie9" lang="nl"> <![endif]-->
-<!--[if IE 9]> <html class="no-js lt-ie10" lang="nl"> <![endif]-->
-<!--[if gt IE 9]><!--> <html class="no-js" lang="nl"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="nl"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <title>Hogeschool Leiden</title>
@@ -37,21 +36,6 @@
 	<link rel="apple-touch-icon" sizes="152x152" href="/media/icons/touch-icon-152.png">
 	<!-- Favicon -->
 	<link rel="shortcut icon" type="image/x-icon" href="/media/icons/favicon.ico" />
-	
-	<script>
-    	if ($.browser.msie && $.browser.version == 9) {
-		  $("html").addClass("lt-ie10");
-		}
-    	
-    	if ($.browser.msie && $.browser.version == 10) {
-		  $("html").addClass("lt-ie11");
-		}
-		
-		if ($.browser.msie && $.browser.version == 11) {
-		  $("html").addClass("ie11");
-		}
-	</script>
-	
 	<!-- CSS -->
 	<link href="/media/css/bootstrap.min.css" rel="stylesheet">
 	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
@@ -302,7 +286,7 @@
 				
 				<form role="form" class="navbar-form">
 			        <div class="form-group">
-			          <label class="hidden" for="zoeken">Zoeken</label>
+			        	<label class="hidden" for="zoeken">Zoeken</label>
 			          <input type="text" class="form-control" id="zoeken">
 			        </div>
 			        <button class="btn fa fa-search no-radius" type="submit"><span>Zoeken</span></button>
@@ -396,25 +380,25 @@
 					</ul>
 				</section>
 				
-				<aside class="col-sm-6 col-md-3 aside">
-					<h1 class="hidden">Gerelateerde informatie</h1>
-						
-					<section class="blok colorbg blauw large">
-						<a href="">
-						<h1>Open Dag</h1>
-						<h2>Kom naar de open dag op <strong>woensdag 23 juli</strong></h2>
-						<span class="btn">Meer informatie</span>
-						</a>
-					</section>
+				<section class="col-sm-6 col-md-3 area">
+					<h1>Agenda</h1>
 					
-					<section class="blok colorbg groen medium">
+					<article class="article">
 						<a href="">
-						<h1>Studium Generale</h1>
-						<h2>Management en Bedrijf organiseert een serie (gast)colleges.</h2>
-						<span class="btn">Meer informatie</span>
+							<h2>Symposium Duurzaam Samenwerken ‘21st Century Skills’</h2>
+							<time class="datum start large" datetime="2024-10-16">16 <span>okt</span></time>
+							<figure><img class="img-responsive" src="/media/img/vierkoloms2.jpg" alt="Symposium Duurzaam Samenwerken ‘21st Century Skills’"/> </figure>
+							<p>Op 16 oktober 2014 houdt cluster Management & Bedrijf het jaarlijkse symposium Duurzaam Samenwerken. Dit keer draait het symposium om... </p>
 						</a>
-					</section>
-				</aside>
+					</article>
+					
+					<ul>
+						<li><a href="">Agenda</a></li>
+						<li><a href="">Symposium Effectieve Jeugdbescherming</a></li>
+						<li><a href="">Congres Leefklimaatonderzoek</a></li>
+						<li><a href="">3 daags Symposium Duurzaam Samenwerken</a></li>
+					</ul>
+				</section>
 				
 			</div><!-- // row -->
 		</div><!-- // container -->
@@ -486,12 +470,12 @@
     			</div>
     			
     			<ul class="social">
-    				<li class="facebook"><a href="" ><span>Facebook</span></a></li>
-    				<li class="twitter"><a href="" ><span>Twitter</span></a></li>
-    				<li class="googleplus"><a href="" ><span>Google Plus</span></a></li>
-    				<li class="linkedin"><a href=""><span>Linked In</span></a></li>
-    				<li class="instagram"><a href=""> <span>Instagram</span></a></li>
-    				<li class="youtube"><a href=""><span>Youtube</span></a></li>
+    				<li class="facebook"><a href="" class="fa fa-facebook"><span>Facebook</span></a></li>
+    				<li class="twitter"><a href="" class="fa fa-twitter"><span>Twitter</span></a></li>
+    				<li class="googleplus"><a href="" class="fa fa-google-plus"><span>Google Plus</span></a></li>
+    				<li class="linkedin"><a href="" class="fa fa-linkedin"><span>Linked In</span></a></li>
+    				<li class="instagram"><a href="" class="fa fa-instagram"><span>Instagram</span></a></li>
+    				<li class="instagram"><a href="" class="fa fa-youtube"><span>Youtube</span></a></li>
     			</ul>
     			
     		</div>

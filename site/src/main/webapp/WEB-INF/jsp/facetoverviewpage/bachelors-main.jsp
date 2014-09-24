@@ -15,7 +15,6 @@
     <tag:headerImage document="${model.document}"/>
   </c:if>
     
-  <%-- <hst:include ref="top-container" /> --%>
   <div class="container">
 	<div class="row">
        
@@ -53,11 +52,6 @@
                           <img alt="${item.title }" title="${item.title }" src="${image }" />
                         </c:if>
                       </figure>
-
-                      <%-- a content type addition, (end date for events probably)  and after it
-                      modify the renderDate tag and uncomment the following line
-                      <tag:renderDate document="${item}" dateClass="datum start"/>
-                      --%>
                       
                       <div class="media-body">
                         <h1 class="media-heading"><c:out value="${item.title }"/></h1>

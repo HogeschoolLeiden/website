@@ -19,36 +19,36 @@
 
 
 <li class="facebook">
-  <a href="http://www.facebook.com/HSLeidenNL" target="_blank" title="${facebook}" class="fa fa-facebook">
+  <a href="http://www.facebook.com/HSLeidenNL" target="_blank" title="${facebook}">
     <span>${facebook}</span>
   </a>
 </li>
 
 <li class="twitter">
-  <a href="http://www.twitter.com/HSLeidenNL" target="_blank" title="${twitter}" class="fa fa-twitter">
+  <a href="http://www.twitter.com/HSLeidenNL" target="_blank" title="${twitter}">
     <span>${twitter}</span>
   </a>
 </li>
 
 <li class="googleplus">
-  <a href="https://plus.google.com/+HSLeidenNL" rel="publisher" target="_blank" title="${googleplus}" class="fa fa-google-plus">
+  <a href="https://plus.google.com/+HSLeidenNL" rel="publisher" target="_blank" title="${googleplus}">
     <span>${googleplus}</span>
   </a>
 </li>
 
 <li class="linkedin">
-  <a href="http://www.linkedin.com/company/hogeschool-leiden" target="_blank" title="${linkedin}" class="fa fa-linkedin">
+  <a href="http://www.linkedin.com/company/hogeschool-leiden" target="_blank" title="${linkedin}">
     <span>${linkedin}</span>
   </a>
 </li>
 <li class="instagram">
-  <a href="https://instagram.com/hsleiden" target="_blank" title="${instagram}" class="fa fa-instagram">
+  <a href="https://instagram.com/hsleiden" target="_blank" title="${instagram}">
     <span>${instagram}</span>
   </a>
 </li>
 
-<li class="instagram">
-  <a href="https://www.youtube.com/user/hogeschoolleiden" target="_blank" title="${youtube}" class="fa fa-youtube">
+<li class="youtube">
+  <a href="https://www.youtube.com/user/hogeschoolleiden" target="_blank" title="${youtube}">
     <span>${youtube}</span>
   </a>
 </li>

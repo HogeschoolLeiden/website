@@ -16,10 +16,6 @@
     <script type="text/javascript" src="<hst:link path="/js/pretty-photo-inizialization.js"/>" charset="utf-8"></script>
   </hst:headContribution>
 
-  <hst:headContribution keyHint="jquery">
-    <script type="text/javascript" src="<hst:link path="/js/jquery-1.9.1.min.js"/>" charset="utf-8"></script>
-  </hst:headContribution>
-
   <hst:headContribution keyHint="jqueryUICss">
     <link rel="stylesheet" href="<hst:link path="/css/prettyPhoto.css"/>" type="text/css" media="screen" />
   </hst:headContribution>

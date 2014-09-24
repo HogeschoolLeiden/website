@@ -1,6 +1,24 @@
 
 $( document ).ready(function() {
 	
+	$(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) { 		event.preventDefault();
+		$(this).ekkoLightbox(); 
+	});
+
+	$(".validate").validate({
+		errorElement:'span',
+		rules: {
+			email: {
+				required:true,
+				email:true
+			}
+		}
+	});
+	jQuery.extend(jQuery.validator.messages, {
+	    required: "Verplicht",
+	    email: "Incorrect"
+	});
+	
 	// dateCircleHeight ();
 // 	
 	// function dateCircleHeight () {

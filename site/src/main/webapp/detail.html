@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8" lang="nl"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="nl"> <![endif]-->
+<!--[if IE 9]> <html class="no-js lt-ie10" lang="nl"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="nl"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <title>Hogeschool Leiden</title>
@@ -36,6 +37,21 @@
 	<link rel="apple-touch-icon" sizes="152x152" href="/media/icons/touch-icon-152.png">
 	<!-- Favicon -->
 	<link rel="shortcut icon" type="image/x-icon" href="/media/icons/favicon.ico" />
+	
+	<script>
+    	if ($.browser.msie && $.browser.version == 9) {
+		  $("html").addClass("lt-ie10");
+		}
+    	
+    	if ($.browser.msie && $.browser.version == 10) {
+		  $("html").addClass("lt-ie11");
+		}
+		
+		if ($.browser.msie && $.browser.version == 11) {
+		  $("html").addClass("ie11");
+		}
+	</script>
+	
 	<!-- CSS -->
 	<link href="/media/css/bootstrap.min.css" rel="stylesheet">
 	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
@@ -139,7 +155,7 @@
 									<li><a href="">Passend Onderwijs / Inclusive Education</a></li>
 									<li><a href="">Residentiële Jeugdzorg</a></li>
 									<li><a href="">Talentmanagement</a></li>
-									<li><a href=""><i>Lectoren en medewerkers</i></a></li>
+									<li><a href=""><strong>Lectoren en medewerkers</strong></a></li>
 								</ul>
 							</li>
 							<li>
@@ -148,7 +164,7 @@
 									<li><a href="">Antroposofische Gezondheidszorg</a></li>
 									<li><a href="">Eigen Regie</a></li>
 									<li><a href="">Geestelijke Gezondheidszorg</a></li>
-									<li><a href=""><i>Lectoren en medewerkers</i></a></li>
+									<li><a href=""><strong>Lectoren en medewerkers</strong></a></li>
 								</ul>
 							</li>
 							<li>
@@ -156,7 +172,7 @@
 									<li class="h2"><h2>Life Science</h2></li>
 									<li><a href="">Biodiversiteit</a></li>
 									<li><a href="">Innocatieve Moleculaire Diagnostiek</a></li>
-									<li><a href=""><i>Lectoren en medewerkers</i></a></li>
+									<li><a href=""><strong>Lectoren en medewerkers</strong></a></li>
 								</ul>
 							</li>
 							<li>
@@ -166,7 +182,7 @@
 									<li><a href="">PR en Social Media </a></li>
 									<li><a href="">Virtuality Driven Learning</a></li>
 									<li><a href="">Management en Bedrijf</a></li>
-									<li><a href=""><i>Lectoren en medewerkers</i></a></li>
+									<li><a href=""><strong>Lectoren en medewerkers</strong></a></li>
 								</ul>
 							</li>
 						</ul>
@@ -286,7 +302,8 @@
 				
 				<form role="form" class="navbar-form">
 			        <div class="form-group">
-			          <input type="text" class="form-control" placeholder="">
+			          <label class="hidden" for="zoeken">Zoeken</label>
+			          <input type="text" class="form-control" id="zoeken">
 			        </div>
 			        <button class="btn fa fa-search no-radius" type="submit"><span>Zoeken</span></button>
 			   </form>
@@ -365,17 +382,20 @@ samenwerking voor het starten van de duale opleiding Toegepaste Psychologie spec
 								<h2>Fotogalerij</h2>
 								
 								<figure class="gallery row">
-									<a href="" class="col-xs-6 col-sm-4 col-md-4"><img src="/media/img/detail2.jpg" alt="title van afbeelding" />
+									<a href="/media/img/detail2.jpg" class="col-xs-6 col-sm-4 col-md-4" data-toggle="lightbox" data-gallery="gallery" data-title="Titel bij de foto">
+										<img src="/media/img/detail2.jpg" alt="title van afbeelding"  />
 										<span class="fa fa-search"></span>
 									</a>
-									<a href="" class="col-xs-6 col-sm-4 col-md-4"><img src="/media/img/detail2.jpg" alt="title van afbeelding" />
+									<a href="/media/img/detail1.jpg" class="col-xs-6 col-sm-4 col-md-4" data-toggle="lightbox" data-gallery="gallery" >
+										<img src="/media/img/detail1.jpg" alt="title van afbeelding" />
 										<span class="fa fa-search"></span>
 									</a>
-									<a href="" class="col-xs-6 col-sm-4 col-md-4"><img src="/media/img/detail2.jpg" alt="title van afbeelding" />
+									<a href="/media/img/agenda-highlighted-1.jpg" class="col-xs-6 col-sm-4 col-md-4" data-toggle="lightbox" data-gallery="gallery" >
+										<img src="/media/img/agenda-highlighted-1.jpg" alt="title van afbeelding" />
 										<span class="fa fa-search"></span>
 									</a>
 								</figure>
-								
+										
 								<blockquote class="media">
 									<img src="/media/img/detail3.jpg" alt="Helmi Geeve" class="pull-left"/>
 									
@@ -384,6 +404,11 @@ samenwerking voor het starten van de duale opleiding Toegepaste Psychologie spec
 									    	<span></span>
 </h2>
 									    <h3>Helmi Geeve</h3>
+									    <ul class="social clearfix">
+									    	<li class="title">Delen</li>
+											<li><a href="" class="fa fa-twitter"><span class="hidden">Twitter</span></a></li>
+											<li><a href="" class="fa fa-linkedin"><span class="hidden">LinkedIn</span></a></li>		
+										</ul>
 									  </div>
 									
 								</blockquote>
@@ -396,6 +421,11 @@ samenwerking voor het starten van de duale opleiding Toegepaste Psychologie spec
 									    	<span></span>
 </h2>
 									    <h3>Helmi Geeve</h3>
+									     <ul class="social clearfix">
+									    	<li class="title">Delen</li>
+											<li><a href="" class="fa fa-twitter"><span class="hidden">Twitter</span></a></li>
+											<li><a href="" class="fa fa-linkedin"><span class="hidden">LinkedIn</span></a></li>		
+										</ul>
 									  </div>
 									
 								</blockquote>
@@ -550,7 +580,8 @@ samenwerking voor het starten van de duale opleiding Toegepaste Psychologie spec
 						<div class="filterlist">
 							<form role="form" class="form">
 						        <div class="form-group">
-						          <input type="text" class="form-control" placeholder="">
+						           <label for="zoekfilter" class="hidden">Filter op trefwoord</label>
+						          <input type="text" class="form-control" id="zoekfilter">
 						        </div>
 						        <button class="btn fa fa-search no-radius" type="submit"><span>Zoeken</span></button>
 						   </form>
@@ -630,12 +661,12 @@ samenwerking voor het starten van de duale opleiding Toegepaste Psychologie spec
     			</div>
     			
     			<ul class="social">
-    				<li class="facebook"><a href="" class="fa fa-facebook"><span>Facebook</span></a></li>
-    				<li class="twitter"><a href="" class="fa fa-twitter"><span>Twitter</span></a></li>
-    				<li class="googleplus"><a href="" class="fa fa-google-plus"><span>Google Plus</span></a></li>
-    				<li class="linkedin"><a href="" class="fa fa-linkedin"><span>Linked In</span></a></li>
-    				<li class="instagram"><a href="" class="fa fa-instagram"><span>Instagram</span></a></li>
-    				<li class="instagram"><a href="" class="fa fa-youtube"><span>Youtube</span></a></li>
+    				<li class="facebook"><a href="" ><span>Facebook</span></a></li>
+    				<li class="twitter"><a href="" ><span>Twitter</span></a></li>
+    				<li class="googleplus"><a href="" ><span>Google Plus</span></a></li>
+    				<li class="linkedin"><a href=""><span>Linked In</span></a></li>
+    				<li class="instagram"><a href=""> <span>Instagram</span></a></li>
+    				<li class="youtube"><a href=""><span>Youtube</span></a></li>
     			</ul>
     			
     		</div>
@@ -665,6 +696,8 @@ samenwerking voor het starten van de duale opleiding Toegepaste Psychologie spec
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="/media/js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
     <script src="/media/js/vendor/bootstrap.min.js"></script>
+    <script src="/media/js/vendor/ekko-lightbox.js"></script>
+    <link rel="stylesheet" href="/media/js/vendor/ekko-lightbox.min.css">
     <script src="/media/js/plugins.js"></script>
     <script src="/media/js/main.js"></script>
 

@@ -1,9 +1,10 @@
 <%@ page contentType="text/html; charset=UTF-8" language="java"	trimDirectiveWhitespaces="true" pageEncoding="UTF-8"%>
 <!doctype html>
 
-<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="${pageContext.request.locale.language}"> <!--<![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8" lang="${pageContext.request.locale.language}"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="${pageContext.request.locale.language}"> <![endif]-->
+<!--[if IE 9]> <html class="no-js lt-ie10" lang="${pageContext.request.locale.language}"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="${pageContext.request.locale.language}"> <!--<![endif]-->
 
 <%-- xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" removed from html declaration --%>
 
@@ -57,23 +58,33 @@
   <link rel="apple-touch-icon" sizes="120x120" href="<hst:link path="/images/icons/touch-icon-120.png"/>">
   <link rel="apple-touch-icon" sizes="152x152" href="<hst:link path="/images/icons/touch-icon-152.png"/>">
   
-  <!-- CSS -->
-  <%-- to be removed 
-  <link rel="stylesheet" href="<hst:link path="/css/style.css" />" type="text/css" /> --%>
-  
+   <!-- CSS -->  
   <link rel="stylesheet" href="<hst:link path="/css/kees/bootstrap.min.css"/>" >
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" >
   <link rel="stylesheet" href="<hst:link path="/css/kees/style.css"/>" >
   <link rel="stylesheet" href="<hst:link path="/css/kees/normalize.css"/>" >
   
+  <script>
+      if ($.browser.msie && $.browser.version == 9) {
+      $("html").addClass("lt-ie10");
+    }
+      
+      if ($.browser.msie && $.browser.version == 10) {
+      $("html").addClass("lt-ie11");
+    }
+    
+    if ($.browser.msie && $.browser.version == 11) {
+      $("html").addClass("ie11");
+    }
+  </script>
+
   <script type="text/javascript" src="<hst:link path="/js/kees/vendor/modernizr-2.6.2.min.js" />"></script>
   <script type="text/javascript" src="<hst:link path="/js/kees/vendor/retina.min.js" />"></script>
   <script type="text/javascript" src="<hst:link path="/js/kees/vendor/respond.js" />"></script>
-  
-  
+    
   <script src="<hst:link path="/js/jquery.min.js" />" type="text/javascript"></script>
   <script src="<hst:link path="/js/jquery.browser.min.js" />" type="text/javascript"></script>
-  
+ 
   <hst:headContributions categoryExcludes="scripts" xhtml="true" />
   
   <c:choose>
@@ -110,9 +121,16 @@
     	<script src="${googleAnalytics}" type="text/javascript"></script>
   	</c:if>
     
-    <script type="text/javascript" src="<hst:link path="/js/kees/main.js" />"></script>
-    <script type="text/javascript" src="<hst:link path="/js/kees/plugins.js" />"></script>
+   <%--   this are causing problems to prettyPhoto - are they absolutely needed ??
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="<hst:link path="/js/kees/vendor/jquery-1.11.1.min.js"/>"><\/script>')</script>
+   --%>
+     
     <script type="text/javascript" src="<hst:link path="/js/kees/vendor/bootstrap.min.js" />"></script>
-    	
+    <script type="text/javascript" src="<hst:link path="/js/kees/vendor/ekko-lightbox.js"/>" ></script>
+    <link rel="stylesheet" href="<hst:link path="/css/kees/ekko-lightbox.min.css"/>" >
+    <script type="text/javascript" src="<hst:link path="/js/kees/plugins.js" />"></script>
+    <script type="text/javascript" src="<hst:link path="/js/kees/main.js" />"></script>
+    
 </body>
 </html>
