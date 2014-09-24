@@ -11,6 +11,15 @@
 
 <hst:setBundle basename="nl.hsleiden.channelmanager.Messages, nl.hsleiden.widget.Messages"/>
 
+<c:set var="position">
+  <c:choose>
+    <c:when test="${hst:isReadable(model.info, 'horizontal') and model.info.horizontal}">
+      col-sm-6
+    </c:when>
+    <c:otherwise></c:otherwise>
+  </c:choose>
+</c:set>
+
 <hst:defineObjects />
 <c:set var="isCmsRequest" value="${hstRequest.requestContext.cmsRequest}" />
 
@@ -24,7 +33,7 @@
     <c:forEach var="item" items="${model.items}" varStatus="zebra">
       <c:if test="${not empty item }">
         
-        <div class="col-xs-12 col-sm-6">
+        <div class="col-xs-12 ${position}">
         
         <article class="tekstitem">
             

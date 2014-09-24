@@ -11,15 +11,15 @@ public interface TwitterFeedInfo {
     public Boolean getUseMixin();
     
     @Parameter(name = "query", displayName = "Zoekopdracht", defaultValue = "")
-    String getQuery();
+    public String getQuery();
 
     @Parameter(name = "from", displayName = "Gebruiker", defaultValue = "")
-    String getFrom();
+    public String getFrom();
 
     @Parameter(name = "limit", displayName = "Max aantal tweets", defaultValue = "5")
-    int getLimit();
+    public int getLimit();
 
     @Parameter(name = "horizontal", displayName = "Tonen horizontaal", defaultValue = "false")
-    Boolean getHorizontal();
+    public Boolean getHorizontal();
 
 }

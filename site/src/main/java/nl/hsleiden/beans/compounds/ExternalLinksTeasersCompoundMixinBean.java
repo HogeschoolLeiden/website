@@ -1,12 +1,13 @@
 package nl.hsleiden.beans.compounds;
 
+import hslbeans.ExternalLinksTeasersCompoundMixin;
 import nl.hsleiden.componentsinfo.ExternalLinksTeasersInfo;
 
 import org.hippoecm.hst.content.beans.Node;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 
 @Node(jcrType = "hsl:ExternalLinksTeasersCompoundMixin")
-public class ExternalLinksTeasersCompoundMixinBean extends hslbeans.ExternalLinksTeasersCompoundMixin implements ExternalLinksTeasersInfo {
+public class ExternalLinksTeasersCompoundMixinBean extends ExternalLinksTeasersCompoundMixin implements ExternalLinksTeasersInfo {
 
     public Boolean getUseMixin() {
         throw new UnsupportedOperationException();
@@ -32,5 +33,9 @@ public class ExternalLinksTeasersCompoundMixinBean extends hslbeans.ExternalLink
             }
         }
         return result;
+    }
+    
+    public Boolean getHorizontal() {
+        return super.getHorizontal();
     }
 }

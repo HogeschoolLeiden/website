@@ -33,4 +33,8 @@ public class TextTeasersCompoundMixinBean extends hslbeans.TextTeasersCompoundMi
         }
         return result;
     }
+    
+    public Boolean getHorizontal() {
+        return super.getHorizontal();
+    }
 }
