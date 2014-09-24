@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="eventpagecommon">
+<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="eventpagecommon">
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>hst:component</sv:value>
   </sv:property>
@@ -20,18 +19,27 @@
       <sv:property sv:name="hst:template" sv:type="String">
         <sv:value>eventpage.main.content</sv:value>
       </sv:property>
+      <sv:node sv:name="right">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:component</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:componentclassname" sv:type="String">
+          <sv:value>nl.hsleiden.components.MainComponent</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:template" sv:type="String">
+          <sv:value>eventpage.main.right</sv:value>
+        </sv:property>
+      </sv:node>
     </sv:node>
     <sv:node sv:name="left">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:component</sv:value>
       </sv:property>
-      <sv:property sv:name="hst:parameternames" sv:type="String"
-        sv:multiple="true">
+      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
         <sv:value>configuration</sv:value>
         <sv:value>facetPath</sv:value>
       </sv:property>
-      <sv:property sv:name="hst:parametervalues" sv:type="String"
-        sv:multiple="true">
+      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
         <sv:value>{"propertyNames":["hsl:subjecttags", "hsl:thematags"]}
         </sv:value>
         <sv:value>pages/actueel/evenementen/events-facetnav</sv:value>

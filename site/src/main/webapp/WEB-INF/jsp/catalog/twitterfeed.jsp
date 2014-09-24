@@ -32,7 +32,7 @@
   
 <c:if test="${fn:length(model.tweets)>0}">
       
-  <div class="button-block twitter">
+  <section class="button-block twitter">
 
     <c:forEach items="${model.tweets}" var="tweet" varStatus="loop">
       <div class="col-sm-4 ${position}">
@@ -53,6 +53,6 @@
       </div>
     </c:forEach>
 
-  </div>
+  </section>
  
 </c:if>

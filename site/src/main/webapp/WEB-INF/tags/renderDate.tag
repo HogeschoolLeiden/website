@@ -55,7 +55,7 @@
   </c:when>
   <c:otherwise>
     <time datetime="${dateTime}" class="${cssDateClass}">
-      <span>${fn:escapeXml(day)}</span>
+      ${fn:escapeXml(day)}
       <span>${fn:escapeXml(month)}</span>
     </time>
   </c:otherwise>

@@ -12,14 +12,10 @@
 
 <c:choose>
   <c:when test="${tag:isInfoBlockDisplayable(document) }">
-    <tag:infoBlock document="${document}"/>
+    <tag:infoBlock document="${document}" event="true"/>
   </c:when>
   <c:otherwise>
-    <figure class="datum large info"> 
-      <img class="info" src="<hst:link hippobean="${document.icon.listImageMedium}"/>"
-         alt="<c:out value="${document.icon.alt}"/>"
-         title="<c:out value="${document.icon.alt}"/>" />  <%-- size:60x60 or width: 60px--%>
-    </figure>
+    <tag:renderDate document="${document}" dateClass="datum large info"/>
   </c:otherwise>
 </c:choose>
 

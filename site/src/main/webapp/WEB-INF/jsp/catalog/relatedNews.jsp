@@ -20,7 +20,7 @@
 
 <c:if test="${not empty model.items }">
 
-<div class="overzichtlijst related events">
+<section class="overzichtlijst related events">
   
   <c:if test="${not empty model.info.widgetTitle}">
     <h2 class="widgetTitle"><c:out value="${model.info.widgetTitle}" escapeXml="true" /></h2>
@@ -74,5 +74,5 @@
     </a>
   </c:if>
   
-</div>
+</section>
 </c:if>

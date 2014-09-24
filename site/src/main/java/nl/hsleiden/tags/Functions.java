@@ -1,9 +1,12 @@
 package nl.hsleiden.tags;
 
 import hslbeans.ArticlePage;
+import hslbeans.BachelorPage;
+import hslbeans.EventPage;
 import hslbeans.ExternalLink;
 import hslbeans.Image;
 import hslbeans.ImageTeaser;
+import hslbeans.InfoBlock;
 import hslbeans.InternalLink;
 import hslbeans.WebPage;
 
@@ -184,4 +187,26 @@ public class Functions {
         return result;
     }
     
+    public static Boolean isInfoBlockDisplayable(HippoBean document){
+        boolean result = false;
+        
+        if(document instanceof EventPage){
+            EventPage event = (EventPage) document;
+            result = checkInfoBlock(event.getInfoBlock());
+        }else if (document instanceof BachelorPage){
+            BachelorPage bachelor = (BachelorPage) document;
+            result = checkInfoBlock(bachelor.getInfoBlock());
+        }
+        
+        return result;
+    }
+
+    private static boolean checkInfoBlock(InfoBlock infoBlock) {
+        boolean result = false;
+        if(infoBlock!=null && 
+           (!infoBlock.getInfoText().isEmpty() || infoBlock.getInfoLink()!=null || !infoBlock.getInfoLines().isEmpty())){
+           result = true; 
+        }
+        return result;
+    }    
 }

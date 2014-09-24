@@ -20,7 +20,7 @@
 
 <c:if test="${not empty model.items and fn:length(model.items)>0}">
 
-  <div class="catalog head teasers">
+  <section class="catalog head teasers">
         
     <c:forEach var="item" items="${model.items}" varStatus="zebra">
       <c:if test="${not empty item }">
@@ -53,5 +53,5 @@
       </c:if>
     </c:forEach>
     
-  </div>
+  </section>
 </c:if>

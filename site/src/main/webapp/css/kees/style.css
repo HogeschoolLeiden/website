@@ -3687,47 +3687,29 @@ figure.fexibleblock.image img {
 }
 
 /* info block bachelors */
-.aside section.blok.colorbg.lichtpaars.info {
-	display: block;
-	float: left;
-}
+.col-md-4.col-sm-4.aside figure.datum.large.info{position: absolute; left: -50px; top: -60px; padding-top: 20px; z-index: 1}
+.col-md-4.col-sm-4.aside time.datum.large.info{position: absolute; left: -50px; top: -60px; z-index: 1}
+	
+.col-md-4.col-sm-4.aside figure.datum.large.info img.info{width: 60px;}
 
-.aside section.blok.colorbg.lichtpaars.info ul {
-	display: block;
-	float: left;
-	width: 100%;
-}
+.aside section.blok.colorbg.lichtpaars.info { display: block; float: left; }
+.aside section.blok.colorbg.lichtpaars.info.nolink { display: block; float: left; padding-bottom: 30px;}
+.aside section.blok.colorbg.lichtpaars.info ul { display: block; float: left; width: 100%; }
+.aside section.blok.colorbg.lichtpaars.info ul li {	display: block; float: left; padding-left: 0; }
+.aside section.blok.colorbg.lichtpaars.info ul li img { display: block; float: left; }
+.aside section.blok.colorbg.lichtpaars.info ul li span.details { display: block; float: left; padding-left: 10px; }
+.aside section.blok.colorbg.lichtpaars.info p { display: block; float: left; }
+.aside section.blok.colorbg.lichtpaars.info a { display: block; float: left; }
+.aside section.blok.colorbg.lichtpaars.info img.datum.large { padding-top: 0; }
 
-.aside section.blok.colorbg.lichtpaars.info ul li {
-	display: block;
-	float: left;
-	padding-left: 0;
-}
 
-.aside section.blok.colorbg.lichtpaars.info ul li img {
-	display: block;
-	float: left;
-}
+/*
+	for some (yet) unclear reason, if there is an info block, the widgets of the right side
+	get pushed outside the side of the page and do not get displayed
 
-.aside section.blok.colorbg.lichtpaars.info ul li span.details {
-	display: block;
-	float: left;
-	padding-left: 10px;
-}
+*/
+.aside section {float: left;}
 
-.aside section.blok.colorbg.lichtpaars.info p {
-	display: block;
-	float: left;
-}
-
-.aside section.blok.colorbg.lichtpaars.info a {
-	display: block;
-	float: left;
-}
-
-.aside section.blok.colorbg.lichtpaars.info img.datum.large {
-	padding-top: 0;
-}
 
 /* bachelors facet */
 .studiefilter.filter-collapse ul li {

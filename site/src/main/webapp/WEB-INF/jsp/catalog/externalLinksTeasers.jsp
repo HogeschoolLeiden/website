@@ -19,7 +19,9 @@
 </c:if>
 
 <c:if test="${not empty model.items and fn:length(model.items)>0}">
-        
+  
+  <section class="catalog internalLinks teasers">     
+  
     <c:forEach var="item" items="${model.items}" varStatus="zebra">
       <c:if test="${not empty item }">
         
@@ -69,5 +71,5 @@
         
       </c:if>
     </c:forEach>
-    
+  </section>  
 </c:if>
