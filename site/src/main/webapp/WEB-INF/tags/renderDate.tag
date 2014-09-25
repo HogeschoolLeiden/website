@@ -47,9 +47,8 @@
 
 <c:choose>
   <c:when test="${showYear}">
-    <time datetime="${dateTime}" class="${cssDateClass} year">
-      <span>${fn:escapeXml(day)}</span> 
-      <span>${fn:escapeXml(month)}</span>
+    <time datetime="${dateTime}" class="${cssDateClass}">
+      ${fn:escapeXml(month)}
       <span>${fn:escapeXml(year)}</span>
     </time>
   </c:when>

@@ -23,7 +23,7 @@
 <section class="catalog image teasers">
 
   <c:forEach var="item" items="${model.items}" varStatus="zebra">
-    <section class="blok beeldbank">
+    <section class="blok download image">
       <c:choose>
         
         <%-- External link case --%>
@@ -41,7 +41,7 @@
           </c:set>
           
           <a href="${item.externallink.linkUrl}" title="${alt}" ${item.externallink.newWindow ? 'class="external link" target="_blank"': '' }>      
-              <div class="large imageTeaser">
+              <div class="img">
                  <img src="<hst:link hippobean="${item.image.teaserImage }" />" 
                       alt="<c:out value="${item.image.alt }" escapeXml="true" />" />
               </div>
@@ -57,7 +57,7 @@
         <c:when test="${tag:getConfiguredLink(item) eq 'int' }">
           <c:set var="link"><hst:link hippobean="${item.internallink.link }" /></c:set>
           <a href="${link}" title="${item.internallink.alt}">
-              <div class="large imageTeaser">
+              <div class="img">
                  <img src="<hst:link hippobean="${item.image.teaserImage }" />" 
                       alt="<c:out value="${item.image.alt }" escapeXml="true" />" />
               </div>
@@ -71,7 +71,7 @@
         
         <%-- Just image, no link case --%>        
         <c:otherwise>
-          <div class="large imageTeaser">
+          <div class="img">
              <img src="<hst:link hippobean="${item.image.teaserImage }" />" 
                   alt="<c:out value="${item.image.alt }" escapeXml="true" />" 
                   title="<c:out value="${item.image.alt }" escapeXml="true" />" />

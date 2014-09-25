@@ -3565,7 +3565,7 @@ figure.fexibleblock.image img {
 }
 
 /* image teaser */
-.blok.beeldbank img.icon.imageTeaser {
+.blok.download.image img.icon.imageTeaser {
 	width: 100px;
 	height: 100px;
 	border-radius: 50%;
@@ -3576,15 +3576,8 @@ figure.fexibleblock.image img {
 	padding: 15px;
 	background: center #fff;
 }
-
-.blok.beeldbank div.large.imageTeaser {
-	width: 100%;
-	height: 100%;
-}
-
-.blok.beeldbank .icon.imageTeaser+.btn {
-	margin-top: -125px
-}
+.catalog.image.teasers, .blok.download.image, .blok.download.image a .img img { width: 100%;}
+.catalog.image.teasers section.blok.download.image{ padding: 0; margin: 20px 0;}
 
 /* landing page titels */
 .col-sm-6.col-md-3.area .truncate {
@@ -3658,7 +3651,6 @@ figure.fexibleblock.image img {
 /*
 	for some (yet) unclear reason, if there is an info block, the widgets of the right side
 	get pushed outside the side of the page and do not get displayed
-
 */
 .aside section {float: left;}
 
@@ -3670,7 +3662,7 @@ figure.fexibleblock.image img {
 .studiefilter ul li label { padding-left: 38px; }
 .studiefilter.filter-collapse ul li a:hover { text-decoration: none; }
 
-/* text, internal and external can display on the right */
+/* text, internal and external teasers can display on the right */
 .aside .catalog.internalLinks.teasers .col-sm-6,
 .aside .catalog.externalLinks.teasers .col-sm-6,
 .aside .catalog.text.teasers .col-sm-6 { width: 100%;}
@@ -3678,3 +3670,21 @@ figure.fexibleblock.image img {
 .aside .catalog.internalLinks.teasers .tekstitem ul li,
 .aside .catalog.externalLinks.teasers ul li { 
 	padding-left: 20px; background: url("../img/li.png") 2px 6px no-repeat; background-size: 6px 6px; }
+
+/* image and head teasers can display in the middle */
+.content .catalog.head.teasers, .content .catalog.image.teasers { width: 100%; }
+
+.content .catalog.head.teasers .blok.colorbg.blauw.large a h1 { color: rgb(255, 255, 255); font-size: 3.429em; 
+		margin-bottom: 0px; line-height: .8em;}	
+		
+.content .catalog.head.teasers .blok.colorbg.blauw.large a h2, 
+.content .catalog.head.teasers .blok.colorbg.groen.medium a h2 { color: rgb(255, 255, 255); font-size: 1.714em; 
+		margin-bottom: 0px; line-height: 1.1; font-family: source_sans_prolight;}	
+
+.content .catalog.head.teasers .blok.colorbg.groen.medium a h1 { color: rgb(255, 255, 255); font-size: 2.571em;
+		 margin-bottom: 0px; line-height: .8em;}	
+
+
+
+
+	
