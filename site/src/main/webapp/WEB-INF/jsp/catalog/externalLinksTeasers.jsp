@@ -11,15 +11,6 @@
 
 <hst:setBundle basename="nl.hsleiden.channelmanager.Messages, nl.hsleiden.widget.Messages"/>
 
-<c:set var="position">
-  <c:choose>
-    <c:when test="${hst:isReadable(model.info, 'horizontal') and model.info.horizontal}">
-      col-sm-6
-    </c:when>
-    <c:otherwise></c:otherwise>
-  </c:choose>
-</c:set>
-
 <hst:defineObjects />
 <c:set var="isCmsRequest" value="${hstRequest.requestContext.cmsRequest}" />
 
@@ -29,12 +20,12 @@
 
 <c:if test="${not empty model.items and fn:length(model.items)>0}">
   
-  <section class="catalog internalLinks teasers">     
+  <section class="catalog externalLinks teasers">     
   
     <c:forEach var="item" items="${model.items}" varStatus="zebra">
       <c:if test="${not empty item }">
         
-        <div class="col-xs-12 ${position}">
+        <div class="col-xs-12 col-sm-6">
         
         <article class="tekstitem">
             
@@ -69,8 +60,7 @@
                 </li>
               </c:forEach>
             </ul>
-            
-            
+                        
             <c:set var="displayLink"><hst:link hippobean="${item.link.link }" /></c:set>
             <a class="more" href="${displayLink}" title="${item.link.alt}"><c:out value="${item.link.linkTitle}"/></a>
             

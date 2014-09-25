@@ -3500,31 +3500,16 @@ figure.fexibleblock.image img {
 }
 
 /* twitter */
-.button-block.twitter {
-	width: 100%;
-	float: left;
-}
+.button-block.twitter { width: 100%; float: left; }
+.button-block.twitter img { width: 100%; }
 
-.button-block.twitter img {
-	width: 100%;
-}
+.twitteritem h2 { margin-bottom: 0; }
+.twitteritem h3 { margin-top: 0; margin-bottom: 0; }
 
-.twitteritem h2 {
-	margin-bottom: 0;
-}
+.aside .button-block.twitter .col-sm-4,
+.aside .button-block.twitter .col-sm-4.half { width: auto; }
 
-.twitteritem h3 {
-	margin-top: 0;
-	margin-bottom: 0;
-}
-
-.col-sm-4.vertical {
-	width: auto;
-}
-
-.col-sm-4.horizontal2 {
-	width: 50%;
-}
+.button-block.twitter .col-sm-4.half { width: 50%; }
 
 /* facet navigation */
 .filterlist .checkbox .cbimg {
@@ -3532,50 +3517,17 @@ figure.fexibleblock.image img {
 }
 
 /* temporary blog author */
-.panel-body p {
-	margin: 0;
-}
+.panel-body p { margin: 0; }
+.panel-body .pull-left { margin-right: 10px; }
+.panel-body .media-body { width: 50%; padding: 0; }
 
-.panel-body .pull-left {
-	margin-right: 10px;
-}
+.panel-body .media-body ul.social { list-style-type: none; width: 100%; padding: 0; display: block; 
+		float: left; margin-top: 5px; margin-bottom: 20px; }
+		
+.panel-body .media-body ul.social li { display: inline; float: left; background: #23114c; width: 20px;
+		height: 20px; text-align: center; margin-left: 7px; }
 
-.panel-body .media-body {
-	width: 50%;
-	padding: 0;
-}
-
-.panel-body .media-body ul.social {
-	list-style-type: none;
-	width: 100%;
-	padding: 0;
-	display: block;
-	float: left;
-	margin-top: 5px;
-	margin-bottom: 20px;
-}
-
-.panel-body .media-body ul.social li {
-	display: inline;
-	float: left;
-	background: #23114c;
-	width: 20px;
-	height: 20px;
-	text-align: center;
-	margin-left: 7px;
-}
-
-.panel-body .media-body ul.social li a {
-	color: rgb(255, 255, 255);
-	margin-top: 3px;
-}
-
-/* date with year*/
-.datum.year {
-	width: 50px;
-	height: 50px;
-	border-radius: 25px;
-}
+.panel-body .media-body ul.social li a { color: rgb(255, 255, 255); margin-top: 3px; }
 
 /* faq overview page */
 .media-body.accordian h2.media-heading {
@@ -3712,26 +3664,17 @@ figure.fexibleblock.image img {
 
 
 /* bachelors facet */
-.studiefilter.filter-collapse ul li {
-	padding-left: 0;
-}
+.studiefilter.filter-collapse ul li { padding-left: 0; }
+.studiefilter.filter-collapse ul li a { display: block; float: left; width: 100%; }
+.studiefilter.filter-collapse ul li a img.cbimg { position: absolute; top: -1px; z-index: 2; }
+.studiefilter ul li label { padding-left: 38px; }
+.studiefilter.filter-collapse ul li a:hover { text-decoration: none; }
 
-.studiefilter.filter-collapse ul li a {
-	display: block;
-	float: left;
-	width: 100%;
-}
+/* text, internal and external can display on the right */
+.aside .catalog.internalLinks.teasers .col-sm-6,
+.aside .catalog.externalLinks.teasers .col-sm-6,
+.aside .catalog.text.teasers .col-sm-6 { width: 100%;}
 
-.studiefilter.filter-collapse ul li a img.cbimg {
-	position: absolute;
-	top: -1px;
-	z-index: 2;
-}
-
-.studiefilter ul li label {
-	padding-left: 38px;
-}
-
-.studiefilter.filter-collapse ul li a:hover {
-	text-decoration: none;
-}
+.aside .catalog.internalLinks.teasers .tekstitem ul li,
+.aside .catalog.externalLinks.teasers ul li { 
+	padding-left: 20px; background: url("../img/li.png") 2px 6px no-repeat; background-size: 6px 6px; }

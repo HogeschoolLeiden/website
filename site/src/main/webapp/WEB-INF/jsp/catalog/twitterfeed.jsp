@@ -12,15 +12,7 @@
 <hst:setBundle basename="nl.hsleiden.channelmanager.Messages, nl.hsleiden.widget.Messages"/>
 
 <c:set var="position">
-  <c:choose>
-    <c:when test="${hst:isReadable(model.paramInfo, 'horizontal') and model.paramInfo.horizontal}">
-      <c:choose>
-        <c:when test="${fn:length(model.tweets) eq 2}">horizontal2</c:when>
-        <c:otherwise>horizontal</c:otherwise>
-      </c:choose>
-    </c:when>
-    <c:otherwise>vertical</c:otherwise>
-  </c:choose>
+  <c:if test="${fn:length(model.tweets) % 2 eq 0}">half</c:if>
 </c:set>
 
 <hst:defineObjects />

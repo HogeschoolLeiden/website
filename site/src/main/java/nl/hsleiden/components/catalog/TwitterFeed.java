@@ -56,7 +56,11 @@ public class TwitterFeed extends AjaxEnabledComponent {
                 completeQuery += searchQuery;
             }
     
-            model.put("tweets", getTweets(completeQuery, parametersInfo, request));
+            if(parametersInfo.getLimit()!=0){                
+                model.put("tweets", getTweets(completeQuery, parametersInfo, request));
+            }else{
+               request.setAttribute(WidgetConstants.WEB_MASTER_MESSAGE, "webmaster.0.tweets.message"); 
+            }
             
             return model;
         } catch (RepositoryException e) {
