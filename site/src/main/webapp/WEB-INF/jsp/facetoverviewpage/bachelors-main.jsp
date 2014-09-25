@@ -40,9 +40,7 @@
                     
                     <c:set var="image" value=""/>
                     <c:if test="${not empty item.icon }">
-                      <div class="image-space">
                         <hst:link var="image" hippobean="${item.icon.listImageMedium}" />  
-                      </div>
                     </c:if>
                   
                     <a href="${link}">

@@ -3589,37 +3589,62 @@ figure.fexibleblock.image img {
 }
 
 /* related items */
-.aside .overzichtlijst.related {
+.aside .overzichtlijst.related,
+.content .overzichtlijst.related, 
+nav.col-md-3.col-xs-12 .overzichtlijst.related {
 	padding: 0;
 }
 
-.aside .overzichtlijst.related article {
+.aside .overzichtlijst.related article,
+.content .overzichtlijst.related article,
+nav.col-md-3.col-xs-12 .overzichtlijst.related article {
 	padding-top: 0;
 	padding-bottom: 12px;
+	padding-left: 0;
+	padding-right: 0;
 }
 
-.aside .overzichtlijst.related article a {
+.aside .overzichtlijst.related article a,
+.content .overzichtlijst.related article a,
+nav.col-md-3.col-xs-12 .overzichtlijst.related article a {
 	width: 100%;
 	display: block;
 }
 
-.aside .overzichtlijst.related figure.media-object.pull-left {
+.aside .overzichtlijst.related figure.media-object.pull-left,
+nav.col-md-3.col-xs-12 .overzichtlijst.related figure.media-object.pull-left {
 	margin-right: 10px;
 	width: 60px;
 	height: 60px;
 }
 
-.aside .overzichtlijst.related .media .datum {
-	left: 10px;
+.content .overzichtlijst.related figure.media-object.pull-left {
+	margin-right: 10px;
+	width: 100px;
+	height: 100px;
+}
+
+.aside .overzichtlijst.related .media .datum,
+nav.col-md-3.col-xs-12 .overzichtlijst.related .media .datum{
+	left: 0;
 	top: 20px;
 }
 
-.aside .overzichtlijst.related a.more {
+.content .overzichtlijst.related .media .datum {
+	left: 0;
+	top: 60px;
+}
+
+.aside .overzichtlijst.related a.more,
+.content .overzichtlijst.related a.more,
+nav.col-md-3.col-xs-12 .overzichtlijst.related a.more {
 	margin-top: 0;
 	margin-bottom: 15px;
 }
 
-.aside .widgetTitle {
+.aside .overzichtlijst.related h2.widgetTitle, 
+.content .overzichtlijst.related h2.widgetTitle,
+nav.col-md-3.col-xs-12 .overzichtlijst.related h2.widgetTitle {
 	font-size: 1.571em;
 	color: #23114c;
 	font-family: 'source_sans_proregular';
@@ -3628,7 +3653,6 @@ figure.fexibleblock.image img {
 	font-weight: 400;
 	display: inline-block;
 	margin: 0 0 0.7em 0;
-	padding-left: 10px;
 }
 
 /* info block bachelors */
@@ -3646,7 +3670,6 @@ figure.fexibleblock.image img {
 .aside section.blok.colorbg.lichtpaars.info p { display: block; float: left; }
 .aside section.blok.colorbg.lichtpaars.info a { display: block; float: left; }
 .aside section.blok.colorbg.lichtpaars.info img.datum.large { padding-top: 0; }
-
 
 /*
 	for some (yet) unclear reason, if there is an info block, the widgets of the right side

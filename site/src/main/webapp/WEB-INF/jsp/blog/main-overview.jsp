@@ -56,9 +56,7 @@
                   
                   <c:set var="image" value=""/>
                   <c:if test="${not empty tag:getFirstFlexibleBlockImage(item) }">
-                    <div class="image-space">
                       <hst:link var="image" hippobean="${tag:getFirstFlexibleBlockImage(item).image.listImageMedium}" />  
-                    </div>
                   </c:if>
                 
                   <a href="${link}">
