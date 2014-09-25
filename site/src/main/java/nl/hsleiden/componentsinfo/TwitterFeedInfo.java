@@ -19,7 +19,4 @@ public interface TwitterFeedInfo {
     @Parameter(name = "limit", displayName = "Max aantal tweets", defaultValue = "5")
     public int getLimit();
 
-    @Parameter(name = "horizontal", displayName = "Tonen horizontaal", defaultValue = "false")
-    public Boolean getHorizontal();
-
 }

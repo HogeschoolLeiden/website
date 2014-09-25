@@ -23,11 +23,6 @@ public class TwitterCompoundMixinBean extends TwitterCompoundMixin implements Tw
     public String getFrom() {
         return getTwitterParameters().getFrom();
     }
-
-    @Override
-    public Boolean getHorizontal() {
-        return getTwitterParameters().getHorizontal();
-    }
     
     @Override
     public String getQuery() {

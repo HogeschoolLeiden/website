@@ -19,7 +19,5 @@ public interface TextTeasersInfo {
     @Parameter(name = Constants.WidgetConstants.TEASER_2, defaultValue = "")
     @JcrPath(isRelative = false, pickerInitialPath = Constants.WidgetConstants.TEASERS_INITIAL_LOCATION, pickerRemembersLastVisited=false, pickerSelectableNodeTypes = { TextTeaser.JCR_TYPE })
     public String getSecondTeaser();
-    
-    @Parameter(name = "horizontal", displayName = "Tonen horizontaal", defaultValue = "false")
-    public Boolean getHorizontal();
+
 }

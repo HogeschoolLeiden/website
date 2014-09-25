@@ -34,8 +34,4 @@ public class InternalLinksTeasersCompoundMixinBean extends InternalLinksTeasersC
         }
         return result;
     }
-    
-    public Boolean getHorizontal() {
-        return super.getHorizontal();
-    }
 }
