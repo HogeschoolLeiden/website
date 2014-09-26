@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="new-blog-folder">
+<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="new-event-folder">
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>hippostd:templatequery</sv:value>
   </sv:property>
@@ -24,7 +24,7 @@
     <sv:value>xpath</sv:value>
   </sv:property>
   <sv:property sv:name="jcr:statement" sv:type="String">
-    <sv:value>/jcr:root/hippo:configuration/hippo:queries/hippo:templates/new-blog-folder/hippostd:templates/node()</sv:value>
+    <sv:value>/jcr:root/hippo:configuration/hippo:queries/hippo:templates/new-event-folder/hippostd:templates/node()</sv:value>
   </sv:property>
   <sv:node sv:name="hippostd:templates">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -43,9 +43,8 @@
       </sv:property>
       <sv:property sv:name="hippo:related___pathreference" sv:type="String"/>
       <sv:property sv:name="hippostd:foldertype" sv:type="String" sv:multiple="true">
-        <sv:value>new-blog-document</sv:value>
-        <sv:value>new-blogauthor-document</sv:value>
-        <sv:value>new-blog-folder</sv:value>
+        <sv:value>new-event-page</sv:value>
+        <sv:value>new-event-folder</sv:value>
       </sv:property>
       <sv:property sv:name="hippotranslation:id" sv:type="String">
         <sv:value>generated id</sv:value>
@@ -71,7 +70,7 @@
       <sv:value>en</sv:value>
     </sv:property>
     <sv:property sv:name="hippo:message" sv:type="String">
-      <sv:value>new blog folder</sv:value>
+      <sv:value>new event folder</sv:value>
     </sv:property>
   </sv:node>
   <sv:node sv:name="hippo:translation">
@@ -85,7 +84,7 @@
       <sv:value>nl</sv:value>
     </sv:property>
     <sv:property sv:name="hippo:message" sv:type="String">
-      <sv:value>nieuwe blog post map</sv:value>
+      <sv:value>nieuwe event map</sv:value>
     </sv:property>
   </sv:node>
 </sv:node>
