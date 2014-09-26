@@ -152,14 +152,25 @@
       <sv:value>Configuratie</sv:value>
     </sv:property>
   </sv:node>
+  <sv:node sv:name="hippo:translation">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hippo:translation</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:language" sv:type="String">
+      <sv:value/>
+    </sv:property>
+    <sv:property sv:name="hippo:message" sv:type="String">
+      <sv:value>Configuratie</sv:value>
+    </sv:property>
+  </sv:node>
   <sv:node sv:name="valuelists">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hippostd:folder</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
       <sv:value>hippotranslation:translated</sv:value>
-      <sv:value>mix:versionable</sv:value>
       <sv:value>hippo:translated</sv:value>
+      <sv:value>mix:versionable</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>0710213c-430e-44b9-871c-dabb4f22d510</sv:value>
@@ -500,6 +511,28 @@
           </sv:property>
           <sv:property sv:name="selection:label" sv:type="String">
             <sv:value>december</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="selection:listitem">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>selection:listitem</sv:value>
+          </sv:property>
+          <sv:property sv:name="selection:key" sv:type="String">
+            <sv:value>minder € 500</sv:value>
+          </sv:property>
+          <sv:property sv:name="selection:label" sv:type="String">
+            <sv:value>&lt; € 500</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="selection:listitem">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>selection:listitem</sv:value>
+          </sv:property>
+          <sv:property sv:name="selection:key" sv:type="String">
+            <sv:value>meer € 3000</sv:value>
+          </sv:property>
+          <sv:property sv:name="selection:label" sv:type="String">
+            <sv:value>&gt; € 3000</sv:value>
           </sv:property>
         </sv:node>
       </sv:node>
@@ -940,7 +973,7 @@
             <sv:value>techniek-pathologie-histotechnologie</sv:value>
           </sv:property>
           <sv:property sv:name="selection:label" sv:type="String">
-            <sv:value>Pathologie-Histotechnologie</sv:value>
+            <sv:value>Pathologie Histotechnologie</sv:value>
           </sv:property>
         </sv:node>
         <sv:node sv:name="selection:listitem">
@@ -951,7 +984,7 @@
             <sv:value>techniek-immunologie-immunochemie</sv:value>
           </sv:property>
           <sv:property sv:name="selection:label" sv:type="String">
-            <sv:value>Immunologie-Immunochemie</sv:value>
+            <sv:value>Immunologie Immunochemie</sv:value>
           </sv:property>
         </sv:node>
         <sv:node sv:name="selection:listitem">
@@ -1436,8 +1469,8 @@
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
       <sv:value>hippotranslation:translated</sv:value>
-      <sv:value>mix:versionable</sv:value>
       <sv:value>hippo:translated</sv:value>
+      <sv:value>mix:versionable</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>9d40f53f-c9e7-4a90-9a4f-706c3396eaf5</sv:value>
