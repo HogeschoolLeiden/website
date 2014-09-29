@@ -1392,4 +1392,168 @@
       <sv:value>componenten/formulieren/standard-forms/eform-double-mail-store-groups</sv:value>
     </sv:property>
   </sv:node>
+  <sv:node sv:name="onderzoek">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:sitemapitem</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+      <sv:value>hst:pages/onderzoeklandingpage</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+      <sv:value>columnNr</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+      <sv:value>4</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:refId" sv:type="String">
+      <sv:value>onderzoek</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+      <sv:value>pages/onderzoek/onderzoek</sv:value>
+    </sv:property>
+    <sv:node sv:name="jeugd">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:sitemapitem</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+        <sv:value>hst:pages/pagenotfound</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+        <sv:value>pages/onderzoek/jeugd/index</sv:value>
+      </sv:property>
+      <sv:node sv:name="_any_">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:sitemapitem</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+          <sv:value>hst:pages/pagenotfound</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:componentconfigurationmappingnames" sv:type="String" sv:multiple="true">
+          <sv:value>hsl:ArticlePage</sv:value>
+          <sv:value>hsl:EventPage</sv:value>
+          <sv:value>hsl:NewsPage</sv:value>
+          <sv:value>hsl:PersPage</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:componentconfigurationmappingvalues" sv:type="String" sv:multiple="true">
+          <sv:value>hst:pages/researcharticlepage</sv:value>
+          <sv:value>hst:pages/unfacetedeventpage</sv:value>
+          <sv:value>hst:pages/unfacetednewspage</sv:value>
+          <sv:value>hst:pages/perspage</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+          <sv:value>pages/onderzoek/jeugd/${1}</sv:value>
+        </sv:property>
+      </sv:node>
+    </sv:node>
+    <sv:node sv:name="life-science">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:sitemapitem</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+        <sv:value>hst:pages/pagenotfound</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+        <sv:value>pages/onderzoek/life-science/index</sv:value>
+      </sv:property>
+      <sv:node sv:name="_any_">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:sitemapitem</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+          <sv:value>hst:pages/pagenotfound</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:componentconfigurationmappingnames" sv:type="String" sv:multiple="true">
+          <sv:value>hsl:ArticlePage</sv:value>
+          <sv:value>hsl:EventPage</sv:value>
+          <sv:value>hsl:NewsPage</sv:value>
+          <sv:value>hsl:PersPage</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:componentconfigurationmappingvalues" sv:type="String" sv:multiple="true">
+          <sv:value>hst:pages/researcharticlepage</sv:value>
+          <sv:value>hst:pages/unfacetedeventpage</sv:value>
+          <sv:value>hst:pages/unfacetednewspage</sv:value>
+          <sv:value>hst:pages/perspage</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+          <sv:value>pages/onderzoek/life-science/${1}</sv:value>
+        </sv:property>
+      </sv:node>
+    </sv:node>
+    <sv:node sv:name="zorg">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:sitemapitem</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+        <sv:value>hst:pages/pagenotfound</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+        <sv:value>pages/onderzoek/zorg/index</sv:value>
+      </sv:property>
+      <sv:node sv:name="_any_">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:sitemapitem</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+          <sv:value>hst:pages/pagenotfound</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:componentconfigurationmappingnames" sv:type="String" sv:multiple="true">
+          <sv:value>hsl:ArticlePage</sv:value>
+          <sv:value>hsl:EventPage</sv:value>
+          <sv:value>hsl:NewsPage</sv:value>
+          <sv:value>hsl:PersPage</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:componentconfigurationmappingvalues" sv:type="String" sv:multiple="true">
+          <sv:value>hst:pages/researcharticlepage</sv:value>
+          <sv:value>hst:pages/unfacetedeventpage</sv:value>
+          <sv:value>hst:pages/unfacetednewspage</sv:value>
+          <sv:value>hst:pages/perspage</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+          <sv:value>pages/onderzoek/zorg/${1}</sv:value>
+        </sv:property>
+      </sv:node>
+    </sv:node>
+    <sv:node sv:name="overige-lectoraten-en-kennisnetwerken">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:sitemapitem</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+        <sv:value>hst:pages/pagenotfound</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+        <sv:value>pages/onderzoek/overige-lectoraten-en-kennisnetwerken/index</sv:value>
+      </sv:property>
+      <sv:node sv:name="_any_">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:sitemapitem</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+          <sv:value>hst:pages/pagenotfound</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:componentconfigurationmappingnames" sv:type="String" sv:multiple="true">
+          <sv:value>hsl:ArticlePage</sv:value>
+          <sv:value>hsl:EventPage</sv:value>
+          <sv:value>hsl:NewsPage</sv:value>
+          <sv:value>hsl:PersPage</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:componentconfigurationmappingvalues" sv:type="String" sv:multiple="true">
+          <sv:value>hst:pages/researcharticlepage</sv:value>
+          <sv:value>hst:pages/unfacetedeventpage</sv:value>
+          <sv:value>hst:pages/unfacetednewspage</sv:value>
+          <sv:value>hst:pages/perspage</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+          <sv:value>pages/onderzoek/overige-lectoraten-en-kennisnetwerken/${1}</sv:value>
+        </sv:property>
+      </sv:node>
+    </sv:node>
+  </sv:node>
 </sv:node>
