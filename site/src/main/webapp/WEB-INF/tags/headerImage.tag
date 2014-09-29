@@ -15,8 +15,17 @@
     
     <div class="background img">
       <div class="img">
-        <%-- afmeting afbeelindg: 1280x621 --%>
-        <hst:link var="img" hippobean="${document.headerImage.allWidthImage}"/>
+        <%-- afmeting afbeelindg: 1280x620 --%>
+        <%-- 
+          <hst:link var="img" hippobean="${document.headerImage.detailBackground}"/> 
+        --%>
+        <%--  
+          <hst:link var="img" hippobean="${document.headerImage.detailBackgroundSmall}"/> 
+        --%>
+        <%-- 
+        --%>
+         <hst:link var="img" hippobean="${document.headerImage.allWidthImage}"/> 
+        
         <c:if test="${not empty img }">
             <img src="${img}" title="<c:out value="${document.headerImage.alt}"/>"
                  alt="<c:out value="${document.headerImage.alt}"/>"/>

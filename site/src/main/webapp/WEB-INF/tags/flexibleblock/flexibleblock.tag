@@ -17,6 +17,7 @@
 	<c:choose>
 		<c:when test="${block['class'].name == 'hslbeans.Paragraph' }">
 			<tag:paragraphblock content="${block}"/>
+            <div class="hr"><hr /></div>
 		</c:when>
 		<c:when test="${block['class'].name == 'hslbeans.Image' }">
 			<tag:imageblock content="${block }" event="${event}"/>

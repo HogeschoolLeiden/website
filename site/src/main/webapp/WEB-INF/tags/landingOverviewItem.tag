@@ -22,7 +22,7 @@
         
        <figure>
          <img  class="img-responsive"
-               src="<hst:link hippobean="${item.highLighted.headerImage.paragraphImage }" />" 
+               src="<hst:link hippobean="${item.highLighted.headerImage.landing }" />" 
                alt="<c:out value="${item.highLighted.title }" escapeXml="true" />" 
                title="<c:out value="${item.highLighted.title }" escapeXml="true" />" />
        </figure>

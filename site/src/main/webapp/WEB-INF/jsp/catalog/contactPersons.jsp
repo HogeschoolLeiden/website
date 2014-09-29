@@ -51,7 +51,7 @@
           
           <figure class="col-md-4 col-xs-4 pull-left">
             <!-- img size 60 x 60 -->
-            <hst:link var="image" hippobean="${item.image.listImageMedium }" />
+            <hst:link var="image" hippobean="${item.image.listImageSmall }" />
             <img itemprop="photo" alt="${item.name }" src="${image }" title="${item.name }" />
             
             <c:if test="${fn:length(item.accounts)>0}">

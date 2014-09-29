@@ -14,12 +14,12 @@
 <figure class="${position}">
 <c:choose>
     <c:when test="${position == 'left' || position == 'right'}">
-        <img src="<hst:link hippobean="${image.paragraphImageLink.paragraphImage }" />" 
+        <img src="<hst:link hippobean="${image.paragraphImageLink.paragraph }" />" 
              alt="<c:out value="${image.paragraphImageLink.alt }" escapeXml="true" />" 
              title="<c:out value="${image.paragraphImageLink.alt }" escapeXml="true" />" />
     </c:when>
     <c:otherwise>
-        <img  src="<hst:link hippobean="${image.paragraphImageLink.wideImage }" />" 
+        <img  src="<hst:link hippobean="${image.paragraphImageLink.article }" />" 
               alt="<c:out value="${image.paragraphImageLink.alt }" escapeXml="true" />" 
               title="<c:out value="${image.paragraphImageLink.alt }" escapeXml="true" />" />
     </c:otherwise>

@@ -14,12 +14,12 @@
 <c:if test="${not empty content.image }">
   <c:set var="imageTag">
     <figure class="fexibleblock image">
-      <img  ${event ? 'itemprop="photo"': ''} src="<hst:link hippobean="${content.image.wideImage }" />" 
+      <img  ${event ? 'itemprop="photo"': ''} src="<hst:link hippobean="${content.image.article }" />" 
             alt="<c:out value="${content.image.alt }" escapeXml="true" />" 
             title="<c:out value="${content.image.alt }" escapeXml="true" />" />
       
       <hst:headContribution category="metadata" keyHint="image">
-        <meta property="og:image" content="<hst:link hippobean="${content.image.wideImage }" />"/>
+        <meta property="og:image" content="<hst:link hippobean="${content.image.article }" />"/>
       </hst:headContribution>      
       
             <c:if test="${not empty content.image.description }">

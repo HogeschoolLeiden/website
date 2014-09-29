@@ -15,21 +15,21 @@
       
       <hst:include ref="contentTop" />
       
-      <div class="content">
-        <h1><span><c:out value="${document.title }" /></span></h1>
-      </div>
-      
       <c:choose>
         <c:when test="${not (document.useFlexibleBlock) and fn:length(items)>0}">
+          <div class="content">
+            <h1><span><c:out value="${document.title }" /></span></h1>
+          </div>
           <tag:listItems/>
         </c:when>
         <c:otherwise>
           <div class="content">
-          <p class="intro">
-            <c:out value="${document.introduction }" />
-          </p>
-          <tag:flexibleblock content="${document.flexibleblock }" />
-          <tag:toolbox document="${document }"/>
+            <h1><span><c:out value="${document.title }" /></span></h1>
+            <p class="intro">
+              <c:out value="${document.introduction }" />
+            </p>
+            <tag:flexibleblock content="${document.flexibleblock }" />
+            <tag:toolbox document="${document }"/>
           </div>
         </c:otherwise>
       </c:choose>
