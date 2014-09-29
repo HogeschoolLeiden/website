@@ -20,7 +20,8 @@
   <div class="row">
 
     <c:if test="${pageContext.request.requestContext.contentBean['class'].name == 'hslbeans.OverviewPage' or
-                pageContext.request.requestContext.contentBean['class'].name == 'hslbeans.BlogOverviewPage'}">
+                pageContext.request.requestContext.contentBean['class'].name == 'hslbeans.BlogOverviewPage' or
+                pageContext.request.requestContext.contentBean['class'].name == 'hslbeans.MedewerkersOverviewPage'}">
       <tag:highlightedItem highLightedItem="${document.highLightedItem }"/>
     </c:if>
        

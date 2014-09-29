@@ -9,6 +9,8 @@
 
 <%@ attribute name="document" rtexprvalue="true" required="true" type="org.hippoecm.hst.content.beans.standard.HippoDocument" %>
 
+<hst:setBundle basename="nl.hsleiden.channelmanager.Messages, nl.hsleiden.blog.Messages"/>
+
 <ul class="social clearfix">
   <c:forEach var="account" items="${document.accounts}" varStatus="zebra">
     
