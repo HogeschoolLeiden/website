@@ -62,6 +62,7 @@
   <link rel="stylesheet" href="<hst:link path="/css/kees/bootstrap.min.css"/>" >
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" >
   <link rel="stylesheet" href="<hst:link path="/css/kees/style.css"/>" >
+  <link rel="stylesheet" href="<hst:link path="/css/kees/style-additions.css"/>" >
   <link rel="stylesheet" href="<hst:link path="/css/kees/normalize.css"/>" >
   
   <script>
