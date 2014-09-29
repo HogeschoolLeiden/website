@@ -11,7 +11,7 @@
 
 <hst:setBundle basename="nl.hsleiden.widget.Messages" />
 
-<c:if test="${not empty sitemapRefId}">
+<c:if test="${not empty sitemapRefId and not (pageContext.request.requestContext.contentBean['class'].name == 'hslbeans.PersonnelPage')}">
   <div class="container">
     <div class="row">
       <c:set var="refId" value="${sitemapRefId}"/>

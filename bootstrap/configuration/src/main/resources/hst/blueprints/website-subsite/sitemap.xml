@@ -17,6 +17,9 @@
       <sv:value>hsl:OverviewPage</sv:value>
       <sv:value>hsl:PersonnelPage</sv:value>
       <sv:value>hsl:PersPage</sv:value>
+      <sv:value>hsl:FaqOverviewPage</sv:value>
+      <sv:value>hsl:BlogOverviewPage</sv:value>
+      <sv:value>hsl:blogpost</sv:value>
     </sv:property>
     <sv:property sv:name="hst:componentconfigurationmappingvalues" sv:type="String" sv:multiple="true">
       <sv:value>hst:pages/newspage</sv:value>
@@ -26,6 +29,9 @@
       <sv:value>hst:pages/medewerkersoverview</sv:value>
       <sv:value>hst:pages/personnelpage</sv:value>
       <sv:value>hst:pages/perspage</sv:value>
+      <sv:value>hst:pages/faqoverview</sv:value>
+      <sv:value>hst:pages/blogoverview</sv:value>
+      <sv:value>hst:pages/blogpage</sv:value>
     </sv:property>
     <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
       <sv:value>level</sv:value>
@@ -63,10 +69,10 @@
       <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
         <sv:value>hst:pages/searchpage</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
+      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
         <sv:value>selectedFacets</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
+      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
         <sv:value>${1}</sv:value>
       </sv:property>
       <sv:property sv:name="hst:relativecontentpath" sv:type="String">

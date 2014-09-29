@@ -19,7 +19,8 @@
   <div class="container">
   <div class="row">
 
-    <c:if test="${pageContext.request.requestContext.contentBean['class'].name == 'hslbeans.OverviewPage'}">
+    <c:if test="${pageContext.request.requestContext.contentBean['class'].name == 'hslbeans.OverviewPage' or
+                pageContext.request.requestContext.contentBean['class'].name == 'hslbeans.BlogOverviewPage'}">
       <tag:highlightedItem highLightedItem="${document.highLightedItem }"/>
     </c:if>
        

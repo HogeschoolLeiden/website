@@ -16,6 +16,8 @@ package nl.hsleiden.beans;
  * limitations under the License.
  **/
 
+import hslbeans.WebPage;
+
 import java.util.List;
 
 import org.hippoecm.hst.content.beans.Node;
@@ -27,7 +29,7 @@ import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerat
 
 @HippoEssentialsGenerated(internalName = "hsl:author")
 @Node(jcrType = "hsl:author")
-public class Author extends HippoDocument implements AuthorEntry {
+public class Author extends WebPage implements AuthorEntry {
 
     public static final String ROLE = "hsl:role";
     public static final String ACCOUNTS = "hsl:accounts";

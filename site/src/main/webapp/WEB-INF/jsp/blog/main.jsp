@@ -24,7 +24,7 @@
 
 <div id="main" role="main" class="detail">
 
-  
+  <tag:renderBackLink sitemapRefId="${paramInfo.overviewSitemapRefId}"/> 
   <tag:headerImage document="${document}"/>
 
   <div class="container">

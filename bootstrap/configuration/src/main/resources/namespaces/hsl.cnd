@@ -90,7 +90,10 @@
 [hsl:OverviewPage] > hsl:WebPage, hippostd:relaxed, hippotranslation:translated
   orderable
 
-[hsl:FaqOverviewPage] > hsl:WebPage, hippostd:relaxed, hippotranslation:translated
+[hsl:BlogOverviewPage] > hsl:OverviewPage, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hsl:FaqOverviewPage] > hsl:OverviewPage, hippostd:relaxed, hippotranslation:translated
   orderable
 
 [hsl:Paragraph] > hippo:compound, hippostd:relaxed
@@ -174,10 +177,10 @@
 [hsl:account] > hippo:compound, hippostd:relaxed
   orderable
 
-[hsl:author] > hsl:basedocument, hippostd:relaxed, hippotranslation:translated
+[hsl:author] > hsl:WebPage, hippostd:relaxed, hippotranslation:translated
   orderable
 
-[hsl:blogpost] > hsl:basedocument, hippostd:relaxed, hippostd:taggable, hippotranslation:translated
+[hsl:blogpost] > hsl:WebPage, hippostd:relaxed, hippostd:taggable, hippotranslation:translated
   orderable
 
 [hsl:doublemailform] > eforms:form
