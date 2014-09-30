@@ -3,7 +3,7 @@
     <sv:value>hippo:handle</sv:value>
   </sv:property>
   <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
-    <sv:value>hippo:hardhandle</sv:value>
+    <sv:value>mix:referenceable</sv:value>
   </sv:property>
   <sv:property sv:name="jcr:uuid" sv:type="String">
     <sv:value>ebc405ab-437c-4bdd-ba8e-7b9a71e54b63</sv:value>
@@ -13,7 +13,7 @@
       <sv:value>selection:valuelist</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
-      <sv:value>hippo:harddocument</sv:value>
+      <sv:value>mix:referenceable</sv:value>
       <sv:value>hippotranslation:translated</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
@@ -23,7 +23,6 @@
       <sv:value>live</sv:value>
       <sv:value>preview</sv:value>
     </sv:property>
-    <sv:property sv:name="hippo:related___pathreference" sv:type="String"/>
     <sv:property sv:name="hippotranslation:id" sv:type="String">
       <sv:value>dd1fa305-8e7d-44cb-b5bb-a89c0c8515b1</sv:value>
     </sv:property>
@@ -33,17 +32,6 @@
     <sv:node sv:name="hippotranslation:translations">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hippotranslation:translations</sv:value>
-      </sv:property>
-    </sv:node>
-    <sv:node sv:name="selection:listitem">
-      <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>selection:listitem</sv:value>
-      </sv:property>
-      <sv:property sv:name="selection:key" sv:type="String">
-        <sv:value>github</sv:value>
-      </sv:property>
-      <sv:property sv:name="selection:label" sv:type="String">
-        <sv:value>GitHub</sv:value>
       </sv:property>
     </sv:node>
     <sv:node sv:name="selection:listitem">
