@@ -12,7 +12,7 @@
 <div id="main" role="main" class="">
     
   <c:if test="${tag:isSubclassOfWebPage(model.document)}">
-    <tag:headerImage document="${model.document}"/>
+    <tag:headerImage document="${model.document}" large="large"/>
   </c:if>
     
   <%-- <hst:include ref="top-container" /> --%>

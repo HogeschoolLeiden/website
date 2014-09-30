@@ -32,7 +32,7 @@
             <h2>
               <c:if test="${not empty item.titleIcon }">
                 <span class="icon">
-                  <img src="<hst:link hippobean="${item.titleIcon.paragraphImage }" />" 
+                  <img src="<hst:link hippobean="${item.titleIcon.listImageSmall }" />" 
                      alt="<c:out value="${item.title }" escapeXml="true" />" 
                      title="<c:out value="${item.title }" escapeXml="true" />" 
                      class="title-icon"/>

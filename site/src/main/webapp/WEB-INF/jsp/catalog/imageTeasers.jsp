@@ -62,7 +62,7 @@
                       alt="<c:out value="${item.image.alt }" escapeXml="true" />" />
               </div>
               <c:if test="${not empty item.icon }">
-                <img class="icon imageTeaser" src="<hst:link hippobean="${item.icon.paragraphImage }" />" 
+                <img class="icon imageTeaser" src="<hst:link hippobean="${item.icon.listImageSmall }" />" 
                      alt="<c:out value="${item.icon.alt }" escapeXml="true" />" />
               </c:if>
               <span class="btn"><c:out value="${item.internallink.linkTitle }" escapeXml="true" /></span>
@@ -77,7 +77,7 @@
                   title="<c:out value="${item.image.alt }" escapeXml="true" />" />
           </div>
           <c:if test="${not empty item.icon }">
-            <img class="icon imageTeaser" src="<hst:link hippobean="${item.icon.paragraphImage }" />" 
+            <img class="icon imageTeaser" src="<hst:link hippobean="${item.icon.listImageSmall }" />" 
                alt="<c:out value="${item.icon.alt }" escapeXml="true" />" />
           </c:if>  
         </c:otherwise>

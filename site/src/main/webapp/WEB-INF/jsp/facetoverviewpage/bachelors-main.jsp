@@ -12,7 +12,7 @@
 <div id="main" role="main" class="vindjestudie">
     
   <c:if test="${tag:isSubclassOfWebPage(model.document)}">
-    <tag:headerImage document="${model.document}"/>
+    <tag:headerImage document="${model.document}" large="large" />
   </c:if>
     
   <div class="container">

@@ -26,7 +26,7 @@
 <c:if test="${not empty content.title }">
   <h2>
     <c:if test="${not empty content.titleIcon }">
-      <img src="<hst:link hippobean="${content.titleIcon.paragraphImage }" />" 
+      <img src="<hst:link hippobean="${content.titleIcon.listImageSmall }" />" 
            alt="<c:out value="${content.title }" escapeXml="true" />" 
            title="<c:out value="${content.title }" escapeXml="true" />" 
            class="title-icon"/>
