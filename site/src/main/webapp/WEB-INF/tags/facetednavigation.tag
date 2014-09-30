@@ -30,16 +30,35 @@
 	  <c:if test="${facet.resultSet.count > 0}">
 		  
         <section class="filtergroup col-md-3">
-		  <h2><c:out value="${facet.name}" escapeXml="true" /></h2>
+		  <h2><c:out value="${facet.name eq 'Vakgebied' ?  'Opleidingen' : facet.name}" escapeXml="true" /></h2>
 		  <c:if test="${not empty facet.folders}">
-              
             <div class="filterlist">
-                
+              <c:if test="${facet.name eq 'Vakgebied'}" >
+              	<c:forEach items="${facetnav.ancestorsAndSelf}" var="ancestor">
+              		<c:if test="${ancestor.parentBean.name eq 'Opleidingen'}">
+	               	<hst:facetnavigationlink removeList="${opw:removeListByCategory('Opleidingen', 'Vakgebied', facetnav)}" current="${facetnav}" var="removeLink" />
+                      
+                    <a href="${removeLink}">
+                      <div class="checkbox">
+                        <img  class="cbimg" src="<hst:link path="/images/checkbox-checked.png"/>" 
+                              alt="<fmt:message key="checkbox.checked" />" title="<fmt:message key="checkbox.checked" />"/>
+                        <c:out value="${labels[ancestor.name]}" default="${ancestor.name}" escapeXml="true" />
+                        <c:out value=" ( " escapeXml="true" />
+                        <c:out value="${ancestor.count}" escapeXml="true" />
+                        <c:out value=" )" escapeXml="true" />
+                      </div>
+                    </a>
+              		</c:if>
+               	</c:forEach> 
+              </c:if>  
               <c:forEach items="${facet.folders}" var="item">
 			                    
                 <c:choose>
+                  <%-- <c:when test="${facet.name eq 'Vakgebied' }">
+                  	
+                  
+                  </c:when> --%>
                   <c:when test="${item.leaf and item.count gt 0}">
-                   
                     <hst:facetnavigationlink remove="${item}" current="${facetnav}" var="removeLink" />
                       
                     <a href="${removeLink}">
@@ -55,7 +74,6 @@
                   
                   </c:when>
                   <c:otherwise>
-                    
                     <c:if test="${item.count > 0 }">
                       
                       <hst:link var="link" hippobean="${item}" navigationStateful="true"/>
