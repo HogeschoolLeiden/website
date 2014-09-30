@@ -176,11 +176,6 @@ figure.fexibleblock.image img {
 /* left naavigation highlighting */
 /* ----------------------------- */
 
-.subnav ul li.active ul li.arrow-side a:after {
-	border-top: none;
-	border-bottom: none;
-}
-
 .subnav ul li.active a {
 	background: #c8c3d2
 }
@@ -188,6 +183,14 @@ figure.fexibleblock.image img {
 .subnav ul li.active ul li.arrow-side a {
 	background-color: white;
 	font-family: source_sans_prolight;
+}
+
+.subnav ul, .subnav ul li.active ul li.arrow-side a:after {
+	border-top: none;
+}
+
+.subnav ul li.active, .subnav ul li.current, .subnav ul li.active ul li.arrow-side a:after {
+	border-bottom: none;	
 }
 
 /* ------------ */
