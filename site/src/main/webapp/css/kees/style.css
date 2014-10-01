@@ -731,7 +731,8 @@ body {
 }
 
 #breadcrumbs {
-	background: #23114c
+	background: #23114c;
+	height: 29px
 }
 
 #breadcrumbs .container .row div .breadcrumb {
@@ -779,6 +780,26 @@ body {
 	padding-bottom: 10px
 }
 
+.subnav h2 .icon {
+	display: block;
+	width: 40px;
+	height: 40px;
+	background: #23114c;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	text-align: center;
+	float: right;
+	margin: 0 0 20px 20px;
+	padding-top: 20px
+}
+
+.subnav h2 .icon img {
+	width: 20px;
+	height: 20px;
+	margin-top: -25px
+}
+
 .subnav ul {
 	padding: 0;
 	margin: 0;
@@ -824,6 +845,20 @@ body {
 	border-left: 15px solid #c8c3d2;
 	border-bottom-width: 20px;
 	border-top-width: 20px
+}
+
+.lt-ie9 .subnav h2 .icon {
+	position: relative
+}
+
+.lt-ie9 .subnav h2 .icon:after {
+	content: "";
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: url("../img/icon-circle-ie8.png") center center no-repeat
 }
 
 .filtergroup h2 {
@@ -928,17 +963,21 @@ body {
 #datepicker {
 	background: #23114c;
 	padding: 20px;
-	margin-top: -274px;
-	margin-bottom: -40px
+	margin-top: -314px
 }
 
-#datepicker .ui-datepicker-header {
+#datepicker .fc-header-left,#datepicker .fc-header-right {
+	width: 0
+}
+
+#datepicker .ui-datepicker-header,#datepicker .fc-header-center {
 	position: relative;
 	text-align: center
 }
 
-#datepicker .ui-datepicker-header .ui-datepicker-title {
-	padding: 2px 0 0 0;
+#datepicker .ui-datepicker-header .ui-datepicker-title,#datepicker .fc-header-center .ui-datepicker-title,#datepicker .ui-datepicker-header .fc-header-title,#datepicker .fc-header-center .fc-header-title
+	{
+	padding: 0;
 	height: 28px;
 	font-size: 1.286em;
 	color: #fff;
@@ -947,21 +986,35 @@ body {
 	font-style: normal
 }
 
-#datepicker .ui-datepicker-header .ui-datepicker-title::first-letter {
+#datepicker .ui-datepicker-header .ui-datepicker-title h3,#datepicker .fc-header-center .ui-datepicker-title h3,#datepicker .ui-datepicker-header .fc-header-title h3,#datepicker .fc-header-center .fc-header-title h3
+	{
+	margin: 0;
+	font-size: 1em;
+	padding: 2px 0
+}
+
+#datepicker .ui-datepicker-header .ui-datepicker-title h3::first-letter,#datepicker .fc-header-center .ui-datepicker-title h3::first-letter,#datepicker .ui-datepicker-header .fc-header-title h3::first-letter,#datepicker .fc-header-center .fc-header-title h3::first-letter
+	{
 	text-transform: uppercase
 }
 
-#datepicker .ui-datepicker-header .ui-datepicker-prev,#datepicker .ui-datepicker-header .ui-datepicker-next
+#datepicker .ui-datepicker-header .ui-datepicker-prev,#datepicker .fc-header-center .ui-datepicker-prev,#datepicker .ui-datepicker-header .ui-datepicker-next,#datepicker .fc-header-center .ui-datepicker-next,#datepicker .ui-datepicker-header .fc-button-prev,#datepicker .fc-header-center .fc-button-prev,#datepicker .ui-datepicker-header .fc-button-next,#datepicker .fc-header-center .fc-button-next
 	{
 	width: 30px;
 	height: 30px;
 	position: absolute;
 	cursor: pointer;
 	left: 0;
-	top: 0
+	top: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	background: 0;
+	border: 0;
+	box-shadow: 0 1px 0 #23114c inset, 0 1px 2px #23114c
 }
 
-#datepicker .ui-datepicker-header .ui-datepicker-prev .ui-icon,#datepicker .ui-datepicker-header .ui-datepicker-next .ui-icon
+#datepicker .ui-datepicker-header .ui-datepicker-prev .fc-icon,#datepicker .fc-header-center .ui-datepicker-prev .fc-icon,#datepicker .ui-datepicker-header .ui-datepicker-next .fc-icon,#datepicker .fc-header-center .ui-datepicker-next .fc-icon,#datepicker .ui-datepicker-header .fc-button-prev .fc-icon,#datepicker .fc-header-center .fc-button-prev .fc-icon,#datepicker .ui-datepicker-header .fc-button-next .fc-icon,#datepicker .fc-header-center .fc-button-next .fc-icon
 	{
 	text-indent: -9999px;
 	background: url("../img/calendar-arrow.png") 50% 50% no-repeat;
@@ -970,15 +1023,17 @@ body {
 	display: inline-block;
 	background-size: 100% 100%;
 	position: relative;
-	top: 8px
+	top: 5px
 }
 
-#datepicker .ui-datepicker-header .ui-datepicker-next {
+#datepicker .ui-datepicker-header .ui-datepicker-next,#datepicker .fc-header-center .ui-datepicker-next,#datepicker .ui-datepicker-header .fc-button-next,#datepicker .fc-header-center .fc-button-next
+	{
 	left: auto;
 	right: 0
 }
 
-#datepicker .ui-datepicker-header .ui-datepicker-next .ui-icon {
+#datepicker .ui-datepicker-header .ui-datepicker-next .fc-icon,#datepicker .fc-header-center .ui-datepicker-next .fc-icon,#datepicker .ui-datepicker-header .fc-button-next .fc-icon,#datepicker .fc-header-center .fc-button-next .fc-icon
+	{
 	-webkit-transform: scalex(-1);
 	-moz-transform: scalex(-1);
 	-ms-transform: scalex(-1);
@@ -986,11 +1041,11 @@ body {
 	transform: scalex(-1)
 }
 
-#datepicker .ui-datepicker-calendar {
+#datepicker .ui-datepicker-calendar,#datepicker .fc-border-separate {
 	width: 100%
 }
 
-#datepicker .ui-datepicker-calendar tr th,#datepicker .ui-datepicker-calendar tr td
+#datepicker .ui-datepicker-calendar tr th,#datepicker .fc-border-separate tr th,#datepicker .ui-datepicker-calendar tr td,#datepicker .fc-border-separate tr td
 	{
 	width: 14%;
 	padding: 0 1px 1px 0;
@@ -999,17 +1054,11 @@ body {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	position: relative
+	position: relative;
+	border: 0
 }
 
-#datepicker .ui-datepicker-calendar tr th:before,#datepicker .ui-datepicker-calendar tr td:before
-	{
-	content: "";
-	display: block;
-	padding-top: 100%
-}
-
-#datepicker .ui-datepicker-calendar tr th span,#datepicker .ui-datepicker-calendar tr td span,#datepicker .ui-datepicker-calendar tr th a,#datepicker .ui-datepicker-calendar tr td a
+#datepicker .ui-datepicker-calendar tr th span,#datepicker .fc-border-separate tr th span,#datepicker .ui-datepicker-calendar tr td span,#datepicker .fc-border-separate tr td span,#datepicker .ui-datepicker-calendar tr th div,#datepicker .fc-border-separate tr th div,#datepicker .ui-datepicker-calendar tr td div,#datepicker .fc-border-separate tr td div
 	{
 	display: block;
 	position: absolute;
@@ -1025,48 +1074,78 @@ body {
 	padding: 20% 0 0 0
 }
 
-#datepicker .ui-datepicker-calendar tr th span {
-	background: #5a4d79
+#datepicker .ui-datepicker-calendar tr td:before,#datepicker .fc-border-separate tr td:before
+	{
+	content: "";
+	display: block;
+	padding-top: 100%
 }
 
-#datepicker .ui-datepicker-calendar tr th span,#datepicker .ui-datepicker-calendar tr th a
+#datepicker .ui-datepicker-calendar tr th,#datepicker .fc-border-separate tr th
+	{
+	background: #5a4d79;
+	color: #fff;
+	padding: 5px 0
+}
+
+#datepicker .ui-datepicker-calendar tr th span,#datepicker .fc-border-separate tr th span,#datepicker .ui-datepicker-calendar tr th a,#datepicker .fc-border-separate tr th a
 	{
 	padding-top: 5px
 }
 
-#datepicker .ui-datepicker-calendar tr td {
+#datepicker .ui-datepicker-calendar tr td,#datepicker .fc-border-separate tr td
+	{
 	font-family: 'source_sans_prolight';
 	font-weight: 400;
 	font-style: normal;
 	font-size: .929em
 }
 
-#datepicker .ui-datepicker-calendar tr td span,#datepicker .ui-datepicker-calendar tr td a
+#datepicker .ui-datepicker-calendar tr td span,#datepicker .fc-border-separate tr td span,#datepicker .ui-datepicker-calendar tr td div,#datepicker .fc-border-separate tr td div
 	{
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
 	border-radius: 50%
 }
 
-#datepicker .ui-datepicker-calendar tr td.has-event span,#datepicker .ui-datepicker-calendar tr td.has-event a
+#datepicker .ui-datepicker-calendar tr td.has-event span,#datepicker .fc-border-separate tr td.has-event span,#datepicker .ui-datepicker-calendar tr td.has-event a,#datepicker .fc-border-separate tr td.has-event a
 	{
 	background: #009fda
 }
 
-#datepicker .ui-datepicker-calendar tr td.ui-datepicker-current-day span,#datepicker .ui-datepicker-calendar tr td.ui-datepicker-current-day a
+#datepicker .ui-datepicker-calendar tr td.ui-datepicker-current-day,#datepicker .fc-border-separate tr td.ui-datepicker-current-day,#datepicker .ui-datepicker-calendar tr td.fc-today,#datepicker .fc-border-separate tr td.fc-today
+	{
+	background: 0
+}
+
+#datepicker .ui-datepicker-calendar tr td.ui-datepicker-current-day span,#datepicker .fc-border-separate tr td.ui-datepicker-current-day span,#datepicker .ui-datepicker-calendar tr td.fc-today span,#datepicker .fc-border-separate tr td.fc-today span,#datepicker .ui-datepicker-calendar tr td.ui-datepicker-current-day div,#datepicker .fc-border-separate tr td.ui-datepicker-current-day div,#datepicker .ui-datepicker-calendar tr td.fc-today div,#datepicker .fc-border-separate tr td.fc-today div
 	{
 	border: 1px solid #fff
 }
 
-#datepicker .ui-datepicker-calendar tr td.ui-state-disabled span,#datepicker .ui-datepicker-calendar tr td.ui-state-disabled a
+#datepicker .ui-datepicker-calendar tr td.ui-datepicker-current-day span div,#datepicker .fc-border-separate tr td.ui-datepicker-current-day span div,#datepicker .ui-datepicker-calendar tr td.fc-today span div,#datepicker .fc-border-separate tr td.fc-today span div,#datepicker .ui-datepicker-calendar tr td.ui-datepicker-current-day div div,#datepicker .fc-border-separate tr td.ui-datepicker-current-day div div,#datepicker .ui-datepicker-calendar tr td.fc-today div div,#datepicker .fc-border-separate tr td.fc-today div div
+	{
+	border: 0
+}
+
+#datepicker .ui-datepicker-calendar tr td.ui-state-disabled span,#datepicker .fc-border-separate tr td.ui-state-disabled span,#datepicker .ui-datepicker-calendar tr td.ui-state-disabled a,#datepicker .fc-border-separate tr td.ui-state-disabled a
 	{
 	color: #5a4d79
 }
 
-#datepicker .ui-datepicker-calendar tr td.ui-state-disabled.has-event span,#datepicker .ui-datepicker-calendar tr td.ui-state-disabled.has-event a
+#datepicker .ui-datepicker-calendar tr td.ui-state-disabled.has-event span,#datepicker .fc-border-separate tr td.ui-state-disabled.has-event span,#datepicker .ui-datepicker-calendar tr td.ui-state-disabled.has-event a,#datepicker .fc-border-separate tr td.ui-state-disabled.has-event a
 	{
 	color: #23114c;
 	background: #5a4d79
+}
+
+#datepicker .fc-event-container .fc-event {
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	background: #009fda;
+	border: 0;
+	cursor: pointer
 }
 
 .datum {
@@ -1107,6 +1186,235 @@ body {
 #main {
 	position: relative;
 	padding: 100px 0 30px 0
+}
+
+.home,.lectoraat {
+	padding-top: 0 !important
+}
+
+.home .swiper-container,.lectoraat .swiper-container {
+	position: static;
+	margin-bottom: -200px
+}
+
+.home .swiper-container .swiper-wrapper .swiper-slide,.lectoraat .swiper-container .swiper-wrapper .swiper-slide
+	{
+	position: relative
+}
+
+.home .swiper-container .swiper-wrapper .swiper-slide img,.lectoraat .swiper-container .swiper-wrapper .swiper-slide img
+	{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%
+}
+
+.home .swiper-container .swipenav,.lectoraat .swiper-container .swipenav
+	{
+	width: 100px;
+	height: 100px;
+	background: transparent;
+	top: -460px;
+	position: relative;
+	z-index: 2000;
+	font-size: 2.5em;
+	color: #fff;
+	padding-top: 30px;
+	cursor: pointer;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	border: 2px solid #fff
+}
+
+.home .swiper-container .swipenav.prev,.lectoraat .swiper-container .swipenav.prev
+	{
+	left: -588px;
+	padding-left: 30px
+}
+
+.home .swiper-container .swipenav.next,.lectoraat .swiper-container .swipenav.next
+	{
+	right: -588px;
+	padding-right: 30px
+}
+
+.home .swiper-container .swipenav:hover,.lectoraat .swiper-container .swipenav:hover
+	{
+	border-color: #23114c;
+	color: #23114c
+}
+
+.home .swiper-container .slider-pagination,.lectoraat .swiper-container .slider-pagination
+	{
+	position: relative;
+	top: -290px;
+	width: 300px;
+	height: 10px;
+	margin: 0 auto;
+	left: -295px;
+	text-align: center;
+	z-index: 3000
+}
+
+.home .swiper-container .slider-pagination span,.lectoraat .swiper-container .slider-pagination span
+	{
+	width: 10px;
+	height: 10px;
+	display: inline-block;
+	background: #c8c3d2;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	margin: 0 3px;
+	cursor: pointer
+}
+
+.home .swiper-container .slider-pagination span.swiper-active-switch,.lectoraat .swiper-container .slider-pagination span.swiper-active-switch
+	{
+	background: #23114c
+}
+
+.home .blok,.lectoraat .blok {
+	min-height: 286px
+}
+
+.home .blok .btn,.lectoraat .blok .btn {
+	font-size: 1em
+}
+
+.home .slide-content,.lectoraat .slide-content {
+	margin-top: 30px
+}
+
+.home .slide-content .highlighted,.lectoraat .slide-content .highlighted
+	{
+	margin-top: 0;
+	float: left;
+	margin-left: 8.33333%;
+	height: auto;
+	width: 380px
+}
+
+.home .slide-content .highlighted .media-body,.lectoraat .slide-content .highlighted .media-body
+	{
+	position: relative;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	margin: 0;
+	text-align: left
+}
+
+.home .slide-content .highlighted .media-body:before,.lectoraat .slide-content .highlighted .media-body:before
+	{
+	content: "";
+	display: block;
+	padding-top: 100%
+}
+
+.home .slide-content .highlighted .media-body a,.lectoraat .slide-content .highlighted .media-body a,.home .slide-content .highlighted .media-body .contentarea,.lectoraat .slide-content .highlighted .media-body .contentarea
+	{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	text-decoration: none;
+	padding: 26px 30px;
+	padding: 60px 50px 60px 60px;
+	z-index: 2000
+}
+
+.home .slide-content .highlighted .media-body h1,.lectoraat .slide-content .highlighted .media-body h1
+	{
+	color: #23114c;
+	font-size: 1.571em;
+	margin-bottom: 0
+}
+
+.home .slide-content .highlighted .media-body p,.lectoraat .slide-content .highlighted .media-body p
+	{
+	border-color: #23114c;
+	border-image: url("../img/border-dotted-vert-5-paars-2.png") 0 0 0 100%
+		round
+}
+
+.home .slide-content .highlighted .media-body .datum,.lectoraat .slide-content .highlighted .media-body .datum
+	{
+	background: #23114c;
+	left: 310px;
+	top: 60px
+}
+
+.lt-ie9 .slide-content .highlighted .media-body {
+	background: url("../img/highlight-round-ie8.png") center center
+		no-repeat;
+	height: 350px
+}
+
+.lt-ie9 .slide-content .highlighted .media-body .contentarea .datum {
+	background: url("../img/datum-groot-paars-ie8.png") center center
+		no-repeat
+}
+
+.lt-ie9 .home .blok {
+	height: 286px
+}
+
+.lt-ie9 .home .swiper-container .swipenav,.lt-ie9 .lectoraat .swiper-container .swipenav
+	{
+	border: 0;
+	height: 103px
+}
+
+.lt-ie9 .home .swiper-container .swipenav.prev,.lt-ie9 .lectoraat .swiper-container .swipenav.prev
+	{
+	background: url("../img/swiper-nav-prev-ie8.png") top right no-repeat
+}
+
+.lt-ie9 .home .swiper-container .swipenav.next,.lt-ie9 .lectoraat .swiper-container .swipenav.next
+	{
+	background: url("../img/swiper-nav-next-ie8.png") top left no-repeat
+}
+
+.lt-ie9 .home .swiper-container .swipenav:hover,.lt-ie9 .lectoraat .swiper-container .swipenav:hover
+	{
+	color: #fff
+}
+
+.lt-ie10 .home .blok,.lt-ie11 .home .blok,.ie11 .home .blok {
+	min-height: inherit;
+	height: 286px !important
+}
+
+html[data-useragent*='MSIE 10.0'] .home .blok {
+	min-height: inherit;
+	height: 286px !important
+}
+
+.lectoraat .swiper-container .slider-pagination {
+	position: relative;
+	top: -290px;
+	width: 300px;
+	height: 10px;
+	margin: 0 auto;
+	left: auto;
+	right: -285px;
+	text-align: center;
+	z-index: 3000
+}
+
+.lectoraat .slide-content .highlighted {
+	float: left;
+	margin-left: 58.333%
+}
+
+.lectoraat .slide-content .highlighted .media-body .datum {
+	background: #23114c;
+	left: -60px;
+	top: 60px
 }
 
 .background {
@@ -1822,6 +2130,18 @@ body {
 	background: #d6492b
 }
 
+.detail-content .contentarea .content .share a.fa-linkedin {
+	background: #6694bf
+}
+
+.detail-content .contentarea .content .share a.fa-envelope {
+	background: #48cdff
+}
+
+.detail-content .contentarea .content .share a.fa-file {
+	background: #e07760
+}
+
 .detail-content .contentarea .content .share a:hover {
 	background: #009fda !important
 }
@@ -2158,6 +2478,19 @@ body {
 	border-color: #fff
 }
 
+.blok.colorbg.paars {
+	background: #23114c
+}
+
+.blok.colorbg.paars a {
+	color: #fff
+}
+
+.blok.colorbg.paars .btn {
+	color: #fff;
+	border-color: #fff
+}
+
 .blok.colorbg.lichtpaars {
 	background: #c8c3d2;
 	color: #23114c
@@ -2276,7 +2609,8 @@ body {
 	position: absolute;
 	left: 20px;
 	right: 20px;
-	bottom: -4px;
+	bottom: auto;
+	top: -4px;
 	z-index: 0
 }
 
@@ -2374,6 +2708,20 @@ body {
 	text-decoration: underline
 }
 
+.blok.contacts p {
+	position: relative;
+	left: 16px;
+	padding-right: 20px;
+	padding-left: 4px
+}
+
+.blok.contacts .btn {
+	position: static;
+	width: auto;
+	display: inline-block;
+	margin: 0 0 20px 20px
+}
+
 .blok.contacts:hover {
 	background-color: #c8c3d2 !important
 }
@@ -2383,9 +2731,10 @@ body {
 }
 
 .blok.beeldbank,.blok.download {
-	height: 260px;
+	height: 260px !important;
 	position: relative;
-	text-align: center
+	text-align: center;
+	padding-bottom: 0
 }
 
 .blok.beeldbank div,.blok.download div {
@@ -2465,6 +2814,270 @@ body {
 	background: #23114c
 }
 
+.blok.nieuws,.blok.links,.blok.text,.blok.twitter {
+	padding-bottom: 0;
+	cursor: auto
+}
+
+.blok.nieuws h1,.blok.links h1,.blok.text h1,.blok.twitter h1 {
+	font-size: 1.714em;
+	color: #23114c;
+	text-transform: none;
+	padding-bottom: 15px
+}
+
+.blok.nieuws .media,.blok.links .media,.blok.text .media,.blok.twitter .media
+	{
+	border-top: 1px solid #c8c3d2;
+	margin: 0;
+	padding: 15px 20px 10px 20px;
+	position: relative
+}
+
+.blok.nieuws .media .media-object,.blok.links .media .media-object,.blok.text .media .media-object,.blok.twitter .media .media-object
+	{
+	width: 60px;
+	height: 60px;
+	margin-right: 15px;
+	background: #2d1661
+}
+
+.blok.nieuws .media .media-body,.blok.links .media .media-body,.blok.text .media .media-body,.blok.twitter .media .media-body
+	{
+	padding: 0;
+	font-size: 1em;
+	color: #23114c;
+	font-family: 'source_sans_proregular';
+	font-weight: 400;
+	font-style: normal;
+	line-height: 1.571em;
+	position: relative;
+	top: -4px
+}
+
+.blok.nieuws .media .datum,.blok.links .media .datum,.blok.text .media .datum,.blok.twitter .media .datum
+	{
+	position: absolute;
+	left: 30px;
+	top: 25px
+}
+
+.blok.nieuws .media:hover .media-body,.blok.links .media:hover .media-body,.blok.text .media:hover .media-body,.blok.twitter .media:hover .media-body
+	{
+	text-decoration: underline
+}
+
+.blok.nieuws:hover,.blok.links:hover,.blok.text:hover,.blok.twitter:hover
+	{
+	background: #fff !important
+}
+
+.blok.links,.blok.text {
+	height: auto !important;
+	min-height: 0;
+	background: #fff
+}
+
+.blok.links ul,.blok.text ul {
+	margin: 0;
+	padding-left: 0;
+	list-style-type: none
+}
+
+.blok.links ul li,.blok.text ul li {
+	padding-left: 40px;
+	background: url("../img/li.png") 22px 6px no-repeat;
+	background-size: 6px 6px
+}
+
+.blok.links ul li a,.blok.text ul li a {
+	color: #666
+}
+
+.blok.links ul li a:hover,.blok.text ul li a:hover {
+	text-decoration: underline
+}
+
+.blok.text {
+	padding: 20px
+}
+
+.blok.text h1 {
+	padding: 0
+}
+
+.blok.text h1:after {
+	display: none
+}
+
+.blok.text .more {
+	display: inline-block
+}
+
+.blok.text .more:hover {
+	text-decoration: underline
+}
+
+.blok.twitter .twitteritem h2 {
+	font-size: 1.071em;
+	font-family: 'source_sans_prosemibold';
+	font-weight: 400;
+	font-style: normal
+}
+
+.blok.twitter .twitteritem h2 span {
+	font-size: .933em
+}
+
+.blok.twitter .twitteritem p {
+	margin-bottom: 5px
+}
+
+.blok.twitter .twitteritem p a {
+	display: inline-block
+}
+
+.blok.twitter .twitteritem p a:hover {
+	text-decoration: underline
+}
+
+.blok.twitter .twitteritem a {
+	display: inline-block
+}
+
+.blok.twitter .twitteritem a:hover {
+	text-decoration: underline
+}
+
+.blok.snelkiezer {
+	padding-bottom: 10px;
+	cursor: auto
+}
+
+.blok.snelkiezer h1 {
+	color: #fff
+}
+
+.blok.snelkiezer h1:after {
+	width: 25%
+}
+
+.blok.snelkiezer h2 {
+	cursor: auto
+}
+
+.blok.snelkiezer h2,.blok.snelkiezer label {
+	color: #fff;
+	font-size: 1.714em
+}
+
+.blok.snelkiezer label {
+	margin: 0;
+	padding: 0 0 10px 0;
+	display: block;
+	font-family: 'source_sans_prolight';
+	font-weight: 400;
+	font-style: normal;
+	cursor: pointer
+}
+
+.blok.snelkiezer div {
+	padding: 10px 20px
+}
+
+.blok.snelkiezer div h2 {
+	padding: 0 0 10px 0
+}
+
+.blok.snelkiezer div ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0
+}
+
+.blok.snelkiezer div ul li {
+	float: left;
+	margin: 0 10px 10px 0
+}
+
+.blok.snelkiezer div ul li:last-child {
+	margin-right: 0
+}
+
+.blok.snelkiezer div.interesse {
+	padding-right: 0
+}
+
+.blok.snelkiezer div.vorm {
+	padding-left: 0;
+	padding-right: 0;
+	margin-left: -5%
+}
+
+.blok.snelkiezer div.vorm ul {
+	width: 110%
+}
+
+.blok.snelkiezer div.zoeken {
+	padding-top: 0
+}
+
+.blok.snelkiezer .btn {
+	position: static;
+	font-size: .857em;
+	border: 1px solid #5a4d79 !important;
+	background: #5a4d79;
+	padding: 5px 10px;
+	font-family: 'source_sans_proregular';
+	font-weight: 400;
+	font-style: normal;
+	text-transform: none !important
+}
+
+.blok.snelkiezer .btn:hover {
+	background: #23114c;
+	border: 1px solid #fff !important
+}
+
+.blok.snelkiezer form {
+	margin: 0
+}
+
+.blok.snelkiezer form .form-group {
+	padding: 0;
+	margin: 0
+}
+
+.blok.snelkiezer form .form-group input {
+	background: #5a4d79;
+	color: #fff;
+	border: 1px solid #5a4d79;
+	font-size: .857em
+}
+
+.blok.snelkiezer form .btn {
+	background: #fff;
+	border: 1px solid #fff !important;
+	position: absolute;
+	left: auto;
+	color: #23114c !important;
+	text-transform: lowercase;
+	font-family: 'FontAwesome';
+	font-size: 1.357em;
+	padding-top: 3px;
+	width: 15%;
+	top: auto;
+	bottom: 0
+}
+
+.blok.snelkiezer form .btn::first-letter {
+	text-transform: none !important
+}
+
+.blok.snelkiezer form .btn:hover {
+	background: #fff !important
+}
+
 .blok:first-of-type {
 	margin-top: 0
 }
@@ -2473,8 +3086,14 @@ body {
 	margin-top: -20px
 }
 
-.lt-ie9 .blok,.lt-ie10 .blok,.lt-ie11 .blok {
-	min-height: 0
+.lt-ie9 .blok,.lt-ie10 .blok,.lt-ie11 .blok,.ie11 .blok {
+	min-height: 0;
+	height: auto
+}
+
+html[data-useragent*='MSIE 10.0'] .blok {
+	min-height: inherit;
+	height: auto
 }
 
 footer {
@@ -2601,9 +3220,64 @@ footer .social li:hover a {
 	background-color: #008383
 }
 
+.lt-ie9 .highlighted .media-body .datum {
+	background: url("../img/datum-groot-blauw-ie8.png") center center
+		no-repeat
+}
+
+.lt-ie9 .overzichtlijst .media .datum {
+	background: url("../img/datum-klein-paars-ie8.png") center center
+		no-repeat
+}
+
+.lt-ie9 .info.blok .datum {
+	background: url("../img/datum-groot-paars-ie8.png") center center
+		no-repeat
+}
+
+.lt-ie9 .detail-content .contentarea .content .datum {
+	background: url("../img/datum-klein-paars-ie8.png") center center
+		no-repeat
+}
+
 .lt-ie9 #main.landing .area ul li,.lt-ie9 .navbar .container #mainnav.nav li ul.dropdownmenu li ul li
 	{
 	background-image: url("../img/li-groen-ie.png")
+}
+
+.lt-ie9 #main.vindjestudie .studiefilter ul li {
+	background: url("../img/studiefilter-zoeken-bg-ie8.png") left center
+		no-repeat #5a4d79
+}
+
+.lt-ie9 #main.vindjestudie .studiefilter ul li label:before {
+	background: url("../img/input-bg-ie8-2.png") center center no-repeat
+}
+
+.lt-ie9 #main.vindjestudie .studiefilter ul li input[type="checkbox"] {
+	width: auto;
+	height: auto;
+	margin: 8px 0 0 8px
+}
+
+.lt-ie9 #main.vindjestudie .overzichtlijst .media .media-object {
+	background: url("../img/datum-groot-paars-ie8.png") center center
+		no-repeat
+}
+
+.lt-ie9 #main.vindjestudie .overzichtlijst .media .media-object img {
+	position: relative;
+	margin-top: -30px;
+	top: 50%
+}
+
+.lt-ie9 #main.landing .area .article .datum {
+	background: url("../img/datum-groot-wit-ie8.png") center center
+		no-repeat
+}
+
+.lt-ie9 .radiogroup li {
+	background: none !important
 }
 
 .lt-ie9 .overzichtlijst .media .media-body .tags li,.lt-ie9 .detail-content .contentarea .content ul li,.lt-ie9 .tekstitem ul li
@@ -2644,11 +3318,22 @@ footer .social li:hover a {
 	background-color: #008383
 }
 
+.lt-ie10 #main.vindjestudie .overzichtlijst .media .media-object img {
+	position: relative;
+	margin-top: -30px;
+	top: 50%
+}
+
 @media ( max-width :765px) and (orientation:landscape) {
 	.blok {
 		width: 46%;
 		margin: 10px 2% !important;
 		float: left
+	}
+	.blok.snelkiezer,.blok.vrij {
+		width: 100%;
+		margin-left: 0 !important;
+		margin-right: 0 !important
 	}
 	.detail-content .contentarea .content figure.gallery a {
 		width: 33.333%
@@ -2694,6 +3379,17 @@ footer .social li:hover a {
 	#datepicker .ui-datepicker-calendar tr td span,#datepicker .ui-datepicker-calendar tr td a
 		{
 		padding-top: 30%
+	}
+	#main.home .col-xs-6,#main.lectoraat .col-xs-6,#main.home .col-xs-12,#main.lectoraat .col-xs-12
+		{
+		width: 100%
+	}
+	#main.home .blok h1,#main.lectoraat .blok h1 {
+		font-size: 2.2em
+	}
+	#main.home .slide-content,#main.lectoraat .slide-content {
+		margin-top: 50% !important;
+		margin-bottom: 240px !important
 	}
 }
 
@@ -2837,6 +3533,77 @@ footer .social li:hover a {
 	}
 	.blok.info {
 		margin-left: 0
+	}
+	.blok.snelkiezer div.vorm {
+		padding-left: 20px
+	}
+	#main.home .swiper-container,#main.lectoraat .swiper-container {
+		height: auto !important
+	}
+	#main.home .swiper-wrapper,#main.lectoraat .swiper-wrapper {
+		height: auto !important
+	}
+	#main.home .swiper-slide,#main.lectoraat .swiper-slide {
+		height: auto !important
+	}
+	#main.home .slide-content,#main.lectoraat .slide-content {
+		background: #fff;
+		margin-top: 30%;
+		margin-bottom: 200px
+	}
+	#main.home .slide-content .highlighted,#main.lectoraat .slide-content .highlighted
+		{
+		margin-left: auto;
+		width: 100%
+	}
+	#main.home .slide-content .highlighted .slider-text,#main.lectoraat .slide-content .highlighted .slider-text
+		{
+		padding: 0;
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		border-radius: 0;
+		background: 0;
+		height: auto
+	}
+	#main.home .slide-content .highlighted .slider-text .datum,#main.lectoraat .slide-content .highlighted .slider-text .datum
+		{
+		width: 40px;
+		height: 40px;
+		line-height: .857em;
+		padding: 9px 0 0 0;
+		font-size: 1em;
+		left: 0;
+		top: 0;
+		margin-top: -30px
+	}
+	#main.home .slide-content .highlighted .slider-text .datum span,#main.lectoraat .slide-content .highlighted .slider-text .datum span
+		{
+		font-size: .786em;
+		display: block;
+		text-transform: uppercase
+	}
+	#main.home .slide-content .highlighted .slider-text:before,#main.lectoraat .slide-content .highlighted .slider-text:before
+		{
+		display: none
+	}
+	#main.home .slide-content .highlighted .slider-text a,#main.lectoraat .slide-content .highlighted .slider-text a,#main.home .slide-content .highlighted .slider-text .contentarea,#main.lectoraat .slide-content .highlighted .slider-text .contentarea
+		{
+		padding: 0;
+		height: auto
+	}
+	#main.home .slider-pagination,#main.lectoraat .slider-pagination {
+		display: none
+	}
+	#main.home .swipenav,#main.lectoraat .swipenav {
+		top: 40px !important
+	}
+	#main.home .swipenav.prev,#main.lectoraat .swipenav.prev {
+		left: -60px !important;
+		padding-left: 40px
+	}
+	#main.home .swipenav.next,#main.lectoraat .swipenav.next {
+		right: -60px !important;
+		padding-right: 40px
 	}
 }
 
@@ -3064,6 +3831,12 @@ footer .social li:hover a {
 	}
 }
 
+@media ( min-width :768px) and (max-width: 991px) {
+	.detail-content .contentarea .content .share a span {
+		font-size: .68em
+	}
+}
+
 @media ( max-width : 991px) {
 	.btn.back {
 		margin-top: -50px;
@@ -3091,6 +3864,9 @@ footer .social li:hover a {
 		right: 20px;
 		top: -20px
 	}
+	.blok.snelkiezer div.vorm {
+		margin-left: 0
+	}
 	.highlighted.medium {
 		float: none
 	}
@@ -3099,6 +3875,22 @@ footer .social li:hover a {
 	}
 	.vindjestudie .aside {
 		clear: both
+	}
+	#main.home .swiper-container .swipenav,#main.lectoraat .swiper-container .swipenav
+		{
+		position: absolute;
+		top: 171px
+	}
+	#main.home .swiper-container .swipenav.prev,#main.lectoraat .swiper-container .swipenav.prev
+		{
+		left: -50px
+	}
+	#main.home .swiper-container .swipenav.next,#main.lectoraat .swiper-container .swipenav.next
+		{
+		right: -50px
+	}
+	#main.home .slider-pagination,#main.lectoraat .slider-pagination {
+		left: -125px
 	}
 }
 
@@ -3143,6 +3935,25 @@ footer .social li:hover a {
 			float: left;
 			margin-right: 4%
 		}
+	}
+	#main.home .slide-content,#main.lectoraat .slide-content {
+		margin-top: 15px
+	}
+	#main.home .swiper-container .swipenav,#main.lectoraat .swiper-container .swipenav
+		{
+		position: absolute;
+		top: 171px
+	}
+	#main.home .swiper-container .swipenav.prev,#main.lectoraat .swiper-container .swipenav.prev
+		{
+		left: -50px
+	}
+	#main.home .swiper-container .swipenav.next,#main.lectoraat .swiper-container .swipenav.next
+		{
+		right: -50px
+	}
+	#main.home .slider-pagination,#main.lectoraat .slider-pagination {
+		top: -305px
 	}
 }
 
@@ -3307,7 +4118,7 @@ footer .social li:hover a {
 		margin-bottom: 0
 	}
 	#datepicker {
-		margin-top: -274px;
+		margin-top: -314px;
 		margin-bottom: -40px
 	}
 	.highlighted {
@@ -3334,6 +4145,36 @@ footer .social li:hover a {
 @media ( min-width :992px) and (max-width:1199px) {
 	#main.landing .area .article {
 		padding-top: 120px
+	}
+	#main.home .swiper-container .swipenav,#main.lectoraat .swiper-container .swipenav
+		{
+		position: absolute;
+		top: 171px
+	}
+	#main.home .swiper-container .swipenav.prev,#main.lectoraat .swiper-container .swipenav.prev
+		{
+		left: -50px
+	}
+	#main.home .swiper-container .swipenav.next,#main.lectoraat .swiper-container .swipenav.next
+		{
+		right: -50px
+	}
+	#main.home .slider-pagination,#main.lectoraat .slider-pagination {
+		left: -220px
+	}
+	#main.home .blok,#main.lectoraat .blok {
+		font-size: 85%
+	}
+	#main.home .blok.snelkiezer .vorm,#main.lectoraat .blok.snelkiezer .vorm
+		{
+		padding-left: 30px
+	}
+	#main.home .blok.snelkiezer a.btn,#main.lectoraat .blok.snelkiezer a.btn,#main.home .blok.snelkiezer input,#main.lectoraat .blok.snelkiezer input
+		{
+		font-size: 90%
+	}
+	.detail-content .contentarea .content .share a span {
+		font-size: .68em
 	}
 }
 

@@ -61,24 +61,16 @@
    <!-- CSS -->  
   <link rel="stylesheet" href="<hst:link path="/css/kees/bootstrap.min.css"/>" >
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" >
+  
+  <link rel="stylesheet" href="<hst:link path="/css/eforms.css"/>" type="text/css" />
+  
+  <link rel="stylesheet" href="<hst:link path="/css/kees/ekko-lightbox.min.css"/>" >
   <link rel="stylesheet" href="<hst:link path="/css/kees/style.css"/>" >
+  
   <link rel="stylesheet" href="<hst:link path="/css/kees/style-additions.css"/>" >
+  
   <link rel="stylesheet" href="<hst:link path="/css/kees/normalize.css"/>" >
   
-  <script>
-      if ($.browser.msie && $.browser.version == 9) {
-      $("html").addClass("lt-ie10");
-    }
-      
-      if ($.browser.msie && $.browser.version == 10) {
-      $("html").addClass("lt-ie11");
-    }
-    
-    if ($.browser.msie && $.browser.version == 11) {
-      $("html").addClass("ie11");
-    }
-  </script>
-
   <script type="text/javascript" src="<hst:link path="/js/kees/vendor/modernizr-2.6.2.min.js" />"></script>
   <script type="text/javascript" src="<hst:link path="/js/kees/vendor/retina.min.js" />"></script>
   <script type="text/javascript" src="<hst:link path="/js/kees/vendor/respond.js" />"></script>
@@ -129,7 +121,6 @@
      
     <script type="text/javascript" src="<hst:link path="/js/kees/vendor/bootstrap.min.js" />"></script>
     <script type="text/javascript" src="<hst:link path="/js/kees/vendor/ekko-lightbox.js"/>" ></script>
-    <link rel="stylesheet" href="<hst:link path="/css/kees/ekko-lightbox.min.css"/>" >
     <script type="text/javascript" src="<hst:link path="/js/kees/plugins.js" />"></script>
     <script type="text/javascript" src="<hst:link path="/js/kees/main.js" />"></script>
     

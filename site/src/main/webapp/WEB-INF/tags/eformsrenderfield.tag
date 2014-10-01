@@ -64,7 +64,10 @@
 
   <c:when test="${field.type eq 'datefield'}">
     <div class="eforms-field">
-      <label><c:out value='${field.label}'/><span class="eforms-req"><c:out value='${field.requiredMarker}'/></span></label>
+      <label>
+        <c:out value='${field.label}'/>
+        <span class="eforms-req"><c:out value='${field.requiredMarker}'/></span>
+      </label>
       <input type="text" name="${field.formRelativeUniqueName}" class="date ${field.styleClass}" value="${field.value}" />
       <span class="eforms-hint"><c:out value='${field.hint}'/></span>
     </div>
@@ -73,7 +76,7 @@
         $(function() {
           $('input[class*="date"][name="${field.formRelativeUniqueName}"]').datepicker({
             showOn : "button",
-            buttonImage : "<hst:link path='/images/calendar.gif'/>",
+            buttonImage : "<hst:link path='/images/calendar2.gif'/>",
             buttonImageOnly : true,
             dateFormat : '${field.dateFormat}'.replace(/yyyy/g, 'yy').replace(/M/g, 'm'), // because java date format is different from jquery-ui date format
             autoSize : true
@@ -84,14 +87,15 @@
   </c:when>
 
   <c:when test="${field.type eq 'radiogroup'}">
-    <div class="eforms-field">
+    <div class="eforms-field radiobuttons">
       <label><c:out value='${field.label}'/><span class="eforms-req"><c:out value='${field.requiredMarker}'/></span></label>
       <ul class="radiogroup">
-        <c:forEach var="radio" items="${field.fields}">
+        <c:forEach var="radio" items="${field.fields}" varStatus="step">
           <li>
-            <input type="radio" name="${field.formRelativeUniqueName}" class="${radio.styleClass}" value="<c:out value='${radio.value}'/>"
+            <input type="radio" name="${field.formRelativeUniqueName}" id="${field.formRelativeUniqueName}${step.index}"
+                   class="${radio.styleClass}" value="<c:out value='${radio.value}'/>"
                    <c:if test='${radio.checked}'>checked="true"</c:if> />
-            <c:out value='${radio.label}'/>
+            <label class="instant-label" for="${field.formRelativeUniqueName}${step.index}"><c:out value='${radio.label}'/></label>
           </li>
         </c:forEach>
         <c:if test="${field.allowOther}">
@@ -111,13 +115,15 @@
   </c:when>
 
   <c:when test="${field.type eq 'checkboxgroup'}">
-    <div class="eforms-field">
+    <div class="eforms-field checkboxes">
       <label><c:out value='${field.label}'/><span class="eforms-req"><c:out value='${field.requiredMarker}'/></span></label>
-      <c:forEach var="checkbox" items="${field.fields}">
+      <c:forEach var="checkbox" items="${field.fields}" varStatus="step">
         <p>
-          <input type="checkbox" name="${checkbox.formRelativeUniqueName}" class="${checkbox.styleClass}" value="<c:out value='${checkbox.value}'/>"
+          <input type="checkbox" name="${checkbox.formRelativeUniqueName}" 
+                 class="${checkbox.styleClass}" value="<c:out value='${checkbox.value}'/>"
+                 id="${checkbox.formRelativeUniqueName}${step.index}"
                  <c:if test='${checkbox.checked}'>checked="true"</c:if> />
-          <c:out value='${checkbox.label}'/>
+          <label class="instant-label" for="${checkbox.formRelativeUniqueName}${step.index}"> <c:out value='${checkbox.label}'/> </label>
         </p>
       </c:forEach>
       <c:if test="${field.allowOther}">

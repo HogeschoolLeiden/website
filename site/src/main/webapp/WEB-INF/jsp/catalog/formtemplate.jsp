@@ -96,15 +96,15 @@
       <c:forEach var="button" items="${form.buttons}">
         <c:choose>
           <c:when test="${button.type eq 'resetbutton'}">
-            <input type="reset" name="${button.formRelativeUniqueName}" class="${button.styleClass}"
+            <input type="reset" name="${button.formRelativeUniqueName}" class="btn ${button.styleClass}"
                    value="<c:choose><c:when test='${empty button.value}'><c:out value='${button.name}'/></c:when><c:otherwise><c:out value='${button.value}'/></c:otherwise></c:choose>" />
           </c:when>
           <c:when test="${button.type eq 'submitbutton'}">
-            <input type="submit" name="${button.formRelativeUniqueName}" class="${button.styleClass}"
+            <input type="submit" name="${button.formRelativeUniqueName}" class="btn ${button.styleClass}"
                    value="<c:choose><c:when test='${empty button.value}'><c:out value='${button.name}'/></c:when><c:otherwise><c:out value='${button.value}'/></c:otherwise></c:choose>" />
           </c:when>
           <c:otherwise>
-            <input type="button" name="${button.formRelativeUniqueName}" class="${button.styleClass}"
+            <input type="button" name="${button.formRelativeUniqueName}" class="btn ${button.styleClass}"
                    value="<c:choose><c:when test='${empty button.value}'><c:out value='${button.name}'/></c:when><c:otherwise><c:out value='${button.value}'/></c:otherwise></c:choose>" />
           </c:otherwise>
         </c:choose>
@@ -139,10 +139,6 @@
 
 <hst:headContribution keyHint="formJsValidation">
   <script type="text/javascript" src="<hst:link path="/js/jquery-validate-1.1.2.min.js"/>"></script>
-</hst:headContribution>
-
-<hst:headContribution keyHint="formCss">
-  <link rel="stylesheet" href="<hst:link path="/css/eforms.css"/>" type="text/css" />
 </hst:headContribution>
 
 <script type="text/javascript">
