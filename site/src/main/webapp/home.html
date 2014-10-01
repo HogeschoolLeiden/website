@@ -41,8 +41,10 @@
 	<!-- CSS -->
 	<link href="/media/css/bootstrap.min.css" rel="stylesheet">
 	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
-	
-	<link rel="stylesheet" href="/media/js/vendor/ekko-lightbox.min.css">
+	<!-- SWIPER SLIDER -->
+	<link rel="stylesheet" href="/media/js/vendor/idangerous.swiper.css">
+	<!-- // SWIPER SLIDER -->
+	 <link rel="stylesheet" href="/media/js/vendor/ekko-lightbox.min.css">
 	<link href="/media/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="/media/css/normalize.css">
     <script src="/media/js/vendor/modernizr-2.6.2.min.js"></script>
@@ -209,7 +211,7 @@
 							</li>
 						</ul>
 					</li>
-					<li class="active"><a href="">Nieuws &amp; Agenda</a>
+					<li><a href="">Nieuws &amp; Agenda</a>
 						<ul class="dropdownmenu visible-lg visible-md clearfix">
 							<li>
 								<ul>
@@ -280,7 +282,7 @@
 				</ul>
 				
 				<ul class="nav navbar-nav" id="utilities">
-					<li><a href="">Home</a></li>
+					<li class="active"><a href="">Home</a></li>
 					<li><a href="">Decanen</a></li>
 					<li><a href="">Ouders</a></li>
 					<li><a href="">Alumni</a></li>
@@ -291,7 +293,7 @@
 				<form role="form" class="navbar-form">
 			        <div class="form-group">
 			          <label class="hidden" for="zoeken">Zoeken</label>
-			         <input type="text" class="form-control" id="zoeken">
+			          <input type="text" class="form-control" id="zoeken">
 			        </div>
 			        <button class="btn fa fa-search no-radius" type="submit"><span>Zoeken</span></button>
 			   </form>
@@ -305,309 +307,164 @@
 			<div class="row">
 			  <div class="col-md-9 col-md-offset-3">
 			  	
-			  	<ol class="breadcrumb">
-				  <li><a href="#">Home</a></li>
-				  <li><a href="#">Nieuws &amp; Agenda</a></li>
-				  <li class="active"><span>Persvoorlichting</span></li>
-				</ol>
+			  	
 			  	
 			  </div>
 			</div>
 		</div>
 	</div>
 
-	<div id="main" role="main">		
+	<div id="main" role="main" class="home">		
+		
+		<div class="background large img swiper-container">
+			<div class="swiper-wrapper">
+				<div class="img swiper-slide">
+					<a href="">
+					<!-- afmeting afbeelindg: 1280x621 -->
+					<img src="/media/img/homepage.jpg" alt="Hogeschool Leiden leidt agenten op tot toegepast psycholoog"/>
+					
+					<div class="container">
+						<div class="row">
+						
+							<section class="slide-content col-md-12">
+								<div class="row">
+									<div class="col-md-4 col-md-offset-1 highlighted">
+										<article class="media-body slider-text">
+											<div class="contentarea">
+												<h1>Hogeschool Leiden leidt agenten op tot toegepast psycholoog</h1>
+												 <time datetime="2014-07-25" class="datum start large">25 <span>jul</span></time>
+												 <p>Op donderdag 31 juli organiseert Lectoraat Jeugdzorg en Jeugdbeleid van Hogeschool Leiden het congres "Effectieve Jeugdbescherming"...</p>
+											</div>
+										</article>
+									</div>
+								</div>
+							</section>
+						</div>
+					</div>
+					</a>
+				</div>
 				
-		<div class="background img">
-			<div class="img">
-				<!-- afmeting afbeelindg: 1280x621 -->
-				<img src="/media/img/persvoorlichting1.jpg" alt="Hogeschool Leiden betreurt slachtoffers vliegtuigramp"/>
+				<div class="img swiper-slide">
+					<a href="">
+					<!-- afmeting afbeelindg: 1280x621 -->
+					<img src="/media/img/homepage2.jpg" alt="Hogeschool Leiden leidt agenten op tot toegepast psycholoog"/>
+					
+					<div class="container">
+						<div class="row">
+						
+							<section class="slide-content col-md-12">
+								<div class="row">
+									<div class="col-md-4 col-md-offset-1 highlighted">
+										<article class="media-body slider-text">
+											<div class="contentarea">
+												<h1>Symposium Duurzaam Samenwerken ‘21st Century Skills’</h1>
+												 <time datetime="2014-10-16" class="datum start large">16<span>okt</span></time>
+												 <p>Wat levert de 21e eeuw op voor professionals en hoe kun je de toekomst naar je hand zetten?</p>
+											</div>
+										</article>
+									</div>
+								</div>
+							</section>
+						</div>
+					</div>
+					</a>
+				</div>
+				
+				<div class="img swiper-slide">
+					<a href="">
+						<!-- afmeting afbeelindg: 1280x621 -->
+						<img src="/media/img/agenda-highlighted-1.jpg" alt="Hogeschool Leiden leidt agenten op tot toegepast psycholoog"/>
+						
+						<div class="container">
+							<div class="row">
+							
+								<section class="slide-content col-md-12">
+									<div class="row">
+										<div class="col-md-4 col-md-offset-1 highlighted">
+											<article class="media-body slider-text">
+												<div class="contentarea">
+													<h1>Symposium Geneeskunde groot succes!</h1>
+													 <time datetime="2014-12-23" class="datum start large">23 <span>dec</span></time>
+													 <p>Groepjes studenten van de opleiding CE ontwikkelden een salesplan om toe te werken naar een overzicht van bedrijven...</p>
+												</div>
+											</article>
+										</div>
+									</div>
+								</section>
+							</div>
+						</div>
+					</a>
+				</div>
+				
+				
 			</div>
+			
+			<div class="slider-pagination"></div>
+			<div class="swipenav prev fa fa-angle-left"></div>
+			<div class="swipenav next fa fa-angle-right"></div>			
 		</div>
 		
+		
 		<div class="container">
-			<div class="row">			
+			<div class="row">
 			
-				 <article class="highlighted col-md-9 medium">
-					<div class="row">
-						<a href="">
-							<div class="media-body col-md-5">
-							    <h1 class="media-heading">Hogeschool Leiden betreurt slachtoffers vliegtuigramp</h1>
-							    <time datetime="2024-07-21" class="datum start large">21 <span>jul</span></time>
-							    <p>Ons medeleven gaat uit naar alle nabestaanden van de slachtoffers van de ramp met het toestel van Malaysia Airlines op 17 juli. </p>
-							 </div>		
-						 </a>		
-					 </div>
-				</article>
-						
-				<section class="col-md-9 detail-content">
-					
-					<div class="row">
-						
-						<div class="col-md-8 col-sm-8 contentarea">								
-								<div class="overzichtlijst">
-									
-									<h1>Laatste persberichten</h1>
-					
-									<article class="media clearfix">
-										<a href="">
-											<!-- afmeting afbeelding: 100x100 -->
-											<figure class="media-object pull-left">
-												<img src="/media/img/agenda-article-2.jpg" alt="Symposium Effectieve Jeugdbescherming">
-											</figure>
-											<time datetime="2024-07-25" class="datum start">25 <span>jul</span></time>
-											<time datetime="2024-07-25" class="datum end">25 <span>jul</span></time>
-											<div class="media-body">
-											    <h1 class="media-heading">Hogeschool Leiden leidt agenten op tot toegepast psycholoog</h1>
-											    <p>Ons medeleven gaat uit naar alle nabestaanden van de slachtoffers van de ramp met het toestel van Malaysia Airlines op 17 juli.</p>
-											 </div>		
-										 </a>			
-									</article>
-						
-									<article class="media clearfix">
-										<a href="">
-											<!-- afmeting afbeelding: 100x100 -->
-											<figure class="media-object pull-left">
-												
-											</figure>
-											<time datetime="2024-07-25" class="datum start">25 <span>jul</span></time>
-											<div class="media-body">
-											    <h1 class="media-heading">Integrative Medicine: beste uit twee werelden</h1>
-											    <p>Ons medeleven gaat uit naar alle nabestaanden van de slachtoffers van de ramp met het toestel van Malaysia Airlines op 17 juli.</p>
-											 </div>		
-										 </a>			
-									</article>
-						
-									<article class="media clearfix">
-										<a href="">
-											<!-- afmeting afbeelding: 100x100 -->
-											<figure class="media-object pull-left">
-												<img src="/media/img/agenda-article-2.jpg" alt="Symposium Effectieve Jeugdbescherming">
-											</figure>
-											<time datetime="2024-07-25" class="datum start">25 <span>jul</span></time>
-											<div class="media-body">
-											    <h1 class="media-heading">Freddy de Fruitheld en Paperboyz vertegenwoordigen Hogeschool Leiden tijdens Ondernemersdag071</h1>
-											    <p>Ons medeleven gaat uit naar alle nabestaanden van de slachtoffers van de ramp met het toestel van Malaysia Airlines op 17 juli.</p>
-											 </div>		
-										 </a>			
-									</article>
-									
-									<a href="" class="more">Bekijk alle persberichten</a>
-									
-								</div> <!-- // overzichtlijst -->
-								
-						</div>
-												
-						<aside class="col-md-4 col-sm-4 aside">
-							<h1 class="hidden">Gerelateerde informatie</h1>
-								
-								<section class="blok colorbg lichtpaars contacts">
-									<h1><span class="col-md-8 col-xs-8 col-md-offset-4 col-xs-offset-4">Contactpersoon</span></h1>
-									
-									<div class="contact clearfix">
-																		
-										<ul class="col-md-8 col-xs-8 pull-right">
-											<li><h2>Helmi Geeve</h2></li>
-											<li><a href="mailto:pers@hsleiden.nl">pers@hsleiden.nl</a></li>
-											<li>06 - 468 467 89</li>
-										</ul>
-										
-										<figure class="col-md-4 col-xs-4 pull-left">
-											<!-- img size 60 x 60 -->
-											<img src="/media/img/contactpersoon.jpg" alt="Helmi Geeve"/>
-										
-											<ul class="social clearfix">
-												<li><a href="" class="fa fa-twitter"><span class="hidden">Twitter</span></a></li>
-												<li><a href="" class="fa fa-linkedin"><span class="hidden">LinkedIn</span></a></li>
-												<!--<li><a href="" class="fa fa-facebook"><span class="hidden">Facebook</span></a></li>
-												<li><a href="" class="fa fa-google-plus"><span class="hidden">Google Plus</span></a></li>-->
-												
-												
-											</ul>
-											
-										</figure>
-									
-									</div><!-- // one contact -->								
-									
-									
-								</section>
-								
-								<section class="blok beeldbank">
-									<a href="">
-										<div class="large">
-											<img src="/media/img/beeldbank1.jpg" alt=""/>
-										</div>
-										<div class="medium">
-											<img src="/media/img/detail1.jpg" alt=""/>
-										</div>
-										<div class="medium">
-											<img src="/media/img/detail2.jpg" alt=""/>
-										</div>
-										<div class="large">
-											<img src="/media/img/beeldbank1.jpg" alt=""/>
-										</div>
-										
-										<span class="icon-beeldbank"></span>
-										
-										<span class="btn">bekijk beeldbank</span>
-									</a>
-								</section>
-						
-						</aside>
-						
-					</div>		
-					
-					
-					<div class="row border-top">
-						
-						<div class="col-xs-12 col-sm-6">
-							<article class="tekstitem">
-								<h2><span class="icon">
-									<img src="/media/img/icon-hsleiden.png" alt="icon hsleiden"/>
-									</span>Waar staat Hogeschool Leiden voor</h2>
-								<p>
-									Hogeschool Leiden werkt met passie, talent en menselijke maat. We bieden een activerende leer-en werkomgeving en dragen bij aan innovatie van de beroepspraktijk en aan de ontwikkeling van professionals. We zijn betrokken bij actuele beroepsmatige en maatschappelijke vraagstukken.
-								</p>
-								<a href="" class="more">Meer over onze missie en visie</a>
-							</article>
-						</div>
-						
-						<div class="col-xs-12 col-sm-6">
-							<article class="tekstitem">
-								<h2><span class="icon">
-									<img src="/media/img/icon-media.png" alt="icon media"/>
-								</span>Hogeschool leiden in de media</h2>
-								<ul>
-									<li>Hogeschool Leiden wint zilveren Sustainabul</li>
-									<li>Paul van Maanen vertrekt naar ROC MIdden Nederland</li>
-									<li>Verstandelijk beperkten vaak klem in strafrecht</li>
-									<li>Netwerkfactor 3: vonk in de motor van Leidse economie</li>
-								</ul>
-								<a href="" class="more">Compleet media-overzicht</a>
-							</article>
-						</div>
-						
-					</div><!-- // row tekst items -->
-					
-					<div class="row border-top">
-						
-						<div class="col-sm-4">
-							<article class="twitteritem">
-								<figure>
-									<img src="/media/img/contactpersoon.jpg" alt="Helmi Geeve"/>
-								</figure>
-								<h2>Helmi Geeve <span>@helmigeeve</span></h2>
-								<p>
-									Politie opgeleid aan Hogeschool Leiden <a href="">http://www.scienceguide.nl//201407/politie-opgeleid-aan-hogeschool-leiden.aspx</a> … via <a href="">@ScienceGuideNL</a>
-								</p>
-							</article>
-						</div>
-						
-						<div class="col-sm-4">
-							<article class="twitteritem">
-								<figure>
-									<img src="/media/img/contactpersoon.jpg" alt="Helmi Geeve"/>
-								</figure>
-								<h2>Helmi Geeve <span>@helmigeeve</span></h2>
-								<p>
-									Politie opgeleid aan Hogeschool Leiden <a href="">http://www.scienceguide.nl//201407/politie-opgeleid-aan-hogeschool-leiden.aspx</a> … via <a href="">@ScienceGuideNL</a>
-								</p>
-							</article>
-						</div>
-						
-						<div class="col-sm-4">
-							<article class="twitteritem">
-								<figure>
-									<img src="/media/img/contactpersoon.jpg" alt="Helmi Geeve"/>
-								</figure>
-								<h2>Helmi Geeve <span>@helmigeeve</span></h2>
-								<p>
-									Politie opgeleid aan Hogeschool Leiden <a href="">http://www.scienceguide.nl//201407/politie-opgeleid-aan-hogeschool-leiden.aspx</a> … via <a href="">@ScienceGuideNL</a>
-								</p>
-							</article>
-						</div>
-						
-					</div><!-- // row twitter items -->
-					
-				</section><!-- // content -->
-											
-				
-				
-				<nav class="col-md-3 col-xs-12" role="navigation">
-					<div class="subnav">
-						<h2>Pers</h2>
-						
+			<div class="col-xs-12 col-md-6">
+				<section class="snelkiezer blok colorbg paars medium">
+					<h1>Vind je bacheloropleiding</h1>
+					<div class="interesse col-xs-6 col-sm-8 col-md-8">
+						<h2>Interessegebied</h2>
 						<ul>
-							<li class="active"><a href="">Persvoorlichting</a></li>
-							<li><a href="">Persberichten</a></li>
+							<li><a href="" class="btn">Onderwijs</a></li>
+							<li><a href=""class="btn">Social Work &amp; Toegepaste Psychologie</a></li>
+							<li><a href="" class="btn">Management &amp; Bedrijf</a></li>
+							<li><a href="" class="btn">Techniek</a></li>
+							<li><a href="" class="btn">Zorg</a></li>
 						</ul>
 					</div>
-				</nav>
+					<div class="vorm col-xs-6 col-sm-4 col-md-4">
+						<h2>Vorm</h2>
+						<ul>
+							<li><a href="" class="btn">Voltijd</a></li>
+							<li><a href="" class="btn">Deeltijd</a></li>
+							<li><a href="" class="btn">Duaal</a></li>
+						</ul>
+					</div>
+					<div class="zoeken col-xs-12 col-sm-12 ">
+						<form role="form" class="form">
+						<label for="zoekfilter">Zoeken in bacheloropleidingen</label>
+					        <div class="form-group">
+					          <input type="text" class="form-control" id="zoekfilter" name="zoekfilter">
+					        </div>
+					        <button class="btn fa fa-search no-radius" type="submit"><span>Zoeken</span></button>
+					   </form>
+					</div>
+				</section>
+			</div>
+			
+			
+			<div class="col-xs-6 col-sm-6 col-md-3 ">
+				<article class="blok colorbg groen medium vrij">
+					<a href="">
+					<h1>Lectoraat Eigen Regie</h1>
+					<h2>Onderzoek naar zelfmanagement</h2>
+					<span class="btn">Naar website van lectoraat</span>
+					</a>
+				</article>
+			</div>
+			
+			<div class="col-xs-6 col-sm-6 col-md-3">
+				<article class="blok colorbg blauw medium vrij">
+					<a href="">
+					<h1>Open Dagen</h1>
+					<h2>Maandag 18 tot vrijdag 22 augustus.
+Grijp je kans!</h2>
+					<span class="btn">Informatie en aanmelden</span>
+					</a>
+				</article>
+			</div>
+			
 				
-				<!-- FILTER NAVIGATIE
-				
-				<div class="filter filter-collapse collapse clearfix algemeenfilter">				
-					
-					<section class="filtergroup col-md-3">
-						<h2>Over</h2>
-						<div class="filterlist">
-							<div class="checkbox">
-								<input type="checkbox" id="over-onderwijs" value="onderwijs" name="over">
-								<label for="over-onderwijs">Onderwijs</label>
-							</div>
-							<div class="checkbox">
-								<input type="checkbox" id="over-onderzoek" value="onderzoek" name="over">
-								<label for="over-onderzoek">Onderzoek</label>
-							</div>
-							<div class="checkbox">
-								<input type="checkbox" id="over-over-hogeschool-leiden" value="over-hogeschool-leiden" name="over" checked>
-								<label for="over-over-hogeschool-leiden">Over Hogeschool Leiden</label>
-							</div>
-						</div>
-					</section>
-					
-					<section class="filtergroup col-md-3">
-						<h2>Thema</h2>
-						<div class="filterlist">
-							<div class="checkbox">
-								<input type="checkbox" id="thema-jeugd" value="jeugd" name="thema">
-								<label for="thema-jeugd">Jeugd</label>
-							</div>
-							<div class="checkbox">
-								<input type="checkbox" id="thema-life-science" value="life-science" name="thema" checked>
-								<label for="thema-life-science">Life Science</label>
-							</div>
-							<div class="checkbox">
-								<input type="checkbox" id="thema-zorg" value="zorg" name="thema">
-								<label for="thema-zorg">Zorg</label>
-							</div>
-							<div class="checkbox">
-								<input type="checkbox" id="thema-overig" value="overig" name="thema">
-								<label for="thema-overig">Overig</label>
-							</div>
-						</div>
-					</section>
-					
-					
-					<section class="filtergroup col-md-3">
-						<h2>Filter op trefwoord</h2>
-						<div class="filterlist">
-							<form role="form" class="form">
-						        <div class="form-group">
-						           <label for="zoekfilter" class="hidden">Filter op trefwoord</label>
-						          <input type="text" class="form-control" id="zoekfilter">
-						        </div>
-						        <button class="btn fa fa-search no-radius" type="submit"><span>Zoeken</span></button>
-						   </form>
-						</div>
-					</section>					
-					
-				</div>
-				-->
-				
-				</div>
-				
-				
+			</div><!-- // row  -->
 		</div><!-- // container -->
 		
 	</div>
@@ -712,6 +569,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="/media/js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
     <script src="/media/js/vendor/bootstrap.min.js"></script>
+    <!-- SWIPER SLIDER -->
+    <script defer src="/media/js/vendor/idangerous.swiper.js"></script>
+    <script defer src="/media/js/vendor/idangerous.swiper.progress.min.js"></script>
+	<!-- // SWIPER SLIDER -->
 	<script src="/media/js/vendor/ekko-lightbox.js"></script>
     <script src="/media/js/plugins.js"></script>
     <script src="/media/js/main.js"></script>
