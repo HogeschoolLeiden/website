@@ -19,80 +19,35 @@
 /* public images */
 /* ------------- */
 
-.images2 {
-	width: 100%;
-	float: left;
-}
+.images2 + .pager-wrapper .pager ul li,  
+.images3 + .pager-wrapper .pager ul li, 
+.images4 + .pager-wrapper .pager ul li { list-style: none; background: none; padding-left: 10px; }
 
-.images2 .singleImage {
-	width: 50%;
-	float: left;
-	margin-bottom: 2%;
-}
+.images2 { width: 100%; float: left; }
 
-.images2 .singleImagePadding {
-	width: 95%;
-	float: center;
-	margin-left: 2.5%;
-}
+.images2 .singleImage { width: 50%; float: left; margin-bottom: 2%; }
 
-.images2 .singleImagePadding img {
-	display: block;
-	width: 100%;
-	float: left;
-}
+.images2 .singleImagePadding { width: 95%; float: center; margin-left: 2.5%; }
 
-.images2 .singleImagePadding img {
-	display: block;
-	width: 100%;
-	float: left;
-}
+.images2 .singleImagePadding img { display: block; width: 100%; float: left; }
 
-.images3 {
-	width: 100%;
-	float: left;
-}
+.images2 .singleImagePadding img { display: block; width: 100%; float: left; }
 
-.images3 .singleImage {
-	width: 33.333%;
-	float: left;
-	margin-bottom: 2%;
-}
+.images3 { width: 100%; float: left; }
 
-.images3 .singleImagePadding {
-	width: 95%;
-	float: center;
-	margin-left: 2.5%;
-}
+.images3 .singleImage { width: 33.333%; float: left; margin-bottom: 2%; }
 
-.images3 .singleImagePadding img {
-	display: block;
-	width: 100%;
-	float: left;
-}
+.images3 .singleImagePadding { width: 95%; float: center; margin-left: 2.5%; }
 
-.images4 {
-	width: 100%;
-	float: left;
-}
+.images3 .singleImagePadding img { display: block; width: 100%; float: left; }
 
-.images4 .singleImage {
-	width: 25%;
-	float: left;
-	margin-bottom: 2%;
-}
+.images4 { width: 100%; float: left; }
 
-.images4 .singleImagePadding {
-	width: 95%;
-	float: center;
-	margin-left: 2.5%;
-}
+.images4 .singleImage { width: 25%; float: left; margin-bottom: 2%; }
 
-.images4 .singleImagePadding img {
-	display: block;
-	width: 100%;
-	float: left;
-}
+.images4 .singleImagePadding { width: 95%; float: center; margin-left: 2.5%; }
+
+.images4 .singleImagePadding img { display: block; width: 100%; float: left; }
 
 /* -------------------- */
 /* flexible block image */
@@ -221,11 +176,6 @@ figure.fexibleblock.image img {
 /* left naavigation highlighting */
 /* ----------------------------- */
 
-.subnav ul li.active ul li.arrow-side a:after {
-	border-top: none;
-	border-bottom: none;
-}
-
 .subnav ul li.active a {
 	background: #c8c3d2
 }
@@ -233,6 +183,14 @@ figure.fexibleblock.image img {
 .subnav ul li.active ul li.arrow-side a {
 	background-color: white;
 	font-family: source_sans_prolight;
+}
+
+.subnav ul, .subnav ul li.active ul li.arrow-side a:after {
+	border-top: none;
+}
+
+.subnav ul li.active, .subnav ul li.current, .subnav ul li.active ul li.arrow-side a:after {
+	border-bottom: none;	
 }
 
 /* ------------ */
@@ -367,12 +325,10 @@ nav.col-md-3.col-xs-12 .overzichtlijst.related h2.widgetTitle
 
 .aside section.blok.colorbg.lichtpaars.info {
 	display: block;
-	float: left;
-}
+} 
 
 .aside section.blok.colorbg.lichtpaars.info.nolink {
 	display: block;
-	float: left;
 	padding-bottom: 30px;
 }
 
@@ -380,7 +336,8 @@ nav.col-md-3.col-xs-12 .overzichtlijst.related h2.widgetTitle
 	display: block;
 	float: left;
 	width: 100%;
-}
+	margin-bottom: 1em;
+} 
 
 .aside section.blok.colorbg.lichtpaars.info ul li {
 	display: block;
@@ -401,24 +358,15 @@ nav.col-md-3.col-xs-12 .overzichtlijst.related h2.widgetTitle
 
 .aside section.blok.colorbg.lichtpaars.info p {
 	display: block;
-	float: left;
 }
 
 .aside section.blok.colorbg.lichtpaars.info a {
 	display: block;
 	float: left;
-}
+} 
 
 .aside section.blok.colorbg.lichtpaars.info img.datum.large {
 	padding-top: 0;
-}
-
-/*
-	for some (yet) unclear reason, if there is an info block, the widgets of the right side
-	get pushed outside the side of the page and do not get displayed
-*/
-.aside section {
-	float: left;
 }
 
 /* --------------- */
