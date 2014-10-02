@@ -4,8 +4,8 @@
   </sv:property>
   <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
     <sv:value>hippotranslation:translated</sv:value>
-    <sv:value>hippo:translated</sv:value>
     <sv:value>mix:versionable</sv:value>
+    <sv:value>hippo:translated</sv:value>
   </sv:property>
   <sv:property sv:name="jcr:uuid" sv:type="String">
     <sv:value>4d592309-e45f-4400-9396-a9254142f4be</sv:value>
@@ -15,6 +15,7 @@
     <sv:value>new-rss-folder</sv:value>
     <sv:value>new-teaser-folder</sv:value>
     <sv:value>new-contact-person-folder</sv:value>
+    <sv:value>new-carrousel-folder</sv:value>
   </sv:property>
   <sv:property sv:name="hippotranslation:id" sv:type="String">
     <sv:value/>
@@ -2114,6 +2115,34 @@
           </sv:property>
         </sv:node>
       </sv:node>
+    </sv:node>
+  </sv:node>
+  <sv:node sv:name="carrousel">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hippostd:folder</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+      <sv:value>hippo:harddocument</sv:value>
+      <sv:value>hippotranslation:translated</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>2b7495b3-53c2-4767-af0a-ec9deb791653</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:related___pathreference" sv:type="String"/>
+    <sv:property sv:name="hippostd:foldertype" sv:type="String" sv:multiple="true">
+      <sv:value>new-carrousel-document</sv:value>
+      <sv:value>new-carrousel-folder</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippotranslation:id" sv:type="String">
+      <sv:value>7ae3a743-8a56-4088-8df1-b03e84d69acd</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippotranslation:locale" sv:type="String">
+      <sv:value>nl</sv:value>
+    </sv:property>
+    <sv:node sv:name="hippotranslation:translations">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hippotranslation:translations</sv:value>
+      </sv:property>
     </sv:node>
   </sv:node>
 </sv:node>

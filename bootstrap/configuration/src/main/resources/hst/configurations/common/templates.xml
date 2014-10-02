@@ -506,4 +506,20 @@
       <sv:value>jsp/blog/main-faceted-overview.jsp</sv:value>
     </sv:property>
   </sv:node>
+  <sv:node sv:name="homepage.main">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/homepage/main.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="homepage.main.content">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/homepage/main/content.jsp</sv:value>
+    </sv:property>
+  </sv:node>
 </sv:node>

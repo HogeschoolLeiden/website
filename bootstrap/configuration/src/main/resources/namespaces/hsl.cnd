@@ -18,6 +18,9 @@
 [hsl:ArticlePage] > hsl:WebPage, hippostd:relaxed, hippotranslation:translated
   orderable
 
+[hsl:HomePage] > hsl:WebPage, hippostd:relaxed, hippotranslation:translated
+  orderable
+
 [hsl:CalendarEventsCompoundMixin] > hippo:compound, hippostd:relaxed
   orderable
 
@@ -43,6 +46,9 @@
   orderable
 
 [hsl:ExternalLink] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hsl:CarrouselItem] > hippo:compound, hippostd:relaxed
   orderable
 
 [hsl:ExternalLinks] > hippo:compound, hippostd:relaxed
@@ -205,6 +211,9 @@
   orderable
 
 [hsl:TextTeaser] > hsl:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hsl:Carrousel] > hsl:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
 [hsl:ImageTeaser] > hsl:basedocument, hippostd:relaxed, hippotranslation:translated
