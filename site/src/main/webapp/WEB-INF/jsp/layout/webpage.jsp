@@ -62,6 +62,10 @@
   <link rel="stylesheet" href="<hst:link path="/css/kees/bootstrap.min.css"/>" >
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" >
   
+  <!-- SWIPER SLIDER -->
+  <link rel="stylesheet" href="<hst:link path="/css/kees/idangerous.swiper.css"/>">
+  <!-- // SWIPER SLIDER -->
+  
   <link rel="stylesheet" href="<hst:link path="/css/eforms.css"/>" type="text/css" />
   
   <link rel="stylesheet" href="<hst:link path="/css/kees/ekko-lightbox.min.css"/>" >
@@ -120,6 +124,12 @@
    --%>
      
     <script type="text/javascript" src="<hst:link path="/js/kees/vendor/bootstrap.min.js" />"></script>
+    
+    <%--   included directly from the homepage (the page that uses them)
+    <script type="text/javascript" src="<hst:link path="/js/kees/vendor/idangerous.swiper.js"/>"></script>
+    <script type="text/javascript" src="<hst:link path="/js/kees/vendor/idangerous.swiper.progress.min.js"/>"></script>
+    --%>
+    
     <script type="text/javascript" src="<hst:link path="/js/kees/vendor/ekko-lightbox.js"/>" ></script>
     <script type="text/javascript" src="<hst:link path="/js/kees/plugins.js" />"></script>
     <script type="text/javascript" src="<hst:link path="/js/kees/main.js" />"></script>

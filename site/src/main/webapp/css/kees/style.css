@@ -372,6 +372,113 @@ body {
 	border-right-color: #23114c !important
 }
 
+.pager {
+	text-align: left;
+	margin: 15px 0 -15px 0;
+	padding: 0 10px
+}
+
+.pager ul {
+	padding: 0
+}
+
+.pager ul li {
+	margin: 0 7px 0 0
+}
+
+.pager ul li span,.pager ul li a {
+	font-family: 'source_sans_proregular';
+	font-weight: 400;
+	font-style: normal;
+	font-size: 1em;
+	background: #23114c;
+	border: 0;
+	color: #fff;
+	width: 30px;
+	height: 30px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	padding: 4px 0 0 0;
+	text-align: center
+}
+
+.pager ul li span {
+	background: #008383
+}
+
+.pager ul li.pager-previous,.pager ul li.pager-next {
+	position: relative
+}
+
+.pager ul li.pager-previous span,.pager ul li.pager-next span,.pager ul li.pager-previous a,.pager ul li.pager-next a
+	{
+	width: 30px;
+	height: 30px;
+	text-indent: -9999px;
+	display: inline-block;
+	background: #23114c;
+	position: relative;
+	z-index: 1;
+	background: transparent
+}
+
+.pager ul li.pager-previous span:after,.pager ul li.pager-next span:after,.pager ul li.pager-previous a:after,.pager ul li.pager-next a:after
+	{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	display: block;
+	z-index: 1
+}
+
+.pager ul li.pager-previous:after,.pager ul li.pager-next:after {
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	text-align: center;
+	color: #fff;
+	font-family: 'source_sans_proregular';
+	font-weight: 400;
+	font-style: normal;
+	font-size: 1.429em;
+	z-index: 0;
+	width: 30px;
+	height: 30px;
+	background: #23114c;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	margin-top: -5px;
+	padding-top: 3px
+}
+
+.pager ul li.pager-previous:after {
+	content: "«"
+}
+
+.pager ul li.pager-next:after {
+	content: "»"
+}
+
+.pager ul li:hover a {
+	background: #008383
+}
+
+.pager ul li:hover.pager-previous:after,.pager ul li:hover.pager-next:after
+	{
+	background: #008383
+}
+
+.pager ul li:hover.pager-previous a,.pager ul li:hover.pager-next a {
+	background: transparent
+}
+
 .more {
 	color: #23114c;
 	background: url("../img/more-arrow-16.png") right 7px no-repeat;
@@ -701,7 +808,8 @@ body {
 }
 
 .navbar .container .navbar-header .navbar-toggle {
-	background: #008383
+	background: #008383;
+	z-index: 6000
 }
 
 .navbar .container .navbar-header .navbar-toggle .icon-bar {
@@ -727,7 +835,68 @@ body {
 	width: 46px;
 	height: 50px;
 	padding: 0;
+	margin: 0;
+	position: relative;
+	z-index: 1
+}
+
+.navbar .container.lectoraattitle {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 0
+}
+
+.navbar .container.lectoraattitle .row {
+	height: 100%
+}
+
+.navbar .container.lectoraattitle .row .col-md-7 {
+	height: 100%
+}
+
+.navbar .container.lectoraattitle .row .col-md-7 .table {
+	display: table;
+	height: 100%;
+	width: 100%
+}
+
+.navbar .container.lectoraattitle .row .col-md-7 .table .table-cell {
+	display: table-cell;
+	height: 100%;
+	vertical-align: middle
+}
+
+.navbar .container.lectoraattitle .row .col-md-7 .table .table-cell .centered
+	{
+	display: inline-block;
+	position: relative
+}
+
+.navbar .container.lectoraattitle .row .col-md-7 .table .table-cell .centered h1
+	{
+	color: #23114c;
+	font-family: 'source_sans_prolight';
+	font-weight: 400;
+	font-style: normal;
+	font-size: 2.286em;
 	margin: 0
+}
+
+.navbar .container.lectoraattitle .row .col-md-7 .table .table-cell .centered h1 span
+	{
+	font-family: 'source_sans_prosemibold';
+	font-weight: 400;
+	font-style: normal;
+	display: block;
+	line-height: .95em
+}
+
+.navbar .container.lectoraattitle .row .col-md-7 .table .table-cell .centered h1 a
+	{
+	color: #23114c;
+	text-decoration: none
 }
 
 #breadcrumbs {
@@ -790,7 +959,7 @@ body {
 	border-radius: 50%;
 	text-align: center;
 	float: right;
-	margin: 0 0 20px 20px;
+	margin: 0;
 	padding-top: 20px
 }
 
@@ -1085,7 +1254,10 @@ body {
 	{
 	background: #5a4d79;
 	color: #fff;
-	padding: 5px 0
+	padding: 5px 0;
+	font-family: 'source_sans_prosemibold';
+	font-weight: 400;
+	font-style: normal
 }
 
 #datepicker .ui-datepicker-calendar tr th span,#datepicker .fc-border-separate tr th span,#datepicker .ui-datepicker-calendar tr th a,#datepicker .fc-border-separate tr th a
@@ -1126,6 +1298,36 @@ body {
 #datepicker .ui-datepicker-calendar tr td.ui-datepicker-current-day span div,#datepicker .fc-border-separate tr td.ui-datepicker-current-day span div,#datepicker .ui-datepicker-calendar tr td.fc-today span div,#datepicker .fc-border-separate tr td.fc-today span div,#datepicker .ui-datepicker-calendar tr td.ui-datepicker-current-day div div,#datepicker .fc-border-separate tr td.ui-datepicker-current-day div div,#datepicker .ui-datepicker-calendar tr td.fc-today div div,#datepicker .fc-border-separate tr td.fc-today div div
 	{
 	border: 0
+}
+
+#datepicker .ui-datepicker-calendar tr td.fc-other-month .fc-day-number,#datepicker .fc-border-separate tr td.fc-other-month .fc-day-number
+	{
+	opacity: 1;
+	color: #5a4d79
+}
+
+#datepicker .ui-datepicker-calendar tr td.fc-highlighted,#datepicker .fc-border-separate tr td.fc-highlighted
+	{
+	background: #009fda;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%
+}
+
+#datepicker .ui-datepicker-calendar tr td.fc-highlighted span div,#datepicker .fc-border-separate tr td.fc-highlighted span div,#datepicker .ui-datepicker-calendar tr td.fc-highlighted div div,#datepicker .fc-border-separate tr td.fc-highlighted div div
+	{
+	border: 0
+}
+
+#datepicker .ui-datepicker-calendar tr td.fc-highlighted.fc-other-month,#datepicker .fc-border-separate tr td.fc-highlighted.fc-other-month
+	{
+	background: #5a4d79;
+	color: #23114c
+}
+
+#datepicker .ui-datepicker-calendar tr td.fc-highlighted.fc-other-month .fc-day-number,#datepicker .fc-border-separate tr td.fc-highlighted.fc-other-month .fc-day-number
+	{
+	color: #23114c
 }
 
 #datepicker .ui-datepicker-calendar tr td.ui-state-disabled span,#datepicker .fc-border-separate tr td.ui-state-disabled span,#datepicker .ui-datepicker-calendar tr td.ui-state-disabled a,#datepicker .fc-border-separate tr td.ui-state-disabled a
@@ -3370,6 +3572,10 @@ footer .social li:hover a {
 }
 
 @media ( max-width :765px) and (orientation:portrait) {
+	.navbar .container.lectoraattitle .col-md-7 {
+		margin-left: 16.666%;
+		padding-right: 45px
+	}
 	blockquote .media-body .social .title {
 		display: none !important
 	}
@@ -3394,6 +3600,14 @@ footer .social li:hover a {
 }
 
 @media ( max-width :765px) {
+	.navbar .container.lectoraattitle {
+		height: 50px
+	}
+	.navbar .container.lectoraattitle h1 {
+		font-size: 1em !important;
+		position: relative;
+		top: 2px
+	}
 	#breadbrumbs {
 		height: 28px;
 		overflow: hidden
@@ -3553,7 +3767,7 @@ footer .social li:hover a {
 	}
 	#main.home .slide-content .highlighted,#main.lectoraat .slide-content .highlighted
 		{
-		margin-left: auto;
+		margin-left: auto !important;
 		width: 100%
 	}
 	#main.home .slide-content .highlighted .slider-text,#main.lectoraat .slide-content .highlighted .slider-text
@@ -3684,6 +3898,10 @@ footer .social li:hover a {
 		border-bottom: 1px solid #008383;
 		padding-bottom: 2px
 	}
+	.navbar .container .nav#utilities.lectoraten {
+		top: 99px;
+		right: 124px
+	}
 	.navbar .container .navbar-form {
 		position: absolute;
 		right: 0;
@@ -3724,6 +3942,9 @@ footer .social li:hover a {
 	.navbar .container .navbar-form .btn span {
 		text-indent: -9999px;
 		display: inline-block
+	}
+	.navbar .container.lectoraattitle {
+		height: 128px
 	}
 	.filter {
 		width: 40%;
@@ -3838,6 +4059,12 @@ footer .social li:hover a {
 }
 
 @media ( max-width : 991px) {
+	.navbar .container.lectoraattitle .col-md-7 {
+		padding-right: 45px
+	}
+	.navbar .container.lectoraattitle h1 {
+		font-size: 1.5em!imporant
+	}
 	.btn.back {
 		margin-top: -50px;
 		min-width: 150px;
@@ -3892,6 +4119,9 @@ footer .social li:hover a {
 	#main.home .slider-pagination,#main.lectoraat .slider-pagination {
 		left: -125px
 	}
+	#main.lectoraat .slider-pagination {
+		left: 245px
+	}
 }
 
 @media ( max-width : 991px) and (orientation : portrait) {
@@ -3908,10 +4138,20 @@ footer .social li:hover a {
 	.filtergroup:last-of-type .filterlist {
 		border-bottom: 5px solid rgba(0, 0, 0, .2)
 	}
+	#main.lectoraat .swiper-container .swiper-wrapper .swiper-slide .slide-content .highlighted
+		{
+		margin-left: 41.666%%
+	}
+	#main.lectoraat .slider-pagination {
+		left: 125px
+	}
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width:
 	1024px) {
+	.navbar .container.lectoraattitle h1 {
+		font-size: 1.5em !important
+	}
 	.detail-content .contentarea .content .share a {
 		padding: 5px 2px 5px 10px
 	}
@@ -3975,7 +4215,7 @@ footer .social li:hover a {
 		height: auto;
 		position: absolute;
 		right: 0;
-		z-index: 3000;
+		z-index: 5000;
 		border: 1px solid #23114c;
 		background: #fff;
 		padding: 0;
@@ -4061,6 +4301,10 @@ footer .social li:hover a {
 	.navbar .container .nav#utilities {
 		right: 285px
 	}
+	.navbar .container .nav#utilities.lectoraten {
+		top: 99px;
+		right: 174px
+	}
 	.navbar .container .navbar-form .form-group input {
 		width: 194px
 	}
@@ -4143,6 +4387,9 @@ footer .social li:hover a {
 }
 
 @media ( min-width :992px) and (max-width:1199px) {
+	.navbar .container.lectoraattitle h1 {
+		font-size: 100%
+	}
 	#main.landing .area .article {
 		padding-top: 120px
 	}
@@ -4173,6 +4420,9 @@ footer .social li:hover a {
 		{
 		font-size: 90%
 	}
+	#main.lectoraat .slider-pagination {
+		left: 270px
+	}
 	.detail-content .contentarea .content .share a span {
 		font-size: .68em
 	}
@@ -4187,6 +4437,10 @@ footer .social li:hover a {
 	}
 	.navbar .container .nav#utilities {
 		right: 285px
+	}
+	.navbar .container .nav#utilities.lectoraten {
+		top: 99px;
+		right: 174px
 	}
 	.highlighted {
 		float: right
