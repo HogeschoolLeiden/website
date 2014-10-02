@@ -44,9 +44,6 @@
                               alt="<fmt:message key="checkbox.checked" />" title="<fmt:message key="checkbox.checked" />"/>
                         <label>
                           <c:out value="${labels[item.name]}" default="${item.name}" escapeXml="true" />
-                          <c:out value=" ( " escapeXml="true" />
-                          <c:out value="${item.count}" escapeXml="true" />
-                          <c:out value=" )" escapeXml="true" />
                         </label>
                       </a>
                     </li>
@@ -64,9 +61,6 @@
                                 alt="<fmt:message key="checkbox.unchecked" />" title="<fmt:message key="checkbox.unchecked" />"/>
                           <label>
                             <c:out value="${labels[item.name]}" default="${item.name}" escapeXml="true" />
-                            <c:out value="    ( " escapeXml="true" />
-                            <c:out value="${item.count}" escapeXml="true" />
-                            <c:out value=" )" escapeXml="true" />
                           </label>
                         </a>
                       </li>
