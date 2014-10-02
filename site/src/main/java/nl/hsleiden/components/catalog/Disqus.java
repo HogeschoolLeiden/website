@@ -8,7 +8,6 @@ import nl.hsleiden.componentsinfo.DisqusInfo;
 import nl.hsleiden.utils.Constants;
 import nl.hsleiden.utils.Constants.WidgetConstants;
 
-import org.hippoecm.hst.core.component.HstComponentException;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
 import org.hippoecm.hst.core.parameters.ParametersInfo;
@@ -19,7 +18,7 @@ import com.tdclighthouse.prototype.components.AjaxEnabledComponent;
 public class Disqus extends AjaxEnabledComponent {
 
     @Override
-    public Map<String, Object> getModel(HstRequest request, HstResponse response) throws HstComponentException {
+    public Map<String, Object> getModel(HstRequest request, HstResponse response) {
         Map<String, Object> result = new HashMap<String, Object>();
         if(request.getRequestContext().getContentBean() instanceof Blogpost){            
             DisqusInfo info = this.<DisqusInfo> getComponentParametersInfo(request);

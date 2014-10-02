@@ -104,11 +104,12 @@ public class Functions {
     
     public static EditableMenuItem getTopMenuItem(EditableMenu menu, Integer level) {
         EditableMenuItem result = null;
+        Integer depthLevel = level;
         
         for (EditableMenuItem menuItem : menu.getMenuItems()) {
             if(menuItem!=null && menuItem.isExpanded()){
-                while(level!=0){
-                    level--;
+                while(depthLevel!=0){
+                    depthLevel--;
                     menuItem = recurseMenuItems(menuItem);
                 }
                 result = menuItem;
@@ -141,7 +142,7 @@ public class Functions {
         
         String sitemenuConfigParameter = getSitemenuConfigParameter(originalMenuItem, "useMainMenuConfig");
         
-        if(sitemenuConfigParameter!=null && sitemenuConfigParameter.equalsIgnoreCase("true")){
+        if(sitemenuConfigParameter!=null && "true".equalsIgnoreCase(sitemenuConfigParameter)){
             HstRequest request = (HstRequest) req;
             
             EditableMenu mainMenu = getSiteMainMenu(request);
@@ -165,8 +166,7 @@ public class Functions {
         HstSiteMenuConfiguration siteMenuConfiguration = hstSite
                 .getSiteMenusConfiguration().getSiteMenuConfiguration("main");
         
-        EditableMenu mainMenu = new HstSiteMenuImpl(null, siteMenuConfiguration, requestContext).getEditableMenu();
-        return mainMenu;
+        return new HstSiteMenuImpl(null, siteMenuConfiguration, requestContext).getEditableMenu();
     }
     
     public static String getConfiguredLink(ImageTeaser imgTeaser){
@@ -179,11 +179,16 @@ public class Functions {
         }
 
         if(result.isEmpty()){
-            if(externallink !=null && !externallink.getLinkUrl().isEmpty() && !externallink.getLinkTitle().isEmpty()){
-                result = "ext";
-            }
+            result = checkExternalLink(result, externallink);
         }
 
+        return result;
+    }
+
+    private static String checkExternalLink(String result, ExternalLink externallink) {
+        if(externallink !=null && !externallink.getLinkUrl().isEmpty() && !externallink.getLinkTitle().isEmpty()){
+            result = "ext";
+        }
         return result;
     }
     

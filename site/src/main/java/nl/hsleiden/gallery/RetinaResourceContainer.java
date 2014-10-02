@@ -46,7 +46,7 @@ public class RetinaResourceContainer extends AbstractResourceContainer {
                 try {
                     node = node.getNode(node.getName());
                 } catch (PathNotFoundException e) {
-                    LOG.info("Cannot return binary for a handle with no hippo document. Return null");
+                    LOG.info("Cannot return binary for a handle with no hippo document. Return null", e);
                     return null;
                 }
             }
@@ -99,8 +99,10 @@ public class RetinaResourceContainer extends AbstractResourceContainer {
                                 .getPrimaryNodeType().getName());
             }
         } catch (PathNotFoundException e) {
+            LOG.info("PathNotFoundException", e);
             LOG.debug("Cannot find resource node for path '{}' beloning to pathInfo '{}'", actualPath, pathInfo);
         } catch (RepositoryException e) {
+            LOG.info("RepositoryException", e);
             LOG.warn("RepositoryException: '{}'", e.getMessage());
         }
 

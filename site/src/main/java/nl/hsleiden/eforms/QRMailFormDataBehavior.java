@@ -9,7 +9,6 @@ import com.onehippo.cms7.eforms.hst.behaviors.MailFormDataBehavior;
 import com.onehippo.cms7.eforms.hst.model.EmailBlock;
 import com.onehippo.cms7.eforms.hst.model.Form;
 import com.onehippo.cms7.eforms.hst.util.EformsConstants;
-import com.onehippo.cms7.eforms.hst.util.FreemarkerParser;
 import com.onehippo.cms7.eforms.hst.util.TemplateParser;
 import com.onehippo.cms7.eforms.hst.util.TemplateType;
 

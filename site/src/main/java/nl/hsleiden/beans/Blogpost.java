@@ -45,6 +45,8 @@ public class Blogpost extends WebPage implements Authors {
     private String description;
     private Calendar releaseDate;
     private String browserTitle;
+    private HippoGalleryImageSetBean headerImage;
+    private List<HippoBean> flexibleblock;
     
     public Boolean getHideFromSearch() {
         if (this.hideFromSearch == null) {
@@ -94,9 +96,6 @@ public class Blogpost extends WebPage implements Authors {
         }
         return this.browserTitle;
     }
-    
-    private HippoGalleryImageSetBean headerImage;
-    private List<HippoBean> flexibleblock;
     
     public List<HippoBean> getFlexibleblock() {
         if (this.flexibleblock == null) {

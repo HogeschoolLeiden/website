@@ -12,7 +12,6 @@ public class FooterExtraMenuNavigation extends CrossDomainNavigation {
     protected HstSiteMenuConfiguration getSimeMenuConfiguration(SimpleNavigationInfo parametersInfo, HstSite hstSite) {
 
         HstSiteMenusConfiguration menusConfig = hstSite.getSiteMenusConfiguration();
-        HstSiteMenuConfiguration menuConfig = menusConfig.getSiteMenuConfiguration("footerExtra");
-        return menuConfig;
+        return menusConfig.getSiteMenuConfiguration("footerExtra");
     }
 }

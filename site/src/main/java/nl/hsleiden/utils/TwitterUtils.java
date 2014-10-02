@@ -40,7 +40,7 @@ public class TwitterUtils {
         MediaEntity[] mediaEntities = entity.getMediaEntities();
         if(mediaEntities!=null){
             for (MediaEntity mediaEntity : mediaEntities) {
-                if(mediaEntity.getType().equals("photo")){
+                if("photo".equals(mediaEntity.getType())){
                     
                     String mediaUrl = mediaEntity.getURL();
                     formattedMessage = formattedMessage.replace(mediaUrl, imgFormatter.format(new Object[]{mediaEntity.getMediaURL(), mediaUrl}));

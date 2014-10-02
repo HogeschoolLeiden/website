@@ -59,7 +59,9 @@ import freemarker.template.TemplateException;
  */
 public final class QRFreemarkerParser implements TemplateParser {
 
-    private static Logger log = LoggerFactory.getLogger(QRFreemarkerParser.class);
+    private static final String ERROR_POPULATING_TEMPLATE_DATA = "Error populating template data";
+
+    private static final Logger LOG = LoggerFactory.getLogger(QRFreemarkerParser.class);
 
     private static final QRFreemarkerParser INSTANCE = new QRFreemarkerParser();
 
@@ -70,7 +72,7 @@ public final class QRFreemarkerParser implements TemplateParser {
             final String paragraph, final boolean includeFieldData, final Template template,
             final TemplateType templateType) {
         if (template == null) {
-            log.error("Template was null");
+            LOG.error("Template was null");
             return "";
         }
         Map<String, Object> context = populateContext(request, form, formMap, paragraph, includeFieldData);
@@ -118,7 +120,7 @@ public final class QRFreemarkerParser implements TemplateParser {
         final int length = templatePath.length;
         if (length > 0) {
             String template = templatePath[0];
-            log.info("Using custom velocity template: {}", template);
+            LOG.info("Using custom velocity template: {}", template);
             return populateTemplate(request, form, formMap, paragraph, includeFieldData,
                     createTemplate(template, true), TemplateType.HTML);
         }
@@ -133,7 +135,7 @@ public final class QRFreemarkerParser implements TemplateParser {
         final int length = templatePath.length;
         if (length > 0) {
             String template = templatePath[0];
-            log.info("Using custom velocity template: ", template);
+            LOG.info("Using custom velocity template: ", template);
 
             return populateTemplate(request, form, formMap, paragraph, includeFieldData,
                     createTemplate(template, false), TemplateType.TEXT_PLAIN);
@@ -164,7 +166,7 @@ public final class QRFreemarkerParser implements TemplateParser {
             return cfg.getTemplate(templatePath, ENCODING);
 
         } catch (IOException e) {
-            log.error("Error loading freemarker template:" + templatePath, e);
+            LOG.error("Error loading freemarker template:" + templatePath, e);
         }
         return null;
 
@@ -191,7 +193,7 @@ public final class QRFreemarkerParser implements TemplateParser {
         try {
             return config.getTemplate(name, ENCODING);
         } catch (IOException e) {
-            log.error("Error creating freemaker template", e);
+            LOG.error("Error creating freemaker template", e);
         }
         return null;
     }
@@ -212,9 +214,9 @@ public final class QRFreemarkerParser implements TemplateParser {
             template.process(data, writer);
             return StringUtils.trimToEmpty(writer.toString());
         } catch (TemplateException e) {
-            log.error("Error populating template data", e);
+            LOG.error(ERROR_POPULATING_TEMPLATE_DATA, e);
         } catch (IOException e) {
-            log.error("Error populating template data", e);
+            LOG.error(ERROR_POPULATING_TEMPLATE_DATA, e);
         }
         return null;
     }
