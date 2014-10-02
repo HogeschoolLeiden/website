@@ -179,13 +179,14 @@ public class Functions {
         }
 
         if(result.isEmpty()){
-            result = checkExternalLink(result, externallink);
+            result = checkExternalLink(externallink);
         }
 
         return result;
     }
 
-    private static String checkExternalLink(String result, ExternalLink externallink) {
+    private static String checkExternalLink(ExternalLink externallink) {
+        String result = "";
         if(externallink !=null && !externallink.getLinkUrl().isEmpty() && !externallink.getLinkTitle().isEmpty()){
             result = "ext";
         }

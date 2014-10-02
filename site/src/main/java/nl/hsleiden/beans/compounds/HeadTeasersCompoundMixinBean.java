@@ -33,16 +33,4 @@ public class HeadTeasersCompoundMixinBean extends hslbeans.HeadTeasersCompoundMi
         }
         return result;
     }
-
-    public String getThirdTeaser() {
-        String result = null;
-        if (getTeasers().size() > 2) {
-            HippoBean headTeaserBean = getTeasers().get(2);
-            if (headTeaserBean != null) {
-                result = headTeaserBean.getPath();
-            }
-        }
-        return result;
-    }
-
 }

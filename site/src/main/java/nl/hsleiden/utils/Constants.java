@@ -47,7 +47,6 @@ public class Constants {
 
         public static final String TEASER_1 = "firstTeaser";
         public static final String TEASER_2 = "secondTeaser";
-        public static final String TEASER_3 = "thirdTeaser";
 
         public static final String SORT_ORDER = "sortOrder";
         public static final String SORT_BY = "sortBy";
