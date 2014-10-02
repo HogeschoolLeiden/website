@@ -1401,7 +1401,13 @@ body {
 
 .home .swiper-container .swiper-wrapper .swiper-slide,.lectoraat .swiper-container .swiper-wrapper .swiper-slide
 	{
-	position: relative
+	position: relative;
+	z-index: 0 !important
+}
+
+.home .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active,.lectoraat .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active
+	{
+	z-index: 2500 !important
 }
 
 .home .swiper-container .swiper-wrapper .swiper-slide img,.lectoraat .swiper-container .swiper-wrapper .swiper-slide img
@@ -3526,6 +3532,88 @@ footer .social li:hover a {
 	top: 50%
 }
 
+.hulp {
+	background: #008383;
+	height: 120px;
+	width: 220px;
+	padding: 15px 15px 15px 60px;
+	position: fixed;
+	right: -170px;
+	top: 295px;
+	-webkit-transition: all .25s ease;
+	-moz-transition: all .25s ease;
+	-o-transition: all .25s ease;
+	-ms-transition: all .25s ease;
+	transition: all .25s ease;
+	-webkit-box-shadow: 0 0 4px rgba(0, 0, 0, .5);
+	-moz-box-shadow: 0 0 4px rgba(0, 0, 0, .5);
+	box-shadow: 0 0 4px rgba(0, 0, 0, .5);
+	z-index: 5000
+}
+
+.hulp h2 {
+	color: #fff;
+	font-family: 'source_sans_prosemibold';
+	font-weight: 400;
+	font-style: normal;
+	font-size: 1.143em;
+	-ms-transform: rotate(-90deg);
+	-webkit-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	left: -15px;
+	top: 50px;
+	cursor: pointer
+}
+
+.hulp ul {
+	margin: 0;
+	padding: 0
+}
+
+.hulp ul li {
+	color: #fff;
+	font-size: 1.50em;
+	height: 20px;
+	margin: 5px 0;
+	width: 100%;
+	position: relative
+}
+
+.hulp ul li a,.hulp ul li span {
+	color: #fff;
+	font-family: 'source_sans_prosemibold';
+	font-weight: 400;
+	font-style: normal;
+	font-size: .650em;
+	padding-left: 15px;
+	position: relative;
+	top: 3px;
+	float: right;
+	width: auto;
+	position: absolute;
+	right: 0;
+	display: block;
+	width: 100%;
+	text-align: right
+}
+
+.hulp ul li a a,.hulp ul li span a {
+	font-size: 1em;
+	float: right
+}
+
+.lt-ie9 .hulp h2 {
+	width: 40px;
+	height: 120px;
+	top: 0;
+	left: 0;
+	background: url("../img/hulp.png") 5px top no-repeat;
+	text-indent: -9999px
+}
+
 @media ( max-width :765px) and (orientation:landscape) {
 	.blok {
 		width: 46%;
@@ -3568,6 +3656,9 @@ footer .social li:hover a {
 	}
 	#main.landing .blok:first-of-type {
 		margin-top: 0 !important
+	}
+	.hulp {
+		top: 110px
 	}
 }
 

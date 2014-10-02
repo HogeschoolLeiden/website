@@ -88,5 +88,16 @@ $( document ).ready(function() {
 	});
 	/* // open share in new window */
 	
-
+	/* help button */
+	$(".hulp").click(function() {
+		if( $(this).hasClass("open")) {
+			$( ".hulp" ).animate({ "right": "-=170px" }, "fast" );
+			$( ".hulp" ).removeClass("open");
+		} else {
+			$( ".hulp" ).animate({ "right": "+=170px" }, "fast" );
+			$( ".hulp" ).addClass("open");
+		}
+	});
+	
+	
 });
