@@ -22,6 +22,8 @@
   limitations under the License.
   --%>
 
+<hst:setBundle basename="nl.hsleiden.general.Messages"/>
+
 <div id="main" role="main" class="">
     
   <c:if test="${tag:isSubclassOfWebPage(model.document)}">
@@ -48,6 +50,11 @@
             <%-- <tag:rssReader document="${model.document}"/> --%>
                 
             <div class="overzichtlijst">
+              
+              <c:if test="${not empty frontEndMessage or not (fn:length(model.items)>0) }">
+                <h2 class="noQueryResults"><fmt:message key="facet.search.noresults"/></h2>
+              </c:if>
+              
               <c:forEach var="item" items="${model.items}">
               
                 <hst:link var="link" hippobean="${item}" />

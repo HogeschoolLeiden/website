@@ -64,6 +64,8 @@ public class Constants {
 
         public static final String WEB_MASTER_MESSAGE = "webMasterMessage";
 
+        public static final String FRONT_END_MESSAGE = "frontEndMessage";
+
         public static final String COMPANY_PROFILE_ID = "companyProfileId";
         
         public static final String FIELD_USER_MIXIN_MESSAGE = "Probeert mixin te gebruiken";
