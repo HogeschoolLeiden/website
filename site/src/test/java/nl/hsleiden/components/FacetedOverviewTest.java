@@ -10,9 +10,10 @@ public class FacetedOverviewTest {
         testEnhanceQuery("Test*", "Test*");
     }
 
+    //the * has been temporarily disabled
     @Test
     public void enhanceQueryWithoutStartTest() {
-        testEnhanceQuery("Test", "Test*");
+        testEnhanceQuery("Test", "Test");
     }
 
     private void testEnhanceQuery(String query, String expected) {

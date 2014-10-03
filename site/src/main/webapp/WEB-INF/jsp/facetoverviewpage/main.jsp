@@ -19,7 +19,7 @@
   <div class="container">
 	<div class="row">
 
-	  <c:if test="${pageContext.request.requestContext.contentBean['class'].name == 'hslbeans.OverviewPage'}">
+	  <c:if test="${pageContext.request.requestContext.contentBean['class'].name == 'hslbeans.OverviewPage'}">   
         <tag:highlightedItem highLightedItem="${model.document.highLightedItem }"/>
       </c:if>
        
@@ -36,6 +36,11 @@
             <tag:rssReader document="${model.document}"/>
                 
             <div class="overzichtlijst">
+              
+              <c:if test="${not empty frontEndMessage or not (fn:length(model.items)>0) }">
+                <h2 class="noQueryResults"><fmt:message key="facet.search.noresults"/></h2>
+              </c:if>
+              
               <c:forEach var="item" items="${model.items}">
               
                 <hst:link var="link" hippobean="${item}" />

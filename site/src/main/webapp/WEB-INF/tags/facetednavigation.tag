@@ -13,18 +13,12 @@
 
 <hst:setBundle basename="nl.hsleiden.general.Messages"/>
 
-<%-- <c:set var="facetnavtitle">
-  <fmt:message key="refine.results" />
-</c:set> --%>
-
 <div class="filter filter-collapse collapse clearfix algemeenfilter">
   
   
   <hst:include ref="leftTop" />
   
   <c:if test="${facetnav.count gt 0}">
-
-<%--     <h4><c:out value="${facetnavtitle}" escapeXml="true"/></h4> --%>
 
     <c:forEach var="facet" items="${facetnav.folders}">
 	  <c:if test="${facet.resultSet.count > 0}">
