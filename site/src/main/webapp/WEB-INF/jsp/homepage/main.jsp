@@ -25,6 +25,7 @@
        <tag:pagenotfound />
     </c:when>
     <c:otherwise>
+      <h1 class="hidden"><c:out value="${document.title}"/></h1>
       <hst:include ref="content"/>
     </c:otherwise>
   </c:choose>
