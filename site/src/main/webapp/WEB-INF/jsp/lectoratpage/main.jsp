@@ -18,7 +18,7 @@
   <script type="text/javascript" src="<hst:link path="/js/kees/vendor/idangerous.swiper.progress.min.js"/>"></script>
 </hst:headContribution>  
 
-<div id="main" role="main" class="home"> 
+<div id="main" role="main" class="lectoraat"> 
             
   <c:choose>
     <c:when test="${empty document}">
@@ -33,21 +33,12 @@
   <div class="container">  
     <div class="row">
       
-      <div class="col-xs-12 col-md-6">
-        <hst:include ref="left" />
-        <hst:include ref="leftBottom" />
-      </div>
-      
-      <div class="col-xs-6 col-sm-6 col-md-3 ">
-        <hst:include ref="contentTop" />
-        <hst:include ref="contentBottom" />
-      </div>
-    
-      <div class="col-xs-6 col-sm-6 col-md-3 ">
-        <hst:include ref="rightTop" />
-        <hst:include ref="rightBottom" />
-      </div>
-    
+      <section class="col-md-9 detail-content">
+        <hst:include ref="content"/>
+      </section>
+
+      <hst:include ref="left" />
+          
     </div>
     <hst:include ref="bottom-container" />
   </div>

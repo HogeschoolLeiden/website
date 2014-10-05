@@ -46,9 +46,28 @@
         </c:choose>
       </a>
       
-      <hst:include ref="header-lectorat"/>
-      <%-- <jsp:include page="./header-lectorat.jsp"></jsp:include> --%>
-      
+      <hst:link var="lectoraatHome" path="/" />
+
+      <div class="container lectoraattitle">
+        <div class="row">
+          <div class="col-md-7 col-sm-7 col-xs-10 col-md-offset-2 col-sm-offset-2 col-xs-offset-1">
+            <div class="table">
+              <div class="table-cell">
+                <div class="centered">
+                  <h1>
+                    <a href="${lectoraatHome}">
+                      <fmt:message key="lectoraat.title" />
+                      <span><c:out value="${headerName}"/></span>
+                    </a>
+                  </h1>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+           
     </div>
         
     <div class="navbar-collapse collapse" role="navigation">      
@@ -62,3 +81,6 @@
   </div>
 
 </header>
+
+
+    

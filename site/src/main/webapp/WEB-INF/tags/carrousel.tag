@@ -1,5 +1,4 @@
-<%@ page contentType="text/html; charset=UTF-8" language="java"
-  trimDirectiveWhitespaces="true" pageEncoding="UTF-8"%>
+<%@tag description="display carrousel in header width" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
@@ -8,6 +7,8 @@
 <%@ taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml"%>
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 <%@ taglib prefix='opw' uri="http://open-web.nl/hippo/prototype"%>
+
+<%@ attribute name="document" rtexprvalue="true" required="true" type="org.hippoecm.hst.content.beans.standard.HippoBean" %>
 
 <div class="background large img swiper-container">
   <div class="swiper-wrapper">
@@ -36,7 +37,7 @@
                         <p>
                           <opw:string-chopper
                             bean="${carrouselitem.document}"
-                            stringPath="introduction" maxLength="250"
+                            stringPath="introduction" maxLength="240"
                             showDots="true">
                           </opw:string-chopper>
                         </p>

@@ -10,51 +10,39 @@
 
 <ul class="nav navbar-nav" id="utilities">
 
-<%--
-<div class="service-menu">
-  
-  <div class="menulinks">
-    
-     <hst:include ref="langaugeswitch" />
-    <ul class="nav mainMenuLink international">  --%> 
-      <li>
-        <a href="#"> 
-          <c:out value="international" />
-        </a>
-      </li>
-
-  	  <c:forEach items="${menu.siteMenuItems}" var="siteMenuItem" varStatus="step">
-  		<c:choose>
-  			<c:when test="${not empty siteMenuItem.hstLink }">
-  				<hst:link var="link" link="${siteMenuItem.hstLink}" />
-  			</c:when>
-  			<c:otherwise>
-  				<c:set var="link" value="${siteMenuItem.externalLink}" />
-  			</c:otherwise>
-  		</c:choose>
-  		<c:choose>
-  			<c:when test="${siteMenuItem.expanded and step.last}">
-  				<c:set var="cssClass" value="active last"/>
-  			</c:when>
-  			<c:when test="${siteMenuItem.expanded}">
-  				<c:set var="cssClass" value="active"/>
-  			</c:when>
-  			<c:when test="${step.last}">
-  				<c:set var="cssClass" value="last"/>
-  			</c:when>
-  			<c:otherwise>
-  				<c:set var="cssClass" value=""/>
-  			</c:otherwise>
-  		</c:choose>
+  <c:forEach items="${menu.siteMenuItems}" var="siteMenuItem" varStatus="step">
+	 <c:choose>
+		<c:when test="${not empty siteMenuItem.hstLink }">
+			<hst:link var="link" link="${siteMenuItem.hstLink}" />
+		</c:when>
+		<c:otherwise>
+			<c:set var="link" value="${siteMenuItem.externalLink}" />
+		</c:otherwise>
+	 </c:choose>
+  	 
+     <c:choose>
+  		<c:when test="${siteMenuItem.expanded and step.last}">
+  		  <c:set var="cssClass" value="active last"/>
+  		</c:when>
+  		<c:when test="${siteMenuItem.expanded}">
+  	   	  <c:set var="cssClass" value="active"/>
+  		</c:when>
+  		<c:when test="${step.last}">
+  		  <c:set var="cssClass" value="last"/>
+  		</c:when>
+  		<c:otherwise>
+  		  <c:set var="cssClass" value=""/>
+  	    </c:otherwise>
+  	</c:choose>
   		
-  		<li ${not empty cssClass ? ' class=\"': ''}${cssClass}${not empty cssClass ? '\"': ''}>
-  			<a href="${link}"> 
-  				<c:out value="${siteMenuItem.name}" />
-  			</a>
-  		</li>
-  	  </c:forEach>
+  	<li ${not empty cssClass ? ' class=\"': ''}${cssClass}${not empty cssClass ? '\"': ''}>
+  	  <a href="${link}"> 
+  		<c:out value="${siteMenuItem.name}" />
+  	  </a>
+    </li>
+  
+  </c:forEach>
 </ul>
   
-  <hst:include ref="searchbox"/>   
-
+<hst:include ref="searchbox"/>   
 

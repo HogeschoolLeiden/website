@@ -63,11 +63,8 @@
         <sv:property sv:name="hipposysedit:type" sv:type="String">
           <sv:value>hippogallerypicker:imagelink</sv:value>
         </sv:property>
-        <sv:property sv:name="hipposysedit:validators" sv:type="String" sv:multiple="true">
-          <sv:value>required</sv:value>
-        </sv:property>
       </sv:node>
-      <sv:node sv:name="highLightedItems">
+      <sv:node sv:name="carrousel">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hipposysedit:field</sv:value>
         </sv:property>
@@ -75,13 +72,13 @@
           <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:name="hipposysedit:multiple" sv:type="Boolean">
-          <sv:value>true</sv:value>
+          <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:name="hipposysedit:ordered" sv:type="Boolean">
-          <sv:value>true</sv:value>
+          <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:name="hipposysedit:path" sv:type="String">
-          <sv:value>hsl:highLightedItems</sv:value>
+          <sv:value>hsl:carrousel</sv:value>
         </sv:property>
         <sv:property sv:name="hipposysedit:primary" sv:type="Boolean">
           <sv:value>false</sv:value>
@@ -91,29 +88,6 @@
         </sv:property>
         <sv:property sv:name="hipposysedit:validators" sv:type="String" sv:multiple="true">
           <sv:value>required</sv:value>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="useFlexibleBlock">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hipposysedit:field</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:mandatory" sv:type="Boolean">
-          <sv:value>false</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:multiple" sv:type="Boolean">
-          <sv:value>false</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:ordered" sv:type="Boolean">
-          <sv:value>false</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:path" sv:type="String">
-          <sv:value>hsl:useFlexibleBlock</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:primary" sv:type="Boolean">
-          <sv:value>false</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:type" sv:type="String">
-          <sv:value>Boolean</sv:value>
         </sv:property>
       </sv:node>
       <sv:node sv:name="flexibleblock">
@@ -282,9 +256,6 @@
       <sv:property sv:name="hsl:keywords" sv:type="String">
         <sv:value/>
       </sv:property>
-      <sv:property sv:name="hsl:useFlexibleBlock" sv:type="Boolean">
-        <sv:value>false</sv:value>
-      </sv:property>
       <sv:property sv:name="hsl:subjecttags" sv:type="String" sv:multiple="true">
         <sv:value/>
       </sv:property>
@@ -294,7 +265,7 @@
       <sv:property sv:name="hsl:title" sv:type="String">
         <sv:value/>
       </sv:property>
-      <sv:node sv:name="hsl:highLightedItems">
+      <sv:node sv:name="hsl:carrousel">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hippo:mirror</sv:value>
         </sv:property>
@@ -397,31 +368,6 @@
         </sv:property>
         <sv:property sv:name="plugin.class" sv:type="String">
           <sv:value>org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin</sv:value>
-        </sv:property>
-        <sv:property sv:name="wicket.id" sv:type="String">
-          <sv:value>${cluster.id}.left.item</sv:value>
-        </sv:property>
-        <sv:node sv:name="cluster.options">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>frontend:pluginconfig</sv:value>
-          </sv:property>
-        </sv:node>
-      </sv:node>
-      <sv:node sv:name="headerImage">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>frontend:plugin</sv:value>
-        </sv:property>
-        <sv:property sv:name="caption" sv:type="String">
-          <sv:value>Header afbeelding</sv:value>
-        </sv:property>
-        <sv:property sv:name="field" sv:type="String">
-          <sv:value>headerImage</sv:value>
-        </sv:property>
-        <sv:property sv:name="hint" sv:type="String">
-          <sv:value/>
-        </sv:property>
-        <sv:property sv:name="plugin.class" sv:type="String">
-          <sv:value>org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin</sv:value>
         </sv:property>
         <sv:property sv:name="wicket.id" sv:type="String">
           <sv:value>${cluster.id}.left.item</sv:value>
@@ -629,21 +575,18 @@
           </sv:property>
         </sv:node>
       </sv:node>
-      <sv:node sv:name="highLightedItems">
+      <sv:node sv:name="carrousel">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>frontend:plugin</sv:value>
         </sv:property>
         <sv:property sv:name="caption" sv:type="String">
-          <sv:value>High Lighted Items</sv:value>
+          <sv:value>Carrousel</sv:value>
         </sv:property>
         <sv:property sv:name="field" sv:type="String">
-          <sv:value>highLightedItems</sv:value>
+          <sv:value>carrousel</sv:value>
         </sv:property>
         <sv:property sv:name="hint" sv:type="String">
           <sv:value/>
-        </sv:property>
-        <sv:property sv:name="maxitems" sv:type="Long">
-          <sv:value>3</sv:value>
         </sv:property>
         <sv:property sv:name="plugin.class" sv:type="String">
           <sv:value>org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin</sv:value>
@@ -659,7 +602,7 @@
             <sv:value>false</sv:value>
           </sv:property>
           <sv:property sv:name="last.visited.nodetypes" sv:type="String">
-            <sv:value>hsl:WebPage</sv:value>
+            <sv:value>hsl:Carrousel</sv:value>
           </sv:property>
         </sv:node>
       </sv:node>
@@ -688,31 +631,6 @@
           </sv:property>
           <sv:property sv:name="rows" sv:type="String">
             <sv:value>5</sv:value>
-          </sv:property>
-        </sv:node>
-      </sv:node>
-      <sv:node sv:name="useFlexibleBlock">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>frontend:plugin</sv:value>
-        </sv:property>
-        <sv:property sv:name="caption" sv:type="String">
-          <sv:value>Gebruik Flexible Block</sv:value>
-        </sv:property>
-        <sv:property sv:name="field" sv:type="String">
-          <sv:value>useFlexibleBlock</sv:value>
-        </sv:property>
-        <sv:property sv:name="hint" sv:type="String">
-          <sv:value>If selected, the flexible block content will be displayed instead of the automated news list</sv:value>
-        </sv:property>
-        <sv:property sv:name="plugin.class" sv:type="String">
-          <sv:value>org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin</sv:value>
-        </sv:property>
-        <sv:property sv:name="wicket.id" sv:type="String">
-          <sv:value>${cluster.id}.left.item</sv:value>
-        </sv:property>
-        <sv:node sv:name="cluster.options">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>frontend:pluginconfig</sv:value>
           </sv:property>
         </sv:node>
       </sv:node>

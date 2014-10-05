@@ -514,20 +514,36 @@
       <sv:value>jsp/homepage/main.jsp</sv:value>
     </sv:property>
   </sv:node>
-  <sv:node sv:name="homepage.main.content">
-    <sv:property sv:name="jcr:primaryType" sv:type="Name">
-      <sv:value>hst:template</sv:value>
-    </sv:property>
-    <sv:property sv:name="hst:renderpath" sv:type="String">
-      <sv:value>jsp/homepage/main/content.jsp</sv:value>
-    </sv:property>
-  </sv:node>
   <sv:node sv:name="components.quickchoice">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:template</sv:value>
     </sv:property>
     <sv:property sv:name="hst:renderpath" sv:type="String">
       <sv:value>jsp/components/quickchoice.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="standard.header-lectorat">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/standard/header-lectorat.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="standard.header.mainmenu-lectorat">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/standard/header/mainmenu-lectorat.jsp</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="lectoratpage.main">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>jsp/lectoratpage/main.jsp</sv:value>
     </sv:property>
   </sv:node>
 </sv:node>

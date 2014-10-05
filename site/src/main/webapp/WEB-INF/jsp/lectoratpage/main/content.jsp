@@ -7,48 +7,35 @@
 <%@ taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml"%>
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 
-<section class="col-md-9 detail-content">
-  <div class="row">
-    <div class="col-md-8 col-sm-8 contentarea">               
+<div class="row">
+  <div class="col-md-8 col-sm-8 contentarea">               
      
-      <hst:cmseditlink hippobean="${document}" />
+    <hst:cmseditlink hippobean="${document}" />
       
+      
+    <div class="content">
+      <h1><span><c:out value="${document.title }" /></span></h1>
       <hst:include ref="contentTop" />
-      
-      <c:choose>
-        <c:when test="${not (document.useFlexibleBlock) and fn:length(items)>0}">
-          <div class="content">
-            <h1><span><c:out value="${document.title }" /></span></h1>
-          </div>
-          <tag:listItems/>
-        </c:when>
-        <c:otherwise>
-          <div class="content">
-            <h1><span><c:out value="${document.title }" /></span></h1>
-            <p class="intro">
-              <c:out value="${document.introduction }" />
-            </p>
-            <tag:flexibleblock content="${document.flexibleblock }" />
-            <tag:toolbox document="${document }"/>
-          </div>
-        </c:otherwise>
-      </c:choose>
-                
+      <p class="intro">
+        <c:out value="${document.introduction }" />
+      </p>
+      <tag:flexibleblock content="${document.flexibleblock }" />
+      <tag:toolbox document="${document }"/>
     </div>
-    
-    <aside class="col-md-4 col-sm-4 aside">
-       <hst:include ref="rightTop" />
-       <hst:include ref="right" />
-       <hst:include ref="rightBottom" />
-    </aside>
+      
   </div>
     
-  <div class="row border-top">
-     <hst:include ref="contentBottomOne" /> 
-  </div>
-  <div class="row border-top">
-     <hst:include ref="contentBottomTwo" /> 
-  </div>
-</section>
+  <aside class="col-md-4 col-sm-4 aside">
+     <hst:include ref="rightTop" />
+     <hst:include ref="right" />
+     <hst:include ref="rightBottom" />
+  </aside>
+</div>
+  
+<div class="row border-top">
+   <hst:include ref="contentBottomTwo" /> 
+</div>
+
+
        
 
