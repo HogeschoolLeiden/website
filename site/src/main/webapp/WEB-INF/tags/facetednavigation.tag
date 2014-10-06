@@ -24,7 +24,8 @@
 	  <c:if test="${facet.resultSet.count > 0}">
 		  
         <section class="filtergroup col-md-3">
-		  <h2><c:out value="${facet.name eq 'Vakgebied' ?  'Opleidingen' : facet.name}" escapeXml="true" /></h2>
+		  <%-- <h2><c:out value="${facet.name eq 'Vakgebied' ?  'Opleidingen' : facet.name}" escapeXml="true" /></h2> --%>
+		  <h2><c:out value="${facet.name}" escapeXml="true" /></h2>
 		  <c:if test="${not empty facet.folders}">
             <div class="filterlist">
               <c:if test="${facet.name eq 'Vakgebied'}" >
@@ -37,9 +38,6 @@
                         <img  class="cbimg" src="<hst:link path="/images/checkbox-checked.png"/>" 
                               alt="<fmt:message key="checkbox.checked" />" title="<fmt:message key="checkbox.checked" />"/>
                         <c:out value="${labels[ancestor.name]}" default="${ancestor.name}" escapeXml="true" />
-                        <c:out value=" ( " escapeXml="true" />
-                        <c:out value="${ancestor.count}" escapeXml="true" />
-                        <c:out value=" )" escapeXml="true" />
                       </div>
                     </a>
               		</c:if>
@@ -47,22 +45,26 @@
               </c:if>  
               <c:forEach items="${facet.folders}" var="item">
 			                    
+                <c:set var="divClass">
+                  <c:choose>
+                    <c:when test="${facet.name eq 'Vakgebied' }">
+                      <c:out value="checkbox drilled"></c:out>
+                    </c:when>
+                    <c:otherwise>
+                      <c:out value="checkbox"></c:out>                        
+                    </c:otherwise>
+                  </c:choose>
+                </c:set>
+                
                 <c:choose>
-                  <%-- <c:when test="${facet.name eq 'Vakgebied' }">
-                  	
-                  
-                  </c:when> --%>
                   <c:when test="${item.leaf and item.count gt 0}">
                     <hst:facetnavigationlink remove="${item}" current="${facetnav}" var="removeLink" />
                       
                     <a href="${removeLink}">
-                      <div class="checkbox">
+                      <div class="${divClass }">
                         <img  class="cbimg" src="<hst:link path="/images/checkbox-checked.png"/>" 
                               alt="<fmt:message key="checkbox.checked" />" title="<fmt:message key="checkbox.checked" />"/>
                         <c:out value="${labels[item.name]}" default="${item.name}" escapeXml="true" />
-                        <c:out value=" ( " escapeXml="true" />
-                        <c:out value="${item.count}" escapeXml="true" />
-                        <c:out value=" )" escapeXml="true" />
                       </div>
                     </a>
                   
@@ -73,13 +75,10 @@
                       <hst:link var="link" hippobean="${item}" navigationStateful="true"/>
                       
                       <a href="${link}">
-                        <div class="checkbox">
+                        <div class="${divClass }">
                           <img  class="cbimg" src="<hst:link path="/images/checkbox-unchecked.png"/>" 
                                 alt="<fmt:message key="checkbox.unchecked" />" title="<fmt:message key="checkbox.unchecked" />"/>
                           <c:out value="${labels[item.name]}" default="${item.name}" escapeXml="true" />
-                          <c:out value="    ( " escapeXml="true" />
-                          <c:out value="${item.count}" escapeXml="true" />
-                          <c:out value=" )" escapeXml="true" />
                         </div>
                       </a>
                     
