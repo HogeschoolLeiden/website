@@ -109,6 +109,8 @@
   	<hst:include ref="main" />
       	
     <hst:include ref="footer" />
+
+    <hst:include ref="help" />
 	
     <hst:headContributions categoryIncludes="scripts" xhtml="true" />
 		

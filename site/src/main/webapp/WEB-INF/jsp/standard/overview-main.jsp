@@ -21,7 +21,9 @@
 
     <c:if test="${pageContext.request.requestContext.contentBean['class'].name == 'hslbeans.OverviewPage' or
                 pageContext.request.requestContext.contentBean['class'].name == 'hslbeans.BlogOverviewPage' or
-                pageContext.request.requestContext.contentBean['class'].name == 'hslbeans.MedewerkersOverviewPage'}">
+                pageContext.request.requestContext.contentBean['class'].name == 'hslbeans.MedewerkersOverviewPage' or
+                pageContext.request.requestContext.contentBean['class'].name == 'hslbeans.NewsOverviewPage' or 
+                pageContext.request.requestContext.contentBean['class'].name == 'hslbeans.EventsOverviewPage'}">
       <tag:highlightedItem highLightedItem="${document.highLightedItem }"/>
     </c:if>
        

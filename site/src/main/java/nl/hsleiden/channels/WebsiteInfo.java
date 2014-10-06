@@ -14,7 +14,7 @@ import org.hippoecm.hst.core.parameters.Parameter;
 @FieldGroupList({
         @FieldGroup(
                 titleKey = "fields.website",
-                value = { "headerName", "logoPath", "defaultBrowserTitle" }
+                value = { "headerName", "defaultBrowserTitle", "logoPath" }
         )
 })
 public interface WebsiteInfo extends ChannelInfo {
@@ -28,7 +28,7 @@ public interface WebsiteInfo extends ChannelInfo {
     @Parameter(name = "logoPath", defaultValue = "/content/gallery/hsl/logos/logo.png")
     @JcrPath(
             pickerConfiguration = PikcerTypes.IMAGE_PICKER,
-            pickerSelectableNodeTypes = { "hsl:HslImageSet" },
+            pickerSelectableNodeTypes = { "hsl:ImageSet" },
             pickerInitialPath = "/content/gallery/hsl/logos/"
             )
     public String getLogoPath();

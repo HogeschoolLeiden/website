@@ -181,4 +181,21 @@
       <sv:value>hst:components/breadcrumb</sv:value>
     </sv:property>
   </sv:node>
+  <sv:node sv:name="help">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:component</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:componentclassname" sv:type="String">
+      <sv:value>nl.hsleiden.components.catalog.HelpComponent</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+      <sv:value>contentBeanPath</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+      <sv:value>/content/documents/hsl/componenten/hulp-nodig/hulp-nodig</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:template" sv:type="String">
+      <sv:value>components.helpneeded</sv:value>
+    </sv:property>
+  </sv:node>
 </sv:node>

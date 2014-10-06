@@ -73,10 +73,12 @@ public class FacetedOverview extends MonolithicFacetedOverview {
                 scope = scope.getParentBean();
                 query = request.getRequestContext().getQueryManager().createQuery(scope);
                 
-                String highlightedUuid = ((OverviewPage )contentBean).getHighLightedItem().getIdentifier();
-                
                 Filter globalFilter = query.createFilter();
-                globalFilter.addNotEqualTo("jcr:uuid", highlightedUuid);
+
+                if(((OverviewPage )contentBean).getHighLightedItem()!=null){
+                    String highlightedUuid = ((OverviewPage )contentBean).getHighLightedItem().getIdentifier();
+                    globalFilter.addNotEqualTo("jcr:uuid", highlightedUuid);
+                }
                 
                 String queryString = getPublicRequestParameter(request, ParametersConstants.QUERY);
                 if (StringUtils.isNotBlank(queryString)) {

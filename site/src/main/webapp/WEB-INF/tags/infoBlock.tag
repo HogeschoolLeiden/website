@@ -40,9 +40,7 @@
     <ul>
       <c:forEach items="${document.infoBlock.infoLines}" var="item">
         <li>
-          <img src="<hst:link hippobean="${item.iconLine.original}"/>"
-               alt="<c:out value="${item.iconLine.alt}"/>"
-               title="<c:out value="${item.iconLine.alt}"/>" />
+          <span class="${item.icon.firstItem.key }"></span>
           <span class="details"><c:out value="${item.infoLine }"/></span>
         </li>
       </c:forEach>
