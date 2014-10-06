@@ -11,7 +11,7 @@
 <%@ attribute name="lastItemClass" type="java.lang.String" rtexprvalue="true" required="false"%>
 
 <c:if test="${empty lastItemClass }">
-	<c:set var="lastItemClass" value="last"/>
+	<c:set var="lastItemClass" value="active"/>
 </c:if>
 
 <c:set var="hasExpandedItem" value="${false}"/>
