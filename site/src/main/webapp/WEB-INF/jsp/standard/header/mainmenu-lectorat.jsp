@@ -10,7 +10,7 @@
 
 <hst:setBundle basename="nl.hsleiden.general.Messages"/>
 
-<ul class="nav navbar-nav" id="mainnav">
+<ul class="nav navbar-nav lectoraten" id="mainnav">
   <c:forEach items="${menu.menuItems}" var="siteMenuItem" varStatus="loop">
 	
     <c:set var="myMenuItem" value="${tag:getMenuItem(pageContext.request, siteMenuItem) }"/>
@@ -28,26 +28,32 @@
 	 <c:when test="${myMenuItem.expanded and loop.last}">
 	   <c:set var="cssClass" value="active last"/>
 	 </c:when>
+	 <c:when test="${myMenuItem.expanded and loop.first}">
+	   <c:set var="cssClass" value="active firstItem"/>
+	 </c:when>
 	 <c:when test="${myMenuItem.expanded}">
 	   <c:set var="cssClass" value="active"/>
 	 </c:when>
 	 <c:when test="${loop.last}">
 	   <c:set var="cssClass" value="last"/>
 	 </c:when>
+	 <c:when test="${loop.first}">
+	   <c:set var="cssClass" value="firstItem"/>
+	 </c:when>
 	 <c:otherwise>
 	   <c:set var="cssClass" value=""/>
 	 </c:otherwise>
 	</c:choose>
-		
-	<li ${not empty cssClass ? ' class=\"': ''}${cssClass}${not empty cssClass ? '\"': ''}>
-		<a href="${link}"> 
-		  <c:out value="${myMenuItem.name}" />
-		</a>
+	
+        <li ${not empty cssClass ? ' class=\"': ''}${cssClass}${not empty cssClass ? '\"': ''}>
+          <a href="${link}"> 
+            <c:out value="${myMenuItem.name}" />
+          </a>
           
           <c:if test="${not empty myMenuItem.childMenuItems}">
             <ul class="dropdownmenu visible-lg visible-md clearfix">
             
-              <tag:submenu menuItem="${myMenuItem}" columNr="0"/>
+	          <tag:submenu menuItem="${myMenuItem}" columNr="0"/>
               <tag:submenu menuItem="${myMenuItem}" columNr="1"/>
               <tag:submenu menuItem="${myMenuItem}" columNr="2"/>
               <tag:submenu menuItem="${myMenuItem}" columNr="3"/>
@@ -55,13 +61,7 @@
             </ul>
           </c:if>
           
-	</li> 
+        </li> 
                        
   </c:forEach>  
-</ul>
-
-<hst:link var="home" path="/" mount="hsl"/>
-
-<ul class="nav navbar-nav lectoraten" id="utilities">
-  <li><a href="${home}"><fmt:message key="to.home.page" /></a></li>
 </ul>

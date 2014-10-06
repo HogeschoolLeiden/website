@@ -17,31 +17,24 @@
 	<c:choose>
 		<c:when test="${block['class'].name == 'hslbeans.Paragraph' }">
 			<tag:paragraphblock content="${block}"/>
-            <div class="hr"><hr /></div>
 		</c:when>
 		<c:when test="${block['class'].name == 'hslbeans.Image' }">
 			<tag:imageblock content="${block }" event="${event}"/>
-      		<div class="hr"><hr /></div>
 		</c:when>
 		<c:when test="${block['class'].name == 'nl.hsleiden.beans.YoutubeBean' }">
 			<tag:youtubeblock content="${block }"/>
-      		<div class="hr"><hr /></div>
 		</c:when>
 		<c:when test="${block['class'].name == 'hslbeans.Documents' }">
 			<tag:downloadsblock content="${block }"/>
-      		<div class="hr"><hr /></div>
 		</c:when>
 		<c:when test="${block['class'].name == 'hslbeans.Quote' }">
 			<tag:quoteblock content="${block }"/>
-      		<div class="hr"><hr /></div>
 		</c:when>
 		<c:when test="${block['class'].name == 'hslbeans.ExternalLinks' }">
 			<tag:externallinksblock content="${block }"/>
-      		<div class="hr"><hr /></div>
 		</c:when>
 		<c:when test="${block['class'].name == 'hslbeans.Fotogallery' }">
 			<tag:fotogalleryblock content="${block }"/>
-      		<div class="hr"><hr /></div>
 		</c:when>
 	</c:choose>
 	<c:set var="tagcount" value="${tagcount + 1 }" />
