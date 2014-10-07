@@ -30,7 +30,7 @@ public abstract class Teasers extends AjaxEnabledComponent {
             model.put(Attributes.ITEMS, items);
         } else {
             LOG.debug("No items !! Setting \"" + message + "\" message to request");
-            request.setAttribute(WidgetConstants.WEB_MASTER_MESSAGE, "webmaster.no.extlinks.teasers.message");
+            request.setAttribute(WidgetConstants.WEB_MASTER_MESSAGE, message);
         }
     }
 

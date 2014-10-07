@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="perspage">
+<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="perspage">
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>hst:containercomponentfolder</sv:value>
   </sv:property>
@@ -47,17 +46,15 @@
       <sv:property sv:name="hst:label" sv:type="String">
         <sv:value>Head Teasers</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hst:parameternames"
-        sv:type="String">
+      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
         <sv:value>tryToUseMixin</sv:value>
         <sv:value>firstTeaser</sv:value>
         <sv:value>secondTeaser</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hst:parametervalues"
-        sv:type="String">
+      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
         <sv:value>on</sv:value>
-        <sv:value />
-        <sv:value />
+        <sv:value/>
+        <sv:value/>
       </sv:property>
       <sv:property sv:name="hst:template" sv:type="String">
         <sv:value>catalog.headteasers</sv:value>
@@ -80,21 +77,19 @@
       <sv:property sv:name="hst:label" sv:type="String">
         <sv:value>Contactpersonen</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hst:parameternames"
-        sv:type="String">
+      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
         <sv:value>firstContact</sv:value>
         <sv:value>secondContact</sv:value>
         <sv:value>tryToUseMixin</sv:value>
         <sv:value>widgetTitle</sv:value>
         <sv:value>thirdContact</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hst:parametervalues"
-        sv:type="String">
-        <sv:value />
-        <sv:value />
+      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+        <sv:value/>
+        <sv:value/>
         <sv:value>on</sv:value>
         <sv:value>Contacts</sv:value>
-        <sv:value />
+        <sv:value/>
       </sv:property>
       <sv:property sv:name="hst:template" sv:type="String">
         <sv:value>catalog.contactpersons</sv:value>
@@ -114,9 +109,6 @@
     <sv:node sv:name="publicImages">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:containeritemcomponent</sv:value>
-      </sv:property>
-      <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>96837889-67e1-4884-a96d-5e8e94ca7309</sv:value>
       </sv:property>
       <sv:property sv:name="hst:asyncmode" sv:type="String">
         <sv:value>true</sv:value>
@@ -166,7 +158,7 @@
       <sv:value>HST.vBox</sv:value>
     </sv:property>
   </sv:node>
-  <sv:node sv:name="contentBottomOne">
+  <sv:node sv:name="contentBottomOneLeft">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:containercomponent</sv:value>
     </sv:property>
@@ -186,17 +178,15 @@
       <sv:property sv:name="hst:label" sv:type="String">
         <sv:value>Text Teasers</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hst:parameternames"
-        sv:type="String">
+      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
         <sv:value>tryToUseMixin</sv:value>
         <sv:value>firstTeaser</sv:value>
         <sv:value>secondTeaser</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hst:parametervalues"
-        sv:type="String">
+      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
         <sv:value>on</sv:value>
-        <sv:value />
-        <sv:value />
+        <sv:value/>
+        <sv:value/>
       </sv:property>
       <sv:property sv:name="hst:template" sv:type="String">
         <sv:value>catalog.textteasers</sv:value>
@@ -205,6 +195,14 @@
         <sv:value>HST.Item</sv:value>
       </sv:property>
     </sv:node>
+  </sv:node>
+  <sv:node sv:name="contentBottomOneRight">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:containercomponent</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:xtype" sv:type="String">
+      <sv:value>HST.vBox</sv:value>
+    </sv:property>
     <sv:node sv:name="internalLinksTeasers">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:containeritemcomponent</sv:value>
@@ -219,17 +217,15 @@
       <sv:property sv:name="hst:label" sv:type="String">
         <sv:value>Interne Links Teasers</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hst:parameternames"
-        sv:type="String">
+      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
         <sv:value>tryToUseMixin</sv:value>
         <sv:value>firstTeaser</sv:value>
         <sv:value>secondTeaser</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hst:parametervalues"
-        sv:type="String">
+      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
         <sv:value>on</sv:value>
-        <sv:value />
-        <sv:value />
+        <sv:value/>
+        <sv:value/>
       </sv:property>
       <sv:property sv:name="hst:template" sv:type="String">
         <sv:value>catalog.internallinksteasers</sv:value>
@@ -262,19 +258,17 @@
       <sv:property sv:name="hst:label" sv:type="String">
         <sv:value>Twitter feed</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hst:parameternames"
-        sv:type="String">
+      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
         <sv:value>limit</sv:value>
         <sv:value>query</sv:value>
         <sv:value>tryToUseMixin</sv:value>
         <sv:value>from</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hst:parametervalues"
-        sv:type="String">
+      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
         <sv:value>3</sv:value>
-        <sv:value />
+        <sv:value/>
         <sv:value>on</sv:value>
-        <sv:value />
+        <sv:value/>
       </sv:property>
       <sv:property sv:name="hst:template" sv:type="String">
         <sv:value>catalog.twitterfeed</sv:value>

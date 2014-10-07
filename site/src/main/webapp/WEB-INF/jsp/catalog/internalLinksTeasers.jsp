@@ -63,5 +63,8 @@
       </c:if>
     </c:forEach>
     
-   </section>     
+   </section> 
+   
+   <div class="clearfix"></div>
+       
 </c:if>

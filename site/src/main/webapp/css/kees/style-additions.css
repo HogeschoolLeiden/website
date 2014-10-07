@@ -412,17 +412,17 @@ nav.col-md-3.col-xs-12 .overzichtlijst.related h2.widgetTitle
 /* text, internal and external teasers can display on the right */
 /* ------------------------------------------------------------ */
 
-nav.col-md-3.col-xs-12 .catalog.internalLinks.teasers .col-sm-6,nav.col-md-3.col-xs-12 .catalog.externalLinks.teasers .col-sm-6,nav.col-md-3.col-xs-12 .catalog.text.teasers .col-sm-6,.aside .catalog.internalLinks.teasers .col-sm-6,.aside .catalog.externalLinks.teasers .col-sm-6,.aside .catalog.text.teasers .col-sm-6
-	{
-	width: 100%;
-}
-
 nav.col-md-3.col-xs-12 .catalog.internalLinks.teasers .tekstitem ul li,nav.col-md-3.col-xs-12 .catalog.externalLinks.teasers ul li,.aside .catalog.internalLinks.teasers .tekstitem ul li,.aside .catalog.externalLinks.teasers ul li
 	{
 	padding-left: 20px;
 	background: url("../img/li.png") 2px 6px no-repeat;
 	background-size: 6px 6px;
 }
+
+.row.border-top .halfwidth { width: 50%; float: left; }
+
+.catalog.externalLinks.teasers .col-xs-12.col-sm-6, .catalog.text.teasers .col-xs-12.col-sm-6, 
+.catalog.internalLinks.teasers .col-xs-12.col-sm-6 { width: 100%; }
 
 /* ------------------------------------------------ */
 /* image and head teasers can display in the middle */

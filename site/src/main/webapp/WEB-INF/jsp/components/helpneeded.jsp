@@ -13,7 +13,7 @@
   <h2><c:out value="${document.title}"/></h2>
   <ul>
     <c:forEach var="item" items="${document.helpLines }">
-      <li class="${item.icon.firstItem.key }">
+      <li class="fa ${item.icon.firstItem.key }">
         <c:choose>
         
           <%-- External link case --%>

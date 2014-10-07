@@ -39,8 +39,14 @@
   </div>
   
   <div class="row border-top">
-     <hst:include ref="contentBottomOne" /> 
+     <div class="halfwidth">
+      <hst:include ref="contentBottomOneLeft" /> 
+     </div>
+     <div class="halfwidth">
+      <hst:include ref="contentBottomOneRight" /> 
+     </div>
   </div>
+  
   <div class="row border-top">
      <hst:include ref="contentBottomTwo" /> 
   </div>

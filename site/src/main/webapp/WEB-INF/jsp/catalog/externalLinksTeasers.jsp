@@ -71,4 +71,7 @@
       </c:if>
     </c:forEach>
   </section>  
+  
+  <div class="clearfix"></div>
+  
 </c:if>
