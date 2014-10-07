@@ -65,9 +65,7 @@
   <!-- SWIPER SLIDER -->
   <link rel="stylesheet" href="<hst:link path="/css/kees/idangerous.swiper.css"/>">
   <!-- // SWIPER SLIDER -->
-  
-  <link rel="stylesheet" href="<hst:link path="/css/eforms.css"/>" type="text/css" />
-  
+    
   <link rel="stylesheet" href="<hst:link path="/css/kees/ekko-lightbox.min.css"/>" >
   <link rel="stylesheet" href="<hst:link path="/css/kees/style.css"/>" >
   

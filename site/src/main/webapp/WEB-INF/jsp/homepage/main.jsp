@@ -9,15 +9,6 @@
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 <%@ taglib prefix="opw" uri="http://open-web.nl/hippo/prototype"%>
 
-
-<hst:headContribution keyHint="swiper">
-  <script type="text/javascript" src="<hst:link path="/js/kees/vendor/idangerous.swiper.js"/>"></script>
-</hst:headContribution>
-
-<hst:headContribution keyHint="swiper.progress">
-  <script type="text/javascript" src="<hst:link path="/js/kees/vendor/idangerous.swiper.progress.min.js"/>"></script>
-</hst:headContribution>  
-
 <div id="main" role="main" class="home"> 
             
   <c:choose>

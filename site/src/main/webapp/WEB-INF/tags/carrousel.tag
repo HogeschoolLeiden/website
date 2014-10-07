@@ -10,6 +10,14 @@
 
 <%@ attribute name="document" rtexprvalue="true" required="true" type="org.hippoecm.hst.content.beans.standard.HippoBean" %>
 
+<hst:headContribution keyHint="swiper">
+  <script type="text/javascript" src="<hst:link path="/js/kees/vendor/idangerous.swiper.js"/>"></script>
+</hst:headContribution>
+
+<hst:headContribution keyHint="swiper.progress">
+  <script type="text/javascript" src="<hst:link path="/js/kees/vendor/idangerous.swiper.progress.min.js"/>"></script>
+</hst:headContribution>  
+
 <div class="background large img swiper-container">
   <div class="swiper-wrapper">
 
@@ -20,8 +28,7 @@
         
         <img src="<hst:link hippobean="${carrouselitem.image.detailBackground }" />"
           alt="<c:out value="${carrouselitem.document.title }" escapeXml="true" />"
-          title="<c:out value="${carrouselitem.document.title }" escapeXml="true" />"
-          class="title-icon" />
+          title="<c:out value="${carrouselitem.document.title }" escapeXml="true" />" />
 
           <div class="container">
             <div class="row">
@@ -61,3 +68,11 @@
   <div class="swipenav prev fa fa-angle-left"></div>
   <div class="swipenav next fa fa-angle-right"></div>     
 </div>
+
+<%-- <hst:headContribution keyHint="swiper">
+  <script type="text/javascript" src="<hst:link path="/js/kees/vendor/idangerous.swiper.js"/>"></script>
+</hst:headContribution>
+
+<hst:headContribution keyHint="swiper.progress">
+  <script type="text/javascript" src="<hst:link path="/js/kees/vendor/idangerous.swiper.progress.min.js"/>"></script>
+</hst:headContribution>   --%>

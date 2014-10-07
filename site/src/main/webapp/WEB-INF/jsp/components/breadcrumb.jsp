@@ -14,7 +14,10 @@
     <div class="row">
       <div class="col-md-9 col-md-offset-3">
 
-        <tag:breadcrumbs menu="${menu }" />
+          <c:if test="${not(pageContext.request.requestContext.contentBean['class'].name == 'hslbeans.HomePage' or 
+                    pageContext.request.requestContext.contentBean['class'].name == 'hslbeans.Lectorat')}">
+            <tag:breadcrumbs menu="${menu }" />
+          </c:if>
 
       </div>
     </div>
