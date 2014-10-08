@@ -56,7 +56,7 @@
                 <div class="centered">
                   <h1>
                     <a href="${lectoraatHome}">
-                      <fmt:message key="lectoraat.title" />
+                      <c:out value="${headerIntroTitle}"/>
                       <span><c:out value="${headerName}"/></span>
                     </a>
                   </h1>

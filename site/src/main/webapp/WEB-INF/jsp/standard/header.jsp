@@ -47,7 +47,6 @@
       </a>
       
       <hst:include ref="header-lectorat"/>
-      <%-- <jsp:include page="./header-lectorat.jsp"></jsp:include> --%>
       
     </div>
         

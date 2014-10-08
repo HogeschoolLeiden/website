@@ -21,6 +21,7 @@ public class Header extends BaseHstComponent {
 
         if (info != null) {
             request.setAttribute(Attributes.HEADER_NAME, info.getHeaderName());
+            request.setAttribute(Attributes.HEADER_INTRO_TITLE, info.getHeaderIntroTitle());
             request.setAttribute(Attributes.LOGO, getLogoBean(request, info));
         } else {
             LOG.warn("No channel info available for website '{}'", mount.getMountPath());

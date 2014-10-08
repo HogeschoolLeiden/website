@@ -16,6 +16,7 @@ public class Constants {
     public static class Attributes extends AttributesConstants {
         public static final String LOGO = "logo";
         public static final String HEADER_NAME = "headerName";
+        public static final String HEADER_INTRO_TITLE = "headerIntroTitle";
         public static final String PARAMETER_INFO = "parameterInfo";
 
         private Attributes() {

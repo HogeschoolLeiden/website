@@ -14,13 +14,16 @@ import org.hippoecm.hst.core.parameters.Parameter;
 @FieldGroupList({
         @FieldGroup(
                 titleKey = "fields.website",
-                value = { "headerName", "defaultBrowserTitle", "logoPath" }
+                value = { "headerName", "defaultBrowserTitle", "logoPath", "headerIntroTitle" }
         )
 })
 public interface WebsiteInfo extends ChannelInfo {
 
     @Parameter(name = "headerName", defaultValue = "HST Website")
     String getHeaderName();
+
+    @Parameter(name = "headerIntroTitle", defaultValue = "Lectoraat")
+    String getHeaderIntroTitle();
     
     @Parameter(name = "defaultBrowserTitle", defaultValue = "hsl")
     String getDefaultBrowserTitle();

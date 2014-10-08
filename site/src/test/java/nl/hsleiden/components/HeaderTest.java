@@ -22,6 +22,7 @@ public class HeaderTest {
         
         String logoPathValue = "/content/gallery/hsl/logos/logo.png";
         String headerNameValue = "HeaderName";
+        String headerIntroTitle = "HeaderIntroTitle";
         
         MockHstRequest requestMock = new MockHstRequest();
         MockHstResponse responseMock = new MockHstResponse();
@@ -29,7 +30,7 @@ public class HeaderTest {
         MockObjectBeanPersistenceManager obpmMock = new MockObjectBeanPersistenceManager();
         obpmMock.setObject(logoPathValue, null);
         
-        requestContextMock.setResolvedMount(getResolvedMountMock(headerNameValue, logoPathValue));
+        requestContextMock.setResolvedMount(getResolvedMountMock(headerNameValue, logoPathValue, headerIntroTitle));
         requestContextMock.setDefaultObjectBeanManager(obpmMock);
         requestMock.setRequestContext(requestContextMock);
                 
@@ -57,12 +58,13 @@ public class HeaderTest {
     }
     
    
-    private ResolvedMount getResolvedMountMock(String headerNameValue, String logoPathValue) {
+    private ResolvedMount getResolvedMountMock(String headerNameValue, String logoPathValue, String headerIntroTitle) {
         ResolvedMount resolvedMountMock = createMock(ResolvedMount.class);
         Mount mountMock = createMock(Mount.class);
         WebsiteInfo infoMock = createMock(WebsiteInfo.class);
        
         expect(infoMock.getHeaderName()).andReturn(headerNameValue);
+        expect(infoMock.getHeaderIntroTitle()).andReturn(headerIntroTitle);
         expect(infoMock.getLogoPath()).andReturn(logoPathValue);
         expect(mountMock.getChannelInfo()).andReturn(infoMock);
         expect(resolvedMountMock.getMount()).andReturn(mountMock);
