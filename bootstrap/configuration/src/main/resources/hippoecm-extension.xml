@@ -3515,7 +3515,7 @@
     </sv:property>
   </sv:node>
   
-  <!-- LECTORATEN SUBSITE -->
+  <!-- LECTORATEN SUBSITE (nl + en)-->
   <!-- Blueprints -->  
   <sv:node sv:name="website-hst-blueprints-website-subsite"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
@@ -3531,7 +3531,22 @@
       <sv:value>/hst:hst/hst:blueprints</sv:value> 
     </sv:property> 
   </sv:node>  
-  <!-- Blueprints workspace configuration nodes -->  
+  <sv:node sv:name="website-hst-blueprints-website-english-subsite"> 
+    <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
+      <sv:value>hippo:initializeitem</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:sequence" sv:type="Double"> 
+      <sv:value>35001</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentresource" sv:type="String"> 
+      <sv:value>hst/blueprints/website-english-subsite.xml</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentroot" sv:type="String"> 
+      <sv:value>/hst:hst/hst:blueprints</sv:value> 
+    </sv:property> 
+  </sv:node>  
+  
+  <!-- Blueprints workspace configuration nodes -  Workspace-->
   <sv:node sv:name="website-hst-blueprints-website-workspace"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
@@ -3546,6 +3561,22 @@
       <sv:value>/hst:hst/hst:blueprints/website-subsite/hst:configuration</sv:value> 
     </sv:property> 
   </sv:node>  
+  <sv:node sv:name="website-hst-blueprints-website-english-subsite-workspace"> 
+    <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
+      <sv:value>hippo:initializeitem</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:sequence" sv:type="Double"> 
+      <sv:value>35002</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentresource" sv:type="String"> 
+      <sv:value>hst/blueprints/website-english-subsite/workspace.xml</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentroot" sv:type="String"> 
+      <sv:value>/hst:hst/hst:blueprints/website-english-subsite/hst:configuration</sv:value> 
+    </sv:property> 
+  </sv:node>   
+  
+  <!-- Blueprints workspace configuration nodes -  Sitemap -->
   <sv:node sv:name="website-hst-blueprints-website-subsite-workspace-sitemap"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
@@ -3560,6 +3591,21 @@
       <sv:value>/hst:hst/hst:blueprints/website-subsite/hst:configuration/hst:workspace</sv:value> 
     </sv:property> 
   </sv:node>  
+  <sv:node sv:name="website-hst-blueprints-website-english-subsite-workspace-sitemap"> 
+    <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
+      <sv:value>hippo:initializeitem</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:sequence" sv:type="Double"> 
+      <sv:value>35003</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentresource" sv:type="String"> 
+      <sv:value>hst/blueprints/website-english-subsite/workspace/sitemap.xml</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentroot" sv:type="String"> 
+      <sv:value>/hst:hst/hst:blueprints/website-english-subsite/hst:configuration/hst:workspace</sv:value> 
+    </sv:property> 
+  </sv:node>  
+  
   <sv:node sv:name="website-hst-blueprints-website-subsite-workspace-pages"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
@@ -3574,6 +3620,21 @@
       <sv:value>/hst:hst/hst:blueprints/website-subsite/hst:configuration/hst:workspace</sv:value> 
     </sv:property> 
   </sv:node>  
+  <sv:node sv:name="website-hst-blueprints-website-english-subsite-workspace-pages"> 
+    <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
+      <sv:value>hippo:initializeitem</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:sequence" sv:type="Double"> 
+      <sv:value>35004</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentresource" sv:type="String"> 
+      <sv:value>hst/blueprints/website-english-subsite/workspace/pages.xml</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentroot" sv:type="String"> 
+      <sv:value>/hst:hst/hst:blueprints/website-english-subsite/hst:configuration/hst:workspace</sv:value> 
+    </sv:property> 
+  </sv:node>  
+  
   <sv:node sv:name="website-hst-blueprints-website-subsite-workspace-sitemenus"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
@@ -3588,6 +3649,21 @@
       <sv:value>/hst:hst/hst:blueprints/website-subsite/hst:configuration/hst:workspace</sv:value> 
     </sv:property> 
   </sv:node>  
+  <sv:node sv:name="website-hst-blueprints-website-english-subsite-workspace-sitemenus"> 
+    <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
+      <sv:value>hippo:initializeitem</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:sequence" sv:type="Double"> 
+      <sv:value>35005</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentresource" sv:type="String"> 
+      <sv:value>hst/blueprints/website-english-subsite/workspace/sitemenus.xml</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentroot" sv:type="String"> 
+      <sv:value>/hst:hst/hst:blueprints/website-english-subsite/hst:configuration/hst:workspace</sv:value> 
+    </sv:property> 
+  </sv:node>  
+  
   <sv:node sv:name="website-hst-blueprints-website-subsite-sitemenus"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
@@ -3602,6 +3678,21 @@
       <sv:value>/hst:hst/hst:blueprints/website-subsite/hst:configuration</sv:value> 
     </sv:property> 
   </sv:node>  
+  <sv:node sv:name="website-hst-blueprints-website-english-subsite-sitemenus"> 
+    <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
+      <sv:value>hippo:initializeitem</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:sequence" sv:type="Double"> 
+      <sv:value>35005</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentresource" sv:type="String"> 
+      <sv:value>hst/blueprints/website-english-subsite/sitemenus.xml</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentroot" sv:type="String"> 
+      <sv:value>/hst:hst/hst:blueprints/website-english-subsite/hst:configuration</sv:value> 
+    </sv:property> 
+  </sv:node>  
+  
   <sv:node sv:name="website-hst-blueprints-website-workspace-containers"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
@@ -3616,6 +3707,21 @@
       <sv:value>/hst:hst/hst:blueprints/website-subsite/hst:configuration/hst:workspace</sv:value> 
     </sv:property> 
   </sv:node>  
+  <sv:node sv:name="website-hst-blueprints-website-english-subsite-workspace-containers"> 
+    <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
+      <sv:value>hippo:initializeitem</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:sequence" sv:type="Double"> 
+      <sv:value>35006</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentresource" sv:type="String"> 
+      <sv:value>hst/blueprints/website-english-subsite/workspace/containers.xml</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentroot" sv:type="String"> 
+      <sv:value>/hst:hst/hst:blueprints/website-english-subsite/hst:configuration/hst:workspace</sv:value> 
+    </sv:property> 
+  </sv:node>  
+  
   <!-- Blueprints NON workspace configuraion nodes -->  
   <sv:node sv:name="website-hst-blueprints-website-subsite-sitemap"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
@@ -3631,6 +3737,21 @@
       <sv:value>/hst:hst/hst:blueprints/website-subsite/hst:configuration</sv:value> 
     </sv:property> 
   </sv:node>  
+  <sv:node sv:name="website-hst-blueprints-website-english-subsite-sitemap"> 
+    <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
+      <sv:value>hippo:initializeitem</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:sequence" sv:type="Double"> 
+      <sv:value>35010</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentresource" sv:type="String"> 
+      <sv:value>hst/blueprints/website-english-subsite/sitemap.xml</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentroot" sv:type="String"> 
+      <sv:value>/hst:hst/hst:blueprints/website-english-subsite/hst:configuration</sv:value> 
+    </sv:property> 
+  </sv:node>  
+  
   <sv:node sv:name="website-hst-blueprints-website-subsite-abstractpages"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
@@ -3645,6 +3766,21 @@
       <sv:value>/hst:hst/hst:blueprints/website-subsite/hst:configuration</sv:value> 
     </sv:property> 
   </sv:node>  
+  <sv:node sv:name="website-hst-blueprints-website-english-subsite-abstractpages"> 
+    <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
+      <sv:value>hippo:initializeitem</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:sequence" sv:type="Double"> 
+      <sv:value>35011</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentresource" sv:type="String"> 
+      <sv:value>hst/blueprints/website-english-subsite/abstractpages.xml</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentroot" sv:type="String"> 
+      <sv:value>/hst:hst/hst:blueprints/website-english-subsite/hst:configuration</sv:value> 
+    </sv:property> 
+  </sv:node>  
+  
   <sv:node sv:name="website-hst-blueprints-website-subsite-pages"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
@@ -3659,6 +3795,21 @@
       <sv:value>/hst:hst/hst:blueprints/website-subsite/hst:configuration</sv:value> 
     </sv:property> 
   </sv:node>  
+  <sv:node sv:name="website-hst-blueprints-website-english-subsite-pages"> 
+    <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
+      <sv:value>hippo:initializeitem</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:sequence" sv:type="Double"> 
+      <sv:value>35012</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentresource" sv:type="String"> 
+      <sv:value>hst/blueprints/website-english-subsite/pages.xml</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentroot" sv:type="String"> 
+      <sv:value>/hst:hst/hst:blueprints/website-english-subsite/hst:configuration</sv:value> 
+    </sv:property> 
+  </sv:node>  
+  
   <!-- Subsites bootstrap content -->  
   <sv:node sv:name="website-hippo-queries-new-subsite-template-website-subsite"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
@@ -3674,6 +3825,21 @@
       <sv:value>/hippo:configuration/hippo:queries/hippo:templates/new-subsite/hippostd:templates</sv:value> 
     </sv:property> 
   </sv:node>
+  <sv:node sv:name="website-hippo-queries-new-subsite-template-website-english-subsite"> 
+    <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
+      <sv:value>hippo:initializeitem</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:sequence" sv:type="Double"> 
+      <sv:value>31013</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentresource" sv:type="String"> 
+      <sv:value>configuration/queries/templates/new-subsite/website-english-subsite.xml</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentroot" sv:type="String"> 
+      <sv:value>/hippo:configuration/hippo:queries/hippo:templates/new-subsite/hippostd:templates</sv:value> 
+    </sv:property> 
+  </sv:node>
+  
    <!-- Subsite  common configuration -->  
   <sv:node sv:name="website-subsite-common-configuration-components"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
@@ -3704,7 +3870,7 @@
       <sv:value>/hst:hst/hst:configurations/website-subsite-common</sv:value> 
     </sv:property> 
   </sv:node>
-<sv:node sv:name="website-hst-hst-hst-configurations-expertisecentrum-jeugd-hst-pages-eventpage">
+  <sv:node sv:name="website-hst-hst-hst-configurations-expertisecentrum-jeugd-hst-pages-eventpage">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hippo:initializeitem</sv:value>
     </sv:property>
