@@ -30,24 +30,10 @@ public class LanguageSwitch extends WebDocumentDetail {
 
     public void doBeforeRender(HstRequest request, HstResponse response) {
         try {
-            List<Translation> result = new ArrayList<Translation>();
-            
             HippoBean bean = request.getRequestContext().getContentBean();
             HippoAvailableTranslationsBean<HippoBean> translations = bean.getAvailableTranslations();
-            
-//            System.out.println("Printing translations");
-//            for (String availableLocale : translations.getAvailableLocales()) {
-//                System.out.println("availableLocale  = " + availableLocale);                
-//            }
-            
-            if(translations.getAvailableLocales().size()>1){                
-                for (String baseLocale : translations.getAvailableLocales()) {
-                    Translation tr = createTranslation(request, baseLocale);
-                    if(tr!=null){                    
-                        result.add(tr);
-                    }
-                }
-            }
+
+            List<Translation> result = getAvailbaleTranslations(request, translations);
             
             if(result.size()>0){                
                 request.setAttribute(Attributes.TRANSLATIONS, result);
@@ -60,6 +46,21 @@ public class LanguageSwitch extends WebDocumentDetail {
         } catch (ObjectBeanManagerException e) {
             throw new HstComponentException(e);
         }
+    }
+
+    private List<Translation> getAvailbaleTranslations(HstRequest request,
+            HippoAvailableTranslationsBean<HippoBean> translations) throws ObjectBeanManagerException {
+        
+        List<Translation> result = new ArrayList<Translation>();
+        if(translations.getAvailableLocales().size()>1){                
+            for (String baseLocale : translations.getAvailableLocales()) {
+                Translation tr = createTranslation(request, baseLocale);
+                if(tr!=null){                    
+                    result.add(tr);
+                }
+            }
+        }
+        return result;
     }
 
     private Translation createTranslation(final HstRequest request, final String locale)
