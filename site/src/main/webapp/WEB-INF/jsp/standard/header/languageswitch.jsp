@@ -11,7 +11,7 @@
 
 <c:choose>
 <c:when test="${noTranslation}">
-  <li><span>no direct translation for this document</span></li>
+  <%-- <li><span>no direct translation for this document</span></li> --%>
 </c:when>
 <c:otherwise>
   <c:forEach items="${translations}" var="translation">
