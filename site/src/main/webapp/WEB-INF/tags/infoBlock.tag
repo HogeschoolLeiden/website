@@ -40,7 +40,7 @@
     <ul>
       <c:forEach items="${document.infoBlock.infoLines}" var="item">
         <li>
-          <span class="fa ${item.icon.firstItem.key }"></span>
+          <span class="${item.icon.firstItem.key }"></span>
           <span class="details"><c:out value="${item.infoLine }"/></span>
         </li>
       </c:forEach>

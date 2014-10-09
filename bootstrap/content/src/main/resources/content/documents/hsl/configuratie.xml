@@ -207,6 +207,28 @@
       <sv:value>Configuratie</sv:value>
     </sv:property>
   </sv:node>
+  <sv:node sv:name="hippo:translation">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hippo:translation</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:language" sv:type="String">
+      <sv:value/>
+    </sv:property>
+    <sv:property sv:name="hippo:message" sv:type="String">
+      <sv:value>Configuratie</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="hippo:translation">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hippo:translation</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:language" sv:type="String">
+      <sv:value/>
+    </sv:property>
+    <sv:property sv:name="hippo:message" sv:type="String">
+      <sv:value>Configuratie</sv:value>
+    </sv:property>
+  </sv:node>
   <sv:node sv:name="valuelists">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hippostd:folder</sv:value>
@@ -1542,10 +1564,10 @@
             <sv:value>selection:listitem</sv:value>
           </sv:property>
           <sv:property sv:name="selection:key" sv:type="String">
-            <sv:value/>
+            <sv:value>nothing</sv:value>
           </sv:property>
           <sv:property sv:name="selection:label" sv:type="String">
-            <sv:value>Kies een icon</sv:value>
+            <sv:value>No Icon</sv:value>
           </sv:property>
         </sv:node>
         <sv:node sv:name="selection:listitem">
@@ -2520,7 +2542,7 @@
           <sv:value>2014-07-08T16:56:32.253+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-10-05T17:06:59.843+02:00</sv:value>
+          <sv:value>2014-10-09T11:48:17.846+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -2532,6 +2554,7 @@
           <sv:value>nl</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:descriptions" sv:type="String" sv:multiple="true">
+          <sv:value/>
           <sv:value/>
           <sv:value/>
           <sv:value/>
@@ -2561,6 +2584,7 @@
           <sv:value>facet.search.noresults</sv:value>
           <sv:value>lectoraat.title</sv:value>
           <sv:value>to.home.page</sv:value>
+          <sv:value>translation.lang</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages" sv:type="String" sv:multiple="true">
           <sv:value>Available Downloads</sv:value>
@@ -2575,6 +2599,7 @@
           <sv:value>Provided query did not produce any results</sv:value>
           <sv:value>Lectoraat</sv:value>
           <sv:value>Naar homepage</sv:value>
+          <sv:value>International (en)</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages_en" sv:type="String" sv:multiple="true">
           <sv:value>Available Downloads</sv:value>
@@ -2589,6 +2614,7 @@
           <sv:value>Provided query did not produce any results</sv:value>
           <sv:value>Lectoraat</sv:value>
           <sv:value>Naar homepage</sv:value>
+          <sv:value>page in dutch</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages_nl" sv:type="String" sv:multiple="true">
           <sv:value>Available Downloads</sv:value>
@@ -2603,6 +2629,7 @@
           <sv:value>Provided query did not produce any results</sv:value>
           <sv:value>Lectoraat</sv:value>
           <sv:value>Naar homepage</sv:value>
+          <sv:value>page in english</sv:value>
         </sv:property>
       </sv:node>
       <sv:node sv:name="general-messages">
@@ -2635,7 +2662,7 @@
           <sv:value>2014-07-08T16:56:32.253+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-10-05T17:07:16.975+02:00</sv:value>
+          <sv:value>2014-10-09T11:49:04.137+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -2647,6 +2674,7 @@
           <sv:value>nl</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:descriptions" sv:type="String" sv:multiple="true">
+          <sv:value/>
           <sv:value/>
           <sv:value/>
           <sv:value/>
@@ -2676,6 +2704,7 @@
           <sv:value>facet.search.noresults</sv:value>
           <sv:value>lectoraat.title</sv:value>
           <sv:value>to.home.page</sv:value>
+          <sv:value>translation.lang</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages" sv:type="String" sv:multiple="true">
           <sv:value>Available Downloads</sv:value>
@@ -2690,6 +2719,7 @@
           <sv:value>Provided query did not produce any results</sv:value>
           <sv:value>Lectoraat</sv:value>
           <sv:value>Naar homepage</sv:value>
+          <sv:value>International (en)</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages_en" sv:type="String" sv:multiple="true">
           <sv:value>Available Downloads</sv:value>
@@ -2704,6 +2734,7 @@
           <sv:value>Provided query did not produce any results</sv:value>
           <sv:value>Lectoraat</sv:value>
           <sv:value>Naar homepage</sv:value>
+          <sv:value>page in dutch</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages_nl" sv:type="String" sv:multiple="true">
           <sv:value>Available Downloads</sv:value>
@@ -2718,6 +2749,7 @@
           <sv:value>Provided query did not produce any results</sv:value>
           <sv:value>Lectoraat</sv:value>
           <sv:value>Naar homepage</sv:value>
+          <sv:value>page in english</sv:value>
         </sv:property>
       </sv:node>
       <sv:node sv:name="general-messages">
@@ -2749,13 +2781,13 @@
           <sv:value>2014-07-08T16:56:32.253+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-10-05T17:07:16.975+02:00</sv:value>
+          <sv:value>2014-10-09T11:49:04.137+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-          <sv:value>2014-10-05T17:07:18.895+02:00</sv:value>
+          <sv:value>2014-10-09T11:49:08.676+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:id" sv:type="String">
           <sv:value>1f1b3223-e5aa-4c2b-9747-9a8102f8ab5e</sv:value>
@@ -2764,6 +2796,7 @@
           <sv:value>nl</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:descriptions" sv:type="String" sv:multiple="true">
+          <sv:value/>
           <sv:value/>
           <sv:value/>
           <sv:value/>
@@ -2793,6 +2826,7 @@
           <sv:value>facet.search.noresults</sv:value>
           <sv:value>lectoraat.title</sv:value>
           <sv:value>to.home.page</sv:value>
+          <sv:value>translation.lang</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages" sv:type="String" sv:multiple="true">
           <sv:value>Available Downloads</sv:value>
@@ -2807,6 +2841,7 @@
           <sv:value>Provided query did not produce any results</sv:value>
           <sv:value>Lectoraat</sv:value>
           <sv:value>Naar homepage</sv:value>
+          <sv:value>International (en)</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages_en" sv:type="String" sv:multiple="true">
           <sv:value>Available Downloads</sv:value>
@@ -2821,6 +2856,7 @@
           <sv:value>Provided query did not produce any results</sv:value>
           <sv:value>Lectoraat</sv:value>
           <sv:value>Naar homepage</sv:value>
+          <sv:value>page in dutch</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages_nl" sv:type="String" sv:multiple="true">
           <sv:value>Available Downloads</sv:value>
@@ -2835,6 +2871,7 @@
           <sv:value>Provided query did not produce any results</sv:value>
           <sv:value>Lectoraat</sv:value>
           <sv:value>Naar homepage</sv:value>
+          <sv:value>page in english</sv:value>
         </sv:property>
       </sv:node>
     </sv:node>

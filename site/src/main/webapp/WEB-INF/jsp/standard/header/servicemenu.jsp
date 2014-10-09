@@ -10,6 +10,8 @@
 
 <ul class="nav navbar-nav" id="utilities">
 
+  <hst:include ref="langaugeswitch" />
+      
   <c:forEach items="${menu.siteMenuItems}" var="siteMenuItem" varStatus="step">
 	 <c:choose>
 		<c:when test="${not empty siteMenuItem.hstLink }">

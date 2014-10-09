@@ -18,6 +18,9 @@ public class Constants {
         public static final String HEADER_NAME = "headerName";
         public static final String HEADER_INTRO_TITLE = "headerIntroTitle";
         public static final String PARAMETER_INFO = "parameterInfo";
+        public static final String TRANSLATIONS = "translations";
+        public static final String NO_TRANSLATION = "noTranslation";
+        public static final String CURRENT_LANGUAGE = "currentLanguage";
 
         private Attributes() {
         }

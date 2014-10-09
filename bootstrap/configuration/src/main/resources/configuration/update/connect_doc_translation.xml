@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="Connect Doc Translation">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>hipposys:updaterinfo</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:batchsize" sv:type="Long">
+    <sv:value>10</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:dryrun" sv:type="Boolean">
+    <sv:value>false</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:query" sv:type="String">
+    <sv:value>/jcr:root/content</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:script" sv:type="String">
+    <sv:value>package org.hippoecm.frontend.plugins.cms.dev.updater&#13;
+&#13;
+import org.onehippo.repository.update.BaseNodeUpdateVisitor&#13;
+import javax.jcr.Node&#13;
+&#13;
+class UpdaterTemplate extends BaseNodeUpdateVisitor {&#13;
+&#13;
+  &#13;
+  String document1 = "documents/hsl/pages/home";&#13;
+  String document2 = "documents/hsl-en/pages/homepage";  &#13;
+    &#13;
+  boolean doUpdate(Node node) throws RepositoryException {&#13;
+    log.debug("my query node is: " + node.getPath());&#13;
+    Node doc1 = node.getNode(document1);&#13;
+    String doc1Translation = getTranslationId(doc1);&#13;
+    &#13;
+   &#13;
+    Node doc2 = node.getNode(document2);&#13;
+    addTranslationIdToDocument(doc2, doc1Translation);&#13;
+    &#13;
+    log.debug("Connected document: " + doc1.getPath() + " with document: " + doc1.getPath());&#13;
+    return false&#13;
+  }&#13;
+  &#13;
+  void checkoutIfCheckedIn(Node node) throws RepositoryException {&#13;
+       if(!node.isCheckedOut()){&#13;
+           node.checkout();&#13;
+       }&#13;
+        &#13;
+    }&#13;
+  &#13;
+  String getTranslationId(Node node) throws RepositoryException {&#13;
+    String result = "";&#13;
+    NodeIterator childNodes = node.getNodes();&#13;
+                &#13;
+    while(childNodes.hasNext()){&#13;
+      Node childNode = childNodes.nextNode();&#13;
+       if(childNode.getName().equals(node.getName())){&#13;
+         result = childNode.getProperty("hippotranslation:id").getString();&#13;
+         break;&#13;
+       }&#13;
+      &#13;
+    }&#13;
+      return result;&#13;
+  }&#13;
+  &#13;
+  void addTranslationIdToDocument(Node node, String translationID) throws RepositoryException {&#13;
+        NodeIterator childNodes = node.getNodes();&#13;
+                &#13;
+        while(childNodes.hasNext()){&#13;
+            Node childNode = childNodes.nextNode();&#13;
+            if(childNode.getName().equals(node.getName())){&#13;
+                checkoutIfCheckedIn(childNode);&#13;
+                childNode.setProperty("hippotranslation:id", translationID);&#13;
+                log.debug("set translation uuid: " + translationID + " to document node " + childNode.getPath());&#13;
+            }&#13;
+        }&#13;
+        &#13;
+    }&#13;
+&#13;
+  boolean undoUpdate(Node node) {&#13;
+    throw new UnsupportedOperationException('Updater does not implement undoUpdate method')&#13;
+  }&#13;
+&#13;
+}</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:throttle" sv:type="Long">
+    <sv:value>100</sv:value>
+  </sv:property>
+</sv:node>
