@@ -32,7 +32,7 @@
       <a class="navbar-brand" href="${homeLink}">
         <c:choose>
           <c:when test="${not empty logo}">
-            <img src="<hst:link hippobean="${logo.original}"/>"
+            <img src="<hst:link hippobean="${logo.listImageLarge}"/>"
                  alt="<c:out value="${headerName}"/>"
                  title="<c:out value="${headerName}"/>" 
                  class="img-responsive"/>
