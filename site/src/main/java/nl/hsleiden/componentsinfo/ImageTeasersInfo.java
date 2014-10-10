@@ -3,9 +3,13 @@ package nl.hsleiden.componentsinfo;
 import hslbeans.ImageTeaser;
 import nl.hsleiden.utils.Constants;
 
+import org.hippoecm.hst.core.parameters.FieldGroup;
+import org.hippoecm.hst.core.parameters.FieldGroupList;
 import org.hippoecm.hst.core.parameters.JcrPath;
 import org.hippoecm.hst.core.parameters.Parameter;
 
+@FieldGroupList({ @FieldGroup(titleKey = "fields.widget", value = { Constants.WidgetConstants.FIELD_USER_MIXIN,
+        Constants.WidgetConstants.TEASER_1, Constants.WidgetConstants.TEASER_2 }) })
 public interface ImageTeasersInfo extends TeasersInfo {
 
     @Override

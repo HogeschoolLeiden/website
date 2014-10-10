@@ -6,6 +6,7 @@ import nl.hsleiden.utils.Constants.WidgetConstants;
 import org.hippoecm.hst.core.parameters.JcrPath;
 import org.hippoecm.hst.core.parameters.Parameter;
 
+
 public interface TeasersInfo {
 
     @Parameter(name = Constants.WidgetConstants.FIELD_USER_MIXIN, defaultValue = "off", displayName=WidgetConstants.FIELD_USER_MIXIN_MESSAGE)
