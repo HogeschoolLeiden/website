@@ -7,6 +7,7 @@ import nl.hsleiden.utils.Constants.WidgetConstants;
 
 import org.apache.commons.lang3.StringUtils;
 import org.hippoecm.hst.content.beans.query.HstQuery;
+import org.hippoecm.hst.content.beans.query.exceptions.FilterException;
 import org.hippoecm.hst.content.beans.query.exceptions.QueryException;
 import org.hippoecm.hst.content.beans.query.filter.Filter;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
@@ -75,22 +76,31 @@ public class FacetedOverview extends MonolithicFacetedOverview {
                 
                 Filter globalFilter = query.createFilter();
 
-                if(((OverviewPage )contentBean).getHighLightedItem()!=null){
-                    String highlightedUuid = ((OverviewPage )contentBean).getHighLightedItem().getIdentifier();
-                    globalFilter.addNotEqualTo("jcr:uuid", highlightedUuid);
-                }
+                excludeHighLitedItem(contentBean, globalFilter);
+           
+                applyUserQuery(request, globalFilter);
                 
-                String queryString = getPublicRequestParameter(request, ParametersConstants.QUERY);
-                if (StringUtils.isNotBlank(queryString)) {
-                    queryString = SearchQueryUtils.parseAndEscapeBadCharacters(enhanceQuery(queryString));
-                    if (StringUtils.isNotBlank(queryString)) {
-                        globalFilter.addContains(".", queryString);
-                    }
-                }
                 query.setFilter(globalFilter);
             }
         }
         
         return query;
+    }
+
+    private void applyUserQuery(HstRequest request, Filter globalFilter) throws FilterException {
+        String queryString = getPublicRequestParameter(request, ParametersConstants.QUERY);
+        if (StringUtils.isNotBlank(queryString)) {
+            queryString = SearchQueryUtils.parseAndEscapeBadCharacters(enhanceQuery(queryString));
+            if (StringUtils.isNotBlank(queryString)) {
+                globalFilter.addContains(".", queryString);
+            }
+        }
+    }
+
+    private void excludeHighLitedItem(HippoBean contentBean, Filter globalFilter) throws FilterException {
+        if(((OverviewPage )contentBean).getHighLightedItem()!=null){
+            String highlightedUuid = ((OverviewPage )contentBean).getHighLightedItem().getIdentifier();
+            globalFilter.addNotEqualTo("jcr:uuid", highlightedUuid);
+        }
     }    
 }

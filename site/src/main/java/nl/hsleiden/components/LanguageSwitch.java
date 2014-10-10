@@ -26,22 +26,26 @@ public class LanguageSwitch extends WebDocumentDetail {
 
     private static final String CONTENT_BEAN_AVAILABLE_TRANSLATIONS = "contentBeanAvailableTranslations";
 
-    static final Logger log = LoggerFactory.getLogger(LanguageSwitch.class);
+    static final Logger LOG = LoggerFactory.getLogger(LanguageSwitch.class);
 
     public void doBeforeRender(HstRequest request, HstResponse response) {
         try {
             HippoBean bean = request.getRequestContext().getContentBean();
-            HippoAvailableTranslationsBean<HippoBean> translations = bean.getAvailableTranslations();
-
-            List<Translation> result = getAvailbaleTranslations(request, translations);
             
-            if(result.size()>0){                
-                request.setAttribute(Attributes.TRANSLATIONS, result);
-                request.setAttribute(Attributes.LABELS, BeanUtils.getLabels(request, getComponentParametersInfo(request)));
-                request.setAttribute(Attributes.CURRENT_LANGUAGE, request.getLocale().getLanguage());
-            }else{
-                request.setAttribute(Attributes.NO_TRANSLATION, true);
+            if(bean!=null){                
+                HippoAvailableTranslationsBean<HippoBean> translations = bean.getAvailableTranslations();
+                
+                List<Translation> result = getAvailbaleTranslations(request, translations);
+                
+                if(result.isEmpty()){                
+                    request.setAttribute(Attributes.NO_TRANSLATION, true);
+                }else{
+                    request.setAttribute(Attributes.TRANSLATIONS, result);
+                    request.setAttribute(Attributes.LABELS, BeanUtils.getLabels(request, getComponentParametersInfo(request)));
+                    request.setAttribute(Attributes.CURRENT_LANGUAGE, request.getLocale().getLanguage());
+                }
             }
+            
             
         } catch (ObjectBeanManagerException e) {
             throw new HstComponentException(e);
@@ -90,8 +94,7 @@ public class LanguageSwitch extends WebDocumentDetail {
 
     private boolean getSelected(final HstRequest request, final String locale) {
         final String requestLocale = request.getLocale().getLanguage();
-        boolean selected = locale.equals(requestLocale);
-        return selected;
+        return locale.equals(requestLocale);
     }
 
     private HstLink createLink(final HstRequest request, HippoBean translationBean) {
