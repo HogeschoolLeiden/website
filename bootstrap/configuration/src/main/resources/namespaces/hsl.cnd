@@ -183,6 +183,9 @@
 [hsl:TwitterCompoundMixin] > hippo:compound, hippostd:relaxed
   orderable
 
+[hsl:FacebookPostsCompoundMixin] > hippo:compound, hippostd:relaxed
+  orderable
+
 [hsl:TwitterParameters] > hippo:compound, hippostd:relaxed
   orderable
 
@@ -244,6 +247,10 @@
 [hsl:TwitterMixin]
   mixin
   + hsl:twitterCompoundMixin (hsl:TwitterCompoundMixin)
+
+[hsl:FacebookPostsMixin]
+  mixin
+  + hsl:facebookPostsCompoundMixin (hsl:FacebookPostsCompoundMixin)
 
 [hsl:ExternalLinksTeasersMixin]
   mixin

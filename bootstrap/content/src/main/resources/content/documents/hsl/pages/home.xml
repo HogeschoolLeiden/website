@@ -14,6 +14,7 @@
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
       <sv:value>mix:referenceable</sv:value>
+      <sv:value>hsl:FacebookPostsMixin</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>21cebd24-9f38-4397-94ce-bf9c0cb69d36</sv:value>
@@ -36,7 +37,7 @@
       <sv:value>2014-10-01T17:22:10.490+02:00</sv:value>
     </sv:property>
     <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-      <sv:value>2014-10-01T17:22:11.073+02:00</sv:value>
+      <sv:value>2014-10-10T15:10:12.958+02:00</sv:value>
     </sv:property>
     <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
       <sv:value>admin</sv:value>
@@ -88,6 +89,15 @@
         <sv:value>d921e8da-e15a-4010-8b5c-2809b4525007</sv:value>
       </sv:property>
     </sv:node>
+    <sv:node sv:name="hsl:facebookPostsCompoundMixin">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hsl:FacebookPostsCompoundMixin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:posts" sv:type="String" sv:multiple="true">
+        <sv:value>&lt;div id="fb-root"&gt;&lt;/div&gt; &lt;script&gt;(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/all.js#xfbml=1"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));&lt;/script&gt;&#13;
+&lt;div class="fb-post" data-href="https://www.facebook.com/HSLeidenNL/posts/773766589329079" data-width="555"&gt;&lt;div class="fb-xfbml-parse-ignore"&gt;&lt;a href="https://www.facebook.com/HSLeidenNL/posts/773766589329079"&gt;Post&lt;/a&gt; by &lt;a href="https://www.facebook.com/HSLeidenNL"&gt;HSLeiden&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</sv:value>
+      </sv:property>
+    </sv:node>
   </sv:node>
   <sv:node sv:name="home">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -95,6 +105,7 @@
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
       <sv:value>mix:referenceable</sv:value>
+      <sv:value>hsl:FacebookPostsMixin</sv:value>
       <sv:value>mix:versionable</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
@@ -119,7 +130,7 @@
       <sv:value>2014-10-01T17:22:10.490+02:00</sv:value>
     </sv:property>
     <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-      <sv:value>2014-10-01T17:23:24.215+02:00</sv:value>
+      <sv:value>2014-10-10T15:09:57.927+02:00</sv:value>
     </sv:property>
     <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
       <sv:value>admin</sv:value>
@@ -171,6 +182,15 @@
         <sv:value>d921e8da-e15a-4010-8b5c-2809b4525007</sv:value>
       </sv:property>
     </sv:node>
+    <sv:node sv:name="hsl:facebookPostsCompoundMixin">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hsl:FacebookPostsCompoundMixin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:posts" sv:type="String" sv:multiple="true">
+        <sv:value>&lt;div id="fb-root"&gt;&lt;/div&gt; &lt;script&gt;(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/all.js#xfbml=1"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));&lt;/script&gt;&#13;
+&lt;div class="fb-post" data-href="https://www.facebook.com/HSLeidenNL/posts/773766589329079" data-width="555"&gt;&lt;div class="fb-xfbml-parse-ignore"&gt;&lt;a href="https://www.facebook.com/HSLeidenNL/posts/773766589329079"&gt;Post&lt;/a&gt; by &lt;a href="https://www.facebook.com/HSLeidenNL"&gt;HSLeiden&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</sv:value>
+      </sv:property>
+    </sv:node>
   </sv:node>
   <sv:node sv:name="home">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -178,6 +198,7 @@
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
       <sv:value>mix:referenceable</sv:value>
+      <sv:value>hsl:FacebookPostsMixin</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>d7307bc6-8160-4682-bb3b-3bdd1204819c</sv:value>
@@ -201,13 +222,13 @@
       <sv:value>2014-10-01T17:22:10.490+02:00</sv:value>
     </sv:property>
     <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-      <sv:value>2014-10-01T17:23:24.215+02:00</sv:value>
+      <sv:value>2014-10-10T15:09:57.927+02:00</sv:value>
     </sv:property>
     <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
       <sv:value>admin</sv:value>
     </sv:property>
     <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-      <sv:value>2014-10-01T17:23:26.396+02:00</sv:value>
+      <sv:value>2014-10-10T15:10:00.572+02:00</sv:value>
     </sv:property>
     <sv:property sv:name="hippotranslation:id" sv:type="String">
       <sv:value>245c0e51-c169-4ea6-af91-c44d6774e839</sv:value>
@@ -254,6 +275,15 @@
       </sv:property>
       <sv:property sv:name="hippo:docbase" sv:type="String">
         <sv:value>d921e8da-e15a-4010-8b5c-2809b4525007</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="hsl:facebookPostsCompoundMixin">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hsl:FacebookPostsCompoundMixin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:posts" sv:type="String" sv:multiple="true">
+        <sv:value>&lt;div id="fb-root"&gt;&lt;/div&gt; &lt;script&gt;(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/all.js#xfbml=1"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));&lt;/script&gt;&#13;
+&lt;div class="fb-post" data-href="https://www.facebook.com/HSLeidenNL/posts/773766589329079" data-width="555"&gt;&lt;div class="fb-xfbml-parse-ignore"&gt;&lt;a href="https://www.facebook.com/HSLeidenNL/posts/773766589329079"&gt;Post&lt;/a&gt; by &lt;a href="https://www.facebook.com/HSLeidenNL"&gt;HSLeiden&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</sv:value>
       </sv:property>
     </sv:node>
   </sv:node>

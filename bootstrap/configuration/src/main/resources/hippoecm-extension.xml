@@ -761,7 +761,7 @@
       <sv:value>true</sv:value> 
     </sv:property> 
   </sv:node>  
-  <!-- <sv:node sv:name="hsl-namespace-compounds-facebookpostscompoundmixin"> 
+  <sv:node sv:name="hsl-namespace-compounds-facebookpostscompoundmixin"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -777,7 +777,7 @@
     <sv:property sv:name="hippo:reloadonstartup" sv:type="Boolean"> 
       <sv:value>true</sv:value> 
     </sv:property> 
-  </sv:node>  --> 
+  </sv:node>
   <sv:node sv:name="hsl-namespace-compounds-calendareventscompoundmixin"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
@@ -999,7 +999,7 @@
       <sv:value>true</sv:value> 
     </sv:property>
   </sv:node>
-  <!-- <sv:node sv:name="hsl-mixins-facebookpostsmixin-namespace"> 
+  <sv:node sv:name="hsl-mixins-facebookpostsmixin-namespace"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -1015,7 +1015,7 @@
     <sv:property sv:name="hippo:reloadonstartup" sv:type="Boolean"> 
       <sv:value>true</sv:value> 
     </sv:property> 
-  </sv:node>   -->
+  </sv:node>
   <sv:node sv:name="hsl-mixins-relatedeventsmixin-namespace"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
@@ -1533,7 +1533,7 @@
     </sv:property> 
   </sv:node>  
   <!-- Security and default available users -->  
-  <!-- All users   
+  <!-- All users --> 
   <sv:node sv:name="website-users"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
@@ -1547,7 +1547,7 @@
     <sv:property sv:name="hippo:sequence" sv:type="Double"> 
       <sv:value>33000.3</sv:value> 
     </sv:property> 
-  </sv:node>  -->
+  </sv:node>  
   <!-- add new users to groups -->  
   <sv:node sv:name="website-groups-admin-schepers.haike-add"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
@@ -4115,7 +4115,7 @@
       <sv:value>/hst:hst/hst:configurations/expertisecentrum-jeugd/hst:pages</sv:value>
     </sv:property>
   </sv:node>
-<sv:node sv:name="website-hst-hst-hst-configurations-common-hst-catalog">
+  <sv:node sv:name="website-hst-hst-hst-configurations-common-hst-catalog">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hippo:initializeitem</sv:value>
     </sv:property>
@@ -4127,6 +4127,9 @@
     </sv:property>
     <sv:property sv:name="hippo:contentroot" sv:type="String">
       <sv:value>/hst:hst/hst:configurations/common</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:reloadonstartup" sv:type="Boolean"> 
+      <sv:value>true</sv:value> 
     </sv:property>
   </sv:node>
   <sv:node sv:name="website-hippo-namespaces-hsl-headteaser">
