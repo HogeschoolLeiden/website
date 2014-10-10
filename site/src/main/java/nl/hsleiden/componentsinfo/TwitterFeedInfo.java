@@ -1,13 +1,20 @@
 package nl.hsleiden.componentsinfo;
 
 import nl.hsleiden.utils.Constants;
-import nl.hsleiden.utils.Constants.WidgetConstants;
 
+import org.hippoecm.hst.core.parameters.FieldGroup;
+import org.hippoecm.hst.core.parameters.FieldGroupList;
 import org.hippoecm.hst.core.parameters.Parameter;
 
+@FieldGroupList({
+    @FieldGroup(
+            titleKey = "fields.widget",
+            value = { Constants.WidgetConstants.FIELD_USER_MIXIN, "query", "from", "limit" }
+    )
+})
 public interface TwitterFeedInfo {
 
-    @Parameter(name = Constants.WidgetConstants.FIELD_USER_MIXIN, defaultValue = "false", displayName=WidgetConstants.FIELD_USER_MIXIN_MESSAGE)
+    @Parameter(name = Constants.WidgetConstants.FIELD_USER_MIXIN, defaultValue = "false")
     public Boolean getUseMixin();
     
     @Parameter(name = "query", displayName = "Zoekopdracht", defaultValue = "")
