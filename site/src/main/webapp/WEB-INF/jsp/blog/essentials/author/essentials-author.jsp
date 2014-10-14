@@ -26,6 +26,15 @@
 
 <hst:setBundle basename="nl.hsleiden.channelmanager.Messages, nl.hsleiden.blog.Messages"/>
 
+<hst:defineObjects />
+<c:set var="isCmsRequest" value="${hstRequest.requestContext.cmsRequest}" />
+
+<c:if test="${not empty webMasterMessage and isCmsRequest}">
+  <p style="color: red"><fmt:message key="${webMasterMessage}" /></p>
+</c:if>
+
+<c:if test="${empty webMasterMessage}">
+
 <div class="panel panel-default">
   
   <div class="panel-heading">
@@ -59,3 +68,4 @@
   </div>
 </div>
 
+</c:if>
