@@ -26,25 +26,36 @@
 
 <hst:setBundle basename="nl.hsleiden.channelmanager.Messages, nl.hsleiden.blog.Messages"/>
 
-<div class="panel panel-default">
-  <c:if test="${(pageable ne null)}">
-    <div class="panel-heading">
-      <h3 class="panel-title"><fmt:message key="more.by"/> ${author.fullName}</h3>
-    </div>
-    <c:choose>
-      <c:when test="${pageable.total gt 0}">
-        <div class="panel-body">
-          <c:forEach var="item" items="${pageable.items}" varStatus="status">
-            <hst:link var="link" hippobean="${item}"/>
-            <p><a href="${link}"><c:out value="${item.title}"/></a></p>
-          </c:forEach>
-        </div>
-      </c:when>
-      <c:otherwise>
-        <div class="panel-body">
-          <p><fmt:message key="no.other.blogs"/> </p>
-        </div>
-      </c:otherwise>
-    </c:choose>
-  </c:if>
-</div>
+<hst:defineObjects />
+<c:set var="isCmsRequest" value="${hstRequest.requestContext.cmsRequest}" />
+
+<c:if test="${not empty webMasterMessage and isCmsRequest}">
+  <p style="color: red"><fmt:message key="${webMasterMessage}" /></p>
+</c:if>
+
+<c:if test="${empty webMasterMessage}">
+
+  <div class="panel panel-default">
+    <c:if test="${(pageable ne null)}">
+      <div class="panel-heading">
+        <h3 class="panel-title"><fmt:message key="more.by"/> ${author.fullName}</h3>
+      </div>
+      <c:choose>
+        <c:when test="${pageable.total gt 0}">
+          <div class="panel-body">
+            <c:forEach var="item" items="${pageable.items}" varStatus="status">
+              <hst:link var="link" hippobean="${item}"/>
+              <p><a href="${link}"><c:out value="${item.title}"/></a></p>
+            </c:forEach>
+          </div>
+        </c:when>
+        <c:otherwise>
+          <div class="panel-body">
+            <p><fmt:message key="no.other.blogs"/> </p>
+          </div>
+        </c:otherwise>
+      </c:choose>
+    </c:if>
+  </div>
+
+</c:if>
