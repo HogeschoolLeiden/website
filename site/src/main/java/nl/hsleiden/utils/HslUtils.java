@@ -1,6 +1,10 @@
 package nl.hsleiden.utils;
 
+import java.util.Calendar;
+import java.util.Date;
+
 import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.time.DateUtils;
 import org.hippoecm.hst.configuration.hosting.Mount;
 import org.hippoecm.hst.content.beans.ObjectBeanManagerException;
 import org.hippoecm.hst.content.beans.manager.ObjectBeanManager;
@@ -22,6 +26,14 @@ public class HslUtils {
         super();
     }
 
+    public static Date getEndOfDay(Date date) {
+        return DateUtils.addMilliseconds(DateUtils.ceiling(date, Calendar.DATE), -1);
+    }
+
+    public static Date getStartOfDay(Date date) {
+        return DateUtils.truncate(date, Calendar.DATE);
+    }
+    
 
     public static String getContextPath(HstRequest request) {
         String contextPath = request.getRequestContext().getVirtualHost().getVirtualHosts().getDefaultContextPath();

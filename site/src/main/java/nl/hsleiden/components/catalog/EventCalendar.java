@@ -115,9 +115,17 @@ public class EventCalendar extends AjaxEnabledComponent {
         HstRequestContext requestContext = request.getRequestContext();
         HstLinkCreator linkCreator = requestContext.getHstLinkCreator();
         for (HippoBeanIterator hippoBeans = queryResult.getHippoBeans(); hippoBeans.hasNext();) {
+            
             EventPage event = (EventPage) hippoBeans.nextHippoBean();
-            HstLink link = linkCreator.create(event, requestContext);
-            result.add(new Event(event.getTitle(), link.toUrlForm(requestContext, false), format.format(event
+            
+            //TODO: this should be configurable
+            HippoBean facetOverviewBean = BeanUtils.getBean("pages/actueel/evenementen/index", request);
+            HstLink link = linkCreator.create(facetOverviewBean, requestContext);
+            
+            String facetLink = link.toUrlForm(requestContext, false);
+            facetLink = facetLink + "?qd="+ format.format(event.getEventDate().getTime());
+            
+            result.add(new Event(event.getTitle(), facetLink, format.format(event
                     .getEventDate().getTime())));
         }
         return result;
