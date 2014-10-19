@@ -4,17 +4,22 @@ import hslbeans.OverviewPage;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 import nl.hsleiden.utils.Constants.WidgetConstants;
+import nl.hsleiden.utils.FacetsUtils;
 import nl.hsleiden.utils.HslUtils;
 
 import org.apache.commons.lang3.StringUtils;
 import org.hippoecm.hst.content.beans.query.HstQuery;
+import org.hippoecm.hst.content.beans.query.HstQueryResult;
 import org.hippoecm.hst.content.beans.query.exceptions.FilterException;
 import org.hippoecm.hst.content.beans.query.exceptions.QueryException;
 import org.hippoecm.hst.content.beans.query.filter.Filter;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
+import org.hippoecm.hst.content.beans.standard.HippoBeanIterator;
 import org.hippoecm.hst.content.beans.standard.HippoFacetNavigationBean;
 import org.hippoecm.hst.content.beans.standard.HippoResultSetBean;
 import org.hippoecm.hst.core.component.HstComponentException;
@@ -65,6 +70,23 @@ public class FacetedOverview extends MonolithicFacetedOverview {
                 if (parametersInfo.getShowPaginator()) {
                     request.setAttribute(Constants.AttributesConstants.PAGINATOR, paginatorWidget);
                 }
+                
+                /**
+                 * !! Dirty Work around !!
+                 * 
+                 * for some yet unknown reason applying a string/hst query to the facet bean
+                 * produces the right facet items but gives wrong items in the result set.
+                 * 
+                 * Put correct items on request by executing hstQuery (generic overview style, with
+                 * configurations coming from facet configurations) 
+                 * */
+                
+                if(getPublicRequestParameter(request, "q")!=null || 
+                        getPublicRequestParameter(request, "qd")!=null){                    
+                    addItemsAndPaginatorToModel(request, model);
+                }
+                
+            //show message in case supplied query does not produce any results
             } else {
                 request.setAttribute(WidgetConstants.FRONT_END_MESSAGE, "facet.search.noresults");
             }
@@ -72,7 +94,32 @@ public class FacetedOverview extends MonolithicFacetedOverview {
             throw new HstComponentException("content Bean is not of the type HippoFactNavigation");
         }
     }
+    
+    private void addItemsAndPaginatorToModel(HstRequest request, Map<String, Object> model) {
+        try {
+            HstQuery query = getHstQuery(request);
+            if (query != null) {
+                HstQueryResult queryResult = query.execute();
+                model.put(Constants.AttributesConstants.ITEMS, getItems(queryResult));
 
+                PaginatorWidget paginatorWidget = new PaginatorWidget(queryResult.getTotalSize(),
+                        OverviewUtils.getPageNumber(request), OverviewUtils.getPageSize(request, getComponentParametersInfo(request)));
+
+                request.setAttribute(Constants.AttributesConstants.PAGINATOR, paginatorWidget);
+            } 
+        } catch (QueryException e) {
+            throw new HstComponentException(e.getMessage(), e);
+        }
+    }
+    
+    private List<HippoBean> getItems(HstQueryResult queryResult) {
+        List<HippoBean> items = new ArrayList<HippoBean>();
+        for (HippoBeanIterator hippoBeans = queryResult.getHippoBeans(); hippoBeans.hasNext();) {
+            items.add(hippoBeans.nextHippoBean());
+        }
+        return items;
+    }
+    
     @Override
     protected HstQuery getHstQuery(HstRequest request) throws QueryException {
 
@@ -85,8 +132,12 @@ public class FacetedOverview extends MonolithicFacetedOverview {
             HippoBean scope = BeanUtils.getBean(parametersInfo.getContentBeanPath(), request);
 
             if (scope instanceof HippoFacetNavigationBean) {
-                scope = scope.getParentBean();
-                query = request.getRequestContext().getQueryManager().createQuery(scope);
+                
+                String doctype = FacetsUtils.getFacetDocumentType((HippoFacetNavigationBean) scope);
+                HippoBean docbase = FacetsUtils.getFacetScope((HippoFacetNavigationBean) scope);
+   
+                query = request.getRequestContext().getQueryManager().createQuery(docbase, doctype);
+                
                 Filter globalFilter = query.createFilter();
 
                 String dayStringQuery = getPublicRequestParameter(request, "qd");
@@ -96,7 +147,7 @@ public class FacetedOverview extends MonolithicFacetedOverview {
                     applyDateFilter(globalFilter, dayStringQuery);
                     query.setFilter(globalFilter);
                 } else {
-                    // excludeHighLightedItem(contentBean, globalFilter);
+//                    excludeHighLightedItem(contentBean, globalFilter);
                     applyUserQuery(request, globalFilter);
                     query.setFilter(globalFilter);
                 }
@@ -130,14 +181,13 @@ public class FacetedOverview extends MonolithicFacetedOverview {
         }
     }
 
-    // disable exclusion of highlighted for now
-    //
-    // private void excludeHighLightedItem(HippoBean contentBean, Filter
-    // globalFilter) throws FilterException {
-    // if (((OverviewPage) contentBean).getHighLightedItem() != null) {
-    // String highlightedUuid = ((OverviewPage)
-    // contentBean).getHighLightedItem().getIdentifier();
-    // globalFilter.addNotEqualTo("jcr:uuid", highlightedUuid);
-    // }
-    // }
+    /** disable exclusion of highlighted for now
+     *
+     *   private void excludeHighLightedItem(HippoBean contentBean, Filter globalFilter) throws FilterException {
+     *      if (((OverviewPage) contentBean).getHighLightedItem() != null) {
+     *         String highlightedUuid = ((OverviewPage) contentBean).getHighLightedItem().getIdentifier();
+     *        globalFilter.addNotEqualTo("jcr:uuid", highlightedUuid);
+     *      }
+     *   }
+     */
 }

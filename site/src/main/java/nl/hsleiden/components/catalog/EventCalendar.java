@@ -14,9 +14,11 @@ import java.util.Map;
 import javax.jcr.RepositoryException;
 
 import hslbeans.EventPage;
+import nl.hsleiden.beans.ArticlePageBean;
 import nl.hsleiden.beans.mixin.EventsCalendarMixin;
 import nl.hsleiden.componentsinfo.EventCalendarInfo;
 import nl.hsleiden.utils.Constants;
+import nl.hsleiden.utils.Constants.BeanPaths;
 import nl.hsleiden.utils.Constants.FieldName;
 import nl.hsleiden.utils.Constants.WidgetConstants;
 import nl.hsleiden.utils.HslUtils;
@@ -43,7 +45,6 @@ import com.tdclighthouse.prototype.utils.BeanUtils;
 @ParametersInfo(type = EventCalendarInfo.class)
 public class EventCalendar extends AjaxEnabledComponent {
 
-    
     private static final String DATE_FORMATE_PATTERN = "yyyy-MM-dd";
 
     @Override
@@ -118,8 +119,7 @@ public class EventCalendar extends AjaxEnabledComponent {
             
             EventPage event = (EventPage) hippoBeans.nextHippoBean();
             
-            //TODO: this should be configurable
-            HippoBean facetOverviewBean = BeanUtils.getBean("pages/actueel/evenementen/index", request);
+            HippoBean facetOverviewBean = BeanUtils.getBean(BeanPaths.EVENTS_INDEX, request);
             HstLink link = linkCreator.create(facetOverviewBean, requestContext);
             
             String facetLink = link.toUrlForm(requestContext, false);
@@ -139,7 +139,7 @@ public class EventCalendar extends AjaxEnabledComponent {
     private void addTaggingFilter(Filter baseFilter, HstQuery query, HstRequest request, EventCalendarInfo info)
             throws FilterException {
         HippoBean contentBean = request.getRequestContext().getContentBean();
-        if (contentBean instanceof ArticlePage) {
+        if (contentBean instanceof ArticlePageBean) {
             if (info.getOverFilter()) {
                 Filter ff = HslUtils.addFilterOnField(query, ((ArticlePage) contentBean).getSubjecttags(),
                         "hsl:subjecttags");
