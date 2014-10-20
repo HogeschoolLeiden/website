@@ -101,7 +101,7 @@ public class FacetedOverview extends MonolithicFacetedOverview {
             if (query != null) {
                 HstQueryResult queryResult = query.execute();
                 model.put(Constants.AttributesConstants.ITEMS, getItems(queryResult));
-
+                
                 PaginatorWidget paginatorWidget = new PaginatorWidget(queryResult.getTotalSize(),
                         OverviewUtils.getPageNumber(request), OverviewUtils.getPageSize(request, getComponentParametersInfo(request)));
 
@@ -130,12 +130,12 @@ public class FacetedOverview extends MonolithicFacetedOverview {
 
             FacetedOverviewPageInfo parametersInfo = getComponentParametersInfo(request);
             HippoBean scope = BeanUtils.getBean(parametersInfo.getContentBeanPath(), request);
-
+            
             if (scope instanceof HippoFacetNavigationBean) {
                 
                 String doctype = FacetsUtils.getFacetDocumentType((HippoFacetNavigationBean) scope);
                 HippoBean docbase = FacetsUtils.getFacetScope((HippoFacetNavigationBean) scope);
-   
+                
                 query = request.getRequestContext().getQueryManager().createQuery(docbase, doctype);
                 
                 Filter globalFilter = query.createFilter();
@@ -147,7 +147,10 @@ public class FacetedOverview extends MonolithicFacetedOverview {
                     applyDateFilter(globalFilter, dayStringQuery);
                     query.setFilter(globalFilter);
                 } else {
-//                    excludeHighLightedItem(contentBean, globalFilter);
+                    /** 
+                     * disable exclusion of highlighted item (for now)
+                     * excludeHighLightedItem(contentBean, globalFilter); 
+                     * */
                     applyUserQuery(request, globalFilter);
                     query.setFilter(globalFilter);
                 }

@@ -26,13 +26,15 @@ import com.tdclighthouse.prototype.utils.BeanUtils;
 @ParametersInfo(type = FacebookPostsInfo.class)
 public class FacebookPosts extends AjaxEnabledComponent {
 
+    private static final String SCRIPT_CLOSE = "</script>";
+
     private static final String ENTRY_POINT = "<div id=\"fb-root\"></div> "
             + "<script>"
             + "(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; "
             + "if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; "
             + "js.src = \"//connect.facebook.net/en_US/all.js#xfbml=1\"; "
             + "fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));"
-            + "</script>";
+            + SCRIPT_CLOSE;
     
     private static final Logger LOG = LoggerFactory.getLogger(FacebookPosts.class);
 
@@ -71,8 +73,8 @@ public class FacebookPosts extends AjaxEnabledComponent {
 
     private void addItem(HstRequest request, String post, List<String> items) {
         String result = "";
-        if(post!=null && post.startsWith("<div id=\"fb-root\">") && post.contains("</script>")){
-            result = post.substring(post.indexOf("</script>")+10);
+        if(post!=null && post.startsWith("<div id=\"fb-root\">") && post.contains(SCRIPT_CLOSE)){
+            result = post.substring(post.indexOf(SCRIPT_CLOSE)+10);
             items.add(result);
         }
     }

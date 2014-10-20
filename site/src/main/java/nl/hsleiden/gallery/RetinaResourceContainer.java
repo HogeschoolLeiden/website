@@ -110,14 +110,15 @@ public class RetinaResourceContainer extends AbstractResourceContainer {
     }
 
     private String getRetinaPath(String actualPath, String[] elems, String mapTo) {
+        String result = actualPath;
         if (mapTo != null) {
-            actualPath = actualPath.substring(1).substring(elems[0].length());
+            result = result.substring(1).substring(elems[0].length());
         }
 
-        if (actualPath.contains("@2x.")) {
-            actualPath = actualPath.replace("@2x.", ".");
+        if (result.contains("@2x.")) {
+            result = result.replace("@2x.", ".");
         }
-        return actualPath;
+        return result;
     }
 
     private String getMapTo(String actualPath, String[] elems) {

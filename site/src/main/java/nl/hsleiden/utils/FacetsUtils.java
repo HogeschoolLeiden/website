@@ -29,12 +29,14 @@ public class FacetsUtils {
         if(facetProp instanceof String[]){
             String[] facetFilterProperties = (String[])facetProp;
             for (String filterProperty : facetFilterProperties) {
-                
-                result = getJcrPrimaryType(result, filterProperty);
+                result = getJcrPrimaryType(filterProperty);
+                if(!result.isEmpty()){
+                    break;
+                }
             }
         }else if(facetProp instanceof String){
             String filterProperty = (String) facetProp;
-            result = getJcrPrimaryType(result, filterProperty);
+            result = getJcrPrimaryType(filterProperty);
         }
         
         return result;
@@ -58,8 +60,9 @@ public class FacetsUtils {
         return result;
     }
 
-    private static String getJcrPrimaryType(String result, String filterProperty) {
-        filterProperty = filterProperty.replaceAll(" ", "");
+    private static String getJcrPrimaryType(String property) {
+        String result="";
+        String filterProperty = property.replaceAll(" ", "");
         if(filterProperty.startsWith(JCR_PRIMARY_TYPE_EQ)){
             result = filterProperty.substring(filterProperty.indexOf(JCR_PRIMARY_TYPE_EQ) + JCR_PRIMARY_TYPE_EQ.length());
         }

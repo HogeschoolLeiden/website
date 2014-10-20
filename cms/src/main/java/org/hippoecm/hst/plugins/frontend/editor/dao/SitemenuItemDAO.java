@@ -39,7 +39,7 @@ public class SitemenuItemDAO extends EditorDAO<SitemenuItem> {
     private static final long serialVersionUID = 1L;
 
 
-    static final Logger log = LoggerFactory.getLogger(SitemenuItemDAO.class);
+    private static final Logger LOG = LoggerFactory.getLogger(SitemenuItemDAO.class);
 
     /** SITEMAP_PROPERTY represents the jcr propertyname of the referenced sitemap item. */
     private static final String SITEMAP_PROPERTY = "hst:referencesitemapitem";
@@ -75,7 +75,7 @@ public class SitemenuItemDAO extends EditorDAO<SitemenuItem> {
             String nodeName = NodeNameCodec.decode(model.getNode().getName());
             item.setName(nodeName);
         } catch (RepositoryException e) {
-            log.error("Error setting matcher value", e);
+            LOG.error("Error setting matcher value", e);
         }
 
         //set referenced sitemap value
@@ -87,7 +87,7 @@ public class SitemenuItemDAO extends EditorDAO<SitemenuItem> {
             item.setSitemapReference(ref);
         }
         if (JcrUtilities.hasProperty(model, EXTERNAL_URL_PROPERTY)) {
-            item.setExternalLink((JcrUtilities.getProperty(model, EXTERNAL_URL_PROPERTY)));
+            item.setExternalLink(JcrUtilities.getProperty(model, EXTERNAL_URL_PROPERTY));
         }
 
         if (JcrUtilities.hasProperty(model, HST_REPOS_BASED)) {
@@ -104,7 +104,7 @@ public class SitemenuItemDAO extends EditorDAO<SitemenuItem> {
 
         if (JcrUtilities.hasProperty(model, HST_PARAMETERNAMES)) {
             List<String> names = JcrUtilities.getMultiValueProperty(model, HST_PARAMETERNAMES);
-            if (names != null && names.size() > 0) {
+            if (names != null && !names.isEmpty()) {
                 String[] values = new String[names.size()];
                 if (JcrUtilities.hasProperty(model, HST_PARAMETERVALUES)) {
                     values = JcrUtilities.getMultiValueProperty(model, HST_PARAMETERVALUES).toArray(values);
@@ -132,7 +132,7 @@ public class SitemenuItemDAO extends EditorDAO<SitemenuItem> {
                 item.setModel(JcrUtilities.rename(model, newName));
             }
         } catch (RepositoryException e) {
-            log.warn("Exception occurred while trying to get name from model: ", e.getMessage());
+            LOG.warn("Exception occurred while trying to get name from model: ", e);
         }
 
         //save sitemapReference
