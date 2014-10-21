@@ -14,29 +14,16 @@ public class FacebookPostsCompoundMixinBean extends FacebookPostsCompoundMixin i
     }
 
     @Override
-    public String getFistPost() {
-        String result = null;
-        if (getPosts().length > 0) {
-           result = getPosts()[0];
-        }
-        return result;
+    public String getAccount() {
+        //FIXME hard coded value needs to be replaced
+        return "HSLeidenNL";
     }
 
     @Override
-    public String getSecondPost() {
-        String result = null;
-        if (getPosts().length > 1) {
-            result = getPosts()[1];
-         }
-        return result;
+    public int getLimit() {
+        //FIXME hard coded value needs to be replaced
+        return 3;
     }
 
-    @Override
-    public String getThirdPost() {
-        String result = null;
-        if (getPosts().length > 2) {
-            result = getPosts()[2];
-        }
-        return result;
-    }
+    
 }

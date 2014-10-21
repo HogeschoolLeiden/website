@@ -14,22 +14,16 @@
 <hst:defineObjects />
 <c:set var="isCmsRequest" value="${hstRequest.requestContext.cmsRequest}" />
 
-<c:if test="${(empty model.items or fn:length(model.items) eq 0) and not empty webMasterMessage and isCmsRequest}">
+<c:if test="${empty model.info.account and not empty webMasterMessage and isCmsRequest}">
 	<p class="error-message"><fmt:message key="${webMasterMessage}" /></p>
 </c:if>
-
-<c:if test="${not empty model.items and not empty(model.entrypoint) and fn:length(model.items)>0}">
+${model}
+<c:if test="${model.info.account}">
 
   <section class="catalog facebook posts">
+    ${model.info.account}
+        
     
-    ${model.entrypoint}    
-    <c:forEach var="item" items="${model.items}" varStatus="zebra">
-      <c:if test="${not empty item }">
-        
-        ${item}
-        
-      </c:if>
-    </c:forEach>
     
   </section>
   <div class="clearfix"></div>
