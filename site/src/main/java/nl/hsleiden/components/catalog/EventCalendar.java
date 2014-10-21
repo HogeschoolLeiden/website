@@ -14,9 +14,11 @@ import java.util.Map;
 import javax.jcr.RepositoryException;
 
 import hslbeans.EventPage;
+import nl.hsleiden.beans.ArticlePageBean;
 import nl.hsleiden.beans.mixin.EventsCalendarMixin;
 import nl.hsleiden.componentsinfo.EventCalendarInfo;
 import nl.hsleiden.utils.Constants;
+import nl.hsleiden.utils.Constants.BeanPaths;
 import nl.hsleiden.utils.Constants.FieldName;
 import nl.hsleiden.utils.Constants.WidgetConstants;
 import nl.hsleiden.utils.HslUtils;
@@ -43,7 +45,6 @@ import com.tdclighthouse.prototype.utils.BeanUtils;
 @ParametersInfo(type = EventCalendarInfo.class)
 public class EventCalendar extends AjaxEnabledComponent {
 
-    
     private static final String DATE_FORMATE_PATTERN = "yyyy-MM-dd";
 
     @Override
@@ -115,9 +116,16 @@ public class EventCalendar extends AjaxEnabledComponent {
         HstRequestContext requestContext = request.getRequestContext();
         HstLinkCreator linkCreator = requestContext.getHstLinkCreator();
         for (HippoBeanIterator hippoBeans = queryResult.getHippoBeans(); hippoBeans.hasNext();) {
+            
             EventPage event = (EventPage) hippoBeans.nextHippoBean();
-            HstLink link = linkCreator.create(event, requestContext);
-            result.add(new Event(event.getTitle(), link.toUrlForm(requestContext, false), format.format(event
+            
+            HippoBean facetOverviewBean = BeanUtils.getBean(BeanPaths.EVENTS_INDEX, request);
+            HstLink link = linkCreator.create(facetOverviewBean, requestContext);
+            
+            String facetLink = link.toUrlForm(requestContext, false);
+            facetLink = facetLink + "?qd="+ format.format(event.getEventDate().getTime());
+            
+            result.add(new Event(event.getTitle(), facetLink, format.format(event
                     .getEventDate().getTime())));
         }
         return result;
@@ -131,7 +139,7 @@ public class EventCalendar extends AjaxEnabledComponent {
     private void addTaggingFilter(Filter baseFilter, HstQuery query, HstRequest request, EventCalendarInfo info)
             throws FilterException {
         HippoBean contentBean = request.getRequestContext().getContentBean();
-        if (contentBean instanceof ArticlePage) {
+        if (contentBean instanceof ArticlePageBean) {
             if (info.getOverFilter()) {
                 Filter ff = HslUtils.addFilterOnField(query, ((ArticlePage) contentBean).getSubjecttags(),
                         "hsl:subjecttags");

@@ -26,10 +26,6 @@
           <hst:link var="img" hippobean="${document.headerImage.detailBackgroundSmall}"/>         
         </c:otherwise>
        </c:choose>
-       
-        <%-- 
-         <hst:link var="img" hippobean="${document.headerImage.allWidthImage}"/> 
-        --%>
         
         <c:if test="${not empty img }">
             <img src="${img}" title="<c:out value="${document.headerImage.alt}"/>"

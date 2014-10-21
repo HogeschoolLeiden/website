@@ -125,6 +125,10 @@
   <link rel="stylesheet" href="<hst:link path="/js/formcheck/theme/blue/formcheck.css"/>" type="text/css" />
 </hst:headContribution>
 
+<hst:headContribution keyHint="formsCss" category="formsCssHere">
+  <link rel="stylesheet" href="<hst:link path="/css/eforms.css"/>" type="text/css" />
+</hst:headContribution>
+
 <hst:headContribution keyHint="jqueryUICss">
   <link rel="stylesheet" href="<hst:link path="/css/jquery-ui-1.10.2.custom.min.css"/>" type="text/css" />
 </hst:headContribution>

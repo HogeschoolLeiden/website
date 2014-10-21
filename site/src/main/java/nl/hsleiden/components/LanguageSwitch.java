@@ -26,27 +26,27 @@ public class LanguageSwitch extends WebDocumentDetail {
 
     private static final String CONTENT_BEAN_AVAILABLE_TRANSLATIONS = "contentBeanAvailableTranslations";
 
-    static final Logger LOG = LoggerFactory.getLogger(LanguageSwitch.class);
+    private static final Logger LOG = LoggerFactory.getLogger(LanguageSwitch.class);
 
     public void doBeforeRender(HstRequest request, HstResponse response) {
         try {
             HippoBean bean = request.getRequestContext().getContentBean();
-            
-            if(bean!=null){                
+
+            if (bean != null) {
                 HippoAvailableTranslationsBean<HippoBean> translations = bean.getAvailableTranslations();
-                
+
                 List<Translation> result = getAvailbaleTranslations(request, translations);
-                
-                if(result.isEmpty()){                
+
+                if (result.isEmpty()) {
                     request.setAttribute(Attributes.NO_TRANSLATION, true);
-                }else{
+                } else {
                     request.setAttribute(Attributes.TRANSLATIONS, result);
-                    request.setAttribute(Attributes.LABELS, BeanUtils.getLabels(request, getComponentParametersInfo(request)));
+                    request.setAttribute(Attributes.LABELS,
+                            BeanUtils.getLabels(request, getComponentParametersInfo(request)));
                     request.setAttribute(Attributes.CURRENT_LANGUAGE, request.getLocale().getLanguage());
                 }
             }
-            
-            
+
         } catch (ObjectBeanManagerException e) {
             throw new HstComponentException(e);
         }
@@ -54,12 +54,12 @@ public class LanguageSwitch extends WebDocumentDetail {
 
     private List<Translation> getAvailbaleTranslations(HstRequest request,
             HippoAvailableTranslationsBean<HippoBean> translations) throws ObjectBeanManagerException {
-        
+
         List<Translation> result = new ArrayList<Translation>();
-        if(translations.getAvailableLocales().size()>1){                
+        if (translations.getAvailableLocales().size() > 1) {
             for (String baseLocale : translations.getAvailableLocales()) {
                 Translation tr = createTranslation(request, baseLocale);
-                if(tr!=null){                    
+                if (tr != null) {
                     result.add(tr);
                 }
             }
@@ -101,7 +101,11 @@ public class LanguageSwitch extends WebDocumentDetail {
         HstLink link = null;
         HstRequestContext requestContext = request.getRequestContext();
         if (translationBean != null) {
+            LOG.debug("translationBean: " + translationBean.getPath());
             link = requestContext.getHstLinkCreator().create(translationBean.getNode(), requestContext);
+            if (link != null) {
+                LOG.debug("returning link: " + link.toUrlForm(requestContext, true));
+            }
         }
         return link;
     }

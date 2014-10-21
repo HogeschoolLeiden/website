@@ -65,6 +65,8 @@
   <!-- SWIPER SLIDER -->
   <link rel="stylesheet" href="<hst:link path="/css/kees/idangerous.swiper.css"/>">
   <!-- // SWIPER SLIDER -->
+  
+  <hst:headContributions categoryIncludes="formsCssHere" xhtml="true" />
     
   <link rel="stylesheet" href="<hst:link path="/css/kees/ekko-lightbox.min.css"/>" >
   <link rel="stylesheet" href="<hst:link path="/css/kees/style.css"/>" >
@@ -80,7 +82,7 @@
   <script src="<hst:link path="/js/jquery.min.js" />" type="text/javascript"></script>
   <script src="<hst:link path="/js/jquery.browser.min.js" />" type="text/javascript"></script>
  
-  <hst:headContributions categoryExcludes="scripts" xhtml="true" />
+  <hst:headContributions categoryExcludes="scripts,formsCssHere" xhtml="true" />
   
   <c:choose>
     <c:when test="${tag:isSubclassOfWebPage(document) and not empty document.browserTitle}">
@@ -109,7 +111,7 @@
     <hst:include ref="footer" />
 
     <hst:include ref="help" />
-	
+	 
     <hst:headContributions categoryIncludes="scripts" xhtml="true" />
 		
 	<c:if test="${not composermode}">

@@ -207,6 +207,21 @@ $.fn.fullCalendar = function(options) {
 	return res;
 };
 
+function setHighlightClasses(events) {
+	var i;
+	var event;
+	for (i=0; i<events.length; i++) {
+		event = events[i];
+		setSingleHighlightClass(event.start, event.link)
+	}
+}
+
+function setSingleHighlightClass(thisdate, url) {
+
+	var addLinkTD = jQuery("[data-date="+thisdate+"]")[0];
+    addLinkTD.className = addLinkTD.className + " fc-highlighted";
+    addLinkTD.innerHTML = "<a href='"+url+"'>" + addLinkTD.innerHTML + "</a>"
+}
 
 // function for adding/overriding defaults
 function setDefaults(d) {
@@ -1347,6 +1362,9 @@ function EventManager(options) { // assumed to be a calendar
 			if (fetchID == currentFetchID) {
 
 				if (events) {
+					
+					setHighlightClasses(events);
+
 					for (i=0; i<events.length; i++) {
 						event = events[i];
 

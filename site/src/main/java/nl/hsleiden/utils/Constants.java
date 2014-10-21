@@ -13,6 +13,13 @@ public class Constants {
     private Constants() {
     }
 
+    public static class BeanPaths {
+        public static final String EVENTS_INDEX = "pages/actueel/evenementen/index";
+
+        private BeanPaths() {
+        }
+    }
+    
     public static class Attributes extends AttributesConstants {
         public static final String LOGO = "logo";
         public static final String HEADER_NAME = "headerName";
@@ -21,7 +28,7 @@ public class Constants {
         public static final String TRANSLATIONS = "translations";
         public static final String NO_TRANSLATION = "noTranslation";
         public static final String CURRENT_LANGUAGE = "currentLanguage";
-
+       
         private Attributes() {
         }
 

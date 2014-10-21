@@ -27,10 +27,10 @@ public interface RelatedItemsInfo extends ContentBeanPathInfo {
     @Parameter(name = Constants.WidgetConstants.FIELD_USER_MIXIN, defaultValue = "off", displayName=WidgetConstants.FIELD_USER_MIXIN_MESSAGE)
     public Boolean getUseMixin();
 
-    @Parameter(name = Constants.WidgetConstants.WIDGET_TITLE, defaultValue = Constants.WidgetConstants.WIDGET_TITLE_DEFAULT)
+    @Parameter(name = Constants.WidgetConstants.WIDGET_TITLE, defaultValue = "")
     public String getWidgetTitle();
 
-    @Parameter(name = Constants.WidgetConstants.SHOW_OVERVIEW, defaultValue = "on")
+    @Parameter(name = Constants.WidgetConstants.SHOW_OVERVIEW, defaultValue = "off")
     public Boolean getShowOverview();
 
     @Parameter(name = Constants.WidgetConstants.OVERVIEW_BEAN_PATH, defaultValue = "")
