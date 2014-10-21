@@ -23,11 +23,22 @@
   
   <c:forEach var="item" items="${model.items}" varStatus="zebra">
   
+    <c:set var="noImgNoShare">
+      <c:choose>
+        <c:when test="${not (fn:length(item.accounts)>0) and (empty item.image)}">
+          <c:out value="pull-left"/>
+        </c:when>
+        <c:otherwise>
+          <c:out value="pull-right"/>
+        </c:otherwise>
+      </c:choose>
+    </c:set>
+  
+  
     <section class="blok colorbg lichtpaars contacts">
       
-      <%-- should it be part of the contact item or common 
-            through all the contacts added from the same widget --%>
-      <h1>
+      
+      <h1 ${noImgNoShare eq 'pull-left'? "class='pull-left'": '' }>
         <span class="col-md-8 col-xs-8 col-md-offset-4 col-xs-offset-4">
         <c:out value="${model.info.widgetTitle}" escapeXml="true" />
         </span>
@@ -35,7 +46,7 @@
     
       <c:if test="${not empty item }">
         <div itemscope itemtype="http://data-vocabulary.org/Person" class="contact clearfix">
-          <ul class="col-md-8 col-xs-8 pull-right">
+          <ul class="col-md-8 col-xs-8 ${noImgNoShare}">
             <li><h2><span itemprop="name">${item.name }</span></h2></li>
             <li><h2><span itemprop="role">${item.function }</span></h2></li>            
             <c:if test="${not empty item.mail }">
@@ -49,6 +60,8 @@
             <li>${item.phone}</li>
           </ul>
           
+          
+          <c:if test="${(fn:length(item.accounts)>0) or (not empty item.image)}">
           <figure class="col-md-4 col-xs-4 pull-left">
             <!-- img size 60 x 60 -->
             <hst:link var="image" hippobean="${item.image.listImageSmall }" />
@@ -59,6 +72,7 @@
             </c:if>
             
           </figure>
+          </c:if>
                     
         </div>
       </c:if>    
