@@ -7,16 +7,13 @@ import org.hippoecm.hst.core.parameters.Parameter;
 
 public interface FacebookPostsInfo {
 
-    @Parameter(name = Constants.WidgetConstants.FIELD_USER_MIXIN, defaultValue = "false", displayName=WidgetConstants.FIELD_USER_MIXIN_MESSAGE)
+    @Parameter(name = Constants.WidgetConstants.FIELD_USER_MIXIN, defaultValue = "false", displayName = WidgetConstants.FIELD_USER_MIXIN_MESSAGE)
     public Boolean getUseMixin();
-    
-    @Parameter(name = "firstPost", displayName = "Eerste Post", defaultValue = "", description="After copy-pasting the post you want to embed, adjust its width according to the part of the page where the widget will be displayed. Values should be inside this range: 350 - 750. Smaller values will be converted to 350, bigger values will be converted to 750.")
-    public String getFistPost();
-    
-    @Parameter(name = "secondPost", displayName = "Tweede Post", defaultValue = "", description="After copy-pasting the post you want to embed, adjust its width according to the part of the page where the widget will be displayed. Values should be inside this range: 350 - 750. Smaller values will be converted to 350, bigger values will be converted to 750.")
-    public String getSecondPost();
-    
-    @Parameter(name = "thirdPost", displayName = "Deerde Post", defaultValue = "", description="After copy-pasting the post you want to embed, adjust its width according to the part of the page where the widget will be displayed. Values should be inside this range: 350 - 750. Smaller values will be converted to 350, bigger values will be converted to 750.")
-    public String getThirdPost();
+
+    @Parameter(name = "account", displayName = "Account", defaultValue = "HSLeidenNL", description = "Hogeschool's facebook account.")
+    public String getAccount();
+
+    @Parameter(name = "limit", displayName = "Number of items", defaultValue = "3", description = "Number of items to be displays.")
+    public int getLimit();
 
 }
