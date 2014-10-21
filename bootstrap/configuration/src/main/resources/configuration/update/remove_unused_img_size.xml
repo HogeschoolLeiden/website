@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="Remove Unused img size">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>hipposys:updaterinfo</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:batchsize" sv:type="Long">
+    <sv:value>10</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:dryrun" sv:type="Boolean">
+    <sv:value>false</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:query" sv:type="String">
+    <sv:value>content/gallery//element(*, hsl:ImageSet)</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:script" sv:type="String">
+    <sv:value>package org.hippoecm.frontend.plugins.cms.dev.updater&#13;
+&#13;
+import org.onehippo.repository.update.BaseNodeUpdateVisitor&#13;
+import javax.jcr.Node&#13;
+&#13;
+class UpdaterTemplate extends BaseNodeUpdateVisitor {&#13;
+&#13;
+  &#13;
+  boolean doUpdate(Node node) {&#13;
+    checkoutIfCheckedIn(node);&#13;
+    if(node.hasNode("hsl:allWidthImage2x")){&#13;
+      node.getNode("hsl:allWidthImage2x").remove();&#13;
+      log.debug "deleted allWidthImage2x from image: ${node.path}"&#13;
+    }&#13;
+    &#13;
+    if(node.hasNode("hsl:allWidthImage")){&#13;
+      node.getNode("hsl:allWidthImage").remove();&#13;
+      log.debug "deleted allwidthImage from image: ${node.path}"&#13;
+    }&#13;
+    &#13;
+    &#13;
+    return false&#13;
+  }&#13;
+  &#13;
+  void checkoutIfCheckedIn(Node node) throws RepositoryException {&#13;
+    if(!node.isCheckedOut()){&#13;
+      node.checkout();&#13;
+    }&#13;
+         &#13;
+  }&#13;
+&#13;
+  boolean undoUpdate(Node node) {&#13;
+    throw new UnsupportedOperationException('Updater does not implement undoUpdate method')&#13;
+  }&#13;
+&#13;
+}</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:throttle" sv:type="Long">
+    <sv:value>10</sv:value>
+  </sv:property>
+</sv:node>
