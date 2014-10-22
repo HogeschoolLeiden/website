@@ -82,7 +82,7 @@ public class TwitterFeed extends AjaxEnabledComponent {
             try {
                 queryResult = twitter.search(query);
                 List<Status> statuses = queryResult.getTweets();
-                populateTweetsList(result, statuses);
+                populateTweetsList(result, statuses, info);
                 
             } catch (TwitterException e) {
                 LOG.error("Error while retrieving Tweets.", e);
@@ -93,11 +93,11 @@ public class TwitterFeed extends AjaxEnabledComponent {
         return result;
     }
 
-    private void populateTweetsList(List<TweetStatus> result, List<Status> statuses) {
+    private void populateTweetsList(List<TweetStatus> result, List<Status> statuses, TwitterFeedInfo info) {
         for (Status status : statuses) {
             TweetStatus ts = new TweetStatus();
             ts.setStatus(status);
-            ts.setText(TwitterUtils.convertMessage(status.getText(), status));
+            ts.setText(TwitterUtils.convertMessage(status.getText(), status, info.getShowImages()));
             result.add(ts);
         }
     }

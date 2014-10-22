@@ -109,6 +109,29 @@
           <sv:value>String</sv:value>
         </sv:property>
       </sv:node>
+      <sv:node sv:name="showImages">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hipposysedit:field</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:mandatory" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:multiple" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:ordered" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:path" sv:type="String">
+          <sv:value>hsl:showImages</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:primary" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:type" sv:type="String">
+          <sv:value>Boolean</sv:value>
+        </sv:property>
+      </sv:node>
     </sv:node>
   </sv:node>
   <sv:node sv:name="hipposysedit:prototypes">
@@ -127,6 +150,9 @@
       </sv:property>
       <sv:property sv:name="hsl:query" sv:type="String">
         <sv:value/>
+      </sv:property>
+      <sv:property sv:name="hsl:showImages" sv:type="Boolean">
+        <sv:value>false</sv:value>
       </sv:property>
     </sv:node>
   </sv:node>
@@ -218,6 +244,31 @@
         </sv:property>
         <sv:property sv:name="field" sv:type="String">
           <sv:value>query</sv:value>
+        </sv:property>
+        <sv:property sv:name="hint" sv:type="String">
+          <sv:value/>
+        </sv:property>
+        <sv:property sv:name="plugin.class" sv:type="String">
+          <sv:value>org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin</sv:value>
+        </sv:property>
+        <sv:property sv:name="wicket.id" sv:type="String">
+          <sv:value>${cluster.id}.field</sv:value>
+        </sv:property>
+        <sv:node sv:name="cluster.options">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>frontend:pluginconfig</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="showImages">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>frontend:plugin</sv:value>
+        </sv:property>
+        <sv:property sv:name="caption" sv:type="String">
+          <sv:value>Afbeeldingen tonen</sv:value>
+        </sv:property>
+        <sv:property sv:name="field" sv:type="String">
+          <sv:value>showImages</sv:value>
         </sv:property>
         <sv:property sv:name="hint" sv:type="String">
           <sv:value/>

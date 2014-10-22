@@ -28,4 +28,9 @@ public class TwitterCompoundMixinBean extends TwitterCompoundMixin implements Tw
     public String getQuery() {
         return getTwitterParameters().getQuery();
     }
+
+    @Override
+    public Boolean getShowImages() {
+        return getTwitterParameters().getShowImages();
+    }
 }

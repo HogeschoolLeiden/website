@@ -9,7 +9,7 @@ import org.hippoecm.hst.core.parameters.Parameter;
 @FieldGroupList({
     @FieldGroup(
             titleKey = "fields.widget",
-            value = { Constants.WidgetConstants.FIELD_USER_MIXIN, "query", "from", "limit" }
+            value = { Constants.WidgetConstants.FIELD_USER_MIXIN, "query", "from", "limit", Constants.WidgetConstants.SHOW_IMAGES }
     )
 })
 public interface TwitterFeedInfo {
@@ -25,5 +25,8 @@ public interface TwitterFeedInfo {
 
     @Parameter(name = "limit", displayName = "Max aantal tweets", defaultValue = "5")
     public int getLimit();
+    
+    @Parameter(name = Constants.WidgetConstants.SHOW_IMAGES, defaultValue = "false")
+    public Boolean getShowImages();
 
 }

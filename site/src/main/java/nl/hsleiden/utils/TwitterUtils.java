@@ -20,7 +20,7 @@ public class TwitterUtils {
     }
 
 
-    public static String convertMessage(String message, EntitySupport entity) {
+    public static String convertMessage(String message, EntitySupport entity, Boolean showImages) {
         
         MessageFormat urlFormatter = new MessageFormat(TWEET_URL);
         MessageFormat hashFormatter = new MessageFormat(TWEET_HASH_URL);
@@ -37,14 +37,16 @@ public class TwitterUtils {
             }
         }
         
-        MediaEntity[] mediaEntities = entity.getMediaEntities();
-        if(mediaEntities!=null){
-            for (MediaEntity mediaEntity : mediaEntities) {
-                if("photo".equals(mediaEntity.getType())){
-                    
-                    String mediaUrl = mediaEntity.getURL();
-                    formattedMessage = formattedMessage.replace(mediaUrl, imgFormatter.format(new Object[]{mediaEntity.getMediaURL(), mediaUrl}));
-                    
+        if(showImages != null && showImages){
+            MediaEntity[] mediaEntities = entity.getMediaEntities();
+            if(mediaEntities!=null){
+                for (MediaEntity mediaEntity : mediaEntities) {
+                    if("photo".equals(mediaEntity.getType())){
+                        
+                        String mediaUrl = mediaEntity.getURL();
+                        formattedMessage = formattedMessage.replace(mediaUrl, imgFormatter.format(new Object[]{mediaEntity.getMediaURL(), mediaUrl}));
+                        
+                    }
                 }
             }
         }
