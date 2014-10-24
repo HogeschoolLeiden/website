@@ -41,13 +41,7 @@
 
                         <h1><c:out value="${carrouselitem.document.title }" /> </h1>
                         <tag:renderDate document="${carrouselitem.document }" dateClass="datum start large" />
-                        <p>
-                          <opw:string-chopper
-                            bean="${carrouselitem.document}"
-                            stringPath="introduction" maxLength="240"
-                            showDots="true">
-                          </opw:string-chopper>
-                        </p>
+                        <p><c:out value="${carrouselitem.document.introduction}"/></p>
 
                       </div>
                     </article>

@@ -20,12 +20,12 @@
         <c:if test="${hst:isReadable(document, 'title') }">
           <h1><c:out value="${document.title}"/></h1>
         </c:if>
-        <c:if test="${hst:isReadable(document, 'subtitle') }">
+        <%-- <c:if test="${hst:isReadable(document, 'subtitle') }">
           <h2><c:out value="${document.subtitle}"/></h2>
         </c:if>
         <c:if test="${hst:isReadable(document, 'introduction') }">
           <p><c:out value="${document.introduction}"/></p> 
-        </c:if>
+        </c:if> --%>
       </header>
       
       <tag:toolbox document="${document }" />

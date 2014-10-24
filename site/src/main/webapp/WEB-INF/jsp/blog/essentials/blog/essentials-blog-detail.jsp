@@ -29,22 +29,15 @@
 <h1> <c:out value="${document.title }" escapeXml="true" /> </h1>
 <h2><fmt:message key="before.author.name"/> <c:out value="${document.authors[0].fullName}"/></h2>
 
+<%--
 <c:if test="${hst:isReadable(document, 'releaseDate.time')}">
   <tag:renderDate document="${document}" showYear="true"/>
 </c:if>
 
-<p class="intro">
+ <p class="intro">
   <c:out value="${document.introduction }" />
-</p>
-          
-<%-- make blog a webpage, add metadata fields, breadrumb, date this time also with year 
-
-<strong>
-  <c:if test="${document.publicationDate ne null}">
-    <fmt:formatDate type="date" pattern="yyyy-MM-dd" value="${document.publicationDate.time}"/>
-  </c:if>
-</strong>
-<p><c:out value="${document.introduction}"/></p> --%>
+</p> 
+--%>
 
 <tag:flexibleblock content="${document.flexibleblock }" />
 <tag:toolbox document="${document }" /> 

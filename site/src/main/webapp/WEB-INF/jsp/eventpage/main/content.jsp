@@ -20,14 +20,16 @@
           <h1><span itemprop="summary"><c:out value="${document.title }" /></span></h1>
           <%-- <h2> <c:out value="${document.subtitle }" escapeXml="true" /> </h2> --%>
           <hst:include ref="contentTop" />
-           
+          
+          <%--  
           <c:if test="${hst:isReadable(document, 'eventDate.time')}">
             <tag:renderDate document="${document}"/>
           </c:if>
 
           <p class="intro">
             <c:out value="${document.introduction }" />
-          </p>
+          </p> 
+          --%>
 
           <tag:flexibleblock content="${document.flexibleblock }" />
 

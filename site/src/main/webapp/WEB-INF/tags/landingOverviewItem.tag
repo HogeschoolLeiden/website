@@ -21,10 +21,14 @@
        <tag:renderDate document="${item.highLighted}" dateClass="datum start large"></tag:renderDate>
         
        <figure>
-         <img  class="img-responsive"
-               src="<hst:link hippobean="${item.highLighted.headerImage.landing }" />" 
-               alt="<c:out value="${item.highLighted.title }" escapeXml="true" />" 
-               title="<c:out value="${item.highLighted.title }" escapeXml="true" />" />
+         <c:if test="${hst:isReadable(item.highLighted, 'headerImage') and not empty item.highLighted.headerImage}">
+              
+           <img  class="img-responsive"
+                 src="<hst:link hippobean="${item.highLighted.headerImage.landing }" />" 
+                 alt="<c:out value="${item.highLighted.title }" escapeXml="true" />" 
+                 title="<c:out value="${item.highLighted.title }" escapeXml="true" />" />
+         
+         </c:if>
        </figure>
         
        <p><c:out value="${item.highLighted.introduction }"/></p>

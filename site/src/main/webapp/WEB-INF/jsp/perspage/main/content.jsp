@@ -19,9 +19,9 @@
         <h1> <c:out value="${document.title }" escapeXml="true" /> </h1>
         <hst:include ref="contentTop" />
 
-        <p class="intro">
+        <%-- <p class="intro">
           <c:out value="${document.introduction }" />
-        </p>
+        </p> --%>
 
         <tag:flexibleblock content="${document.flexibleblock }" />
         
