@@ -135,7 +135,7 @@
           <sv:value>hsl:InternalLink</sv:value>
         </sv:property>
         <sv:property sv:name="hipposysedit:validators" sv:type="String" sv:multiple="true">
-          <sv:value>required</sv:value>
+          <sv:value>optional</sv:value>
         </sv:property>
       </sv:node>
     </sv:node>
@@ -185,25 +185,6 @@
       <sv:property sv:name="hsl:title" sv:type="String">
         <sv:value/>
       </sv:property>
-      <sv:node sv:name="hsl:link">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hsl:InternalLink</sv:value>
-        </sv:property>
-        <sv:property sv:name="hsl:alt" sv:type="String">
-          <sv:value/>
-        </sv:property>
-        <sv:property sv:name="hsl:linkTitle" sv:type="String">
-          <sv:value/>
-        </sv:property>
-        <sv:node sv:name="hsl:link">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>hippo:mirror</sv:value>
-          </sv:property>
-          <sv:property sv:name="hippo:docbase" sv:type="String">
-            <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
-          </sv:property>
-        </sv:node>
-      </sv:node>
     </sv:node>
   </sv:node>
   <sv:node sv:name="editor:templates">
@@ -318,7 +299,7 @@
           <sv:value>internallink</sv:value>
         </sv:property>
         <sv:property sv:name="hint" sv:type="String">
-          <sv:value/>
+          <sv:value>optional, if added a link will be displayed at the end of the text</sv:value>
         </sv:property>
         <sv:property sv:name="plugin.class" sv:type="String">
           <sv:value>org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin</sv:value>

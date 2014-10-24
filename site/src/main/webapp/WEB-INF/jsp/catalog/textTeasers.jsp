@@ -42,8 +42,13 @@
             </h2>
             
             <p><c:out value="${item.body }"/></p>
-            <c:set var="displayLink"><hst:link hippobean="${item.link.link }" /></c:set>
-            <a class="more" href="${displayLink}" title="${item.link.alt}"><c:out value="${item.link.linkTitle}"/></a>
+            
+            <c:if test="${hst:isReadable(item.link, 'link') and 
+                        not empty item.link.link and 
+                        not empty item.link.linkTitle}">
+              <c:set var="displayLink"><hst:link hippobean="${item.link.link }" /></c:set>
+              <a class="more" href="${displayLink}" title="${item.link.alt}"><c:out value="${item.link.linkTitle}"/></a>
+            </c:if>
             
         </article>
         
