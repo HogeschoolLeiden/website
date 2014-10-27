@@ -1,11 +1,10 @@
 package nl.hsleiden.components.catalog;
 
-import hslbeans.EventPage;
-
 import java.util.Map;
 
 import javax.jcr.RepositoryException;
 
+import nl.hsleiden.beans.EventPageBean;
 import nl.hsleiden.beans.mixin.RelatedEventsMixin;
 import nl.hsleiden.componentsinfo.RelatedEventsInfo;
 import nl.hsleiden.componentsinfo.RelatedItemsInfo;
@@ -30,7 +29,7 @@ public class RelatedEvents extends RelatedItems {
         HstQuery result = null;
         HippoBean scope = BeanUtils.getBeanViaAbsolutePath(parametersInfo.getContentBeanPath(), request);
         if(scope!=null){            
-            result = request.getRequestContext().getQueryManager().createQuery(scope, EventPage.JCR_TYPE);
+            result = request.getRequestContext().getQueryManager().createQuery(scope, EventPageBean.JCR_TYPE);
         }else{
             request.setAttribute(WidgetConstants.WEB_MASTER_MESSAGE, "webmaster.nofolder.message");
         }

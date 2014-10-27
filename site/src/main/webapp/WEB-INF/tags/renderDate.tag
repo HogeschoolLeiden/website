@@ -25,14 +25,8 @@
 </c:set>
 
 <c:choose>
-  <c:when test="${document['class'].name=='hslbeans.EventPage' }">
-    <fmt:formatDate value="${document.eventDate.time}"
-                    type="date" pattern="dd" dateStyle="medium" timeStyle="short" var="day" />
-    <fmt:formatDate value="${document.eventDate.time}"
-                    type="date" pattern="MMM" dateStyle="medium" timeStyle="short" var="month" />
-    <fmt:formatDate value="${document.eventDate.time}"
-                    type="date" pattern="yyyy" dateStyle="medium" timeStyle="short" var="year" />
-    <fmt:formatDate type="date" pattern="yyyy-MM-dd" var="dateTime" value="${document.eventDate.time}"/>
+  <c:when test="${document['class'].name=='nl.hsleiden.beans.EventPageBean' }">
+    <tag:renderEventDate document="${document}" dateClass="${dateClass}"/>
   </c:when>
   <c:otherwise>
     <fmt:formatDate value="${document.releaseDate.time}"
@@ -42,21 +36,23 @@
     <fmt:formatDate value="${document.releaseDate.time}"
                     type="date" pattern="yyyy" dateStyle="medium" timeStyle="short" var="year" />
     <fmt:formatDate type="date" pattern="yyyy-MM-dd" var="dateTime" value="${document.releaseDate.time}"/>
+ 
+    <c:choose>
+      <c:when test="${showYear}">
+        <time datetime="${dateTime}" class="${cssDateClass}">
+          ${fn:escapeXml(month)}
+          <span>${fn:escapeXml(year)}</span>
+        </time>
+      </c:when>
+      <c:otherwise>
+        <time datetime="${dateTime}" class="${cssDateClass}">
+          ${fn:escapeXml(day)}
+          <span>${fn:escapeXml(month)}</span>
+        </time>
+      </c:otherwise>
+    </c:choose>                 
+ 
  </c:otherwise>
 </c:choose>      
 
-<c:choose>
-  <c:when test="${showYear}">
-    <time datetime="${dateTime}" class="${cssDateClass}">
-      ${fn:escapeXml(month)}
-      <span>${fn:escapeXml(year)}</span>
-    </time>
-  </c:when>
-  <c:otherwise>
-    <time datetime="${dateTime}" class="${cssDateClass}">
-      ${fn:escapeXml(day)}
-      <span>${fn:escapeXml(month)}</span>
-    </time>
-  </c:otherwise>
-</c:choose>                 
 

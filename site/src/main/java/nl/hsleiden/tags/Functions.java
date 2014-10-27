@@ -2,7 +2,6 @@ package nl.hsleiden.tags;
 
 import hslbeans.ArticlePage;
 import hslbeans.BachelorPage;
-import hslbeans.EventPage;
 import hslbeans.ExternalLink;
 import hslbeans.Image;
 import hslbeans.ImageTeaser;
@@ -14,6 +13,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
+import nl.hsleiden.beans.EventPageBean;
 import nl.hsleiden.channels.WebsiteInfo;
 
 import org.hippoecm.hst.configuration.hosting.Mount;
@@ -107,8 +107,8 @@ public class Functions {
     public static Boolean isInfoBlockDisplayable(HippoBean document){
         boolean result = false;
         
-        if(document instanceof EventPage){
-            EventPage event = (EventPage) document;
+        if(document instanceof EventPageBean){
+            EventPageBean event = (EventPageBean) document;
             result = checkInfoBlock(event.getInfoBlock());
         }else if (document instanceof BachelorPage){
             BachelorPage bachelor = (BachelorPage) document;
