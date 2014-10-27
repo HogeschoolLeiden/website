@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="trigger DDE on Events">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>hipposys:updaterinfo</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:batchsize" sv:type="Long">
+    <sv:value>10</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:dryrun" sv:type="Boolean">
+    <sv:value>false</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:query" sv:type="String">
+    <sv:value>content/documents//element(*, hsl:EventPage)</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:script" sv:type="String">
+    <sv:value>package org.hippoecm.frontend.plugins.cms.dev.updater
+
+import org.onehippo.repository.update.BaseNodeUpdateVisitor
+import javax.jcr.Node
+
+class UpdaterTemplate extends BaseNodeUpdateVisitor {
+
+  boolean doUpdate(Node node) {
+    if (node.isNodeType("hsl:EventPage")) {
+      
+      if(!node.isCheckedOut()){
+		node.checkout();
+      }
+      
+      log.debug "Updating node ${node.path}"
+      Value value = node.getProperty("hippostdpubwf:lastModificationDate").getValue()
+      node.setProperty("hippostdpubwf:lastModificationDate", value)
+      return true
+    }
+    return false
+  }
+
+  boolean undoUpdate(Node node) {
+    throw new UnsupportedOperationException('Updater does not implement undoUpdate method')
+  }
+
+}</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:throttle" sv:type="Long">
+    <sv:value>10</sv:value>
+  </sv:property>
+</sv:node>

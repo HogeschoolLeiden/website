@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="eventDates">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>hipposys:deriveddefinition</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:classname" sv:type="String">
+    <sv:value>nl.hsleiden.EventDatesDerivedData</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:nodetype" sv:type="String">
+    <sv:value>hsl:EventPage</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:serialver" sv:type="Long">
+    <sv:value>1</sv:value>
+  </sv:property>
+  <sv:node sv:name="hipposys:accessed">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hipposys:propertyreferences</sv:value>
+    </sv:property>
+    <sv:node sv:name="eventDate">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hipposys:relativepropertyreference</sv:value>
+      </sv:property>
+      <sv:property sv:name="hipposys:relPath" sv:type="String">
+        <sv:value>hsl:eventDate</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="eventEndDate">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hipposys:relativepropertyreference</sv:value>
+      </sv:property>
+      <sv:property sv:name="hipposys:relPath" sv:type="String">
+        <sv:value>hsl:eventEndDate</sv:value>
+      </sv:property>
+    </sv:node>
+  </sv:node>
+  <sv:node sv:name="hipposys:derived">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hipposys:propertyreferences</sv:value>
+    </sv:property>
+    <sv:node sv:name="eventEndDate">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hipposys:relativepropertyreference</sv:value>
+      </sv:property>
+      <sv:property sv:name="hipposys:relPath" sv:type="String">
+        <sv:value>hsl:eventEndDate</sv:value>
+      </sv:property>
+    </sv:node>
+  </sv:node>
+</sv:node>

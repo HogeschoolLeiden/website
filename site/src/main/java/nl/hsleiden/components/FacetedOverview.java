@@ -10,7 +10,7 @@ import java.util.Map;
 
 import nl.hsleiden.utils.Constants.WidgetConstants;
 import nl.hsleiden.utils.FacetsUtils;
-import nl.hsleiden.utils.HslUtils;
+import nl.hsleiden.utils.HslDateUtils;
 
 import org.apache.commons.lang3.StringUtils;
 import org.hippoecm.hst.content.beans.query.HstQuery;
@@ -25,6 +25,7 @@ import org.hippoecm.hst.content.beans.standard.HippoResultSetBean;
 import org.hippoecm.hst.core.component.HstComponentException;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.parameters.ParametersInfo;
+import org.hippoecm.repository.util.DateTools.Resolution;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -167,8 +168,12 @@ public class FacetedOverview extends MonolithicFacetedOverview {
     private void applyDateFilter(Filter globalFilter, String dayToFilter) throws FilterException {
         try {
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat(DATE_FORMATE_PATTERN);
-            globalFilter.addBetween("hsl:eventDate", HslUtils.getStartOfDay(simpleDateFormat.parse(dayToFilter)),
-                    HslUtils.getEndOfDay(simpleDateFormat.parse(dayToFilter)));
+            globalFilter.addLessOrEqualThan("hsl:eventDate", 
+                    HslDateUtils.DateToCalendar(HslDateUtils.getStartOfDay(simpleDateFormat.parse(dayToFilter))), 
+                                                Resolution.DAY);
+            globalFilter.addGreaterOrEqualThan("hsl:eventEndDate", 
+                    HslDateUtils.DateToCalendar(HslDateUtils.getStartOfDay(simpleDateFormat.parse(dayToFilter))), 
+                                            Resolution.DAY);
         } catch (ParseException e) {
             LOG.error(e.getMessage(), e);
         }

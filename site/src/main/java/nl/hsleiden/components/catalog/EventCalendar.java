@@ -21,6 +21,7 @@ import nl.hsleiden.utils.Constants;
 import nl.hsleiden.utils.Constants.BeanPaths;
 import nl.hsleiden.utils.Constants.FieldName;
 import nl.hsleiden.utils.Constants.WidgetConstants;
+import nl.hsleiden.utils.HslDateUtils;
 import nl.hsleiden.utils.HslUtils;
 
 import org.hippoecm.hst.content.beans.query.HstQuery;
@@ -122,11 +123,20 @@ public class EventCalendar extends AjaxEnabledComponent {
             HippoBean facetOverviewBean = BeanUtils.getBean(BeanPaths.EVENTS_INDEX, request);
             HstLink link = linkCreator.create(facetOverviewBean, requestContext);
             
-            String facetLink = link.toUrlForm(requestContext, false);
-            facetLink = facetLink + "?qd="+ format.format(event.getEventDate().getTime());
             
-            result.add(new Event(event.getTitle(), facetLink, format.format(event
-                    .getEventDate().getTime())));
+            if(HslDateUtils.getEventDaysDuration(event)>0){
+                for(int i=0; i<HslDateUtils.getEventDaysDuration(event)+1;i++){
+                    String facetLink = link.toUrlForm(requestContext, false);
+                    String dayString = format.format(HslDateUtils.incrementDate(event.getEventDate().getTime(), i));
+                    facetLink = facetLink + "?qd="+ dayString;
+                    result.add(new Event(event.getTitle(), facetLink, dayString));
+                }
+            }else{                
+                String facetLink = link.toUrlForm(requestContext, false);
+                facetLink = facetLink + "?qd="+ format.format(event.getEventDate().getTime());
+                result.add(new Event(event.getTitle(), facetLink, format.format(event
+                        .getEventDate().getTime())));
+            }
         }
         return result;
     }
