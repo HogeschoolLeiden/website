@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="opendag-messages">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>hippo:handle</sv:value>
+  </sv:property>
+  <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+    <sv:value>mix:referenceable</sv:value>
+    <sv:value>hippo:translated</sv:value>
+  </sv:property>
+  <sv:property sv:name="jcr:uuid" sv:type="String">
+    <sv:value>5a77acb9-f7a6-4629-9d2b-84bee85559e3</sv:value>
+  </sv:property>
+  <sv:node sv:name="opendag-messages">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>resourcebundle:resourcebundle</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+      <sv:value>mix:referenceable</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>fe99fad9-6876-47d2-a767-cd535609a597</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true"/>
+    <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+      <sv:value>opendag-messages/opendag-messages[3]</sv:value>
+      <sv:value>opendag-messages/opendag-messages[2]</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippostd:state" sv:type="String">
+      <sv:value>draft</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+      <sv:value>live</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+      <sv:value>admin.ebrahim</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+      <sv:value>2014-10-28T13:19:37.457+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+      <sv:value>2014-10-28T17:15:30.914+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+      <sv:value>admin.ebrahim</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippotranslation:id" sv:type="String">
+      <sv:value>73e47b86-ae4c-4ccf-9dcf-2dacd2bdce4f</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippotranslation:locale" sv:type="String">
+      <sv:value>nl</sv:value>
+    </sv:property>
+    <sv:property sv:name="resourcebundle:descriptions" sv:type="String" sv:multiple="true">
+      <sv:value/>
+      <sv:value/>
+      <sv:value/>
+      <sv:value/>
+    </sv:property>
+    <sv:property sv:name="resourcebundle:id" sv:type="String">
+      <sv:value>nl.hsleiden.opendag.Messages</sv:value>
+    </sv:property>
+    <sv:property sv:name="resourcebundle:keys" sv:type="String" sv:multiple="true">
+      <sv:value>opendag.confirmation.success</sv:value>
+      <sv:value>opendag.confirmation.failure</sv:value>
+      <sv:value>opendag.confirmation.already.registered</sv:value>
+      <sv:value>opendag.confirmation.not.found</sv:value>
+    </sv:property>
+    <sv:property sv:name="resourcebundle:messages" sv:type="String" sv:multiple="true">
+      <sv:value>aanmelding gelukt.</sv:value>
+      <sv:value>aanmelden mislukt.</sv:value>
+      <sv:value>Het formulier werd reeds in het systeem geregistreerd.</sv:value>
+      <sv:value>No records were found in the system.</sv:value>
+    </sv:property>
+    <sv:property sv:name="resourcebundle:messages_en" sv:type="String" sv:multiple="true">
+      <sv:value>registration was successful.</sv:value>
+      <sv:value>registration has failed.</sv:value>
+      <sv:value>It form has already registered in the system.</sv:value>
+      <sv:value>No records were found in the system.</sv:value>
+    </sv:property>
+    <sv:property sv:name="resourcebundle:messages_nl" sv:type="String" sv:multiple="true">
+      <sv:value>aanmelding gelukt.</sv:value>
+      <sv:value>aanmelden mislukt.</sv:value>
+      <sv:value>Het formulier werd reeds in het systeem geregistreerd.</sv:value>
+      <sv:value>No records were found in the system.</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="hippo:translation">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hippo:translation</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:language" sv:type="String">
+      <sv:value/>
+    </sv:property>
+    <sv:property sv:name="hippo:message" sv:type="String">
+      <sv:value>opendag messages</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="opendag-messages">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>resourcebundle:resourcebundle</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+      <sv:value>mix:referenceable</sv:value>
+      <sv:value>mix:versionable</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>7f3a0581-416e-46dd-8f16-37183d6426c5</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+      <sv:value>preview</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+      <sv:value>opendag-messages/opendag-messages[3]</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippostd:state" sv:type="String">
+      <sv:value>unpublished</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+      <sv:value>live</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+      <sv:value>admin.ebrahim</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+      <sv:value>2014-10-28T13:19:37.457+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+      <sv:value>2014-10-28T17:15:41.556+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+      <sv:value>admin.ebrahim</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippotranslation:id" sv:type="String">
+      <sv:value>73e47b86-ae4c-4ccf-9dcf-2dacd2bdce4f</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippotranslation:locale" sv:type="String">
+      <sv:value>nl</sv:value>
+    </sv:property>
+    <sv:property sv:name="resourcebundle:descriptions" sv:type="String" sv:multiple="true">
+      <sv:value/>
+      <sv:value/>
+      <sv:value/>
+      <sv:value/>
+    </sv:property>
+    <sv:property sv:name="resourcebundle:id" sv:type="String">
+      <sv:value>nl.hsleiden.opendag.Messages</sv:value>
+    </sv:property>
+    <sv:property sv:name="resourcebundle:keys" sv:type="String" sv:multiple="true">
+      <sv:value>opendag.confirmation.success</sv:value>
+      <sv:value>opendag.confirmation.failure</sv:value>
+      <sv:value>opendag.confirmation.already.registered</sv:value>
+      <sv:value>opendag.confirmation.not.found</sv:value>
+    </sv:property>
+    <sv:property sv:name="resourcebundle:messages" sv:type="String" sv:multiple="true">
+      <sv:value>aanmelding gelukt.</sv:value>
+      <sv:value>aanmelden mislukt.</sv:value>
+      <sv:value>Het formulier werd reeds in het systeem geregistreerd.</sv:value>
+      <sv:value>No records were found in the system.</sv:value>
+    </sv:property>
+    <sv:property sv:name="resourcebundle:messages_en" sv:type="String" sv:multiple="true">
+      <sv:value>registration was successful.</sv:value>
+      <sv:value>registration has failed.</sv:value>
+      <sv:value>It form has already registered in the system.</sv:value>
+      <sv:value>No records were found in the system.</sv:value>
+    </sv:property>
+    <sv:property sv:name="resourcebundle:messages_nl" sv:type="String" sv:multiple="true">
+      <sv:value>aanmelding gelukt.</sv:value>
+      <sv:value>aanmelden mislukt.</sv:value>
+      <sv:value>Het formulier werd reeds in het systeem geregistreerd.</sv:value>
+      <sv:value>No records were found in the system.</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="opendag-messages">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>resourcebundle:resourcebundle</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+      <sv:value>mix:referenceable</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>2d4389a6-14c2-4d6d-b731-1792554a8876</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+      <sv:value>live</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+      <sv:value>opendag-messages/opendag-messages[2]</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippostd:state" sv:type="String">
+      <sv:value>published</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+      <sv:value>live</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+      <sv:value>admin.ebrahim</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+      <sv:value>2014-10-28T13:19:37.457+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+      <sv:value>2014-10-28T17:15:41.556+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+      <sv:value>admin.ebrahim</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
+      <sv:value>2014-10-28T17:15:43.476+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippotranslation:id" sv:type="String">
+      <sv:value>73e47b86-ae4c-4ccf-9dcf-2dacd2bdce4f</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippotranslation:locale" sv:type="String">
+      <sv:value>nl</sv:value>
+    </sv:property>
+    <sv:property sv:name="resourcebundle:descriptions" sv:type="String" sv:multiple="true">
+      <sv:value/>
+      <sv:value/>
+      <sv:value/>
+      <sv:value/>
+    </sv:property>
+    <sv:property sv:name="resourcebundle:id" sv:type="String">
+      <sv:value>nl.hsleiden.opendag.Messages</sv:value>
+    </sv:property>
+    <sv:property sv:name="resourcebundle:keys" sv:type="String" sv:multiple="true">
+      <sv:value>opendag.confirmation.success</sv:value>
+      <sv:value>opendag.confirmation.failure</sv:value>
+      <sv:value>opendag.confirmation.already.registered</sv:value>
+      <sv:value>opendag.confirmation.not.found</sv:value>
+    </sv:property>
+    <sv:property sv:name="resourcebundle:messages" sv:type="String" sv:multiple="true">
+      <sv:value>aanmelding gelukt.</sv:value>
+      <sv:value>aanmelden mislukt.</sv:value>
+      <sv:value>Het formulier werd reeds in het systeem geregistreerd.</sv:value>
+      <sv:value>No records were found in the system.</sv:value>
+    </sv:property>
+    <sv:property sv:name="resourcebundle:messages_en" sv:type="String" sv:multiple="true">
+      <sv:value>registration was successful.</sv:value>
+      <sv:value>registration has failed.</sv:value>
+      <sv:value>It form has already registered in the system.</sv:value>
+      <sv:value>No records were found in the system.</sv:value>
+    </sv:property>
+    <sv:property sv:name="resourcebundle:messages_nl" sv:type="String" sv:multiple="true">
+      <sv:value>aanmelding gelukt.</sv:value>
+      <sv:value>aanmelden mislukt.</sv:value>
+      <sv:value>Het formulier werd reeds in het systeem geregistreerd.</sv:value>
+      <sv:value>No records were found in the system.</sv:value>
+    </sv:property>
+  </sv:node>
+</sv:node>

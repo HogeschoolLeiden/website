@@ -31,6 +31,8 @@ import org.hippoecm.hst.component.support.forms.FormField;
 import org.hippoecm.hst.component.support.forms.FormMap;
 import org.hippoecm.hst.core.component.HstComponentException;
 import org.hippoecm.hst.core.component.HstRequest;
+import org.hippoecm.hst.core.linking.HstLink;
+import org.hippoecm.hst.core.request.HstRequestContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -95,8 +97,14 @@ public final class QRFreemarkerParser implements TemplateParser {
             }
             FormField uniqueId = formMap.getField(UUIDBehaivor.UNIQUE_ID);
             if (uniqueId != null && StringUtils.isNotBlank(uniqueId.getValue())) {
+                HstRequestContext requestContext = request.getRequestContext();
+                HstLink link = requestContext.getHstLinkCreator().createByRefId("opendag-confirmation",
+                        requestContext.getResolvedMount().getMount());
+
+                String linkToConfirmationPage = link.toUrlForm(requestContext, true);
                 ByteArrayOutputStream ops = new ByteArrayOutputStream();
-                BitMatrix bitMatrix = new QRCodeWriter().encode(uniqueId.getValue(), BarcodeFormat.QR_CODE, 400, 400);
+                BitMatrix bitMatrix = new QRCodeWriter().encode(linkToConfirmationPage + "?id=" + uniqueId.getValue(),
+                        BarcodeFormat.QR_CODE, 300, 300);
                 MatrixToImageWriter.writeToStream(bitMatrix, "png", ops);
                 ops.close();
                 context.put("QR", "data:image/png;base64," + Base64.encodeBase64String(ops.toByteArray()));
