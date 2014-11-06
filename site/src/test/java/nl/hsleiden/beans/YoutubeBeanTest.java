@@ -22,7 +22,7 @@ public class YoutubeBeanTest {
         YoutubeBean youtubeBean = new YoutubeBean();
         youtubeBean.setObjectConverter(objectConverter);
         String url = youtubeBean.getUrl();
-        Assert.assertEquals("http://www.youtube.com/embed/yhKB-VxJWpg?rel=0&theme=black&showinfo=0&autoplay=1&disablekb=0",
+        Assert.assertEquals("http://www.youtube.com/embed/yhKB-VxJWpg?disablekb=0&theme=black&showinfo=0&rel=0&autoplay=1",
                 url);
     }
 
