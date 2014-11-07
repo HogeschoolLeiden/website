@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:h="http://www.onehippo.org/jcr/xmlimport" sv:name="imageValidationService" h:merge="combine">
+  <sv:property sv:name="max.width" sv:type="Long" h:merge="override">
+    <sv:value>2560</sv:value>
+  </sv:property>
+  <sv:property sv:name="max.height" sv:type="Long" h:merge="override">
+    <sv:value>1600</sv:value>
+  </sv:property>
+  <sv:property sv:name="max.file.size" sv:type="String" h:merge="override">
+    <sv:value>5M</sv:value>
+  </sv:property>
+</sv:node>
+
