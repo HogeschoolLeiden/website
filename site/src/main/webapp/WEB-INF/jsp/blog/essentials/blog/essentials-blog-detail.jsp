@@ -29,7 +29,7 @@
 <h1> <c:out value="${document.title }" escapeXml="true" /> </h1>
 <h2><fmt:message key="before.author.name"/> <c:out value="${document.authors[0].fullName}"/></h2>
 
-<%--
+<!--  for news and blogs we show the date and the introduction -->
 <c:if test="${hst:isReadable(document, 'releaseDate.time')}">
   <tag:renderDate document="${document}" showYear="true"/>
 </c:if>
@@ -37,7 +37,6 @@
  <p class="intro">
   <c:out value="${document.introduction }" />
 </p> 
---%>
 
 <tag:flexibleblock content="${document.flexibleblock }" />
 <tag:toolbox document="${document }" /> 

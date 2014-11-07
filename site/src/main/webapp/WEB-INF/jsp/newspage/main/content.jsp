@@ -21,6 +21,7 @@
           <h1 itemprop="headline"><c:out value="${document.title }" escapeXml="true" /></h1>
           <hst:include ref="contentTop" />
 
+		  <!--  for news and blogs we show the date and the introduction -->
           <c:if test="${hst:isReadable(document, 'releaseDate.time')}">
             <tag:renderDate document="${document}"/>
           </c:if>
