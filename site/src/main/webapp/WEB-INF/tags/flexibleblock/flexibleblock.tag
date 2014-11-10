@@ -36,6 +36,9 @@
 		<c:when test="${block['class'].name == 'hslbeans.Fotogallery' }">
 			<tag:fotogalleryblock content="${block }"/>
 		</c:when>
+		<c:when test="${block['class'].name == 'hslbeans.Testimonial' }">
+			<tag:testimonialblock content="${block }"/>
+		</c:when>
 	</c:choose>
 	<c:set var="tagcount" value="${tagcount + 1 }" />
 </c:forEach>
