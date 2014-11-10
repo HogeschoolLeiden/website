@@ -5,8 +5,8 @@
  */
 
 /*!
- * added the lines from 1111 to 1116 for having the header
- * being displayed in 2 rows
+ * changed for conforming to html design styling
+ * 
  * */
 
 (function(factory) {
@@ -217,10 +217,11 @@ function setHighlightClasses(events) {
 }
 
 function setSingleHighlightClass(thisdate, url) {
-
 	var addLinkTD = jQuery("[data-date="+thisdate+"]")[0];
-    addLinkTD.className = addLinkTD.className + " fc-highlighted";
-    addLinkTD.innerHTML = "<a href='"+url+"'>" + addLinkTD.innerHTML + "</a>"
+	if(addLinkTD != null){		
+		addLinkTD.className = addLinkTD.className + " fc-highlighted";
+		addLinkTD.innerHTML = "<a href='"+url+"'>" + addLinkTD.innerHTML + "</a>"
+	}
 }
 
 // function for adding/overriding defaults

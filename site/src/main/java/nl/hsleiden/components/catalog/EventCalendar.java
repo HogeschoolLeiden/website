@@ -166,8 +166,8 @@ public class EventCalendar extends AjaxEnabledComponent {
 
     private Filter getDateFilter(Date startDate, Date endDate, HstQuery query) throws FilterException {
         Filter baseFilter = query.createFilter();
-        baseFilter.addGreaterOrEqualThan(FieldName.HSL_EVENT_DATE, startDate);
         baseFilter.addLessOrEqualThan(FieldName.HSL_EVENT_DATE, endDate);
+        baseFilter.addGreaterOrEqualThan(FieldName.HSL_EVENT_END_DATE, startDate);
         return baseFilter;
     }
 
