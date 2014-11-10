@@ -49,12 +49,12 @@
 
   <div class="media-body">
     <h2 class="media-heading">
-      <c:out value="${quoteText }"></c:out>
+    	${quoteText }
       <span></span>
     </h2>
     
     <h3>
-      <c:out value="${quoteAuthor }" />
+    	${quoteAuthor}
     </h3>
                     
     <c:if test="${content.shareParameters.twitter or content.shareParameters.linkedin }">
