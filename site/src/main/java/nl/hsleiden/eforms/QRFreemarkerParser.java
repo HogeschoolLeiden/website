@@ -101,7 +101,7 @@ public final class QRFreemarkerParser implements TemplateParser {
                 String rqcodeLink = hstLinkCreator.createByRefId("qrcode", mount).toUrlForm(requestContext, true);
 
                 context.put("QR",
-                        rqcodeLink + "/?c=" + URLEncoder.encode(linkToConfirmationPage + "?id=" + uniqueId, EncodingsConstants.UTF8));
+                        rqcodeLink + "/?c=" + URLEncoder.encode(linkToConfirmationPage + "?id=" + uniqueId.getValue(), EncodingsConstants.UTF8));
             }
             context.put("form", form);
             context.put("request", request);
