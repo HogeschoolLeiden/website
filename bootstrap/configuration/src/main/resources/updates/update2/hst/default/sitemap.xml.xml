@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:h="http://www.onehippo.org/jcr/xmlimport"
+           sv:name="sitemap.xml" h:merge="combine">
+  <sv:property sv:name="hst:componentconfigurationid" sv:type="String" h:merge="override">
+    <sv:value>hst:components/forge-sitemap-based-on-hst-configuration-feed</sv:value>
+  </sv:property>
+  <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+    <sv:value>sitemapPathExclusions</sv:value>
+  </sv:property>
+  <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+    <sv:value>_any_,sitemap.xml,bedank</sv:value>
+  </sv:property>
+</sv:node>
