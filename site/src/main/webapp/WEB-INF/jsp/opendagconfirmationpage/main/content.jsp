@@ -17,24 +17,31 @@
 
     <article class="well well-large">
       <header>
+        
       	<c:choose>
       		<c:when test="${model.status eq 'ALREADY_REGISTERED'}">
-          		<h1><fmt:message key="opendag.confirmation.already.registered"/></h1>
+          		<h1>
+                  <tag:renderConfirmationMessage model="${model}" message="opendag.confirmation.already.registered"/>
+                </h1>
       		</c:when>
       		<c:when test="${model.status eq 'SUCCESS'}">
-          		<h1><fmt:message key="opendag.confirmation.success"/></h1>
+          		<h1>
+                  <tag:renderConfirmationMessage model="${model}" message="opendag.confirmation.success"/>
+                </h1>
       		</c:when>
       		<c:when test="${model.status eq 'REGISTRATION_NOT_FOUND'}">
-          		<h1><fmt:message key="opendag.confirmation.not.found"/></h1>
+          		<h1>
+                  <tag:renderConfirmationMessage model="${model}" message="opendag.confirmation.not.found"/>
+                </h1>
       		</c:when>
       		<c:when test="${model.status eq 'REGISTRATION_FAILED'}">
-          		<h1><fmt:message key="opendag.confirmation.failure"/></h1>
+          		<h1>
+                  <tag:renderConfirmationMessage model="${model}" message="opendag.confirmation.failure"/>
+                </h1>
       		</c:when>
       	</c:choose>
 
       </header>
-      
-      <tag:toolbox document="${document }" />
       
     </article>
 
