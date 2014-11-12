@@ -18,35 +18,31 @@
 
 package nl.hsleiden.eforms;
 
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.StringWriter;
+import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.lang.StringUtils;
 import org.hippoecm.hst.component.support.forms.FormField;
 import org.hippoecm.hst.component.support.forms.FormMap;
+import org.hippoecm.hst.configuration.hosting.Mount;
 import org.hippoecm.hst.core.component.HstComponentException;
 import org.hippoecm.hst.core.component.HstRequest;
-import org.hippoecm.hst.core.linking.HstLink;
+import org.hippoecm.hst.core.linking.HstLinkCreator;
 import org.hippoecm.hst.core.request.HstRequestContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.google.zxing.BarcodeFormat;
-import com.google.zxing.WriterException;
-import com.google.zxing.client.j2se.MatrixToImageWriter;
-import com.google.zxing.common.BitMatrix;
-import com.google.zxing.qrcode.QRCodeWriter;
 import com.onehippo.cms7.eforms.hst.model.AbstractField;
 import com.onehippo.cms7.eforms.hst.model.Form;
 import com.onehippo.cms7.eforms.hst.util.EformUtils;
 import com.onehippo.cms7.eforms.hst.util.FreemarkerHtmlEscapedClassTemplateLoader;
 import com.onehippo.cms7.eforms.hst.util.TemplateParser;
 import com.onehippo.cms7.eforms.hst.util.TemplateType;
+import com.tdclighthouse.prototype.utils.Constants.EncodingsConstants;
 
 import freemarker.cache.ClassTemplateLoader;
 import freemarker.cache.StringTemplateLoader;
@@ -98,16 +94,14 @@ public final class QRFreemarkerParser implements TemplateParser {
             FormField uniqueId = formMap.getField(UUIDBehaivor.UNIQUE_ID);
             if (uniqueId != null && StringUtils.isNotBlank(uniqueId.getValue())) {
                 HstRequestContext requestContext = request.getRequestContext();
-                HstLink link = requestContext.getHstLinkCreator().createByRefId("opendag-confirmation",
-                        requestContext.getResolvedMount().getMount());
+                HstLinkCreator hstLinkCreator = requestContext.getHstLinkCreator();
+                Mount mount = requestContext.getResolvedMount().getMount();
+                String linkToConfirmationPage = hstLinkCreator.createByRefId("opendag-confirmation", mount).toUrlForm(
+                        requestContext, true);
+                String rqcodeLink = hstLinkCreator.createByRefId("qrcode", mount).toUrlForm(requestContext, true);
 
-                String linkToConfirmationPage = link.toUrlForm(requestContext, true);
-                ByteArrayOutputStream ops = new ByteArrayOutputStream();
-                BitMatrix bitMatrix = new QRCodeWriter().encode(linkToConfirmationPage + "?id=" + uniqueId.getValue(),
-                        BarcodeFormat.QR_CODE, 300, 300);
-                MatrixToImageWriter.writeToStream(bitMatrix, "png", ops);
-                ops.close();
-                context.put("QR", "data:image/png;base64," + Base64.encodeBase64String(ops.toByteArray()));
+                context.put("QR",
+                        rqcodeLink + "/?c=" + URLEncoder.encode(linkToConfirmationPage + "?id=" + uniqueId.getValue(), EncodingsConstants.UTF8));
             }
             context.put("form", form);
             context.put("request", request);
@@ -116,7 +110,7 @@ public final class QRFreemarkerParser implements TemplateParser {
             context.put("paragraph", paragraph);
             context.put("includeFieldData", includeFieldData);
             return context;
-        } catch (IOException | WriterException e) {
+        } catch (IOException e) {
             throw new HstComponentException(e.getMessage(), e);
         }
     }

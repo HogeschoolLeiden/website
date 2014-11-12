@@ -263,6 +263,19 @@
     <servlet-name>PingServlet</servlet-name>
     <servlet-class>org.hippoecm.hst.servlet.HstPingServlet</servlet-class>
   </servlet>
+  
+  <servlet>
+    <servlet-name>QRCodeServlet</servlet-name>
+    <servlet-class>com.tdclighthouse.prototype.servlets.QRCodeServlet</servlet-class>
+    <init-param>
+      <param-name>maximumSize</param-name>
+      <param-value>650</param-value>
+    </init-param>
+    <init-param>
+      <param-name>maximumContentLength</param-name>
+      <param-value>250</param-value>
+    </init-param>
+  </servlet>
 
   <servlet-mapping>
     <servlet-name>BinariesServlet</servlet-name>
@@ -297,6 +310,11 @@
   <servlet-mapping>
     <servlet-name>PingServlet</servlet-name>
     <url-pattern>/ping/*</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>QRCodeServlet</servlet-name>
+    <url-pattern>/qrcode/</url-pattern>
   </servlet-mapping>
 
   <security-constraint>
