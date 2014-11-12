@@ -1,5 +1,8 @@
 package nl.hsleiden.components;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import javax.jcr.Node;
 import javax.jcr.NodeIterator;
 import javax.jcr.RepositoryException;
@@ -27,6 +30,7 @@ public class OpendagConfirmation extends BaseHstComponent {
 
     @Override
     public void doBeforeRender(HstRequest request, HstResponse response) throws HstComponentException {
+        Map<String, Object> model = new HashMap<String, Object>();
         RegistrationStatus status;
         Session session = null;
         try {
@@ -35,8 +39,9 @@ public class OpendagConfirmation extends BaseHstComponent {
                 session = FormUtils.getWritableSession();
                 Node formDataNode = getFormDataNode(session, uniqueId);
                 if (formDataNode != null) {
-
-                    Node n = getFieldValueNode(formDataNode);
+                    model.put("name", getStringValue(formDataNode, "naam"));
+                    model.put("surname", getStringValue(formDataNode, "achternaam"));
+                    Node n = getFieldValueNode(formDataNode, UUIDBehaivor.REGISTRATION_COMPLETE);
                     Value[] values = n.getProperty(HST_FORMFIELDDATA).getValues();
                     if (values.length > 0 && Constants.Values.TRUE.equals(values[0].getString())) {
                         status = RegistrationStatus.ALREADY_REGISTERED;
@@ -59,7 +64,8 @@ public class OpendagConfirmation extends BaseHstComponent {
                 saveSession(session);
             }
         }
-        request.setAttribute(Constants.Attributes.MODEL, status);
+        model.put("status", status);
+        request.setAttribute(Constants.Attributes.MODEL, model);
 
     }
 
@@ -70,12 +76,25 @@ public class OpendagConfirmation extends BaseHstComponent {
             throw new HstComponentException(e);
         }
     }
+    
+    private String getStringValue(Node formDataNode, String fieldName) throws RepositoryException {
+        String result = null;
+        Node n = getFieldValueNode(formDataNode, fieldName);
+        if (n != null) {
+            Value[] values = n.getProperty(HST_FORMFIELDDATA).getValues();
+            if (values.length == 1) {
+                result = values[0].getString();
+            }
+        }
+        
+        return result;
+    }
 
-    private Node getFieldValueNode(Node formDataNode) throws RepositoryException {
+    private Node getFieldValueNode(Node formDataNode, String fieldName) throws RepositoryException {
         Node result = null;
         for (NodeIterator nodes = formDataNode.getNodes("hst:formfieldvalue"); nodes.hasNext();) {
             Node n = nodes.nextNode();
-            if (UUIDBehaivor.REGISTRATION_COMPLETE.equals(n.getProperty("hst:formfieldname").getString())) {
+            if (fieldName.equals(n.getProperty("hst:formfieldname").getString())) {
                 result = n;
             }
         }

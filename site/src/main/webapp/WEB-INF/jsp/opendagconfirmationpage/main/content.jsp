@@ -8,8 +8,9 @@
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 
 <hst:setBundle basename="nl.hsleiden.opendag.Messages"/>
+
 <c:choose>
-  <c:when test="${empty model}">
+  <c:when test="${empty model.status}">
     <tag:pagenotfound/>
   </c:when>
   <c:otherwise>
@@ -17,16 +18,16 @@
     <article class="well well-large">
       <header>
       	<c:choose>
-      		<c:when test="${model eq 'ALREADY_REGISTERED'}">
+      		<c:when test="${model.status eq 'ALREADY_REGISTERED'}">
           		<h1><fmt:message key="opendag.confirmation.already.registered"/></h1>
       		</c:when>
-      		<c:when test="${model eq 'SUCCESS'}">
+      		<c:when test="${model.status eq 'SUCCESS'}">
           		<h1><fmt:message key="opendag.confirmation.success"/></h1>
       		</c:when>
-      		<c:when test="${model eq 'REGISTRATION_NOT_FOUND'}">
+      		<c:when test="${model.status eq 'REGISTRATION_NOT_FOUND'}">
           		<h1><fmt:message key="opendag.confirmation.not.found"/></h1>
       		</c:when>
-      		<c:when test="${model eq 'REGISTRATION_FAILED'}">
+      		<c:when test="${model.status eq 'REGISTRATION_FAILED'}">
           		<h1><fmt:message key="opendag.confirmation.failure"/></h1>
       		</c:when>
       	</c:choose>
