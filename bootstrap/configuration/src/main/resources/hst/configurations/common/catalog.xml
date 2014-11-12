@@ -72,7 +72,7 @@
         <sv:value>HST.Item</sv:value>
       </sv:property>
     </sv:node>
-    <sv:node sv:name="facebookPosts">
+    <!-- <sv:node sv:name="facebookPosts">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:containeritemcomponent</sv:value>
       </sv:property>
@@ -89,6 +89,41 @@
       <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
       <sv:property sv:name="hst:template" sv:type="String">
         <sv:value>catalog.facebookposts</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:xtype" sv:type="String">
+        <sv:value>HST.Item</sv:value>
+      </sv:property>
+    </sv:node> -->
+    <sv:node sv:name="twitterfeed">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:containeritemcomponent</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:asyncmode" sv:type="String">
+        <sv:value>true</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentclassname" sv:type="String">
+        <sv:value>nl.hsleiden.components.catalog.TwitterFeed</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:iconpath" sv:type="String">
+        <sv:value>images/catalog/twitter-icon.png</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:label" sv:type="String">
+        <sv:value>Twitter feed</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+        <sv:value>limit</sv:value>
+        <sv:value>query</sv:value>
+        <sv:value>tryToUseMixin</sv:value>
+        <sv:value>from</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+        <sv:value>0</sv:value>
+        <sv:value/>
+        <sv:value>off</sv:value>
+        <sv:value>HSLeidenNL</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:template" sv:type="String">
+        <sv:value>catalog.twitterfeed</sv:value>
       </sv:property>
       <sv:property sv:name="hst:xtype" sv:type="String">
         <sv:value>HST.Item</sv:value>
@@ -354,41 +389,6 @@
       </sv:property>
       <sv:property sv:name="hst:template" sv:type="String">
         <sv:value>catalog.publicimages</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:xtype" sv:type="String">
-        <sv:value>HST.Item</sv:value>
-      </sv:property>
-    </sv:node>
-    <sv:node sv:name="twitterfeed">
-      <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hst:containeritemcomponent</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:asyncmode" sv:type="String">
-        <sv:value>true</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:componentclassname" sv:type="String">
-        <sv:value>nl.hsleiden.components.catalog.TwitterFeed</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:iconpath" sv:type="String">
-        <sv:value>images/catalog/twitter-icon.png</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:label" sv:type="String">
-        <sv:value>Twitter feed</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
-        <sv:value>limit</sv:value>
-        <sv:value>query</sv:value>
-        <sv:value>tryToUseMixin</sv:value>
-        <sv:value>from</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
-        <sv:value>0</sv:value>
-        <sv:value/>
-        <sv:value>off</sv:value>
-        <sv:value>HSLeidenNL</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:template" sv:type="String">
-        <sv:value>catalog.twitterfeed</sv:value>
       </sv:property>
       <sv:property sv:name="hst:xtype" sv:type="String">
         <sv:value>HST.Item</sv:value>

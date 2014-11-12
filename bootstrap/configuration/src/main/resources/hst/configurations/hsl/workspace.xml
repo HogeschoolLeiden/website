@@ -825,38 +825,6 @@
         <sv:property sv:name="hst:xtype" sv:type="String">
           <sv:value>HST.vBox</sv:value>
         </sv:property>
-        <sv:node sv:name="facebookPosts">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>hst:containeritemcomponent</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:componentclassname" sv:type="String">
-            <sv:value>nl.hsleiden.components.catalog.FacebookPosts</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:iconpath" sv:type="String">
-            <sv:value>images/catalog/fb-icon.png</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:label" sv:type="String">
-            <sv:value>Facebook Posts</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
-            <sv:value>firstPost</sv:value>
-            <sv:value>secondPost</sv:value>
-            <sv:value>thirdPost</sv:value>
-            <sv:value>tryToUseMixin</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
-            <sv:value/>
-            <sv:value/>
-            <sv:value/>
-            <sv:value>on</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:template" sv:type="String">
-            <sv:value>catalog.facebookposts</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:xtype" sv:type="String">
-            <sv:value>HST.Item</sv:value>
-          </sv:property>
-        </sv:node>
       </sv:node>
       <sv:node sv:name="contentTop">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -893,38 +861,6 @@
           </sv:property>
           <sv:property sv:name="hst:template" sv:type="String">
             <sv:value>catalog.headteasers</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:xtype" sv:type="String">
-            <sv:value>HST.Item</sv:value>
-          </sv:property>
-        </sv:node>
-        <sv:node sv:name="facebookPosts">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>hst:containeritemcomponent</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:componentclassname" sv:type="String">
-            <sv:value>nl.hsleiden.components.catalog.FacebookPosts</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:iconpath" sv:type="String">
-            <sv:value>images/catalog/fb-icon.png</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:label" sv:type="String">
-            <sv:value>Facebook Posts</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
-            <sv:value>firstPost</sv:value>
-            <sv:value>secondPost</sv:value>
-            <sv:value>thirdPost</sv:value>
-            <sv:value>tryToUseMixin</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
-            <sv:value>&lt;div id="fb-root"&gt;&lt;/div&gt; &lt;script&gt;(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/all.js#xfbml=1"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));&lt;/script&gt; &lt;div class="fb-post" data-href="https://www.facebook.com/HSLeidenNL/photos/a.317996908239385.70367.285002298205513/773284019377336/?type=1" data-width="555"&gt;&lt;div class="fb-xfbml-parse-ignore"&gt;&lt;a href="https://www.facebook.com/HSLeidenNL/photos/a.317996908239385.70367.285002298205513/773284019377336/?type=1"&gt;Post&lt;/a&gt; by &lt;a href="https://www.facebook.com/HSLeidenNL"&gt;HSLeiden&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</sv:value>
-            <sv:value/>
-            <sv:value/>
-            <sv:value>off</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:template" sv:type="String">
-            <sv:value>catalog.facebookposts</sv:value>
           </sv:property>
           <sv:property sv:name="hst:xtype" sv:type="String">
             <sv:value>HST.Item</sv:value>
