@@ -150,6 +150,9 @@
 [hsl:RelatedEventsCompoundMixin] > hippo:compound, hippostd:relaxed
   orderable
 
+[hsl:RelatedPersCompoundMixin] > hippo:compound, hippostd:relaxed
+  orderable
+
 [hsl:RelatedFilterParameters] > hippo:compound, hippostd:relaxed
   orderable
 
@@ -290,6 +293,10 @@
 [hsl:RelatedEventsMixin]
   mixin
   + hsl:relatedEventsCompoundMixin (hsl:RelatedEventsCompoundMixin)
+
+[hsl:RelatedPersMixin]
+  mixin
+  + hsl:relatedPersCompoundMixin (hsl:RelatedPersCompoundMixin)
   
 [hsl:RelatedItemsMixin]
   mixin
