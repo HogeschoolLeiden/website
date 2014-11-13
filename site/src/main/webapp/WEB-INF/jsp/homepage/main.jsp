@@ -29,7 +29,7 @@
         <hst:include ref="leftBottom" />
       </div>
       
-      <div class="col-xs-6 col-sm-6 col-md-3 ">
+      <div class="col-xs-6 col-sm-6 col-md-3">
         <hst:include ref="contentTop" />
         <hst:include ref="contentBottom" />
       </div>

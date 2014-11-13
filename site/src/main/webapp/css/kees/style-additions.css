@@ -57,9 +57,9 @@ figure.fexibleblock.image img {
 	width: 100%;
 }
 
-/* -------------------- */
+/* ------------------------------ */
 /* flexible block paragraph image */
-/* -------------------- */
+/* ------------------------------ */
 .detail-content .row .contentarea .content figure.left,
 .detail-content .row .contentarea .content figure.right {
 	width: 47.5%
@@ -72,6 +72,7 @@ figure.fexibleblock.image img {
 .button-block.twitter {
 	width: 100%;
 	float: left;
+	background: #fff;
 }
 
 .button-block.twitter img {
@@ -87,8 +88,11 @@ figure.fexibleblock.image img {
 	margin-bottom: 0;
 }
 
-.aside .button-block.twitter .col-sm-4,.aside .button-block.twitter .col-sm-4.half
-	{
+.aside .button-block.twitter .col-sm-4,
+.aside .button-block.twitter .col-sm-4.half,
+.col-xs-6.col-sm-6.col-md-3 .button-block.twitter .col-sm-4,
+.col-xs-6.col-sm-6.col-md-3 .button-block.twitter .col-sm-4.half
+{
 	width: auto;
 }
 
@@ -235,7 +239,7 @@ h2.noQueryResults { font-size: 1.2em; color: #23114c; font-family: 'source_sans_
 }
 
 /* ------------------- */
-/* landing page titels */
+/* landing page titles */
 /* ------------------- */
 
 .col-sm-6.col-md-3.area .truncate {
@@ -564,9 +568,9 @@ div.hulp h2 {  top: 45%;}
 /* ---------------- */
 .hasDatepicker.fc.fc-ltr .fc-content .fc-view.fc-view-month.fc-grid .fc-event-container{display: none;} 
 
-/* ---------------------------------------------------------------------- */
-/* contact widget aligns infor on left if no image and no social accounts */
-/* ---------------------------------------------------------------------- */
+/* ---------------------------------------------------------------- */
+/* contact widget aligns on left if no image and no social accounts */
+/* ---------------------------------------------------------------- */
 .blok.colorbg.lichtpaars.contacts .col-md-8.col-xs-8.pull-left{width: 100%;} 
 section.blok.colorbg.lichtpaars.contacts h1.pull-left span.col-md-8.col-xs-8.col-md-offset-4.col-xs-offset-4 {margin-left: 0;}
 
