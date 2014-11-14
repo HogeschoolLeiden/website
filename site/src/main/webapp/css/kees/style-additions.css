@@ -205,12 +205,16 @@ h2.noQueryResults { font-size: 1.2em; color: #23114c; font-family: 'source_sans_
 	border-top: 1px solid #c8c3d2;
 }
 
-.subnav ul li.active, .subnav ul li.active ul li.arrow-side a:after, .subnav ul li.current ul li:last-child  {
+.subnav ul li.active ul li.arrow-side a:after, .subnav ul li.current ul li:last-child  {
 	border-bottom: none;	
 }
 
 .subnav ul li.current ul li a {
 	padding-left: 15px;
+}
+
+.subnav ul li.current ul li.current ul li a, .subnav ul li.current ul li.active ul li a {
+	padding-left: 30px;
 }
 
 /* ------------ */

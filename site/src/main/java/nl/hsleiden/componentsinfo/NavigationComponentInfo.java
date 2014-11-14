@@ -12,6 +12,9 @@ public interface NavigationComponentInfo extends NavigationInfo{
     @Parameter(name = "level", displayName="begin op niveau", defaultValue="1")
     public int getLevel();
 
+    @Parameter(name = "depth", displayName="depth", defaultValue="1")
+    public int getDepth();
+
     @Parameter(name = "leftMenuBlock", displayName="do not display left navigation", defaultValue="false")
     public Boolean getLeftMenuBlock();
     

@@ -19,7 +19,7 @@
     <ul>    
       <tag:renderTopMenuItem menuItem="${parentItem}"/>
       <c:forEach items="${hst:isReadable(parentItem, 'childMenuItems') ? parentItem.childMenuItems : parentItem.menuItems}" var="item">
-        <opw:menuitem siteMenuItem="${item}" depth="1"
+        <opw:menuitem siteMenuItem="${item}" depth="${paramInfo.depth}"
           expandedClass="current"
           selectedClass="active"
           unexpandedClass="unexpanded arrow-side" leafClass="arrow-side" 
