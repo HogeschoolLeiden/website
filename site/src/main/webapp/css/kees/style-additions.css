@@ -16,7 +16,7 @@
 }
 
 /* ---------------------------------------------------------------------- */
-/* topmenu menu hovering limits */
+/* hovering limits */
 /* ---------------------------------------------------------------------- */
 @media ( min-width : 992px) {
 	.navbar .container .nav#mainnav li {
@@ -53,6 +53,27 @@
 
 .navbar .container .nav#mainnav li ul.dropdownmenu.visible-lg.visible-md.clearfix li ul li{
 	padding-left: 20px;
+}
+
+@media (min-width: 768px){
+	.navbar .container .nav#mainnav li.active {
+		border-bottom: none;
+		padding-bottom: 0;
+	}
+
+	.navbar .container .nav#mainnav li.active ul.dropdownmenu.visible-lg.visible-md{
+		margin-top: 0;
+	}
+
+	.navbar .container .nav#mainnav li.active a {
+		border-bottom: 3px solid #008383;
+		padding-bottom: 8px;
+	}
+	
+	.navbar .container .nav#mainnav li.active ul.dropdownmenu.visible-lg.visible-md a {
+		padding-bottom: 0;
+		border-bottom: none;
+	}
 }
 
 /* ------------- */
