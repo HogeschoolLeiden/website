@@ -1,16 +1,22 @@
 package nl.hsleiden.components.catalog;
 
+import java.io.InputStream;
+
+import javax.jcr.Node;
+import javax.jcr.Property;
 import javax.jcr.RepositoryException;
 
 import net.sourceforge.hstmixinsupport.DynamicProxyFactory;
 import net.sourceforge.hstmixinsupport.HstMinxinSupportInfo;
 import nl.hsleiden.beans.mixin.FormComponentMixin;
 import nl.hsleiden.componentsinfo.FormComponentInfo;
-import nl.hsleiden.utils.HslUtils;
 import nl.hsleiden.utils.Constants.WidgetConstants;
+import nl.hsleiden.utils.HslUtils;
 
 import org.hippoecm.hst.component.support.forms.FormMap;
+import org.hippoecm.hst.content.beans.standard.HippoAssetBean;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
+import org.hippoecm.hst.content.beans.standard.HippoResourceBean;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
 import org.hippoecm.hst.core.parameters.ParametersInfo;
@@ -35,6 +41,7 @@ public class FormComponent extends FormStoringEformComponent {
     public FormBean getFormBean(final HstRequest request) {
         FormBean result = null;
         FormComponentInfo parametersInfo = getConfiguration(request);
+        
 
         HippoBean selectedForm = BeanUtils.getBeanViaAbsolutePath(parametersInfo.getContentBeanPath(), request);      
         if (selectedForm == null || !(selectedForm.isHippoDocumentBean()) || !(selectedForm instanceof FormBean)) {
@@ -86,4 +93,44 @@ public class FormComponent extends FormStoringEformComponent {
             sendRedirect(redirect, request, response);
         }
     }
+
+	public static String getAttachmentFileName(HstRequest request) {
+		String result = null;
+		try {
+			HippoBean hippoAsset = getHippoAsset(request);
+			if(hippoAsset != null){
+				Node assetJcrNode = hippoAsset.getNode();
+				result = assetJcrNode.getParent().getName();
+			}
+		} catch (RepositoryException e) {
+			LOG.error("repository exception retrieving attachment file name", e);
+		}
+		return result;
+	}
+	
+	public static InputStream getAttachmentData(HstRequest request) {
+		InputStream resultStream = null;
+		try {
+			HippoBean hippoAsset = getHippoAsset(request);
+			if(hippoAsset != null){
+				Node assetJcrNode = hippoAsset.getNode();
+				Property property = assetJcrNode.getProperty("jcr:data");
+				resultStream = property.getBinary().getStream();
+			}
+		} catch (RepositoryException e) {
+			LOG.error("repository exception retrieving attachment file data", e);
+		}
+		return resultStream;
+	}
+
+	private static HippoResourceBean getHippoAsset(HstRequest request) {
+		HippoResourceBean result = null;
+		FormComponentInfo parametersInfo = new FormComponent().getConfiguration(request);
+		HippoBean hippoBean = BeanUtils.getBeanViaAbsolutePath(parametersInfo.getAttachmentBeanPath(), request);
+		if(hippoBean instanceof HippoAssetBean){
+			HippoAssetBean hippoAssetBean = (HippoAssetBean) hippoBean;
+			result = hippoAssetBean.getAsset();
+		}
+		return result;
+	}
 }

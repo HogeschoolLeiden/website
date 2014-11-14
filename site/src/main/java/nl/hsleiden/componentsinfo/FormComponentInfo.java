@@ -18,4 +18,8 @@ public interface FormComponentInfo {
     @Parameter(name = Constants.WidgetConstants.THANKS_BEAN_PATH, defaultValue = "")
     @JcrPath(isRelative = false, pickerInitialPath = Constants.WidgetConstants.INITIAL_LOCATION, pickerRemembersLastVisited=false, pickerSelectableNodeTypes = {"hsl:ArticlePage"})
     public String getThanksBeanPath();
+
+    @Parameter(name = Constants.WidgetConstants.ATTACHMENT_BEAN_PATH, defaultValue = "")
+    @JcrPath(isRelative = false, pickerInitialPath = Constants.WidgetConstants.INITIAL_ASSETS_LOCATION, pickerRemembersLastVisited=false, pickerSelectableNodeTypes = {"hippogallery:exampleAssetSet"})
+    public String getAttachmentBeanPath();
 }

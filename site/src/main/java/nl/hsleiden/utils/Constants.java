@@ -53,6 +53,7 @@ public class Constants {
         public static final String OVERVIEW_BEAN_PATH = "overviewBeanPath";
         public static final String THANKS_BEAN_PATH = "thanksBeanPath";
         public static final String OVERVIEW_LINK_LABEL = "overviewLinkLabel";
+        public static final String ATTACHMENT_BEAN_PATH = "attachmentBeanPath";
 
         public static final String CONTACT_1 = "firstContact";
         public static final String CONTACT_2 = "secondContact";
@@ -70,6 +71,7 @@ public class Constants {
         public static final String OVER_FILTER = "overFilter";
 
         public static final String INITIAL_LOCATION = "/content/documents/hsl/pages";
+        public static final String INITIAL_ASSETS_LOCATION = "/content/assets";
         public static final String INITIAL_IMAGE_FOLDER_LOCATION = "/content/gallery/hsl/beeldbank-openbaar";
         public static final String ROOT_IMAGE_FOLDER = "/content/gallery/hsl";
         public static final String DEFAULT_IMAGE_FOLDER = "/content/gallery/hsl/folder-icon.jpg";

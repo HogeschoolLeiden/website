@@ -34,4 +34,14 @@ public class FormCompoundMixinBean extends FormCompoundMixin implements FormComp
         }
         return result;
     }
+
+	@Override
+	public String getAttachmentBeanPath() {
+		String result = null;
+        HippoBean thanksBean = getFormWidgetParameters().getAttachmentPicker();
+        if(thanksBean!=null){
+            result = thanksBean.getPath();
+        }
+        return result;
+	}
 }
