@@ -1,6 +1,6 @@
-/* ------- */
-/* topmenu */
-/* ------- */
+/* ---------------------------------------------------------------------- */
+/* topmenu and topmenu menu hovering limits */
+/* ---------------------------------------------------------------------- */
 
 .nav#mainnav ul.dropdownmenu.visible-lg.visible-md.clearfix li ul li ul
 	{
@@ -13,6 +13,46 @@
 	padding-left: 0;
 	padding-bottom: 0;
 	padding-top: 0;
+}
+
+/* ---------------------------------------------------------------------- */
+/* topmenu menu hovering limits */
+/* ---------------------------------------------------------------------- */
+@media ( min-width : 992px) {
+	.navbar .container .nav#mainnav li {
+		margin-left: 0;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	
+	.navbar .container .nav#mainnav li.last {
+		padding-right: 0;
+	}
+}
+
+@media ( min-width : 1200px) {
+	.navbar .container .nav#mainnav li {
+		padding-left: 28.5px;
+		padding-right: 28.5px;
+		margin-left: 0;
+	}
+
+	.navbar .container .nav#mainnav li.last {
+		padding-right: 0;
+	}
+}
+
+.navbar .container .nav#mainnav li ul.dropdownmenu.visible-lg.visible-md.clearfix li {
+	padding-left: 0px; padding-right: 0;
+}
+
+.navbar .container .nav#mainnav li ul.dropdownmenu.visible-lg.visible-md.clearfix li,
+.navbar .container .nav#mainnav li ul.dropdownmenu.visible-lg.visible-md.clearfix li ul li {
+	padding-left: 0px; padding-right: 0;
+}
+
+.navbar .container .nav#mainnav li ul.dropdownmenu.visible-lg.visible-md.clearfix li ul li{
+	padding-left: 20px;
 }
 
 /* ------------- */
