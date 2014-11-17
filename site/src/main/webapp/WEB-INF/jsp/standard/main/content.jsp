@@ -13,23 +13,32 @@
   </c:when>
   <c:otherwise>
 
-    <article class="well well-large">
-      <hst:cmseditlink hippobean="${document}"/>
-      <header>
-        
-        <c:if test="${hst:isReadable(document, 'title') }">
-          <h1><c:out value="${document.title}"/></h1>
-        </c:if>
-        <%-- <c:if test="${hst:isReadable(document, 'subtitle') }">
-          <h2><c:out value="${document.subtitle}"/></h2>
-        </c:if>
-        <c:if test="${hst:isReadable(document, 'introduction') }">
-          <p><c:out value="${document.introduction}"/></p> 
-        </c:if> --%>
-      </header>
+    <article class="col-md-9 detail-content">
+      <div class="row">
       
-      <tag:toolbox document="${document }" />
+        <div class="col-md-8 col-sm-8 contentarea">
+          <div class="content">
+          
+            <hst:cmseditlink hippobean="${document}"/>
+            <c:if test="${hst:isReadable(document, 'title') }">
+              <h1><c:out value="${document.title}"/></h1>
+            </c:if>
+  
+            <hst:include ref="contentTop" />
+            <hst:include ref="contentBottom" />
+  
+            <tag:toolbox document="${document }" />
+  
+          </div>
+        </div>      
       
+        <aside class="col-md-4 col-sm-4 aside">
+          <hst:include ref="rightTop" />
+          <hst:include ref="right" />
+          <hst:include ref="rightBottom" />
+        </aside>
+      </div>
+    
     </article>
 
   </c:otherwise>

@@ -674,6 +674,10 @@ article.detail-content div.contentarea .content p a {
 /* ---------------------------------------------------------------------- */
 @media ( max-width : 767px) {
 	
+	.fbLikeShare{	
+	 	margin: 10px 2% !important;
+	}
+	
 	.blok.download.image {
 		width: 46%;
 	}
@@ -681,5 +685,15 @@ article.detail-content div.contentarea .content p a {
 
 @media ( min-width :768px) and (max-width: 1199px) {
 	.row .col-sm-4, .row asside .col-md-4 { padding-left: 0; padding-right: 0;}
+}
+
+/* ---------------------------------------------------------------------- */
+/* facebook like box */
+/* ---------------------------------------------------------------------- */
+.fbLikeShare{
+ 	margin-left: -30px;	
+}
+.fb-like-box.fb_iframe_widget{
+	background-color: white;
 }
 

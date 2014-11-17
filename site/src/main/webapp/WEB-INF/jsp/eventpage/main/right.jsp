@@ -19,4 +19,5 @@
   </c:otherwise>
 </c:choose>
 
+<tag:fbLikeShare document="${document}"/>
 
