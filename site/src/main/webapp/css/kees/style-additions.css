@@ -297,7 +297,7 @@ h2.noQueryResults { font-size: 1.2em; color: #23114c; font-family: 'source_sans_
 	background: center #fff;
 }
 
-.catalog.image.teasers,.blok.download.image,.blok.download.image a .img img
+.catalog.image.teasers, .blok.download.image, .blok.download.image a .img img
 	{
 	width: 100%;
 }
@@ -668,3 +668,18 @@ section.blok.colorbg.lichtpaars.contacts h1.pull-left span.col-md-8.col-xs-8.col
 article.detail-content div.contentarea .content p a {
 	color: #428bca;
 }
+
+/* ---------------------------------------------------------------------- */
+/* fix some width responsivnes related problems */
+/* ---------------------------------------------------------------------- */
+@media ( max-width : 767px) {
+	
+	.blok.download.image {
+		width: 46%;
+	}
+}
+
+@media ( min-width :768px) and (max-width: 1199px) {
+	.row .col-sm-4, .row asside .col-md-4 { padding-left: 0; padding-right: 0;}
+}
+
