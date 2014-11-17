@@ -34,10 +34,9 @@
         <div class="fb-like" 
              data-href="${url}" 
              data-width="292" 
-             data-layout="button_count" 
+             data-layout="standard" 
              data-action="like" 
-             data-show-faces="true" 
-             data-colorscheme="dark"
+             data-show-faces="true"
              data-share="true">
         </div>
         
@@ -59,10 +58,9 @@
         <div class="fb-like" 
              data-href="${url}" 
              data-width="292" 
-             data-layout="button_count" 
+             data-layout="standard" 
              data-action="like" 
              data-show-faces="true" 
-             data-colorscheme="dark"
              data-share="true">
         </div>
        
