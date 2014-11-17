@@ -1,5 +1,7 @@
 package nl.hsleiden.components;
 
+import hslbeans.HomePage;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,7 +39,7 @@ public class LanguageSwitch extends WebDocumentDetail {
 
                 List<Translation> result = getAvailbaleTranslations(request, translations);
 
-                if (result.isEmpty()) {
+                if (result.isEmpty() || bean instanceof HomePage) {
                     request.setAttribute(Attributes.NO_TRANSLATION, true);
                 } else {
                     request.setAttribute(Attributes.TRANSLATIONS, result);
@@ -72,7 +74,7 @@ public class LanguageSwitch extends WebDocumentDetail {
         boolean selected = getSelected(request, locale);
         boolean available = true;
         HippoBean translationBean = getContentBeanTranslation(request).getTranslation(locale);
-        if (translationBean == null) {
+        if (translationBean == null || translationBean instanceof HomePage) {
             available = false;
             return null;
         }
