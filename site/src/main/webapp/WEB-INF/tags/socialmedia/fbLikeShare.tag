@@ -33,9 +33,11 @@
       
         <div class="fb-like" 
              data-href="${url}" 
-             data-layout="standard" 
+             data-width="292" 
+             data-layout="button_count" 
              data-action="like" 
              data-show-faces="true" 
+             data-colorscheme="dark"
              data-share="true">
         </div>
         
@@ -53,23 +55,16 @@
             fjs.parentNode.insertBefore(js, fjs);
           }(document, 'script', 'facebook-jssdk'));
         </script>
-      
+             
         <div class="fb-like" 
              data-href="${url}" 
-             data-layout="standard" 
+             data-width="292" 
+             data-layout="button_count" 
              data-action="like" 
              data-show-faces="true" 
+             data-colorscheme="dark"
              data-share="true">
         </div>
-        
-        <div class="fb-like-box" 
-             data-href="https://www.facebook.com/FacebookDevelopers" 
-             data-colorscheme="light" 
-             data-show-faces="true" 
-             data-header="true" 
-             data-stream="false" 
-             data-show-border="true">
-       </div>
        
       </div>
     </c:otherwise>

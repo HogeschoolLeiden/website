@@ -17,7 +17,9 @@
         <div class="content">
 
           <hst:cmseditlink hippobean="${document}" />
-          <h1><span itemprop="summary"><c:out value="${document.title }" /></span></h1>
+          <h1>
+            <span itemprop="summary"><c:out value="${document.title }" /></span>
+          </h1>
           <%-- <h2> <c:out value="${document.subtitle }" escapeXml="true" /> </h2> --%>
           <hst:include ref="contentTop" />
           
