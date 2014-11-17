@@ -3,11 +3,17 @@ package nl.hsleiden.componentsinfo;
 import nl.hsleiden.utils.Constants;
 import nl.hsleiden.utils.Constants.WidgetConstants;
 
+import org.hippoecm.hst.core.parameters.FieldGroup;
+import org.hippoecm.hst.core.parameters.FieldGroupList;
 import org.hippoecm.hst.core.parameters.JcrPath;
 import org.hippoecm.hst.core.parameters.Parameter;
 
 import com.tdclighthouse.prototype.componentsinfo.MixinEnabled;
 
+@FieldGroupList({
+    @FieldGroup(titleKey = "mixin.group.title", value = { Constants.WidgetConstants.FIELD_USER_MIXIN }),
+    @FieldGroup(titleKey = "widget.group.title", value = { "title", "scope", Constants.WidgetConstants.THEMA_FILTER,
+            Constants.WidgetConstants.OVER_FILTER,}) })
 public interface EventCalendarInfo extends MixinEnabled {
 
     @Parameter(name = "title", defaultValue = WidgetConstants.WIDGET_TITLE_DEFAULT)
