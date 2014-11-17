@@ -1,0 +1,42 @@
+@media print{
+	.hulp, 
+	.fbLikeShare, 
+	footer .container, 
+	footer .secundnavbar, 
+	.col-md-4.col-sm-4.aside .blok,
+	a.btn.back,
+	div.share.clearfix a,
+	figure iframe,
+	.overzichtlijst.related { display: none; }
+	
+	.col-md-8.col-sm-8.contentarea {width: 100%; padding-right: 30px;}
+	
+	.col-md-4.col-sm-4.aside .blok.colorbg.lichtpaars { margin-left: 30px; }
+	
+	div.background.img{ width: 1000px; height: 310px; }
+
+	div.background.large.img{ width: 1000px; height: 310px; }
+	
+	.col-md-9.detail-content { margin-top: 50px; margin-left: 0; }
+	
+	footer{ border: none; }
+	
+	.detail-content .contentarea .content blockquote,
+	.mod.box.closed.downloads ul li { padding: 10px; }
+		
+	.detail-content .row .contentarea .content figure.top img,
+	.detail-content .row .contentarea .content figure.bottom img,
+	.detail-content .row .contentarea .content figure.fexibleblock.image img {
+		height: 250px;
+	}
+	
+	.detail-content .row .contentarea .content figure.left img,
+	.detail-content .row .contentarea .content figure.right img {
+		width: 95%;
+	}
+	
+	.col-md-9.detail-content{
+		margin-bottom: 0px;
+		padding-bottom: 0px;
+	}
+}
