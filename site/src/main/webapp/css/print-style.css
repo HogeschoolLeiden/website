@@ -41,6 +41,7 @@
 		padding-bottom: 0px;
 	}
 	
+	/* for chrome */
 	@media print and (-webkit-min-device-pixel-ratio:0) {
 	    
 	    .col-md-9.detail-content { margin-top: 120px; margin-left: 0; }
@@ -61,4 +62,9 @@
 	    .detail-content .contentarea .content figure.gallery.row { margin-right: 0!important; margin-left: 0!important;}
 	    .gallery.row a.col-xs-6.col-sm-4.col-md-4 {width: 32.3%!important; margin-left: 0.5%!important; margin-right: 0.5%!important;}
 	    .gallery.row a img {width: 100%!important;}
+	}
+	
+	/* for ie */
+	@media all and (-ms-high-contrast:none){
+		.col-md-9.detail-content{width: 100%!important;}
 	}

@@ -102,6 +102,12 @@
        <c:out value="${forward}"/>     
     </a>
   --%>
+  
+  <%--   
+    <a class="fa fa-print col-md-4 col-sm-4 col-xs-12" id="tool-print" title="print" href="#" onclick="window.print();return false;">
+       <span>print</span>
+    </a> 
+  --%>
     
 </div>
 </c:if>
