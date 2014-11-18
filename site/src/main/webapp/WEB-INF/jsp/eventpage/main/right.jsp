@@ -18,6 +18,3 @@
     <tag:renderDate document="${document}" dateClass="datum large info"/>
   </c:otherwise>
 </c:choose>
-
-<tag:fbLikeShare document="${document}"/>
-

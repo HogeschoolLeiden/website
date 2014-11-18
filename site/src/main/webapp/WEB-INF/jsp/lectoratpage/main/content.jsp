@@ -19,7 +19,7 @@
       <%-- <p class="intro">
         <c:out value="${document.introduction }" />
       </p> --%>
-      <tag:flexibleblock content="${document.flexibleblock }" />
+      <tag:flexibleblock content="${document.flexibleblock }" document="${document}"/>
       <tag:toolbox document="${document }"/>
     </div>
       

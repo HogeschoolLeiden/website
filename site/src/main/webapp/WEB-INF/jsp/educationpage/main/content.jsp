@@ -24,7 +24,7 @@
           <c:out value="${document.introduction }" />
         </p> --%>
 
-        <tag:flexibleblock content="${document.flexibleblock }" />
+        <tag:flexibleblock content="${document.flexibleblock }" document="${document}" />
 
         <hst:include ref="contentBottom" />
         <tag:toolbox document="${document }" />

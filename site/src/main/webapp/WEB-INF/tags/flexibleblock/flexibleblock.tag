@@ -8,6 +8,7 @@
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 
 <%@ attribute name="content" type="java.util.List" rtexprvalue="true" required="true" %>
+<%@ attribute name="document" type="org.hippoecm.hst.content.beans.standard.HippoBean" rtexprvalue="true" required="true"%>
 <%@ attribute name="event" type="java.lang.Boolean" rtexprvalue="true" required="false" %>
 <%@ attribute name="flexibleblockid" type="java.lang.String" rtexprvalue="true" required="false" %>
 
@@ -38,6 +39,9 @@
 		</c:when>
 		<c:when test="${block['class'].name == 'hslbeans.Testimonial' }">
 			<tag:testimonialblock content="${block }"/>
+		</c:when>
+		<c:when test="${block['class'].name == 'hslbeans.FbLikeShare' }">
+			<tag:facebookShareBlock document="${document}"/>
 		</c:when>
 	</c:choose>
 	<c:set var="tagcount" value="${tagcount + 1 }" />

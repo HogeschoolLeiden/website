@@ -32,7 +32,7 @@
                 <h2 class="media-heading"><c:out value="${item.title }"/></h2>
               </div>
               
-              <tag:flexibleblock content="${item.faqflexibleblock }"/>
+              <tag:flexibleblock content="${item.faqflexibleblock }" document="${document}"/>
              
 
           </article>

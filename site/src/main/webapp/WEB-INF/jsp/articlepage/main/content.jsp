@@ -19,7 +19,7 @@
         <h1> <c:out value="${document.title }" escapeXml="true" /> </h1>
         <hst:include ref="contentTop" />
 
-        <tag:flexibleblock content="${document.flexibleblock }" />
+        <tag:flexibleblock content="${document.flexibleblock }" document="${document}"/>
         
         <hst:include ref="contentBottom" />
         <tag:toolbox document="${document }" />

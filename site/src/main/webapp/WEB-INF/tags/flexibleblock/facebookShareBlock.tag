@@ -1,19 +1,18 @@
-<%@ tag trimDirectiveWhitespaces="true"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-<%@ taglib prefix="hst" uri="http://www.hippoecm.org/jsp/hst/core"%>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
-<%@ taglib prefix="opw" uri="http://open-web.nl/hippo/prototype"%>
-<%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
+<%@tag description="display image in header width" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
 
-<hst:setBundle basename="nl.hsleiden.sharebox.Messages"/>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ taglib prefix="hst" uri="http://www.hippoecm.org/jsp/hst/core"%>
+<%@ taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml"%>
+<%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
+<%@ taglib prefix="opw" uri="http://open-web.nl/hippo/prototype"%>
+
+<hst:setBundle basename="nl.hsleiden.general.Messages"/>
 
 <%@ attribute name="document" required="true" type="org.hippoecm.hst.content.beans.standard.HippoBean" rtexprvalue="true"%>
 
-<c:if test="${hst:isReadable(document, 'share') && document.share}">
-
-  <c:set var="url">
+<c:set var="url">
     <hst:link hippobean="${document }" fullyQualified="true" />
   </c:set>
   
@@ -33,7 +32,7 @@
       
         <div class="fb-like" 
              data-href="${url}" 
-             data-width="292" 
+             data-width="390" 
              data-layout="standard" 
              data-action="like" 
              data-show-faces="true"
@@ -57,7 +56,7 @@
              
         <div class="fb-like" 
              data-href="${url}" 
-             data-width="292" 
+             data-width="390" 
              data-layout="standard" 
              data-action="like" 
              data-show-faces="true" 
@@ -67,4 +66,3 @@
       </div>
     </c:otherwise>
   </c:choose>
-</c:if>

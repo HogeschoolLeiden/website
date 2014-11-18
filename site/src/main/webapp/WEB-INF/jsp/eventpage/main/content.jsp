@@ -33,7 +33,7 @@
           </p> 
           --%>
 
-          <tag:flexibleblock content="${document.flexibleblock }" />
+          <tag:flexibleblock content="${document.flexibleblock }" document="${document}"/>
 
           <hst:include ref="contentBottom" />
           <tag:toolbox document="${document }" />
