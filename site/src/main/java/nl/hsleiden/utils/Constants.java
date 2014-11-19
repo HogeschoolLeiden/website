@@ -120,6 +120,8 @@ public class Constants {
 
     public static class Values extends ValuesConstants {
 
+    	public static final String DEFAULT_IMAGE_ALT = "Hogeschool Leiden";
+    	
         private Values() {
         }
     }
