@@ -95,10 +95,10 @@
           <sv:value>hipposysedit:field</sv:value>
         </sv:property>
         <sv:property sv:name="hipposysedit:mandatory" sv:type="Boolean">
-          <sv:value>false</sv:value>
+          <sv:value>true</sv:value>
         </sv:property>
         <sv:property sv:name="hipposysedit:multiple" sv:type="Boolean">
-          <sv:value>false</sv:value>
+          <sv:value>true</sv:value>
         </sv:property>
         <sv:property sv:name="hipposysedit:ordered" sv:type="Boolean">
           <sv:value>false</sv:value>
@@ -113,7 +113,6 @@
           <sv:value>DynamicDropdown</sv:value>
         </sv:property>
         <sv:property sv:name="hipposysedit:validators" sv:type="String" sv:multiple="true">
-          <sv:value>non-empty</sv:value>
           <sv:value>required</sv:value>
         </sv:property>
       </sv:node>
@@ -223,7 +222,7 @@
         <sv:value/>
       </sv:property>
       <sv:property sv:name="hsl:educationtags" sv:type="String" sv:multiple="true"/>
-      <sv:property sv:name="hsl:formtag" sv:type="String">
+      <sv:property sv:name="hsl:formtag" sv:type="String" sv:multiple="true">
         <sv:value/>
       </sv:property>
       <sv:property sv:name="hsl:hideFromSearch" sv:type="Boolean">
@@ -731,21 +730,39 @@
           <sv:value>frontend:plugin</sv:value>
         </sv:property>
         <sv:property sv:name="caption" sv:type="String">
-          <sv:value>Vorm Tag</sv:value>
+          <sv:value>Vorm Tags</sv:value>
+        </sv:property>
+        <sv:property sv:name="engine" sv:type="String">
+          <sv:value>${engine}</sv:value>
         </sv:property>
         <sv:property sv:name="field" sv:type="String">
           <sv:value>formtag</sv:value>
         </sv:property>
-        <sv:property sv:name="hint" sv:type="String">
-          <sv:value/>
+        <sv:property sv:name="mode" sv:type="String">
+          <sv:value>${mode}</sv:value>
+        </sv:property>
+        <sv:property sv:name="model.compareTo" sv:type="String">
+          <sv:value>${model.compareTo}</sv:value>
+        </sv:property>
+        <sv:property sv:name="multiselect.type" sv:type="String">
+          <sv:value>palette</sv:value>
         </sv:property>
         <sv:property sv:name="plugin.class" sv:type="String">
-          <sv:value>org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin</sv:value>
+          <sv:value>org.onehippo.forge.selection.frontend.plugin.DynamicMultiSelectPlugin</sv:value>
+        </sv:property>
+        <sv:property sv:name="validator.id" sv:type="String">
+          <sv:value>${validator.id}</sv:value>
+        </sv:property>
+        <sv:property sv:name="valuelist.provider" sv:type="String">
+          <sv:value>service.valuelist.default</sv:value>
         </sv:property>
         <sv:property sv:name="wicket.id" sv:type="String">
           <sv:value>${cluster.id}.left.item</sv:value>
         </sv:property>
-        <sv:node sv:name="cluster.options">
+        <sv:property sv:name="wicket.model" sv:type="String">
+          <sv:value>${wicket.model}</sv:value>
+        </sv:property>
+        <sv:node sv:name="valuelist.options">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>frontend:pluginconfig</sv:value>
           </sv:property>
@@ -754,7 +771,7 @@
           </sv:property>
         </sv:node>
       </sv:node>
-      
+            
       <sv:node sv:name="educationtags">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>frontend:plugin</sv:value>
