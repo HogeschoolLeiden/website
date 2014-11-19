@@ -10,6 +10,7 @@ import nl.hsleiden.beans.mixin.RelatedPersMixin;
 import nl.hsleiden.componentsinfo.RelatedEventsInfo;
 import nl.hsleiden.componentsinfo.RelatedItemsInfo;
 import nl.hsleiden.componentsinfo.RelatedPersInfo;
+import nl.hsleiden.utils.HslUtils;
 import nl.hsleiden.utils.Constants.WidgetConstants;
 
 import org.hippoecm.hst.content.beans.query.HstQuery;
@@ -52,7 +53,9 @@ public class RelatedPers extends RelatedItems {
         RelatedItemsInfo parametersInfo = this.<RelatedEventsInfo> getComponentParametersInfo(request);
         if (parametersInfo.getUseMixin() != null && parametersInfo.getUseMixin() 
                 && request.getRequestContext().getContentBean() != null) {
-            HippoBean proxy = BeanUtils.getMixinProxy(request.getRequestContext().getContentBean());
+        	
+        	HippoBean contentBean = HslUtils.getBean(request);
+            HippoBean proxy = BeanUtils.getMixinProxy(contentBean);
             if (proxy instanceof RelatedPersMixin) {
                 parametersInfo = ((RelatedPersMixin) proxy).getRelatedPersCompoundMixin();
             }

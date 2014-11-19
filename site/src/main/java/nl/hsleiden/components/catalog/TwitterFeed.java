@@ -11,6 +11,7 @@ import nl.hsleiden.beans.TweetStatus;
 import nl.hsleiden.beans.mixin.TwitterMixin;
 import nl.hsleiden.componentsinfo.TwitterFeedInfo;
 import nl.hsleiden.utils.Constants;
+import nl.hsleiden.utils.HslUtils;
 import nl.hsleiden.utils.TwitterUtils;
 import nl.hsleiden.utils.Constants.WidgetConstants;
 
@@ -106,7 +107,9 @@ public class TwitterFeed extends AjaxEnabledComponent {
         TwitterFeedInfo paramInfo = this.<TwitterFeedInfo> getComponentParametersInfo(request);
         if (paramInfo.getUseMixin() != null && paramInfo.getUseMixin() 
                 && request.getRequestContext().getContentBean() != null) {
-            HippoBean proxy = BeanUtils.getMixinProxy(request.getRequestContext().getContentBean());
+        	
+        	HippoBean contentBean = HslUtils.getBean(request);
+        	HippoBean proxy = BeanUtils.getMixinProxy(contentBean);
             if (proxy instanceof TwitterMixin) {
                 paramInfo = ((TwitterMixin) proxy).getTwitterCompoundMixin();
             }

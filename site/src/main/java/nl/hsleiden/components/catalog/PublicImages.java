@@ -11,6 +11,7 @@ import javax.jcr.RepositoryException;
 
 import nl.hsleiden.beans.mixin.PublicImagesMixin;
 import nl.hsleiden.componentsinfo.PublicImagesInfo;
+import nl.hsleiden.utils.HslUtils;
 import nl.hsleiden.utils.Constants.Attributes;
 import nl.hsleiden.utils.Constants.Parameters;
 import nl.hsleiden.utils.Constants.WidgetConstants;
@@ -146,7 +147,9 @@ public class PublicImages extends AjaxEnabledComponent {
         PublicImagesInfo paramInfo = this.<PublicImagesInfo> getComponentParametersInfo(request);
         if (paramInfo.getUseMixin() != null && paramInfo.getUseMixin()
                 && request.getRequestContext().getContentBean() != null) {
-            HippoBean proxy = BeanUtils.getMixinProxy(request.getRequestContext().getContentBean());
+        	
+        	HippoBean contentBean = HslUtils.getBean(request);
+        	HippoBean proxy = BeanUtils.getMixinProxy(contentBean);
             if (proxy instanceof PublicImagesMixin) {
                 paramInfo = ((PublicImagesMixin) proxy).getPublicImagesCompoundMixinBean();
             }

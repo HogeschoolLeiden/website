@@ -18,10 +18,11 @@
   <%-- <hst:include ref="top-container" /> --%>
   <div class="container">
 	<div class="row">
-
+      
 	  <c:if test="${pageContext.request.requestContext.contentBean['class'].name == 'hslbeans.OverviewPage' or 
                     pageContext.request.requestContext.contentBean['class'].name == 'hslbeans.NewsOverviewPage' or
-                    pageContext.request.requestContext.contentBean['class'].name == 'hslbeans.EventsOverviewPage'}">   
+                    pageContext.request.requestContext.contentBean['class'].name == 'hslbeans.EventsOverviewPage' or   
+                    pageContext.request.requestContext.contentBean['class'].name == 'org.hippoecm.hst.content.beans.standard.facetnavigation.HippoFacetSubNavigation'}">   
         <tag:highlightedItem highLightedItem="${model.document.highLightedItem }"/>
       </c:if>
        

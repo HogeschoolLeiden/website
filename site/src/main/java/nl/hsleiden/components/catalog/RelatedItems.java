@@ -53,7 +53,9 @@ public abstract class RelatedItems extends AjaxEnabledComponent {
         RelatedItemsInfo parametersInfo = this.<RelatedItemsInfo> getComponentParametersInfo(request);
         if (parametersInfo.getUseMixin() != null && parametersInfo.getUseMixin() 
                 && request.getRequestContext().getContentBean() != null) {
-            HippoBean proxy = BeanUtils.getMixinProxy(request.getRequestContext().getContentBean());
+        	
+        	HippoBean contentBean = HslUtils.getBean(request);
+        	HippoBean proxy = BeanUtils.getMixinProxy(contentBean);
             if (proxy instanceof RelatedItemsMixin) {
                 parametersInfo = ((RelatedItemsMixin) proxy).getRelatedCompoundMixin();
             }

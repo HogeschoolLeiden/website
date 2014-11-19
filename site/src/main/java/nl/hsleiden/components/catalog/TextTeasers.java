@@ -7,6 +7,7 @@ import javax.jcr.RepositoryException;
 
 import nl.hsleiden.beans.mixin.TextTeasersMixin;
 import nl.hsleiden.componentsinfo.TextTeasersInfo;
+import nl.hsleiden.utils.HslUtils;
 
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.core.component.HstComponentException;
@@ -44,13 +45,13 @@ public class TextTeasers extends Teasers {
         TextTeasersInfo paramInfo = this.<TextTeasersInfo> getComponentParametersInfo(request);
         if (paramInfo.getUseMixin() != null && request.getRequestContext().getContentBean() != null 
                 && paramInfo.getUseMixin()) {
-            HippoBean proxy = BeanUtils.getMixinProxy(request.getRequestContext().getContentBean());
+        	
+        	HippoBean contentBean = HslUtils.getBean(request);
+        	HippoBean proxy = BeanUtils.getMixinProxy(contentBean);
             if (proxy instanceof TextTeasersMixin) {
                 paramInfo = ((TextTeasersMixin) proxy).getTextTeasersCompoundMixinBean();
             }
         }
         return paramInfo;
     }
-
-    
 }

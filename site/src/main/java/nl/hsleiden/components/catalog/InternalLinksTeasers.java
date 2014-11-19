@@ -7,6 +7,7 @@ import javax.jcr.RepositoryException;
 
 import nl.hsleiden.beans.mixin.InternalLinksTeasersMixin;
 import nl.hsleiden.componentsinfo.InternalLinksTeasersInfo;
+import nl.hsleiden.utils.HslUtils;
 
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.core.component.HstComponentException;
@@ -44,7 +45,9 @@ public class InternalLinksTeasers extends Teasers {
         InternalLinksTeasersInfo paramInfo = this.<InternalLinksTeasersInfo> getComponentParametersInfo(request);
         if (paramInfo.getUseMixin() != null && request.getRequestContext().getContentBean() != null 
                 && paramInfo.getUseMixin()) {
-            HippoBean proxy = BeanUtils.getMixinProxy(request.getRequestContext().getContentBean());
+        	
+        	HippoBean contentBean = HslUtils.getBean(request);
+            HippoBean proxy = BeanUtils.getMixinProxy(contentBean);
             if (proxy instanceof InternalLinksTeasersMixin) {
                 paramInfo = ((InternalLinksTeasersMixin) proxy).getInternalLinksTeasersCompoundMixinBean();
             }

@@ -1,5 +1,7 @@
 package nl.hsleiden.utils;
 
+import nl.hsleiden.tags.ParametersFunctions;
+
 import org.apache.commons.lang.StringUtils;
 import org.hippoecm.hst.configuration.hosting.Mount;
 import org.hippoecm.hst.content.beans.ObjectBeanManagerException;
@@ -8,11 +10,15 @@ import org.hippoecm.hst.content.beans.query.HstQuery;
 import org.hippoecm.hst.content.beans.query.exceptions.FilterException;
 import org.hippoecm.hst.content.beans.query.filter.Filter;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
+import org.hippoecm.hst.content.beans.standard.HippoFacetNavigationBean;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.linking.HstLink;
 import org.hippoecm.hst.core.request.HstRequestContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import com.tdclighthouse.prototype.utils.BeanUtils;
+import com.tdclighthouse.prototype.utils.Constants.HstParametersConstants;
 
 public class HslUtils {
 
@@ -81,4 +87,13 @@ public class HslUtils {
         }
         return f;
     }
+    
+    public static HippoBean getBean(HstRequest request) {
+		HippoBean contentBean = request.getRequestContext().getContentBean();
+		if(contentBean instanceof HippoFacetNavigationBean){
+			contentBean = BeanUtils.getContentBeanFromParameter(request, 
+				ParametersFunctions.getSitemapConfigParameter(request, HstParametersConstants.CONTENT_BEAN_PATH));
+		}
+		return contentBean;
+	}
 }

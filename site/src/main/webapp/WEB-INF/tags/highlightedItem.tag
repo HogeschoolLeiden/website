@@ -10,7 +10,7 @@
 <%@ attribute name="highLightedItem" type="hslbeans.WebPage" required="true" %>
 
 <article class="highlighted col-md-9">
-  <c:if test="${not empty highLightedItem}">
+  <c:if test="${not empty highLightedItem and not pageContext.request.requestContext.contentBean['class'].name == 'org.hippoecm.hst.content.beans.standard.facetnavigation.HippoFacetSubNavigation'}">
       <hst:cmseditlink hippobean="${highLightedItem}" />
       <hst:link hippobean="${highLightedItem }" var="link" />
       <div class="row">

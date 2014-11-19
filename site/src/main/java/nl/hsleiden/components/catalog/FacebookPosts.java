@@ -10,6 +10,7 @@ import javax.jcr.RepositoryException;
 import nl.hsleiden.beans.FacebookConfig;
 import nl.hsleiden.beans.mixin.FacebookPostsMixin;
 import nl.hsleiden.componentsinfo.FacebookPostsInfo;
+import nl.hsleiden.utils.HslUtils;
 
 import org.apache.commons.lang3.StringUtils;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
@@ -75,7 +76,9 @@ public class FacebookPosts extends AjaxEnabledComponent {
         FacebookPostsInfo paramInfo = this.<FacebookPostsInfo> getComponentParametersInfo(request);
         if (paramInfo.getUseMixin() != null && request.getRequestContext().getContentBean() != null
                 && paramInfo.getUseMixin()) {
-            HippoBean proxy = BeanUtils.getMixinProxy(request.getRequestContext().getContentBean());
+        	
+        	HippoBean contentBean = HslUtils.getBean(request);
+            HippoBean proxy = BeanUtils.getMixinProxy(contentBean);
             if (proxy instanceof FacebookPostsMixin) {
                 paramInfo = ((FacebookPostsMixin) proxy).getFacebookPostsCompoundMixin();
             }

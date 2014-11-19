@@ -7,6 +7,7 @@ import javax.jcr.RepositoryException;
 
 import nl.hsleiden.beans.mixin.ExternalLinksTeasersMixin;
 import nl.hsleiden.componentsinfo.ExternalLinksTeasersInfo;
+import nl.hsleiden.utils.HslUtils;
 
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.core.component.HstComponentException;
@@ -44,7 +45,9 @@ public class ExternalLinksTeasers extends Teasers {
         ExternalLinksTeasersInfo paramInfo = this.<ExternalLinksTeasersInfo> getComponentParametersInfo(request);
         if (paramInfo.getUseMixin() != null && request.getRequestContext().getContentBean() != null 
                 && paramInfo.getUseMixin()) {
-            HippoBean proxy = BeanUtils.getMixinProxy(request.getRequestContext().getContentBean());
+        	
+        	HippoBean contentBean = HslUtils.getBean(request);
+            HippoBean proxy = BeanUtils.getMixinProxy(contentBean);
             if (proxy instanceof ExternalLinksTeasersMixin) {
                 paramInfo = ((ExternalLinksTeasersMixin) proxy).getExternalLinksTeasersCompoundMixinBean();
             }

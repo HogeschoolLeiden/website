@@ -8,6 +8,7 @@ import nl.hsleiden.beans.EventPageBean;
 import nl.hsleiden.beans.mixin.RelatedEventsMixin;
 import nl.hsleiden.componentsinfo.RelatedEventsInfo;
 import nl.hsleiden.componentsinfo.RelatedItemsInfo;
+import nl.hsleiden.utils.HslUtils;
 import nl.hsleiden.utils.Constants.WidgetConstants;
 
 import org.hippoecm.hst.content.beans.query.HstQuery;
@@ -50,7 +51,9 @@ public class RelatedEvents extends RelatedItems {
         RelatedItemsInfo parametersInfo = this.<RelatedEventsInfo> getComponentParametersInfo(request);
         if (parametersInfo.getUseMixin() != null && parametersInfo.getUseMixin() 
                 && request.getRequestContext().getContentBean() != null) {
-            HippoBean proxy = BeanUtils.getMixinProxy(request.getRequestContext().getContentBean());
+        	
+        	HippoBean contentBean = HslUtils.getBean(request);
+        	HippoBean proxy = BeanUtils.getMixinProxy(contentBean);
             if (proxy instanceof RelatedEventsMixin) {
                 parametersInfo = ((RelatedEventsMixin) proxy).getRelatedEventsCompoundMixin();
             }
