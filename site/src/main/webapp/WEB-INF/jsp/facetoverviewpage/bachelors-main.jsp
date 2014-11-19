@@ -60,8 +60,22 @@
                         <h1 class="media-heading"><c:out value="${item.title }"/></h1>
                         <p><c:out value="${item.introduction }"/></p>
                         <ul class="tags">
-                          <li><c:out value="${item.educationtags[0] }"/></li>
-                          <li><c:out value="${item.formtag.firstItem.label }"/></li>
+                          <li> 
+                            <c:forEach items="${item.educationtagsLabels}" var="educationTagItem" varStatus="loop">
+                              <c:out value="${educationTagItem}"/>
+                              <c:if test="${not loop.last}">
+                                <c:out value=" , "/>
+                              </c:if>
+                            </c:forEach>
+                          </li>
+                          <li>
+                            <c:forEach items="${item.formtagLabels}" var="formTagItem"  varStatus="loop">
+                              <c:out value="${formTagItem}"/>
+                              <c:if test="${not loop.last}">
+                                <c:out value=" , "/>
+                              </c:if>
+                            </c:forEach>
+                          </li>
                         </ul>   
                       </div>
                     </a>     
