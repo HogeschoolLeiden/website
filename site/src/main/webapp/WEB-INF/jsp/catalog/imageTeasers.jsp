@@ -45,11 +45,15 @@
                  <img src="<hst:link hippobean="${item.image.teaserImage }" />" 
                       alt="<c:out value="${item.image.alt }" escapeXml="true" />" />
               </div>
+              
               <c:if test="${not empty item.icon }">
                 <img class="icon imageTeaser" src="<hst:link hippobean="${item.icon.listImageMedium }" />" 
                      alt="<c:out value="${item.icon.alt }" escapeXml="true" />" />
               </c:if>
-              <span class="btn"><c:out value="${item.externallink.linkTitle }" escapeXml="true" /></span>
+              
+              <span class="${item.darkLinkBackground ? 'btn darkLinkBackground' : 'btn'}">
+                <c:out value="${item.externallink.linkTitle }" escapeXml="true" />
+              </span>
           </a>
         </c:when>
 
@@ -61,11 +65,15 @@
                  <img src="<hst:link hippobean="${item.image.teaserImage }" />" 
                       alt="<c:out value="${item.image.alt }" escapeXml="true" />" />
               </div>
+              
               <c:if test="${not empty item.icon }">
                 <img class="icon imageTeaser" src="<hst:link hippobean="${item.icon.listImageMedium }" />" 
                      alt="<c:out value="${item.icon.alt }" escapeXml="true" />" />
               </c:if>
-              <span class="btn"><c:out value="${item.internallink.linkTitle }" escapeXml="true" /></span>
+              
+              <span class="${item.darkLinkBackground ? 'btn darkLinkBackground' : 'btn'}">
+                <c:out value="${item.internallink.linkTitle }" escapeXml="true" />
+              </span>
           </a>
         </c:when>
         
