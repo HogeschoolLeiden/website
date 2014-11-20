@@ -16,33 +16,35 @@ import org.slf4j.LoggerFactory;
 
 public abstract class StringFieldCmsValidator extends AbstractCmsValidator {
 
-	private static final long serialVersionUID = 1L;
-	private static final Logger LOG = LoggerFactory.getLogger(StringFieldCmsValidator.class);
-	
-	public StringFieldCmsValidator(IPluginContext context, IPluginConfig config) {
-		super(context, config);
-	}
+    private static final long serialVersionUID = 1L;
+    private static final Logger LOG = LoggerFactory.getLogger(StringFieldCmsValidator.class);
 
-	@Override
-	public void preValidation(IFieldValidator type) throws ValidationException {
-		if (!"String".equals(type.getFieldType().getType())) {
-		    LOG.error("Cannot count charachters of field: " + type.getFieldType().getName() + " of type: " + type.getFieldType().getType());
-			throw new ValidationException("Invalid validation exception; cannot validate non-string field for charachter length");
-	    }
-	}
+    public StringFieldCmsValidator(IPluginContext context, IPluginConfig config) {
+        super(context, config);
+    }
 
-	@Override
-	public Set<Violation> validate(IFieldValidator fieldValidator,
-			JcrNodeModel model, @SuppressWarnings("rawtypes") IModel childModel) throws ValidationException {
-		Set<Violation> violations = new HashSet<Violation>();
+    @Override
+    public void preValidation(IFieldValidator type) throws ValidationException {
+        if (!"String".equals(type.getFieldType().getType())) {
+            LOG.error("Cannot count charachters of field: " + type.getFieldType().getName() + " of type: "
+                    + type.getFieldType().getType());
+            throw new ValidationException(
+                    "Invalid validation exception; cannot validate non-string field for charachter length");
+        }
+    }
+
+    @Override
+    public Set<Violation> validate(IFieldValidator fieldValidator, JcrNodeModel model,
+            @SuppressWarnings("rawtypes") IModel childModel) throws ValidationException {
+        Set<Violation> violations = new HashSet<Violation>();
         String value = (String) childModel.getObject();
-        
+
         checkViolations(fieldValidator, childModel, violations, value);
 
         return violations;
-	}
+    }
 
-	protected abstract void checkViolations(IFieldValidator fieldValidator,
-			@SuppressWarnings("rawtypes") IModel childModel, Set<Violation> violations, String value)
-			throws ValidationException;
+    protected abstract void checkViolations(IFieldValidator fieldValidator,
+            @SuppressWarnings("rawtypes") IModel childModel, Set<Violation> violations, String value)
+            throws ValidationException;
 }

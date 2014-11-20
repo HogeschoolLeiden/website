@@ -43,7 +43,7 @@ public class FacebookPosts extends AjaxEnabledComponent {
             FacebookPostsInfo info = getConfiguration(request);
             if (StringUtils.isNotBlank(info.getAccount())) {
                 AccessToken token = getOauthToken();
-                
+
                 if (token != null) {
                     List<Post> posts = getPosts(token.getAccessToken(), info);
                     model.put("posts", posts);
@@ -61,9 +61,10 @@ public class FacebookPosts extends AjaxEnabledComponent {
     }
 
     private List<Post> getPosts(String token, FacebookPostsInfo info) throws IOException {
-        
+
         FacebookClient facebookClient = new DefaultFacebookClient(token);
-        Connection<Post> fetchConnection = facebookClient.fetchConnection(info.getAccount() + "/posts", Post.class, Parameter.with("limit", info.getLimit()));
+        Connection<Post> fetchConnection = facebookClient.fetchConnection(info.getAccount() + "/posts", Post.class,
+                Parameter.with("limit", info.getLimit()));
         List<Post> data = fetchConnection.getData();
         return data;
     }
@@ -76,8 +77,8 @@ public class FacebookPosts extends AjaxEnabledComponent {
         FacebookPostsInfo paramInfo = this.<FacebookPostsInfo> getComponentParametersInfo(request);
         if (paramInfo.getUseMixin() != null && request.getRequestContext().getContentBean() != null
                 && paramInfo.getUseMixin()) {
-        	
-        	HippoBean contentBean = HslUtils.getBean(request);
+
+            HippoBean contentBean = HslUtils.getBean(request);
             HippoBean proxy = BeanUtils.getMixinProxy(contentBean);
             if (proxy instanceof FacebookPostsMixin) {
                 paramInfo = ((FacebookPostsMixin) proxy).getFacebookPostsCompoundMixin();

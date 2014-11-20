@@ -40,41 +40,41 @@ public class TwitterFeed extends AjaxEnabledComponent {
 
     @Override
     public Map<String, Object> getModel(HstRequest request, HstResponse response) {
-        
+
         Map<String, Object> model = new HashMap<String, Object>();
         try {
             TwitterFeedInfo parametersInfo = getConfiguration(request);
             model.put(Constants.Attributes.PARAM_INFO, parametersInfo);
-    
+
             String from = parametersInfo.getFrom();
             String searchQuery = parametersInfo.getQuery();
             String completeQuery = "";
-    
+
             if (from != null && !from.isEmpty()) {
                 completeQuery += "from:" + from + " ";
             }
             if (searchQuery != null && !searchQuery.isEmpty()) {
                 completeQuery += searchQuery;
             }
-    
-            if(parametersInfo.getLimit()!=0){                
+
+            if (parametersInfo.getLimit() != 0) {
                 model.put("tweets", getTweets(completeQuery, parametersInfo, request));
-            }else{
-               request.setAttribute(WidgetConstants.WEB_MASTER_MESSAGE, "webmaster.0.tweets.message"); 
+            } else {
+                request.setAttribute(WidgetConstants.WEB_MASTER_MESSAGE, "webmaster.0.tweets.message");
             }
-            
+
             return model;
         } catch (RepositoryException e) {
             LOG.error(e.getMessage(), e);
             throw new HstComponentException(e.getMessage(), e);
         }
     }
-    
+
     private List<TweetStatus> getTweets(String completeQuery, TwitterFeedInfo info, HstRequest request) {
-        
+
         List<TweetStatus> result = new ArrayList<TweetStatus>();
-        
-        if(!completeQuery.isEmpty()){
+
+        if (!completeQuery.isEmpty()) {
             Twitter twitter = TwitterFactory.getSingleton();
             Query query = new Query(completeQuery);
             LOG.debug("Twitter feed query: " + completeQuery);
@@ -84,11 +84,11 @@ public class TwitterFeed extends AjaxEnabledComponent {
                 queryResult = twitter.search(query);
                 List<Status> statuses = queryResult.getTweets();
                 populateTweetsList(result, statuses, info);
-                
+
             } catch (TwitterException e) {
                 LOG.error("Error while retrieving Tweets.", e);
             }
-        }else{
+        } else {
             request.setAttribute(WidgetConstants.WEB_MASTER_MESSAGE, "webmaster.notweets.message");
         }
         return result;
@@ -102,14 +102,14 @@ public class TwitterFeed extends AjaxEnabledComponent {
             result.add(ts);
         }
     }
-    
+
     private TwitterFeedInfo getConfiguration(HstRequest request) throws RepositoryException {
         TwitterFeedInfo paramInfo = this.<TwitterFeedInfo> getComponentParametersInfo(request);
-        if (paramInfo.getUseMixin() != null && paramInfo.getUseMixin() 
+        if (paramInfo.getUseMixin() != null && paramInfo.getUseMixin()
                 && request.getRequestContext().getContentBean() != null) {
-        	
-        	HippoBean contentBean = HslUtils.getBean(request);
-        	HippoBean proxy = BeanUtils.getMixinProxy(contentBean);
+
+            HippoBean contentBean = HslUtils.getBean(request);
+            HippoBean proxy = BeanUtils.getMixinProxy(contentBean);
             if (proxy instanceof TwitterMixin) {
                 paramInfo = ((TwitterMixin) proxy).getTwitterCompoundMixin();
             }

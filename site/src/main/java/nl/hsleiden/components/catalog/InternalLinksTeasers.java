@@ -26,7 +26,7 @@ public class InternalLinksTeasers extends Teasers {
 
     public Map<String, Object> getModel(HstRequest request, HstResponse response) {
         try {
-            InternalLinksTeasersInfo parametersInfo = getConfiguration(request);    
+            InternalLinksTeasersInfo parametersInfo = getConfiguration(request);
             return populateModel(request, parametersInfo);
         } catch (RepositoryException e) {
             LOG.error(e.getMessage(), e);
@@ -40,13 +40,13 @@ public class InternalLinksTeasers extends Teasers {
         super.addItemsToModel(request, model, parametersInfo, "webmaster.no.intlinks.teasers.message");
         return model;
     }
-    
+
     private InternalLinksTeasersInfo getConfiguration(HstRequest request) throws RepositoryException {
         InternalLinksTeasersInfo paramInfo = this.<InternalLinksTeasersInfo> getComponentParametersInfo(request);
-        if (paramInfo.getUseMixin() != null && request.getRequestContext().getContentBean() != null 
+        if (paramInfo.getUseMixin() != null && request.getRequestContext().getContentBean() != null
                 && paramInfo.getUseMixin()) {
-        	
-        	HippoBean contentBean = HslUtils.getBean(request);
+
+            HippoBean contentBean = HslUtils.getBean(request);
             HippoBean proxy = BeanUtils.getMixinProxy(contentBean);
             if (proxy instanceof InternalLinksTeasersMixin) {
                 paramInfo = ((InternalLinksTeasersMixin) proxy).getInternalLinksTeasersCompoundMixinBean();

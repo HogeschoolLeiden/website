@@ -16,24 +16,25 @@ import com.tdclighthouse.prototype.utils.BeanUtils;
 
 @ParametersInfo(type = RelatedPersInfo.class)
 public class RelatedPers extends RelatedItems {
-    
+
     @Override
     protected HstQuery createQuery(HstRequest request, RelatedItemsInfo parametersInfo) throws QueryException {
-        
+
         HstQuery result = null;
         HippoBean scope = BeanUtils.getBeanViaAbsolutePath(parametersInfo.getContentBeanPath(), request);
-        if(scope!=null){            
+        if (scope != null) {
             result = request.getRequestContext().getQueryManager().createQuery(scope, PersPage.JCR_TYPE);
-        }else{
+        } else {
             request.setAttribute(WidgetConstants.WEB_MASTER_MESSAGE, "webmaster.nofolder.message");
         }
-        return result; 
+        return result;
     }
-    
+
     protected RelatedItemsInfo getParametersFromMixin(RelatedItemsInfo parametersInfo, HippoBean proxy) {
-    	if (proxy instanceof RelatedPersMixin) {
-            parametersInfo = ((RelatedPersMixin) proxy).getRelatedPersCompoundMixin();
+        RelatedItemsInfo result = parametersInfo;
+        if (proxy instanceof RelatedPersMixin) {
+            result = ((RelatedPersMixin) proxy).getRelatedPersCompoundMixin();
         }
-		return parametersInfo;
-	}    
+        return result;
+    }
 }

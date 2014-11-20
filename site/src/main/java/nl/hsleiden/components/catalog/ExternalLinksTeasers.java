@@ -26,7 +26,7 @@ public class ExternalLinksTeasers extends Teasers {
 
     public Map<String, Object> getModel(HstRequest request, HstResponse response) {
         try {
-            ExternalLinksTeasersInfo parametersInfo = getConfiguration(request);    
+            ExternalLinksTeasersInfo parametersInfo = getConfiguration(request);
             return populateModel(request, parametersInfo);
         } catch (RepositoryException e) {
             LOG.error(e.getMessage(), e);
@@ -40,13 +40,13 @@ public class ExternalLinksTeasers extends Teasers {
         super.addItemsToModel(request, model, parametersInfo, "webmaster.no.extlinks.teasers.message");
         return model;
     }
-    
+
     private ExternalLinksTeasersInfo getConfiguration(HstRequest request) throws RepositoryException {
         ExternalLinksTeasersInfo paramInfo = this.<ExternalLinksTeasersInfo> getComponentParametersInfo(request);
-        if (paramInfo.getUseMixin() != null && request.getRequestContext().getContentBean() != null 
+        if (paramInfo.getUseMixin() != null && request.getRequestContext().getContentBean() != null
                 && paramInfo.getUseMixin()) {
-        	
-        	HippoBean contentBean = HslUtils.getBean(request);
+
+            HippoBean contentBean = HslUtils.getBean(request);
             HippoBean proxy = BeanUtils.getMixinProxy(contentBean);
             if (proxy instanceof ExternalLinksTeasersMixin) {
                 paramInfo = ((ExternalLinksTeasersMixin) proxy).getExternalLinksTeasersCompoundMixinBean();

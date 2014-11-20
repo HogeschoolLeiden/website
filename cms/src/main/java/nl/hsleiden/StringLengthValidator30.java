@@ -12,31 +12,30 @@ import org.hippoecm.frontend.validation.Violation;
 
 public class StringLengthValidator30 extends StringFieldCmsValidator {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	private static final String MAX_LENGTH = "maxLength"; 
+    private static final String MAX_LENGTH = "maxLength";
 
-	private final int maxLength;
+    private final int maxLength;
 
-	public int getMaxLength() {
-		return maxLength;
-	}
-	
-	public StringLengthValidator30(IPluginContext context, IPluginConfig config) throws Exception{
-		super(context, config);
-		if (config.containsKey(MAX_LENGTH)) {
-			maxLength = config.getInt(MAX_LENGTH);
+    public StringLengthValidator30(IPluginContext context, IPluginConfig config) throws Exception {
+        super(context, config);
+        if (config.containsKey(MAX_LENGTH)) {
+            maxLength = config.getInt(MAX_LENGTH);
         } else {
             throw new Exception("maxLenght property should be set in the iplugin configuration of: " + config.getName());
         }
-	}
+    }
 
-	@Override
-	protected void checkViolations(IFieldValidator fieldValidator,
-			@SuppressWarnings("rawtypes") IModel childModel, Set<Violation> violations, String value)
-			throws ValidationException {
-		if (StringUtils.length(value)>getMaxLength()) {
-        	violations.add(fieldValidator.newValueViolation(childModel, getTranslation()));
+    @Override
+    protected void checkViolations(IFieldValidator fieldValidator, @SuppressWarnings("rawtypes") IModel childModel,
+            Set<Violation> violations, String value) throws ValidationException {
+        if (StringUtils.length(value) > getMaxLength()) {
+            violations.add(fieldValidator.newValueViolation(childModel, getTranslation()));
         }
-	}
+    }
+
+    public int getMaxLength() {
+        return maxLength;
+    }
 }

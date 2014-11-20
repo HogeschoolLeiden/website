@@ -19,7 +19,7 @@ public class Constants {
         private BeanPaths() {
         }
     }
-    
+
     public static class Attributes extends AttributesConstants {
         public static final String LOGO = "logo";
         public static final String HEADER_NAME = "headerName";
@@ -28,7 +28,7 @@ public class Constants {
         public static final String TRANSLATIONS = "translations";
         public static final String NO_TRANSLATION = "noTranslation";
         public static final String CURRENT_LANGUAGE = "currentLanguage";
-       
+
         private Attributes() {
         }
 
@@ -85,7 +85,7 @@ public class Constants {
         public static final String FRONT_END_MESSAGE = "frontEndMessage";
 
         public static final String COMPANY_PROFILE_ID = "companyProfileId";
-        
+
         public static final String FIELD_USER_MIXIN_MESSAGE = "Probeert mixin te gebruiken";
 
         private WidgetConstants() {
@@ -103,7 +103,7 @@ public class Constants {
     public static class HstParameters extends HstParametersConstants {
 
         public static final String IMAGE_FOLDER_PATH = "imageFolderBeanPath";
-        
+
         private HstParameters() {
         }
     }
@@ -120,8 +120,8 @@ public class Constants {
 
     public static class Values extends ValuesConstants {
 
-    	public static final String DEFAULT_IMAGE_ALT = "Hogeschool Leiden";
-    	
+        public static final String DEFAULT_IMAGE_ALT = "Hogeschool Leiden";
+
         private Values() {
         }
     }
@@ -131,7 +131,7 @@ public class Constants {
         public static final String PARENT_IMAGE_FOLDER = "parentFolder";
         public static final String HAS_PARENT_FOLDER = "hasParentFolder";
         public static final String IMAGE_FOLDER_PARAM = "folder";
-        
+
         private Parameters() {
         }
     }
@@ -148,9 +148,9 @@ public class Constants {
     }
 
     public static class NodeName extends NodeNameConstants {
-        
+
         public static final String HSL_IMAGE_SET = "hsl:ImageSet";
-        
+
         private NodeName() {
         }
     }

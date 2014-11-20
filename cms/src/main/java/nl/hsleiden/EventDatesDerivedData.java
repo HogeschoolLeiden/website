@@ -10,22 +10,22 @@ import javax.jcr.Value;
 import nl.hsleiden.derivatives.GenericDerivedDataFunction;
 
 public class EventDatesDerivedData extends GenericDerivedDataFunction {
-    
+
     @Override
     public Map<String, Value[]> compute(Map<String, Value[]> parameters) {
-            
+
         try {
             Calendar eventDate = getSingleDateValue(parameters, "eventDate");
             Calendar eventEndDate = getSingleDateValue(parameters, "eventEndDate");
-            
-            if(eventEndDate == null && eventDate!=null){
+
+            if (eventEndDate == null && eventDate != null) {
                 eventEndDate = eventDate;
-                parameters.put("eventEndDate",  new Value[]{getValueFactory().createValue(eventEndDate)});
-            } 
-                        
+                parameters.put("eventEndDate", new Value[] { getValueFactory().createValue(eventEndDate) });
+            }
+
             return parameters;
-            
-        }catch (RepositoryException e) {
+
+        } catch (RepositoryException e) {
             throw new RuntimeException(e);
         }
     }

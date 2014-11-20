@@ -8,40 +8,39 @@ import org.hippoecm.hst.content.beans.standard.HippoBean;
 
 @Node(jcrType = "hsl:FormCompoundMixin")
 public class FormCompoundMixinBean extends FormCompoundMixin implements FormComponentInfo {
-    
+
     @Override
     public Boolean getUseMixin() {
-       throw new UnsupportedOperationException();
+        throw new UnsupportedOperationException();
     }
 
     @Override
     public String getContentBeanPath() {
         String result = null;
         HippoBean formBean = getFormWidgetParameters().getFormPicker();
-        if(formBean!=null){
+        if (formBean != null) {
             result = formBean.getPath();
         }
         return result;
     }
-    
 
     @Override
     public String getThanksBeanPath() {
         String result = null;
         HippoBean thanksBean = getFormWidgetParameters().getThanksPicker();
-        if(thanksBean!=null){
+        if (thanksBean != null) {
             result = thanksBean.getPath();
         }
         return result;
     }
 
-	@Override
-	public String getAttachmentBeanPath() {
-		String result = null;
+    @Override
+    public String getAttachmentBeanPath() {
+        String result = null;
         HippoBean thanksBean = getFormWidgetParameters().getAttachmentPicker();
-        if(thanksBean!=null){
+        if (thanksBean != null) {
             result = thanksBean.getPath();
         }
         return result;
-	}
+    }
 }

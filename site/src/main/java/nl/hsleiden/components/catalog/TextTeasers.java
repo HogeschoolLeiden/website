@@ -26,7 +26,7 @@ public class TextTeasers extends Teasers {
 
     public Map<String, Object> getModel(HstRequest request, HstResponse response) {
         try {
-            TextTeasersInfo parametersInfo = getConfiguration(request);    
+            TextTeasersInfo parametersInfo = getConfiguration(request);
             return populateModel(request, parametersInfo);
         } catch (RepositoryException e) {
             LOG.error(e.getMessage(), e);
@@ -40,14 +40,14 @@ public class TextTeasers extends Teasers {
         super.addItemsToModel(request, model, parametersInfo, "webmaster.no.text.teasers.message");
         return model;
     }
-   
+
     private TextTeasersInfo getConfiguration(HstRequest request) throws RepositoryException {
         TextTeasersInfo paramInfo = this.<TextTeasersInfo> getComponentParametersInfo(request);
-        if (paramInfo.getUseMixin() != null && request.getRequestContext().getContentBean() != null 
+        if (paramInfo.getUseMixin() != null && request.getRequestContext().getContentBean() != null
                 && paramInfo.getUseMixin()) {
-        	
-        	HippoBean contentBean = HslUtils.getBean(request);
-        	HippoBean proxy = BeanUtils.getMixinProxy(contentBean);
+
+            HippoBean contentBean = HslUtils.getBean(request);
+            HippoBean proxy = BeanUtils.getMixinProxy(contentBean);
             if (proxy instanceof TextTeasersMixin) {
                 paramInfo = ((TextTeasersMixin) proxy).getTextTeasersCompoundMixinBean();
             }

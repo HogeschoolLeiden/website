@@ -31,7 +31,7 @@ public class ContactPersons extends AjaxEnabledComponent {
 
     public Map<String, Object> getModel(HstRequest request, HstResponse response) {
         try {
-            ContactPersonsInfo parametersInfo = getConfiguration(request);    
+            ContactPersonsInfo parametersInfo = getConfiguration(request);
             return populateModel(request, parametersInfo);
         } catch (RepositoryException e) {
             LOG.error(e.getMessage(), e);
@@ -45,14 +45,14 @@ public class ContactPersons extends AjaxEnabledComponent {
         addItemsToModel(request, model, parametersInfo);
         return model;
     }
-    
+
     private void addItemsToModel(HstRequest request, Map<String, Object> model, ContactPersonsInfo parametersInfo) {
         List<HippoBean> items = new ArrayList<HippoBean>();
-        
+
         addItem(request, parametersInfo.getFirstContact(), items);
         addItem(request, parametersInfo.getSecondContact(), items);
         addItem(request, parametersInfo.getThirdContact(), items);
-        
+
         if (!items.isEmpty()) {
             model.put(Attributes.ITEMS, items);
         } else {
@@ -61,22 +61,22 @@ public class ContactPersons extends AjaxEnabledComponent {
     }
 
     private void addItem(HstRequest request, String path, List<HippoBean> items) {
-        if(BeanUtils.getBeanViaAbsolutePath(path, request)!=null){
+        if (BeanUtils.getBeanViaAbsolutePath(path, request) != null) {
             items.add(BeanUtils.getBeanViaAbsolutePath(path, request));
         }
     }
 
     private ContactPersonsInfo getConfiguration(HstRequest request) throws RepositoryException {
         ContactPersonsInfo paramInfo = this.<ContactPersonsInfo> getComponentParametersInfo(request);
-        if (paramInfo.getUseMixin() != null && request.getRequestContext().getContentBean() != null 
+        if (paramInfo.getUseMixin() != null && request.getRequestContext().getContentBean() != null
                 && paramInfo.getUseMixin()) {
-        	
-        	HippoBean contentBean = HslUtils.getBean(request);
+
+            HippoBean contentBean = HslUtils.getBean(request);
             HippoBean proxy = BeanUtils.getMixinProxy(contentBean);
             if (proxy instanceof ContactPersonsMixin) {
                 paramInfo = ((ContactPersonsMixin) proxy).getContactPersonsCompoundMixinBean();
             }
         }
         return paramInfo;
-    }    
+    }
 }

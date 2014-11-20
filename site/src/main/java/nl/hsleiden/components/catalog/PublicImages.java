@@ -147,9 +147,9 @@ public class PublicImages extends AjaxEnabledComponent {
         PublicImagesInfo paramInfo = this.<PublicImagesInfo> getComponentParametersInfo(request);
         if (paramInfo.getUseMixin() != null && paramInfo.getUseMixin()
                 && request.getRequestContext().getContentBean() != null) {
-        	
-        	HippoBean contentBean = HslUtils.getBean(request);
-        	HippoBean proxy = BeanUtils.getMixinProxy(contentBean);
+
+            HippoBean contentBean = HslUtils.getBean(request);
+            HippoBean proxy = BeanUtils.getMixinProxy(contentBean);
             if (proxy instanceof PublicImagesMixin) {
                 paramInfo = ((PublicImagesMixin) proxy).getPublicImagesCompoundMixinBean();
             }

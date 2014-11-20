@@ -117,25 +117,23 @@ public class EventCalendar extends AjaxEnabledComponent {
         HstRequestContext requestContext = request.getRequestContext();
         HstLinkCreator linkCreator = requestContext.getHstLinkCreator();
         for (HippoBeanIterator hippoBeans = queryResult.getHippoBeans(); hippoBeans.hasNext();) {
-            
+
             EventPageBean event = (EventPageBean) hippoBeans.nextHippoBean();
-            
+
             HippoBean facetOverviewBean = BeanUtils.getBean(BeanPaths.EVENTS_INDEX, request);
             HstLink link = linkCreator.create(facetOverviewBean, requestContext);
-            
-            
-            if(HslDateUtils.getEventDaysDuration(event)>0){
-                for(int i=0; i<HslDateUtils.getEventDaysDuration(event)+1;i++){
+
+            if (HslDateUtils.getEventDaysDuration(event) > 0) {
+                for (int i = 0; i < HslDateUtils.getEventDaysDuration(event) + 1; i++) {
                     String facetLink = link.toUrlForm(requestContext, false);
                     String dayString = format.format(HslDateUtils.incrementDate(event.getEventDate().getTime(), i));
-                    facetLink = facetLink + "?qd="+ dayString;
+                    facetLink = facetLink + "?qd=" + dayString;
                     result.add(new Event(event.getTitle(), facetLink, dayString));
                 }
-            }else{                
+            } else {
                 String facetLink = link.toUrlForm(requestContext, false);
-                facetLink = facetLink + "?qd="+ format.format(event.getEventDate().getTime());
-                result.add(new Event(event.getTitle(), facetLink, format.format(event
-                        .getEventDate().getTime())));
+                facetLink = facetLink + "?qd=" + format.format(event.getEventDate().getTime());
+                result.add(new Event(event.getTitle(), facetLink, format.format(event.getEventDate().getTime())));
             }
         }
         return result;
@@ -175,8 +173,8 @@ public class EventCalendar extends AjaxEnabledComponent {
         EventCalendarInfo paramInfo = this.<EventCalendarInfo> getComponentParametersInfo(request);
         if (paramInfo.getUseMixin() != null && paramInfo.getUseMixin()
                 && request.getRequestContext().getContentBean() != null) {
-        	
-        	HippoBean contentBean = HslUtils.getBean(request);
+
+            HippoBean contentBean = HslUtils.getBean(request);
             HippoBean proxy = BeanUtils.getMixinProxy(contentBean);
             if (proxy instanceof EventsCalendarMixin) {
                 paramInfo = ((EventsCalendarMixin) proxy).getCalendarEventsCompoundMixin();

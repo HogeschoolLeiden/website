@@ -24,56 +24,55 @@ import com.onehippo.cms7.eforms.hst.util.MailTemplate;
 
 public class ConfirmationMailBehavior extends ConfirmationBehavior {
 
-	private static final Logger LOG = LoggerFactory.getLogger(QRFreemarkerParser.class);
-	
-	@Override
-	protected void sendMail(HstRequest request, ComponentConfiguration config,
-			final FormBean formBean, Form form, FormMap map)
-			throws MessagingException, RepositoryException {
+    private static final Logger LOG = LoggerFactory.getLogger(QRFreemarkerParser.class);
 
-		// SENDER STUFF: sender from CMS managed behaviour or from HST config
-		String sessionName = getComponentParameter(request, config,PARAM_MAIL_SESSION, MAIL_SESSION_NAME);
-		Session session = getSession(sessionName);
+    @Override
+    protected void sendMail(HstRequest request, ComponentConfiguration config, final FormBean formBean, Form form,
+            FormMap map) throws MessagingException, RepositoryException {
 
-		MailSender sender;
-		String confirmationSender = getConfirmationSenderAddress(formBean);
-		if (confirmationSender != null) {
-			sender = new MailSender(session, null, confirmationSender);
-		} else {
-			// fallback to HST config
-			String fromName = getComponentParameter(request, config, PARAM_FROM_NAME, null);
-			String fromEmail = getComponentParameter(request, config, PARAM_FROM_EMAIL, null);
-			sender = new MailSender(session, fromName, fromEmail);
-		}
+        // SENDER STUFF: sender from CMS managed behaviour or from HST config
+        String sessionName = getComponentParameter(request, config, PARAM_MAIL_SESSION, MAIL_SESSION_NAME);
+        Session session = getSession(sessionName);
 
-		// RECIPIENT STUFF: subject from CMS managed behaviour or from
-		// properties file
-		List<Address> emailAddresses = getEmailAddresses(formBean, map);
-		String subject = getConfirmationSubject(formBean);
-		if (subject == null) {
-			subject = getLocalizedMessage("confirmation.subject", request.getLocale());
-		}
+        MailSender sender;
+        String confirmationSender = getConfirmationSenderAddress(formBean);
+        if (confirmationSender != null) {
+            sender = new MailSender(session, null, confirmationSender);
+        } else {
+            // fallback to HST config
+            String fromName = getComponentParameter(request, config, PARAM_FROM_NAME, null);
+            String fromEmail = getComponentParameter(request, config, PARAM_FROM_EMAIL, null);
+            sender = new MailSender(session, fromName, fromEmail);
+        }
 
-		// TEMPLATE
-		final String confirmationText = getConfirmationText(formBean);
-		final boolean includeFieldData = isConfirmationIncludeFields(formBean);
-		MailTemplate mail = new MailTemplate(sender, emailAddresses, subject,
-				getHtml(request, config, form, map, confirmationText, includeFieldData), 
-				getPlainText(request, config, form, map, confirmationText, includeFieldData));
+        // RECIPIENT STUFF: subject from CMS managed behaviour or from
+        // properties file
+        List<Address> emailAddresses = getEmailAddresses(formBean, map);
+        String subject = getConfirmationSubject(formBean);
+        if (subject == null) {
+            subject = getLocalizedMessage("confirmation.subject", request.getLocale());
+        }
 
-		LOG.debug("Sending confirmation e-mail to {}", emailAddresses);
-		
-		addAttachmentIfAvailable(request, mail);
-		
-		mail.sendMessage();
+        // TEMPLATE
+        final String confirmationText = getConfirmationText(formBean);
+        final boolean includeFieldData = isConfirmationIncludeFields(formBean);
+        MailTemplate mail = new MailTemplate(sender, emailAddresses, subject, getHtml(request, config, form, map,
+                confirmationText, includeFieldData), getPlainText(request, config, form, map, confirmationText,
+                includeFieldData));
 
-	}
+        LOG.debug("Sending confirmation e-mail to {}", emailAddresses);
 
-	private void addAttachmentIfAvailable(HstRequest request, MailTemplate mail) {
-		String attachmentFileName = FormComponent.getAttachmentFileName(request);
-		InputStream attachmentData = FormComponent.getAttachmentData(request);
-		if(attachmentData!=null && attachmentFileName != null){			
-			mail.addAttachment(attachmentFileName, attachmentData);
-		}
-	}	
+        addAttachmentIfAvailable(request, mail);
+
+        mail.sendMessage();
+
+    }
+
+    private void addAttachmentIfAvailable(HstRequest request, MailTemplate mail) {
+        String attachmentFileName = FormComponent.getAttachmentFileName(request);
+        InputStream attachmentData = FormComponent.getAttachmentData(request);
+        if (attachmentData != null && attachmentFileName != null) {
+            mail.addAttachment(attachmentFileName, attachmentData);
+        }
+    }
 }

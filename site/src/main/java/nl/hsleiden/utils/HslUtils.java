@@ -87,13 +87,13 @@ public class HslUtils {
         }
         return f;
     }
-    
+
     public static HippoBean getBean(HstRequest request) {
-		HippoBean contentBean = request.getRequestContext().getContentBean();
-		if(contentBean instanceof HippoFacetNavigationBean){
-			contentBean = BeanUtils.getContentBeanFromParameter(request, 
-				ParametersFunctions.getSitemapConfigParameter(request, HstParametersConstants.CONTENT_BEAN_PATH));
-		}
-		return contentBean;
-	}
+        HippoBean contentBean = request.getRequestContext().getContentBean();
+        if (contentBean instanceof HippoFacetNavigationBean) {
+            contentBean = BeanUtils.getContentBeanFromParameter(request,
+                    ParametersFunctions.getSitemapConfigParameter(request, HstParametersConstants.CONTENT_BEAN_PATH));
+        }
+        return contentBean;
+    }
 }
