@@ -42,6 +42,7 @@
     </PersistenceManager>
  
     <SearchIndex class="org.hippoecm.repository.FacetedNavigationEngineImpl">
+      <param name="useSimpleFSDirectory" value="true"/>
       <param name="indexingConfiguration" value="indexing_configuration.xml"/>
       <param name="indexingConfigurationClass" value="org.hippoecm.repository.query.lucene.ServicingIndexingConfigurationImpl"/>
       <param name="path" value="${wsp.home}/index"/>
