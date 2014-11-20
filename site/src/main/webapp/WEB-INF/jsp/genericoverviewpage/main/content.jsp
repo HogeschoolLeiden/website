@@ -36,7 +36,11 @@
               <img alt="${item.title }" title="${item.title }" src="${image }" />
             </c:if>
           </figure>
-          <tag:renderDate document="${item}" dateClass="datum start"/>
+  
+          <c:if test="${not pageContext.request.requestContext.contentBean['class'].name == 'hslbeans.MedewerkersOverviewPage' }">
+            <tag:renderDate document="${item}" dateClass="datum start"/>
+          </c:if>
+  
           <div class="media-body">
             <h1 class="media-heading"><c:out value="${item.title }"/></h1>
             <p><c:out value="${item.introduction }"/></p>
