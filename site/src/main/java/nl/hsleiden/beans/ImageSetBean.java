@@ -10,7 +10,7 @@ public class ImageSetBean extends ImageSet {
 	
 	public String getAlt() {
 	    String result = super.getAlt();
-		if (result.isEmpty()){
+		if (result==null || result.isEmpty()){
 	    	result = Values.DEFAULT_IMAGE_ALT;
 	    }
 	    return result;
