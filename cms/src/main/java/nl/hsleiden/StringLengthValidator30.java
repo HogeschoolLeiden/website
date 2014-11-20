@@ -10,7 +10,7 @@ import org.hippoecm.frontend.validation.IFieldValidator;
 import org.hippoecm.frontend.validation.ValidationException;
 import org.hippoecm.frontend.validation.Violation;
 
-public class StringLengthValidator extends StringFieldCmsValidator {
+public class StringLengthValidator30 extends StringFieldCmsValidator {
 
 	private static final long serialVersionUID = 1L;
 
@@ -22,7 +22,7 @@ public class StringLengthValidator extends StringFieldCmsValidator {
 		return maxLength;
 	}
 	
-	public StringLengthValidator(IPluginContext context, IPluginConfig config) throws Exception{
+	public StringLengthValidator30(IPluginContext context, IPluginConfig config) throws Exception{
 		super(context, config);
 		if (config.containsKey(MAX_LENGTH)) {
 			maxLength = config.getInt(MAX_LENGTH);
