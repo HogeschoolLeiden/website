@@ -57,6 +57,7 @@
         <sv:property sv:name="hipposysedit:validators" sv:type="String" sv:multiple="true">
           <sv:value>non-empty</sv:value>
           <sv:value>required</sv:value>
+          <sv:value>length-validator-dynamic-title</sv:value>
         </sv:property>
       </sv:node>
       <sv:node sv:name="body">
@@ -84,6 +85,7 @@
         <sv:property sv:name="hipposysedit:validators" sv:type="String" sv:multiple="true">
           <sv:value>non-empty</sv:value>
           <sv:value>required</sv:value>
+          <sv:value>length-validator-65</sv:value>
         </sv:property>
       </sv:node>
       <sv:node sv:name="color">
@@ -274,7 +276,7 @@
           <sv:value>body</sv:value>
         </sv:property>
         <sv:property sv:name="hint" sv:type="String">
-          <sv:value>max length = 65 charachters (the more characters are used,the longer teaser body becomes)</sv:value>
+          <sv:value>max length = 65 charachters (the more characters are used, the longer teaser body becomes)</sv:value>
         </sv:property>
         <sv:property sv:name="plugin.class" sv:type="String">
           <sv:value>org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin</sv:value>
