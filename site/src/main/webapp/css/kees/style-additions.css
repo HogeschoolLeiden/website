@@ -2,9 +2,6 @@
 /* topmenu and topmenu menu hovering limits */
 /* ---------------------------------------------------------------------- */
 
-#main.landing .row .area h1 {
-	font-size: 3em;
-}
 .nav#mainnav ul.dropdownmenu.visible-lg.visible-md.clearfix li ul li ul
 	{
 	padding-left: 0;
@@ -113,17 +110,14 @@
 
 .images4 .singleImagePadding img { display: block; width: 100%; float: left; }
 
-/* -------------------- */
-/* flexible block image */
-/* -------------------- */
+/* ---------------------------------------- */
+/* flexible block image and paragraph image */
+/* ---------------------------------------- */
 
 figure.fexibleblock.image img {
 	width: 100%;
 }
 
-/* ------------------------------ */
-/* flexible block paragraph image */
-/* ------------------------------ */
 .detail-content .row .contentarea .content figure.left,
 .detail-content .row .contentarea .content figure.right {
 	width: 47.5%
@@ -314,6 +308,10 @@ h2.noQueryResults { font-size: 1.2em; color: #23114c; font-family: 'source_sans_
 /* landing page titles */
 /* ------------------- */
 
+#main.landing .row .area h1 {
+	font-size: 3em;
+}
+
 .col-sm-6.col-md-3.area .truncate {
 	display: block;
 	width: 100%;
@@ -378,8 +376,8 @@ h2.noQueryResults { font-size: 1.2em; color: #23114c; font-family: 'source_sans_
 .aside .overzichtlijst.related h2.widgetTitle,
 .content .overzichtlijst.related h2.widgetTitle,
 .detail-content .overzichtlijst.related h2.widgetTitle,
-nav.col-md-3.col-xs-12 .overzichtlijst.related h2.widgetTitle
-	{
+nav.col-md-3.col-xs-12 .overzichtlijst.related h2.widgetTitle,
+.overzichtlijst.related h2.widgetTitle {
 	font-size: 1.571em;
 	color: #23114c;
 	font-family: 'source_sans_proregular';
