@@ -560,21 +560,13 @@ nav.col-md-3.col-xs-12 .catalog.internalLinks.teasers .tekstitem ul li,nav.col-m
 	padding-left: 15px;
 }
 
-/* ------------------------- */
-/* home page facet component */
-/* ------------------------- */
+/* --------------------------------------------------------- */
+/* home page facet component, drill down facet, help needed  */
+/* --------------------------------------------------------- */
 
 .home .zoeken.col-xs-12.col-sm-12 .form label { width: 100%; }
 
-/* ----------------- */
-/* drill down facet  */
-/* ----------------- */
-
 .filtergroup .filterlist div.checkbox.drilled {margin-left: 25px;}
-
-/* ---------------- */
-/*   help needed    */
-/* ---------------- */
 
 div.hulp { height: auto;}
 div.hulp h2 {  top: 45%;}
@@ -623,24 +615,16 @@ div.hulp h2 {  top: 45%;}
           box-shadow: 0 5px 10px rgba(0,0,0,.2);
 }
 /* ----------------------- */
-/* facebook embedded posts */
+/* facebook embedded posts, calendar styling, homepage carrousel highlighted item on the right */
+/*	contact widget aligns on left if no image and no social accounts		*/
 /* ----------------------- */
 .fb-post {padding-bottom: 20px;}
 
-/* ------------------------------------------------ */
-/* homepage carrousel highlighted item on the right */
-/* ------------------------------------------------ */
 .home .swiper-container .slide-content .highlighted {margin-left: 58.333%;}
 .home .swiper-container .slide-content .highlighted .media-body .datum{left: -60px; top: 60px;}
 
-/* ---------------- */
-/* calendar styling */
-/* ---------------- */
 .hasDatepicker.fc.fc-ltr .fc-content .fc-view.fc-view-month.fc-grid .fc-event-container{display: none;} 
 
-/* ---------------------------------------------------------------- */
-/* contact widget aligns on left if no image and no social accounts */
-/* ---------------------------------------------------------------- */
 .blok.colorbg.lichtpaars.contacts .col-md-8.col-xs-8.pull-left{width: 100%;} 
 section.blok.colorbg.lichtpaars.contacts h1.pull-left span.col-md-8.col-xs-8.col-md-offset-4.col-xs-offset-4 {margin-left: 0;}
 
@@ -685,7 +669,7 @@ article.detail-content div.contentarea .content p a {
 }
 
 /* ---------------------------------------------------------------------- */
-/* facebook like box */
+/* facebook like box, print page style, breadcrumb has not fixed hight    */
 /* ---------------------------------------------------------------------- */
 .fbLikeShare{
 	background-color: white;
@@ -693,9 +677,10 @@ article.detail-content div.contentarea .content p a {
 	margin-bottom: 20px;
 }
 
-/* ---------------------------------------------------------------------- */
-/* breadcrumb has not fixed hight */
-/* ---------------------------------------------------------------------- */
+.detail-content .contentarea .content .share a.fa-print {
+	background: #e07760;
+}
+
 #breadcrumbs{
 	height: auto;
 	min-height: 29px;

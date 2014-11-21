@@ -16,6 +16,7 @@
 <fmt:message key="page.linkedin"  var="linkedin"/>
 <fmt:message key="page.twitter" var="pageTwitter"/>
 <fmt:message key="page.pdf" var="pagePdf"/>
+<fmt:message key="page.print" var="pagePrint"/>
 <fmt:message key="page.forward" var="forward"/>
 
 <c:if test="${hst:isReadable(document, 'share') && document.share}">
@@ -42,72 +43,71 @@
   enable after css
   <c:if test="${not empty document}">
       <hst:link mount="pdf" var="pdfLink"/>
-      <a  class="pdf" id="pdflink" title="${pagePdf}" 
+      <a  class="pdf" title="${pagePdf}" 
           href="${pdfLink}?${pageContext.request.queryString}">
         <c:out value="${pagePdf}"/>
       </a>
 
   </c:if> 
   --%>
+  
+  <%-- FACEBOOK --%>
   <c:url var="fbUrl" value="https://www.facebook.com/sharer/sharer.php">
     <c:param name="u" value="${url}"/>
     <c:param name="t" value="=${document.title}"/>
   </c:url>
   
-  <a class="fa fa-facebook-square col-md-4 col-sm-4 col-xs-12" id="tool-facebook" 
+  <a class="fa fa-facebook-square col-md-4 col-sm-4 col-xs-12" 
       title="${pageFacebook}" target="_blank" href="${fn:escapeXml(fbUrl)}" >
        <span><c:out value="${pageFacebook}"/></span>
   </a>
   
-  <c:url var="googlePlusUrl" value="https://plus.google.com/share">
-	<c:param name="url" value="${url}"/>
-  </c:url>
-  <a class="fa fa-google-plus col-md-4 col-sm-4 col-xs-12" id="tool-googleplus" title="${googleplus}"
-         href="${fn:escapeXml(googlePlusUrl)}" target="_blank">
-         <span><c:out value="${googleplus}"/></span>
-  </a>
-  
-   <%-- 
-  enable after css
-      <c:url var="linkedInUrl" value="http://www.linkedin.com/shareArticle">
-        <c:param name="mini" value="true"/>
-        <c:param name="url" value="${url}"/>
-        <c:param name="title" value="${fn:substring(document.title,0,250)}"/>
-        <c:param name="source" value="Surf"/>
-        <c:if test="${hst:isReadable(document, 'introduction')}">
-          <c:param name="summary" value="${fn:substring(document.introduction,0, 256)}"/>
-        </c:if>
-      </c:url>
-        <a class="linkedin" id="tool-linkedin" title="${linkedin}" 
-           href="${fn:escapeXml(linkedInUrl)}" target="_blank"><c:out value="${linkedin}"/>
-        </a>
-     --%>
-  
+  <%-- TWITTER --%>
   <c:url var="twUrl" value="https://twitter.com/home">
     <c:param name="status" value="${document.title } - ${url}"/>
   </c:url>
         
-    <a class="fa fa-twitter col-md-4 col-sm-4 col-xs-12" id="tool-twitter" title="${pageTwitter}" target="_blank"
-       href="${fn:escapeXml(twUrl)}">
-       <span><c:out value="${pageTwitter}"/></span>
-    </a>
-    
-  <%-- 
-  enable after css
+  <a class="fa fa-twitter col-md-4 col-sm-4 col-xs-12" title="${pageTwitter}" target="_blank"
+     href="${fn:escapeXml(twUrl)}">
+     <span><c:out value="${pageTwitter}"/></span>
+  </a>
+  
+  <%-- GOOGLE PLUS --%>
+  <c:url var="googlePlusUrl" value="https://plus.google.com/share">
+	<c:param name="url" value="${url}"/>
+  </c:url>
+  <a class="fa fa-google-plus col-md-4 col-sm-4 col-xs-12" title="${googleplus}"
+         href="${fn:escapeXml(googlePlusUrl)}" target="_blank">
+         <span><c:out value="${googleplus}"/></span>
+  </a>
+  
+  <%-- LINKED IN --%>
+  <c:url var="linkedInUrl" value="http://www.linkedin.com/shareArticle">
+    <c:param name="mini" value="true"/>
+    <c:param name="url" value="${url}"/>
+    <c:param name="title" value="${fn:substring(document.title,0,250)}"/>
+    <c:param name="source" value="HsLeiden"/>
+    <c:if test="${hst:isReadable(document, 'introduction')}">
+      <c:param name="summary" value="${fn:substring(document.introduction,0, 256)}"/>
+    </c:if>
+  </c:url>
+  <a class="fa fa-linkedin col-md-4 col-sm-4 col-xs-12" title="${linkedin}" 
+     href="${fn:escapeXml(linkedInUrl)}" target="_blank"><span><c:out value="${linkedin}"/></span>
+  </a>
+
+  <%-- EMAIL --%>
   <c:set var="email">
     mailto:?subject=<fmt:message key="forward.mail.subject"/>&body=<fmt:message key="forward.mail.body"/>${fn:replace(url, ' ', '%20')}
   </c:set>
-    <a class="email" title="${forward}" 
-       href="<c:out value="${email }" escapeXml="true" />">
-       <c:out value="${forward}"/>     
-    </a>
-  --%>
+  <a class="fa fa-envelope col-md-4 col-sm-4 col-xs-12" title="${forward}"
+     href="<c:out value="${email }" escapeXml="true" />" >
+     <span><c:out value="${forward}"/></span>     
+  </a>
   
-  <%--   
-    <a class="fa fa-print col-md-4 col-sm-4 col-xs-12" id="tool-print" title="print" href="#" onclick="window.print();return false;">
-       <span>print</span>
-    </a> 
-  --%>
+  <%-- PRINT --%>
+  <a class="fa fa-print col-md-4 col-sm-4 col-xs-12" title="${pagePrint}" href="#" onclick="window.print();return false;">
+     <span>${pagePrint}</span>
+  </a> 
     
 </div>
 </c:if>
