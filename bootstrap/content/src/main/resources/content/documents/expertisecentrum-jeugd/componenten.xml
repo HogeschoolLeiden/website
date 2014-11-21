@@ -1,17 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<sv:node sv:name="componenten" xmlns:sv="http://www.jcp.org/jcr/sv/1.0">
+<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="componenten">
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>hippostd:folder</sv:value>
   </sv:property>
-  <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+  <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
     <sv:value>hippotranslation:translated</sv:value>
-    <sv:value>mix:versionable</sv:value>
     <sv:value>hippo:translated</sv:value>
+    <sv:value>mix:versionable</sv:value>
   </sv:property>
   <sv:property sv:name="jcr:uuid" sv:type="String">
     <sv:value>4d592309-e45f-4400-9396-a9254142f4be</sv:value>
   </sv:property>
-  <sv:property sv:multiple="true" sv:name="hippostd:foldertype" sv:type="String">
+  <sv:property sv:name="hippostd:foldertype" sv:type="String" sv:multiple="true">
     <sv:value>new-forms-folder</sv:value>
     <sv:value>new-rss-folder</sv:value>
     <sv:value>new-teaser-folder</sv:value>
@@ -39,7 +38,7 @@
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hippostd:folder</sv:value>
     </sv:property>
-    <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+    <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
       <sv:value>hippo:harddocument</sv:value>
       <sv:value>hippotranslation:translated</sv:value>
     </sv:property>
@@ -47,7 +46,7 @@
       <sv:value>b1a8bd09-751a-44ec-977e-df49ec490843</sv:value>
     </sv:property>
     <sv:property sv:name="hippo:related___pathreference" sv:type="String"/>
-    <sv:property sv:multiple="true" sv:name="hippostd:foldertype" sv:type="String">
+    <sv:property sv:name="hippostd:foldertype" sv:type="String" sv:multiple="true">
       <sv:value>new-externallinks-teaser-folder</sv:value>
       <sv:value>new-head-teaser-folder</sv:value>
       <sv:value>new-image-teaser-folder</sv:value>
@@ -69,7 +68,7 @@
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hippostd:folder</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
         <sv:value>hippo:harddocument</sv:value>
         <sv:value>hippotranslation:translated</sv:value>
         <sv:value>hippo:translated</sv:value>
@@ -78,7 +77,7 @@
         <sv:value>a0a77627-2363-42cf-a89c-178540fbf445</sv:value>
       </sv:property>
       <sv:property sv:name="hippo:related___pathreference" sv:type="String"/>
-      <sv:property sv:multiple="true" sv:name="hippostd:foldertype" sv:type="String">
+      <sv:property sv:name="hippostd:foldertype" sv:type="String" sv:multiple="true">
         <sv:value>new-externallinksteaser-document</sv:value>
         <sv:value>new-externallinks-teaser-folder</sv:value>
       </sv:property>
@@ -108,7 +107,7 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hippo:handle</sv:value>
         </sv:property>
-        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
           <sv:value>mix:referenceable</sv:value>
           <sv:value>hippo:translated</sv:value>
         </sv:property>
@@ -130,14 +129,14 @@
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>hsl:ExternalLinksTeaser</sv:value>
           </sv:property>
-          <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+          <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
             <sv:value>mix:referenceable</sv:value>
             <sv:value>mix:versionable</sv:value>
           </sv:property>
           <sv:property sv:name="jcr:uuid" sv:type="String">
             <sv:value>180f12a3-a09d-42de-8ce2-7267ba931691</sv:value>
           </sv:property>
-          <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
+          <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
             <sv:value>preview</sv:value>
           </sv:property>
           <sv:property sv:name="hippo:related___pathreference" sv:type="String">
@@ -213,9 +212,9 @@
             <sv:property sv:name="hippo:docbase" sv:type="String">
               <sv:value>509a0853-75a6-4273-9fe2-fd3a9a6ccb99</sv:value>
             </sv:property>
-            <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
-            <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
-            <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
+            <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
           </sv:node>
           <sv:node sv:name="hsl:externallinks">
             <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -273,13 +272,13 @@
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>hsl:ExternalLinksTeaser</sv:value>
           </sv:property>
-          <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+          <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
             <sv:value>mix:referenceable</sv:value>
           </sv:property>
           <sv:property sv:name="jcr:uuid" sv:type="String">
             <sv:value>0cc7ca63-3149-42b4-b2bb-f116201b0232</sv:value>
           </sv:property>
-          <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
+          <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
             <sv:value>live</sv:value>
           </sv:property>
           <sv:property sv:name="hippo:related___pathreference" sv:type="String">
@@ -358,9 +357,9 @@
             <sv:property sv:name="hippo:docbase" sv:type="String">
               <sv:value>509a0853-75a6-4273-9fe2-fd3a9a6ccb99</sv:value>
             </sv:property>
-            <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
-            <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
-            <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
+            <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
           </sv:node>
           <sv:node sv:name="hsl:externallinks">
             <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -418,13 +417,13 @@
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>hsl:ExternalLinksTeaser</sv:value>
           </sv:property>
-          <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+          <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
             <sv:value>mix:referenceable</sv:value>
           </sv:property>
           <sv:property sv:name="jcr:uuid" sv:type="String">
             <sv:value>b07671c0-19a4-43b9-a044-bd7c8b61eb83</sv:value>
           </sv:property>
-          <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String"/>
+          <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true"/>
           <sv:property sv:name="hippo:related___pathreference" sv:type="String">
             <sv:value>componenten/teasers/externe-links-teasers/lectoraat-ext-links-teaser/lectoraat-ext-links-teaser[2]</sv:value>
             <sv:value>componenten/teasers/externe-links-teasers/lectoraat-ext-links-teaser/lectoraat-ext-links-teaser</sv:value>
@@ -499,9 +498,9 @@
             <sv:property sv:name="hippo:docbase" sv:type="String">
               <sv:value>509a0853-75a6-4273-9fe2-fd3a9a6ccb99</sv:value>
             </sv:property>
-            <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
-            <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
-            <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
+            <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
           </sv:node>
           <sv:node sv:name="hsl:externallinks">
             <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -561,7 +560,7 @@
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hippostd:folder</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
         <sv:value>hippo:harddocument</sv:value>
         <sv:value>hippotranslation:translated</sv:value>
         <sv:value>hippo:translated</sv:value>
@@ -570,7 +569,7 @@
         <sv:value>988c8a77-e6f2-4cf4-bc03-cb7316ad3060</sv:value>
       </sv:property>
       <sv:property sv:name="hippo:related___pathreference" sv:type="String"/>
-      <sv:property sv:multiple="true" sv:name="hippostd:foldertype" sv:type="String">
+      <sv:property sv:name="hippostd:foldertype" sv:type="String" sv:multiple="true">
         <sv:value>new-headteaser-document</sv:value>
         <sv:value>new-head-teaser-folder</sv:value>
       </sv:property>
@@ -600,7 +599,7 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hippo:handle</sv:value>
         </sv:property>
-        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
           <sv:value>mix:referenceable</sv:value>
           <sv:value>hippo:translated</sv:value>
         </sv:property>
@@ -622,13 +621,13 @@
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>hsl:HeadTeaser</sv:value>
           </sv:property>
-          <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+          <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
             <sv:value>mix:referenceable</sv:value>
           </sv:property>
           <sv:property sv:name="jcr:uuid" sv:type="String">
             <sv:value>feb692b7-6da3-420b-9d82-31736ed33758</sv:value>
           </sv:property>
-          <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String"/>
+          <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true"/>
           <sv:property sv:name="hippo:related___pathreference" sv:type="String">
             <sv:value>componenten/teasers/head-teasers/lectoraat-head-teaser/lectoraat-head-teaser[3]</sv:value>
             <sv:value>componenten/teasers/head-teasers/lectoraat-head-teaser/lectoraat-head-teaser[2]</sv:value>
@@ -668,7 +667,7 @@
           </sv:property>
           <sv:node sv:name="hsl:link">
             <sv:property sv:name="jcr:primaryType" sv:type="Name">
-              <sv:value>hsl:InternalLink</sv:value>
+              <sv:value>hsl:HTInternalLink</sv:value>
             </sv:property>
             <sv:property sv:name="hsl:alt" sv:type="String">
               <sv:value>Onderwijs</sv:value>
@@ -690,14 +689,14 @@
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>hsl:HeadTeaser</sv:value>
           </sv:property>
-          <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+          <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
             <sv:value>mix:referenceable</sv:value>
             <sv:value>mix:versionable</sv:value>
           </sv:property>
           <sv:property sv:name="jcr:uuid" sv:type="String">
             <sv:value>c84c80b0-8f6b-4c87-bfdc-ac4e501aff53</sv:value>
           </sv:property>
-          <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
+          <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
             <sv:value>preview</sv:value>
           </sv:property>
           <sv:property sv:name="hippo:related___pathreference" sv:type="String">
@@ -738,7 +737,7 @@
           </sv:property>
           <sv:node sv:name="hsl:link">
             <sv:property sv:name="jcr:primaryType" sv:type="Name">
-              <sv:value>hsl:InternalLink</sv:value>
+              <sv:value>hsl:HTInternalLink</sv:value>
             </sv:property>
             <sv:property sv:name="hsl:alt" sv:type="String">
               <sv:value>Onderwijs</sv:value>
@@ -760,13 +759,13 @@
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>hsl:HeadTeaser</sv:value>
           </sv:property>
-          <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+          <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
             <sv:value>mix:referenceable</sv:value>
           </sv:property>
           <sv:property sv:name="jcr:uuid" sv:type="String">
             <sv:value>aee2b70e-cc22-49a5-8f50-1217f5e934d8</sv:value>
           </sv:property>
-          <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
+          <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
             <sv:value>live</sv:value>
           </sv:property>
           <sv:property sv:name="hippo:related___pathreference" sv:type="String">
@@ -810,7 +809,7 @@
           </sv:property>
           <sv:node sv:name="hsl:link">
             <sv:property sv:name="jcr:primaryType" sv:type="Name">
-              <sv:value>hsl:InternalLink</sv:value>
+              <sv:value>hsl:HTInternalLink</sv:value>
             </sv:property>
             <sv:property sv:name="hsl:alt" sv:type="String">
               <sv:value>Onderwijs</sv:value>
@@ -834,7 +833,7 @@
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hippostd:folder</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
         <sv:value>hippo:harddocument</sv:value>
         <sv:value>hippotranslation:translated</sv:value>
         <sv:value>hippo:translated</sv:value>
@@ -843,7 +842,7 @@
         <sv:value>b104e0ba-0af5-4de4-bb42-ebe49684b2d2</sv:value>
       </sv:property>
       <sv:property sv:name="hippo:related___pathreference" sv:type="String"/>
-      <sv:property sv:multiple="true" sv:name="hippostd:foldertype" sv:type="String">
+      <sv:property sv:name="hippostd:foldertype" sv:type="String" sv:multiple="true">
         <sv:value>new-imageteaser-document</sv:value>
         <sv:value>new-image-teaser-folder</sv:value>
       </sv:property>
@@ -874,7 +873,7 @@
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hippostd:folder</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
         <sv:value>hippo:harddocument</sv:value>
         <sv:value>hippotranslation:translated</sv:value>
         <sv:value>hippo:translated</sv:value>
@@ -883,7 +882,7 @@
         <sv:value>6880cf16-7fd4-48eb-b95b-2b6aec914d97</sv:value>
       </sv:property>
       <sv:property sv:name="hippo:related___pathreference" sv:type="String"/>
-      <sv:property sv:multiple="true" sv:name="hippostd:foldertype" sv:type="String">
+      <sv:property sv:name="hippostd:foldertype" sv:type="String" sv:multiple="true">
         <sv:value>new-textteaser-document</sv:value>
         <sv:value>new-text-teaser-folder</sv:value>
       </sv:property>
@@ -913,7 +912,7 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hippo:handle</sv:value>
         </sv:property>
-        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
           <sv:value>mix:referenceable</sv:value>
           <sv:value>hippo:translated</sv:value>
         </sv:property>
@@ -935,13 +934,13 @@
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>hsl:TextTeaser</sv:value>
           </sv:property>
-          <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+          <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
             <sv:value>mix:referenceable</sv:value>
           </sv:property>
           <sv:property sv:name="jcr:uuid" sv:type="String">
             <sv:value>c648c8ac-af2d-47d0-939d-5ad4a049e73b</sv:value>
           </sv:property>
-          <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String"/>
+          <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true"/>
           <sv:property sv:name="hippo:related___pathreference" sv:type="String">
             <sv:value>componenten/teasers/text-teasers/lectoraat-text-teaser/lectoraat-text-teaser[3]</sv:value>
             <sv:value>componenten/teasers/text-teasers/lectoraat-text-teaser/lectoraat-text-teaser[2]</sv:value>
@@ -1002,23 +1001,23 @@
             <sv:property sv:name="hippo:docbase" sv:type="String">
               <sv:value>2b3a5f59-47cd-41fb-ad05-a712a72a1d3e</sv:value>
             </sv:property>
-            <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
-            <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
-            <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
+            <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
           </sv:node>
         </sv:node>
         <sv:node sv:name="lectoraat-text-teaser">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>hsl:TextTeaser</sv:value>
           </sv:property>
-          <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+          <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
             <sv:value>mix:referenceable</sv:value>
             <sv:value>mix:versionable</sv:value>
           </sv:property>
           <sv:property sv:name="jcr:uuid" sv:type="String">
             <sv:value>bce2930e-5588-42df-bbf5-75b4fbd8a330</sv:value>
           </sv:property>
-          <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
+          <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
             <sv:value>preview</sv:value>
           </sv:property>
           <sv:property sv:name="hippo:related___pathreference" sv:type="String">
@@ -1080,22 +1079,22 @@
             <sv:property sv:name="hippo:docbase" sv:type="String">
               <sv:value>2b3a5f59-47cd-41fb-ad05-a712a72a1d3e</sv:value>
             </sv:property>
-            <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
-            <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
-            <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
+            <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
           </sv:node>
         </sv:node>
         <sv:node sv:name="lectoraat-text-teaser">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>hsl:TextTeaser</sv:value>
           </sv:property>
-          <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+          <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
             <sv:value>mix:referenceable</sv:value>
           </sv:property>
           <sv:property sv:name="jcr:uuid" sv:type="String">
             <sv:value>204cd4b4-a62e-493d-bd80-ca3818305a34</sv:value>
           </sv:property>
-          <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
+          <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
             <sv:value>live</sv:value>
           </sv:property>
           <sv:property sv:name="hippo:related___pathreference" sv:type="String">
@@ -1160,9 +1159,9 @@
             <sv:property sv:name="hippo:docbase" sv:type="String">
               <sv:value>2b3a5f59-47cd-41fb-ad05-a712a72a1d3e</sv:value>
             </sv:property>
-            <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
-            <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
-            <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
+            <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
           </sv:node>
         </sv:node>
       </sv:node>
@@ -1171,7 +1170,7 @@
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hippostd:folder</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
         <sv:value>hippo:harddocument</sv:value>
         <sv:value>hippotranslation:translated</sv:value>
         <sv:value>hippo:translated</sv:value>
@@ -1180,7 +1179,7 @@
         <sv:value>f4f81789-54be-437b-a994-dfbf067ad4b1</sv:value>
       </sv:property>
       <sv:property sv:name="hippo:related___pathreference" sv:type="String"/>
-      <sv:property sv:multiple="true" sv:name="hippostd:foldertype" sv:type="String">
+      <sv:property sv:name="hippostd:foldertype" sv:type="String" sv:multiple="true">
         <sv:value>new-internallinksteaser-document</sv:value>
         <sv:value>new-internallinks-teaser-folder</sv:value>
       </sv:property>
@@ -1210,7 +1209,7 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hippo:handle</sv:value>
         </sv:property>
-        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
           <sv:value>mix:referenceable</sv:value>
           <sv:value>hippo:translated</sv:value>
         </sv:property>
@@ -1232,14 +1231,14 @@
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>hsl:InternalLinksTeaser</sv:value>
           </sv:property>
-          <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+          <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
             <sv:value>mix:referenceable</sv:value>
             <sv:value>mix:versionable</sv:value>
           </sv:property>
           <sv:property sv:name="jcr:uuid" sv:type="String">
             <sv:value>b8bdcd19-9040-433c-9f22-b8f16153080a</sv:value>
           </sv:property>
-          <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
+          <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
             <sv:value>preview</sv:value>
           </sv:property>
           <sv:property sv:name="hippo:related___pathreference" sv:type="String">
@@ -1317,9 +1316,9 @@
             <sv:property sv:name="hippo:docbase" sv:type="String">
               <sv:value>509a0853-75a6-4273-9fe2-fd3a9a6ccb99</sv:value>
             </sv:property>
-            <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
-            <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
-            <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
+            <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
           </sv:node>
           <sv:node sv:name="hsl:internallinks">
             <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -1402,13 +1401,13 @@
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>hsl:InternalLinksTeaser</sv:value>
           </sv:property>
-          <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+          <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
             <sv:value>mix:referenceable</sv:value>
           </sv:property>
           <sv:property sv:name="jcr:uuid" sv:type="String">
             <sv:value>124a9f55-bede-4cea-9b05-94108154fcaf</sv:value>
           </sv:property>
-          <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
+          <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
             <sv:value>live</sv:value>
           </sv:property>
           <sv:property sv:name="hippo:related___pathreference" sv:type="String">
@@ -1489,9 +1488,9 @@
             <sv:property sv:name="hippo:docbase" sv:type="String">
               <sv:value>509a0853-75a6-4273-9fe2-fd3a9a6ccb99</sv:value>
             </sv:property>
-            <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
-            <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
-            <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
+            <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
           </sv:node>
           <sv:node sv:name="hsl:internallinks">
             <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -1574,13 +1573,13 @@
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>hsl:InternalLinksTeaser</sv:value>
           </sv:property>
-          <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+          <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
             <sv:value>mix:referenceable</sv:value>
           </sv:property>
           <sv:property sv:name="jcr:uuid" sv:type="String">
             <sv:value>c7ab2ed3-486a-4826-83f0-ecbc5a26faf5</sv:value>
           </sv:property>
-          <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String"/>
+          <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true"/>
           <sv:property sv:name="hippo:related___pathreference" sv:type="String">
             <sv:value>componenten/teasers/interne-links-teasers/lectoraat-int-links-teaser/lectoraat-int-links-teaser[2]</sv:value>
             <sv:value>componenten/teasers/interne-links-teasers/lectoraat-int-links-teaser/lectoraat-int-links-teaser</sv:value>
@@ -1657,9 +1656,9 @@
             <sv:property sv:name="hippo:docbase" sv:type="String">
               <sv:value>509a0853-75a6-4273-9fe2-fd3a9a6ccb99</sv:value>
             </sv:property>
-            <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
-            <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
-            <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
+            <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
           </sv:node>
           <sv:node sv:name="hsl:internallinks">
             <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -1745,7 +1744,7 @@
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hippostd:folder</sv:value>
     </sv:property>
-    <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+    <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
       <sv:value>hippo:harddocument</sv:value>
       <sv:value>hippotranslation:translated</sv:value>
     </sv:property>
@@ -1753,7 +1752,7 @@
       <sv:value>5208e4e7-6c55-46f1-9d21-bb3e370ee544</sv:value>
     </sv:property>
     <sv:property sv:name="hippo:related___pathreference" sv:type="String"/>
-    <sv:property sv:multiple="true" sv:name="hippostd:foldertype" sv:type="String">
+    <sv:property sv:name="hippostd:foldertype" sv:type="String" sv:multiple="true">
       <sv:value>new-contact-person</sv:value>
     </sv:property>
     <sv:property sv:name="hippotranslation:id" sv:type="String">
@@ -1771,7 +1770,7 @@
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hippo:handle</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
         <sv:value>mix:referenceable</sv:value>
         <sv:value>hippo:translated</sv:value>
       </sv:property>
@@ -1793,13 +1792,13 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hsl:ContactPerson</sv:value>
         </sv:property>
-        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
           <sv:value>mix:referenceable</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>45438982-5c08-4ec3-91bd-bf7969f2400c</sv:value>
         </sv:property>
-        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String"/>
+        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true"/>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
           <sv:value>componenten/contacts/lectoren-two/lectoren-two[2]</sv:value>
           <sv:value>componenten/contacts/lectoren-two/lectoren-two[3]</sv:value>
@@ -1847,9 +1846,9 @@
           <sv:property sv:name="hippo:docbase" sv:type="String">
             <sv:value>00e66dd6-aec5-44d6-bada-0534d76d1a9a</sv:value>
           </sv:property>
-          <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
-          <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
-          <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
+          <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+          <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+          <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
         </sv:node>
         <sv:node sv:name="hsl:accounts">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -1900,14 +1899,14 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hsl:ContactPerson</sv:value>
         </sv:property>
-        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
           <sv:value>mix:referenceable</sv:value>
           <sv:value>mix:versionable</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>5aa10cc1-6c19-4f47-9763-0d4b94ba4ba8</sv:value>
         </sv:property>
-        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
+        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
           <sv:value>preview</sv:value>
         </sv:property>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
@@ -1956,9 +1955,9 @@
           <sv:property sv:name="hippo:docbase" sv:type="String">
             <sv:value>00e66dd6-aec5-44d6-bada-0534d76d1a9a</sv:value>
           </sv:property>
-          <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
-          <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
-          <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
+          <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+          <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+          <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
         </sv:node>
         <sv:node sv:name="hsl:accounts">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -2009,13 +2008,13 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hsl:ContactPerson</sv:value>
         </sv:property>
-        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
           <sv:value>mix:referenceable</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>ad6c2d50-9a23-4ca6-8e4b-a75ed1a735fe</sv:value>
         </sv:property>
-        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
+        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
           <sv:value>live</sv:value>
         </sv:property>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
@@ -2067,9 +2066,9 @@
           <sv:property sv:name="hippo:docbase" sv:type="String">
             <sv:value>00e66dd6-aec5-44d6-bada-0534d76d1a9a</sv:value>
           </sv:property>
-          <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
-          <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
-          <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
+          <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+          <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+          <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
         </sv:node>
         <sv:node sv:name="hsl:accounts">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -2122,7 +2121,7 @@
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hippostd:folder</sv:value>
     </sv:property>
-    <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+    <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
       <sv:value>hippo:harddocument</sv:value>
       <sv:value>hippotranslation:translated</sv:value>
     </sv:property>
@@ -2130,7 +2129,7 @@
       <sv:value>2b7495b3-53c2-4767-af0a-ec9deb791653</sv:value>
     </sv:property>
     <sv:property sv:name="hippo:related___pathreference" sv:type="String"/>
-    <sv:property sv:multiple="true" sv:name="hippostd:foldertype" sv:type="String">
+    <sv:property sv:name="hippostd:foldertype" sv:type="String" sv:multiple="true">
       <sv:value>new-carrousel-document</sv:value>
       <sv:value>new-carrousel-folder</sv:value>
     </sv:property>
@@ -2149,7 +2148,7 @@
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hippo:handle</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
         <sv:value>mix:referenceable</sv:value>
         <sv:value>hippo:translated</sv:value>
       </sv:property>
@@ -2160,13 +2159,13 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hsl:Carrousel</sv:value>
         </sv:property>
-        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
           <sv:value>mix:referenceable</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>509ccb1c-bb26-4827-b383-1d55346e7d85</sv:value>
         </sv:property>
-        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String"/>
+        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true"/>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
           <sv:value>componenten/carrousel/carrousel-one/carrousel-one[2]</sv:value>
           <sv:value>componenten/carrousel/carrousel-one/carrousel-one[3]</sv:value>
@@ -2214,9 +2213,9 @@
             <sv:property sv:name="hippo:docbase" sv:type="String">
               <sv:value>09554513-7344-40fc-a859-5d5117fa59f2</sv:value>
             </sv:property>
-            <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
-            <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
-            <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
+            <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
           </sv:node>
         </sv:node>
         <sv:node sv:name="hsl:carrouselitems">
@@ -2238,9 +2237,9 @@
             <sv:property sv:name="hippo:docbase" sv:type="String">
               <sv:value>d6e375b5-47a3-46aa-aa65-36144ba066f7</sv:value>
             </sv:property>
-            <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
-            <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
-            <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
+            <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
           </sv:node>
         </sv:node>
         <sv:node sv:name="hsl:carrouselitems">
@@ -2262,9 +2261,9 @@
             <sv:property sv:name="hippo:docbase" sv:type="String">
               <sv:value>433f5a16-1cc4-48ec-8093-8ffb9cbd53e4</sv:value>
             </sv:property>
-            <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
-            <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
-            <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
+            <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
           </sv:node>
         </sv:node>
       </sv:node>
@@ -2283,14 +2282,14 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hsl:Carrousel</sv:value>
         </sv:property>
-        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
           <sv:value>mix:referenceable</sv:value>
           <sv:value>mix:versionable</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>e664b58b-c155-47f1-b052-bfa14eb4d2b7</sv:value>
         </sv:property>
-        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
+        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
           <sv:value>preview</sv:value>
         </sv:property>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
@@ -2339,9 +2338,9 @@
             <sv:property sv:name="hippo:docbase" sv:type="String">
               <sv:value>09554513-7344-40fc-a859-5d5117fa59f2</sv:value>
             </sv:property>
-            <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
-            <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
-            <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
+            <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
           </sv:node>
         </sv:node>
         <sv:node sv:name="hsl:carrouselitems">
@@ -2363,9 +2362,9 @@
             <sv:property sv:name="hippo:docbase" sv:type="String">
               <sv:value>d6e375b5-47a3-46aa-aa65-36144ba066f7</sv:value>
             </sv:property>
-            <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
-            <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
-            <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
+            <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
           </sv:node>
         </sv:node>
         <sv:node sv:name="hsl:carrouselitems">
@@ -2387,9 +2386,9 @@
             <sv:property sv:name="hippo:docbase" sv:type="String">
               <sv:value>433f5a16-1cc4-48ec-8093-8ffb9cbd53e4</sv:value>
             </sv:property>
-            <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
-            <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
-            <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
+            <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
           </sv:node>
         </sv:node>
       </sv:node>
@@ -2397,13 +2396,13 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hsl:Carrousel</sv:value>
         </sv:property>
-        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
           <sv:value>mix:referenceable</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>e87a8def-0483-49da-ad97-172333b9c536</sv:value>
         </sv:property>
-        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
+        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
           <sv:value>live</sv:value>
         </sv:property>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
@@ -2455,9 +2454,9 @@
             <sv:property sv:name="hippo:docbase" sv:type="String">
               <sv:value>09554513-7344-40fc-a859-5d5117fa59f2</sv:value>
             </sv:property>
-            <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
-            <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
-            <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
+            <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
           </sv:node>
         </sv:node>
         <sv:node sv:name="hsl:carrouselitems">
@@ -2479,9 +2478,9 @@
             <sv:property sv:name="hippo:docbase" sv:type="String">
               <sv:value>d6e375b5-47a3-46aa-aa65-36144ba066f7</sv:value>
             </sv:property>
-            <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
-            <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
-            <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
+            <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
           </sv:node>
         </sv:node>
         <sv:node sv:name="hsl:carrouselitems">
@@ -2503,9 +2502,9 @@
             <sv:property sv:name="hippo:docbase" sv:type="String">
               <sv:value>433f5a16-1cc4-48ec-8093-8ffb9cbd53e4</sv:value>
             </sv:property>
-            <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
-            <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
-            <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
+            <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
           </sv:node>
         </sv:node>
       </sv:node>
