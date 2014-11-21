@@ -1,6 +1,8 @@
-package nl.hsleiden;
+package nl.hsleiden.validators;
 
 import java.util.Set;
+
+import javax.jcr.RepositoryException;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.wicket.model.IModel;
@@ -10,21 +12,13 @@ import org.hippoecm.frontend.validation.IFieldValidator;
 import org.hippoecm.frontend.validation.ValidationException;
 import org.hippoecm.frontend.validation.Violation;
 
-public class StringLengthValidator extends StringFieldCmsValidator {
+public class StringLengthValidator30 extends GenericStringLengthValidator {
 
     private static final long serialVersionUID = 1L;
 
-    private static final String MAX_LENGTH = "maxLength";
-
-    private final int maxLength;
-
-    public StringLengthValidator(IPluginContext context, IPluginConfig config) throws Exception {
+    public StringLengthValidator30(IPluginContext context, IPluginConfig config) throws RepositoryException {
         super(context, config);
-        if (config.containsKey(MAX_LENGTH)) {
-            maxLength = config.getInt(MAX_LENGTH);
-        } else {
-            throw new Exception("maxLenght property should be set in the iplugin configuration of: " + config.getName());
-        }
+        setMaxLength(config);
     }
 
     @Override
@@ -33,9 +27,5 @@ public class StringLengthValidator extends StringFieldCmsValidator {
         if (StringUtils.length(value) > getMaxLength()) {
             violations.add(fieldValidator.newValueViolation(childModel, getTranslation()));
         }
-    }
-
-    public int getMaxLength() {
-        return maxLength;
     }
 }

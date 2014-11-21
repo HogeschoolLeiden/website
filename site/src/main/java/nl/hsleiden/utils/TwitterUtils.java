@@ -40,14 +40,7 @@ public class TwitterUtils {
         if(showImages != null && showImages){
             MediaEntity[] mediaEntities = entity.getMediaEntities();
             if(mediaEntities!=null){
-                for (MediaEntity mediaEntity : mediaEntities) {
-                    if("photo".equals(mediaEntity.getType())){
-                        
-                        String mediaUrl = mediaEntity.getURL();
-                        formattedMessage = formattedMessage.replace(mediaUrl, imgFormatter.format(new Object[]{mediaEntity.getMediaURL(), mediaUrl}));
-                        
-                    }
-                }
+                formattedMessage = getFormattedImages(imgFormatter, formattedMessage, mediaEntities);
             }
         }
         
@@ -70,6 +63,18 @@ public class TwitterUtils {
         }
                         
         return formattedMessage;
+    }
+
+
+    private static String getFormattedImages(MessageFormat imgFormatter, String formattedMessage, MediaEntity[] mediaEntities) {
+        String result = formattedMessage;
+        for (MediaEntity mediaEntity : mediaEntities) {
+            if("photo".equals(mediaEntity.getType())){
+                String mediaUrl = mediaEntity.getURL();
+                result = result.replace(mediaUrl, imgFormatter.format(new Object[]{mediaEntity.getMediaURL(), mediaUrl}));
+            }
+        }
+        return result;
     }
     
 }

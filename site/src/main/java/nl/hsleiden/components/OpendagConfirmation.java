@@ -29,7 +29,7 @@ public class OpendagConfirmation extends BaseHstComponent {
     private static final String HST_FORMFIELDDATA = "hst:formfielddata";
 
     @Override
-    public void doBeforeRender(HstRequest request, HstResponse response) throws HstComponentException {
+    public void doBeforeRender(HstRequest request, HstResponse response) {
         Map<String, Object> model = new HashMap<String, Object>();
         RegistrationStatus status;
         Session session = null;
@@ -38,20 +38,7 @@ public class OpendagConfirmation extends BaseHstComponent {
             if (StringUtils.isNotBlank(uniqueId)) {
                 session = FormUtils.getWritableSession();
                 Node formDataNode = getFormDataNode(session, uniqueId);
-                if (formDataNode != null) {
-                    model.put("name", getStringValue(formDataNode, "naam"));
-                    model.put("surname", getStringValue(formDataNode, "achternaam"));
-                    Node n = getFieldValueNode(formDataNode, UUIDBehaivor.REGISTRATION_COMPLETE);
-                    Value[] values = n.getProperty(HST_FORMFIELDDATA).getValues();
-                    if (values.length > 0 && Constants.Values.TRUE.equals(values[0].getString())) {
-                        status = RegistrationStatus.ALREADY_REGISTERED;
-                    } else {
-                        n.setProperty(HST_FORMFIELDDATA, new String[] { Constants.Values.TRUE });
-                        status = RegistrationStatus.SUCCESS;
-                    }
-                } else {
-                    status = RegistrationStatus.REGISTRATION_NOT_FOUND;
-                }
+                status = getRegistrationStatus(model, formDataNode);
             } else {
                 status = RegistrationStatus.REGISTRATION_NOT_FOUND;
 
@@ -67,6 +54,25 @@ public class OpendagConfirmation extends BaseHstComponent {
         model.put("status", status);
         request.setAttribute(Constants.Attributes.MODEL, model);
 
+    }
+
+    private RegistrationStatus getRegistrationStatus(Map<String, Object> model, Node formDataNode) throws RepositoryException {
+        RegistrationStatus status;
+        if (formDataNode != null) {
+            model.put("name", getStringValue(formDataNode, "naam"));
+            model.put("surname", getStringValue(formDataNode, "achternaam"));
+            Node n = getFieldValueNode(formDataNode, UUIDBehaivor.REGISTRATION_COMPLETE);
+            Value[] values = n.getProperty(HST_FORMFIELDDATA).getValues();
+            if (values.length > 0 && Constants.Values.TRUE.equals(values[0].getString())) {
+                status = RegistrationStatus.ALREADY_REGISTERED;
+            } else {
+                n.setProperty(HST_FORMFIELDDATA, new String[] { Constants.Values.TRUE });
+                status = RegistrationStatus.SUCCESS;
+            }
+        } else {
+            status = RegistrationStatus.REGISTRATION_NOT_FOUND;
+        }
+        return status;
     }
 
     private void saveSession(Session session) {

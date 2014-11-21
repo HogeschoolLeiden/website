@@ -169,10 +169,10 @@ public class FacetedOverview extends MonolithicFacetedOverview {
         try {
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat(DATE_FORMATE_PATTERN);
             globalFilter.addLessOrEqualThan("hsl:eventDate", 
-                    HslDateUtils.DateToCalendar(HslDateUtils.getStartOfDay(simpleDateFormat.parse(dayToFilter))), 
+                    HslDateUtils.dateToCalendar(HslDateUtils.getStartOfDay(simpleDateFormat.parse(dayToFilter))), 
                                                 Resolution.DAY);
             globalFilter.addGreaterOrEqualThan("hsl:eventEndDate", 
-                    HslDateUtils.DateToCalendar(HslDateUtils.getStartOfDay(simpleDateFormat.parse(dayToFilter))), 
+                    HslDateUtils.dateToCalendar(HslDateUtils.getStartOfDay(simpleDateFormat.parse(dayToFilter))), 
                                             Resolution.DAY);
         } catch (ParseException e) {
             LOG.error(e.getMessage(), e);

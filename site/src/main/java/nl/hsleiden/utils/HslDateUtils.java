@@ -23,7 +23,7 @@ public class HslDateUtils {
         return DateUtils.truncate(date, Calendar.DATE);
     }
 
-    public static Calendar DateToCalendar(Date date) {
+    public static Calendar dateToCalendar(Date date) {
         Calendar cal = Calendar.getInstance();
         cal.setTime(date);
         return cal;

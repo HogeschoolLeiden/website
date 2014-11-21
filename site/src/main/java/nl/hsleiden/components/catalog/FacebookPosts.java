@@ -65,8 +65,7 @@ public class FacebookPosts extends AjaxEnabledComponent {
         FacebookClient facebookClient = new DefaultFacebookClient(token);
         Connection<Post> fetchConnection = facebookClient.fetchConnection(info.getAccount() + "/posts", Post.class,
                 Parameter.with("limit", info.getLimit()));
-        List<Post> data = fetchConnection.getData();
-        return data;
+        return fetchConnection.getData();
     }
 
     private AccessToken getOauthToken() {
