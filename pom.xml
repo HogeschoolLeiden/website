@@ -85,10 +85,9 @@
     <forge.feed.version>2.02.00</forge.feed.version>
 
     <jcr.mock.version>1.0</jcr.mock.version>
-    <es.version>1.2.2</es.version>
     <twitter4j.version>4.0.2</twitter4j.version>
     <hsl-private-config.version>1.2</hsl-private-config.version>
-    <elasticsearch.plugin.version>1.0</elasticsearch.plugin.version>
+    <elasticsearch.plugin.version>1.1-SNAPSHOT</elasticsearch.plugin.version>
     <omnikassa.plugin.version>1.0</omnikassa.plugin.version>
     
     <restfb.version>1.7.0</restfb.version>
@@ -150,6 +149,26 @@
     <repository>
       <id>openweb-nexus-releases</id>
       <url>https://nexus.open-web.nl/nexus/content/repositories/releases/</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>openweb-maven-snapshots</id>
+      <url>https://maven.open-web.nl/content/repositories/snapshots/</url>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>openweb-maven-elasticsearch-plugin</id>
+      <url>https://maven.open-web.nl/content/repositories/elasticsearch-plugin/</url>
       <releases>
         <enabled>true</enabled>
       </releases>
@@ -339,16 +358,23 @@
         <artifactId>urlrewriter-module-hst</artifactId>
         <version>${forge.urlrewriter.version}</version>
       </dependency>
+      <!-- Elasticsearch -->
       <dependency>
-        <groupId>org.elasticsearch</groupId>
-        <artifactId>elasticsearch</artifactId>
-        <version>${es.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>nl.openweb.hippo</groupId>
-        <artifactId>hippo-elasticsearch-plugin</artifactId>
+        <groupId>nl.openweb.elasticsearch</groupId>
+        <artifactId>hippo-elasticsearch-cms</artifactId>
         <version>${elasticsearch.plugin.version}</version>
       </dependency>
+      <dependency>
+        <groupId>nl.openweb.elasticsearch</groupId>
+        <artifactId>hippo-elasticsearch-repository</artifactId>
+        <version>${elasticsearch.plugin.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>nl.openweb.elasticsearch</groupId>
+        <artifactId>hippo-elasticsearch-hst</artifactId>
+        <version>${elasticsearch.plugin.version}</version>
+      </dependency>
+      <!-- /Elasticsearch -->
       <dependency>
         <groupId>nl.openweb.omnikassa</groupId>
         <artifactId>hippo-omnikassa-plugin-hst</artifactId>
