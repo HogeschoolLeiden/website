@@ -4,7 +4,7 @@ import org.hippoecm.hst.core.parameters.Parameter;
 
 import com.tdclighthouse.prototype.componentsinfo.NavigationInfo;
 
-public interface NavigationComponentInfo extends NavigationInfo{
+public interface NavigationComponentInfo extends NavigationInfo {
 
     @Parameter(name = "overviewSitemapRefId", displayName="overzicht sitemap ref id", defaultValue="")
     public String getOverviewSitemapRefId();
@@ -17,5 +17,8 @@ public interface NavigationComponentInfo extends NavigationInfo{
 
     @Parameter(name = "leftMenuBlock", displayName="do not display left navigation", defaultValue="false")
     public Boolean getLeftMenuBlock();
+
+    @Parameter(name = "maxTopItems", displayName="max top items", defaultValue="5")
+    public int getMaxTopItems();
     
 }

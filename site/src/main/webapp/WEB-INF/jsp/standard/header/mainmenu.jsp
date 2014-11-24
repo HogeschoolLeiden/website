@@ -9,51 +9,54 @@
 <%@ taglib prefix='opw' uri="http://open-web.nl/hippo/prototype"%>
 
 
-  <ul class="nav navbar-nav" id="mainnav">
-	<c:forEach items="${menu.menuItems}" var="siteMenuItem" varStatus="loop">
-		
-        <c:set var="myMenuItem" value="${tag:getMenuItem(pageContext.request, siteMenuItem) }"/>
+<ul class="nav navbar-nav" id="mainnav">
+  <c:forEach items="${menu.menuItems}" var="siteMenuItem" varStatus="loop">
+	
+    <c:if test="${loop.index < paramInfo.maxTopItems}">
           
-        <c:choose>
-			<c:when test="${not empty myMenuItem.hstLink }">
-				<hst:link var="link" link="${myMenuItem.hstLink}" />
-			</c:when>
-			<c:otherwise>
-				<c:set var="link" value="${myMenuItem.externalLink}" />
-			</c:otherwise>
-		</c:choose>
-		<c:choose>
-			<c:when test="${myMenuItem.expanded and loop.last}">
-				<c:set var="cssClass" value="active last"/>
-			</c:when>
-			<c:when test="${myMenuItem.expanded}">
-				<c:set var="cssClass" value="active"/>
-			</c:when>
-			<c:when test="${loop.last}">
-				<c:set var="cssClass" value="last"/>
-			</c:when>
-			<c:otherwise>
-				<c:set var="cssClass" value=""/>
-			</c:otherwise>
-		</c:choose>
-		
-		<li ${not empty cssClass ? ' class=\"': ''}${cssClass}${not empty cssClass ? '\"': ''}>
-			<a href="${link}"> 
-			  <c:out value="${myMenuItem.name}" />
-			</a>
+      <c:set var="myMenuItem" value="${tag:getMenuItem(pageContext.request, siteMenuItem) }"/>
+        
+      <c:choose>
+		<c:when test="${not empty myMenuItem.hstLink }">
+			<hst:link var="link" link="${myMenuItem.hstLink}" />
+		</c:when>
+		<c:otherwise>
+			<c:set var="link" value="${myMenuItem.externalLink}" />
+		</c:otherwise>
+	  </c:choose>
+	  <c:choose>
+		<c:when test="${myMenuItem.expanded and (loop.last or (loop.index eq paramInfo.maxTopItems-1) )}">
+			<c:set var="cssClass" value="active last"/>
+		</c:when>
+		<c:when test="${myMenuItem.expanded}">
+			<c:set var="cssClass" value="active"/>
+		</c:when>
+		<c:when test="${loop.last or (loop.index eq paramInfo.maxTopItems-1)}">
+			<c:set var="cssClass" value="last"/>
+		</c:when>
+		<c:otherwise>
+			<c:set var="cssClass" value=""/>
+		</c:otherwise>
+	  </c:choose>
+	
+	  <li ${not empty cssClass ? ' class=\"': ''}${cssClass}${not empty cssClass ? '\"': ''}>
+		<a href="${link}"> 
+		  <c:out value="${myMenuItem.name}" />
+		</a>
+          
+        <c:if test="${not empty myMenuItem.childMenuItems}">
+          <ul class="dropdownmenu visible-lg visible-md clearfix">
             
-            <c:if test="${not empty myMenuItem.childMenuItems}">
-              <ul class="dropdownmenu visible-lg visible-md clearfix">
-              
-                <tag:submenu menuItem="${myMenuItem}" columNr="0"/>
-                <tag:submenu menuItem="${myMenuItem}" columNr="1"/>
-                <tag:submenu menuItem="${myMenuItem}" columNr="2"/>
-                <tag:submenu menuItem="${myMenuItem}" columNr="3"/>
-              
-              </ul>
-            </c:if>
+            <tag:submenu menuItem="${myMenuItem}" columNr="0"/>
+            <tag:submenu menuItem="${myMenuItem}" columNr="1"/>
+            <tag:submenu menuItem="${myMenuItem}" columNr="2"/>
+            <tag:submenu menuItem="${myMenuItem}" columNr="3"/>
             
-		</li> 
-                       
-	</c:forEach>  
-  </ul> 
+          </ul>
+        </c:if>
+          
+	  </li> 
+                     
+    </c:if>
+  </c:forEach>  
+</ul> 
