@@ -188,16 +188,6 @@
     <!-- /sitemap plugin -->
 
     <dependency>
-      <groupId>org.elasticsearch</groupId>
-      <artifactId>elasticsearch</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>nl.openweb.hippo</groupId>
-      <artifactId>hippo-elasticsearch-plugin</artifactId>
-    </dependency>
-
-    <dependency>
       <groupId>nl.openweb.omnikassa</groupId>
       <artifactId>hippo-omnikassa-plugin-hst</artifactId>
     </dependency>
@@ -205,6 +195,11 @@
     <dependency>
       <groupId>com.restfb</groupId>
       <artifactId>restfb</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>nl.openweb.elasticsearch</groupId>
+      <artifactId>hippo-elasticsearch-hst</artifactId>
     </dependency>
 
   </dependencies>
