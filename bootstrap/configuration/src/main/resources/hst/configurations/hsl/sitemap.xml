@@ -1525,4 +1525,38 @@
       </sv:node>
     </sv:node>
   </sv:node>
+  <sv:node sv:name="service">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:sitemapitem</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+      <sv:value>hst:pages/pagenotfound</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+      <sv:value>pages/service/index</sv:value>
+    </sv:property>
+    <sv:node sv:name="_any_">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:sitemapitem</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+        <sv:value>hst:pages/pagenotfound</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentconfigurationmappingnames" sv:type="String" sv:multiple="true">
+        <sv:value>hsl:ArticlePage</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentconfigurationmappingvalues" sv:type="String" sv:multiple="true">
+        <sv:value>hst:pages/articlepage</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+        <sv:value>leftMenuName</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+        <sv:value>footerExtra</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+        <sv:value>pages/service/${1}</sv:value>
+      </sv:property>
+    </sv:node>
+  </sv:node>
 </sv:node>
