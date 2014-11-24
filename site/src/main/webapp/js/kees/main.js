@@ -81,11 +81,12 @@ $( document ).ready(function() {
 	}
 	/* // form validation */
 	
-	/* open share in new window */
+	/* open share in new window
 	$('.share a').click(function(){
 		window.open($(this).attr('href'),'title', 'width=800, height=700');
         return false;
 	});
+	 */
 	/* // open share in new window */
 	
 	/* help button */
