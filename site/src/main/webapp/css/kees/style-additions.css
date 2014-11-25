@@ -565,6 +565,24 @@ nav.col-md-3.col-xs-12 .catalog.internalLinks.teasers .tekstitem ul li,nav.col-m
 /* --------------------------------------------------------- */
 
 .home .zoeken.col-xs-12.col-sm-12 .form label { width: 100%; }
+ 
+.vorm.col-xs-6.col-sm-4.col-md-4 ul.overviewItem {display:block; width:100%; float:left; padding-right: 20px;}
+
+.vorm.col-xs-6.col-sm-4.col-md-4 ul.overviewItem li.overviewItem { width: 100%;}
+
+.vorm.col-xs-6.col-sm-4.col-md-4 ul.overviewItem li.overviewItem a { 
+	background: #008383;
+}
+
+@media ( min-width : 1200px) {
+	.vorm.col-xs-6.col-sm-4.col-md-4 ul.overviewItem {margin-right: 20px; padding-right: 0;}
+}
+
+/* 
+@media ( min-width :992px) and (max-width: 1199px) {
+	text should wrap
+}
+*/
 
 .filtergroup .filterlist div.checkbox.drilled {margin-left: 25px;}
 

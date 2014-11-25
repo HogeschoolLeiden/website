@@ -19,7 +19,20 @@
     </c:if>
     <c:if test="${facet.name eq model.paramInfo.secondFacetName }">
       <div class="vorm col-xs-6 col-sm-4 col-md-4">
-         <tag:rendefFacetGroup facet="${facet}" labels="${model.labels}"/>
+        <tag:rendefFacetGroup facet="${facet}" labels="${model.labels}"/>
+        
+        <%-- Add extra items go to all --%>
+        <c:if test="${not empty model.paramInfo.overviewBeanPath }">
+          <ul class="overviewItem">
+            <hst:link var="overviewLink" path="${model.paramInfo.overviewBeanPath}" />
+            <li class="overviewItem">
+              <a href="${overviewLink}" class="btn">
+                <fmt:message key="bachelors.facet.overview"/>
+              </a>
+            </li>
+          </ul>
+        </c:if> 
+            
       </div>
     </c:if>
   </c:forEach>
