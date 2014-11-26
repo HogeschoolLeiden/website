@@ -1,0 +1,20 @@
+{
+    "connection": {
+        "host": "http://localhost:9200",
+        "discoveryEnabled": true,
+        "discoveryFrequency": 1,
+        "multiThreaded": true,
+        "connTimeout": 3000,
+        "readTimeout": 3000
+    },
+    "liveindex": "live",
+    "previewindex": "preview",
+    "previewuser": {
+        "username": "previewuser",
+        "password": "previewuserpass"
+    },
+    "liveuser": {
+        "username": "liveuser",
+        "password": "liveuserpass"
+    }
+}

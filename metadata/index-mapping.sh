@@ -1,5 +1,5 @@
-curl -XDELETE  'http://localhost:9200/live/'
-curl -XDELETE  'http://localhost:9200/preview/'
+curl -XDELETE  'http://localhost:9200/newlive/'
+curl -XDELETE  'http://localhost:9200/newpreview/'
 
 MAPPING='{
 	"settings": {
@@ -608,6 +608,6 @@ MAPPING='{
         }
     }
 }'
-curl -XPUT "http://localhost:9200/live" -d "$MAPPING" 
-curl -XPUT "http://localhost:9200/preview" -d "$MAPPING"
+curl -XPUT "http://localhost:9200/newlive" -d "$MAPPING" 
+curl -XPUT "http://localhost:9200/newpreview" -d "$MAPPING"
 
