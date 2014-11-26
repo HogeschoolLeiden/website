@@ -74,16 +74,7 @@
   
   <link rel="stylesheet" href="<hst:link path="/css/kees/style-additions.css"/>" >
   
-  
-  
   <link rel="stylesheet" type="text/css" href="<hst:link path="/css/print-style.css"/>" media="print"> 
-  <%-- 
-  <link rel="stylesheet" type="text/css" href="<hst:link path="/css/print-style.css"/>"> 
-  --%>
-
-
-
-
   
   <link rel="stylesheet" href="<hst:link path="/css/kees/normalize.css"/>" >
   
