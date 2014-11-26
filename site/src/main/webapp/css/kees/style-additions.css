@@ -356,6 +356,12 @@ h2.noQueryResults { font-size: 1.2em; color: #23114c; font-family: 'source_sans_
 	height: 100px;
 }
 
+@media (max-width: 767px){
+	.content .overzichtlijst.related figure.media-object.pull-left {
+		width: 100px!important;
+	}
+}
+
 .aside .overzichtlijst.related .media .datum,nav.col-md-3.col-xs-12 .overzichtlijst.related .media .datum
 	{
 	left: 10px;
