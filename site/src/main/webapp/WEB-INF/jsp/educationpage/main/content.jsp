@@ -17,12 +17,7 @@
 
         <hst:cmseditlink hippobean="${document}" />
         <h1><c:out value="${document.title }" escapeXml="true" /></h1>
-        <%-- <h2> <c:out value="${document.subtitle }" escapeXml="true" /> </h2> --%>
         <hst:include ref="contentTop" />
-
-        <%-- <p class="intro">
-          <c:out value="${document.introduction }" />
-        </p> --%>
 
         <tag:flexibleblock content="${document.flexibleblock }" document="${document}" />
 
