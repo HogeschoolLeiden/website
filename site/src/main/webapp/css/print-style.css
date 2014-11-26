@@ -26,6 +26,9 @@
 	div.background.img, 
 	div.background.large.img { display: none; }
 	
+	#main.detail{padding-top: 0;}
+	#main.detail .col-md-9.detail-content { margin-top: 0;}
+	
 	.col-md-8.col-sm-8.contentarea {width: 100%; padding-right: 30px;}
 	
 	/* related items on the center should display */
@@ -40,9 +43,6 @@
 	/* sharebox consumes space because of high margin and padding */
 	.detail-content .contentarea .content .share.clearfix{ margin-bottom: 0; margin-top: 0;}
 	/*--------------------------------------*/
-	
-	.lectoraat .col-md-9.detail-content { margin-top: 200px; margin-left: -20px; margin-right: 20px;}
-	.col-md-9.detail-content { margin-top: 50px; margin-left: 0; }
 	
 	footer{ border: none; }
 	.row.border-top{ border: none; margin-top: 0; padding-top: 0;}
@@ -66,12 +66,13 @@
 		padding-bottom: 0px;
 	}
 	
-	/* for chrome  print and */
+	 article.col-md-9.detail-content .left + p, 
+ 	 article.col-md-9.detail-content .right + p {min-height: 200px;}
+	
+	/* for chrome */
 	@media  all and (-webkit-min-device-pixel-ratio:0) {
 	    
-	    .col-md-9.detail-content { margin-top: 0px; margin-left: 0; }
-	    
-	    #main.detail{padding-top: 0;}
+	    .col-md-9.detail-content { margin-left: 0; }
 	    
 	    .lectoraat .col-md-9.detail-content { margin-top: 0; padding-left: 10%; margin-left: 0!important;; margin-right: 0!important;;}
 	    
@@ -91,9 +92,6 @@
 	    .detail-content .contentarea .content figure.gallery.row { margin-right: 0!important; margin-left: 0!important;}
 	    .gallery.row a.col-xs-6.col-sm-4.col-md-4 {width: 32.3%!important; margin-left: 0.5%!important; margin-right: 0.5%!important;}
 	    .gallery.row a img {width: 100%!important;}
-		    
-	     article.col-md-9.detail-content .left + p, 
-	     article.col-md-9.detail-content .right + p {min-height: 200px;} 
 
 	}
 	
