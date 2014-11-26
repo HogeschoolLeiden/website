@@ -120,7 +120,7 @@ public class EventCalendar extends AjaxEnabledComponent {
 
             EventPageBean event = (EventPageBean) hippoBeans.nextHippoBean();
 
-            HippoBean facetOverviewBean = BeanUtils.getBean(BeanPaths.EVENTS_INDEX, request);
+            HippoBean facetOverviewBean = BeanUtils.getBeanViaAbsolutePath(BeanPaths.EVENTS_INDEX, request);
             HstLink link = linkCreator.create(facetOverviewBean, requestContext);
 
             if (HslDateUtils.getEventDaysDuration(event) > 0) {

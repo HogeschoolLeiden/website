@@ -14,7 +14,7 @@ public class Constants {
     }
 
     public static class BeanPaths {
-        public static final String EVENTS_INDEX = "pages/actueel/evenementen/index";
+        public static final String EVENTS_INDEX = "/content/documents/hsl/pages/actueel/evenementen/index";
 
         private BeanPaths() {
         }
