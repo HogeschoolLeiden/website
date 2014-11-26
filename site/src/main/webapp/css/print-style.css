@@ -1,38 +1,51 @@
-	.hulp, 
-	.fbLikeShare, 
+	.hulp, 							/* do not print help */
+	.fbLikeShare, 					/* do like share buttons of fb flexible block */
 	footer .container, 
 	footer .secundnavbar, 
 	.col-md-4.col-sm-4.aside .blok,
 	.col-md-4.col-sm-4.aside,
 	a.btn.back,
 	div.share.clearfix a,
-	div.share.clearfix,
+	div.share.clearfix,  
 	figure iframe,
-	.overzichtlijst.related,
+	.aside .overzichtlijst.related,
 	.filter.filter-collapse.collapse.clearfix.algemeenfilter, 
 	div.subnav,
 	.gallery.row a span,
 	.images2, .images3, .images4,
-	.catalog.text.teasers,
-	.button-block.twitter,
-	.catalog.internalLinks.teasers,
-	.catalog.externalLinks.teasers,
+	.aside .catalog.text.teasers,
+	.aside .button-block.twitter,
+	.aside .catalog.internalLinks.teasers,
+	.aside .catalog.externalLinks.teasers,
 	.filtergroup.col-md-3.calendar,
 	.detail-content.contentarea.content.share,
 	.swipenav.prev.fa.fa-angle-left,
 	.swipenav.next.fa.fa-angle-right,
-	.col-md-4.col-md-offset-1.highlighted { display: none; }
+	.col-md-4.col-md-offset-1.highlighted,
+	.media-body ul.social.clearfix,
+	div.background.img, 
+	div.background.large.img { display: none; }
 	
 	.col-md-8.col-sm-8.contentarea {width: 100%; padding-right: 30px;}
 	
-	.col-md-4.col-sm-4.aside .blok.colorbg.lichtpaars { margin-left: 30px; }
+	/* related items on the center should display */
+	.col-md-8.col-sm-8.contentarea .content .overzichtlijst.related { display: block;}
+	.col-md-8.col-sm-8.contentarea .content .overzichtlijst.related .media-object.pull-left {display: block; float: left; }
+	.col-md-8.col-sm-8.contentarea .content .overzichtlijst.related .media-object.pull-left img {width: 100px; height: 100px; }
 	
-	div.background.img, div.background.large.img.swiper-container a img{ width: 1000px; height: 310px; }
-
+	.col-md-8.col-sm-8.contentarea .content .overzichtlijst.related .media.clearfix .datum.start {display: none;}
+	.col-md-4.col-sm-4.aside .blok.colorbg.lichtpaars { margin-left: 30px; }
+	/*--------------------------------------*/
+	
+	/* sharebox consumes space because of high margin and padding */
+	.detail-content .contentarea .content .share.clearfix{ margin-bottom: 0; margin-top: 0;}
+	/*--------------------------------------*/
+	
 	.lectoraat .col-md-9.detail-content { margin-top: 200px; margin-left: -20px; margin-right: 20px;}
 	.col-md-9.detail-content { margin-top: 50px; margin-left: 0; }
 	
 	footer{ border: none; }
+	.row.border-top{ border: none; margin-top: 0; padding-top: 0;}
 	
 	.detail-content .contentarea .content blockquote,
 	.mod.box.closed.downloads ul li { padding: 10px; }
@@ -53,12 +66,14 @@
 		padding-bottom: 0px;
 	}
 	
-	/* for chrome */
-	@media print and (-webkit-min-device-pixel-ratio:0) {
+	/* for chrome  print and */
+	@media  all and (-webkit-min-device-pixel-ratio:0) {
 	    
-	    .col-md-9.detail-content { margin-top: 120px; margin-left: 0; }
+	    .col-md-9.detail-content { margin-top: 0px; margin-left: 0; }
 	    
-	    .lectoraat .col-md-9.detail-content { margin-top: -400px; padding-left: 10%; margin-left: 0!important;; margin-right: 0!important;;}
+	    #main.detail{padding-top: 0;}
+	    
+	    .lectoraat .col-md-9.detail-content { margin-top: 0; padding-left: 10%; margin-left: 0!important;; margin-right: 0!important;;}
 	    
 	    .detail-content .row .contentarea .content figure.left,
 		.detail-content .row .contentarea .content figure.right {
@@ -76,10 +91,22 @@
 	    .detail-content .contentarea .content figure.gallery.row { margin-right: 0!important; margin-left: 0!important;}
 	    .gallery.row a.col-xs-6.col-sm-4.col-md-4 {width: 32.3%!important; margin-left: 0.5%!important; margin-right: 0.5%!important;}
 	    .gallery.row a img {width: 100%!important;}
+		    
+	     article.col-md-9.detail-content .left + p, 
+	     article.col-md-9.detail-content .right + p {min-height: 200px;} 
+
 	}
 	
 	/* for ie */
 	@media all and (-ms-high-contrast:none){
 		.col-md-9.detail-content{width: 100%!important;}
 		.lectoraat .col-md-9.detail-content { margin-top: 200px; margin-left: 150px; margin-right: 0!important;}
+		
+		.col-md-8.col-sm-8.contentarea .content > p {min-height: 260px;}
+		
+		.mod.box.closed.downloads .downloads li { padding-left: 40px; padding-top: 0; padding-bottom: 0;}
+		.mod.box.closed.downloads .downloads li a { margin-top: -100px;}
+		
+		.detail-content .contentarea .content ul li { background: url("../img/li.png") 22px 8px no-repeat; }
+
 	}
