@@ -22,15 +22,12 @@
       <hst:link var="link" hippobean="${item}" />
       <article class="media clearfix">
         <hst:cmseditlink hippobean="${item}" />
-        <c:set var="image" value=""/>
         
-        <c:if test="${not empty tag:getFirstFlexibleBlockImage(item) }">
-          <hst:link var="image" hippobean="${tag:getFirstFlexibleBlockImage(item).image.listImageMedium}" />  
-        </c:if>
+        <tag:renderListImage item="${item}"/>
               
         <a href="${link}">
           
-          <!-- afmeting afbeelding: 100x100 -->
+          <%-- afmeting afbeelding: 100x100 --%>
           <figure class="media-object pull-left">
             <c:if test="${not empty image}">
               <img alt="${item.title }" title="${item.title }" src="${image }" />
