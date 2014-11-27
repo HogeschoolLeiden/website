@@ -652,7 +652,7 @@ div.hulp h2 {  top: 45%;}
 
 .aside .filtergroup.col-md-3.calendar #datepicker { margin-bottom: 0; margin-top: 0;}
 .detail .filtergroup.col-md-3.calendar #datepicker { margin-bottom: 20px; margin-top: 0;}
-.detail .filtergroup.col-md-3.calendar  + .clearfix { height: 300px;}
+.filter.filter-collapse.collapse.clearfix.algemeenfilter .filtergroup.col-md-3.calendar  + .clearfix {height: 10px;}
 
 .blok.colorbg.lichtpaars.contacts .col-md-8.col-xs-8.pull-left{width: 100%;} 
 section.blok.colorbg.lichtpaars.contacts h1.pull-left span.col-md-8.col-xs-8.col-md-offset-4.col-xs-offset-4 {margin-left: 0;}
@@ -715,9 +715,9 @@ article.detail-content div.contentarea .content p a {
 	min-height: 29px;
 }
 
-/* ---------------------------------------------------------------------- */
-/* image teaser can be dark based on checkbox selection */
-/* ---------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------- */
+/* image teaser can be dark based on checkbox selection, ie scroll bar hulp problem */
+/* -------------------------------------------------------------------------------- */
 .blok.download .btn.darkLinkBackground {
 	background: #23114c;
 	color: #fff;
@@ -726,3 +726,5 @@ article.detail-content div.contentarea .content p a {
 	background: #008383;
 	color: #fff;
 }
+
+@-ms-viewport{ width: auto !important; }

@@ -14,6 +14,6 @@ public interface FacebookPostsInfo {
     public String getAccount();
 
     @Parameter(name = "limit", displayName = "Number of items", defaultValue = "3", description = "Number of items to be displays.")
-    public int getLimit();
+    public int getPostsLimit();
 
 }

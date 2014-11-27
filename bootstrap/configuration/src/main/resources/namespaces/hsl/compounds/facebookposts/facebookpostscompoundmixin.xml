@@ -31,7 +31,7 @@
       <sv:property sv:name="hipposysedit:uri" sv:type="String">
         <sv:value>http://www.onehippo.org/hsl/nt/1.0</sv:value>
       </sv:property>
-      <sv:node sv:name="posts">
+      <sv:node sv:name="limit">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hipposysedit:field</sv:value>
         </sv:property>
@@ -39,19 +39,42 @@
           <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:name="hipposysedit:multiple" sv:type="Boolean">
-          <sv:value>true</sv:value>
+          <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:name="hipposysedit:ordered" sv:type="Boolean">
-          <sv:value>true</sv:value>
+          <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:name="hipposysedit:path" sv:type="String">
-          <sv:value>hsl:posts</sv:value>
+          <sv:value>hsl:limit</sv:value>
         </sv:property>
         <sv:property sv:name="hipposysedit:primary" sv:type="Boolean">
           <sv:value>false</sv:value>
         </sv:property>
         <sv:property sv:name="hipposysedit:type" sv:type="String">
-          <sv:value>Text</sv:value>
+          <sv:value>Long</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="from">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hipposysedit:field</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:mandatory" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:multiple" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:ordered" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:path" sv:type="String">
+          <sv:value>hsl:from</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:primary" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:type" sv:type="String">
+          <sv:value>String</sv:value>
         </sv:property>
       </sv:node>
     </sv:node>
@@ -63,6 +86,12 @@
     <sv:node sv:name="hipposysedit:prototype">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hsl:FacebookPostsCompoundMixin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:from" sv:type="String">
+        <sv:value>HSLeidenNL</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsl:limit" sv:type="Long">
+        <sv:value>1</sv:value>
       </sv:property>
     </sv:node>
   </sv:node>
@@ -98,21 +127,37 @@
           <sv:value>org.hippoecm.frontend.service.render.ListViewPlugin</sv:value>
         </sv:property>
       </sv:node>
-      <sv:node sv:name="posts">
+      <sv:node sv:name="from">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>frontend:plugin</sv:value>
         </sv:property>
         <sv:property sv:name="caption" sv:type="String">
-          <sv:value>Facebook Posts</sv:value>
+          <sv:value>FB Gebruiker</sv:value>
         </sv:property>
         <sv:property sv:name="field" sv:type="String">
-          <sv:value>posts</sv:value>
+          <sv:value>from</sv:value>
         </sv:property>
-        <sv:property sv:name="maxitems" sv:type="Long">
-          <sv:value>3</sv:value>
+        <sv:property sv:name="plugin.class" sv:type="String">
+          <sv:value>org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin</sv:value>
         </sv:property>
-         <sv:property sv:name="hint" sv:type="String">
-          <sv:value>After copy-pasting the post you want to embed, adjust its width according to the part of the page where the widget will be displayed. Values should be inside this range: 350 - 750. Smaller values will be converted to 350, bigger values will be converted to 750.</sv:value>
+        <sv:property sv:name="wicket.id" sv:type="String">
+          <sv:value>${cluster.id}.field</sv:value>
+        </sv:property>
+        <sv:node sv:name="cluster.options">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>frontend:pluginconfig</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="limit">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>frontend:plugin</sv:value>
+        </sv:property>
+        <sv:property sv:name="caption" sv:type="String">
+          <sv:value>Aantal facebook posts</sv:value>
+        </sv:property>
+        <sv:property sv:name="field" sv:type="String">
+          <sv:value>limit</sv:value>
         </sv:property>
         <sv:property sv:name="plugin.class" sv:type="String">
           <sv:value>org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin</sv:value>

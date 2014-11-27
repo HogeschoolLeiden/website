@@ -15,15 +15,10 @@ public class FacebookPostsCompoundMixinBean extends FacebookPostsCompoundMixin i
 
     @Override
     public String getAccount() {
-        //FIXME hard coded value needs to be replaced
-        return "HSLeidenNL";
+        return super.getFrom();
     }
 
-    @Override
-    public int getLimit() {
-        //FIXME hard coded value needs to be replaced
-        return 3;
+    public int getPostsLimit() {
+        return super.getLimit().intValue();
     }
-
-    
 }
