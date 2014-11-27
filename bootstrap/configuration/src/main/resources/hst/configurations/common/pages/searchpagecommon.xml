@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="searchpagecommon">
+<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="searchpagecommon">
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>hst:component</sv:value>
   </sv:property>
@@ -11,17 +10,15 @@
       <sv:value>hst:component</sv:value>
     </sv:property>
     <sv:property sv:name="hst:componentclassname" sv:type="String">
-      <sv:value>nl.openweb.hippo.components.ElasticSearchPage</sv:value>
+      <sv:value>nl.openweb.elastic.components.ElasticSearchPage</sv:value>
     </sv:property>
-    <sv:property sv:name="hst:parameternames" sv:type="String"
-      sv:multiple="true">
+    <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
       <sv:value>selectedFacets</sv:value>
       <sv:value>facets</sv:value>
     </sv:property>
-    <sv:property sv:name="hst:parametervalues" sv:type="String"
-      sv:multiple="true">
+    <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
       <sv:value>${selectedFacets}</sv:value>
-      <sv:value>{"types":["NewsPage","WebPage"],"scope":"pages","facets":[{"title":"Subject","term":"subjecttags"},{"title":"Thema","term":"thematags"}],"suggestions":{"ngramFileds":["nGram"],"numberOfDocuments":5,"maxSuggestions":10}}</sv:value>
+      <sv:value>{"types":["NewsPage","WebPage"],"scope":"pages","facets":[{"title":"Subject","term":"subjecttags","valueList":"/content/documents/hsl/configuratie/valuelists/over-values"},{"title":"Thema","term":"thematags","valueList":"/content/documents/hsl/configuratie/valuelists/thema-values"}],"suggestions":{"ngramFileds":["nGram"],"numberOfDocuments":5,"maxSuggestions":10}}</sv:value>
     </sv:property>
     <sv:property sv:name="hst:resourcetemplate" sv:type="String">
       <sv:value>blank</sv:value>
