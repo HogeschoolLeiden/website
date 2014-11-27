@@ -1,6 +1,7 @@
 package nl.hsleiden.components.catalog;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -11,6 +12,7 @@ import nl.hsleiden.beans.FacebookConfig;
 import nl.hsleiden.beans.mixin.FacebookPostsMixin;
 import nl.hsleiden.componentsinfo.FacebookPostsInfo;
 import nl.hsleiden.utils.HslUtils;
+import nl.hsleiden.utils.Constants.WidgetConstants;
 
 import org.apache.commons.lang3.StringUtils;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
@@ -45,12 +47,14 @@ public class FacebookPosts extends AjaxEnabledComponent {
                 AccessToken token = getOauthToken();
 
                 if (token != null) {
-                    List<Post> posts = getPosts(token.getAccessToken(), info);
-                    model.put("posts", posts);
+                    List<Post> posts = getPosts(token.getAccessToken(), info, request);
+                    List<String> postIDs = getPostIDs(posts);
+                    model.put("postIDs", postIDs);
                 } else {
                     LOG.error("failed to retrieve an Oauth token.");
                 }
             } else {
+                request.setAttribute(WidgetConstants.WEB_MASTER_MESSAGE, "webmaster.nofbaccount.provided");
                 LOG.debug("no facebook account has been configured.");
             }
             model.put("info", info);
@@ -60,12 +64,29 @@ public class FacebookPosts extends AjaxEnabledComponent {
         }
     }
 
-    private List<Post> getPosts(String token, FacebookPostsInfo info) throws IOException {
+    private List<String> getPostIDs(List<Post> posts) {
+        List<String> result = new ArrayList<String>();
+        if(posts!=null){            
+            for (Post post : posts) {
+                result.add(post.getId().substring(16));
+            }
+        }
+        return result;
+    }
 
-        FacebookClient facebookClient = new DefaultFacebookClient(token);
-        Connection<Post> fetchConnection = facebookClient.fetchConnection(info.getAccount() + "/posts", Post.class,
-                Parameter.with("limit", info.getLimit()));
-        return fetchConnection.getData();
+    private List<Post> getPosts(String token, FacebookPostsInfo info, HstRequest request) throws IOException {
+
+        List<Post> result = null;
+        if(info.getPostsLimit()>0){            
+            FacebookClient facebookClient = new DefaultFacebookClient(token);
+            Connection<Post> fetchConnection = facebookClient.fetchConnection(info.getAccount() + "/posts", Post.class,
+                    Parameter.with("limit", info.getPostsLimit()));
+            result = fetchConnection.getData();
+        }else{
+            request.setAttribute(WidgetConstants.WEB_MASTER_MESSAGE, "webmaster.0.posts.configured"); 
+        }
+        
+        return result;
     }
 
     private AccessToken getOauthToken() {

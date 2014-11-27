@@ -14,17 +14,30 @@
 <hst:defineObjects />
 <c:set var="isCmsRequest" value="${hstRequest.requestContext.cmsRequest}" />
 
-<c:if test="${empty model.info.account and not empty webMasterMessage and isCmsRequest}">
+<c:if test="${(empty model.info.account or not empty webMasterMessage) and isCmsRequest}">
 	<p class="error-message"><fmt:message key="${webMasterMessage}" /></p>
 </c:if>
-${model}
-<c:if test="${model.info.account}">
 
+<c:if test="${not empty model.info.account and empty webMasterMessage and model.info.postsLimit > 0}">
+  <hst:headContribution keyHint="dynamicWidth">
+    <script type="text/javascript" src="<hst:link path="/js/dynamic-width.js"/>"></script>
+  </hst:headContribution>
+    
   <section class="catalog facebook posts">
-    ${model.info.account}
-        
+    <div id="fb-root"></div> 
+    <script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/all.js#xfbml=1"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>  
     
+    <c:forEach items="${model.postIDs }" var="postID">
     
+      <div class="fb-post" data-href="https://www.facebook.com/HSLeidenNL/posts/${postID}">
+         
+        <div class="fb-xfbml-parse-ignore">
+          <a href="https://www.facebook.com/HSLeidenNL/posts/${postID}">Post</a> 
+          by  <a href="https://www.facebook.com/HSLeidenNL"> HSLeiden </a>.
+        </div>
+      </div>
+    </c:forEach>
+   
   </section>
   <div class="clearfix"></div>
 </c:if>
