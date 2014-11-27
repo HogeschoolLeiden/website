@@ -12,18 +12,26 @@
 <hst:setBundle basename="nl.hsleiden.general.Messages"/>
 
 <div id="main" role="main" class="">
+
+  <c:if test="${tag:isSubclassOfWebPage(model.document)}">
+    <tag:headerImage document="${model.document}" large="large"/>
+  </c:if>
+  
   <div class="container">
     <div class="row">
+    
       <section class="overzicht col-md-9">
           
+          <hst:include ref="contentTop" />
+          
           <div class="overzichtlijst">
-            <p>
+            <h3>
               <opw:public-parameter parameterName="q" var="query"/>
               <fmt:message key="found.results.message" >
                 <fmt:param value="${model.searchResults.totalHits}"/>
                 <fmt:param value="${fn:escapeXml(query)}"/>
               </fmt:message>
-            </p>
+            </h3>
             
             <c:forEach items="${model.searchResults.hits}" var="hit">
               <c:set var="item" value="${hit.bean}"/>
@@ -72,16 +80,13 @@
       <%-- bring the esl:facets in the project and make necessary changes --%>
       <div class="filter filter-collapse collapse clearfix algemeenfilter">
         <hst:include ref="leftTop" />
-        <h4><fmt:message key="refine.results" /></h4>
-        <div class="form">
-           <hst:link siteMapItemRefId="search" var="searchPageUrl" navigationStateful="false"/>
-           <esl:facets facets="${model.facets}" searchPageUrl="${searchPageUrl}" facetsCssClass="fieldset" />
-        </div>
+        <%-- <h4><fmt:message key="refine.results" /></h4> --%>
+         <hst:link siteMapItemRefId="search" var="searchPageUrl" navigationStateful="false"/>
+         <tag:facetedelasticsearch facets="${model.facets}" searchPageUrl="${searchPageUrl}" facetItemCssClass="checkbox"  facetsCssClass="fieldset" />
       </div>
 
     </div>
   </div>
   <hst:include ref="bottom-container" />
 </div>
-
 
