@@ -20,32 +20,35 @@
     <c:if test="${facet.name eq model.paramInfo.secondFacetName }">
       <div class="vorm col-xs-6 col-sm-4 col-md-4">
         <tag:rendefFacetGroup facet="${facet}" labels="${model.labels}"/>
-        
-        <%-- Add extra items go to all --%>
-        <c:if test="${not empty model.paramInfo.overviewBeanPath }">
-          <ul class="overviewItem">
-            <hst:link var="overviewLink" path="${model.paramInfo.overviewBeanPath}" />
-            <li class="overviewItem">
-              <a href="${overviewLink}" class="btn">
-                <fmt:message key="bachelors.facet.overview"/>
-              </a>
-            </li>
-          </ul>
-        </c:if> 
-            
       </div>
     </c:if>
   </c:forEach>
       
   <div class="zoeken col-xs-12 col-sm-12 ">
+    <%-- Add extra items go to all --%>
+    <div class="overviewItem">
+      <c:if test="${not empty model.paramInfo.overviewBeanPath }">
+        <ul class="overviewItem">
+          <hst:link var="overviewLink" path="${model.paramInfo.overviewBeanPath}" />
+          <li class="overviewItem">
+            <a href="${overviewLink}" class="btn">
+              <fmt:message key="bachelors.facet.overview"/>
+            </a>
+          </li>
+        </ul>
+      </c:if>
+      <div class="clearfix"></div>
+    </div>
+    
+      
     <hst:link var="link" siteMapItemRefId="bachelors" />
     <form role="form" class="form" action="${link}" method="get">
-    <label for="zoekfilter"><fmt:message key="search.in.bachelors"/></label>
+      <fmt:message key="search.in.bachelors" var="searchMessage"/>
       <div class="form-group">
-        <input type="text" class="form-control" id="zoekfilter" name="q" data-cip-id="zoekfilter">
+        <input type="text" class="form-control" id="zoekfilter" name="q" data-cip-id="zoekfilter" placeholder="${searchMessage}">
       </div>
       <button class="btn fa fa-search no-radius" type="submit"><span>Zoek</span></button>
-     </form>
+    </form>
   </div>
   
 </section>
