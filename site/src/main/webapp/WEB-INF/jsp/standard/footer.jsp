@@ -9,9 +9,9 @@
 
 <hst:setBundle basename="nl.hsleiden.general.Messages" />
 
-<hst:setBundle basename="nl.hsleiden.general.Messages" />
-
 <footer>
       <hst:include ref="footerMenu" />
       <hst:include ref="footerServiceMenu" />
 </footer>
+
+<tag:cookieLaw/>  
