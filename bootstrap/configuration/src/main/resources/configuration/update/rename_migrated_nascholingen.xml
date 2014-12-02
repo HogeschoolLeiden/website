@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="Rename Nascholingen">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>hipposys:updaterinfo</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:batchsize" sv:type="Long">
+    <sv:value>10</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:dryrun" sv:type="Boolean">
+    <sv:value>false</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:query" sv:type="String">
+    <sv:value>/jcr:root/content/documents/hsl/pages/onderwijs/opleidingen-voor-professionals/nascholingen</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:script" sv:type="String">
+    <sv:value>package org.hippoecm.frontend.plugins.cms.dev.updater&#13;
+&#13;
+import org.onehippo.repository.update.BaseNodeUpdateVisitor&#13;
+import javax.jcr.Node&#13;
+&#13;
+class UpdaterTemplate extends BaseNodeUpdateVisitor {&#13;
+&#13;
+  boolean doUpdate(Node node) throws RepositoryException {&#13;
+      log.debug("Updating node ${node.path}");&#13;
+      &#13;
+      if(node.hasNodes()){&#13;
+          NodeIterator nodeIterator = node.getNodes();&#13;
+          while(nodeIterator.hasNext()){&#13;
+              Node childNode = (Node) nodeIterator.next();&#13;
+              if(childNode.getName()!="index" &amp;&amp; childNode.getProperty("jcr:primaryType").getString().equals("hippostd:folder")){                  &#13;
+                  applyChangesToFolderContent(childNode);&#13;
+              }&#13;
+          }&#13;
+      }&#13;
+      &#13;
+      return false;&#13;
+    }&#13;
+    &#13;
+    &#13;
+&#13;
+    void applyChangesToFolderContent(Node node) throws RepositoryException {&#13;
+        &#13;
+        log.debug("Updating content of folder child node ${node.path}"); &#13;
+        if(node.hasNodes()){&#13;
+            NodeIterator nodeIterator = node.getNodes();&#13;
+            while(nodeIterator.hasNext()){&#13;
+                Node childNode = (Node) nodeIterator.next();&#13;
+                if(childNode.getProperty("jcr:primaryType").getString().equals("hippo:handle")){                  &#13;
+                   if(!childNode.hasNode("hippo:translation")){&#13;
+                       addTranslationNode(childNode);&#13;
+                   }&#13;
+                }&#13;
+            }&#13;
+        }&#13;
+    }&#13;
+&#13;
+    void addTranslationNode(Node node) throws RepositoryException {&#13;
+      node.addMixin("hippo:translated"); &#13;
+      Node translationNode = node.addNode("hippo:translation", "hippo:translation");&#13;
+       translationNode.setProperty("hippo:language", "");&#13;
+       translationNode.setProperty("hippo:message", getTranslationName(node));&#13;
+        &#13;
+    }&#13;
+&#13;
+&#13;
+&#13;
+    String getTranslationName(Node childNode) throws RepositoryException {&#13;
+       &#13;
+        String result = "";&#13;
+        &#13;
+        String childNodeName = childNode.getName();&#13;
+        log.debug("document name ${childNodeName}"); &#13;
+    &#13;
+        result = childNodeName.substring(0, 1).toUpperCase();&#13;
+        result = result + childNodeName.substring(1);&#13;
+        result = result.replaceAll("-", " ");&#13;
+        log.debug("correct name ${result}"); &#13;
+        &#13;
+        return result;&#13;
+    }&#13;
+&#13;
+  boolean undoUpdate(Node node) {&#13;
+    throw new UnsupportedOperationException('Updater does not implement undoUpdate method')&#13;
+  }&#13;
+&#13;
+}</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:throttle" sv:type="Long">
+    <sv:value>10</sv:value>
+  </sv:property>
+</sv:node>
