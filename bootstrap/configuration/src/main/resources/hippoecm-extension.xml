@@ -36,6 +36,23 @@
       <sv:value>true</sv:value> 
     </sv:property> 
   </sv:node>  
+  <sv:node sv:name="website-configuration-update-scripts-rename_migrated_nascholingen"> 
+    <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
+      <sv:value>hippo:initializeitem</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentresource" sv:type="String"> 
+      <sv:value>configuration/update/rename_migrated_nascholingen.xml</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:contentroot" sv:type="String"> 
+      <sv:value>/hippo:configuration/hippo:update/hippo:registry</sv:value> 
+    </sv:property>  
+    <sv:property sv:name="hippo:sequence" sv:type="Double"> 
+      <sv:value>40010</sv:value> 
+    </sv:property>
+    <sv:property sv:name="hippo:reloadonstartup" sv:type="Boolean"> 
+      <sv:value>true</sv:value> 
+    </sv:property> 
+  </sv:node>  
   <sv:node sv:name="website-configuration-update-scripts-change_teaser_image_type"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
@@ -2818,6 +2835,20 @@
     </sv:property>
     <sv:property sv:name="hippo:contentresource" sv:type="String">
       <sv:value>configuration/queries/templates/new-events-overview-page.xml</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:contentroot" sv:type="String">
+      <sv:value>/hippo:configuration/hippo:queries/hippo:templates</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="website-hippo-configuration-hippo-queries-hippo-templates-new-medewerkers-overview-page">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hippo:initializeitem</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:sequence" sv:type="Double">
+      <sv:value>30000.3</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:contentresource" sv:type="String">
+      <sv:value>configuration/queries/templates/new-medewerkers-overview-page.xml</sv:value>
     </sv:property>
     <sv:property sv:name="hippo:contentroot" sv:type="String">
       <sv:value>/hippo:configuration/hippo:queries/hippo:templates</sv:value>
