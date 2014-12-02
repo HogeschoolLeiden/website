@@ -21,3 +21,9 @@
       </c:if>
   </c:otherwise>
 </c:choose>
+
+<figure class="media-object pull-left">
+  <c:if test="${not empty image}">
+    <img alt="${item.title }" title="${item.title }" src="${image }" />
+  </c:if>
+</figure>

@@ -23,16 +23,9 @@
       <article class="media clearfix">
         <hst:cmseditlink hippobean="${item}" />
         
-        <tag:renderListImage item="${item}"/>
-              
         <a href="${link}">
           
-          <%-- afmeting afbeelding: 100x100 --%>
-          <figure class="media-object pull-left">
-            <c:if test="${not empty image}">
-              <img alt="${item.title }" title="${item.title }" src="${image }" />
-            </c:if>
-          </figure>
+          <tag:renderListImage item="${item}"/>
   
           <c:if test="${not pageContext.request.requestContext.contentBean['class'].name == 'hslbeans.MedewerkersOverviewPage' }">
             <tag:renderDate document="${item}" dateClass="datum start"/>
