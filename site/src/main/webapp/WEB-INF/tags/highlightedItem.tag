@@ -9,18 +9,26 @@
 
 <%@ attribute name="highLightedItem" type="hslbeans.WebPage" required="true" %>
 
-<article class="highlighted col-md-9">
-  <c:if test="${not empty highLightedItem and not pageContext.request.requestContext.contentBean['class'].name == 'org.hippoecm.hst.content.beans.standard.facetnavigation.HippoFacetSubNavigation'}">
-      <hst:cmseditlink hippobean="${highLightedItem}" />
-      <hst:link hippobean="${highLightedItem }" var="link" />
-      <div class="row">
-    	<a href="${link }" title="${fn:escapeXml(highLightedItem.title)}">
-    	  <div class="media-body col-md-5">
-    	    <h1 class="media-heading"><c:out value="${highLightedItem.title}"/></h1>
-    	    <tag:renderDate document="${highLightedItem}" dateClass="datum start large"/>
-    	    <p><c:out value="${highLightedItem.introduction}"/></p>
-    	  </div>		
-        </a>		
-      </div>
-  </c:if>
-</article>
+<c:choose>
+  <c:when test="${pageContext.request.requestContext.contentBean['class'].name == 'org.hippoecm.hst.content.beans.standard.facetnavigation.HippoFacetSubNavigation'}">
+    <article class="highlighted col-md-9">
+    </article>
+  </c:when>
+  <c:otherwise>
+      <c:if test="${not empty highLightedItem}">
+        <article class="highlighted col-md-9">
+          <hst:cmseditlink hippobean="${highLightedItem}" />
+          <hst:link hippobean="${highLightedItem }" var="link" />
+          <div class="row">
+          <a href="${link }" title="${fn:escapeXml(highLightedItem.title)}">
+            <div class="media-body col-md-5">
+              <h1 class="media-heading"><c:out value="${highLightedItem.title}"/></h1>
+              <tag:renderDate document="${highLightedItem}" dateClass="datum start large"/>
+              <p><c:out value="${highLightedItem.introduction}"/></p>
+            </div>    
+            </a>    
+          </div>
+        </article>
+      </c:if>
+  </c:otherwise>
+</c:choose>
