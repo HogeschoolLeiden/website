@@ -24,7 +24,7 @@
     </c:if>
   </c:forEach>
       
-  <div class="zoeken col-xs-12 col-sm-12 ">
+  <div class="zoeken col-xs-12 col-sm-12">
     <%-- Add extra items go to all --%>
     <div class="overviewItem">
       <c:if test="${not empty model.paramInfo.overviewBeanPath }">
@@ -32,7 +32,7 @@
           <hst:link var="overviewLink" path="${model.paramInfo.overviewBeanPath}" />
           <li class="overviewItem">
             <a href="${overviewLink}" class="btn">
-              <fmt:message key="bachelors.facet.overview"/>
+              <strong> <fmt:message key="bachelors.facet.overview"/> </strong>
             </a>
           </li>
         </ul>

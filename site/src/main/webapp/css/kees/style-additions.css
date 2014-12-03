@@ -572,11 +572,26 @@ nav.col-md-3.col-xs-12 .catalog.internalLinks.teasers .tekstitem ul li,nav.col-m
 
 .home .zoeken.col-xs-12.col-sm-12 .form label { width: 100%; }
 
-.zoeken.col-xs-12.col-sm-12 ul.overviewItem {display:block; width:100%; float:left;}
+.zoeken.col-xs-12.col-sm-12 div.overviewItem {display:block; width:49%; float:right;}
+.zoeken.col-xs-12.col-sm-12 form.form {display:block; width:49%; float:left;}
+
+@media ( max-width : 494px) {
+	.zoeken.col-xs-12.col-sm-12 div.overviewItem {display:block; width:100%; float:right;}
+	.zoeken.col-xs-12.col-sm-12 form.form {display:block; width:100%; float:left;}
+}
+
+@media (min-width : 495px) and (max-width : 599px) {
+	.zoeken.col-xs-12.col-sm-12 .btn.fa.fa-search.no-radius {padding-left: 0; padding-right: 0;}
+}
+
+@media (min-width : 992px) and (max-width : 1199px) {
+	.zoeken.col-xs-12.col-sm-12 .btn.fa.fa-search.no-radius {padding-left: 0; padding-right: 0;}
+}
 
 .zoeken.col-xs-12.col-sm-12 ul.overviewItem li.overviewItem { width: 100%; }
 
-.zoeken.col-xs-12.col-sm-12 ul.overviewItem li.overviewItem a { background: #008383; }
+.zoeken.col-xs-12.col-sm-12 ul.overviewItem li.overviewItem a { background-color: white; }
+.zoeken.col-xs-12.col-sm-12 ul.overviewItem li.overviewItem a { color: #23114c; } */
 
 .zoeken.col-xs-12.col-sm-12 { padding-bottom: 0; }
 
@@ -751,6 +766,7 @@ article.detail-content div.contentarea .content p a {
 
 #message_content  .fa.fa-info-circle.fa-3x{padding: 0 10px 0 20px; float: left; margin-top: 0.2em;} 
 
+/* ??? this is wrong, it can not work min and max width want their own parenthesis ??? */
 @media ( min-width: 991px and max-width : 1199px) {
 	#actions { width: 30%; display: block; float: right;}
 	#message_content p { width:80%}
