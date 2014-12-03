@@ -39,16 +39,20 @@
  
     <c:choose>
       <c:when test="${showYear}">
-        <time datetime="${dateTime}" class="${cssDateClass}">
-          ${fn:escapeXml(month)}
-          <span>${fn:escapeXml(year)}</span>
-        </time>
+        <c:if test="${not empty month and not empty year}">
+          <time datetime="${dateTime}" class="${cssDateClass}">
+            ${fn:escapeXml(month)}
+            <span>${fn:escapeXml(year)}</span>
+          </time>
+        </c:if>
       </c:when>
       <c:otherwise>
-        <time datetime="${dateTime}" class="${cssDateClass}">
-          ${fn:escapeXml(day)}
-          <span>${fn:escapeXml(month)}</span>
-        </time>
+        <c:if test="${not empty day and not empty month}">
+          <time datetime="${dateTime}" class="${cssDateClass}">
+            ${fn:escapeXml(day)}
+            <span>${fn:escapeXml(month)}</span>
+          </time>
+        </c:if>
       </c:otherwise>
     </c:choose>                 
  
