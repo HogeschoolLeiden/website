@@ -8,6 +8,8 @@
 
 <hst:setBundle basename="nl.hsleiden.general.Messages"/>
 
+<hst:include ref="searchbox"/>
+
 <ul class="nav navbar-nav" id="utilities">
 
   <hst:include ref="langaugeswitch" />
@@ -46,5 +48,4 @@
   </c:forEach>
 </ul>
   
-<hst:include ref="searchbox"/>   
 
