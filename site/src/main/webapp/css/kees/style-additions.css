@@ -650,10 +650,9 @@ div.hulp h2 {  top: 45%;}
      -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
           box-shadow: 0 5px 10px rgba(0,0,0,.2);
 }
-/* ----------------------- */
-/* facebook embedded posts, calendar styling, homepage carrousel highlighted item on the right */
-/*	contact widget aligns on left if no image and no social accounts		*/
-/* ----------------------- */
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* facebook embedded posts, calendar styling, homepage carrousel highlighted item on the right, contact widget aligns on left if no image and no social accounts */
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 .fb-post {padding-bottom: 20px;}
 
 .home .swiper-container .slide-content .highlighted {margin-left: 58.333%;}
@@ -689,15 +688,12 @@ section.blok.colorbg.lichtpaars.contacts h1.pull-left span.col-md-8.col-xs-8.col
 }
 
 /* ---------------------------------------------------------------------- */
-/* html link colors */
+/* html link colors, fix some width responsivnes related problems         */
 /* ---------------------------------------------------------------------- */
 article.detail-content div.contentarea .content p a {
 	color: #428bca;
 }
 
-/* ---------------------------------------------------------------------- */
-/* fix some width responsivnes related problems */
-/* ---------------------------------------------------------------------- */
 @media ( max-width : 767px) {
 	
 	.blok.download.image {
@@ -727,9 +723,9 @@ article.detail-content div.contentarea .content p a {
 	min-height: 29px;
 }
 
-/* -------------------------------------------------------------------------------- */
-/* image teaser can be dark based on checkbox selection, ie scroll bar hulp problem */
-/* -------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------- */
+/* image teaser can be dark based on checkbox selection, ie scroll bar hulp problem, other color head teasers */
+/* ---------------------------------------------------------------------------------------------------------- */
 .blok.download .btn.darkLinkBackground {
 	background: #23114c;
 	color: #fff;
@@ -740,6 +736,23 @@ article.detail-content div.contentarea .content p a {
 }
 
 @-ms-viewport{ width: auto !important; }
+
+.blok.colorbg.oranje {
+	background: #FF6600;
+}
+
+.blok.colorbg.oranje a, .blok.colorbg.magenta a  {
+	color: #fff;
+}
+
+.blok.colorbg.oranje .btn, .blok.colorbg.magenta .btn  {
+	color: #fff;
+	border-color: #fff;
+}
+
+.blok.colorbg.magenta {
+	background: #CD00CD;
+}
 
 /* -------------------------------------------------------------------------------- */
 /* Cookiemelding */
@@ -766,16 +779,9 @@ article.detail-content div.contentarea .content p a {
 
 #message_content  .fa.fa-info-circle.fa-3x{padding: 0 10px 0 20px; float: left; margin-top: 0.2em;} 
 
-/* ??? this is wrong, it can not work min and max width want their own parenthesis ??? */
-@media ( min-width: 991px and max-width : 1199px) {
-	#actions { width: 30%; display: block; float: right;}
-	#message_content p { width:80%}
-	#message_content  .fa.fa-info-circle.fa-3x{padding: 0 10px 0 20px; float: left; } 
-}
-
 @media ( max-width: 991px ) {
 	#message_content { width: 100%; float:left;}
 	#message_content p { width:80%}
-	#actions {width: 100%; float left}
-	#actions span.btn.fa.fa-times-circle-o.fa-lg {float:right;}
+	#actions {width: 100%; float: left;}
+	#actions span.btn.fa.fa-times-circle-o.fa-lg {float:right; margin-top: 0; margin-bottom: 0; padding-top: 0;}
 }

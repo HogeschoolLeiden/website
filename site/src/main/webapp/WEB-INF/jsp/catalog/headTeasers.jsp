@@ -33,6 +33,12 @@
             <c:when test="${item.color eq 'groen'}"> 
               <c:out value="colorbg groen medium"/>
             </c:when>
+            <c:when test="${item.color eq 'oranje'}"> 
+              <c:out value="colorbg oranje medium"/>
+            </c:when>
+            <c:when test="${item.color eq 'magenta'}"> 
+              <c:out value="colorbg magenta medium"/>
+            </c:when>
             <c:otherwise>
                <c:out value="colorbg"/>
             </c:otherwise>
