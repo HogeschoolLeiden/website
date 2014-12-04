@@ -72,8 +72,8 @@
         
     <div class="navbar-collapse collapse" role="navigation">      
          
-            <hst:include ref="mainMenu" />
             <hst:include ref="serviceMenu" /> 
+            <hst:include ref="mainMenu" />
             <div class="clear"></div>
             
     </div> <!--- // navbar-collapse -->

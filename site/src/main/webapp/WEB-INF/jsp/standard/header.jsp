@@ -46,8 +46,6 @@
         </c:choose>
       </a>
       
-      <hst:include ref="header-lectorat"/>
-      
     </div>
         
     <div class="navbar-collapse collapse" role="navigation">      
