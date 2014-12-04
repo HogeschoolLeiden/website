@@ -695,12 +695,14 @@ article.detail-content div.contentarea .content p a {
 	color: #428bca;
 }
 
-@media ( max-width : 767px) {
-	
-	.blok.download.image {
+@media (max-width : 767px) {
+	.catalog.image.teasers section.blok.download.image {
 		width: 46%;
+		min-width: 280px;
+		margin-right: 10px;
+		float: left;
 	}
-}
+} 
 
 @media ( min-width :768px) and (max-width: 1199px) {
 	.row .col-sm-4, .row asside .col-md-4 { padding-left: 0; padding-right: 0;}
