@@ -779,9 +779,16 @@ article.detail-content div.contentarea .content p a {
 
 #message_content  .fa.fa-info-circle.fa-3x{padding: 0 10px 0 20px; float: left; margin-top: 0.2em;} 
 
-@media ( max-width: 991px ) {
+@media (min-width :350px) and (max-width: 991px) {
 	#message_content { width: 100%; float:left;}
 	#message_content p { width:80%}
+	#actions {width: 100%; float: left;}
+	#actions span.btn.fa.fa-times-circle-o.fa-lg {float:right; margin-top: 0; margin-bottom: 0; padding-top: 0;}
+}
+
+@media (max-width: 350px) {
+	#message_content { width: 100%; float:left;}
+	#message_content p { width:70%}
 	#actions {width: 100%; float: left;}
 	#actions span.btn.fa.fa-times-circle-o.fa-lg {float:right; margin-top: 0; margin-bottom: 0; padding-top: 0;}
 }
