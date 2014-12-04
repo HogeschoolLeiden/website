@@ -650,9 +650,10 @@ div.hulp h2 {  top: 45%;}
      -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
           box-shadow: 0 5px 10px rgba(0,0,0,.2);
 }
-/* ------------------------------------------------------------------------------------------------------------------------------------------------------------- */
-/* facebook embedded posts, calendar styling, homepage carrousel highlighted item on the right, contact widget aligns on left if no image and no social accounts */
-/* ------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* ----------------------------------------------------------------------------------------------- */
+/* fb emb posts, calendar styling, carousel item right, contact aligns on left if no img and share */
+/* ----------------------------------------------------------------------------------------------- */
 .fb-post {padding-bottom: 20px;}
 
 .home .swiper-container .slide-content .highlighted {margin-left: 58.333%;}
@@ -791,4 +792,16 @@ article.detail-content div.contentarea .content p a {
 	#message_content p { width:70%}
 	#actions {width: 100%; float: left;}
 	#actions span.btn.fa.fa-times-circle-o.fa-lg {float:right; margin-top: 0; margin-bottom: 0; padding-top: 0;}
+}
+
+/* ------------- */
+/* Mobile issues */
+/* ------------- */
+@media (max-width: 500px) {
+	.vindjestudie .overzicht .overzichtlijst a figure.media-object.pull-left { width: 50px; height: 50px; margin-right: 10px;}
+	
+	.vindjestudie .overzicht .overzichtlijst a figure.media-object.pull-left img{width: 70%; height: 70%}
+	
+	.vindjestudie .overzicht .overzichtlijst, 
+	.vindjestudie .overzicht .overzichtlijst .media.clearfix.study{ padding-left: 0; padding-right: 0; }
 }
