@@ -800,15 +800,47 @@ article.detail-content div.contentarea .content p a {
 /* Mobile issues */
 /* ------------- */
 @media (max-width: 500px) {
+	/* bachelors facet page icon issue */
 	.vindjestudie .overzicht .overzichtlijst a figure.media-object.pull-left { width: 50px; height: 50px; margin-right: 10px;}
-	
 	.vindjestudie .overzicht .overzichtlijst a figure.media-object.pull-left img {width: 70%; height: 70%}
-	
 	.vindjestudie .overzicht .overzichtlijst, 
-	.vindjestudie .overzicht .overzichtlijst .media.clearfix.study {padding-left: 0; padding-right: 0; }	
+	.vindjestudie .overzicht .overzichtlijst .media.clearfix.study {padding-left: 0; padding-right: 0; }
+	
+	/* lectoraten header title */
+	#top {min-height: 55px; display: block; width: 100%;}
+	#top .navbar-header button {margin-top: 10px;}
+	#top .navbar-header .navbar-brand {margin-top: 3px;}
 }
 
 @media (max-width: 767px) {
+	/* lectoraten header title */
+	.container.lectoraattitle {
+		width: -moz-calc(100% - 203px);
+		width: -webkit-calc(100% - 20px);
+		width: calc(100% - 203px);
+		
+		padding-left: 0;
+	}
+	 
+	.container.lectoraattitle .col-md-7.col-sm-7.col-xs-10.col-md-offset-2.col-sm-offset-2.col-xs-offset-1 {
+    	margin-left: 0; padding: 0;
+    } 
+    
+    .container.lectoraattitle .row .col-md-7.col-sm-7.col-xs-10.col-md-offset-2.col-sm-offset-2.col-xs-offset-1 
+    .table .table-cell .centered h1 a span{
+	    -ms-word-break: break-all;
+	    word-break: break-all;
+	
+	 	/* Non standard for webkit */
+	    word-break: break-word;
+	
+	    -webkit-hyphens: auto;
+	       -moz-hyphens: auto;
+	        -ms-hyphens: auto;
+	            hyphens: auto;
+    }
+
+	/* bachelors detail page - info block - smaller icon */
 	.col-md-4.col-sm-4.aside .blok.colorbg.lichtpaars.info {margin-left: 20px; } 
  	.col-md-4.col-sm-4.aside .blok.colorbg.lichtpaars.info figure.datum.large.info {
 		width: 75px; height: 75px;
@@ -817,6 +849,7 @@ article.detail-content div.contentarea .content p a {
 	.col-md-4.col-sm-4.aside .blok.colorbg.lichtpaars.info figure.datum.large.info img.info{ width: 45px;}
 }
 
+/* back button same min width always */
 .row a.btn.back{
 	min-width: 260.5px;
 }
