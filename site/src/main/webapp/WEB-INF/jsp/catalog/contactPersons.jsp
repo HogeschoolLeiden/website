@@ -57,7 +57,13 @@
                   </a>
               </li>
             </c:if>
-            <li>${item.phone}</li>
+            <c:if test="${not empty item.phone }">
+              <li>
+                <a title="${item.phone}" href="tel:${item.phone}">
+                    <c:out value="${item.phone}" />
+                </a>
+              </li>
+            </c:if>
           </ul>
           
           

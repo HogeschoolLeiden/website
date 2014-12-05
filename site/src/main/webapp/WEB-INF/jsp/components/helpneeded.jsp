@@ -30,24 +30,33 @@
               </c:choose>
             </c:set>
             
-            <c:choose>
-              <c:when test="${item.icon.firstItem.key eq 'fa fa-phone' }">
-                <a href="#" title="${alt}" ${item.externallink.newWindow ? 'class="external link" target="_blank"': '' }>      
-                   <c:out value="${item.externallink.linkTitle }" escapeXml="true" />
-                </a>
-              </c:when>
-              <c:otherwise>
-                <a href="${item.externallink.linkUrl}" title="${alt}" ${item.externallink.newWindow ? 'class="external link" target="_blank"': '' }>      
-                   <c:out value="${item.externallink.linkTitle }" escapeXml="true" />
-                </a>
-              </c:otherwise>
-            </c:choose>
+            <%-- 
+              the phone check it is not needed. If the editor provides the correct url type in the data,
+              no other checks are needed. Example: like mailto:test@test.ts for mails, 
+              the editor can also write call:+31123456789  for phone calls
+            --%>
+            <a href="${item.externallink.linkUrl}" title="${alt}" ${item.externallink.newWindow ? 'class="external link" target="_blank"': '' }>      
+               <c:out value="${item.externallink.linkTitle }" escapeXml="true" />
+            </a>
+            
           </c:when>
 
           <%-- Internal link case --%>
           <c:otherwise>
+          
+            <c:set var="alt">
+              <c:choose>
+                <c:when test="${not empty item.internallink.alt }">
+                  <c:out value="${item.internallink.alt}"></c:out>
+                </c:when>
+                <c:otherwise>
+                  <c:out value="${item.internallink.linkTitle}"></c:out>
+                </c:otherwise>
+              </c:choose>
+            </c:set>
+            
             <c:set var="link"><hst:link hippobean="${item.internallink.link }" /></c:set>
-            <a href="${link}" title="${item.internallink.alt}">
+            <a href="${link}" title="${alt}">
                  <c:out value="${item.internallink.linkTitle }" escapeXml="true" />
             </a>
           </c:otherwise>
