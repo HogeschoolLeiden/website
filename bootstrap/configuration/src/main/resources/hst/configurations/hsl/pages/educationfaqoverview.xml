@@ -45,6 +45,20 @@
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:component</sv:value>
       </sv:property>
+      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+        <sv:value>showTypes</sv:value>
+        <sv:value>contentBeanPath</sv:value>
+        <sv:value>defaultPageSize</sv:value>
+        <sv:value>sortBy</sv:value>
+        <sv:value>sortOrder</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+        <sv:value>hslbeans.FaqDocument</sv:value>
+        <sv:value>${contentBeanPath}</sv:value>
+        <sv:value>${defaultPageSize}</sv:value>
+        <sv:value>${sortBy}</sv:value>
+        <sv:value>${sortOrder}</sv:value>
+      </sv:property>
       <sv:node sv:name="contentTop">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hst:containercomponentreference</sv:value>

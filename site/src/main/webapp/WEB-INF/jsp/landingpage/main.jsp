@@ -34,7 +34,7 @@
           <hst:include ref="content" />
         </c:when>
         <c:otherwise>
-            <h1>Landing pages can have only 3 or 4 content columns</h1>
+          <hst:include ref="content" />
         </c:otherwise>
       </c:choose>
             
