@@ -11,8 +11,10 @@
 
 <c:choose>
   <c:when test="${pageContext.request.requestContext.contentBean['class'].name == 'org.hippoecm.hst.content.beans.standard.facetnavigation.HippoFacetSubNavigation'}">
-    <article class="highlighted col-md-9">
-    </article>
+    <article class="highlighted col-md-9"></article>
+  </c:when>
+  <c:when test="${pageContext.request.requestContext.contentBean['class'].name == 'hslbeans.MedewerkersOverviewPage'}">
+    <article class="highlighted col-md-9 medewerkers"></article>
   </c:when>
   <c:otherwise>
       <c:if test="${not empty highLightedItem}">
