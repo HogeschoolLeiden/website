@@ -96,6 +96,52 @@
           <sv:value>hippogallerypicker:imagelink</sv:value>
         </sv:property>
       </sv:node>
+      <sv:node sv:name="subjecttags">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hipposysedit:field</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:mandatory" sv:type="Boolean">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:multiple" sv:type="Boolean">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:ordered" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:path" sv:type="String">
+          <sv:value>hsl:subjecttags</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:primary" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:type" sv:type="String">
+          <sv:value>DynamicDropdown</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="thematags">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hipposysedit:field</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:mandatory" sv:type="Boolean">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:multiple" sv:type="Boolean">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:ordered" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:path" sv:type="String">
+          <sv:value>hsl:thematags</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:primary" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:type" sv:type="String">
+          <sv:value>DynamicDropdown</sv:value>
+        </sv:property>
+      </sv:node>
     </sv:node>
   </sv:node>
   <sv:node sv:name="hipposysedit:prototypes">
@@ -156,12 +202,6 @@
         <sv:value/>
       </sv:property>
       <sv:property sv:name="hsl:title" sv:type="String">
-        <sv:value/>
-      </sv:property>
-      <sv:property sv:name="hsl:subjecttags" sv:type="String" sv:multiple="true">
-        <sv:value/>
-      </sv:property>
-      <sv:property sv:name="hsl:thematags" sv:type="String" sv:multiple="true">
         <sv:value/>
       </sv:property>
       <sv:property sv:name="hsl:releaseDate" sv:type="Date">
@@ -470,98 +510,6 @@
         <sv:property sv:name="wicket.model" sv:type="String">
           <sv:value>${wicket.model}</sv:value>
         </sv:property>
-      </sv:node>
-      <sv:node sv:name="subjecttags">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>frontend:plugin</sv:value>
-        </sv:property>
-        <sv:property sv:name="engine" sv:type="String">
-          <sv:value>${engine}</sv:value>
-        </sv:property>
-        <sv:property sv:name="field" sv:type="String">
-          <sv:value>subjecttags</sv:value>
-        </sv:property>
-        <sv:property sv:name="mode" sv:type="String">
-          <sv:value>${mode}</sv:value>
-        </sv:property>
-        <sv:property sv:name="model.compareTo" sv:type="String">
-          <sv:value>${model.compareTo}</sv:value>
-        </sv:property>
-        <sv:property sv:name="multiselect.type" sv:type="String">
-          <sv:value>palette</sv:value>
-        </sv:property>
-        <sv:property sv:name="plugin.class" sv:type="String">
-          <sv:value>org.onehippo.forge.selection.frontend.plugin.DynamicMultiSelectPlugin</sv:value>
-        </sv:property>
-        <sv:property sv:name="caption" sv:type="String">
-          <sv:value>Over Tags</sv:value>
-        </sv:property>
-        <sv:property sv:name="validator.id" sv:type="String">
-          <sv:value>${validator.id}</sv:value>
-        </sv:property>
-        <sv:property sv:name="valuelist.provider" sv:type="String">
-          <sv:value>service.valuelist.default</sv:value>
-        </sv:property>
-        <sv:property sv:name="wicket.id" sv:type="String">
-          <sv:value>${cluster.id}.left.item</sv:value>
-        </sv:property>
-        <sv:property sv:name="wicket.model" sv:type="String">
-          <sv:value>${wicket.model}</sv:value>
-        </sv:property>
-        <sv:node sv:name="valuelist.options">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>frontend:pluginconfig</sv:value>
-          </sv:property>
-          <sv:property sv:name="source" sv:type="String">
-            <sv:value>/content/documents/hsl/configuratie/valuelists/over-values</sv:value>
-          </sv:property>
-        </sv:node>
-      </sv:node>
-      <sv:node sv:name="thematags">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>frontend:plugin</sv:value>
-        </sv:property>
-        <sv:property sv:name="engine" sv:type="String">
-          <sv:value>${engine}</sv:value>
-        </sv:property>
-        <sv:property sv:name="field" sv:type="String">
-          <sv:value>thematags</sv:value>
-        </sv:property>
-        <sv:property sv:name="mode" sv:type="String">
-          <sv:value>${mode}</sv:value>
-        </sv:property>
-        <sv:property sv:name="model.compareTo" sv:type="String">
-          <sv:value>${model.compareTo}</sv:value>
-        </sv:property>
-        <sv:property sv:name="multiselect.type" sv:type="String">
-          <sv:value>palette</sv:value>
-        </sv:property>
-        <sv:property sv:name="plugin.class" sv:type="String">
-          <sv:value>org.onehippo.forge.selection.frontend.plugin.DynamicMultiSelectPlugin</sv:value>
-        </sv:property>
-        <sv:property sv:name="caption" sv:type="String">
-          <sv:value>Thema Tags</sv:value>
-        </sv:property>
-        <sv:property sv:name="validator.id" sv:type="String">
-          <sv:value>${validator.id}</sv:value>
-        </sv:property>
-        <sv:property sv:name="valuelist.provider" sv:type="String">
-          <sv:value>service.valuelist.default</sv:value>
-        </sv:property>
-        <sv:property sv:name="wicket.id" sv:type="String">
-          <sv:value>${cluster.id}.left.item</sv:value>
-        </sv:property>
-        <sv:property sv:name="wicket.model" sv:type="String">
-          <sv:value>${wicket.model}</sv:value>
-        </sv:property>
-        <sv:node sv:name="valuelist.options">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>frontend:pluginconfig</sv:value>
-          </sv:property>
-          <sv:property sv:name="source" sv:type="String">
-            <sv:value>/content/documents/hsl/configuratie/valuelists/thema-values</sv:value>
-          </sv:property>
-        </sv:node>
       </sv:node>      
     </sv:node>
   </sv:node>
