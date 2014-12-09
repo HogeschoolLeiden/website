@@ -68,7 +68,7 @@ public class DynamicStringLengthValidator extends GenericStringLengthValidator {
         int result = defaultMax;
         if(node.hasProperty(HSL_COLOR_PROPERTY)){
             String color = node.getProperty(HSL_COLOR_PROPERTY).getString();
-            if(color!=null && color.equals("blauw")){
+            if(color!=null && "blauw".equals(color)){
                 result = getMaxLengthBlue();
             }
         }

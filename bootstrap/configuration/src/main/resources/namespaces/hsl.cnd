@@ -171,6 +171,12 @@
 [hsl:RelatedWidgetParameters] > hippo:compound, hippostd:relaxed
   orderable
 
+[hsl:LectoratNewsParameters] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hsl:LectoratNewsCompoundMixin] > hippo:compound, hippostd:relaxed
+  orderable
+
 [hsl:ShareParameters] > hippo:compound, hippostd:relaxed
   orderable
 
@@ -299,6 +305,10 @@
 [hsl:RelatedEventsMixin]
   mixin
   + hsl:relatedEventsCompoundMixin (hsl:RelatedEventsCompoundMixin)
+
+[hsl:LectoratNewsMixin]
+  mixin
+  + hsl:lectoratNewsCompoundMixin (hsl:LectoratNewsCompoundMixin)
 
 [hsl:RelatedPersMixin]
   mixin
