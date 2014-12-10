@@ -1,11 +1,7 @@
-curl -XDELETE  'http://localhost:9200/newlive/'
-curl -XDELETE  'http://localhost:9200/newpreview/'
+curl -XDELETE  "$1/hsleidennl/"
+curl -XDELETE  "$1/hsleidennl-preview/"
 
-
-
-curl -XPUT "http://localhost:9200/newlive" -d @mapping.json \
-		--header "Content-Type: application/json"
-curl -XPUT "http://localhost:9200/newpreview" -d @mapping.json \
-		--header "Content-Type: application/json"
-
-
+curl -XPUT "$1/hsleidennl" -d @mapping.json \
+        --header "Content-Type: application/json"
+curl -XPUT "$1/hsleidennl-preview" -d @mapping.json \
+        --header "Content-Type: application/json"

@@ -79,6 +79,17 @@
                                 }
                             }
                         },
+                        "name": {
+                            "type": "string",
+                            "path": "just_name",
+                            "fields": {
+                                "nGram": {
+                                    "type": "string",
+                                    "index_analyzer": "nGram_analyzer",
+                                    "search_analyzer": "whitespace_analyzer"
+                                }
+                            }
+                        },
                         "externallinks": {
                             "properties": {
                                 "alt": {
@@ -109,6 +120,10 @@
                                         }
                                     }
                                 },
+                                "position": {
+                                    "type": "string",
+                                    "index": "not_analyzed"
+                                },
                                 "quoteText": {
                                     "type": "string",
                                     "path": "just_name",
@@ -119,6 +134,17 @@
                                             "search_analyzer": "whitespace_analyzer"
                                         }
                                     }
+                                }
+                            }
+                        },
+                        "testimonialText": {
+                            "type": "string",
+                            "path": "just_name",
+                            "fields": {
+                                "nGram": {
+                                    "type": "string",
+                                    "index_analyzer": "nGram_analyzer",
+                                    "search_analyzer": "whitespace_analyzer"
                                 }
                             }
                         },
@@ -391,6 +417,34 @@
                                 }
                             }
                         },
+                        "name": {
+                            "type": "string",
+                            "path": "just_name",
+                            "fields": {
+                                "nGram": {
+                                    "type": "string",
+                                    "index_analyzer": "nGram_analyzer",
+                                    "search_analyzer": "whitespace_analyzer"
+                                }
+                            }
+                        },
+                        "externallinks": {
+                            "properties": {
+                                "alt": {
+                                    "type": "string"
+                                },
+                                "linkTitle": {
+                                    "type": "string"
+                                },
+                                "linkUrl": {
+                                    "type": "string",
+                                    "index": "not_analyzed"
+                                },
+                                "newWindow": {
+                                    "type": "boolean"
+                                }
+                            }
+                        },
                         "quoteParameters": {
                             "properties": {
                                 "name": {
@@ -406,14 +460,7 @@
                                 },
                                 "position": {
                                     "type": "string",
-                                    "path": "just_name",
-                                    "fields": {
-                                        "nGram": {
-                                            "type": "string",
-                                            "index_analyzer": "nGram_analyzer",
-                                            "search_analyzer": "whitespace_analyzer"
-                                        }
-                                    }
+                                    "index": "not_analyzed"
                                 },
                                 "quoteText": {
                                     "type": "string",
@@ -428,8 +475,27 @@
                                 }
                             }
                         },
+                        "testimonialText": {
+                            "type": "string",
+                            "path": "just_name",
+                            "fields": {
+                                "nGram": {
+                                    "type": "string",
+                                    "index_analyzer": "nGram_analyzer",
+                                    "search_analyzer": "whitespace_analyzer"
+                                }
+                            }
+                        },
                         "title": {
-                            "type": "string"
+                            "type": "string",
+                            "path": "just_name",
+                            "fields": {
+                                "nGram": {
+                                    "type": "string",
+                                    "index_analyzer": "nGram_analyzer",
+                                    "search_analyzer": "whitespace_analyzer"
+                                }
+                            }
                         }
                     }
                 },
@@ -569,6 +635,17 @@
                                 }
                             }
                         },
+                        "name": {
+                            "type": "string",
+                            "path": "just_name",
+                            "fields": {
+                                "nGram": {
+                                    "type": "string",
+                                    "index_analyzer": "nGram_analyzer",
+                                    "search_analyzer": "whitespace_analyzer"
+                                }
+                            }
+                        },
                         "externallinks": {
                             "properties": {
                                 "alt": {
@@ -599,6 +676,10 @@
                                         }
                                     }
                                 },
+                                "position": {
+                                    "type": "string",
+                                    "index": "not_analyzed"
+                                },
                                 "quoteText": {
                                     "type": "string",
                                     "path": "just_name",
@@ -609,6 +690,17 @@
                                             "search_analyzer": "whitespace_analyzer"
                                         }
                                     }
+                                }
+                            }
+                        },
+                        "testimonialText": {
+                            "type": "string",
+                            "path": "just_name",
+                            "fields": {
+                                "nGram": {
+                                    "type": "string",
+                                    "index_analyzer": "nGram_analyzer",
+                                    "search_analyzer": "whitespace_analyzer"
                                 }
                             }
                         },
@@ -870,6 +962,17 @@
                                 }
                             }
                         },
+                        "name": {
+                            "type": "string",
+                            "path": "just_name",
+                            "fields": {
+                                "nGram": {
+                                    "type": "string",
+                                    "index_analyzer": "nGram_analyzer",
+                                    "search_analyzer": "whitespace_analyzer"
+                                }
+                            }
+                        },
                         "externallinks": {
                             "properties": {
                                 "alt": {
@@ -900,6 +1003,10 @@
                                         }
                                     }
                                 },
+                                "position": {
+                                    "type": "string",
+                                    "index": "not_analyzed"
+                                },
                                 "quoteText": {
                                     "type": "string",
                                     "path": "just_name",
@@ -910,6 +1017,17 @@
                                             "search_analyzer": "whitespace_analyzer"
                                         }
                                     }
+                                }
+                            }
+                        },
+                        "testimonialText": {
+                            "type": "string",
+                            "path": "just_name",
+                            "fields": {
+                                "nGram": {
+                                    "type": "string",
+                                    "index_analyzer": "nGram_analyzer",
+                                    "search_analyzer": "whitespace_analyzer"
                                 }
                             }
                         },
@@ -1068,6 +1186,17 @@
                                 }
                             }
                         },
+                        "name": {
+                            "type": "string",
+                            "path": "just_name",
+                            "fields": {
+                                "nGram": {
+                                    "type": "string",
+                                    "index_analyzer": "nGram_analyzer",
+                                    "search_analyzer": "whitespace_analyzer"
+                                }
+                            }
+                        },
                         "externallinks": {
                             "properties": {
                                 "alt": {
@@ -1098,6 +1227,10 @@
                                         }
                                     }
                                 },
+                                "position": {
+                                    "type": "string",
+                                    "index": "not_analyzed"
+                                },
                                 "quoteText": {
                                     "type": "string",
                                     "path": "just_name",
@@ -1108,6 +1241,17 @@
                                             "search_analyzer": "whitespace_analyzer"
                                         }
                                     }
+                                }
+                            }
+                        },
+                        "testimonialText": {
+                            "type": "string",
+                            "path": "just_name",
+                            "fields": {
+                                "nGram": {
+                                    "type": "string",
+                                    "index_analyzer": "nGram_analyzer",
+                                    "search_analyzer": "whitespace_analyzer"
                                 }
                             }
                         },
@@ -1279,6 +1423,17 @@
                                 }
                             }
                         },
+                        "name": {
+                            "type": "string",
+                            "path": "just_name",
+                            "fields": {
+                                "nGram": {
+                                    "type": "string",
+                                    "index_analyzer": "nGram_analyzer",
+                                    "search_analyzer": "whitespace_analyzer"
+                                }
+                            }
+                        },
                         "externallinks": {
                             "properties": {
                                 "alt": {
@@ -1309,6 +1464,10 @@
                                         }
                                     }
                                 },
+                                "position": {
+                                    "type": "string",
+                                    "index": "not_analyzed"
+                                },
                                 "quoteText": {
                                     "type": "string",
                                     "path": "just_name",
@@ -1319,6 +1478,17 @@
                                             "search_analyzer": "whitespace_analyzer"
                                         }
                                     }
+                                }
+                            }
+                        },
+                        "testimonialText": {
+                            "type": "string",
+                            "path": "just_name",
+                            "fields": {
+                                "nGram": {
+                                    "type": "string",
+                                    "index_analyzer": "nGram_analyzer",
+                                    "search_analyzer": "whitespace_analyzer"
                                 }
                             }
                         },
@@ -1583,6 +1753,17 @@
                                 }
                             }
                         },
+                        "name": {
+                            "type": "string",
+                            "path": "just_name",
+                            "fields": {
+                                "nGram": {
+                                    "type": "string",
+                                    "index_analyzer": "nGram_analyzer",
+                                    "search_analyzer": "whitespace_analyzer"
+                                }
+                            }
+                        },
                         "externallinks": {
                             "properties": {
                                 "alt": {
@@ -1613,6 +1794,10 @@
                                         }
                                     }
                                 },
+                                "position": {
+                                    "type": "string",
+                                    "index": "not_analyzed"
+                                },
                                 "quoteText": {
                                     "type": "string",
                                     "path": "just_name",
@@ -1623,6 +1808,17 @@
                                             "search_analyzer": "whitespace_analyzer"
                                         }
                                     }
+                                }
+                            }
+                        },
+                        "testimonialText": {
+                            "type": "string",
+                            "path": "just_name",
+                            "fields": {
+                                "nGram": {
+                                    "type": "string",
+                                    "index_analyzer": "nGram_analyzer",
+                                    "search_analyzer": "whitespace_analyzer"
                                 }
                             }
                         },
@@ -1750,13 +1946,31 @@
                                 }
                             }
                         },
+                        "externallinks": {
+                            "properties": {
+                                "alt": {
+                                    "type": "string"
+                                },
+                                "linkTitle": {
+                                    "type": "string"
+                                },
+                                "linkUrl": {
+                                    "type": "string",
+                                    "index": "not_analyzed"
+                                },
+                                "newWindow": {
+                                    "type": "boolean"
+                                }
+                            }
+                        },
                         "quoteParameters": {
                             "properties": {
                                 "name": {
                                     "type": "string"
                                 },
                                 "position": {
-                                    "type": "string"
+                                    "type": "string",
+                                    "index": "not_analyzed"
                                 },
                                 "quoteText": {
                                     "type": "string"
@@ -1782,6 +1996,17 @@
                                             "search_analyzer": "whitespace_analyzer"
                                         }
                                     }
+                                }
+                            }
+                        },
+                        "name": {
+                            "type": "string",
+                            "path": "just_name",
+                            "fields": {
+                                "nGram": {
+                                    "type": "string",
+                                    "index_analyzer": "nGram_analyzer",
+                                    "search_analyzer": "whitespace_analyzer"
                                 }
                             }
                         },
@@ -1815,6 +2040,10 @@
                                         }
                                     }
                                 },
+                                "position": {
+                                    "type": "string",
+                                    "index": "not_analyzed"
+                                },
                                 "quoteText": {
                                     "type": "string",
                                     "path": "just_name",
@@ -1825,6 +2054,17 @@
                                             "search_analyzer": "whitespace_analyzer"
                                         }
                                     }
+                                }
+                            }
+                        },
+                        "testimonialText": {
+                            "type": "string",
+                            "path": "just_name",
+                            "fields": {
+                                "nGram": {
+                                    "type": "string",
+                                    "index_analyzer": "nGram_analyzer",
+                                    "search_analyzer": "whitespace_analyzer"
                                 }
                             }
                         },
@@ -1945,6 +2185,17 @@
                                 }
                             }
                         },
+                        "name": {
+                            "type": "string",
+                            "path": "just_name",
+                            "fields": {
+                                "nGram": {
+                                    "type": "string",
+                                    "index_analyzer": "nGram_analyzer",
+                                    "search_analyzer": "whitespace_analyzer"
+                                }
+                            }
+                        },
                         "externallinks": {
                             "properties": {
                                 "alt": {
@@ -1975,6 +2226,10 @@
                                         }
                                     }
                                 },
+                                "position": {
+                                    "type": "string",
+                                    "index": "not_analyzed"
+                                },
                                 "quoteText": {
                                     "type": "string",
                                     "path": "just_name",
@@ -1985,6 +2240,17 @@
                                             "search_analyzer": "whitespace_analyzer"
                                         }
                                     }
+                                }
+                            }
+                        },
+                        "testimonialText": {
+                            "type": "string",
+                            "path": "just_name",
+                            "fields": {
+                                "nGram": {
+                                    "type": "string",
+                                    "index_analyzer": "nGram_analyzer",
+                                    "search_analyzer": "whitespace_analyzer"
                                 }
                             }
                         },
