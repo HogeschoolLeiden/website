@@ -31,11 +31,13 @@
         </li>
       </c:when>
       <c:when test="${item.expanded}">
-      	<li>
-          <a itemprop="url" href="<hst:link link="${item.hstLink}"/>">
-             <span itemprop="title"><c:out value="${item.name}" /></span>
-          </a>
-        </li>
+        <c:if test="${not tag:getSitemenuConfigParameter(item, 'disabled') eq true}">
+          <li>
+            <a itemprop="url" href="<hst:link link="${item.hstLink}"/>">
+               <span itemprop="title"><c:out value="${item.name}" /></span>
+            </a>
+          </li>
+        </c:if>
       	<tag:breadcrumbitem parentItem="${item}" lastItemClass="${lastItemClass} " />
       </c:when>
     </c:choose>
