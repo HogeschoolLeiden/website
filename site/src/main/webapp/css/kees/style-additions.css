@@ -301,7 +301,7 @@ h2.noQueryResults { font-size: 1.2em; color: #23114c; font-family: 'source_sans_
 
 .catalog.image.teasers section.blok.download.image {
 	padding: 0;
-	margin: 20px 0;
+	margin: 0 0 20px 0;
 }
 
 /* ------------------- */
@@ -743,6 +743,7 @@ article.detail-content div.contentarea .content p a {
 	background: #23114c;
 	color: #fff;
 }
+
 .blok.download .btn.darkLinkBackground:hover {
 	background: #008383;
 	color: #fff;
@@ -862,4 +863,11 @@ article.detail-content div.contentarea .content p a {
 /* back button same min width always */
 .row a.btn.back{
 	min-width: 260.5px;
+}
+
+/* chrome hovering problem */
+@media ( min-width : 992px ) {
+	.navbar .container .nav.navbar-nav#mainnav li:hover ul.dropdownmenu{
+		display: block !important
+	}
 }

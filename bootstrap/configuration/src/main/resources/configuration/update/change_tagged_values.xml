@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="Change tagged values">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>hipposys:updaterinfo</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:batchsize" sv:type="Long">
+    <sv:value>10</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:dryrun" sv:type="Boolean">
+    <sv:value>false</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:query" sv:type="String">
+    <sv:value>content/documents//element(*, hsl:EducationPage)</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:script" sv:type="String">
+    <sv:value>package org.hippoecm.frontend.plugins.cms.dev.updater&#13;
+&#13;
+import org.onehippo.repository.update.BaseNodeUpdateVisitor&#13;
+import javax.jcr.Node&#13;
+&#13;
+class UpdaterTemplate extends BaseNodeUpdateVisitor {&#13;
+&#13;
+  boolean doUpdate(Node node) {&#13;
+    log.debug("Updating node ${node.path}");&#13;
+&#13;
+    if(node.hasProperty("hsl:educationtags")){&#13;
+       node.getProperty("hsl:educationtags").setValue(getNewTaggedValues(node));&#13;
+    }&#13;
+        &#13;
+        return false;&#13;
+    }&#13;
+    &#13;
+  String[] getNewTaggedValues(Node node ) throws ValueFormatException, PathNotFoundException, RepositoryException{&#13;
+        &#13;
+        Value[] valuesArray = node.getProperty("hsl:educationtags").getValues();&#13;
+        &#13;
+        String[] result = new String[valuesArray.length];&#13;
+        for (int i = 0; i &lt; valuesArray.length; i++) {&#13;
+            if(valuesArray[i].getString().equalsIgnoreCase("lerarenopleiding")){&#13;
+                result[i] = "educatie";&#13;
+                 log.debug("change");&#13;
+            }else if(valuesArray[i].getString().equalsIgnoreCase("management-en-bedrijf")){&#13;
+                result[i] = "management-en-bedrijf";&#13;
+              log.debug("change");&#13;
+            }else if(valuesArray[i].getString().equalsIgnoreCase("zorg")){&#13;
+                result[i] = "zorg";&#13;
+              log.debug("change");&#13;
+            }else if(valuesArray[i].getString().equalsIgnoreCase("life-science-en-ict") || &#13;
+                    valuesArray[i].getString().equalsIgnoreCase("techniek")){&#13;
+                result[i] = "bioscience-en-diagnostiek";&#13;
+              log.debug("change");&#13;
+            }else{&#13;
+                result[i] = "";&#13;
+              log.debug("delete");&#13;
+            }&#13;
+        }&#13;
+   &#13;
+        return result;&#13;
+    }&#13;
+&#13;
+  boolean undoUpdate(Node node) {&#13;
+    throw new UnsupportedOperationException('Updater does not implement undoUpdate method')&#13;
+  }&#13;
+&#13;
+}</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:throttle" sv:type="Long">
+    <sv:value>10</sv:value>
+  </sv:property>
+</sv:node>
