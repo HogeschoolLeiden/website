@@ -6,19 +6,19 @@
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:sitemenu</sv:value>
     </sv:property>
-    <sv:node sv:name="Onderwijs">
+    <sv:node sv:name="Opleiden">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:sitemenuitem</sv:value>
       </sv:property>
       <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-        <sv:value>onderwijs</sv:value>
+        <sv:value>opleiden</sv:value>
       </sv:property>
       <sv:node sv:name="Vindt je studie">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hst:sitemenuitem</sv:value>
         </sv:property>
         <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-          <sv:value>onderwijs/bacheloropleidingen/vindt-je-studie</sv:value>
+          <sv:value>opleiden/bacheloropleidingen/vindt-je-studie</sv:value>
         </sv:property>
       </sv:node>
       <sv:node sv:name="Bachelors">
@@ -26,7 +26,7 @@
           <sv:value>hst:sitemenuitem</sv:value>
         </sv:property>
         <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-          <sv:value>onderwijs/bachelors</sv:value>
+          <sv:value>opleiden/bachelors</sv:value>
         </sv:property>
       </sv:node>
       <sv:node sv:name="Nascholing">
@@ -34,7 +34,7 @@
           <sv:value>hst:sitemenuitem</sv:value>
         </sv:property>
         <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-          <sv:value>onderwijs/opleidingen-voor-professionals/nascholingen</sv:value>
+          <sv:value>opleiden/opleidingen-voor-professionals/nascholingen</sv:value>
         </sv:property>
       </sv:node>
       <sv:node sv:name="Open Dagen">
@@ -42,7 +42,7 @@
           <sv:value>hst:sitemenuitem</sv:value>
         </sv:property>
         <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-          <sv:value>onderwijs/bacheloropleidingen/open-dagen</sv:value>
+          <sv:value>opleiden/bacheloropleidingen/open-dagen</sv:value>
         </sv:property>
       </sv:node>
     </sv:node>
@@ -256,14 +256,14 @@
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:sitemenu</sv:value>
     </sv:property>
-    <sv:node sv:name="Onderwijs">
+    <sv:node sv:name="Opleiden">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:sitemenuitem</sv:value>
       </sv:property>
       <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
       <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
       <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-        <sv:value>onderwijs</sv:value>
+        <sv:value>opleiden</sv:value>
       </sv:property>
       <sv:node sv:name="Bacheloropleidingen">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -278,7 +278,7 @@
           <sv:value>{"relativeContentPath": "pages/onderwijs/bacheloropleidingen/index", "invisible": "false", "disabled": "false","showFacetNavigations":"false"}</sv:value>
         </sv:property>
         <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-          <sv:value>onderwijs/bacheloropleidingen</sv:value>
+          <sv:value>opleiden/bacheloropleidingen</sv:value>
         </sv:property>
         <sv:node sv:name="Vindt je studie">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -290,7 +290,7 @@
           <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
           <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
           <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-            <sv:value>onderwijs/bacheloropleidingen/vindt-je-studie</sv:value>
+            <sv:value>opleiden/bacheloropleidingen/vindt-je-studie</sv:value>
           </sv:property>
           <sv:property sv:name="hst:repobased" sv:type="Boolean">
             <sv:value>true</sv:value>
@@ -310,7 +310,7 @@
             <sv:value>{"relativeContentPath": "pages/onderwijs/bacheloropleidingen/inschrijfinformatie/index", "invisible": "false", "disabled": "false","showFacetNavigations":"false"}</sv:value>
           </sv:property>
           <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-            <sv:value>onderwijs/bacheloropleidingen/inschrijfinformatie/index</sv:value>
+            <sv:value>opleiden/bacheloropleidingen/inschrijfinformatie/index</sv:value>
           </sv:property>
           <sv:property sv:name="hst:repobased" sv:type="Boolean">
             <sv:value>true</sv:value>
@@ -323,7 +323,7 @@
           <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
           <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
           <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-            <sv:value>onderwijs/bacheloropleidingen/open-dagen</sv:value>
+            <sv:value>opleiden/bacheloropleidingen/open-dagen</sv:value>
           </sv:property>
         </sv:node>
         <sv:node sv:name="Proefstuderen">
@@ -333,7 +333,7 @@
           <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
           <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
           <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-            <sv:value>onderwijs/bacheloropleidingen/proefstuderen</sv:value>
+            <sv:value>opleiden/bacheloropleidingen/proefstuderen</sv:value>
           </sv:property>
         </sv:node>
         <sv:node sv:name="Meelopen">
@@ -343,7 +343,7 @@
           <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
           <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
           <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-            <sv:value>onderwijs/bacheloropleidingen/meelopen</sv:value>
+            <sv:value>opleiden/bacheloropleidingen/meelopen</sv:value>
           </sv:property>
         </sv:node>
         <sv:node sv:name="Introductiedagen">
@@ -353,7 +353,7 @@
           <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
           <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
           <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-            <sv:value>onderwijs/bacheloropleidingen/introductiedagen</sv:value>
+            <sv:value>opleiden/bacheloropleidingen/introductiedagen</sv:value>
           </sv:property>
         </sv:node>
         <sv:node sv:name="Minoren">
@@ -372,7 +372,7 @@
             <sv:value>true</sv:value>
           </sv:property>
           <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-            <sv:value>onderwijs/bacheloropleidingen/minoren/index</sv:value>
+            <sv:value>opleiden/bacheloropleidingen/minoren/index</sv:value>
           </sv:property>
           <sv:property sv:name="hst:repobased" sv:type="Boolean">
             <sv:value>true</sv:value>
@@ -385,7 +385,7 @@
           <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
           <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
           <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-            <sv:value>onderwijs/bacheloropleidingen/studiekeuzecheck</sv:value>
+            <sv:value>opleiden/bacheloropleidingen/studiekeuzecheck</sv:value>
           </sv:property>
         </sv:node>
         <sv:node sv:name="F.A.Q.">
@@ -410,7 +410,7 @@
           <sv:value>true</sv:value>
         </sv:property>
         <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-          <sv:value>onderwijs/opleidingen-voor-professionals</sv:value>
+          <sv:value>opleiden/opleidingen-voor-professionals</sv:value>
         </sv:property>
         <sv:node sv:name="Opleidingen">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -428,7 +428,7 @@
             <sv:value>{"relativeContentPath": "pages/onderwijs/opleidingen-voor-professionals/nascholing-facetnav/Opleidingen", "invisible": "false", "disabled": "false"}</sv:value>
           </sv:property>
           <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-            <sv:value>onderwijs/opleidingen-voor-professionals</sv:value>
+            <sv:value>opleiden/opleidingen-voor-professionals</sv:value>
           </sv:property>
           <sv:property sv:name="hst:repobased" sv:type="Boolean">
             <sv:value>true</sv:value>
@@ -450,7 +450,7 @@
             <sv:value>{"relativeContentPath": "pages/onderwijs/opleidingen-voor-professionals/masters/index", "invisible": "false", "disabled": "false","showFacetNavigations":"false"}</sv:value>
           </sv:property>
           <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-            <sv:value>onderwijs/opleidingen-voor-professionals/masters</sv:value>
+            <sv:value>opleiden/opleidingen-voor-professionals/masters</sv:value>
           </sv:property>
           <sv:property sv:name="hst:repobased" sv:type="Boolean">
             <sv:value>true</sv:value>
@@ -474,7 +474,7 @@
             <sv:value>true</sv:value>
           </sv:property>
           <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-            <sv:value>onderwijs/opleidingen-voor-professionals/nascholingen</sv:value>
+            <sv:value>opleiden/opleidingen-voor-professionals/nascholingen</sv:value>
           </sv:property>
           <sv:property sv:name="hst:repobased" sv:type="Boolean">
             <sv:value>true</sv:value>
@@ -497,7 +497,7 @@
           <sv:value>{"relativeContentPath": "pages/onderwijs/studeren-bij-hl/index", "invisible": "false", "disabled": "false","showFacetNavigations":"false"}</sv:value>
         </sv:property>
         <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-          <sv:value>onderwijs/studeren-bij-hl</sv:value>
+          <sv:value>opleiden/studeren-bij-hl</sv:value>
         </sv:property>
         <sv:property sv:name="hst:repobased" sv:type="Boolean">
           <sv:value>true</sv:value>
@@ -519,7 +519,7 @@
           <sv:value>{"relativeContentPath": "pages/onderwijs/onderwijsvisie/index", "invisible": "false", "disabled": "false","showFacetNavigations":"false"}</sv:value>
         </sv:property>
         <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-          <sv:value>onderwijs/onderwijsvisie</sv:value>
+          <sv:value>opleiden/onderwijsvisie</sv:value>
         </sv:property>
         <sv:property sv:name="hst:repobased" sv:type="Boolean">
           <sv:value>true</sv:value>
