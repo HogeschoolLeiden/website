@@ -294,14 +294,23 @@ h2.noQueryResults { font-size: 1.2em; color: #23114c; font-family: 'source_sans_
 	background: center #fff;
 }
 
-.catalog.image.teasers, .blok.download.image, .blok.download.image a .img img
-	{
+.catalog.image.teasers, .blok.download.image, .blok.download.image a .img img{
 	width: 100%;
 }
 
 .catalog.image.teasers section.blok.download.image {
 	padding: 0;
 	margin: 0 0 20px 0;
+}
+
+.catalog.image.teasers .blok.download.image a {
+	height: 100%;
+}
+
+nav.col-md-3.col-xs-12 .catalog.image.teasers,
+aside.col-md-4.col-sm-4 .catalog.image.teasers {
+	max-width: 260px;
+	margin: 0 auto;
 }
 
 /* ------------------- */
