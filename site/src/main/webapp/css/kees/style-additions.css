@@ -589,12 +589,20 @@ nav.col-md-3.col-xs-12 .catalog.internalLinks.teasers .tekstitem ul li,nav.col-m
 
 .home .zoeken.col-xs-12.col-sm-12 .form label { width: 100%; }
 
-.zoeken.col-xs-12.col-sm-12 div.overviewItem {display:block; width:49%; float:right;}
-.zoeken.col-xs-12.col-sm-12 form.form {display:block; width:49%; float:left;}
+.home .blok.snelkiezer .zoeken.col-xs-12.col-sm-12 form .form-group input { font-size: 1em;}
+.snelkiezer.blok.colorbg.paars .zoeken.col-xs-12.col-sm-12,
+.snelkiezer.blok.colorbg.paars { padding-bottom: 0;}
+
+.snelkiezer.blok.colorbg.paars .zoeken.col-xs-12.col-sm-12.search {
+	padding-bottom: 10px;
+}
+
+.zoeken.col-xs-12.col-sm-12 div.overviewItem {display:block; width:49.5%; float: left; }
+.zoeken.col-xs-12.col-sm-12 div.overviewItem.left {margin-right: 0.5%;}
+.zoeken.col-xs-12.col-sm-12 div.overviewItem.right {margin-left: 0.5%;}
 
 @media ( max-width : 494px) {
 	.zoeken.col-xs-12.col-sm-12 div.overviewItem {display:block; width:100%; float:right;}
-	.zoeken.col-xs-12.col-sm-12 form.form {display:block; width:100%; float:left;}
 }
 
 @media (min-width : 495px) and (max-width : 599px) {

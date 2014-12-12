@@ -11,6 +11,8 @@
       
 <section class="snelkiezer blok colorbg paars medium">
   <h1><fmt:message key="quick.choice.title"/></h1>
+  
+  <%-- facet values --%>
   <c:forEach var="facet" items="${model.facetBean.folders}">
     <c:if test="${facet.name eq model.paramInfo.firstFacetName }">
       <div class="interesse col-xs-6 col-sm-8 col-md-8">
@@ -24,23 +26,34 @@
     </c:if>
   </c:forEach>
       
+  <%-- Add extra items go to all --%>
   <div class="zoeken col-xs-12 col-sm-12">
-    <%-- Add extra items go to all --%>
-    <div class="overviewItem">
-      <c:if test="${not empty model.paramInfo.overviewBeanPath }">
-        <ul class="overviewItem">
-          <hst:link var="overviewLink" path="${model.paramInfo.overviewBeanPath}" />
-          <li class="overviewItem">
-            <a href="${overviewLink}" class="btn">
-              <strong> <fmt:message key="bachelors.facet.overview"/> </strong>
-            </a>
-          </li>
-        </ul>
-      </c:if>
+    <div class="overviewItem left">
+      <ul class="overviewItem">
+        <hst:link var="overviewLink" path="${model.paramInfo.leftOverviewLink}" />
+        <li class="overviewItem">
+          <a href="${overviewLink}" class="btn">
+            <strong> <fmt:message key="left.facet.overview"/> </strong>
+          </a>
+        </li>
+      </ul>
       <div class="clearfix"></div>
     </div>
-    
-      
+    <div class="overviewItem right">
+      <ul class="overviewItem">
+        <hst:link var="overviewLink" path="${model.paramInfo.rightOverviewLink}" />
+        <li class="overviewItem">
+          <a href="${overviewLink}" class="btn">
+            <strong> <fmt:message key="right.facet.overview"/> </strong>
+          </a>
+        </li>
+      </ul>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+
+  <%-- search button --%>
+  <div class="zoeken col-xs-12 col-sm-12 search">      
     <hst:link var="link" siteMapItemRefId="bachelors" />
     <form role="form" class="form" action="${link}" method="get">
       <fmt:message key="search.in.bachelors" var="searchMessage"/>

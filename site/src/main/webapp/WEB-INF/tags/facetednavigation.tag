@@ -24,14 +24,14 @@
 	  <c:if test="${facet.resultSet.count > 0}">
 		  
         <section class="filtergroup col-md-3">
-		  <%-- <h2><c:out value="${facet.name eq 'Vakgebied' ?  'Opleidingen' : facet.name}" escapeXml="true" /></h2> --%>
+		  <%-- <h2><c:out value="${facet.name eq 'Specialisaties' ?  'Vakgebieden' : facet.name}" escapeXml="true" /></h2> --%>
 		  <h2><c:out value="${facet.name}" escapeXml="true" /></h2>
 		  <c:if test="${not empty facet.folders}">
             <div class="filterlist">
-              <c:if test="${facet.name eq 'Vakgebied'}" >
+              <c:if test="${facet.name eq 'Specialisaties'}" >
               	<c:forEach items="${facetnav.ancestorsAndSelf}" var="ancestor">
-              		<c:if test="${ancestor.parentBean.name eq 'Opleidingen'}">
-	               	<hst:facetnavigationlink removeList="${opw:removeListByCategory('Opleidingen', 'Vakgebied', facetnav)}" current="${facetnav}" var="removeLink" />
+              		<c:if test="${ancestor.parentBean.name eq 'Vakgebieden'}">
+	               	<hst:facetnavigationlink removeList="${opw:removeListByCategory('Vakgebieden', 'Specialisaties', facetnav)}" current="${facetnav}" var="removeLink" />
                       
                     <a href="${removeLink}">
                       <div class="checkbox">
@@ -47,7 +47,7 @@
 			                    
                 <c:set var="divClass">
                   <c:choose>
-                    <c:when test="${facet.name eq 'Vakgebied' }">
+                    <c:when test="${facet.name eq 'Specialisaties' }">
                       <c:out value="checkbox drilled"></c:out>
                     </c:when>
                     <c:otherwise>

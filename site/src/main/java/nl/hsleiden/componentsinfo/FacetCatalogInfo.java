@@ -1,9 +1,7 @@
 package nl.hsleiden.componentsinfo;
 
-import hslbeans.WebPage;
 import nl.hsleiden.utils.Constants;
 
-import org.hippoecm.hst.core.parameters.JcrPath;
 import org.hippoecm.hst.core.parameters.Parameter;
 
 import com.tdclighthouse.prototype.componentsinfo.FacetedOverviewPageInfo;
@@ -16,7 +14,9 @@ public interface FacetCatalogInfo extends FacetedOverviewPageInfo {
     @Parameter(name = "secondFacetName", displayName="Tweede Facet Naam", defaultValue="")
     public String getSecondFacetName();
 
-    @Parameter(name = Constants.WidgetConstants.OVERVIEW_BEAN_PATH, defaultValue = "")
-    @JcrPath(isRelative = false, pickerInitialPath = Constants.WidgetConstants.INITIAL_LOCATION, pickerRemembersLastVisited=false, pickerSelectableNodeTypes = { WebPage.JCR_TYPE })
-    public String getOverviewBeanPath();
+    @Parameter(name = Constants.WidgetConstants.LEFT_OVERVIEW_LINK, defaultValue = "opleiden/bacheloropleidingen/vindt-je-studie")
+    public String getLeftOverviewLink();
+
+    @Parameter(name = Constants.WidgetConstants.RIGHT_OVERVIEW_LINK, defaultValue = "opleiden/opleidingen-voor-professionals/masters/Soort/masterclass")
+    public String getRightOverviewLink();
 }

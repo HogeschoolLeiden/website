@@ -28,6 +28,9 @@
   <c:when test="${document['class'].name=='nl.hsleiden.beans.EventPageBean' }">
     <tag:renderEventDate document="${document}" dateClass="${dateClass}"/>
   </c:when>
+  <c:when test="${document['class'].name=='hslbeans.EducationPage' }">
+    <tag:renderEducationDate document="${document}" dateClass="${dateClass}"/>
+  </c:when>
   <c:otherwise>
     <fmt:formatDate value="${document.releaseDate.time}"
                     type="date" pattern="dd" dateStyle="medium" timeStyle="short" var="day" />

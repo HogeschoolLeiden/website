@@ -51,6 +51,8 @@ public class Constants {
 
         public static final String SHOW_OVERVIEW = "showOverviewLink";
         public static final String OVERVIEW_BEAN_PATH = "overviewBeanPath";
+        public static final String LEFT_OVERVIEW_LINK = "leftOverviewLink";
+        public static final String RIGHT_OVERVIEW_LINK = "rightOverviewLink";
         public static final String THANKS_BEAN_PATH = "thanksBeanPath";
         public static final String OVERVIEW_LINK_LABEL = "overviewLinkLabel";
         public static final String ATTACHMENT_BEAN_PATH = "attachmentBeanPath";
