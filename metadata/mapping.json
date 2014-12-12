@@ -38,7 +38,8 @@
             "properties": {
                 "author": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "browserTitle": {
                     "type": "string",
@@ -58,7 +59,8 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 },
@@ -73,7 +75,8 @@
                                         "nGram": {
                                             "type": "string",
                                             "index_analyzer": "nGram_analyzer",
-                                            "search_analyzer": "whitespace_analyzer"
+                                            "search_analyzer": "whitespace_analyzer",
+                                            "include_in_all": false
                                         }
                                     }
                                 }
@@ -86,7 +89,8 @@
                                 "nGram": {
                                     "type": "string",
                                     "index_analyzer": "nGram_analyzer",
-                                    "search_analyzer": "whitespace_analyzer"
+                                    "search_analyzer": "whitespace_analyzer",
+                                    "include_in_all": false
                                 }
                             }
                         },
@@ -100,10 +104,12 @@
                                 },
                                 "linkUrl": {
                                     "type": "string",
-                                    "index": "not_analyzed"
+                                    "index": "not_analyzed",
+                                    "include_in_all": false
                                 },
                                 "newWindow": {
-                                    "type": "boolean"
+                                    "type": "boolean",
+                                    "include_in_all": false
                                 }
                             }
                         },
@@ -116,13 +122,15 @@
                                         "nGram": {
                                             "type": "string",
                                             "index_analyzer": "nGram_analyzer",
-                                            "search_analyzer": "whitespace_analyzer"
+                                            "search_analyzer": "whitespace_analyzer",
+                                            "include_in_all": false
                                         }
                                     }
                                 },
                                 "position": {
                                     "type": "string",
-                                    "index": "not_analyzed"
+                                    "index": "not_analyzed",
+                                    "include_in_all": false
                                 },
                                 "quoteText": {
                                     "type": "string",
@@ -131,7 +139,8 @@
                                         "nGram": {
                                             "type": "string",
                                             "index_analyzer": "nGram_analyzer",
-                                            "search_analyzer": "whitespace_analyzer"
+                                            "search_analyzer": "whitespace_analyzer",
+                                            "include_in_all": false
                                         }
                                     }
                                 }
@@ -144,7 +153,8 @@
                                 "nGram": {
                                     "type": "string",
                                     "index_analyzer": "nGram_analyzer",
-                                    "search_analyzer": "whitespace_analyzer"
+                                    "search_analyzer": "whitespace_analyzer",
+                                    "include_in_all": false
                                 }
                             }
                         },
@@ -155,49 +165,60 @@
                                 "nGram": {
                                     "type": "string",
                                     "index_analyzer": "nGram_analyzer",
-                                    "search_analyzer": "whitespace_analyzer"
+                                    "search_analyzer": "whitespace_analyzer",
+                                    "include_in_all": false
                                 }
                             }
                         }
                     }
                 },
                 "hideFromSearch": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "include_in_all": false
                 },
                 "hideFromSitemap": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "include_in_all": false
                 },
                 "hippo_paths": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "hippostd_holder": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_createdBy": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_creationDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_lastModificationDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_lastModifiedBy": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_publicationDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "hippotranslation_locale": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "introduction": {
                     "type": "string",
@@ -206,27 +227,33 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 },
                 "jcr_isCheckedOut": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "jcr_uuid": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "keywords": {
-                    "type": "string"
+                    "type": "string",
+                    "include_in_all": false
                 },
                 "releaseDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "share": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "include_in_all": false
                 },
                 "subjecttags": {
                     "type": "string",
@@ -239,7 +266,8 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 },
@@ -254,7 +282,8 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 }
@@ -264,7 +293,8 @@
             "properties": {
                 "author": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "browserTitle": {
                     "type": "string",
@@ -273,7 +303,8 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 },
@@ -284,43 +315,53 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 },
                 "hideFromSearch": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "include_in_all": false
                 },
                 "hideFromSitemap": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "include_in_all": false
                 },
                 "hippo_paths": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_createdBy": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_creationDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_lastModificationDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_lastModifiedBy": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_publicationDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "hippotranslation_locale": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "introduction": {
                     "type": "string",
@@ -329,23 +370,28 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 },
                 "jcr_uuid": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "keywords": {
-                    "type": "string"
+                    "type": "string",
+                    "include_in_all": false
                 },
                 "releaseDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "share": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "include_in_all": false
                 },
                 "subjecttags": {
                     "type": "string",
@@ -362,7 +408,8 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 }
@@ -377,7 +424,8 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 },
@@ -388,17 +436,20 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 },
                 "eventDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "eventEndDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "flexibleblock": {
                     "properties": {
@@ -411,7 +462,8 @@
                                         "nGram": {
                                             "type": "string",
                                             "index_analyzer": "nGram_analyzer",
-                                            "search_analyzer": "whitespace_analyzer"
+                                            "search_analyzer": "whitespace_analyzer",
+                                            "include_in_all": false
                                         }
                                     }
                                 }
@@ -424,7 +476,8 @@
                                 "nGram": {
                                     "type": "string",
                                     "index_analyzer": "nGram_analyzer",
-                                    "search_analyzer": "whitespace_analyzer"
+                                    "search_analyzer": "whitespace_analyzer",
+                                    "include_in_all": false
                                 }
                             }
                         },
@@ -438,10 +491,12 @@
                                 },
                                 "linkUrl": {
                                     "type": "string",
-                                    "index": "not_analyzed"
+                                    "index": "not_analyzed",
+                                    "include_in_all": false
                                 },
                                 "newWindow": {
-                                    "type": "boolean"
+                                    "type": "boolean",
+                                    "include_in_all": false
                                 }
                             }
                         },
@@ -454,13 +509,15 @@
                                         "nGram": {
                                             "type": "string",
                                             "index_analyzer": "nGram_analyzer",
-                                            "search_analyzer": "whitespace_analyzer"
+                                            "search_analyzer": "whitespace_analyzer",
+                                            "include_in_all": false
                                         }
                                     }
                                 },
                                 "position": {
                                     "type": "string",
-                                    "index": "not_analyzed"
+                                    "index": "not_analyzed",
+                                    "include_in_all": false
                                 },
                                 "quoteText": {
                                     "type": "string",
@@ -469,7 +526,8 @@
                                         "nGram": {
                                             "type": "string",
                                             "index_analyzer": "nGram_analyzer",
-                                            "search_analyzer": "whitespace_analyzer"
+                                            "search_analyzer": "whitespace_analyzer",
+                                            "include_in_all": false
                                         }
                                     }
                                 }
@@ -482,7 +540,8 @@
                                 "nGram": {
                                     "type": "string",
                                     "index_analyzer": "nGram_analyzer",
-                                    "search_analyzer": "whitespace_analyzer"
+                                    "search_analyzer": "whitespace_analyzer",
+                                    "include_in_all": false
                                 }
                             }
                         },
@@ -493,45 +552,55 @@
                                 "nGram": {
                                     "type": "string",
                                     "index_analyzer": "nGram_analyzer",
-                                    "search_analyzer": "whitespace_analyzer"
+                                    "search_analyzer": "whitespace_analyzer",
+                                    "include_in_all": false
                                 }
                             }
                         }
                     }
                 },
                 "hideFromSearch": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "include_in_all": false
                 },
                 "hideFromSitemap": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "include_in_all": false
                 },
                 "hippo_paths": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_createdBy": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_creationDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_lastModificationDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_lastModifiedBy": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_publicationDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "hippotranslation_locale": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "introduction": {
                     "type": "string",
@@ -540,23 +609,28 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 },
                 "jcr_uuid": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "keywords": {
-                    "type": "string"
+                    "type": "string",
+                    "include_in_all": false
                 },
                 "releaseDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "share": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "include_in_all": false
                 },
                 "subjecttags": {
                     "type": "string",
@@ -569,7 +643,8 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 },
@@ -584,7 +659,8 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 }
@@ -594,7 +670,8 @@
             "properties": {
                 "author": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "browserTitle": {
                     "type": "string",
@@ -603,7 +680,8 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 },
@@ -614,7 +692,8 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 },
@@ -629,7 +708,8 @@
                                         "nGram": {
                                             "type": "string",
                                             "index_analyzer": "nGram_analyzer",
-                                            "search_analyzer": "whitespace_analyzer"
+                                            "search_analyzer": "whitespace_analyzer",
+                                            "include_in_all": false
                                         }
                                     }
                                 }
@@ -642,7 +722,8 @@
                                 "nGram": {
                                     "type": "string",
                                     "index_analyzer": "nGram_analyzer",
-                                    "search_analyzer": "whitespace_analyzer"
+                                    "search_analyzer": "whitespace_analyzer",
+                                    "include_in_all": false
                                 }
                             }
                         },
@@ -656,10 +737,12 @@
                                 },
                                 "linkUrl": {
                                     "type": "string",
-                                    "index": "not_analyzed"
+                                    "index": "not_analyzed",
+                                    "include_in_all": false
                                 },
                                 "newWindow": {
-                                    "type": "boolean"
+                                    "type": "boolean",
+                                    "include_in_all": false
                                 }
                             }
                         },
@@ -672,13 +755,15 @@
                                         "nGram": {
                                             "type": "string",
                                             "index_analyzer": "nGram_analyzer",
-                                            "search_analyzer": "whitespace_analyzer"
+                                            "search_analyzer": "whitespace_analyzer",
+                                            "include_in_all": false
                                         }
                                     }
                                 },
                                 "position": {
                                     "type": "string",
-                                    "index": "not_analyzed"
+                                    "index": "not_analyzed",
+                                    "include_in_all": false
                                 },
                                 "quoteText": {
                                     "type": "string",
@@ -687,7 +772,8 @@
                                         "nGram": {
                                             "type": "string",
                                             "index_analyzer": "nGram_analyzer",
-                                            "search_analyzer": "whitespace_analyzer"
+                                            "search_analyzer": "whitespace_analyzer",
+                                            "include_in_all": false
                                         }
                                     }
                                 }
@@ -700,7 +786,8 @@
                                 "nGram": {
                                     "type": "string",
                                     "index_analyzer": "nGram_analyzer",
-                                    "search_analyzer": "whitespace_analyzer"
+                                    "search_analyzer": "whitespace_analyzer",
+                                    "include_in_all": false
                                 }
                             }
                         },
@@ -711,45 +798,55 @@
                                 "nGram": {
                                     "type": "string",
                                     "index_analyzer": "nGram_analyzer",
-                                    "search_analyzer": "whitespace_analyzer"
+                                    "search_analyzer": "whitespace_analyzer",
+                                    "include_in_all": false
                                 }
                             }
                         }
                     }
                 },
                 "hideFromSearch": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "include_in_all": false
                 },
                 "hideFromSitemap": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "include_in_all": false
                 },
                 "hippo_paths": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_createdBy": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_creationDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_lastModificationDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_lastModifiedBy": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_publicationDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "hippotranslation_locale": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "introduction": {
                     "type": "string",
@@ -758,13 +855,15 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 },
                 "jcr_uuid": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "keywords": {
                     "type": "string",
@@ -773,16 +872,19 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 },
                 "releaseDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "share": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "include_in_all": false
                 },
                 "subjecttags": {
                     "type": "string",
@@ -795,7 +897,8 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 },
@@ -810,7 +913,8 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 },
@@ -821,7 +925,8 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 }
@@ -831,7 +936,8 @@
             "properties": {
                 "author": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "browserTitle": {
                     "type": "string",
@@ -840,43 +946,53 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 },
                 "hideFromSearch": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "include_in_all": false
                 },
                 "hideFromSitemap": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "include_in_all": false
                 },
                 "hippo_paths": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_createdBy": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_creationDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_lastModificationDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_lastModifiedBy": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_publicationDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "hippotranslation_locale": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "introduction": {
                     "type": "string",
@@ -885,24 +1001,29 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 },
                 "jcr_uuid": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "lectorattags": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "releaseDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "share": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "include_in_all": false
                 },
                 "title": {
                     "type": "string",
@@ -911,7 +1032,8 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 }
@@ -921,7 +1043,8 @@
             "properties": {
                 "author": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "browserTitle": {
                     "type": "string",
@@ -930,7 +1053,8 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 },
@@ -941,7 +1065,8 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 },
@@ -956,7 +1081,8 @@
                                         "nGram": {
                                             "type": "string",
                                             "index_analyzer": "nGram_analyzer",
-                                            "search_analyzer": "whitespace_analyzer"
+                                            "search_analyzer": "whitespace_analyzer",
+                                            "include_in_all": false
                                         }
                                     }
                                 }
@@ -969,7 +1095,8 @@
                                 "nGram": {
                                     "type": "string",
                                     "index_analyzer": "nGram_analyzer",
-                                    "search_analyzer": "whitespace_analyzer"
+                                    "search_analyzer": "whitespace_analyzer",
+                                    "include_in_all": false
                                 }
                             }
                         },
@@ -983,10 +1110,12 @@
                                 },
                                 "linkUrl": {
                                     "type": "string",
-                                    "index": "not_analyzed"
+                                    "index": "not_analyzed",
+                                    "include_in_all": false
                                 },
                                 "newWindow": {
-                                    "type": "boolean"
+                                    "type": "boolean",
+                                    "include_in_all": false
                                 }
                             }
                         },
@@ -999,13 +1128,15 @@
                                         "nGram": {
                                             "type": "string",
                                             "index_analyzer": "nGram_analyzer",
-                                            "search_analyzer": "whitespace_analyzer"
+                                            "search_analyzer": "whitespace_analyzer",
+                                            "include_in_all": false
                                         }
                                     }
                                 },
                                 "position": {
                                     "type": "string",
-                                    "index": "not_analyzed"
+                                    "index": "not_analyzed",
+                                    "include_in_all": false
                                 },
                                 "quoteText": {
                                     "type": "string",
@@ -1014,7 +1145,8 @@
                                         "nGram": {
                                             "type": "string",
                                             "index_analyzer": "nGram_analyzer",
-                                            "search_analyzer": "whitespace_analyzer"
+                                            "search_analyzer": "whitespace_analyzer",
+                                            "include_in_all": false
                                         }
                                     }
                                 }
@@ -1027,7 +1159,8 @@
                                 "nGram": {
                                     "type": "string",
                                     "index_analyzer": "nGram_analyzer",
-                                    "search_analyzer": "whitespace_analyzer"
+                                    "search_analyzer": "whitespace_analyzer",
+                                    "include_in_all": false
                                 }
                             }
                         },
@@ -1038,46 +1171,56 @@
                                 "nGram": {
                                     "type": "string",
                                     "index_analyzer": "nGram_analyzer",
-                                    "search_analyzer": "whitespace_analyzer"
+                                    "search_analyzer": "whitespace_analyzer",
+                                    "include_in_all": false
                                 }
                             }
                         }
                     }
                 },
                 "hideFromSearch": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "include_in_all": false
                 },
                 "hideFromSitemap": {
                     "type": "boolean",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "hippo_paths": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_createdBy": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_creationDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_lastModificationDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_lastModifiedBy": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_publicationDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "hippotranslation_locale": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "introduction": {
                     "type": "string",
@@ -1086,24 +1229,29 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 },
                 "jcr_uuid": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "keywords": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "releaseDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "share": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "include_in_all": false
                 },
                 "subjecttags": {
                     "type": "string",
@@ -1116,7 +1264,8 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 },
@@ -1131,7 +1280,8 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 }
@@ -1141,7 +1291,8 @@
             "properties": {
                 "author": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "browserTitle": {
                     "type": "string",
@@ -1150,7 +1301,8 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 },
@@ -1161,7 +1313,8 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 },
@@ -1180,7 +1333,8 @@
                                         "nGram": {
                                             "type": "string",
                                             "index_analyzer": "nGram_analyzer",
-                                            "search_analyzer": "whitespace_analyzer"
+                                            "search_analyzer": "whitespace_analyzer",
+                                            "include_in_all": false
                                         }
                                     }
                                 }
@@ -1193,7 +1347,8 @@
                                 "nGram": {
                                     "type": "string",
                                     "index_analyzer": "nGram_analyzer",
-                                    "search_analyzer": "whitespace_analyzer"
+                                    "search_analyzer": "whitespace_analyzer",
+                                    "include_in_all": false
                                 }
                             }
                         },
@@ -1207,10 +1362,12 @@
                                 },
                                 "linkUrl": {
                                     "type": "string",
-                                    "index": "not_analyzed"
+                                    "index": "not_analyzed",
+                                    "include_in_all": false
                                 },
                                 "newWindow": {
-                                    "type": "boolean"
+                                    "type": "boolean",
+                                    "include_in_all": false
                                 }
                             }
                         },
@@ -1223,13 +1380,15 @@
                                         "nGram": {
                                             "type": "string",
                                             "index_analyzer": "nGram_analyzer",
-                                            "search_analyzer": "whitespace_analyzer"
+                                            "search_analyzer": "whitespace_analyzer",
+                                            "include_in_all": false
                                         }
                                     }
                                 },
                                 "position": {
                                     "type": "string",
-                                    "index": "not_analyzed"
+                                    "index": "not_analyzed",
+                                    "include_in_all": false
                                 },
                                 "quoteText": {
                                     "type": "string",
@@ -1238,7 +1397,8 @@
                                         "nGram": {
                                             "type": "string",
                                             "index_analyzer": "nGram_analyzer",
-                                            "search_analyzer": "whitespace_analyzer"
+                                            "search_analyzer": "whitespace_analyzer",
+                                            "include_in_all": false
                                         }
                                     }
                                 }
@@ -1251,7 +1411,8 @@
                                 "nGram": {
                                     "type": "string",
                                     "index_analyzer": "nGram_analyzer",
-                                    "search_analyzer": "whitespace_analyzer"
+                                    "search_analyzer": "whitespace_analyzer",
+                                    "include_in_all": false
                                 }
                             }
                         },
@@ -1262,7 +1423,8 @@
                                 "nGram": {
                                     "type": "string",
                                     "index_analyzer": "nGram_analyzer",
-                                    "search_analyzer": "whitespace_analyzer"
+                                    "search_analyzer": "whitespace_analyzer",
+                                    "include_in_all": false
                                 }
                             }
                         }
@@ -1270,41 +1432,51 @@
                 },
                 "formtag": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "hideFromSearch": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "include_in_all": false
                 },
                 "hideFromSitemap": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "include_in_all": false
                 },
                 "hippo_paths": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_createdBy": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_creationDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_lastModificationDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_lastModifiedBy": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_publicationDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "hippotranslation_locale": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "introduction": {
                     "type": "string",
@@ -1313,23 +1485,28 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 },
                 "jcr_uuid": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "keywords": {
-                    "type": "string"
+                    "type": "string",
+                    "include_in_all": false
                 },
                 "releaseDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "share": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "include_in_all": false
                 },
                 "subjecttags": {
                     "type": "string",
@@ -1342,7 +1519,8 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 },
@@ -1357,7 +1535,8 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 }
@@ -1367,7 +1546,8 @@
             "properties": {
                 "author": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "browserTitle": {
                     "type": "string",
@@ -1376,7 +1556,8 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 },
@@ -1390,7 +1571,8 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 },
@@ -1417,7 +1599,8 @@
                                         "nGram": {
                                             "type": "string",
                                             "index_analyzer": "nGram_analyzer",
-                                            "search_analyzer": "whitespace_analyzer"
+                                            "search_analyzer": "whitespace_analyzer",
+                                            "include_in_all": false
                                         }
                                     }
                                 }
@@ -1430,7 +1613,8 @@
                                 "nGram": {
                                     "type": "string",
                                     "index_analyzer": "nGram_analyzer",
-                                    "search_analyzer": "whitespace_analyzer"
+                                    "search_analyzer": "whitespace_analyzer",
+                                    "include_in_all": false
                                 }
                             }
                         },
@@ -1444,7 +1628,8 @@
                                 },
                                 "linkUrl": {
                                     "type": "string",
-                                    "index": "not_analyzed"
+                                    "index": "not_analyzed",
+                                    "include_in_all": false
                                 },
                                 "newWindow": {
                                     "type": "boolean"
@@ -1460,13 +1645,15 @@
                                         "nGram": {
                                             "type": "string",
                                             "index_analyzer": "nGram_analyzer",
-                                            "search_analyzer": "whitespace_analyzer"
+                                            "search_analyzer": "whitespace_analyzer",
+                                            "include_in_all": false
                                         }
                                     }
                                 },
                                 "position": {
                                     "type": "string",
-                                    "index": "not_analyzed"
+                                    "index": "not_analyzed",
+                                    "include_in_all": false
                                 },
                                 "quoteText": {
                                     "type": "string",
@@ -1475,7 +1662,8 @@
                                         "nGram": {
                                             "type": "string",
                                             "index_analyzer": "nGram_analyzer",
-                                            "search_analyzer": "whitespace_analyzer"
+                                            "search_analyzer": "whitespace_analyzer",
+                                            "include_in_all": false
                                         }
                                     }
                                 }
@@ -1488,7 +1676,8 @@
                                 "nGram": {
                                     "type": "string",
                                     "index_analyzer": "nGram_analyzer",
-                                    "search_analyzer": "whitespace_analyzer"
+                                    "search_analyzer": "whitespace_analyzer",
+                                    "include_in_all": false
                                 }
                             }
                         },
@@ -1499,45 +1688,55 @@
                                 "nGram": {
                                     "type": "string",
                                     "index_analyzer": "nGram_analyzer",
-                                    "search_analyzer": "whitespace_analyzer"
+                                    "search_analyzer": "whitespace_analyzer",
+                                    "include_in_all": false
                                 }
                             }
                         }
                     }
                 },
                 "hideFromSearch": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "include_in_all": false
                 },
                 "hideFromSitemap": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "include_in_all": false
                 },
                 "hippo_paths": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_createdBy": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_creationDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_lastModificationDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_lastModifiedBy": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_publicationDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "hippotranslation_locale": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "introduction": {
                     "type": "string",
@@ -1546,16 +1745,19 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 },
                 "jcr_uuid": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "keywords": {
-                    "type": "string"
+                    "type": "string",
+                    "include_in_all": false
                 },
                 "leveltag": {
                     "type": "string",
@@ -1563,10 +1765,12 @@
                 },
                 "releaseDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "share": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "include_in_all": false
                 },
                 "subjecttags": {
                     "type": "string",
@@ -1579,7 +1783,8 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 },
@@ -1594,7 +1799,8 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 },
@@ -1608,7 +1814,8 @@
             "properties": {
                 "author": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "browserTitle": {
                     "type": "string",
@@ -1617,7 +1824,8 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 },
@@ -1628,43 +1836,53 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 },
                 "hideFromSearch": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "include_in_all": false
                 },
                 "hideFromSitemap": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "include_in_all": false
                 },
                 "hippo_paths": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_createdBy": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_creationDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_lastModificationDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_lastModifiedBy": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_publicationDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "hippotranslation_locale": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "introduction": {
                     "type": "string",
@@ -1673,23 +1891,28 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 },
                 "jcr_uuid": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "keywords": {
-                    "type": "string"
+                    "type": "string",
+                    "include_in_all": false
                 },
                 "releaseDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "share": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "include_in_all": false
                 },
                 "title": {
                     "type": "string",
@@ -1698,7 +1921,8 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 }
@@ -1706,9 +1930,14 @@
         },
         "Lectorat": {
             "properties": {
+                "useFlexibleBlock": {
+                    "type": "string",
+                    "include_in_all": false
+                },
                 "author": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "browserTitle": {
                     "type": "string",
@@ -1717,7 +1946,8 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 },
@@ -1728,7 +1958,8 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 },
@@ -1747,7 +1978,8 @@
                                         "nGram": {
                                             "type": "string",
                                             "index_analyzer": "nGram_analyzer",
-                                            "search_analyzer": "whitespace_analyzer"
+                                            "search_analyzer": "whitespace_analyzer",
+                                            "include_in_all": false
                                         }
                                     }
                                 }
@@ -1760,7 +1992,8 @@
                                 "nGram": {
                                     "type": "string",
                                     "index_analyzer": "nGram_analyzer",
-                                    "search_analyzer": "whitespace_analyzer"
+                                    "search_analyzer": "whitespace_analyzer",
+                                    "include_in_all": false
                                 }
                             }
                         },
@@ -1774,10 +2007,12 @@
                                 },
                                 "linkUrl": {
                                     "type": "string",
-                                    "index": "not_analyzed"
+                                    "index": "not_analyzed",
+                                    "include_in_all": false
                                 },
                                 "newWindow": {
-                                    "type": "boolean"
+                                    "type": "boolean",
+                                    "include_in_all": false
                                 }
                             }
                         },
@@ -1790,13 +2025,15 @@
                                         "nGram": {
                                             "type": "string",
                                             "index_analyzer": "nGram_analyzer",
-                                            "search_analyzer": "whitespace_analyzer"
+                                            "search_analyzer": "whitespace_analyzer",
+                                            "include_in_all": false
                                         }
                                     }
                                 },
                                 "position": {
                                     "type": "string",
-                                    "index": "not_analyzed"
+                                    "index": "not_analyzed",
+                                    "include_in_all": false
                                 },
                                 "quoteText": {
                                     "type": "string",
@@ -1805,7 +2042,8 @@
                                         "nGram": {
                                             "type": "string",
                                             "index_analyzer": "nGram_analyzer",
-                                            "search_analyzer": "whitespace_analyzer"
+                                            "search_analyzer": "whitespace_analyzer",
+                                            "include_in_all": false
                                         }
                                     }
                                 }
@@ -1818,7 +2056,8 @@
                                 "nGram": {
                                     "type": "string",
                                     "index_analyzer": "nGram_analyzer",
-                                    "search_analyzer": "whitespace_analyzer"
+                                    "search_analyzer": "whitespace_analyzer",
+                                    "include_in_all": false
                                 }
                             }
                         },
@@ -1829,49 +2068,60 @@
                                 "nGram": {
                                     "type": "string",
                                     "index_analyzer": "nGram_analyzer",
-                                    "search_analyzer": "whitespace_analyzer"
+                                    "search_analyzer": "whitespace_analyzer",
+                                    "include_in_all": false
                                 }
                             }
                         }
                     }
                 },
                 "hideFromSearch": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "include_in_all": false
                 },
                 "hideFromSitemap": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "include_in_all": false
                 },
                 "hippo_paths": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "hippostd_holder": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_createdBy": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_creationDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_lastModificationDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_lastModifiedBy": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_publicationDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "hippotranslation_locale": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "introduction": {
                     "type": "string",
@@ -1880,24 +2130,29 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 },
                 "jcr_uuid": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "keywords": {
-                    "type": "string"
+                    "type": "string",
+                    "include_in_all": false
                 },
                 "releaseDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "share": {
                     "type": "boolean",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "subjecttags": {
                     "type": "string",
@@ -1914,7 +2169,8 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 }
@@ -1933,7 +2189,8 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 },
@@ -1956,10 +2213,12 @@
                                 },
                                 "linkUrl": {
                                     "type": "string",
-                                    "index": "not_analyzed"
+                                    "index": "not_analyzed",
+                                    "include_in_all": false
                                 },
                                 "newWindow": {
-                                    "type": "boolean"
+                                    "type": "boolean",
+                                    "include_in_all": false
                                 }
                             }
                         },
@@ -1970,7 +2229,8 @@
                                 },
                                 "position": {
                                     "type": "string",
-                                    "index": "not_analyzed"
+                                    "index": "not_analyzed",
+                                    "include_in_all": false
                                 },
                                 "quoteText": {
                                     "type": "string"
@@ -1993,7 +2253,8 @@
                                         "nGram": {
                                             "type": "string",
                                             "index_analyzer": "nGram_analyzer",
-                                            "search_analyzer": "whitespace_analyzer"
+                                            "search_analyzer": "whitespace_analyzer",
+                                            "include_in_all": false
                                         }
                                     }
                                 }
@@ -2006,7 +2267,8 @@
                                 "nGram": {
                                     "type": "string",
                                     "index_analyzer": "nGram_analyzer",
-                                    "search_analyzer": "whitespace_analyzer"
+                                    "search_analyzer": "whitespace_analyzer",
+                                    "include_in_all": false
                                 }
                             }
                         },
@@ -2020,10 +2282,12 @@
                                 },
                                 "linkUrl": {
                                     "type": "string",
-                                    "index": "not_analyzed"
+                                    "index": "not_analyzed",
+                                    "include_in_all": false
                                 },
                                 "newWindow": {
-                                    "type": "boolean"
+                                    "type": "boolean",
+                                    "include_in_all": false
                                 }
                             }
                         },
@@ -2036,13 +2300,15 @@
                                         "nGram": {
                                             "type": "string",
                                             "index_analyzer": "nGram_analyzer",
-                                            "search_analyzer": "whitespace_analyzer"
+                                            "search_analyzer": "whitespace_analyzer",
+                                            "include_in_all": false
                                         }
                                     }
                                 },
                                 "position": {
                                     "type": "string",
-                                    "index": "not_analyzed"
+                                    "index": "not_analyzed",
+                                    "include_in_all": false
                                 },
                                 "quoteText": {
                                     "type": "string",
@@ -2051,7 +2317,8 @@
                                         "nGram": {
                                             "type": "string",
                                             "index_analyzer": "nGram_analyzer",
-                                            "search_analyzer": "whitespace_analyzer"
+                                            "search_analyzer": "whitespace_analyzer",
+                                            "include_in_all": false
                                         }
                                     }
                                 }
@@ -2064,7 +2331,8 @@
                                 "nGram": {
                                     "type": "string",
                                     "index_analyzer": "nGram_analyzer",
-                                    "search_analyzer": "whitespace_analyzer"
+                                    "search_analyzer": "whitespace_analyzer",
+                                    "include_in_all": false
                                 }
                             }
                         },
@@ -2075,61 +2343,75 @@
                                 "nGram": {
                                     "type": "string",
                                     "index_analyzer": "nGram_analyzer",
-                                    "search_analyzer": "whitespace_analyzer"
+                                    "search_analyzer": "whitespace_analyzer",
+                                    "include_in_all": false
                                 }
                             }
                         }
                     }
                 },
                 "hideFromSearch": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "include_in_all": false
                 },
                 "hideFromSitemap": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "include_in_all": false
                 },
                 "hippo_paths": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_createdBy": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_creationDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_lastModificationDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_lastModifiedBy": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_publicationDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "hippotranslation_locale": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "jcr_uuid": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "releaseDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "subjecttags": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "thematags": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "title": {
                     "type": "string",
@@ -2138,7 +2420,8 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 }
@@ -2148,14 +2431,25 @@
             "properties": {
                 "authornames": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "browserTitle": {
-                    "type": "string"
+                    "type": "string",
+                    "path": "just_name",
+                    "fields": {
+                        "nGram": {
+                            "type": "string",
+                            "index_analyzer": "nGram_analyzer",
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
+                        }
+                    }
                 },
                 "categories": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "description": {
                     "type": "string",
@@ -2164,7 +2458,8 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 },
@@ -2179,7 +2474,8 @@
                                         "nGram": {
                                             "type": "string",
                                             "index_analyzer": "nGram_analyzer",
-                                            "search_analyzer": "whitespace_analyzer"
+                                            "search_analyzer": "whitespace_analyzer",
+                                            "include_in_all": false
                                         }
                                     }
                                 }
@@ -2192,7 +2488,8 @@
                                 "nGram": {
                                     "type": "string",
                                     "index_analyzer": "nGram_analyzer",
-                                    "search_analyzer": "whitespace_analyzer"
+                                    "search_analyzer": "whitespace_analyzer",
+                                    "include_in_all": false
                                 }
                             }
                         },
@@ -2206,10 +2503,12 @@
                                 },
                                 "linkUrl": {
                                     "type": "string",
-                                    "index": "not_analyzed"
+                                    "index": "not_analyzed",
+                                    "include_in_all": false
                                 },
                                 "newWindow": {
-                                    "type": "boolean"
+                                    "type": "boolean",
+                                    "include_in_all": false
                                 }
                             }
                         },
@@ -2222,13 +2521,15 @@
                                         "nGram": {
                                             "type": "string",
                                             "index_analyzer": "nGram_analyzer",
-                                            "search_analyzer": "whitespace_analyzer"
+                                            "search_analyzer": "whitespace_analyzer",
+                                            "include_in_all": false
                                         }
                                     }
                                 },
                                 "position": {
                                     "type": "string",
-                                    "index": "not_analyzed"
+                                    "index": "not_analyzed",
+                                    "include_in_all": false
                                 },
                                 "quoteText": {
                                     "type": "string",
@@ -2237,7 +2538,8 @@
                                         "nGram": {
                                             "type": "string",
                                             "index_analyzer": "nGram_analyzer",
-                                            "search_analyzer": "whitespace_analyzer"
+                                            "search_analyzer": "whitespace_analyzer",
+                                            "include_in_all": false
                                         }
                                     }
                                 }
@@ -2250,7 +2552,8 @@
                                 "nGram": {
                                     "type": "string",
                                     "index_analyzer": "nGram_analyzer",
-                                    "search_analyzer": "whitespace_analyzer"
+                                    "search_analyzer": "whitespace_analyzer",
+                                    "include_in_all": false
                                 }
                             }
                         },
@@ -2261,49 +2564,60 @@
                                 "nGram": {
                                     "type": "string",
                                     "index_analyzer": "nGram_analyzer",
-                                    "search_analyzer": "whitespace_analyzer"
+                                    "search_analyzer": "whitespace_analyzer",
+                                    "include_in_all": false
                                 }
                             }
                         }
                     }
                 },
                 "hideFromSearch": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "include_in_all": false
                 },
                 "hideFromSitemap": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "include_in_all": false
                 },
                 "hippo_paths": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "hippostd_holder": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_createdBy": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_creationDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_lastModificationDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_lastModifiedBy": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "hippostdpubwf_publicationDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "hippotranslation_locale": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "introduction": {
                     "type": "string",
@@ -2318,18 +2632,22 @@
                 },
                 "jcr_uuid": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "include_in_all": false
                 },
                 "publicationdate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "releaseDate": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "dateOptionalTime",
+                    "include_in_all": false
                 },
                 "share": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "include_in_all": false
                 },
                 "title": {
                     "type": "string",
@@ -2338,7 +2656,8 @@
                         "nGram": {
                             "type": "string",
                             "index_analyzer": "nGram_analyzer",
-                            "search_analyzer": "whitespace_analyzer"
+                            "search_analyzer": "whitespace_analyzer",
+                            "include_in_all": false
                         }
                     }
                 }
