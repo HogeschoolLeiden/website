@@ -4,8 +4,8 @@
   </sv:property>
   <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
     <sv:value>hippotranslation:translated</sv:value>
-    <sv:value>mix:versionable</sv:value>
     <sv:value>hippo:translated</sv:value>
+    <sv:value>mix:versionable</sv:value>
   </sv:property>
   <sv:property sv:name="jcr:uuid" sv:type="String">
     <sv:value>29f88bf5-14ae-4c5b-bfc7-48e007e8b04f</sv:value>
@@ -586,8 +586,8 @@
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
       <sv:value>hippotranslation:translated</sv:value>
-      <sv:value>mix:versionable</sv:value>
       <sv:value>hippo:translated</sv:value>
+      <sv:value>mix:versionable</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>afc788e1-e38f-4e17-a493-fa4ac7aff384</sv:value>
@@ -975,6 +975,7 @@
         </sv:property>
         <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
           <sv:value>mix:referenceable</sv:value>
+          <sv:value>hsl:LectoratNewsMixin</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>ed8935b9-950d-4c3b-8bf3-6566967aedf8</sv:value>
@@ -997,7 +998,7 @@
           <sv:value>2014-06-19T16:39:44.106+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-09-30T11:10:58.852+02:00</sv:value>
+          <sv:value>2014-12-12T15:37:34.798+01:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -1191,6 +1192,39 @@
             <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
           </sv:node>
         </sv:node>
+        <sv:node sv:name="hsl:flexibleblock">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:MailPlusForm</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:formId" sv:type="String">
+            <sv:value>mpform1153</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:reactUrl" sv:type="String">
+            <sv:value>https://m7.mailplus.nl/genericservice/code/servlet/React?command=getFormJs&amp;uid=370351&amp;feid=kXsqkiHydgFxyNFv2hDw&amp;p=https&amp;om=d&amp;of=h&amp;c=1</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="hsl:lectoratNewsCompoundMixin">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:LectoratNewsCompoundMixin</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:widgetParameters">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:LectoratNewsParameters</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:size" sv:type="Long">
+              <sv:value>1</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:sortBy" sv:type="String">
+              <sv:value>Publicatiedatum</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:sortOrder" sv:type="String">
+              <sv:value>ascending</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:widgetTitle" sv:type="String">
+              <sv:value/>
+            </sv:property>
+          </sv:node>
+        </sv:node>
       </sv:node>
       <sv:node sv:name="here-staan-wij-voor">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -1198,6 +1232,7 @@
         </sv:property>
         <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
           <sv:value>mix:referenceable</sv:value>
+          <sv:value>hsl:LectoratNewsMixin</sv:value>
           <sv:value>mix:versionable</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
@@ -1222,7 +1257,7 @@
           <sv:value>2014-06-19T16:39:44.106+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-09-30T11:11:05.603+02:00</sv:value>
+          <sv:value>2014-12-12T15:37:48.429+01:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -1416,6 +1451,39 @@
             <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
           </sv:node>
         </sv:node>
+        <sv:node sv:name="hsl:flexibleblock">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:MailPlusForm</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:formId" sv:type="String">
+            <sv:value>mpform1153</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:reactUrl" sv:type="String">
+            <sv:value>https://m7.mailplus.nl/genericservice/code/servlet/React?command=getFormJs&amp;uid=370351&amp;feid=kXsqkiHydgFxyNFv2hDw&amp;p=https&amp;om=d&amp;of=h&amp;c=1</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="hsl:lectoratNewsCompoundMixin">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:LectoratNewsCompoundMixin</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:widgetParameters">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:LectoratNewsParameters</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:size" sv:type="Long">
+              <sv:value>1</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:sortBy" sv:type="String">
+              <sv:value>Publicatiedatum</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:sortOrder" sv:type="String">
+              <sv:value>ascending</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:widgetTitle" sv:type="String">
+              <sv:value/>
+            </sv:property>
+          </sv:node>
+        </sv:node>
       </sv:node>
       <sv:node sv:name="here-staan-wij-voor">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -1423,6 +1491,7 @@
         </sv:property>
         <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
           <sv:value>mix:referenceable</sv:value>
+          <sv:value>hsl:LectoratNewsMixin</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>a88367b5-b89c-4714-9f28-347bf2c8bc8c</sv:value>
@@ -1446,13 +1515,13 @@
           <sv:value>2014-06-19T16:39:44.106+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-09-30T11:11:05.603+02:00</sv:value>
+          <sv:value>2014-12-12T15:37:48.429+01:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-          <sv:value>2014-09-30T11:13:41.584+02:00</sv:value>
+          <sv:value>2014-12-12T15:37:51.725+01:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:id" sv:type="String">
           <sv:value>4122224d-0ec8-4806-811d-c783d05a37b5</sv:value>
@@ -1641,6 +1710,39 @@
             <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
             <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
             <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="hsl:flexibleblock">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:MailPlusForm</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:formId" sv:type="String">
+            <sv:value>mpform1153</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:reactUrl" sv:type="String">
+            <sv:value>https://m7.mailplus.nl/genericservice/code/servlet/React?command=getFormJs&amp;uid=370351&amp;feid=kXsqkiHydgFxyNFv2hDw&amp;p=https&amp;om=d&amp;of=h&amp;c=1</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="hsl:lectoratNewsCompoundMixin">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:LectoratNewsCompoundMixin</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:widgetParameters">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:LectoratNewsParameters</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:size" sv:type="Long">
+              <sv:value>1</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:sortBy" sv:type="String">
+              <sv:value>Publicatiedatum</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:sortOrder" sv:type="String">
+              <sv:value>ascending</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:widgetTitle" sv:type="String">
+              <sv:value/>
+            </sv:property>
           </sv:node>
         </sv:node>
       </sv:node>
@@ -1941,8 +2043,8 @@
       </sv:property>
       <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
         <sv:value>hippotranslation:translated</sv:value>
-        <sv:value>mix:versionable</sv:value>
         <sv:value>hippo:translated</sv:value>
+        <sv:value>mix:versionable</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
         <sv:value>03ad86a7-0e59-4aff-ae3a-fe29069a41b7</sv:value>
@@ -5051,8 +5153,8 @@
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
       <sv:value>hippotranslation:translated</sv:value>
-      <sv:value>mix:versionable</sv:value>
       <sv:value>hippo:translated</sv:value>
+      <sv:value>mix:versionable</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>91b31691-315d-4e4b-b750-cac71cfa0755</sv:value>
@@ -5987,8 +6089,8 @@
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
       <sv:value>hippotranslation:translated</sv:value>
-      <sv:value>mix:versionable</sv:value>
       <sv:value>hippo:translated</sv:value>
+      <sv:value>mix:versionable</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>c6f870ec-5c21-4fd6-951d-b93f50aebe3e</sv:value>
@@ -7930,8 +8032,8 @@
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
       <sv:value>hippotranslation:translated</sv:value>
-      <sv:value>mix:versionable</sv:value>
       <sv:value>hippo:translated</sv:value>
+      <sv:value>mix:versionable</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>1bf804cc-8b95-460d-b4ff-fef90be95da8</sv:value>

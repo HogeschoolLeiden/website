@@ -37,6 +37,9 @@
 		<c:when test="${block['class'].name == 'hslbeans.Fotogallery' }">
 			<tag:fotogalleryblock content="${block }"/>
 		</c:when>
+		<c:when test="${block['class'].name == 'hslbeans.MailPlusForm' }">
+			<tag:mailplusformblock content="${block }"/>
+		</c:when>
 		<c:when test="${block['class'].name == 'hslbeans.Testimonial' }">
 			<tag:testimonialblock content="${block }"/>
 		</c:when>
