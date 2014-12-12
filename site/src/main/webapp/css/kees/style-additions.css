@@ -877,14 +877,125 @@ article.detail-content div.contentarea .content p a {
 	.col-md-4.col-sm-4.aside .blok.colorbg.lichtpaars.info figure.datum.large.info img.info{ width: 45px;}
 }
 
-/* back button same min width always */
+/* ------------------------------------------------------------ */
+/* back button same min width always  - chrome hovering problem */
+/* ------------------------------------------------------------ */
 .row a.btn.back{
 	min-width: 260.5px;
 }
 
-/* chrome hovering problem */
 @media ( min-width : 992px ) {
 	.navbar .container .nav.navbar-nav#mainnav li:hover ul.dropdownmenu{
 		display: block !important
 	}
 }
+
+/* ------------------------------------------------------------ */
+/* mailplus-forms FLEXIBLE BLOCK */
+/* ------------------------------------------------------------ */
+
+.detail-content .contentarea .mailplusform form ul li{
+	background-image: none;
+	padding-left: 0;
+	margin: 0 0 10px 0;
+}
+
+.detail-content .contentarea .mailplusform form ul li .mpFormLabel label{
+	color: #23114c;
+	font-family: 'source_sans_prosemibold';
+	font-weight: 400;
+	font-style: normal;
+	font-size: 1.45em;
+	display: block;
+	float: none;
+	width: auto;
+}
+
+.detail-content .contentarea .mailplusform form ul li .mpFormField,
+.detail-content .contentarea .mailplusform form ul li .mpFormField textarea,
+.detail-content .contentarea .mailplusform form ul li .mpFormField select,
+.detail-content .contentarea .mailplusform form ul li .mpFormField input[type='text']:not([class~="mpDateField"]){
+	width: 100%;
+}
+
+.detail-content .contentarea .mailplusform form ul li .mpFormField .ui-datepicker-trigger{
+	border:none;
+	width:37px;
+	height:40px;
+	margin-left: 5px;
+	background-image: url("../images/calendar2.gif");
+	background-repeat: no-repeat;
+}
+
+.detail-content .contentarea .mailplusform form ul li .mpFormField .mpDateField.mpDD,
+.detail-content .contentarea .mailplusform form ul li .mpFormField .mpDateField.mpMM{
+	width:20%;
+}
+
+.detail-content .contentarea .mailplusform form ul li .mpFormField .mpDateField.mpYYYY{
+	width: 40%;	
+}
+
+
+.detail-content .contentarea .mailplusform form ul li .mpFormField ul li input[type='radio'],
+.detail-content .contentarea .mailplusform form ul li .mpFormField ul li input[type='checkbox'] {
+	margin-right: 10px;
+	display: none;
+}
+
+.detail-content .contentarea .mailplusform form ul li .mpFormField ul li input[type='radio'] +label:before,
+.detail-content .contentarea .mailplusform form ul li .mpFormField ul li input[type='checkbox'] +label:before  {
+	content: "";
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	float: left;
+	margin: 0 10px 0 0;
+}
+
+.detail-content .contentarea .mailplusform form ul li .mpFormField ul li input[type='checkbox'] +label:before {
+	background: url("../img/checkbox.png") center center no-repeat;
+	background-size: 20px 20px;
+}
+
+.detail-content .contentarea .mailplusform form ul li .mpFormField ul li input[type='radio'] +label:before {
+	background: url("../img/radiobutton.png") center center no-repeat;
+	background-size: 20px 20px;
+}
+.detail-content .contentarea .mailplusform form ul li .mpFormField ul li input[type='checkbox']:checked +label:before {
+	background: url("../img/checkbox-checked.png") center center no-repeat;
+	background-size: 20px 20px;
+}
+
+.detail-content .contentarea .mailplusform form ul li .mpFormField ul li input[type='radio']:checked +label:before {
+	background: url("../img/radiobutton-checked.png") center center no-repeat;
+	background-size: 20px 20px;
+}
+
+.detail-content .contentarea .mailplusform form ul li .mpFormField ul li input[type='radio'] +label, 
+.detail-content .contentarea .mailplusform form ul li .mpFormField ul li input[type='checkbox'] +label,
+.detail-content .contentarea .mailplusform form ul li .mpFormField label {
+	font-size: 1em;
+	color: #666;
+	font-family: 'source_sans_proregular';
+	font-weight: 400;
+	font-style: normal;
+	cursor: pointer;
+}
+
+.detail-content .contentarea .mailplusform form ul li  .submitButton{
+	position: relative !important;
+	background: #23114c;
+	width: 140px;
+	height: 40px;
+	margin-left: 0;
+	font-family: 'source_sans_prosemibold';
+	font-weight: 400;
+	font-style: normal;
+	font-size: 1.6em;
+	border-width: 0;
+	color: white;
+}
+
+
+
