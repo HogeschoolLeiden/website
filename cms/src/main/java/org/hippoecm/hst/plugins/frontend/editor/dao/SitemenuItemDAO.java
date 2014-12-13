@@ -53,6 +53,8 @@ public class SitemenuItemDAO extends EditorDAO<SitemenuItem> {
     private static final String HST_REPOS_BASED = "hst:repobased";
     private static final String HST_FOLDERS_ONLY = "hst:foldersonly";
 
+    private static final String HST_MOUNT_ALIAS = "hst:mountalias";
+
     /**
      * Instantiates a new sitemenu item dao.
      * 
@@ -98,6 +100,10 @@ public class SitemenuItemDAO extends EditorDAO<SitemenuItem> {
             item.setFoldersOnly(Boolean.valueOf(JcrUtilities.getProperty(model, HST_FOLDERS_ONLY)));
         }
         
+        if (JcrUtilities.hasProperty(model,HST_MOUNT_ALIAS)) {
+            item.setMountalias(JcrUtilities.getProperty(model,HST_MOUNT_ALIAS));
+        }
+
         if (JcrUtilities.hasProperty(model,HST_DEPTH)) {
             item.setDepth(Long.valueOf(JcrUtilities.getProperty(model,HST_DEPTH)));
         }
@@ -144,6 +150,8 @@ public class SitemenuItemDAO extends EditorDAO<SitemenuItem> {
         if(item.getDepth()!=null) {
             JcrUtilities.updateProperty(model, HST_DEPTH, item.getDepth());
         }
+
+        JcrUtilities.updateProperty(model, HST_MOUNT_ALIAS, item.getMountalias());
 
         JcrUtilities.updateProperty(model, HST_REPOS_BASED, item.isRepobased());
 
