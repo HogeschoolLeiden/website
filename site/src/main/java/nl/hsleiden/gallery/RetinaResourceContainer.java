@@ -52,16 +52,14 @@ public class RetinaResourceContainer extends AbstractResourceContainer {
             }
 
             if (node.isNodeType(getNodeType())) {
-                if (mapTo != null) {
-                    if (node.hasNode(mapTo)) {
-                        Node resourceNode = node.getNode(mapTo);
-                        if (resourceNode.isNodeType(HippoNodeType.NT_RESOURCE)) {
-                            return resourceNode;
-                        }
-                        LOG.debug(
-                                "Expected resource node of type '{}' but found node of type '{}'. Try to return the primary item from this resource container.",
-                                HippoNodeType.NT_RESOURCE, resourceNode.getPrimaryNodeType().getName());
+                if (mapTo != null && node.hasNode(mapTo)) {
+                    Node resourceNode = node.getNode(mapTo);
+                    if (resourceNode.isNodeType(HippoNodeType.NT_RESOURCE)) {
+                        return resourceNode;
                     }
+                    LOG.debug(
+                            "Expected resource node of type '{}' but found node of type '{}'. Try to return the primary item from this resource container.",
+                            HippoNodeType.NT_RESOURCE, resourceNode.getPrimaryNodeType().getName());
                 }
                 if (getPrimaryItem() != null && node.hasNode(getPrimaryItem())) {
                     Node resourceNode = node.getNode(getPrimaryItem());

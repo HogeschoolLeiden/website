@@ -22,21 +22,12 @@ import java.util.List;
 import org.hippoecm.frontend.model.JcrNodeModel;
 
 /**
- * The SitemenuItem class represents a domain object of the hst:sitemenuitem node.
+ * The SitemenuItem class represents a domain object of the hst:sitemenuitem
+ * node.
  */
 public class SitemenuItem extends EditorBean {
+
     private static final long serialVersionUID = 1L;
-
-
-    /**
-     * Instantiates a new sitemenu item.
-     * 
-     * @param model the jcr node model
-     */
-    public SitemenuItem(JcrNodeModel model) {
-        super(model);
-        parameters = new ArrayList<Parameter>();
-    }
 
     String name;
     String mountalias;
@@ -51,6 +42,17 @@ public class SitemenuItem extends EditorBean {
     List<Parameter> parameters;
 
     /**
+     * Instantiates a new sitemenu item.
+     * 
+     * @param model
+     *            the jcr node model
+     */
+    public SitemenuItem(JcrNodeModel model) {
+        super(model);
+        parameters = new ArrayList<Parameter>();
+    }
+
+    /**
      * Gets the mountAlias of the sitemenu item.
      * 
      * @return the mountAlias of the sitemenu item
@@ -62,12 +64,13 @@ public class SitemenuItem extends EditorBean {
     /**
      * Sets the mountAlias of the sitemenu item.
      * 
-     * @param mountAlias the mountAlias of the sitemenu item
+     * @param mountAlias
+     *            the mountAlias of the sitemenu item
      */
     public void setMountalias(String mountalias) {
         this.mountalias = mountalias;
     }
-    
+
     /**
      * Gets the name of the sitemenu item.
      * 
@@ -76,11 +79,12 @@ public class SitemenuItem extends EditorBean {
     public String getName() {
         return name;
     }
-    
+
     /**
      * Sets the name of the sitemenu item.
      * 
-     * @param name the name of the sitemenu item
+     * @param name
+     *            the name of the sitemenu item
      */
     public void setName(String name) {
         this.name = name;
@@ -98,7 +102,8 @@ public class SitemenuItem extends EditorBean {
     /**
      * Sets the sitemap reference.
      * 
-     * @param sitemapReference the new sitemap reference
+     * @param sitemapReference
+     *            the new sitemap reference
      */
     public void setSitemapReference(String sitemapReference) {
         this.sitemapReference = sitemapReference;
@@ -116,7 +121,8 @@ public class SitemenuItem extends EditorBean {
     /**
      * Sets the external link.
      * 
-     * @param externalLink the external link
+     * @param externalLink
+     *            the external link
      */
     public void setExternalLink(String externalLink) {
         this.externalLink = externalLink;
@@ -134,7 +140,8 @@ public class SitemenuItem extends EditorBean {
     /**
      * Sets a the list of parameters.
      * 
-     * @param parameters a list of {@link Parameter}
+     * @param parameters
+     *            a list of {@link Parameter}
      */
     public void setParameters(final List<Parameter> parameters) {
         this.parameters = parameters;
@@ -149,8 +156,11 @@ public class SitemenuItem extends EditorBean {
 
     /**
      * Add a parameter to the list of hst parameters
-     * @param name the name of the parameter
-     * @param value the value of the parameter
+     * 
+     * @param name
+     *            the name of the parameter
+     * @param value
+     *            the value of the parameter
      */
     public void addParameter(String name, String value) {
         Parameter p = new Parameter();
@@ -161,7 +171,9 @@ public class SitemenuItem extends EditorBean {
 
     /**
      * Removes a parameter based on the index position in the list
-     * @param index the index inside the list of parameters
+     * 
+     * @param index
+     *            the index inside the list of parameters
      */
     public void removeParameter(int index) {
         parameters.remove(index);
@@ -169,6 +181,7 @@ public class SitemenuItem extends EditorBean {
 
     /**
      * Gets the max depth for the repository based menu items
+     * 
      * @return the depth
      */
     public Long getDepth() {
@@ -177,7 +190,9 @@ public class SitemenuItem extends EditorBean {
 
     /**
      * Sets the max depth for repository based menu items
-     * @param depth the depth
+     * 
+     * @param depth
+     *            the depth
      */
     public void setDepth(final Long depth) {
         this.depth = depth;
@@ -198,8 +213,4 @@ public class SitemenuItem extends EditorBean {
     public void setFoldersOnly(final boolean foldersOnly) {
         this.foldersOnly = foldersOnly;
     }
-
-
-
-
 }

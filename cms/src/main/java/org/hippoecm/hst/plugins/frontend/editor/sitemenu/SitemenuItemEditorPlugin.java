@@ -56,10 +56,15 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class SitemenuItemEditorPlugin extends BasicEditorPlugin<SitemenuItem> {
+    
+    private static final String VALUE_STRING = "value";
+    private static final String HST_SITEMAP = "/hst:sitemap/";
+
+
     private static final long serialVersionUID = 1L;
 
 
-    static final Logger log = LoggerFactory.getLogger(SitemenuItemEditorPlugin.class);
+    private static final Logger LOG = LoggerFactory.getLogger(SitemenuItemEditorPlugin.class);
 
     private static final String BROWSE_LABEL = "[...]";
 
@@ -86,14 +91,14 @@ public class SitemenuItemEditorPlugin extends BasicEditorPlugin<SitemenuItem> {
                     protected void saveNode(Node node) {
                         try {
                             String siteMapItemPath = hstContext.sitemap.relativePath(node.getPath());
-                            if (siteMapItemPath.contains("/hst:sitemap/")) {
-                                siteMapItemPath = StringUtils.substringAfter(siteMapItemPath, "/hst:sitemap/");
+                            if (siteMapItemPath.contains(HST_SITEMAP)) {
+                                siteMapItemPath = StringUtils.substringAfter(siteMapItemPath, HST_SITEMAP);
                             }
                             siteMapItemPath = StringUtils.removeStart(siteMapItemPath, "/");
                             getBean().setSitemapReference(siteMapItemPath);
                             redraw();
                         } catch (RepositoryException e) {
-                            log.error(e.getMessage());
+                            LOG.error(e.getMessage(), e);
                         }
                     }
                 };
@@ -127,7 +132,7 @@ public class SitemenuItemEditorPlugin extends BasicEditorPlugin<SitemenuItem> {
             Class<?> urlValidatorClass = Class.forName(urlValidatorClassName);
             urlValidator = (IValidator) urlValidatorClass.newInstance();
         } catch (Exception e) {
-            log.warn("Invalid url validator class: '{}'. {}", urlValidatorClassName, e);
+            LOG.warn("Invalid url validator class: '{}'. {}", urlValidatorClassName, e);
         }
 
         if (urlValidator != null) {
@@ -151,7 +156,6 @@ public class SitemenuItemEditorPlugin extends BasicEditorPlugin<SitemenuItem> {
 /*
     - hst:mountalias (string)
 */
-    //TODO
     @SuppressWarnings({ "rawtypes"})
     private void addHstMountaliasProperty() {
 
@@ -180,7 +184,7 @@ public class SitemenuItemEditorPlugin extends BasicEditorPlugin<SitemenuItem> {
 
         TextField depth = new TextField("depth");
         depth.setOutputMarkupId(true);
-        depth.add(new RangeValidator(0l, null));
+        depth.add(new RangeValidator(0L, null));
         depth.setEnabled(!getLockInfo().isLocked());
         form.add(depth);
 
@@ -202,17 +206,19 @@ public class SitemenuItemEditorPlugin extends BasicEditorPlugin<SitemenuItem> {
 
                     @Override
                     protected void onUpdate(AjaxRequestTarget target) {
+                        /** do not know why this method is empty, it is not mine **/
                     }
                 });
                 item.add(keyField);
 
-                TextField value = new RequiredTextField("value", new PropertyModel(param, "value"));
+                TextField value = new RequiredTextField(VALUE_STRING, new PropertyModel(param, VALUE_STRING));
                 value.setOutputMarkupId(true);
                 value.add(new OnChangeAjaxBehavior() {
                     private static final long serialVersionUID = 1L;
 
                     @Override
                     protected void onUpdate(AjaxRequestTarget target) {
+                        /** do not know why this method is empty, it is not mine **/
                     }
                 });
 
@@ -233,7 +239,7 @@ public class SitemenuItemEditorPlugin extends BasicEditorPlugin<SitemenuItem> {
 
             @Override
             public boolean isVisible() {
-                return getBean().getParameters().size() > 0;
+                return !getBean().getParameters().isEmpty();
             }
 
         };
@@ -256,7 +262,6 @@ public class SitemenuItemEditorPlugin extends BasicEditorPlugin<SitemenuItem> {
         form.add(addParam);
     }
 
-    //FIXME: This is a nasty hack
     @Override
     protected String getAddDialogTitle() {
         return new StringResourceModel("dialog.title", this, null).getString();

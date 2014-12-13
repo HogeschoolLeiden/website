@@ -72,42 +72,22 @@ public class SitemenuItemDAO extends EditorDAO<SitemenuItem> {
     public SitemenuItem load(JcrNodeModel model) {
         SitemenuItem item = new SitemenuItem(model);
 
-        //Set name value
-        try {
-            String nodeName = NodeNameCodec.decode(model.getNode().getName());
-            item.setName(nodeName);
-        } catch (RepositoryException e) {
-            LOG.error("Error setting matcher value", e);
-        }
+        setItemName(model, item);
 
-        //set referenced sitemap value
-        if (JcrUtilities.hasProperty(model, SITEMAP_PROPERTY)) {
-            String ref = JcrUtilities.getProperty(model, SITEMAP_PROPERTY);
-            if(ref != null) {
-                ref = NodeNameCodec.decode(ref);
-            }
-            item.setSitemapReference(ref);
-        }
-        if (JcrUtilities.hasProperty(model, EXTERNAL_URL_PROPERTY)) {
-            item.setExternalLink(JcrUtilities.getProperty(model, EXTERNAL_URL_PROPERTY));
-        }
+        setItemLink(model, item);
 
-        if (JcrUtilities.hasProperty(model, HST_REPOS_BASED)) {
-            item.setRepobased(Boolean.valueOf(JcrUtilities.getProperty(model, HST_REPOS_BASED)));
-        }
-        
-        if (JcrUtilities.hasProperty(model,HST_FOLDERS_ONLY)) {
-            item.setFoldersOnly(Boolean.valueOf(JcrUtilities.getProperty(model, HST_FOLDERS_ONLY)));
-        }
+        setItemRepoBasedProperties(model, item);
         
         if (JcrUtilities.hasProperty(model,HST_MOUNT_ALIAS)) {
             item.setMountalias(JcrUtilities.getProperty(model,HST_MOUNT_ALIAS));
         }
 
-        if (JcrUtilities.hasProperty(model,HST_DEPTH)) {
-            item.setDepth(Long.valueOf(JcrUtilities.getProperty(model,HST_DEPTH)));
-        }
+        setItemParameters(model, item);
 
+        return item;
+    }
+
+    private void setItemParameters(JcrNodeModel model, SitemenuItem item) {
         if (JcrUtilities.hasProperty(model, HST_PARAMETERNAMES)) {
             List<String> names = JcrUtilities.getMultiValueProperty(model, HST_PARAMETERNAMES);
             if (names != null && !names.isEmpty()) {
@@ -122,8 +102,44 @@ public class SitemenuItemDAO extends EditorDAO<SitemenuItem> {
                 }
             }
         }
+    }
 
-        return item;
+    private void setItemRepoBasedProperties(JcrNodeModel model, SitemenuItem item) {
+        if (JcrUtilities.hasProperty(model, HST_REPOS_BASED)) {
+            item.setRepobased(Boolean.valueOf(JcrUtilities.getProperty(model, HST_REPOS_BASED)));
+        }
+        
+        if (JcrUtilities.hasProperty(model,HST_FOLDERS_ONLY)) {
+            item.setFoldersOnly(Boolean.valueOf(JcrUtilities.getProperty(model, HST_FOLDERS_ONLY)));
+        }
+
+        if (JcrUtilities.hasProperty(model,HST_DEPTH)) {
+            item.setDepth(Long.valueOf(JcrUtilities.getProperty(model,HST_DEPTH)));
+        }
+    }
+
+    private void setItemLink(JcrNodeModel model, SitemenuItem item) {
+        //set referenced sitemap value
+        if (JcrUtilities.hasProperty(model, SITEMAP_PROPERTY)) {
+            String ref = JcrUtilities.getProperty(model, SITEMAP_PROPERTY);
+            if(ref != null) {
+                ref = NodeNameCodec.decode(ref);
+            }
+            item.setSitemapReference(ref);
+        }
+        if (JcrUtilities.hasProperty(model, EXTERNAL_URL_PROPERTY)) {
+            item.setExternalLink(JcrUtilities.getProperty(model, EXTERNAL_URL_PROPERTY));
+        }
+    }
+
+    private void setItemName(JcrNodeModel model, SitemenuItem item) {
+        //Set name value
+        try {
+            String nodeName = NodeNameCodec.decode(model.getNode().getName());
+            item.setName(nodeName);
+        } catch (RepositoryException e) {
+            LOG.error("Error setting matcher value", e);
+        }
     }
 
     /* (non-Javadoc)
