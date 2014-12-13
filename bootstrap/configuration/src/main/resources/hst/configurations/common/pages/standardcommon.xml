@@ -59,7 +59,7 @@
           <sv:value>facets</sv:value>
         </sv:property>
         <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
-          <sv:value>{"types":["NewsPage","WebPage"],"scope":"pages","facets":[{"title":"Subject","term":"subjecttags"},{"title":"Thema","term":"thematags"}],"suggestions":{"ngramFileds":["nGram"],"numberOfDocuments":5,"maxSuggestions":10}}</sv:value>
+          <sv:value>{"types":["ArticlePage","BachelorPage","EducationPage","EventPage","blogpost","Lectorat","OmnikassaPage","PersonnelPage","PersPage","NewsPage","WebPage"],"scope":"..","filters": [{"type": "term","field": "hideFromSearch","values": ["false"]}],"suggestions":{"ngramFields":["nGram"],"ignoreFields":["hippo_paths","jcr_uuid","author","hippostdpubwf_creationDate","hippostdpubwf_lastModificationDate"],"numberOfDocuments":5,"maxSuggestions":10}}</sv:value>
         </sv:property>
         <sv:property sv:name="hst:resourcetemplate" sv:type="String">
           <sv:value>blank</sv:value>
