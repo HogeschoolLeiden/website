@@ -12,7 +12,7 @@
 
 <nav class="col-md-3 col-xs-12" role="navigation">
   
-  <hst:include ref="leftTop" /> 
+  <hst:include ref="leftTop" />
    
   <c:if test="${not paramInfo.leftMenuBlock}">
     <div class="subnav">
