@@ -28,6 +28,8 @@
         
         <article class="tekstitem">
             
+            <hst:cmseditlink hippobean="${item}" />
+            
             <h2>
               <c:if test="${not empty item.titleIcon }">
                 <span class="icon">

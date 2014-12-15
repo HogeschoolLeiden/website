@@ -24,10 +24,11 @@
         
     <c:forEach var="item" items="${model.items}" varStatus="zebra">
       <c:if test="${not empty item }">
-        
         <div class="col-xs-12 col-sm-6">
         
         <article class="tekstitem">
+            
+            <hst:cmseditlink hippobean="${item}" />
             
             <h2>
               <c:if test="${not empty item.titleIcon }">

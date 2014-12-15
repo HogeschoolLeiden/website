@@ -38,14 +38,15 @@
     <section class="blok colorbg lichtpaars contacts">
       
       
-      <h1 ${noImgNoShare eq 'pull-left'? "class='pull-left'": '' }>
-        <span class="col-md-8 col-xs-8 col-md-offset-4 col-xs-offset-4">
-        <c:out value="${model.info.widgetTitle}" escapeXml="true" />
-        </span>
-      </h1>
-    
       <c:if test="${not empty item }">
+        <h1 ${noImgNoShare eq 'pull-left'? "class='pull-left'": '' }>
+          <span class="col-md-8 col-xs-8 col-md-offset-4 col-xs-offset-4">
+          <c:out value="${model.info.widgetTitle}" escapeXml="true" />
+          </span>
+        </h1>
+    
         <div itemscope itemtype="http://data-vocabulary.org/Person" class="contact clearfix">
+          <hst:cmseditlink hippobean="${item}" />
           <ul class="col-md-8 col-xs-8 ${noImgNoShare}">
             <li><h2><span itemprop="name">${item.name }</span></h2></li>
             <li><h2><span itemprop="role">${item.function }</span></h2></li>            
