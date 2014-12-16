@@ -48,7 +48,7 @@ public class ConfirmationMailBehavior extends ConfirmationBehavior {
         // RECIPIENT STUFF: subject from CMS managed behaviour or from
         // properties file
         List<Address> emailAddresses = getEmailAddresses(formBean, map);
-        String subject = getConfirmationSubject(formBean);
+        String subject = getConfirmationSubject(formBean, map);
         if (subject == null) {
             subject = getLocalizedMessage("confirmation.subject", request.getLocale());
         }
