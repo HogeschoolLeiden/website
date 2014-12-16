@@ -63,7 +63,7 @@
 
 
 <fmt:message var="submitText" key="search.submit.text" />
-<hst:link var="link" siteMapItemRefId="search" />
+<hst:link var="link" siteMapItemRefId="search" mount="hsl"/>
 <form role="form" class="navbar-form" action="${link}" method="get">
   <div class="form-group">
 	<input type="text" name="q"
