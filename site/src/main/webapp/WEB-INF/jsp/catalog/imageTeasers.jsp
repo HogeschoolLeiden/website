@@ -24,6 +24,7 @@
 
   <c:forEach var="item" items="${model.items}" varStatus="zebra">
     <section class="blok download image">
+      <hst:cmseditlink hippobean="${item}" />
       <c:choose>
         
         <%-- External link case --%>

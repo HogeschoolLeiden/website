@@ -46,6 +46,7 @@
         </c:set> 
         
         <section class="blok ${sectionClass}">
+            <hst:cmseditlink hippobean="${item}" />
             <c:set var="displayLink"><hst:link hippobean="${item.link.link }" /></c:set>
             <a href="${displayLink}" title="${item.link.alt}">
               <h1>

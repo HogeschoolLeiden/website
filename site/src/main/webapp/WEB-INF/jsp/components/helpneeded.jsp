@@ -10,6 +10,7 @@
 <hst:setBundle basename="nl.hsleiden.general.Messages, nl.hsleiden.widget.Messages"/>
       
 <div class="hulp">
+  <hst:cmseditlink hippobean="${document}" />
   <h2><c:out value="${document.title}"/></h2>
   <ul>
     <c:forEach var="item" items="${document.helpLines }">
