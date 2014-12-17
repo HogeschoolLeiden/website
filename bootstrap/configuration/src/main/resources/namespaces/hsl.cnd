@@ -180,6 +180,9 @@
 [hsl:LectoratNewsCompoundMixin] > hippo:compound, hippostd:relaxed
   orderable
 
+[hsl:MailPlusCompoundMixin] > hippo:compound, hippostd:relaxed
+  orderable
+
 [hsl:ShareParameters] > hippo:compound, hippostd:relaxed
   orderable
 
@@ -312,6 +315,10 @@
 [hsl:LectoratNewsMixin]
   mixin
   + hsl:lectoratNewsCompoundMixin (hsl:LectoratNewsCompoundMixin)
+
+[hsl:MailPlusMixin]
+  mixin
+  + hsl:mailPlusCompoundMixin (hsl:MailPlusCompoundMixin)
 
 [hsl:RelatedPersMixin]
   mixin

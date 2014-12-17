@@ -35,17 +35,6 @@
       <sv:value>HST.vBox</sv:value>
     </sv:property>
   </sv:node>
-  <sv:node sv:name="rightTop">
-    <sv:property sv:name="jcr:primaryType" sv:type="Name">
-      <sv:value>hst:containercomponent</sv:value>
-    </sv:property>
-    <sv:property sv:name="hst:lastmodified" sv:type="Date">
-      <sv:value>2014-09-19T10:52:28.249+02:00</sv:value>
-    </sv:property>
-    <sv:property sv:name="hst:xtype" sv:type="String">
-      <sv:value>HST.vBox</sv:value>
-    </sv:property>
-  </sv:node>
   <sv:node sv:name="rightBottom">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:containercomponent</sv:value>
@@ -210,6 +199,39 @@
       </sv:property>
       <sv:property sv:name="hst:template" sv:type="String">
         <sv:value>catalog.imageteasers</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:xtype" sv:type="String">
+        <sv:value>HST.Item</sv:value>
+      </sv:property>
+    </sv:node>
+  </sv:node>
+  <sv:node sv:name="rightTop">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:containercomponent</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:lastmodified" sv:type="Date">
+      <sv:value>2014-12-17T10:32:23.188+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:xtype" sv:type="String">
+      <sv:value>HST.vBox</sv:value>
+    </sv:property>
+    <sv:node sv:name="mailPlusForm">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:containeritemcomponent</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentclassname" sv:type="String">
+        <sv:value>nl.hsleiden.components.catalog.MailPlusForm</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:iconpath" sv:type="String">
+        <sv:value>images/catalog/mailPlusForm-icon.png</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:label" sv:type="String">
+        <sv:value>MailPlus Formulier</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
+      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
+      <sv:property sv:name="hst:template" sv:type="String">
+        <sv:value>catalog.mailPlusForm</sv:value>
       </sv:property>
       <sv:property sv:name="hst:xtype" sv:type="String">
         <sv:value>HST.Item</sv:value>

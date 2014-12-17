@@ -891,16 +891,25 @@ article.detail-content div.contentarea .content p a {
 }
 
 /* ------------------------------------------------------------ */
-/* mailplus-forms FLEXIBLE BLOCK */
+/* mailplus-forms FLEXIBLE BLOCK and WIDGET*/
 /* ------------------------------------------------------------ */
+.mailplusform{
+	background-color: white;
+	padding-top: 10px;
+}
 
-.detail-content .contentarea .mailplusform form ul li{
+.mailplusform form ul{ padding: 0 10px;}
+.mailplusform form ul ul {padding: 0;}
+
+.detail-content .contentarea .mailplusform form ul li,
+.mailplusform form ul li{
 	background-image: none;
 	padding-left: 0;
 	margin: 0 0 10px 0;
+	list-style-type: none;
 }
 
-.detail-content .contentarea .mailplusform form ul li .mpFormLabel label{
+.mailplusform form ul li .mpFormLabel label{
 	color: #23114c;
 	font-family: 'source_sans_prosemibold';
 	font-weight: 400;
@@ -911,19 +920,27 @@ article.detail-content div.contentarea .content p a {
 	width: auto;
 }
 
-.detail-content .contentarea .mailplusform form ul li .mpFormField,
-.detail-content .contentarea .mailplusform form ul li .mpFormField textarea,
-.detail-content .contentarea .mailplusform form ul li .mpFormField select,
-.detail-content .contentarea .mailplusform form ul li .mpFormField input[type='text']:not([class~="mpDateField"]){
+.mailplusform form ul li .mpFormField,
+.mailplusform form ul li .mpFormField textarea,
+.mailplusform form ul li .mpFormField select,
+.mailplusform form ul li .mpFormField input[type='text']:not([class~="mpDateField"]){
 	width: 100%;
 }
 
-.detail-content .contentarea .mailplusform form ul li .mpFormField input,
-.detail-content .contentarea .mailplusform form ul li .mpFormField select {
+.mailplusform form ul li .mpFormField input,
+.mailplusform form ul li .mpFormField select {
 	padding: 6px 10px;
 }
 
-.detail-content .contentarea .mailplusform form ul li .mpFormField .ui-datepicker-trigger{
+.aside .mailplusform form ul li .mpFormField input,
+.aside .mailplusform form ul li .mpFormField select,
+col-md-3.col-xs-12 .mailplusform form ul li .mpFormField input,
+col-md-3.col-xs-12 .mailplusform form ul li .mpFormField select{
+	padding: 3px 5px;
+}
+
+
+.mailplusform form ul li .mpFormField .ui-datepicker-trigger{
 	border:none;
 	width:37px;
 	height:40px;
@@ -932,24 +949,23 @@ article.detail-content div.contentarea .content p a {
 	background-repeat: no-repeat;
 }
 
-.detail-content .contentarea .mailplusform form ul li .mpFormField .mpDateField.mpDD,
-.detail-content .contentarea .mailplusform form ul li .mpFormField .mpDateField.mpMM{
+.mailplusform form ul li .mpFormField .mpDateField.mpDD,
+.mailplusform form ul li .mpFormField .mpDateField.mpMM{
 	width:20%;
 }
 
-.detail-content .contentarea .mailplusform form ul li .mpFormField .mpDateField.mpYYYY{
-	width: 40%;	
+.mailplusform form ul li .mpFormField .mpDateField.mpYYYY{
+	width: 38%;	
 }
 
-
-.detail-content .contentarea .mailplusform form ul li .mpFormField ul li input[type='radio'],
-.detail-content .contentarea .mailplusform form ul li .mpFormField ul li input[type='checkbox'] {
+.mailplusform form ul li .mpFormField ul li input[type='radio'],
+.mailplusform form ul li .mpFormField ul li input[type='checkbox'] {
 	margin-right: 10px;
 	display: none;
 }
 
-.detail-content .contentarea .mailplusform form ul li .mpFormField ul li input[type='radio'] +label:before,
-.detail-content .contentarea .mailplusform form ul li .mpFormField ul li input[type='checkbox'] +label:before  {
+.mailplusform form ul li .mpFormField ul li input[type='radio'] +label:before,
+.mailplusform form ul li .mpFormField ul li input[type='checkbox'] +label:before  {
 	content: "";
 	width: 20px;
 	height: 20px;
@@ -958,28 +974,28 @@ article.detail-content div.contentarea .content p a {
 	margin: 0 10px 0 0;
 }
 
-.detail-content .contentarea .mailplusform form ul li .mpFormField ul li input[type='checkbox'] +label:before {
+.mailplusform form ul li .mpFormField ul li input[type='checkbox'] +label:before {
 	background: url("../img/checkbox.png") center center no-repeat;
 	background-size: 20px 20px;
 }
 
-.detail-content .contentarea .mailplusform form ul li .mpFormField ul li input[type='radio'] +label:before {
+.mailplusform form ul li .mpFormField ul li input[type='radio'] +label:before {
 	background: url("../img/radiobutton.png") center center no-repeat;
 	background-size: 20px 20px;
 }
-.detail-content .contentarea .mailplusform form ul li .mpFormField ul li input[type='checkbox']:checked +label:before {
+.mailplusform form ul li .mpFormField ul li input[type='checkbox']:checked +label:before {
 	background: url("../img/checkbox-checked.png") center center no-repeat;
 	background-size: 20px 20px;
 }
 
-.detail-content .contentarea .mailplusform form ul li .mpFormField ul li input[type='radio']:checked +label:before {
+.mailplusform form ul li .mpFormField ul li input[type='radio']:checked +label:before {
 	background: url("../img/radiobutton-checked.png") center center no-repeat;
 	background-size: 20px 20px;
 }
 
-.detail-content .contentarea .mailplusform form ul li .mpFormField ul li input[type='radio'] +label, 
-.detail-content .contentarea .mailplusform form ul li .mpFormField ul li input[type='checkbox'] +label,
-.detail-content .contentarea .mailplusform form ul li .mpFormField label {
+.mailplusform form ul li .mpFormField ul li input[type='radio'] +label, 
+.mailplusform form ul li .mpFormField ul li input[type='checkbox'] +label,
+.mailplusform form ul li .mpFormField label {
 	font-size: 1em;
 	color: #666;
 	font-family: 'source_sans_proregular';
@@ -988,7 +1004,7 @@ article.detail-content div.contentarea .content p a {
 	cursor: pointer;
 }
 
-.detail-content .contentarea .mailplusform form ul li  .submitButton{
+.mailplusform form ul li  .submitButton{
 	position: relative !important;
 	background: #23114c;
 	width: 140px;
@@ -1001,6 +1017,4 @@ article.detail-content div.contentarea .content p a {
 	border-width: 0;
 	color: white;
 }
-
-
 
