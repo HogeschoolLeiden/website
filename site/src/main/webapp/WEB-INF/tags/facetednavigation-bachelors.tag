@@ -42,9 +42,9 @@
                       <a href="${removeLink}">
                         <img  class="cbimg" src="<hst:link path="/images/bachelor-checkbox-checked.png"/>" 
                               alt="<fmt:message key="checkbox.checked" />" title="<fmt:message key="checkbox.checked" />"/>
-                        <label>
+                        <span>
                           <c:out value="${labels[item.name]}" default="${item.name}" escapeXml="true" />
-                        </label>
+                        </span>
                       </a>
                     </li>
                   
@@ -59,9 +59,9 @@
                         <a href="${link}">
                           <img  class="cbimg" src="<hst:link path="/images/bachelor-checkbox-unchecked.png"/>" 
                                 alt="<fmt:message key="checkbox.unchecked" />" title="<fmt:message key="checkbox.unchecked" />"/>
-                          <label>
+                          <span>
                             <c:out value="${labels[item.name]}" default="${item.name}" escapeXml="true" />
-                          </label>
+                          </span>
                         </a>
                       </li>
                       

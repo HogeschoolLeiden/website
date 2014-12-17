@@ -19,7 +19,7 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="x-ua-compatible" content="IE=11">
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
   
   <meta property="og:type" content="website"/>
        
