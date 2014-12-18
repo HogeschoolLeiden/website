@@ -100,7 +100,7 @@
     mailto:?subject=<fmt:message key="forward.mail.subject"/>&body=<fmt:message key="forward.mail.body"/>${fn:replace(url, ' ', '%20')}
   </c:set>
   <a class="fa fa-envelope col-md-4 col-sm-4 col-xs-12" title="${forward}"
-     href="<c:out value="${email }" escapeXml="true" />" >
+     href="<c:out value="${fn:replace(email, ' ', '%20')}" escapeXml="true"/>">
      <span><c:out value="${forward}"/></span>     
   </a>
   

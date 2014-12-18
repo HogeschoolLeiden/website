@@ -60,7 +60,7 @@
             </c:if>
             <c:if test="${not empty item.phone }">
               <li>
-                <a title="${item.phone}" href="tel:${item.phone}">
+                <a title="${item.phone}" href="tel:${fn:replace(item.phone, ' ', '')}">
                     <c:out value="${item.phone}" />
                 </a>
               </li>
