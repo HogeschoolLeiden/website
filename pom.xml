@@ -564,8 +564,9 @@
                   <xr.util-logging.loggingEnabled>true</xr.util-logging.loggingEnabled>
                   <repo.bootstrap>true</repo.bootstrap>
                   <elasticConfig>${project.basedir}/release/conf/search-config.json</elasticConfig>
-                  <!-- uncomment to run with mysql db -->
+                  <!-- uncomment to run with mysql db 
                   <repo.config>file:${project.basedir}/release/conf/repository.xml</repo.config>
+                  -->
                 </systemProperties>
                 <dependencies>
                   <dependency>

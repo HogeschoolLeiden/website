@@ -47,6 +47,10 @@
       </a>
       
     </div>
+    
+    <div class="navbar-searchbox">
+      <hst:include ref="searchbox"/>
+    </div>
         
     <div class="navbar-collapse collapse" role="navigation">      
          

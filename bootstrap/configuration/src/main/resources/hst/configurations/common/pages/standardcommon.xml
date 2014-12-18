@@ -48,26 +48,6 @@
       <sv:property sv:name="hst:template" sv:type="String">
         <sv:value>standard.header.servicemenu</sv:value>
       </sv:property>
-      <sv:node sv:name="searchbox">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hst:component</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:componentclassname" sv:type="String">
-          <sv:value>nl.openweb.elastic.components.ElasticSearchBox</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
-          <sv:value>facets</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
-          <sv:value>{"types":["ArticlePage","BachelorPage","EducationPage","EventPage","blogpost","Lectorat","OmnikassaPage","PersonnelPage","PersPage","NewsPage","WebPage"],"scope":"..","filters": [{"type": "term","field": "hideFromSearch","values": ["false"]}],"suggestions":{"ngramFields":["nGram"],"ignoreFields":["hippo_paths","jcr_uuid","author","hippostdpubwf_creationDate","hippostdpubwf_lastModificationDate"],"numberOfDocuments":5,"maxSuggestions":10}}</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:resourcetemplate" sv:type="String">
-          <sv:value>blank</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:template" sv:type="String">
-          <sv:value>standard.header.servicemenu.searchbox</sv:value>
-        </sv:property>
-      </sv:node>
       <sv:node sv:name="langaugeswitch">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hst:component</sv:value>
@@ -76,6 +56,26 @@
           <sv:value>hst:components/languageswitch</sv:value>
         </sv:property>
       </sv:node>
+    </sv:node>
+    <sv:node sv:name="searchbox">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:component</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentclassname" sv:type="String">
+        <sv:value>nl.openweb.elastic.components.ElasticSearchBox</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+        <sv:value>facets</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+        <sv:value>{"types":["ArticlePage","BachelorPage","EducationPage","EventPage","blogpost","Lectorat","OmnikassaPage","PersonnelPage","PersPage","NewsPage","WebPage"],"scope":"..","filters": [{"type": "term","field": "hideFromSearch","values": ["false"]}],"suggestions":{"ngramFields":["nGram"],"ignoreFields":["hippo_paths","jcr_uuid","author","hippostdpubwf_creationDate","hippostdpubwf_lastModificationDate"],"numberOfDocuments":5,"maxSuggestions":10}}</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:resourcetemplate" sv:type="String">
+        <sv:value>blank</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:template" sv:type="String">
+        <sv:value>standard.header.servicemenu.searchbox</sv:value>
+      </sv:property>
     </sv:node>
   </sv:node>
   <sv:node sv:name="main">
