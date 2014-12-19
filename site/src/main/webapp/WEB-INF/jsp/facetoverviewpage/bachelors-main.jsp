@@ -32,6 +32,10 @@
               <tag:rssReader document="${model.document}"/>
                   
               <div class="overzichtlijst">
+              
+                <div class="paginator-style">
+                  <opw:simplepaginator paginator="${model.paginator}" namespaced="false"/>
+                </div>
                 
                <c:if test="${not empty frontEndMessage or not (fn:length(model.items)>0) }">
                  <h2 class="noQueryResults"><fmt:message key="facet.search.noresults"/></h2>
@@ -82,11 +86,12 @@
   
                   </article>
                 </c:forEach>
-              </div>  
-            
+
               <div class="paginator-style">
                 <opw:simplepaginator paginator="${model.paginator}" namespaced="false"/>
               </div>
+
+              </div>             
         
               <hst:include ref="contentBottom" />
 

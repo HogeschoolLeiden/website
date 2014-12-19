@@ -1106,6 +1106,7 @@ col-md-3.col-xs-12 .mailplusform form ul li .mpFormField select{
 	}
 }
 
+/* equal height home page issue */
 .home#main > .container .row.first {	
 	margin: 0;
 }
@@ -1114,4 +1115,13 @@ col-md-3.col-xs-12 .mailplusform form ul li .mpFormField select{
 	.home .headteaser {
 		width:100%;
 	}
+}
+
+/* paginator on top of bachelor items plus some styling */
+
+.paginator-style .pager {
+	margin: 0;
+}
+.overzichtlijst .paginator-style .pager{
+    padding-left: 0;
 }
