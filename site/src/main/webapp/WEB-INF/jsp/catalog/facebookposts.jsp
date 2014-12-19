@@ -29,11 +29,11 @@
     
     <c:forEach items="${model.postIDs }" var="postID">
     
-      <div class="fb-post" data-href="https://www.facebook.com/HSLeidenNL/posts/${postID}">
+      <div class="fb-post" data-href="https://www.facebook.com/${model.info.account}/posts/${postID}">
          
         <div class="fb-xfbml-parse-ignore">
-          <a href="https://www.facebook.com/HSLeidenNL/posts/${postID}">Post</a> 
-          by  <a href="https://www.facebook.com/HSLeidenNL"> HSLeiden </a>.
+          <a href="https://www.facebook.com/${model.info.account}/posts/${postID}">Post</a> 
+          by  <a href="https://www.facebook.com/${model.info.account}"> ${model.info.account} </a>.
         </div>
       </div>
     </c:forEach>
