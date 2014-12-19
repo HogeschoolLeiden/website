@@ -28,16 +28,16 @@
         <c:set var="sectionClass">
           <c:choose>
             <c:when test="${item.color eq 'blauw'}">
-              <c:out value="colorbg blauw large"/>
+              <c:out value="colorbg blauw large headteaser"/>
             </c:when>
             <c:when test="${item.color eq 'groen'}"> 
-              <c:out value="colorbg groen medium"/>
+              <c:out value="colorbg groen medium headteaser"/>
             </c:when>
             <c:when test="${item.color eq 'oranje'}"> 
-              <c:out value="colorbg oranje medium"/>
+              <c:out value="colorbg oranje medium headteaser"/>
             </c:when>
             <c:when test="${item.color eq 'magenta'}"> 
-              <c:out value="colorbg magenta medium"/>
+              <c:out value="colorbg magenta medium headteaser"/>
             </c:when>
             <c:otherwise>
                <c:out value="colorbg"/>

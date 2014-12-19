@@ -610,6 +610,9 @@ nav.col-md-3.col-xs-12 .catalog.internalLinks.teasers .tekstitem ul li,nav.col-m
 .zoeken.col-xs-12.col-sm-12 div.overviewItem.right {margin-left: 0.5%;}
 
 @media ( max-width : 494px) {
+	.zoeken.col-xs-12.col-sm-12 div.overviewItem {display:block; width:50%; float: left; }
+	.zoeken.col-xs-12.col-sm-12 div.overviewItem.left {margin-right: 0;}
+	.zoeken.col-xs-12.col-sm-12 div.overviewItem.right {margin-left: 0;}
 	.zoeken.col-xs-12.col-sm-12 div.overviewItem {display:block; width:100%; float:right;}
 }
 
@@ -1103,3 +1106,12 @@ col-md-3.col-xs-12 .mailplusform form ul li .mpFormField select{
 	}
 }
 
+.home#main > .container .row.first {	
+	margin: 0;
+}
+
+@media (min-width : 652px) and (max-width : 767px) {  
+	.home .headteaser {
+		width:100%;
+	}
+}

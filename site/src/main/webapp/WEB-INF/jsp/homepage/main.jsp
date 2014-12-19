@@ -11,6 +11,10 @@
 
 <div id="main" role="main" class="home"> 
             
+  <hst:headContribution keyHint="homepage-height-equalizer">
+    <script type="text/javascript" src="<hst:link path="/js/homepage-height-equalizer.js"/>"></script>
+  </hst:headContribution>
+
   <c:choose>
     <c:when test="${empty document}">
        <tag:pagenotfound />
@@ -22,20 +26,33 @@
   </c:choose>
   
   <div class="container">  
-    <div class="row">
+    <div class="row first">
       
       <div class="col-xs-12 col-md-6">
         <hst:include ref="left" />
-        <hst:include ref="leftBottom" />
       </div>
       
       <div class="col-xs-6 col-sm-6 col-md-3">
         <hst:include ref="contentTop" />
-        <hst:include ref="contentBottom" />
       </div>
     
       <div class="col-xs-6 col-sm-6 col-md-3 ">
         <hst:include ref="rightTop" />
+      </div>
+      
+    </div>
+    
+    <div class="row">
+      
+      <div class="col-xs-12 col-md-6">
+        <hst:include ref="leftBottom" />
+      </div>
+      
+      <div class="col-xs-6 col-sm-6 col-md-3">
+        <hst:include ref="contentBottom" />
+      </div>
+    
+      <div class="col-xs-6 col-sm-6 col-md-3 ">
         <hst:include ref="rightBottom" />
       </div>
     

@@ -9,7 +9,7 @@
 
 <hst:setBundle basename="nl.hsleiden.general.Messages, nl.hsleiden.widget.Messages"/>
       
-<section class="snelkiezer blok colorbg paars medium">
+<section class="snelkiezer blok colorbg paars medium" id="quickchoice">
   <h1><fmt:message key="quick.choice.title"/></h1>
   
   <%-- facet values --%>
