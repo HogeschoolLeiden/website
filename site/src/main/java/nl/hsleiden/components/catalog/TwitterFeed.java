@@ -11,9 +11,9 @@ import nl.hsleiden.beans.TweetStatus;
 import nl.hsleiden.beans.mixin.TwitterMixin;
 import nl.hsleiden.componentsinfo.TwitterFeedInfo;
 import nl.hsleiden.utils.Constants;
+import nl.hsleiden.utils.Constants.WidgetConstants;
 import nl.hsleiden.utils.HslUtils;
 import nl.hsleiden.utils.TwitterUtils;
-import nl.hsleiden.utils.Constants.WidgetConstants;
 
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.core.component.HstComponentException;
@@ -30,6 +30,7 @@ import twitter4j.Status;
 import twitter4j.Twitter;
 import twitter4j.TwitterException;
 import twitter4j.TwitterFactory;
+import twitter4j.TwitterResponse;
 
 import com.tdclighthouse.prototype.components.AjaxEnabledComponent;
 import com.tdclighthouse.prototype.utils.BeanUtils;
@@ -94,11 +95,14 @@ public class TwitterFeed extends AjaxEnabledComponent {
     private List<TweetStatus> populateTweetsList(List<Status> statuses, TwitterFeedInfo info) {
         List<TweetStatus> result = new ArrayList<TweetStatus>();
         for (int i = 0; i < statuses.size() && result.size() < info.getLimit(); i++) {
-            TweetStatus ts = new TweetStatus();
             Status status = statuses.get(i);
-            ts.setStatus(status);
-            ts.setText(TwitterUtils.convertMessage(status.getText(), status, info.getShowImages()));
-            result.add(ts);
+            if (status.getInReplyToUserId() == -1) {
+
+                TweetStatus ts = new TweetStatus();
+                ts.setStatus(status);
+                ts.setText(TwitterUtils.convertMessage(status.getText(), status, info.getShowImages()));
+                result.add(ts);
+            }
         }
         return result;
     }
