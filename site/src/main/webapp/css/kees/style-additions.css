@@ -857,7 +857,7 @@ article.detail-content div.contentarea .content p a {
 
 @media (max-width: 767px) {
 	/* lectoraten header title */
-	.container.lectoraattitle {
+	.navbar .container.lectoraattitle {
 		width: -moz-calc(100% - 180px);
 		width: -webkit-calc(100% - 180px);
 		width: calc(100% - 180px);
@@ -865,15 +865,17 @@ article.detail-content div.contentarea .content p a {
 		padding-left: 0;
 		padding-right: 5px;
 		margin-left: 60px;
+
+		height: 55px
 	}
 	
 	.container.lectoraattitle .row {
 	 	margin-left: 0;
-	 	margin-right: -7px;
+	 	width:100%;
 	}
 	 
 	.container.lectoraattitle .col-md-7.col-sm-7.col-xs-10.col-md-offset-2.col-sm-offset-2.col-xs-offset-1 {
-    	margin-left: 0; padding: 0; width: 95%;
+    	margin-left: 0; padding: 0; width: 100%;
     } 
     .container.lectoraattitle .row .col-md-7.col-sm-7.col-xs-10.col-md-offset-2.col-sm-offset-2.col-xs-offset-1 .table {
     	margin-bottom: 0;
@@ -1132,3 +1134,17 @@ col-md-3.col-xs-12 .mailplusform form ul li .mpFormField select{
 .hst-cmseditlink{
 	z-index: 100;
 }
+
+/* change mobile menu button from hamburger to "MENU" */
+
+
+.navbar-header .navbar-toggle{ margin-right: 10px; }
+.navbar#top .container .navbar-searchbox{padding-right: 10px;}
+
+.navbar-header .navbar-toggle.navbar-header.menu{ 
+	padding-left: 7px; 
+	padding-right: 7px; 
+	color: #fff; 
+	font-weight: bold; 
+}
+ 
