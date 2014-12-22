@@ -96,7 +96,7 @@ public class TwitterFeed extends AjaxEnabledComponent {
         List<TweetStatus> result = new ArrayList<TweetStatus>();
         for (int i = 0; i < statuses.size() && result.size() < info.getLimit(); i++) {
             Status status = statuses.get(i);
-            if (status.getInReplyToUserId() == -1) {
+            if (status.getInReplyToUserId() == -1 && status.getInReplyToStatusId() == -1) {
 
                 TweetStatus ts = new TweetStatus();
                 ts.setStatus(status);
