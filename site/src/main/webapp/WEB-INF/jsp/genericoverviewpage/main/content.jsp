@@ -27,7 +27,7 @@
           
           <tag:renderListImage item="${item}"/>
   
-          <c:if test="${not pageContext.request.requestContext.contentBean['class'].name == 'hslbeans.MedewerkersOverviewPage' }">
+          <c:if test="${not (pageContext.request.requestContext.contentBean['class'].name == 'hslbeans.MedewerkersOverviewPage') }">
             <tag:renderDate document="${item}" dateClass="datum start"/>
           </c:if>
   
