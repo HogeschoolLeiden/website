@@ -100,15 +100,20 @@ $( document ).ready(function() {
 		}
 	});
 	
-	if (getCookie('allowCookies')){
+	if (getCookie('allowCookies') || getCookie('refuseCookies')){
 		$("#row-disclaimer").addClass("hidden");
 	}
 	
 });
 
-function setCookieRemoveMessage(){
+function setCookieAllowRemoveMessage(){
 	$("#row-disclaimer").addClass("hidden");
 	addCookie('allowCookies', true, 365);
+}
+
+function setCookieRefuseRemoveMessage(){
+	$("#row-disclaimer").addClass("hidden");
+	addCookie('refuseCookies', true, 7);
 }
 
 function addCookie(name, value, days) {

@@ -813,26 +813,29 @@ article.detail-content div.contentarea .content p a {
 
 #message_content { width: 70%; display: block; float: left;}
 #message_content p { width:80%}
+
 #actions {width:30%; float:left; margin-right: 0px;}
 
 
-.btn.fa.fa-times-circle-o.fa-lg {margin: 1em 0; padding: 4px 20px; }
+.btn.fa.fa-times-circle-o.fa-lg {margin: 0.5em 0; padding: 4px 20px; width:100%; text-align: left;}
 .btn.fa.fa-times-circle-o.fa-lg:HOVER{ color: #23114c; }
 
 #message_content  .fa.fa-info-circle.fa-3x{padding: 0 10px 0 20px; float: left; margin-top: 0.2em;} 
 
-@media (min-width :350px) and (max-width: 991px) {
+@media (min-width :351px) and (max-width : 767px) {
 	#message_content { width: 100%; float:left;}
 	#message_content p { width:80%}
 	#actions {width: 100%; float: left;}
-	#actions span.btn.fa.fa-times-circle-o.fa-lg {float:right; margin-top: 0; margin-bottom: 0; padding-top: 0;}
+	#actions span.btn.fa.fa-times-circle-o.fa-lg {float:right; padding: 0;  text-align: right;}
+	#actions span.btn.fa.fa-times-circle-o.fa-lg:first-child {margin-top: 0;}
 }
 
 @media (max-width: 350px) {
 	#message_content { width: 100%; float:left;}
 	#message_content p { width:70%}
 	#actions {width: 100%; float: left;}
-	#actions span.btn.fa.fa-times-circle-o.fa-lg {float:right; margin-top: 0; margin-bottom: 0; padding-top: 0;}
+	#actions span.btn.fa.fa-times-circle-o.fa-lg {float:right; padding: 0; text-align: right;}
+	#actions span.btn.fa.fa-times-circle-o.fa-lg:first-child {margin-top: 0;}
 }
 
 /* ------------- */

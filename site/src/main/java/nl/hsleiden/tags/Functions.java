@@ -11,6 +11,7 @@ import hslbeans.WebPage;
 
 import java.util.List;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 
 import nl.hsleiden.beans.EventPageBean;
@@ -126,4 +127,19 @@ public class Functions {
         }
         return result;
     }    
+    
+    public static Boolean isCookiesRefused(HttpServletRequest request) {
+        boolean result = false;
+        Cookie[] cookies = request.getCookies();
+        
+        if(cookies!=null){            
+            for (Cookie cookie : cookies) {
+                if(cookie.getName().equalsIgnoreCase("refuseCookies")){
+                    result = true;
+                }
+            }
+        }
+
+        return result;
+    }
 }

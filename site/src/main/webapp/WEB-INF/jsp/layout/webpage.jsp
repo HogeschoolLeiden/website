@@ -117,7 +117,7 @@
 	 
     <hst:headContributions categoryIncludes="scripts" xhtml="true" />
 		
-	<c:if test="${not composermode}">
+	<c:if test="${(not composermode ) and ( not tag:isCookiesRefused(pageContext.request))}">
 	    <ga:accountId/>
 	    <hst:link var="googleAnalytics" path="/resources/google-analytics.js"/>
     	<script src="${googleAnalytics}" type="text/javascript"></script>

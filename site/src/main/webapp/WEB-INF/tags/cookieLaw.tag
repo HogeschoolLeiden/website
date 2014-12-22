@@ -21,8 +21,11 @@
         </p>
       </div>
       <div id="actions">
-        <span class="btn fa fa-times-circle-o fa-lg" onclick="setCookieRemoveMessage()">
+        <span class="btn fa fa-times-circle-o fa-lg" onclick="setCookieAllowRemoveMessage()">
           <fmt:message key="accept.cookie.close" />  
+        </span>
+        <span class="btn fa fa-times-circle-o fa-lg" onclick="setCookieRefuseRemoveMessage()">
+          <fmt:message key="refuse.cookie.close" />  
         </span>
       </div>
     </div>
