@@ -453,6 +453,23 @@
           <sv:value>${wicket.model}</sv:value>
         </sv:property>
       </sv:node>
+      <sv:node sv:name="counter">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>frontend:plugin</sv:value>
+        </sv:property>
+        <sv:property sv:name="mode" sv:type="String">
+          <sv:value>${mode}</sv:value>
+        </sv:property>
+        <sv:property sv:name="plugin.class" sv:type="String">
+          <sv:value>com.onehippo.cms7.eforms.cms.extensions.FormCounterExtensionPlugin</sv:value>
+        </sv:property>
+        <sv:property sv:name="wicket.id" sv:type="String">
+          <sv:value>${cluster.id}.extensions.item</sv:value>
+        </sv:property>
+        <sv:property sv:name="wicket.model" sv:type="String">
+          <sv:value>${wicket.model}</sv:value>
+        </sv:property>
+      </sv:node>
     </sv:node>
   </sv:node>
 </sv:node>
