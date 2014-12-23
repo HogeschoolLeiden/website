@@ -368,6 +368,10 @@ nav.col-md-3.col-xs-12 .overzichtlijst.related figure.media-object.pull-left {
 	height: 100px;
 }
 
+.overzichtlijst.related .media.clearfix:first-child .datum {
+	top:30px!important;
+}
+	
 @media (max-width: 767px){
 	.overzichtlijst.related figure.media-object.pull-left,
 	.overzicht.col-md-9 .overzichtlijst figure.media-object.pull-left {
@@ -375,7 +379,7 @@ nav.col-md-3.col-xs-12 .overzichtlijst.related figure.media-object.pull-left {
 		height: 60px!important;
 	}
 	
-	.content .overzichtlijst.related .media .datum {
+	.overzichtlijst.related .media .datum {
 		left: 10px!important;
 		top: 20px!important;
 	}
@@ -947,10 +951,17 @@ article.detail-content div.contentarea .content p a {
 
 	/* bachelors detail page - info block - smaller icon */
 	.col-md-4.col-sm-4.aside .blok.colorbg.lichtpaars.info {margin-left: 20px; } 
- 	.col-md-4.col-sm-4.aside .blok.colorbg.lichtpaars.info figure.datum.large.info {
+ 	.col-md-4.col-sm-4.aside .blok.colorbg.lichtpaars.info figure.datum.large.info,
+ 	.col-md-4.col-sm-4.aside .blok.colorbg.lichtpaars.info time.datum.large.info {
 		width: 75px; height: 75px;
 		left: -35px; top:-30px; padding-top: 15px; 
 	}
+
+ 	.col-md-4.col-sm-4.aside .blok.colorbg.lichtpaars.info time.datum.large.info {
+		font-size: 1.6em;
+		line-height: 1.1em;
+	}
+	
 	.col-md-4.col-sm-4.aside .blok.colorbg.lichtpaars.info figure.datum.large.info img.info{ width: 45px;}
 }
 
