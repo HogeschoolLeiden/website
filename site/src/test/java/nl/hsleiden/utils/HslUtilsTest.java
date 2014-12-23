@@ -220,6 +220,7 @@ public class HslUtilsTest {
         EasyMock.expect(mountMock.isContextPathInUrl()).andReturn(contextPathInUrl);
         EasyMock.expect(mountMock.getVirtualHost()).andReturn(getVirtualHostMock(SITE, true));
         EasyMock.expect(resolvedMountMock.getMount()).andReturn(mountMock);
+        EasyMock.expect(mountMock.getParent()).andReturn(null);
 
         EasyMock.replay(resolvedMountMock, mountMock);
         return resolvedMountMock;
