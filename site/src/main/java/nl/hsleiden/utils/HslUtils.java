@@ -74,6 +74,9 @@ public class HslUtils {
             result = result.substring(defaultContextPath.length());
         }
 
+        if(mount.getParent() != null){
+           result = ".." + result;
+        }
         return result;
     }
 
