@@ -367,12 +367,9 @@ nav.col-md-3.col-xs-12 .overzichtlijst.related figure.media-object.pull-left {
 	width: 100px;
 	height: 100px;
 }
-
-.overzichtlijst.related .media.clearfix:first-child .datum {
-	top:30px!important;
-}
 	
 @media (max-width: 767px){
+	
 	.overzichtlijst.related figure.media-object.pull-left,
 	.overzicht.col-md-9 .overzichtlijst figure.media-object.pull-left {
 		width: 60px!important;
@@ -389,6 +386,10 @@ nav.col-md-3.col-xs-12 .overzichtlijst.related figure.media-object.pull-left {
 		left: 10px!important;
 		top: 30px!important;
 	}
+
+	.overzichtlijst.related .media.clearfix:first-child .datum {
+		top:30px!important;
+	} 
 }
 
 .aside .overzichtlijst.related .media .datum,
@@ -398,7 +399,10 @@ nav.col-md-3.col-xs-12 .overzichtlijst.related .media .datum {
 }
 
 .content .overzichtlijst.related .media .datum {
-	left: 10px;
+	top: 50px;
+}
+
+.content .overzichtlijst.related .media:first-child .datum {
 	top: 60px;
 }
 
