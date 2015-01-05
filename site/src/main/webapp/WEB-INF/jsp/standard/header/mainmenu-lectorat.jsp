@@ -53,10 +53,10 @@
           <c:if test="${not empty myMenuItem.childMenuItems}">
             <ul class="dropdownmenu visible-lg visible-md clearfix">
             
-	          <tag:submenu menuItem="${myMenuItem}" columNr="0"/>
-              <tag:submenu menuItem="${myMenuItem}" columNr="1"/>
-              <tag:submenu menuItem="${myMenuItem}" columNr="2"/>
-              <tag:submenu menuItem="${myMenuItem}" columNr="3"/>
+	          <tag:submenu menuItem="${myMenuItem}" columNr="0" labels="${labels}"/>
+              <tag:submenu menuItem="${myMenuItem}" columNr="1" labels="${labels}"/>
+              <tag:submenu menuItem="${myMenuItem}" columNr="2" labels="${labels}"/>
+              <tag:submenu menuItem="${myMenuItem}" columNr="3" labels="${labels}"/>
             
             </ul>
           </c:if>

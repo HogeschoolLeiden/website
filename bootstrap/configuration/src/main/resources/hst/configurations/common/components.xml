@@ -103,8 +103,12 @@
     <sv:property sv:name="hst:componentclassname" sv:type="String">
       <sv:value>nl.hsleiden.components.LandingPage</sv:value>
     </sv:property>
-    <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
-    <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
+    <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+      <sv:value>labelPaths</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+      <sv:value>/content/documents/hsl/configuratie/valuelists/opleidingen-values-masters-nasch,/content/documents/hsl/configuratie/valuelists/over-values,/content/documents/hsl/configuratie/valuelists/thema-values</sv:value>
+    </sv:property>
     <sv:property sv:name="hst:template" sv:type="String">
       <sv:value>landingpage.main.content</sv:value>
     </sv:property>

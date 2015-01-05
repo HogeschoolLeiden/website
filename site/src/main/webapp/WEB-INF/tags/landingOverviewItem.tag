@@ -41,7 +41,8 @@
           expandedClass="current arrow-down"
           selectedClass="active arrow-down"
           unexpandedClass="unexpanded arrow-side" leafClass="arrow-side" 
-          recurseOnlyExpanded="false"/>
+          recurseOnlyExpanded="false"
+          labels="${labels}"/>
      </c:forEach>
   </ul>
 </section>

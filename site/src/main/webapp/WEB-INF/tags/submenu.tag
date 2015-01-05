@@ -9,6 +9,7 @@
 
 <%@ attribute name="menuItem" type="org.hippoecm.hst.core.sitemenu.EditableMenuItem" rtexprvalue="true" required="true"%>
 <%@ attribute name="columNr" type="java.lang.Integer" rtexprvalue="true" required="true" %>
+<%@ attribute name="labels" required="false" type="java.util.Map"%>
 
 <li>
     <ul>
@@ -35,7 +36,8 @@
           expandedClass="current"
           selectedClass="active"
           unexpandedClass="unexpanded arrow-side" leafClass="arrow-side" 
-          recurseOnlyExpanded="false"/>
+          recurseOnlyExpanded="false"
+          labels="${labels}"/>
       </c:forEach>
     
     </ul>
