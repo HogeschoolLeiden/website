@@ -1212,9 +1212,13 @@ col-md-3.col-xs-12 .mailplusform form ul li .mpFormField select{
 	margin: 0;
 }
 
-@media (min-width : 652px) and (max-width : 767px) {  
-	.home .headteaser {
+@media (min-width : 550px) and (max-width : 767px) {  
+	#main.home .row.first .blok{
 		width:100%;
+	}
+	
+	#main.home .row.first .col-sm-6 {
+		width: 50%;
 	}
 }
 
