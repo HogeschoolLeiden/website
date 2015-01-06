@@ -1,6 +1,6 @@
-/* ---------------------------------------------------------------------- */
+/* ---------------------------------------- */
 /* topmenu and topmenu menu hovering limits */
-/* ---------------------------------------------------------------------- */
+/* ---------------------------------------- */
 
 .nav#mainnav ul.dropdownmenu.visible-lg.visible-md.clearfix li ul li ul
 	{
@@ -15,10 +15,11 @@
 	padding-top: 0;
 }
 
-/* ---------------------------------------------------------------------- */
+/* --------------- */
 /* hovering limits */
-/* ---------------------------------------------------------------------- */
-@media ( min-width : 992px) {
+/* --------------- */
+
+@media (min-width : 992px) {
 	.navbar .container .nav#mainnav li {
 		margin-left: 0;
 		padding-left: 10px;
@@ -30,7 +31,7 @@
 	}
 }
 
-@media ( min-width : 1200px) {
+@media (min-width : 1200px) {
 	.navbar .container .nav#mainnav li {
 		padding-left: 28.5px;
 		padding-right: 28.5px;
@@ -278,6 +279,7 @@ h2.noQueryResults { font-size: 1.2em; color: #23114c; font-family: 'source_sans_
 /* ------------ */
 /* image teaser */
 /* ------------ */
+
 .blok.download.image {
 	min-height: 260px;
 }
@@ -440,6 +442,7 @@ nav.col-md-3.col-xs-12 .overzichtlijst.related .media.clearfix:first-child,
 /* -------------------- */
 /* info block bachelors */
 /* -------------------- */
+
 .col-md-4.col-sm-4.aside figure.datum.large.info {
 	position: absolute;
 	left: -50px;
@@ -508,6 +511,7 @@ nav.col-md-3.col-xs-12 .overzichtlijst.related .media.clearfix:first-child,
 /* --------------- */
 /* bachelors facet */
 /* --------------- */
+
 #main { min-height: 650px; }
 
 .studiefilter.filter-collapse ul li {
@@ -634,7 +638,7 @@ nav.col-md-3.col-xs-12 .catalog.internalLinks.teasers .tekstitem ul li,nav.col-m
 .zoeken.col-xs-12.col-sm-12 div.overviewItem.left {margin-right: 0.5%;}
 .zoeken.col-xs-12.col-sm-12 div.overviewItem.right {margin-left: 0.5%;}
 
-@media ( max-width : 494px) {
+@media (max-width : 494px) {
 	.zoeken.col-xs-12.col-sm-12 div.overviewItem {display:block; width:50%; float: left; }
 	.zoeken.col-xs-12.col-sm-12 div.overviewItem.left {margin-right: 0;}
 	.zoeken.col-xs-12.col-sm-12 div.overviewItem.right {margin-left: 0;}
@@ -715,11 +719,15 @@ div.hulp h2 {  top: 45%;}
 /* ----------------------------------------------------------------------------------------------- */
 /* fb emb posts, calendar styling, carousel item right, contact aligns on left if no img and share */
 /* ----------------------------------------------------------------------------------------------- */
+
 .fb-post {padding-bottom: 20px;}
 
 .home .swiper-container .slide-content .highlighted {margin-left: 58.333%;}
 .home .swiper-container .slide-content .highlighted .media-body .datum{left: -60px; top: 60px;}
 .home .swiper-container .slider-pagination{right: -285px; left:auto;}
+
+.blok.colorbg.lichtpaars.contacts .col-md-8.col-xs-8.pull-left{width: 100%;} 
+section.blok.colorbg.lichtpaars.contacts h1.pull-left span.col-md-8.col-xs-8.col-md-offset-4.col-xs-offset-4 {margin-left: 0;}
 
 .hasDatepicker.fc.fc-ltr .fc-content .fc-view.fc-view-month.fc-grid .fc-event-container{display: none;} 
 
@@ -727,12 +735,26 @@ div.hulp h2 {  top: 45%;}
 .detail .filtergroup.col-md-3.calendar #datepicker { margin-bottom: 20px; margin-top: 0;}
 .filter.filter-collapse.collapse.clearfix.algemeenfilter .filtergroup.col-md-3.calendar  + .clearfix {height: 10px;}
 
-.blok.colorbg.lichtpaars.contacts .col-md-8.col-xs-8.pull-left{width: 100%;} 
-section.blok.colorbg.lichtpaars.contacts h1.pull-left span.col-md-8.col-xs-8.col-md-offset-4.col-xs-offset-4 {margin-left: 0;}
 
-/* ---------------------------------------------------------------------- */
+@media (max-width: 767px){
+	.filtergroup.col-md-3.calendar {
+		width: -moz-calc(100% - 20px);
+		width: -webkit-calc(100% - 20px);
+		width: calc(100% - 20px);
+		
+		margin: 0 10px;
+	}
+	
+	.filter.filter-collapse.clearfix.algemeenfilter.collapse.in {
+		top: 0px;
+	}
+} 
+
+
+/* ------------ */
 /* testimonials */
-/* ---------------------------------------------------------------------- */
+/* ------------ */
+
 .detail-content .contentarea .media.testimonial {
 	padding-top: 0;
 }
@@ -752,6 +774,7 @@ section.blok.colorbg.lichtpaars.contacts h1.pull-left span.col-md-8.col-xs-8.col
 /* ------------------------------------------------------------------------------------ */
 /* html link colors, fix some width responsivnes related problems, medewerkers overview */
 /* ------------------------------------------------------------------------------------ */
+
 article.detail-content div.contentarea .content p a {
 	color: #428bca;
 }
@@ -765,7 +788,7 @@ article.detail-content div.contentarea .content p a {
 	}
 } 
 
-@media ( min-width :768px) and (max-width: 1199px) {
+@media (min-width :768px) and (max-width: 1199px) {
 	.row .col-sm-4, .row asside .col-md-4 { padding-left: 0; padding-right: 0;}
 }
 
@@ -774,6 +797,7 @@ article.detail-content div.contentarea .content p a {
 /* ---------------------------------------------------------------------- */
 /* facebook like box, print page style, breadcrumb has not fixed hight    */
 /* ---------------------------------------------------------------------- */
+
 .fbLikeShare{
 	background-color: white;
 	margin-top: 20px;
@@ -792,6 +816,7 @@ article.detail-content div.contentarea .content p a {
 /* ---------------------------------------------------------------------------------------------------------- */
 /* image teaser can be dark based on checkbox selection, ie scroll bar hulp problem, other color head teasers */
 /* ---------------------------------------------------------------------------------------------------------- */
+
 .blok.download .btn.darkLinkBackground {
 	background: #23114c;
 	color: #fff;
@@ -821,9 +846,10 @@ article.detail-content div.contentarea .content p a {
 	background: #CD00CD;
 }
 
-/* -------------------------------------------------------------------------------- */
+/* ------------- */
 /* Cookiemelding */
-/* -------------------------------------------------------------------------------- */
+/* ------------- */
+
 #site_message { 
 	background: #008383; 
 	margin: 0;
@@ -900,7 +926,7 @@ article.detail-content div.contentarea .content p a {
 	} 
 
 	
-	/* bachelors facet page icon issue */
+	/* bachelors facet page icon too big */
 	.vindjestudie .overzicht .overzichtlijst a figure.media-object.pull-left { width: 50px; height: 50px; margin-right: 10px;}
 	.vindjestudie .overzicht .overzichtlijst a figure.media-object.pull-left img {width: 70%; height: 70%}
 	.vindjestudie .overzicht .overzichtlijst, 
@@ -972,11 +998,12 @@ article.detail-content div.contentarea .content p a {
 /* ------------------------------------------------------------ */
 /* back button same min width always  - chrome hovering problem */
 /* ------------------------------------------------------------ */
+
 .row a.btn.back{
 	min-width: 260.5px;
 }
 
-@media ( min-width : 992px ) {
+@media (min-width : 992px ) {
 	.navbar .container .nav.navbar-nav#mainnav li:hover ul.dropdownmenu{
 		display: block !important
 	}
@@ -985,6 +1012,7 @@ article.detail-content div.contentarea .content p a {
 /* ---------------------------------------- */
 /* mailplus-forms FLEXIBLE BLOCK and WIDGET */
 /* ---------------------------------------- */
+
 .mailplusform{
 	background-color: white;
 	padding-top: 10px;
@@ -1176,7 +1204,10 @@ col-md-3.col-xs-12 .mailplusform form ul li .mpFormField select{
 	}
 }
 
+/* ---------------------------- */
 /* equal height home page issue */
+/* ---------------------------- */
+
 .home#main > .container .row.first {	
 	margin: 0;
 }
@@ -1187,7 +1218,9 @@ col-md-3.col-xs-12 .mailplusform form ul li .mpFormField select{
 	}
 }
 
+/* ---------------------------------------------------- */
 /* paginator on top of bachelor items plus some styling */
+/* ---------------------------------------------------- */
 
 .paginator-style .pager {
 	margin: 0;
@@ -1200,7 +1233,9 @@ col-md-3.col-xs-12 .mailplusform form ul li .mpFormField select{
 	z-index: 100;
 }
 
+/* -------------------------------------------------- */
 /* change mobile menu button from hamburger to "MENU" */
+/* -------------------------------------------------- */
 
 
 .navbar-header .navbar-toggle{ margin-right: 10px; }
