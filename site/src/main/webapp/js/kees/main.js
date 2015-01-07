@@ -52,7 +52,16 @@ $( document ).ready(function() {
 		$('.swipenav.next').on('click', function(e){
 			e.preventDefault();
 			mySwiper.swipeNext();
-		}) ;	
+		}) ;
+		
+
+		setInterval(function(){myTimer()},8000);
+
+    	function myTimer() {
+    	    var d = new Date();
+    	    mySwiper.swipeNext();
+    	}
+
 	
 	}
 	/* // SWIPER SLIDER */	
