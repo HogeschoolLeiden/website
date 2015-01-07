@@ -1275,4 +1275,72 @@ col-md-3.col-xs-12 .mailplusform form ul li .mpFormField select{
 	}
 }
 
- 
+/* ------------------------------------------------- */
+/* mobile: display problem for medewerkers overview  */
+/* ------------------------------------------------- */
+
+@media (max-width: 991px){
+	.overzicht {
+		float: none !important;
+	}	
+}
+
+@media (min-width: 450px) and (max-width: 550px) {
+	.highlighted.col-md-9.medewerkers{
+		height: 25px;
+	}
+}
+
+@media (min-width: 551px) and (max-width: 650px) {
+	.highlighted.col-md-9.medewerkers{
+		height: 50px;
+	}
+}
+
+@media (min-width: 651px) and (max-width: 767px) {
+	.highlighted.col-md-9.medewerkers{
+		height: 80px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 850px) {
+	.highlighted.col-md-9.medewerkers{
+		margin: 0;
+		height: auto;
+	}
+}
+
+@media (min-width: 851px) and (max-width: 950px) {
+	.highlighted.col-md-9.medewerkers{
+		margin: 0;
+		height: 25px;
+	}
+}
+
+@media (min-width: 951px) and (max-width: 1050px){
+	.highlighted.col-md-9.medewerkers{
+		margin: 0;
+		height: 50px;
+	}
+}
+
+@media (min-width: 1051px) and (max-width: 1150px){
+	.highlighted.col-md-9.medewerkers{
+		margin: 0;
+		height: 75px;
+	}
+}
+
+@media (min-width: 1151px) and (max-width: 1200px){
+	.highlighted.col-md-9.medewerkers{
+		margin: 0;
+		height: 90px;
+	}
+}
+
+@media (min-width: 1201px) {
+	.highlighted.col-md-9.medewerkers{
+		margin: 0;
+		height: 105px;
+	}
+}
