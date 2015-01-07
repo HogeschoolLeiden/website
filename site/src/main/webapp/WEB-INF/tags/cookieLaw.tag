@@ -16,7 +16,7 @@
         <i class="fa fa-info-circle fa-3x"></i>
         <fmt:message key="infoLink.sitemap" var="infoSitemap"/>
         <p><fmt:message key="use.cookies.message" /><br>
-           <hst:link var="infoLink" path="${infoSitemap}"/>
+           <hst:link var="infoLink" path="${infoSitemap}" mount="hsl"/>
            <a href="${infoLink}"><fmt:message key="infoLink.message" /></a>
         </p>
       </div>
