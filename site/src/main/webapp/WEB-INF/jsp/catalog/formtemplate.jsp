@@ -6,6 +6,8 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="tag" tagdir="/WEB-INF/tags" %>
 
+<hst:setBundle basename="nl.hsleiden.channelmanager.Messages, nl.hsleiden.widget.Messages"/>
+
 <c:if test="${not empty form}">
 <c:if test="${not empty form.title}">
   <h2><c:out value="${form.title}" /></h2>
@@ -32,7 +34,7 @@
       <p><c:out value="${maxFormSubmissionsReachedText}" /></p>
     </c:when>
     <c:otherwise>
-      <p>The maximum number of submission for this form has been reached</p>
+      <p><fmt:message key="max.submission.nr.message"/></p>
     </c:otherwise>
   </c:choose>
 </c:if>
