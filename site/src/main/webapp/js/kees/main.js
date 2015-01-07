@@ -54,15 +54,12 @@ $( document ).ready(function() {
 			mySwiper.swipeNext();
 		}) ;
 		
-
 		setInterval(function(){myTimer()},8000);
 
     	function myTimer() {
     	    var d = new Date();
     	    mySwiper.swipeNext();
     	}
-
-	
 	}
 	/* // SWIPER SLIDER */	
 	
