@@ -1252,4 +1252,27 @@ col-md-3.col-xs-12 .mailplusform form ul li .mpFormField select{
 	color: #fff; 
 	font-weight: bold; 
 }
+
+/* --------------------------------------------------------- */
+/* mobile: info block needs more space from previous element */
+/* --------------------------------------------------------- */
+
+.detail-content .row .contentarea .content .share {
+	margin-bottom: 0;
+}
+
+@media (max-width: 767px){
+	.aside {
+		margin-top: 10px;
+	}
+	
+	.detail-content .row .contentarea .content .share {
+		margin-bottom: 10px;
+	}
+
+	.aside .blok.colorbg.lichtpaars.info{
+		margin-top: 15px;
+	}
+}
+
  
