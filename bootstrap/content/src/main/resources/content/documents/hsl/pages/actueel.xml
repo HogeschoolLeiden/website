@@ -4,8 +4,8 @@
   </sv:property>
   <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
     <sv:value>hippotranslation:translated</sv:value>
-    <sv:value>mix:versionable</sv:value>
     <sv:value>hippo:translated</sv:value>
+    <sv:value>mix:versionable</sv:value>
   </sv:property>
   <sv:property sv:name="jcr:uuid" sv:type="String">
     <sv:value>62b8dd7a-ccf9-463a-a770-3f445f2edcef</sv:value>
@@ -39,8 +39,8 @@
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
       <sv:value>hippotranslation:translated</sv:value>
-      <sv:value>mix:versionable</sv:value>
       <sv:value>hippo:translated</sv:value>
+      <sv:value>mix:versionable</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>68657a00-650d-4be1-b773-e4f03f263be2</sv:value>
@@ -1335,8 +1335,8 @@
           <sv:value>mix:referenceable</sv:value>
           <sv:value>hsl:ContactPersonsMixin</sv:value>
           <sv:value>hsl:HeadTeasersMixin</sv:value>
-          <sv:value>hsl:FacebookPostsMixin</sv:value>
           <sv:value>mix:versionable</sv:value>
+          <sv:value>hsl:FacebookPostsMixin</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>e913de6a-b4c8-4a5a-9f33-3243b320510f</sv:value>
@@ -6219,8 +6219,8 @@
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
       <sv:value>hippotranslation:translated</sv:value>
-      <sv:value>mix:versionable</sv:value>
       <sv:value>hippo:translated</sv:value>
+      <sv:value>mix:versionable</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>bd84f9a1-a22c-4eaa-a332-f057e99efba9</sv:value>
@@ -6794,7 +6794,7 @@
           <sv:value>2014-06-19T12:10:20.307+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-11-10T12:14:03.233Z</sv:value>
+          <sv:value>2015-01-08T15:16:22.347+01:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -6876,6 +6876,22 @@ Testimonial text two</sv:value>
         </sv:node>
         <sv:node sv:name="hsl:flexibleblock">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:Image</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:image">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippogallerypicker:imagelink</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>8d154015-2946-4d43-9003-ca8a31640797</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="hsl:flexibleblock">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>hsl:Paragraph</sv:value>
           </sv:property>
           <sv:property sv:name="hsl:title" sv:type="String">
@@ -6887,9 +6903,17 @@ Testimonial text two</sv:value>
             </sv:property>
             <sv:property sv:name="hippostd:content" sv:type="String">
               <sv:value>&lt;p&gt;No image paragraph&amp;nbsp;No image paragraph&amp;nbsp;No image paragraph&amp;nbsp;No image paragraph&amp;nbsp;No image paragraph&amp;nbsp;No image paragraph&amp;nbsp;No image paragraph&amp;nbsp;No image paragraph&amp;nbsp;No image paragraph&amp;nbsp;No image paragraph&amp;nbsp;No image paragraph&amp;nbsp;No image paragraph &amp;nbsp;No image paragraph &amp;nbsp;No image paragraph&lt;/p&gt; 
-    &lt;p&gt;&amp;nbsp;&lt;/p&gt; 
-    &lt;p&gt;No image paragraph&amp;nbsp;No image paragraph&amp;nbsp;No image paragraph&lt;/p&gt; 
-    &lt;p&gt;No image paragraph&amp;nbsp;No image paragraph&amp;nbsp;No image paragraph&lt;/p&gt;</sv:value>
+&lt;p&gt;&amp;nbsp;&lt;/p&gt; 
+&lt;p&gt;No image paragraph&amp;nbsp;No image paragraph&amp;nbsp;No image paragraph&lt;/p&gt; 
+&lt;p&gt;No image paragraph&amp;nbsp;No image paragraph&amp;nbsp;No image paragraph&lt;/p&gt; 
+&lt;ul&gt; 
+&lt;li&gt;paragraph list&lt;/li&gt; 
+&lt;li&gt;paragraph list&lt;/li&gt; 
+&lt;li&gt;paragraph list&lt;/li&gt; &lt;/ul&gt; 
+&lt;ol&gt; 
+&lt;li&gt;paragraph list&lt;/li&gt; 
+&lt;li&gt;paragraph list&lt;/li&gt; 
+&lt;li&gt;paragraph list&lt;/li&gt; &lt;/ol&gt;</sv:value>
             </sv:property>
           </sv:node>
         </sv:node>
@@ -6898,7 +6922,7 @@ Testimonial text two</sv:value>
             <sv:value>hsl:Documents</sv:value>
           </sv:property>
           <sv:property sv:name="hsl:title" sv:type="String">
-            <sv:value/>
+            <sv:value>Assets list</sv:value>
           </sv:property>
           <sv:node sv:name="hsl:asset">
             <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -6923,22 +6947,6 @@ Testimonial text two</sv:value>
             <sv:property sv:name="hippo:docbase" sv:type="String">
               <sv:value>ea3b98ae-2d50-48fd-8431-9eea287d93b4</sv:value>
             </sv:property>
-          </sv:node>
-        </sv:node>
-        <sv:node sv:name="hsl:flexibleblock">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>hsl:Image</sv:value>
-          </sv:property>
-          <sv:node sv:name="hsl:image">
-            <sv:property sv:name="jcr:primaryType" sv:type="Name">
-              <sv:value>hippogallerypicker:imagelink</sv:value>
-            </sv:property>
-            <sv:property sv:name="hippo:docbase" sv:type="String">
-              <sv:value>8d154015-2946-4d43-9003-ca8a31640797</sv:value>
-            </sv:property>
-            <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
-            <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
-            <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
           </sv:node>
         </sv:node>
         <sv:node sv:name="hsl:imageTeasersCompoundMixin">
@@ -7002,6 +7010,97 @@ Testimonial text two</sv:value>
             </sv:property>
             <sv:property sv:name="hsl:infoLine" sv:type="String">
               <sv:value>ONE LINE WITH NO ICON</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="hsl:flexibleblock">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:ExternalLinks</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:title" sv:type="String">
+            <sv:value>External links list</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:titleIcon">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippogallerypicker:imagelink</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+          </sv:node>
+          <sv:node sv:name="hsl:externallinks">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:ExternalLink</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:alt" sv:type="String">
+              <sv:value/>
+            </sv:property>
+            <sv:property sv:name="hsl:linkTitle" sv:type="String">
+              <sv:value>google Extrenal links list</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:linkUrl" sv:type="String">
+              <sv:value>http://google.com</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:newWindow" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="hsl:externallinks">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:ExternalLink</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:alt" sv:type="String">
+              <sv:value/>
+            </sv:property>
+            <sv:property sv:name="hsl:linkTitle" sv:type="String">
+              <sv:value>google Extrenal links list</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:linkUrl" sv:type="String">
+              <sv:value>http://google.com</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:newWindow" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="hsl:externallinks">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:ExternalLink</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:alt" sv:type="String">
+              <sv:value/>
+            </sv:property>
+            <sv:property sv:name="hsl:linkTitle" sv:type="String">
+              <sv:value>External links list</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:linkUrl" sv:type="String">
+              <sv:value>http://google.com</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:newWindow" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="hsl:flexibleblock">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:Html</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:htmlDocument">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippo:mirror</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>350cb5bb-5f30-4cd0-a1e7-2ff0b46a323d</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="hsl:cssDocument">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippo:mirror</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>e067f408-1817-4783-948d-137ac53e4302</sv:value>
             </sv:property>
           </sv:node>
         </sv:node>
@@ -7038,7 +7137,7 @@ Testimonial text two</sv:value>
           <sv:value>2014-06-19T12:10:20.307+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-11-10T12:14:19.531Z</sv:value>
+          <sv:value>2015-01-08T15:27:40.155+01:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -7120,6 +7219,22 @@ Testimonial text two</sv:value>
         </sv:node>
         <sv:node sv:name="hsl:flexibleblock">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:Image</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:image">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippogallerypicker:imagelink</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>8d154015-2946-4d43-9003-ca8a31640797</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="hsl:flexibleblock">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>hsl:Paragraph</sv:value>
           </sv:property>
           <sv:property sv:name="hsl:title" sv:type="String">
@@ -7131,9 +7246,17 @@ Testimonial text two</sv:value>
             </sv:property>
             <sv:property sv:name="hippostd:content" sv:type="String">
               <sv:value>&lt;p&gt;No image paragraph&amp;nbsp;No image paragraph&amp;nbsp;No image paragraph&amp;nbsp;No image paragraph&amp;nbsp;No image paragraph&amp;nbsp;No image paragraph&amp;nbsp;No image paragraph&amp;nbsp;No image paragraph&amp;nbsp;No image paragraph&amp;nbsp;No image paragraph&amp;nbsp;No image paragraph&amp;nbsp;No image paragraph &amp;nbsp;No image paragraph &amp;nbsp;No image paragraph&lt;/p&gt; 
-    &lt;p&gt;&amp;nbsp;&lt;/p&gt; 
-    &lt;p&gt;No image paragraph&amp;nbsp;No image paragraph&amp;nbsp;No image paragraph&lt;/p&gt; 
-    &lt;p&gt;No image paragraph&amp;nbsp;No image paragraph&amp;nbsp;No image paragraph&lt;/p&gt;</sv:value>
+&lt;p&gt;&amp;nbsp;&lt;/p&gt; 
+&lt;p&gt;No image paragraph&amp;nbsp;No image paragraph&amp;nbsp;No image paragraph&lt;/p&gt; 
+&lt;p&gt;No image paragraph&amp;nbsp;No image paragraph&amp;nbsp;No image paragraph&lt;/p&gt; 
+&lt;ul&gt; 
+&lt;li&gt;paragraph list&lt;/li&gt; 
+&lt;li&gt;paragraph list&lt;/li&gt; 
+&lt;li&gt;paragraph list&lt;/li&gt; &lt;/ul&gt; 
+&lt;ol&gt; 
+&lt;li&gt;paragraph list&lt;/li&gt; 
+&lt;li&gt;paragraph list&lt;/li&gt; 
+&lt;li&gt;paragraph list&lt;/li&gt; &lt;/ol&gt;</sv:value>
             </sv:property>
           </sv:node>
         </sv:node>
@@ -7142,7 +7265,7 @@ Testimonial text two</sv:value>
             <sv:value>hsl:Documents</sv:value>
           </sv:property>
           <sv:property sv:name="hsl:title" sv:type="String">
-            <sv:value/>
+            <sv:value>Assets list</sv:value>
           </sv:property>
           <sv:node sv:name="hsl:asset">
             <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -7167,22 +7290,6 @@ Testimonial text two</sv:value>
             <sv:property sv:name="hippo:docbase" sv:type="String">
               <sv:value>ea3b98ae-2d50-48fd-8431-9eea287d93b4</sv:value>
             </sv:property>
-          </sv:node>
-        </sv:node>
-        <sv:node sv:name="hsl:flexibleblock">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>hsl:Image</sv:value>
-          </sv:property>
-          <sv:node sv:name="hsl:image">
-            <sv:property sv:name="jcr:primaryType" sv:type="Name">
-              <sv:value>hippogallerypicker:imagelink</sv:value>
-            </sv:property>
-            <sv:property sv:name="hippo:docbase" sv:type="String">
-              <sv:value>8d154015-2946-4d43-9003-ca8a31640797</sv:value>
-            </sv:property>
-            <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
-            <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
-            <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
           </sv:node>
         </sv:node>
         <sv:node sv:name="hsl:imageTeasersCompoundMixin">
@@ -7246,6 +7353,97 @@ Testimonial text two</sv:value>
             </sv:property>
             <sv:property sv:name="hsl:infoLine" sv:type="String">
               <sv:value>ONE LINE WITH NO ICON</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="hsl:flexibleblock">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:ExternalLinks</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:title" sv:type="String">
+            <sv:value>External links list</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:titleIcon">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippogallerypicker:imagelink</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+          </sv:node>
+          <sv:node sv:name="hsl:externallinks">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:ExternalLink</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:alt" sv:type="String">
+              <sv:value/>
+            </sv:property>
+            <sv:property sv:name="hsl:linkTitle" sv:type="String">
+              <sv:value>google Extrenal links list</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:linkUrl" sv:type="String">
+              <sv:value>http://google.com</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:newWindow" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="hsl:externallinks">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:ExternalLink</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:alt" sv:type="String">
+              <sv:value/>
+            </sv:property>
+            <sv:property sv:name="hsl:linkTitle" sv:type="String">
+              <sv:value>google Extrenal links list</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:linkUrl" sv:type="String">
+              <sv:value>http://google.com</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:newWindow" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="hsl:externallinks">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:ExternalLink</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:alt" sv:type="String">
+              <sv:value/>
+            </sv:property>
+            <sv:property sv:name="hsl:linkTitle" sv:type="String">
+              <sv:value>External links list</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:linkUrl" sv:type="String">
+              <sv:value>http://google.com</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:newWindow" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="hsl:flexibleblock">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:Html</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:htmlDocument">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippo:mirror</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>350cb5bb-5f30-4cd0-a1e7-2ff0b46a323d</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="hsl:cssDocument">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippo:mirror</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>e067f408-1817-4783-948d-137ac53e4302</sv:value>
             </sv:property>
           </sv:node>
         </sv:node>
@@ -7281,13 +7479,13 @@ Testimonial text two</sv:value>
           <sv:value>2014-06-19T12:10:20.307+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-11-10T12:14:19.531Z</sv:value>
+          <sv:value>2015-01-08T15:27:40.155+01:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-          <sv:value>2014-11-10T12:14:21.711Z</sv:value>
+          <sv:value>2015-01-08T15:27:42.624+01:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:id" sv:type="String">
           <sv:value>84d0b894-ba02-4e4a-9656-ae2b432d5376</sv:value>
@@ -7366,6 +7564,22 @@ Testimonial text two</sv:value>
         </sv:node>
         <sv:node sv:name="hsl:flexibleblock">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:Image</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:image">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippogallerypicker:imagelink</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>8d154015-2946-4d43-9003-ca8a31640797</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="hsl:flexibleblock">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>hsl:Paragraph</sv:value>
           </sv:property>
           <sv:property sv:name="hsl:title" sv:type="String">
@@ -7377,9 +7591,17 @@ Testimonial text two</sv:value>
             </sv:property>
             <sv:property sv:name="hippostd:content" sv:type="String">
               <sv:value>&lt;p&gt;No image paragraph&amp;nbsp;No image paragraph&amp;nbsp;No image paragraph&amp;nbsp;No image paragraph&amp;nbsp;No image paragraph&amp;nbsp;No image paragraph&amp;nbsp;No image paragraph&amp;nbsp;No image paragraph&amp;nbsp;No image paragraph&amp;nbsp;No image paragraph&amp;nbsp;No image paragraph&amp;nbsp;No image paragraph &amp;nbsp;No image paragraph &amp;nbsp;No image paragraph&lt;/p&gt; 
-    &lt;p&gt;&amp;nbsp;&lt;/p&gt; 
-    &lt;p&gt;No image paragraph&amp;nbsp;No image paragraph&amp;nbsp;No image paragraph&lt;/p&gt; 
-    &lt;p&gt;No image paragraph&amp;nbsp;No image paragraph&amp;nbsp;No image paragraph&lt;/p&gt;</sv:value>
+&lt;p&gt;&amp;nbsp;&lt;/p&gt; 
+&lt;p&gt;No image paragraph&amp;nbsp;No image paragraph&amp;nbsp;No image paragraph&lt;/p&gt; 
+&lt;p&gt;No image paragraph&amp;nbsp;No image paragraph&amp;nbsp;No image paragraph&lt;/p&gt; 
+&lt;ul&gt; 
+&lt;li&gt;paragraph list&lt;/li&gt; 
+&lt;li&gt;paragraph list&lt;/li&gt; 
+&lt;li&gt;paragraph list&lt;/li&gt; &lt;/ul&gt; 
+&lt;ol&gt; 
+&lt;li&gt;paragraph list&lt;/li&gt; 
+&lt;li&gt;paragraph list&lt;/li&gt; 
+&lt;li&gt;paragraph list&lt;/li&gt; &lt;/ol&gt;</sv:value>
             </sv:property>
           </sv:node>
         </sv:node>
@@ -7388,7 +7610,7 @@ Testimonial text two</sv:value>
             <sv:value>hsl:Documents</sv:value>
           </sv:property>
           <sv:property sv:name="hsl:title" sv:type="String">
-            <sv:value/>
+            <sv:value>Assets list</sv:value>
           </sv:property>
           <sv:node sv:name="hsl:asset">
             <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -7413,22 +7635,6 @@ Testimonial text two</sv:value>
             <sv:property sv:name="hippo:docbase" sv:type="String">
               <sv:value>ea3b98ae-2d50-48fd-8431-9eea287d93b4</sv:value>
             </sv:property>
-          </sv:node>
-        </sv:node>
-        <sv:node sv:name="hsl:flexibleblock">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>hsl:Image</sv:value>
-          </sv:property>
-          <sv:node sv:name="hsl:image">
-            <sv:property sv:name="jcr:primaryType" sv:type="Name">
-              <sv:value>hippogallerypicker:imagelink</sv:value>
-            </sv:property>
-            <sv:property sv:name="hippo:docbase" sv:type="String">
-              <sv:value>8d154015-2946-4d43-9003-ca8a31640797</sv:value>
-            </sv:property>
-            <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
-            <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
-            <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
           </sv:node>
         </sv:node>
         <sv:node sv:name="hsl:imageTeasersCompoundMixin">
@@ -7492,6 +7698,97 @@ Testimonial text two</sv:value>
             </sv:property>
             <sv:property sv:name="hsl:infoLine" sv:type="String">
               <sv:value>ONE LINE WITH NO ICON</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="hsl:flexibleblock">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:ExternalLinks</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:title" sv:type="String">
+            <sv:value>External links list</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:titleIcon">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippogallerypicker:imagelink</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+          </sv:node>
+          <sv:node sv:name="hsl:externallinks">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:ExternalLink</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:alt" sv:type="String">
+              <sv:value/>
+            </sv:property>
+            <sv:property sv:name="hsl:linkTitle" sv:type="String">
+              <sv:value>google Extrenal links list</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:linkUrl" sv:type="String">
+              <sv:value>http://google.com</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:newWindow" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="hsl:externallinks">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:ExternalLink</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:alt" sv:type="String">
+              <sv:value/>
+            </sv:property>
+            <sv:property sv:name="hsl:linkTitle" sv:type="String">
+              <sv:value>google Extrenal links list</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:linkUrl" sv:type="String">
+              <sv:value>http://google.com</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:newWindow" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="hsl:externallinks">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:ExternalLink</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:alt" sv:type="String">
+              <sv:value/>
+            </sv:property>
+            <sv:property sv:name="hsl:linkTitle" sv:type="String">
+              <sv:value>External links list</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:linkUrl" sv:type="String">
+              <sv:value>http://google.com</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:newWindow" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="hsl:flexibleblock">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:Html</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:htmlDocument">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippo:mirror</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>350cb5bb-5f30-4cd0-a1e7-2ff0b46a323d</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="hsl:cssDocument">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippo:mirror</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>e067f408-1817-4783-948d-137ac53e4302</sv:value>
             </sv:property>
           </sv:node>
         </sv:node>
@@ -8363,8 +8660,8 @@ Testimonial text two</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
       <sv:value>hippotranslation:translated</sv:value>
-      <sv:value>mix:versionable</sv:value>
       <sv:value>hippo:translated</sv:value>
+      <sv:value>mix:versionable</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>2fafa985-fdcc-498a-9cd5-8907a6624f41</sv:value>
@@ -8755,7 +9052,7 @@ Testimonial text two</sv:value>
           <sv:value>draft</sv:value>
         </sv:property>
         <sv:property sv:name="hippostd:stateSummary" sv:type="String">
-          <sv:value>changed</sv:value>
+          <sv:value>live</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -8764,7 +9061,7 @@ Testimonial text two</sv:value>
           <sv:value>2014-06-20T07:36:34.339+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-11-17T15:16:50.216+01:00</sv:value>
+          <sv:value>2015-01-08T12:21:56.417+01:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -8900,44 +9197,6 @@ Testimonial text two</sv:value>
             </sv:property>
             <sv:property sv:name="hippo:docbase" sv:type="String">
               <sv:value>b8380e5f-c63b-4753-b14f-ac3dd704f6b5</sv:value>
-            </sv:property>
-          </sv:node>
-        </sv:node>
-        <sv:node sv:name="hsl:flexibleblock">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>hsl:Quote</sv:value>
-          </sv:property>
-          <sv:node sv:name="hsl:quoteParameters">
-            <sv:property sv:name="jcr:primaryType" sv:type="Name">
-              <sv:value>hsl:QuoteParameters</sv:value>
-            </sv:property>
-            <sv:property sv:name="hsl:name" sv:type="String">
-              <sv:value/>
-            </sv:property>
-            <sv:property sv:name="hsl:quoteText" sv:type="String">
-              <sv:value/>
-            </sv:property>
-            <sv:node sv:name="hsl:image">
-              <sv:property sv:name="jcr:primaryType" sv:type="Name">
-                <sv:value>hippogallerypicker:imagelink</sv:value>
-              </sv:property>
-              <sv:property sv:name="hippo:docbase" sv:type="String">
-                <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
-              </sv:property>
-              <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
-              <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
-              <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
-            </sv:node>
-          </sv:node>
-          <sv:node sv:name="hsl:shareParameters">
-            <sv:property sv:name="jcr:primaryType" sv:type="Name">
-              <sv:value>hsl:ShareParameters</sv:value>
-            </sv:property>
-            <sv:property sv:name="hsl:linkedin" sv:type="Boolean">
-              <sv:value>false</sv:value>
-            </sv:property>
-            <sv:property sv:name="hsl:twitter" sv:type="Boolean">
-              <sv:value>false</sv:value>
             </sv:property>
           </sv:node>
         </sv:node>
@@ -8974,7 +9233,7 @@ Testimonial text two</sv:value>
           <sv:value>unpublished</sv:value>
         </sv:property>
         <sv:property sv:name="hippostd:stateSummary" sv:type="String">
-          <sv:value>changed</sv:value>
+          <sv:value>live</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -8983,7 +9242,7 @@ Testimonial text two</sv:value>
           <sv:value>2014-06-20T07:36:34.339+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-11-17T16:23:20.515+01:00</sv:value>
+          <sv:value>2015-01-08T12:22:06.084+01:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -9122,44 +9381,6 @@ Testimonial text two</sv:value>
             </sv:property>
           </sv:node>
         </sv:node>
-        <sv:node sv:name="hsl:flexibleblock">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>hsl:Quote</sv:value>
-          </sv:property>
-          <sv:node sv:name="hsl:quoteParameters">
-            <sv:property sv:name="jcr:primaryType" sv:type="Name">
-              <sv:value>hsl:QuoteParameters</sv:value>
-            </sv:property>
-            <sv:property sv:name="hsl:name" sv:type="String">
-              <sv:value/>
-            </sv:property>
-            <sv:property sv:name="hsl:quoteText" sv:type="String">
-              <sv:value/>
-            </sv:property>
-            <sv:node sv:name="hsl:image">
-              <sv:property sv:name="jcr:primaryType" sv:type="Name">
-                <sv:value>hippogallerypicker:imagelink</sv:value>
-              </sv:property>
-              <sv:property sv:name="hippo:docbase" sv:type="String">
-                <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
-              </sv:property>
-              <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
-              <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
-              <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
-            </sv:node>
-          </sv:node>
-          <sv:node sv:name="hsl:shareParameters">
-            <sv:property sv:name="jcr:primaryType" sv:type="Name">
-              <sv:value>hsl:ShareParameters</sv:value>
-            </sv:property>
-            <sv:property sv:name="hsl:linkedin" sv:type="Boolean">
-              <sv:value>false</sv:value>
-            </sv:property>
-            <sv:property sv:name="hsl:twitter" sv:type="Boolean">
-              <sv:value>false</sv:value>
-            </sv:property>
-          </sv:node>
-        </sv:node>
       </sv:node>
       <sv:node sv:name="pers-one">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -9181,7 +9402,7 @@ Testimonial text two</sv:value>
           <sv:value>published</sv:value>
         </sv:property>
         <sv:property sv:name="hippostd:stateSummary" sv:type="String">
-          <sv:value>changed</sv:value>
+          <sv:value>live</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -9190,13 +9411,13 @@ Testimonial text two</sv:value>
           <sv:value>2014-06-20T07:36:34.339+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-11-17T14:07:35.148+01:00</sv:value>
+          <sv:value>2015-01-08T12:22:06.084+01:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-          <sv:value>2014-11-17T14:07:37.089+01:00</sv:value>
+          <sv:value>2015-01-08T12:22:08.134+01:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:id" sv:type="String">
           <sv:value>7de7af71-a003-4111-8baf-a1ef53116195</sv:value>
@@ -9351,7 +9572,10 @@ Testimonial text two</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
           <sv:value>mix:referenceable</sv:value>
+          <sv:value>hsl:ImageTeasersMixin</sv:value>
+          <sv:value>hsl:HeadTeasersMixin</sv:value>
           <sv:value>hsl:PublicImagesMixin</sv:value>
+          <sv:value>hsl:TextTeasersMixin</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>9953e086-409c-441d-8252-5ab8f1936c1f</sv:value>
@@ -9374,7 +9598,7 @@ Testimonial text two</sv:value>
           <sv:value>2014-06-20T07:37:32.051+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-11-13T10:42:11.332+01:00</sv:value>
+          <sv:value>2015-01-08T12:23:13.964+01:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -9471,6 +9695,91 @@ Testimonial text two</sv:value>
             </sv:node>
           </sv:node>
         </sv:node>
+        <sv:node sv:name="hsl:flexibleblock">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:FbLikeShare</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:title" sv:type="String">
+            <sv:value>used to decide where to display the share/like buttons inside the content block.         Do it by moving this compound through the arrows on the right</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="hsl:flexibleblock">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:Paragraph</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:title" sv:type="String">
+            <sv:value>Paragraph just for some text</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:content">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippostd:html</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippostd:content" sv:type="String">
+              <sv:value>&lt;p&gt;Paragraph just for some text&amp;nbsp;Paragraph just for some text&amp;nbsp;Paragraph just for some text&amp;nbsp;Paragraph just for some text&amp;nbsp;Paragraph just for some text&amp;nbsp;Paragraph just for some text&amp;nbsp;Paragraph just for some text&amp;nbsp;Paragraph just for some text &amp;nbsp;Paragraph just for some text&amp;nbsp;Paragraph just for some text&amp;nbsp;Paragraph just for some text&amp;nbsp;Paragraph just for some text&amp;nbsp;Paragraph just for some text&amp;nbsp;Paragraph just for some text&amp;nbsp;Paragraph just for some text&amp;nbsp;&lt;/p&gt;</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="hsl:paragraphImage">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:ParagraphImage</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:position" sv:type="String">
+              <sv:value>left</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:staticdropdown" sv:type="String">
+              <sv:value>top</sv:value>
+            </sv:property>
+            <sv:node sv:name="hsl:paragraphImageLink">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hippogallerypicker:imagelink</sv:value>
+              </sv:property>
+              <sv:property sv:name="hippo:docbase" sv:type="String">
+                <sv:value>8d154015-2946-4d43-9003-ca8a31640797</sv:value>
+              </sv:property>
+              <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+              <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+              <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+            </sv:node>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="hsl:imageTeasersCompoundMixin">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:ImageTeasersCompoundMixin</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:imageteasers">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippo:mirror</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>fe9780fc-28a1-4bc9-8d67-dd968c559a99</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="hsl:textTeasersCompoundMixin">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:TextTeasersCompoundMixin</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:textteasers">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippo:mirror</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>94bdcc9a-52c6-42bd-83ae-3f039355bc80</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="hsl:headTeasersCompoundMixin">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:HeadTeasersCompoundMixin</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:teasers">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippo:mirror</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>6a93bc89-dc4e-407e-9740-a1d7263fbb68</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
       </sv:node>
       <sv:node sv:name="hippo:translation">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -9489,7 +9798,10 @@ Testimonial text two</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
           <sv:value>mix:referenceable</sv:value>
+          <sv:value>hsl:ImageTeasersMixin</sv:value>
+          <sv:value>hsl:HeadTeasersMixin</sv:value>
           <sv:value>hsl:PublicImagesMixin</sv:value>
+          <sv:value>hsl:TextTeasersMixin</sv:value>
           <sv:value>mix:versionable</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
@@ -9514,7 +9826,7 @@ Testimonial text two</sv:value>
           <sv:value>2014-06-20T07:37:32.051+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-11-13T10:44:47.961+01:00</sv:value>
+          <sv:value>2015-01-08T12:24:10.504+01:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -9611,6 +9923,91 @@ Testimonial text two</sv:value>
             </sv:node>
           </sv:node>
         </sv:node>
+        <sv:node sv:name="hsl:flexibleblock">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:FbLikeShare</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:title" sv:type="String">
+            <sv:value>used to decide where to display the share/like buttons inside the content block.         Do it by moving this compound through the arrows on the right</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="hsl:flexibleblock">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:Paragraph</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:title" sv:type="String">
+            <sv:value>Paragraph just for some text</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:content">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippostd:html</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippostd:content" sv:type="String">
+              <sv:value>&lt;p&gt;Paragraph just for some text&amp;nbsp;Paragraph just for some text&amp;nbsp;Paragraph just for some text&amp;nbsp;Paragraph just for some text&amp;nbsp;Paragraph just for some text&amp;nbsp;Paragraph just for some text&amp;nbsp;Paragraph just for some text&amp;nbsp;Paragraph just for some text &amp;nbsp;Paragraph just for some text&amp;nbsp;Paragraph just for some text&amp;nbsp;Paragraph just for some text&amp;nbsp;Paragraph just for some text&amp;nbsp;Paragraph just for some text&amp;nbsp;Paragraph just for some text&amp;nbsp;Paragraph just for some text&amp;nbsp;&lt;/p&gt;</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="hsl:paragraphImage">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:ParagraphImage</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:position" sv:type="String">
+              <sv:value>left</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:staticdropdown" sv:type="String">
+              <sv:value>top</sv:value>
+            </sv:property>
+            <sv:node sv:name="hsl:paragraphImageLink">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hippogallerypicker:imagelink</sv:value>
+              </sv:property>
+              <sv:property sv:name="hippo:docbase" sv:type="String">
+                <sv:value>8d154015-2946-4d43-9003-ca8a31640797</sv:value>
+              </sv:property>
+              <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+              <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+              <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+            </sv:node>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="hsl:imageTeasersCompoundMixin">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:ImageTeasersCompoundMixin</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:imageteasers">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippo:mirror</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>fe9780fc-28a1-4bc9-8d67-dd968c559a99</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="hsl:textTeasersCompoundMixin">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:TextTeasersCompoundMixin</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:textteasers">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippo:mirror</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>94bdcc9a-52c6-42bd-83ae-3f039355bc80</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="hsl:headTeasersCompoundMixin">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:HeadTeasersCompoundMixin</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:teasers">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippo:mirror</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>6a93bc89-dc4e-407e-9740-a1d7263fbb68</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
       </sv:node>
       <sv:node sv:name="pers-two">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -9618,7 +10015,10 @@ Testimonial text two</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
           <sv:value>mix:referenceable</sv:value>
+          <sv:value>hsl:ImageTeasersMixin</sv:value>
+          <sv:value>hsl:HeadTeasersMixin</sv:value>
           <sv:value>hsl:PublicImagesMixin</sv:value>
+          <sv:value>hsl:TextTeasersMixin</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>63ef91d2-a463-47c5-9fbd-772cd36d9e2f</sv:value>
@@ -9642,13 +10042,13 @@ Testimonial text two</sv:value>
           <sv:value>2014-06-20T07:37:32.051+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2014-11-13T10:44:47.961+01:00</sv:value>
+          <sv:value>2015-01-08T12:24:10.504+01:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-          <sv:value>2014-11-13T10:44:50.447+01:00</sv:value>
+          <sv:value>2015-01-08T12:24:12.550+01:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:id" sv:type="String">
           <sv:value>5052fe02-6f5f-4242-abf7-9d3d0d7f4f8b</sv:value>
@@ -9742,6 +10142,91 @@ Testimonial text two</sv:value>
             </sv:node>
           </sv:node>
         </sv:node>
+        <sv:node sv:name="hsl:flexibleblock">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:FbLikeShare</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:title" sv:type="String">
+            <sv:value>used to decide where to display the share/like buttons inside the content block.         Do it by moving this compound through the arrows on the right</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="hsl:flexibleblock">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:Paragraph</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:title" sv:type="String">
+            <sv:value>Paragraph just for some text</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:content">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippostd:html</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippostd:content" sv:type="String">
+              <sv:value>&lt;p&gt;Paragraph just for some text&amp;nbsp;Paragraph just for some text&amp;nbsp;Paragraph just for some text&amp;nbsp;Paragraph just for some text&amp;nbsp;Paragraph just for some text&amp;nbsp;Paragraph just for some text&amp;nbsp;Paragraph just for some text&amp;nbsp;Paragraph just for some text &amp;nbsp;Paragraph just for some text&amp;nbsp;Paragraph just for some text&amp;nbsp;Paragraph just for some text&amp;nbsp;Paragraph just for some text&amp;nbsp;Paragraph just for some text&amp;nbsp;Paragraph just for some text&amp;nbsp;Paragraph just for some text&amp;nbsp;&lt;/p&gt;</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="hsl:paragraphImage">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:ParagraphImage</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:position" sv:type="String">
+              <sv:value>left</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:staticdropdown" sv:type="String">
+              <sv:value>top</sv:value>
+            </sv:property>
+            <sv:node sv:name="hsl:paragraphImageLink">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hippogallerypicker:imagelink</sv:value>
+              </sv:property>
+              <sv:property sv:name="hippo:docbase" sv:type="String">
+                <sv:value>8d154015-2946-4d43-9003-ca8a31640797</sv:value>
+              </sv:property>
+              <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+              <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+              <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+            </sv:node>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="hsl:imageTeasersCompoundMixin">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:ImageTeasersCompoundMixin</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:imageteasers">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippo:mirror</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>fe9780fc-28a1-4bc9-8d67-dd968c559a99</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="hsl:textTeasersCompoundMixin">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:TextTeasersCompoundMixin</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:textteasers">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippo:mirror</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>94bdcc9a-52c6-42bd-83ae-3f039355bc80</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="hsl:headTeasersCompoundMixin">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:HeadTeasersCompoundMixin</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:teasers">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippo:mirror</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>6a93bc89-dc4e-407e-9740-a1d7263fbb68</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
       </sv:node>
     </sv:node>
     <sv:node sv:name="persvoorlichting">
@@ -9760,8 +10245,8 @@ Testimonial text two</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
           <sv:value>mix:referenceable</sv:value>
-          <sv:value>hsl:ImageTeasersMixin</sv:value>
           <sv:value>hsl:RelatedPersMixin</sv:value>
+          <sv:value>hsl:ImageTeasersMixin</sv:value>
           <sv:value>hsl:ContactPersonsMixin</sv:value>
           <sv:value>hsl:InternalLinksTeasersMixin</sv:value>
           <sv:value>hsl:TwitterMixin</sv:value>
@@ -10002,12 +10487,12 @@ Testimonial text two</sv:value>
         <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
           <sv:value>mix:referenceable</sv:value>
           <sv:value>hsl:ContactPersonsMixin</sv:value>
-          <sv:value>hsl:RelatedPersMixin</sv:value>
           <sv:value>hsl:ImageTeasersMixin</sv:value>
+          <sv:value>hsl:RelatedPersMixin</sv:value>
           <sv:value>hsl:TwitterMixin</sv:value>
           <sv:value>hsl:InternalLinksTeasersMixin</sv:value>
-          <sv:value>mix:versionable</sv:value>
           <sv:value>hsl:TextTeasersMixin</sv:value>
+          <sv:value>mix:versionable</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>59e8b090-a070-4b45-ad63-9e0893bff612</sv:value>
@@ -10244,8 +10729,8 @@ Testimonial text two</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
           <sv:value>mix:referenceable</sv:value>
-          <sv:value>hsl:ImageTeasersMixin</sv:value>
           <sv:value>hsl:RelatedPersMixin</sv:value>
+          <sv:value>hsl:ImageTeasersMixin</sv:value>
           <sv:value>hsl:ContactPersonsMixin</sv:value>
           <sv:value>hsl:InternalLinksTeasersMixin</sv:value>
           <sv:value>hsl:TwitterMixin</sv:value>
@@ -10784,8 +11269,8 @@ Testimonial text two</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
       <sv:value>hippotranslation:translated</sv:value>
-      <sv:value>mix:versionable</sv:value>
       <sv:value>hippo:translated</sv:value>
+      <sv:value>mix:versionable</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>50bad2ad-0f43-4695-aa5f-61718234f4b1</sv:value>

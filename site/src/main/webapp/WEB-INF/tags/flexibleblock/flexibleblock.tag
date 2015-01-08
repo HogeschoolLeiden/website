@@ -46,6 +46,9 @@
 		<c:when test="${block['class'].name == 'hslbeans.FbLikeShare' }">
 			<tag:facebookShareBlock document="${document}"/>
 		</c:when>
+		<c:when test="${block['class'].name == 'hslbeans.Html' }">
+			<tag:htmlBlock content="${block}"/>
+		</c:when>
 	</c:choose>
 	<c:set var="tagcount" value="${tagcount + 1 }" />
 </c:forEach>

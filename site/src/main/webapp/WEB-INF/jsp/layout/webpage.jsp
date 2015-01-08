@@ -85,7 +85,7 @@
   <script src="<hst:link path="/js/jquery.min.js" />" type="text/javascript"></script>
   <script src="<hst:link path="/js/jquery.browser.min.js" />" type="text/javascript"></script>
  
-  <hst:headContributions categoryExcludes="scripts,formsCssHere" xhtml="true" />
+  <hst:headContributions categoryExcludes="scripts,formsCssHere,extraCss" xhtml="true" />
   
   <c:choose>
     <c:when test="${tag:isSubclassOfWebPage(document) and not empty document.browserTitle}">
@@ -96,6 +96,8 @@
     </c:otherwise>
   </c:choose>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
+  
+  <hst:headContributions categoryIncludes="extraCss" xhtml="true" />
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
