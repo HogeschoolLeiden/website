@@ -31,7 +31,9 @@
   <div class="container">
     <%-- <hst:include ref="top-container" />      --%>
     <div class="row">
-              
+                    
+      <hst:include ref="left" />
+
       <c:choose>
         <c:when test="${empty document}">
            <tag:pagenotfound />
@@ -41,11 +43,9 @@
         </c:otherwise>
       </c:choose>
       
-      <hst:include ref="left" />
       
     </div>
     <hst:include ref="bottom-container" />
   </div>
-  
   
 </div>

@@ -24,11 +24,11 @@
   <div class="container">  
     <div class="row">
       
+      <hst:include ref="left" />
+
       <section class="col-md-9 detail-content">
         <hst:include ref="content"/>
       </section>
-
-      <hst:include ref="left" />
           
     </div>
     <hst:include ref="bottom-container" />
