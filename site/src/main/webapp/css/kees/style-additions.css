@@ -738,18 +738,20 @@ section.blok.colorbg.lichtpaars.contacts h1.pull-left span.col-md-8.col-xs-8.col
 
 @media (max-width: 767px){
 	.filtergroup.col-md-3.calendar {
-		width: -moz-calc(100% - 20px);
-		width: -webkit-calc(100% - 20px);
-		width: calc(100% - 20px);
-		
-		margin: 0 10px;
+		margin: 0 15px;
 	}
-	
-	.filter.filter-collapse.clearfix.algemeenfilter.collapse.in {
-		top: 0px;
+
+	.filtergroup.col-md-3.calendar #datepicker {
+		width: 263px;
 	}
 } 
 
+@media (max-width: 991px){
+	.filter.filter-collapse.clearfix.algemeenfilter.collapse.in {
+		top: 0px;
+		z-index: 200;
+	}
+}
 
 /* ------------ */
 /* testimonials */
@@ -1353,7 +1355,17 @@ col-md-3.col-xs-12 .mailplusform form ul li .mpFormField select{
 	
 	.row .detail-content {
 		float: left !important;
+		width: 100%;
 	}
+}
+
+@media (min-width: 992px) {
+	
+	.row .filter.filter-collapse.collapse.clearfix.algemeenfilter {
+		float: left;
+	}
+	
+	
 }
 
 
