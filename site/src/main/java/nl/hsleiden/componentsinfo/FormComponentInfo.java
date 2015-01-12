@@ -22,4 +22,7 @@ public interface FormComponentInfo {
     @Parameter(name = Constants.WidgetConstants.ATTACHMENT_BEAN_PATH, defaultValue = "")
     @JcrPath(isRelative = false, pickerInitialPath = Constants.WidgetConstants.INITIAL_ASSETS_LOCATION, pickerRemembersLastVisited=false, pickerSelectableNodeTypes = {"hippogallery:exampleAssetSet"})
     public String getAttachmentBeanPath();
+    
+    @Parameter(name = Constants.WidgetConstants.FORM_DATA_PDF, defaultValue = "off")
+    public Boolean getFormDataPdf();
 }

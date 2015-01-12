@@ -43,4 +43,13 @@ public class FormCompoundMixinBean extends FormCompoundMixin implements FormComp
         }
         return result;
     }
+
+    @Override
+    public Boolean getFormDataPdf() {
+        Boolean result = false;
+        if(getPrintedForm()!=null){
+            result = getPrintedForm();
+        }
+        return result; 
+    }
 }

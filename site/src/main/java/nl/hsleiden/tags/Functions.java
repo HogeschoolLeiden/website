@@ -134,7 +134,7 @@ public class Functions {
         
         if(cookies!=null){            
             for (Cookie cookie : cookies) {
-                if(cookie.getName().equalsIgnoreCase("refuseCookies")){
+                if("refuseCookies".equalsIgnoreCase(cookie.getName())){
                     result = true;
                 }
             }

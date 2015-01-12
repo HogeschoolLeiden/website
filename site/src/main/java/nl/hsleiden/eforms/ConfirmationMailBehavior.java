@@ -9,6 +9,7 @@ import javax.mail.MessagingException;
 import javax.mail.Session;
 
 import nl.hsleiden.components.catalog.FormComponent;
+import nl.hsleiden.utils.ITextPdfForm;
 
 import org.hippoecm.hst.component.support.forms.FormMap;
 import org.hippoecm.hst.core.component.HstRequest;
@@ -62,17 +63,56 @@ public class ConfirmationMailBehavior extends ConfirmationBehavior {
 
         LOG.debug("Sending confirmation e-mail to {}", emailAddresses);
 
-        addAttachmentIfAvailable(request, mail);
+        if(FormComponent.isSendPdf(request)){
+            addFormDataAsPdfAttachment(request, mail, formBean, form, map);
+        }else{
+            addSelectedAttachment(request, mail);            
+        }
 
         mail.sendMessage();
-
     }
 
-    private void addAttachmentIfAvailable(HstRequest request, MailTemplate mail) {
+    private void addSelectedAttachment(HstRequest request, MailTemplate mail) {
         String attachmentFileName = FormComponent.getAttachmentFileName(request);
         InputStream attachmentData = FormComponent.getAttachmentData(request);
+        attachDataToMail(mail, attachmentFileName, attachmentData);
+    }
+
+    private void attachDataToMail(MailTemplate mail, String attachmentFileName, InputStream attachmentData) {
         if (attachmentData != null && attachmentFileName != null) {
             mail.addAttachment(attachmentFileName, attachmentData);
         }
+    }
+    
+    private void addFormDataAsPdfAttachment(HstRequest request, MailTemplate mail, FormBean formBean, Form form,
+            FormMap map) {        
+        String attachmentFileName = getPdfFormFileName(request, formBean);
+        InputStream attachmentData = getPdfFormData(formBean, form, map);
+        attachDataToMail(mail, attachmentFileName, attachmentData);
+    }
+
+    private InputStream getPdfFormData(FormBean formBean, Form form, FormMap map) {
+        InputStream result = null;
+        result = new ITextPdfForm().createFormPdf(formBean, form, getIntroText(formBean));
+        return result;
+    }
+
+    private String getPdfFormFileName(HstRequest request, FormBean formBean) {
+        String result = request.getRequestContext().getBaseURL().getPathInfo().replaceAll("/", "_");
+        String formName = formBean.getFormName();
+        if(formName != null && !formName.isEmpty()){
+            result = formName;
+        }
+        return result+".pdf";
+    }
+    
+    public String getIntroText(FormBean formBean){
+        String result = null;
+        try {
+            result = super.getConfirmationText(formBean);
+        } catch (RepositoryException e) {
+            LOG.error("error getting confirmation text of form", e);
+        }
+        return result;
     }
 }

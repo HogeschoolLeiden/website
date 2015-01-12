@@ -56,6 +56,7 @@ public class Constants {
         public static final String THANKS_BEAN_PATH = "thanksBeanPath";
         public static final String OVERVIEW_LINK_LABEL = "overviewLinkLabel";
         public static final String ATTACHMENT_BEAN_PATH = "attachmentBeanPath";
+        public static final String FORM_DATA_PDF = "formDataPdf";
 
         public static final String CONTACT_1 = "firstContact";
         public static final String CONTACT_2 = "secondContact";

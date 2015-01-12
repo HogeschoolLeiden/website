@@ -37,6 +37,7 @@ import com.tdclighthouse.prototype.utils.BeanUtils;
 @ParametersInfo(type = TwitterFeedInfo.class)
 public class TwitterFeed extends AjaxEnabledComponent {
 
+    private static final String TWEETS = "tweets";
     private static final Logger LOG = LoggerFactory.getLogger(TwitterFeed.class);
     private Twitter twitter = TwitterFactory.getSingleton();
 
@@ -48,17 +49,8 @@ public class TwitterFeed extends AjaxEnabledComponent {
             TwitterFeedInfo parametersInfo = getConfiguration(request);
             model.put(Constants.Attributes.PARAM_INFO, parametersInfo);
 
-            String from = parametersInfo.getFrom();
-            String searchQuery = parametersInfo.getQuery();
-
             if (parametersInfo.getLimit() != 0) {
-
-                if (from != null && !from.isEmpty()) {
-                    ResponseList<Status> userTimeline = twitter.timelines().getUserTimeline(from);
-                    model.put("tweets", populateTweetsList(userTimeline, parametersInfo));
-                } else if (searchQuery != null && !searchQuery.isEmpty()) {
-                    model.put("tweets", getTweetsByQuery(searchQuery, parametersInfo, request));
-                }
+                addTweetsToModel(request, model, parametersInfo);
             } else {
                 request.setAttribute(WidgetConstants.WEB_MASTER_MESSAGE, "webmaster.0.tweets.message");
             }
@@ -68,6 +60,20 @@ public class TwitterFeed extends AjaxEnabledComponent {
             throw new HstComponentException(e.getMessage(), e);
         } catch (TwitterException e) {
             throw new HstComponentException("Error while retrieving Tweets.", e);
+        }
+    }
+
+    private void addTweetsToModel(HstRequest request, Map<String, Object> model, TwitterFeedInfo parametersInfo)
+            throws TwitterException {
+
+        String searchQuery = parametersInfo.getQuery();
+        String from = parametersInfo.getFrom();
+
+        if (from != null && !from.isEmpty()) {
+            ResponseList<Status> userTimeline = twitter.timelines().getUserTimeline(from);
+            model.put(TWEETS, populateTweetsList(userTimeline, parametersInfo));
+        } else if (searchQuery != null && !searchQuery.isEmpty()) {
+            model.put(TWEETS, getTweetsByQuery(searchQuery, parametersInfo, request));
         }
     }
 

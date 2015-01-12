@@ -133,4 +133,9 @@ public class FormComponent extends FormStoringEformComponent {
         }
         return result;
     }
+
+    public static boolean isSendPdf(HstRequest request) {
+        FormComponentInfo parametersInfo = new FormComponent().getConfiguration(request);
+        return parametersInfo.getFormDataPdf();
+    }
 }
