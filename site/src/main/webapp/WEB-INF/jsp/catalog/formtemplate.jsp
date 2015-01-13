@@ -93,8 +93,6 @@
     </c:forEach>
 
     <div class="eforms-buttons">
-      <input id="previousPageButton" type="button" name="previousPageButton" value="Previous" style="DISPLAY: none" />
-      <input id="nextPageButton" type="button" name="nextPageButton" value="Next" style="DISPLAY: none" />
       <c:forEach var="button" items="${form.buttons}">
         <c:choose>
           <c:when test="${button.type eq 'resetbutton'}">
@@ -103,6 +101,14 @@
           </c:when>
           <c:when test="${button.type eq 'submitbutton'}">
             <input type="submit" name="${button.formRelativeUniqueName}" class="btn ${button.styleClass}"
+                   value="<c:choose><c:when test='${empty button.value}'><c:out value='${button.name}'/></c:when><c:otherwise><c:out value='${button.value}'/></c:otherwise></c:choose>" />
+          </c:when>
+          <c:when test="${button.type eq 'nextbutton'}">
+            <input id="nextPageButton" type="button" name="${button.formRelativeUniqueName}" class="btn ${button.styleClass}" style="DISPLAY: none"
+                   value="<c:choose><c:when test='${empty button.value}'><c:out value='${button.name}'/></c:when><c:otherwise><c:out value='${button.value}'/></c:otherwise></c:choose>" />
+          </c:when>
+          <c:when test="${button.type eq 'previousbutton'}">
+            <input id="previousPageButton" type="button" name="${button.formRelativeUniqueName}" class="btn ${button.styleClass}" style="DISPLAY: none"
                    value="<c:choose><c:when test='${empty button.value}'><c:out value='${button.name}'/></c:when><c:otherwise><c:out value='${button.value}'/></c:otherwise></c:choose>" />
           </c:when>
           <c:otherwise>

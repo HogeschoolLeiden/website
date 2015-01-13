@@ -85,7 +85,7 @@ form div.eforms-buttons {
 
 .eforms-pagetab > li.selected {
     background: none repeat scroll 0 0 #DAE6EF;
-    border: 1px solid lightgrey;
+    border: 1px solid rgb(0, 131, 131);
 }
 
 .eforms-page {
@@ -240,4 +240,18 @@ form div.eforms-buttons {
 	font-size: 1.4em; line-height: 1.43;
 	color: rgb(255, 255, 255);
 }
+
+.form ul.eforms-pagetab {
+	width: 100%; display: block; float: left;
+}
+
+.detail-content .contentarea .form ul.eforms-pagetab li, .form ul.eforms-pagetab li {
+	background: none;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+	
+	
+	
+
 
