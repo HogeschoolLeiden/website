@@ -8,6 +8,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import org.hippoecm.hst.component.support.forms.FormField;
+import org.hippoecm.hst.component.support.forms.FormMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -32,7 +34,7 @@ public class ITextPdfForm {
 
     private static final Logger LOG = LoggerFactory.getLogger(ITextPdfForm.class);
 
-    public InputStream createFormPdf(FormBean formBean, Form form, String introText) {
+    public InputStream createFormPdf(FormBean formBean, Form form, String introText, FormMap map) {
 
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
 
@@ -45,10 +47,10 @@ public class ITextPdfForm {
             addTitle(formBean, doc);
             doc.add(Chunk.NEWLINE);
 
-            addIntroduction(formBean, introText, doc);
+            addFormData(form, doc, map);
             doc.add(Chunk.NEWLINE);
 
-            addFormData(form, doc);
+            addIntroduction(formBean, introText, doc);
             doc.add(Chunk.NEWLINE);
 
             doc.close();
@@ -59,7 +61,7 @@ public class ITextPdfForm {
         return new ByteArrayInputStream(baos.toByteArray());
     }
 
-    private void addFormData(Form form, Document doc) throws DocumentException {
+    private void addFormData(Form form, Document doc, FormMap map) throws DocumentException {
         List<AbstractField> fields = form.getFields();
 
         PdfPTable tbl = new PdfPTable(2);
@@ -67,7 +69,10 @@ public class ITextPdfForm {
             if (abstractField.isMultiple()) {
                 if ("radiogroup".equalsIgnoreCase(abstractField.getType())) {
                     addSingleValueFields(tbl, abstractField);
-                } else {
+                } else if ("checkboxgroup".equalsIgnoreCase(abstractField.getType())){
+                    addMultivalueFields(tbl, abstractField);
+                    addSingleValueFormField(tbl, map.getField(abstractField.getName()+"-other"));
+                }else {
                     addMultivalueFields(tbl, abstractField);
                 }
             } else {
@@ -90,8 +95,15 @@ public class ITextPdfForm {
 
     private void addSingleValueFields(PdfPTable tbl, AbstractField abstractField) {
         if (abstractField != null && abstractField.getValue() != null && !abstractField.getValue().isEmpty()) {
-            addTableCell(tbl, abstractField.getName());
+            addTableCell(tbl, abstractField.getLabelOrName());
             addTableCell(tbl, abstractField.getValue());
+        }
+    }
+
+    private void addSingleValueFormField(PdfPTable tbl, FormField formField) {
+        if (formField != null && formField.getValue() != null && !formField.getValue().isEmpty()) {
+            addTableCell(tbl, formField.getName());
+            addTableCell(tbl, formField.getValue());
         }
     }
 

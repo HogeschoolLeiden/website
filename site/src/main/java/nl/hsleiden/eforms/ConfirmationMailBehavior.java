@@ -93,7 +93,7 @@ public class ConfirmationMailBehavior extends ConfirmationBehavior {
 
     private InputStream getPdfFormData(FormBean formBean, Form form, FormMap map) {
         InputStream result = null;
-        result = new ITextPdfForm().createFormPdf(formBean, form, getIntroText(formBean));
+        result = new ITextPdfForm().createFormPdf(formBean, form, getIntroText(formBean), map);
         return result;
     }
 
@@ -106,7 +106,7 @@ public class ConfirmationMailBehavior extends ConfirmationBehavior {
         return result+".pdf";
     }
     
-    public String getIntroText(FormBean formBean){
+    private String getIntroText(FormBean formBean){
         String result = null;
         try {
             result = super.getConfirmationText(formBean);
