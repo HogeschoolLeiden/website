@@ -122,6 +122,7 @@ public class RelatedItemsTest {
         HstRequestContext requestContext = createMockHstRequestContext(CONTENT_BEAN_PATH, OVERVIEW_BEAN_PATH,
                 myInfoMock, null, false, addMixin);
         request.setRequestContext(requestContext);
+        ParameterUtils.setRequestContext(requestContext);
 
         Map<String, Object> model = relatedItems.getModel(request, null);
 
@@ -153,6 +154,7 @@ public class RelatedItemsTest {
                 myInfoMock, overviewBean, false, false);
 
         request.setRequestContext(requestContext);
+        ParameterUtils.setRequestContext(requestContext);
 
         Map<String, Object> model = relatedItems.getModel(request, null);
 
@@ -207,6 +209,7 @@ public class RelatedItemsTest {
                 myInfoMock, overviewBean, false, false);
 
         request.setRequestContext(requestContext);
+        ParameterUtils.setRequestContext(requestContext);
 
         Map<String, Object> model = relatedItems.getModel(request, null);
 
@@ -234,6 +237,7 @@ public class RelatedItemsTest {
                 overviewBean, false, false);
 
         request.setRequestContext(requestContext);
+        ParameterUtils.setRequestContext(requestContext);
 
         Map<String, Object> model = relatedItems.getModel(request, null);
 
@@ -269,6 +273,7 @@ public class RelatedItemsTest {
                 myInfoMock, overviewBean, true, false);
 
         request.setRequestContext(requestContext);
+        ParameterUtils.setRequestContext(requestContext);
 
         relatedItems.getModel(request, null);
     }

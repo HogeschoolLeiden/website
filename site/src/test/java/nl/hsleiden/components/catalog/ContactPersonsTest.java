@@ -44,6 +44,7 @@ public class ContactPersonsTest {
         HstRequestContext requestContext = createMockHstRequestContext(FIRST_CONTACT_PATH, SECOND_CONTACT_PATH, THIRD_CONTACT_PATH,
                 myInfoMock, false, false, true);
         request.setRequestContext(requestContext);
+        ParameterUtils.setRequestContext(requestContext);
         
         Map<String, Object> model = contactPersons.getModel(request, null);
         Assert.assertEquals(((List<HippoBean>) model.get("items")).size(), SIZE);
@@ -64,6 +65,7 @@ public class ContactPersonsTest {
         HstRequestContext requestContext = createMockHstRequestContext(FIRST_CONTACT_PATH, SECOND_CONTACT_PATH, THIRD_CONTACT_PATH,
                 myInfoMock, false, false, false);
         request.setRequestContext(requestContext);
+        ParameterUtils.setRequestContext(requestContext);
         
         Map<String, Object> model = contactPersons.getModel(request, null);
         Assert.assertEquals(model.get("items"), null);
@@ -86,6 +88,7 @@ public class ContactPersonsTest {
         HstRequestContext requestContext = createMockHstRequestContext(FIRST_CONTACT_PATH, SECOND_CONTACT_PATH, THIRD_CONTACT_PATH,
                 myInfoMock, false, false, false);
         request.setRequestContext(requestContext);
+        ParameterUtils.setRequestContext(requestContext);
         
         Map<String, Object> model = contactPersons.getModel(request, null);
         Assert.assertEquals(((List<HippoBean>) model.get("items")).size(), SIZE);
@@ -106,7 +109,8 @@ public class ContactPersonsTest {
         try {
             requestContext = createMockHstRequestContext(FIRST_CONTACT_PATH, SECOND_CONTACT_PATH, THIRD_CONTACT_PATH,
                     myInfoMock, false, false, false);
-            request.setRequestContext(requestContext);            
+            request.setRequestContext(requestContext);    
+            ParameterUtils.setRequestContext(requestContext);
             contactPersons.getModel(request, null);
 
         } catch (HstComponentException e) {

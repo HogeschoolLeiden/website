@@ -252,6 +252,7 @@ public class EventCalendarTest {
             requestContext.setLinkCreator(createMockLinkCreator());
             requestContext.setContentBean(contentBean);
             request.setRequestContext(requestContext);
+            ParameterUtils.setRequestContext(requestContext);
             request.addParameter("start", START_DATE);
             request.addParameter("end", END_DATE);
             return request;

@@ -128,6 +128,7 @@ public class FormComponentTest {
         request.setAttribute(ParameterUtils.MY_MOCK_PARAMETER_INFO, myInfoMock);
         HstRequestContext requestContext = createMockHstRequestContext(myInfoMock, bean, isHippoDocumentBean);
         request.setRequestContext(requestContext);
+        ParameterUtils.setRequestContext(requestContext);
         return request;
     }
 
