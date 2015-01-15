@@ -1,0 +1,31 @@
+<!--
+    Copyright 2009-2014 Hippo B.V. (http://www.onehippo.com)
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd"
+      xml:lang="en"
+      lang="en">
+
+<wicket:extend>
+    <!-- It creates problems for saving the form - removing it.
+    <div class="property other">
+        <input type="checkbox" wicket:id="allowOtherField"/>
+        <span class="label" wicket:id="allowOtherLabel">[HINT]</span>
+    </div> 
+    -->
+    <div class="property length">
+        <span class="label" wicket:id="length">[HINT]</span><br/>
+        <input type="text" wicket:id="length-field"/>
+    </div>
+    <div class="property minlength">
+        <span class="label" wicket:id="minlength">[HINT]</span><br/>
+        <input type="text" wicket:id="minlength-field"/>
+    </div>
+    <div class="property maxlength">
+        <span class="label" wicket:id="maxlength">[HINT]</span><br/>
+        <input type="text" wicket:id="maxlength-field"/>
+    </div>
+    <wicket:panel wicket:id="options-panel"></wicket:panel>
+</wicket:extend>
+</html>
