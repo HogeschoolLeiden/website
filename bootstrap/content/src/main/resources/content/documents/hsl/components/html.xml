@@ -1,16 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="html">
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node sv:name="html" xmlns:sv="http://www.jcp.org/jcr/sv/1.0">
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>hippostd:folder</sv:value>
   </sv:property>
-  <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+  <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
     <sv:value>hippotranslation:translated</sv:value>
-    <sv:value>hippo:translated</sv:value>
     <sv:value>mix:versionable</sv:value>
+    <sv:value>hippo:translated</sv:value>
   </sv:property>
   <sv:property sv:name="jcr:uuid" sv:type="String">
     <sv:value>6657e1e0-eeec-4914-9130-9e3e3c07553b</sv:value>
   </sv:property>
-  <sv:property sv:name="hippostd:foldertype" sv:type="String" sv:multiple="true">
+  <sv:property sv:multiple="true" sv:name="hippostd:foldertype" sv:type="String">
     <sv:value>new-html-folder</sv:value>
   </sv:property>
   <sv:property sv:name="hippotranslation:id" sv:type="String">
@@ -34,7 +35,7 @@
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hippostd:folder</sv:value>
     </sv:property>
-    <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+    <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
       <sv:value>hippo:harddocument</sv:value>
       <sv:value>hippotranslation:translated</sv:value>
       <sv:value>hippo:translated</sv:value>
@@ -43,7 +44,7 @@
       <sv:value>29afdf79-6175-4637-9f87-4dc73fa2dddc</sv:value>
     </sv:property>
     <sv:property sv:name="hippo:related___pathreference" sv:type="String"/>
-    <sv:property sv:name="hippostd:foldertype" sv:type="String" sv:multiple="true">
+    <sv:property sv:multiple="true" sv:name="hippostd:foldertype" sv:type="String">
       <sv:value>new-css-document</sv:value>
       <sv:value>new-html-document</sv:value>
     </sv:property>
@@ -57,7 +58,7 @@
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hippo:handle</sv:value>
       </sv:property>
-      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
         <sv:value>mix:referenceable</sv:value>
         <sv:value>hippo:translated</sv:value>
       </sv:property>
@@ -68,13 +69,13 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hsl:HtmlDocument</sv:value>
         </sv:property>
-        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
           <sv:value>mix:referenceable</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>75f24d57-133c-49fd-ae9b-7c1748ca5b83</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String"/>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
           <sv:value>html/extra-styled-list/html-test-1/html-test-1[2]</sv:value>
           <sv:value>html/extra-styled-list/html-test-1/html-test-1[3]</sv:value>
@@ -104,10 +105,10 @@
           <sv:value>nl</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:html" sv:type="String">
-          <sv:value>&lt;ul&gt; &#13;
-&lt;li&gt;free html list copied from paragraph list&lt;/li&gt; &#13;
-&lt;li&gt;free html list copied from paragraph list with my own style&lt;/li&gt; &#13;
-&lt;li&gt;free html list copied from paragraph list&lt;/li&gt; &#13;
+          <sv:value>&lt;ul&gt; &#xd;
+&lt;li&gt;free html list copied from paragraph list&lt;/li&gt; &#xd;
+&lt;li&gt;free html list copied from paragraph list with my own style&lt;/li&gt; &#xd;
+&lt;li&gt;free html list copied from paragraph list&lt;/li&gt; &#xd;
 &lt;/ul&gt;</sv:value>
         </sv:property>
       </sv:node>
@@ -126,14 +127,14 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hsl:HtmlDocument</sv:value>
         </sv:property>
-        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
           <sv:value>mix:referenceable</sv:value>
           <sv:value>mix:versionable</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>4f16fcf7-b920-4237-bb5d-f063209362b4</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
           <sv:value>preview</sv:value>
         </sv:property>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
@@ -164,10 +165,10 @@
           <sv:value>nl</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:html" sv:type="String">
-          <sv:value>&lt;ul&gt; &#13;
-&lt;li&gt;free html list copied from paragraph list&lt;/li&gt; &#13;
-&lt;li&gt;free html list copied from paragraph list with my own style&lt;/li&gt; &#13;
-&lt;li&gt;free html list copied from paragraph list&lt;/li&gt; &#13;
+          <sv:value>&lt;ul&gt; &#xd;
+&lt;li&gt;free html list copied from paragraph list&lt;/li&gt; &#xd;
+&lt;li&gt;free html list copied from paragraph list with my own style&lt;/li&gt; &#xd;
+&lt;li&gt;free html list copied from paragraph list&lt;/li&gt; &#xd;
 &lt;/ul&gt;</sv:value>
         </sv:property>
       </sv:node>
@@ -175,13 +176,13 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hsl:HtmlDocument</sv:value>
         </sv:property>
-        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
           <sv:value>mix:referenceable</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>d066fed0-26d6-4be9-87ce-8359e6302744</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
           <sv:value>live</sv:value>
         </sv:property>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
@@ -215,10 +216,10 @@
           <sv:value>nl</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:html" sv:type="String">
-          <sv:value>&lt;ul&gt; &#13;
-&lt;li&gt;free html list copied from paragraph list&lt;/li&gt; &#13;
-&lt;li&gt;free html list copied from paragraph list with my own style&lt;/li&gt; &#13;
-&lt;li&gt;free html list copied from paragraph list&lt;/li&gt; &#13;
+          <sv:value>&lt;ul&gt; &#xd;
+&lt;li&gt;free html list copied from paragraph list&lt;/li&gt; &#xd;
+&lt;li&gt;free html list copied from paragraph list with my own style&lt;/li&gt; &#xd;
+&lt;li&gt;free html list copied from paragraph list&lt;/li&gt; &#xd;
 &lt;/ul&gt;</sv:value>
         </sv:property>
       </sv:node>
@@ -227,7 +228,7 @@
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hippo:handle</sv:value>
       </sv:property>
-      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
         <sv:value>mix:referenceable</sv:value>
         <sv:value>hippo:translated</sv:value>
       </sv:property>
@@ -238,13 +239,13 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hsl:CssDocument</sv:value>
         </sv:property>
-        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
           <sv:value>mix:referenceable</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>5d982296-ea56-45fb-a7cc-ef464a4adb84</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String"/>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
           <sv:value>html/extra-styled-list/css-test-1/css-test-1[3]</sv:value>
           <sv:value>html/extra-styled-list/css-test-1/css-test-1[2]</sv:value>
@@ -274,8 +275,8 @@
           <sv:value>nl</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:css" sv:type="String">
-          <sv:value>.free ul li:nth-of-type(2) {color: blue; }&#13;
-.detail-content .contentarea .content .free ul li:nth-of-type(2) {background:red;}&#13;
+          <sv:value>.free ul li:nth-of-type(2) {color: blue; }&#xd;
+.detail-content .contentarea .content .free ul li:nth-of-type(2) {background:red;}&#xd;
 .free ul li:nth-of-type(2) {font-weight: bolder; font-size: 17px; }</sv:value>
         </sv:property>
       </sv:node>
@@ -294,14 +295,14 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hsl:CssDocument</sv:value>
         </sv:property>
-        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
           <sv:value>mix:referenceable</sv:value>
           <sv:value>mix:versionable</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>e82d38d6-7547-428d-92ed-958961fc95bf</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
           <sv:value>preview</sv:value>
         </sv:property>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
@@ -332,8 +333,8 @@
           <sv:value>nl</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:css" sv:type="String">
-          <sv:value>.free ul li:nth-of-type(2) {color: blue; }&#13;
-.detail-content .contentarea .content .free ul li:nth-of-type(2) {background:red;}&#13;
+          <sv:value>.free ul li:nth-of-type(2) {color: blue; }&#xd;
+.detail-content .contentarea .content .free ul li:nth-of-type(2) {background:red;}&#xd;
 .free ul li:nth-of-type(2) {font-weight: bolder; font-size: 17px; }</sv:value>
         </sv:property>
       </sv:node>
@@ -341,13 +342,13 @@
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hsl:CssDocument</sv:value>
         </sv:property>
-        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
           <sv:value>mix:referenceable</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>0e88911e-670f-4baa-a30c-592759df05d1</sv:value>
         </sv:property>
-        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
           <sv:value>live</sv:value>
         </sv:property>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
@@ -381,8 +382,8 @@
           <sv:value>nl</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:css" sv:type="String">
-          <sv:value>.free ul li:nth-of-type(2) {color: blue; }&#13;
-.detail-content .contentarea .content .free ul li:nth-of-type(2) {background:red;}&#13;
+          <sv:value>.free ul li:nth-of-type(2) {color: blue; }&#xd;
+.detail-content .contentarea .content .free ul li:nth-of-type(2) {background:red;}&#xd;
 .free ul li:nth-of-type(2) {font-weight: bolder; font-size: 17px; }</sv:value>
         </sv:property>
       </sv:node>
@@ -402,6 +403,539 @@
       <sv:property sv:name="hippo:message" sv:type="String">
         <sv:value>extra styled list</sv:value>
       </sv:property>
+    </sv:node>
+  </sv:node>
+  <sv:node sv:name="mc-form-similar-to-cms-forms">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hippostd:folder</sv:value>
+    </sv:property>
+    <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+      <sv:value>hippo:harddocument</sv:value>
+      <sv:value>hippotranslation:translated</sv:value>
+      <sv:value>hippo:translated</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>c10df6df-9579-463c-8a06-81a961b1b331</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:related___pathreference" sv:type="String"/>
+    <sv:property sv:multiple="true" sv:name="hippostd:foldertype" sv:type="String">
+      <sv:value>new-css-document</sv:value>
+      <sv:value>new-html-document</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippotranslation:id" sv:type="String">
+      <sv:value>9cd9e43f-367d-4aea-acac-42b4e61098ca</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippotranslation:locale" sv:type="String">
+      <sv:value>nl</sv:value>
+    </sv:property>
+    <sv:node sv:name="hippotranslation:translations">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hippotranslation:translations</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="hippo:translation">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hippo:translation</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:language" sv:type="String">
+        <sv:value/>
+      </sv:property>
+      <sv:property sv:name="hippo:message" sv:type="String">
+        <sv:value>mc-form</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="mc-form-html">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hippo:handle</sv:value>
+      </sv:property>
+      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+        <sv:value>mix:referenceable</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>38989fd1-4974-4388-9b1d-585b2a65a580</sv:value>
+      </sv:property>
+      <sv:node sv:name="mc-form-html">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsl:HtmlDocument</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+          <sv:value>mix:referenceable</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>d6188fec-7563-42be-8a70-f98630001cbf</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String"/>
+        <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+          <sv:value>html/mc-form-similar-to-cms-forms/mc-form-html/mc-form-html[2]</sv:value>
+          <sv:value>html/mc-form-similar-to-cms-forms/mc-form-html/mc-form-html[3]</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostd:state" sv:type="String">
+          <sv:value>draft</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+          <sv:value>live</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+          <sv:value>admin.gridi</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+          <sv:value>2015-01-15T13:03:15.134Z</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+          <sv:value>2015-01-15T15:20:36.797Z</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+          <sv:value>admin.gridi</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippotranslation:id" sv:type="String">
+          <sv:value>ba8635b2-d112-4048-8810-10934f561ca6</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippotranslation:locale" sv:type="String">
+          <sv:value>nl</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:html" sv:type="String">
+          <sv:value>&lt;div id="mc_embed_signup"&gt;&#xd;
+  &lt;form action="http://hsleiden.us3.list-manage.com/subscribe/post?u=856f1d0a687ae7034a13ab3e3&amp;amp;id=c303b29833" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate&gt;&#xd;
+         &lt;h3&gt;Blijf op de hoogte van de ontwikkelingen van het lectoraat en meld u aan voor onze nieuwsbrief&lt;/h3&gt;&#xd;
+&lt;div class="indicates-required"&gt;&lt;span class="asterisk"&gt;*&lt;/span&gt;Verplichte velden&lt;/div&gt;&lt;br&gt;&#xd;
+&lt;div class="mc-field-group"&gt;&#xd;
+         &lt;strong&gt;Email Address &lt;/strong&gt; &lt;span class="asterisk"&gt;*&lt;/span&gt;&#xd;
+         &lt;input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL"&gt;&#xd;
+&lt;/div&gt;&lt;br&gt;&#xd;
+&lt;div class="mc-field-group input-group"&gt;&#xd;
+    &lt;strong&gt;Geslacht &lt;/strong&gt;&lt;br&gt;&#xd;
+  &lt;input type="radio" value="heer" name="MMERGE3" id="mce-MMERGE3-0"&gt;&#xd;
+  &lt;label for="mce-MMERGE3-0"&gt;heer&lt;/label&gt;&lt;br&gt;&#xd;
+  &lt;input type="radio" value="mevrouw" name="MMERGE3" id="mce-MMERGE3-1"&gt;&#xd;
+  &lt;label  for="mce-MMERGE3-1"&gt;mevrouw&lt;/label&gt;&#xd;
+ &#xd;
+  &lt;/div&gt;&lt;br&gt;&#xd;
+&lt;div class="mc-field-group"&gt;&#xd;
+         &lt;strong&gt;Voorletter(s)&lt;/strong&gt;&#xd;
+         &lt;input type="text" value="" name="FNAME" class="" id="mce-FNAME"&gt;&#xd;
+&lt;/div&gt;&#xd;
+&lt;div class="mc-field-group"&gt;&#xd;
+         &lt;strong&gt;Tussenvoegsel&lt;/strong&gt;&#xd;
+         &lt;input type="text" value="" name="MMERGE4" class="" id="mce-MMERGE4"&gt;&#xd;
+&lt;/div&gt;&#xd;
+&lt;div class="mc-field-group"&gt;&#xd;
+         &lt;strong&gt;Achternaam&lt;/strong&gt;  &lt;span class="asterisk"&gt;*&lt;/span&gt;&#xd;
+         &lt;input type="text" value="" name="LNAME" class="required" id="mce-LNAME"&gt;&#xd;
+&lt;/div&gt;&lt;br&gt;&#xd;
+&lt;div class="mc-field-group input-group"&gt;&#xd;
+    &lt;strong&gt;Taal &lt;/strong&gt;&#xd;
+  &lt;br&gt;&lt;input type="radio" value="Nederlands" name="MMERGE5" id="mce-MMERGE5-0"&gt;&#xd;
+  &lt;label for="mce-MMERGE5-0"&gt;Nederlands&lt;/label&gt;&lt;br&gt;&#xd;
+  &lt;input type="radio" value="Engels" name="MMERGE5" id="mce-MMERGE5-1"&gt;&#xd;
+  &lt;label for="mce-MMERGE5-1"&gt;Engels&lt;/label&gt;&#xd;
+ &#xd;
+  &lt;/div&gt;&lt;br&gt;&#xd;
+&lt;div class="mc-field-group input-group"&gt;&#xd;
+    &lt;strong&gt;Werkzaam in de antroposofische gezondheidszorg? &lt;/strong&gt;&lt;br&gt;&#xd;
+  &lt;input type="radio" value="Ja" name="MMERGE6" id="mce-MMERGE6-0"&gt;&#xd;
+  &lt;label for="mce-MMERGE6-0"&gt;Ja&lt;/label&gt;&lt;br&gt;&#xd;
+  &lt;input type="radio" value="Nee" name="MMERGE6" id="mce-MMERGE6-1"&gt;&#xd;
+    &lt;label for="mce-MMERGE6-1"&gt;Nee&lt;/label&gt;&#xd;
+ &#xd;
+  &lt;/div&gt;&lt;br&gt;&#xd;
+&lt;div class="mc-field-group"&gt;&#xd;
+         &lt;p&gt;Welke nieuwsbrief wenst u te ontvangen? * &lt;/p&gt;&#xd;
+         &lt;p&gt;&lt;i&gt;Vul hier 'Nieuwsbrief Lectoraat' en/of  'International Research Newsletter' in.&lt;/i&gt;&lt;/p&gt;&#xd;
+         &lt;p&gt;&lt;span class="asterisk"&gt;&lt;/span&gt;&#xd;
+           &lt;input type="text" value="" name="MMERGE7" class="required" id="mce-MMERGE7"&gt;&#xd;
+           &lt;/p&gt;&#xd;
+&lt;/div&gt;&#xd;
+         &lt;div id="mce-responses" class="clear"&gt;&#xd;
+                   &lt;div class="response" id="mce-error-response" style="display:none"&gt;&lt;/div&gt;&#xd;
+                   &lt;div class="response" id="mce-success-response" style="display:none"&gt;&lt;/div&gt;&#xd;
+         &lt;/div&gt;&lt;br&gt;&#xd;
+    &lt;div class="clear"&gt;&lt;input type="submit" value="Aanmelden" name="subscribe" id="mc-embedded-subscribe" class="button"&gt;&lt;/div&gt;&#xd;
+&lt;/form&gt;&#xd;
+&lt;/div&gt;</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="mc-form-html">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsl:HtmlDocument</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+          <sv:value>mix:referenceable</sv:value>
+          <sv:value>mix:versionable</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>2a6ad61d-af1c-492e-b6da-69adf1a91856</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
+          <sv:value>preview</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+          <sv:value>html/mc-form-similar-to-cms-forms/mc-form-html/mc-form-html[3]</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostd:state" sv:type="String">
+          <sv:value>unpublished</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+          <sv:value>live</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+          <sv:value>admin.gridi</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+          <sv:value>2015-01-15T13:03:15.134Z</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+          <sv:value>2015-01-15T15:21:55.429Z</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+          <sv:value>admin.gridi</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippotranslation:id" sv:type="String">
+          <sv:value>ba8635b2-d112-4048-8810-10934f561ca6</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippotranslation:locale" sv:type="String">
+          <sv:value>nl</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:html" sv:type="String">
+          <sv:value>&lt;div id="mc_embed_signup"&gt;&#xd;
+  &lt;form action="http://hsleiden.us3.list-manage.com/subscribe/post?u=856f1d0a687ae7034a13ab3e3&amp;amp;id=c303b29833" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate&gt;&#xd;
+         &lt;h3&gt;Blijf op de hoogte van de ontwikkelingen van het lectoraat en meld u aan voor onze nieuwsbrief&lt;/h3&gt;&#xd;
+&lt;div class="indicates-required"&gt;&lt;span class="asterisk"&gt;*&lt;/span&gt;Verplichte velden&lt;/div&gt;&lt;br&gt;&#xd;
+&lt;div class="mc-field-group"&gt;&#xd;
+         &lt;strong&gt;Email Address &lt;/strong&gt; &lt;span class="asterisk"&gt;*&lt;/span&gt;&#xd;
+         &lt;input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL"&gt;&#xd;
+&lt;/div&gt;&lt;br&gt;&#xd;
+&lt;div class="mc-field-group input-group"&gt;&#xd;
+    &lt;strong&gt;Geslacht &lt;/strong&gt;&lt;br&gt;&#xd;
+  &lt;input type="radio" value="heer" name="MMERGE3" id="mce-MMERGE3-0"&gt;&#xd;
+  &lt;label for="mce-MMERGE3-0"&gt;heer&lt;/label&gt;&lt;br&gt;&#xd;
+  &lt;input type="radio" value="mevrouw" name="MMERGE3" id="mce-MMERGE3-1"&gt;&#xd;
+  &lt;label  for="mce-MMERGE3-1"&gt;mevrouw&lt;/label&gt;&#xd;
+ &#xd;
+  &lt;/div&gt;&lt;br&gt;&#xd;
+&lt;div class="mc-field-group"&gt;&#xd;
+         &lt;strong&gt;Voorletter(s)&lt;/strong&gt;&#xd;
+         &lt;input type="text" value="" name="FNAME" class="" id="mce-FNAME"&gt;&#xd;
+&lt;/div&gt;&#xd;
+&lt;div class="mc-field-group"&gt;&#xd;
+         &lt;strong&gt;Tussenvoegsel&lt;/strong&gt;&#xd;
+         &lt;input type="text" value="" name="MMERGE4" class="" id="mce-MMERGE4"&gt;&#xd;
+&lt;/div&gt;&#xd;
+&lt;div class="mc-field-group"&gt;&#xd;
+         &lt;strong&gt;Achternaam&lt;/strong&gt;  &lt;span class="asterisk"&gt;*&lt;/span&gt;&#xd;
+         &lt;input type="text" value="" name="LNAME" class="required" id="mce-LNAME"&gt;&#xd;
+&lt;/div&gt;&lt;br&gt;&#xd;
+&lt;div class="mc-field-group input-group"&gt;&#xd;
+    &lt;strong&gt;Taal &lt;/strong&gt;&#xd;
+  &lt;br&gt;&lt;input type="radio" value="Nederlands" name="MMERGE5" id="mce-MMERGE5-0"&gt;&#xd;
+  &lt;label for="mce-MMERGE5-0"&gt;Nederlands&lt;/label&gt;&lt;br&gt;&#xd;
+  &lt;input type="radio" value="Engels" name="MMERGE5" id="mce-MMERGE5-1"&gt;&#xd;
+  &lt;label for="mce-MMERGE5-1"&gt;Engels&lt;/label&gt;&#xd;
+ &#xd;
+  &lt;/div&gt;&lt;br&gt;&#xd;
+&lt;div class="mc-field-group input-group"&gt;&#xd;
+    &lt;strong&gt;Werkzaam in de antroposofische gezondheidszorg? &lt;/strong&gt;&lt;br&gt;&#xd;
+  &lt;input type="radio" value="Ja" name="MMERGE6" id="mce-MMERGE6-0"&gt;&#xd;
+  &lt;label for="mce-MMERGE6-0"&gt;Ja&lt;/label&gt;&lt;br&gt;&#xd;
+  &lt;input type="radio" value="Nee" name="MMERGE6" id="mce-MMERGE6-1"&gt;&#xd;
+    &lt;label for="mce-MMERGE6-1"&gt;Nee&lt;/label&gt;&#xd;
+ &#xd;
+  &lt;/div&gt;&lt;br&gt;&#xd;
+&lt;div class="mc-field-group"&gt;&#xd;
+         &lt;p&gt;Welke nieuwsbrief wenst u te ontvangen? * &lt;/p&gt;&#xd;
+         &lt;p&gt;&lt;i&gt;Vul hier 'Nieuwsbrief Lectoraat' en/of  'International Research Newsletter' in.&lt;/i&gt;&lt;/p&gt;&#xd;
+         &lt;p&gt;&lt;span class="asterisk"&gt;&lt;/span&gt;&#xd;
+           &lt;input type="text" value="" name="MMERGE7" class="required" id="mce-MMERGE7"&gt;&#xd;
+           &lt;/p&gt;&#xd;
+&lt;/div&gt;&#xd;
+         &lt;div id="mce-responses" class="clear"&gt;&#xd;
+                   &lt;div class="response" id="mce-error-response" style="display:none"&gt;&lt;/div&gt;&#xd;
+                   &lt;div class="response" id="mce-success-response" style="display:none"&gt;&lt;/div&gt;&#xd;
+         &lt;/div&gt;&lt;br&gt;&#xd;
+    &lt;div class="clear"&gt;&lt;input type="submit" value="Aanmelden" name="subscribe" id="mc-embedded-subscribe" class="button"&gt;&lt;/div&gt;&#xd;
+&lt;/form&gt;&#xd;
+&lt;/div&gt;</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="mc-form-html">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsl:HtmlDocument</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+          <sv:value>mix:referenceable</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>8fd22b8b-d082-4ab9-8362-f7f10f24af0d</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
+          <sv:value>live</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+          <sv:value>html/mc-form-similar-to-cms-forms/mc-form-html/mc-form-html[2]</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostd:state" sv:type="String">
+          <sv:value>published</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+          <sv:value>live</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+          <sv:value>admin.gridi</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+          <sv:value>2015-01-15T13:03:15.134Z</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+          <sv:value>2015-01-15T15:21:55.429Z</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+          <sv:value>admin.gridi</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
+          <sv:value>2015-01-15T15:21:57.035Z</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippotranslation:id" sv:type="String">
+          <sv:value>ba8635b2-d112-4048-8810-10934f561ca6</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippotranslation:locale" sv:type="String">
+          <sv:value>nl</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:html" sv:type="String">
+          <sv:value>&lt;div id="mc_embed_signup"&gt;&#xd;
+  &lt;form action="http://hsleiden.us3.list-manage.com/subscribe/post?u=856f1d0a687ae7034a13ab3e3&amp;amp;id=c303b29833" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate&gt;&#xd;
+         &lt;h3&gt;Blijf op de hoogte van de ontwikkelingen van het lectoraat en meld u aan voor onze nieuwsbrief&lt;/h3&gt;&#xd;
+&lt;div class="indicates-required"&gt;&lt;span class="asterisk"&gt;*&lt;/span&gt;Verplichte velden&lt;/div&gt;&lt;br&gt;&#xd;
+&lt;div class="mc-field-group"&gt;&#xd;
+         &lt;strong&gt;Email Address &lt;/strong&gt; &lt;span class="asterisk"&gt;*&lt;/span&gt;&#xd;
+         &lt;input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL"&gt;&#xd;
+&lt;/div&gt;&lt;br&gt;&#xd;
+&lt;div class="mc-field-group input-group"&gt;&#xd;
+    &lt;strong&gt;Geslacht &lt;/strong&gt;&lt;br&gt;&#xd;
+  &lt;input type="radio" value="heer" name="MMERGE3" id="mce-MMERGE3-0"&gt;&#xd;
+  &lt;label for="mce-MMERGE3-0"&gt;heer&lt;/label&gt;&lt;br&gt;&#xd;
+  &lt;input type="radio" value="mevrouw" name="MMERGE3" id="mce-MMERGE3-1"&gt;&#xd;
+  &lt;label  for="mce-MMERGE3-1"&gt;mevrouw&lt;/label&gt;&#xd;
+ &#xd;
+  &lt;/div&gt;&lt;br&gt;&#xd;
+&lt;div class="mc-field-group"&gt;&#xd;
+         &lt;strong&gt;Voorletter(s)&lt;/strong&gt;&#xd;
+         &lt;input type="text" value="" name="FNAME" class="" id="mce-FNAME"&gt;&#xd;
+&lt;/div&gt;&#xd;
+&lt;div class="mc-field-group"&gt;&#xd;
+         &lt;strong&gt;Tussenvoegsel&lt;/strong&gt;&#xd;
+         &lt;input type="text" value="" name="MMERGE4" class="" id="mce-MMERGE4"&gt;&#xd;
+&lt;/div&gt;&#xd;
+&lt;div class="mc-field-group"&gt;&#xd;
+         &lt;strong&gt;Achternaam&lt;/strong&gt;  &lt;span class="asterisk"&gt;*&lt;/span&gt;&#xd;
+         &lt;input type="text" value="" name="LNAME" class="required" id="mce-LNAME"&gt;&#xd;
+&lt;/div&gt;&lt;br&gt;&#xd;
+&lt;div class="mc-field-group input-group"&gt;&#xd;
+    &lt;strong&gt;Taal &lt;/strong&gt;&#xd;
+  &lt;br&gt;&lt;input type="radio" value="Nederlands" name="MMERGE5" id="mce-MMERGE5-0"&gt;&#xd;
+  &lt;label for="mce-MMERGE5-0"&gt;Nederlands&lt;/label&gt;&lt;br&gt;&#xd;
+  &lt;input type="radio" value="Engels" name="MMERGE5" id="mce-MMERGE5-1"&gt;&#xd;
+  &lt;label for="mce-MMERGE5-1"&gt;Engels&lt;/label&gt;&#xd;
+ &#xd;
+  &lt;/div&gt;&lt;br&gt;&#xd;
+&lt;div class="mc-field-group input-group"&gt;&#xd;
+    &lt;strong&gt;Werkzaam in de antroposofische gezondheidszorg? &lt;/strong&gt;&lt;br&gt;&#xd;
+  &lt;input type="radio" value="Ja" name="MMERGE6" id="mce-MMERGE6-0"&gt;&#xd;
+  &lt;label for="mce-MMERGE6-0"&gt;Ja&lt;/label&gt;&lt;br&gt;&#xd;
+  &lt;input type="radio" value="Nee" name="MMERGE6" id="mce-MMERGE6-1"&gt;&#xd;
+    &lt;label for="mce-MMERGE6-1"&gt;Nee&lt;/label&gt;&#xd;
+ &#xd;
+  &lt;/div&gt;&lt;br&gt;&#xd;
+&lt;div class="mc-field-group"&gt;&#xd;
+         &lt;p&gt;Welke nieuwsbrief wenst u te ontvangen? * &lt;/p&gt;&#xd;
+         &lt;p&gt;&lt;i&gt;Vul hier 'Nieuwsbrief Lectoraat' en/of  'International Research Newsletter' in.&lt;/i&gt;&lt;/p&gt;&#xd;
+         &lt;p&gt;&lt;span class="asterisk"&gt;&lt;/span&gt;&#xd;
+           &lt;input type="text" value="" name="MMERGE7" class="required" id="mce-MMERGE7"&gt;&#xd;
+           &lt;/p&gt;&#xd;
+&lt;/div&gt;&#xd;
+         &lt;div id="mce-responses" class="clear"&gt;&#xd;
+                   &lt;div class="response" id="mce-error-response" style="display:none"&gt;&lt;/div&gt;&#xd;
+                   &lt;div class="response" id="mce-success-response" style="display:none"&gt;&lt;/div&gt;&#xd;
+         &lt;/div&gt;&lt;br&gt;&#xd;
+    &lt;div class="clear"&gt;&lt;input type="submit" value="Aanmelden" name="subscribe" id="mc-embedded-subscribe" class="button"&gt;&lt;/div&gt;&#xd;
+&lt;/form&gt;&#xd;
+&lt;/div&gt;</sv:value>
+        </sv:property>
+      </sv:node>
+    </sv:node>
+    <sv:node sv:name="mc-form-css">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hippo:handle</sv:value>
+      </sv:property>
+      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+        <sv:value>mix:referenceable</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>c41bffb3-54fa-474c-8fc2-b9d2b723f09b</sv:value>
+      </sv:property>
+      <sv:node sv:name="mc-form-css">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsl:CssDocument</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+          <sv:value>mix:referenceable</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>dff3596d-fcbf-4933-9c3f-b55dd8608d4f</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String"/>
+        <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+          <sv:value>html/mc-form-similar-to-cms-forms/mc-form-css/mc-form-css[2]</sv:value>
+          <sv:value>html/mc-form-similar-to-cms-forms/mc-form-css/mc-form-css[3]</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostd:state" sv:type="String">
+          <sv:value>draft</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+          <sv:value>live</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+          <sv:value>admin.gridi</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+          <sv:value>2015-01-15T13:03:54.327Z</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+          <sv:value>2015-01-15T15:22:55.020Z</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+          <sv:value>admin.gridi</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippotranslation:id" sv:type="String">
+          <sv:value>bb8479b4-5785-47ef-be84-e893ff8d8783</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippotranslation:locale" sv:type="String">
+          <sv:value>nl</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:css" sv:type="String">
+          <sv:value>.free.html #mc_embed_signup form .mc-field-group strong, .free.html #mc_embed_signup form .mc-field-group .asterisk { color: rgb(35, 17, 76); cursor: default; font-family: source_sans_prosemibold; font-size: 20px; }&#xd;
+.free.html #mc_embed_signup form .mc-field-group  { min-height: 22px; line-height: 22px; }&#xd;
+.free.html #mc_embed_signup form .mc-field-group input[type=text], .free.html #mc_embed_signup form .mc-field-group input[type=email] {width: 100%; padding-bottom: 6px; padding-top: 6px; border-width:1px; border-style: solid; border-color: #999;}&#xd;
+.free.html #mc_embed_signup form .mc-field-group + .mc-field-group { margin-top:25px}&#xd;
+.free.html #mc_embed_signup form .clear input[type=submit] { background-color: rgb(35, 17, 76); width: 140px; height: 40px; font-size: 18px; font-family: source_sans_prosemibold; color:white; border-width: 0px;}&#xd;
+&#xd;
+.free.html #mc_embed_signup form .mc-field-group.input-group input[type='radio'] {display:none; margin-right: 10px;}&#xd;
+.free.html #mc_embed_signup form .mc-field-group.input-group input[type='radio'] +label:before{content: ""; width: 20px; height: 20px; display: inline-block; float: left; margin: 0 10px 0 0; background: url("../../css/img/radiobutton.png") center center no-repeat;&#xd;
+  background-size: 20px 20px; }&#xd;
+.free.html #mc_embed_signup form .mc-field-group.input-group input[type='radio']:checked +label:before {  background: url("../../css/img/radiobutton-checked.png") center center no-repeat; background-size: 20px 20px; }&#xd;
+.free.html #mc_embed_signup form .mc-field-group.input-group input[type='radio'] +label{font-size: 1em; color: #666; font-family: 'source_sans_proregular'; font-weight: 400; font-style: normal; cursor: pointer; margin-top:4px; }</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="mc-form-css">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsl:CssDocument</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+          <sv:value>mix:referenceable</sv:value>
+          <sv:value>mix:versionable</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>8b032750-1dbb-4531-bcb1-de4845282de7</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
+          <sv:value>preview</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+          <sv:value>html/mc-form-similar-to-cms-forms/mc-form-css/mc-form-css[3]</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostd:state" sv:type="String">
+          <sv:value>unpublished</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+          <sv:value>live</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+          <sv:value>admin.gridi</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+          <sv:value>2015-01-15T13:03:54.327Z</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+          <sv:value>2015-01-15T15:23:13.432Z</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+          <sv:value>admin.gridi</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippotranslation:id" sv:type="String">
+          <sv:value>bb8479b4-5785-47ef-be84-e893ff8d8783</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippotranslation:locale" sv:type="String">
+          <sv:value>nl</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:css" sv:type="String">
+          <sv:value>.free.html #mc_embed_signup form .mc-field-group strong, .free.html #mc_embed_signup form .mc-field-group .asterisk { color: rgb(35, 17, 76); cursor: default; font-family: source_sans_prosemibold; font-size: 20px; }&#xd;
+.free.html #mc_embed_signup form .mc-field-group  { min-height: 22px; line-height: 22px; }&#xd;
+.free.html #mc_embed_signup form .mc-field-group input[type=text], .free.html #mc_embed_signup form .mc-field-group input[type=email] {width: 100%; padding-bottom: 6px; padding-top: 6px; border-width:1px; border-style: solid; border-color: #999;}&#xd;
+.free.html #mc_embed_signup form .mc-field-group + .mc-field-group { margin-top:25px}&#xd;
+.free.html #mc_embed_signup form .clear input[type=submit] { background-color: rgb(35, 17, 76); width: 140px; height: 40px; font-size: 18px; font-family: source_sans_prosemibold; color:white; border-width: 0px;}&#xd;
+&#xd;
+.free.html #mc_embed_signup form .mc-field-group.input-group input[type='radio'] {display:none; margin-right: 10px;}&#xd;
+.free.html #mc_embed_signup form .mc-field-group.input-group input[type='radio'] +label:before{content: ""; width: 20px; height: 20px; display: inline-block; float: left; margin: 0 10px 0 0; background: url("../../css/img/radiobutton.png") center center no-repeat;&#xd;
+  background-size: 20px 20px; }&#xd;
+.free.html #mc_embed_signup form .mc-field-group.input-group input[type='radio']:checked +label:before {  background: url("../../css/img/radiobutton-checked.png") center center no-repeat; background-size: 20px 20px; }&#xd;
+.free.html #mc_embed_signup form .mc-field-group.input-group input[type='radio'] +label{font-size: 1em; color: #666; font-family: 'source_sans_proregular'; font-weight: 400; font-style: normal; cursor: pointer; margin-top:4px; }</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="mc-form-css">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsl:CssDocument</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+          <sv:value>mix:referenceable</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>d6409ae8-b407-48ca-9cd9-6640f93df067</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
+          <sv:value>live</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+          <sv:value>html/mc-form-similar-to-cms-forms/mc-form-css/mc-form-css[2]</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostd:state" sv:type="String">
+          <sv:value>published</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+          <sv:value>live</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+          <sv:value>admin.gridi</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+          <sv:value>2015-01-15T13:03:54.327Z</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+          <sv:value>2015-01-15T15:23:13.432Z</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+          <sv:value>admin.gridi</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
+          <sv:value>2015-01-15T15:23:15.014Z</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippotranslation:id" sv:type="String">
+          <sv:value>bb8479b4-5785-47ef-be84-e893ff8d8783</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippotranslation:locale" sv:type="String">
+          <sv:value>nl</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:css" sv:type="String">
+          <sv:value>.free.html #mc_embed_signup form .mc-field-group strong, .free.html #mc_embed_signup form .mc-field-group .asterisk { color: rgb(35, 17, 76); cursor: default; font-family: source_sans_prosemibold; font-size: 20px; }&#xd;
+.free.html #mc_embed_signup form .mc-field-group  { min-height: 22px; line-height: 22px; }&#xd;
+.free.html #mc_embed_signup form .mc-field-group input[type=text], .free.html #mc_embed_signup form .mc-field-group input[type=email] {width: 100%; padding-bottom: 6px; padding-top: 6px; border-width:1px; border-style: solid; border-color: #999;}&#xd;
+.free.html #mc_embed_signup form .mc-field-group + .mc-field-group { margin-top:25px}&#xd;
+.free.html #mc_embed_signup form .clear input[type=submit] { background-color: rgb(35, 17, 76); width: 140px; height: 40px; font-size: 18px; font-family: source_sans_prosemibold; color:white; border-width: 0px;}&#xd;
+&#xd;
+.free.html #mc_embed_signup form .mc-field-group.input-group input[type='radio'] {display:none; margin-right: 10px;}&#xd;
+.free.html #mc_embed_signup form .mc-field-group.input-group input[type='radio'] +label:before{content: ""; width: 20px; height: 20px; display: inline-block; float: left; margin: 0 10px 0 0; background: url("../../css/img/radiobutton.png") center center no-repeat;&#xd;
+  background-size: 20px 20px; }&#xd;
+.free.html #mc_embed_signup form .mc-field-group.input-group input[type='radio']:checked +label:before {  background: url("../../css/img/radiobutton-checked.png") center center no-repeat; background-size: 20px 20px; }&#xd;
+.free.html #mc_embed_signup form .mc-field-group.input-group input[type='radio'] +label{font-size: 1em; color: #666; font-family: 'source_sans_proregular'; font-weight: 400; font-style: normal; cursor: pointer; margin-top:4px; }</sv:value>
+        </sv:property>
+      </sv:node>
     </sv:node>
   </sv:node>
 </sv:node>
