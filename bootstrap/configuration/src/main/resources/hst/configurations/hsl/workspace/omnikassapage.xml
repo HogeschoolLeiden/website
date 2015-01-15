@@ -216,7 +216,11 @@
 				&lt;#if field.getValue()?has_content&gt;&#13;
                     &lt;tr&gt;&#13;
 						&lt;th align="left"&gt;${field.getLabelOrName()}&lt;/th&gt;&#13;
-                        &lt;td align="left"&gt;${field.getValue()}&lt;/td&gt;&#13;
+						&lt;#if 'datefield' == fieldType&gt;&#13;
+							&lt;td align="left"&gt;${formMap.getField(field.getName()).getValue()}&lt;/td&gt; &#13;
+						&lt;#else&gt;&#13;
+							&lt;td align="left"&gt;${field.getValue()}&lt;/td&gt;&#13;
+						&lt;/#if&gt;&#13;
                     &lt;/tr&gt;&#13;
 				&lt;/#if&gt;&#13;
 			&lt;/#if&gt;&#13;

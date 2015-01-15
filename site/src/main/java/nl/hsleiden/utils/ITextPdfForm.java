@@ -68,21 +68,25 @@ public class ITextPdfForm {
         for (AbstractField abstractField : fields) {
             if (abstractField.isMultiple()) {
                 if ("radiogroup".equalsIgnoreCase(abstractField.getType())) {
-                    addSingleValueFields(tbl, abstractField);
+                    addSingleValueField(tbl, abstractField);
                 } else if ("checkboxgroup".equalsIgnoreCase(abstractField.getType())){
-                    addMultivalueFields(tbl, abstractField);
+                    addMultivalueField(tbl, abstractField);
                     addSingleValueFormField(tbl, map.getField(abstractField.getName()+"-other"));
                 }else {
-                    addMultivalueFields(tbl, abstractField);
+                    addMultivalueField(tbl, abstractField);
                 }
             } else {
-                addSingleValueFields(tbl, abstractField);
+                if ("datefield".equalsIgnoreCase(abstractField.getType())) {
+                    addSingleValueFormField(tbl, map.getField(abstractField.getName()));
+                }else{                    
+                    addSingleValueField(tbl, abstractField);
+                }
             }
         }
         doc.add(tbl);
     }
 
-    private void addMultivalueFields(PdfPTable tbl, AbstractField abstractField) {
+    private void addMultivalueField(PdfPTable tbl, AbstractField abstractField) {
         Map<String, Collection<String>> multiValues = abstractField.getMultiValues();
         for (Entry<String, Collection<String>> multivaluesEntry : multiValues.entrySet()) {
             if (multivaluesEntry.getValue().toString() != null && !multivaluesEntry.getValue().isEmpty()
@@ -93,7 +97,7 @@ public class ITextPdfForm {
         }
     }
 
-    private void addSingleValueFields(PdfPTable tbl, AbstractField abstractField) {
+    private void addSingleValueField(PdfPTable tbl, AbstractField abstractField) {
         if (abstractField != null && abstractField.getValue() != null && !abstractField.getValue().isEmpty()) {
             addTableCell(tbl, abstractField.getLabelOrName());
             addTableCell(tbl, abstractField.getValue());
