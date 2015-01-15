@@ -50,7 +50,7 @@ public class PublicImages extends AjaxEnabledComponent {
         Map<String, Object> model = new HashMap<String, Object>();
         model.put("info", parametersInfo);
         model.put("imageFolderBeanPath",
-                BeanUtils.getBeanViaAbsolutePath(parametersInfo.getImageFolderBeanPath(), request));
+                BeanUtils.getBeanViaAbsolutePath(parametersInfo.getImageFolderBeanPath()));
         addItemsToModel(request, model, parametersInfo);
         return model;
     }
@@ -77,13 +77,13 @@ public class PublicImages extends AjaxEnabledComponent {
         String publicPathParameter = request.getParameter(Parameters.IMAGE_FOLDER_PARAM);
 
         if (publicPathParameter != null && !publicPathParameter.isEmpty()) {
-            if (BeanUtils.getBeanViaAbsolutePath(publicPathParameter, request).getCanonicalPath()
+            if (BeanUtils.getBeanViaAbsolutePath(publicPathParameter).getCanonicalPath()
                     .startsWith(parametersInfo.getContentBeanPath())) {
-                imageFolder = BeanUtils.getBeanViaAbsolutePath(publicPathParameter, request);
+                imageFolder = BeanUtils.getBeanViaAbsolutePath(publicPathParameter);
                 handleParentFolderLink(model, parametersInfo, imageFolder);
             }
         } else {
-            imageFolder = BeanUtils.getBeanViaAbsolutePath(parametersInfo.getContentBeanPath(), request);
+            imageFolder = BeanUtils.getBeanViaAbsolutePath(parametersInfo.getContentBeanPath());
         }
         return imageFolder;
     }

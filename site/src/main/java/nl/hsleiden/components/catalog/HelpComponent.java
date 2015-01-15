@@ -17,7 +17,7 @@ public class HelpComponent extends WebDocumentDetail {
     public void doBeforeRender(HstRequest request, HstResponse response) {
 
         HelpComponentInfo parametersInfo = getComponentParametersInfo(request);
-        request.setAttribute(AttributesConstants.DOCUMENT, BeanUtils.getBeanViaAbsolutePath(parametersInfo.getContentBeanPath(), request));
+        request.setAttribute(AttributesConstants.DOCUMENT, BeanUtils.getBeanViaAbsolutePath(parametersInfo.getContentBeanPath()));
     }
     
 }

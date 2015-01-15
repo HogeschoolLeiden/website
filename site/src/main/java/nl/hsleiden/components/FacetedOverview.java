@@ -130,7 +130,7 @@ public class FacetedOverview extends MonolithicFacetedOverview {
         if (contentBean instanceof OverviewPage) {
 
             FacetedOverviewPageInfo parametersInfo = getComponentParametersInfo(request);
-            HippoBean scope = BeanUtils.getBean(parametersInfo.getContentBeanPath(), request);
+            HippoBean scope = BeanUtils.getBean(parametersInfo.getContentBeanPath());
             
             if (scope instanceof HippoFacetNavigationBean) {
                 

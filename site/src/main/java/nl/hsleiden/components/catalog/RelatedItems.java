@@ -113,7 +113,7 @@ public abstract class RelatedItems extends AjaxEnabledComponent {
     protected abstract HstQuery createQuery(HstRequest request, RelatedItemsInfo parametersInfo) throws QueryException;
 
     private void addOverviewLinkToModel(HstRequest request, Map<String, Object> model, RelatedItemsInfo parametersInfo) {
-        HippoBean overviewLink = BeanUtils.getBeanViaAbsolutePath(parametersInfo.getOverviewBeanPath(), request);
+        HippoBean overviewLink = BeanUtils.getBeanViaAbsolutePath(parametersInfo.getOverviewBeanPath());
         if (parametersInfo.getShowOverview() && overviewLink != null) {
             model.put(OVERVIEW_LINK, overviewLink);
         }

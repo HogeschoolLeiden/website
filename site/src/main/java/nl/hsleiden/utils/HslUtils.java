@@ -74,8 +74,8 @@ public class HslUtils {
             result = result.substring(defaultContextPath.length());
         }
 
-        if(mount.getParent() != null){
-           result = ".." + result;
+        if (mount.getParent() != null) {
+            result = ".." + result;
         }
         return result;
     }
@@ -94,8 +94,8 @@ public class HslUtils {
     public static HippoBean getBean(HstRequest request) {
         HippoBean contentBean = request.getRequestContext().getContentBean();
         if (contentBean instanceof HippoFacetNavigationBean) {
-            contentBean = BeanUtils.getContentBeanFromParameter(request,
-                    ParametersFunctions.getSitemapConfigParameter(request, HstParametersConstants.CONTENT_BEAN_PATH));
+            contentBean = BeanUtils.getContentBeanFromParameter(ParametersFunctions.getSitemapConfigParameter(request,
+                    HstParametersConstants.CONTENT_BEAN_PATH));
         }
         return contentBean;
     }

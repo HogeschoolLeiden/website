@@ -114,7 +114,7 @@ public class LectoratNews extends AjaxEnabledComponent {
     private HstQuery createQuery(HstRequest request, LectoratNewsCompoundMixin mixinInfo) throws QueryException {
         HstQuery result = null;
         if (!mixinInfo.getContentBeanPath().isEmpty()) {
-            HippoBean scope = BeanUtils.getBeanViaAbsolutePath(DOCUMENTS_FOLDER, request);
+            HippoBean scope = BeanUtils.getBeanViaAbsolutePath(DOCUMENTS_FOLDER);
             result = request.getRequestContext().getQueryManager().createQuery(scope, NewsPage.JCR_TYPE);
         }
         return result;

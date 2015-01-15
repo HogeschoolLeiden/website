@@ -44,7 +44,7 @@ public class LanguageSwitch extends WebDocumentDetail {
                 } else {
                     request.setAttribute(Attributes.TRANSLATIONS, result);
                     request.setAttribute(Attributes.LABELS,
-                            BeanUtils.getLabels(request, getComponentParametersInfo(request)));
+                            BeanUtils.getLabels(getComponentParametersInfo(request)));
                     request.setAttribute(Attributes.CURRENT_LANGUAGE, request.getLocale().getLanguage());
                 }
             }

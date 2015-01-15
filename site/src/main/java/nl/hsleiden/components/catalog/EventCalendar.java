@@ -120,7 +120,7 @@ public class EventCalendar extends AjaxEnabledComponent {
 
             EventPageBean event = (EventPageBean) hippoBeans.nextHippoBean();
 
-            HippoBean facetOverviewBean = BeanUtils.getBeanViaAbsolutePath(BeanPaths.EVENTS_INDEX, request);
+            HippoBean facetOverviewBean = BeanUtils.getBeanViaAbsolutePath(BeanPaths.EVENTS_INDEX);
             HstLink link = linkCreator.create(facetOverviewBean, requestContext);
 
             if (HslDateUtils.getEventDaysDuration(event) > 0) {
@@ -141,7 +141,7 @@ public class EventCalendar extends AjaxEnabledComponent {
 
     private HippoBean getScope(HstRequest request) throws RepositoryException {
         EventCalendarInfo configuration = getConfiguration(request);
-        return BeanUtils.getBeanViaAbsolutePath(configuration.getScope(), request);
+        return BeanUtils.getBeanViaAbsolutePath(configuration.getScope());
     }
 
     private void addTaggingFilter(Filter baseFilter, HstQuery query, HstRequest request, EventCalendarInfo info)

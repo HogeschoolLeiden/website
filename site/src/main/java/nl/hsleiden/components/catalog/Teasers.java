@@ -35,8 +35,9 @@ public abstract class Teasers extends AjaxEnabledComponent {
     }
 
     private void addItem(HstRequest request, String path, List<HippoBean> items) {
-        if(BeanUtils.getBeanViaAbsolutePath(path, request)!=null){
-            items.add(BeanUtils.getBeanViaAbsolutePath(path, request));
+        HippoBean bean = BeanUtils.getBeanViaAbsolutePath(path);
+        if(bean!=null){
+            items.add(bean);
         }
     }
 }

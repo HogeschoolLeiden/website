@@ -42,7 +42,7 @@ public class FormComponent extends FormStoringEformComponent {
         FormBean result = null;
         FormComponentInfo parametersInfo = getConfiguration(request);
 
-        HippoBean selectedForm = BeanUtils.getBeanViaAbsolutePath(parametersInfo.getContentBeanPath(), request);
+        HippoBean selectedForm = BeanUtils.getBeanViaAbsolutePath(parametersInfo.getContentBeanPath());
         if (selectedForm == null || !(selectedForm.isHippoDocumentBean()) || !(selectedForm instanceof FormBean)) {
             request.setAttribute(WidgetConstants.WEB_MASTER_MESSAGE, "webmaster.noform.message");
         } else {
@@ -126,7 +126,7 @@ public class FormComponent extends FormStoringEformComponent {
     private static HippoResourceBean getHippoAsset(HstRequest request) {
         HippoResourceBean result = null;
         FormComponentInfo parametersInfo = new FormComponent().getConfiguration(request);
-        HippoBean hippoBean = BeanUtils.getBeanViaAbsolutePath(parametersInfo.getAttachmentBeanPath(), request);
+        HippoBean hippoBean = BeanUtils.getBeanViaAbsolutePath(parametersInfo.getAttachmentBeanPath());
         if (hippoBean instanceof HippoAssetBean) {
             HippoAssetBean hippoAssetBean = (HippoAssetBean) hippoBean;
             result = hippoAssetBean.getAsset();

@@ -31,10 +31,10 @@ public class LandingPage extends Navigation {
     public void doBeforeRender(HstRequest request, HstResponse response) {
 
         super.doBeforeRender(request, response);
-        
+
         HippoBean contentBean = request.getRequestContext().getContentBean();
         List<OverviewBean> overviewBeans = null;
-        
+
         EditableMenu menu = (EditableMenu) request.getAttribute(Constants.AttributesConstants.MENU);
 
         if (menu != null) {
@@ -46,7 +46,7 @@ public class LandingPage extends Navigation {
     }
 
     private List<OverviewBean> getOverviewBeansList(HstRequest request, EditableMenu menu) {
-        
+
         List<OverviewBean> overviewBeans = new ArrayList<OverviewBean>();
 
         EditableMenuItem deepestExpandedItem = menu.getDeepestExpandedItem();
@@ -54,22 +54,21 @@ public class LandingPage extends Navigation {
         for (EditableMenuItem sitemenuItem : deepestExpandedItem.getChildMenuItems()) {
             OverviewBean ob = new OverviewBean();
             ResolvedSiteMapItem resolveToSiteMapItem = sitemenuItem.resolveToSiteMapItem(request);
-            if(resolveToSiteMapItem!=null){                
-                HippoBean bean = BeanUtils.getBean(resolveToSiteMapItem.getHstSiteMapItem().getRelativeContentPath(),
-                        request);
-                
+            if (resolveToSiteMapItem != null) {
+                HippoBean bean = BeanUtils.getBean(resolveToSiteMapItem.getHstSiteMapItem().getRelativeContentPath());
+
                 if (bean instanceof OverviewPage) {
                     ob.setHighLighted(((OverviewPage) bean).getHighLightedItem());
                     ob.setMenuItem(sitemenuItem);
                     ob.setOverviewBean((OverviewPage) bean);
                     overviewBeans.add(ob);
                 } else {
-                    LOG.error("Document referenced by sub menu {} is not an OverviewPage. Skipping it.", sitemenuItem.getName());
+                    LOG.error("Document referenced by sub menu {} is not an OverviewPage. Skipping it.",
+                            sitemenuItem.getName());
                 }
             }
         }
         return overviewBeans;
     }
-
 
 }

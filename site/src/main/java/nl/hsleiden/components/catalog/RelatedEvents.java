@@ -21,7 +21,7 @@ public class RelatedEvents extends RelatedItems {
     protected HstQuery createQuery(HstRequest request, RelatedItemsInfo parametersInfo) throws QueryException {
 
         HstQuery result = null;
-        HippoBean scope = BeanUtils.getBeanViaAbsolutePath(parametersInfo.getContentBeanPath(), request);
+        HippoBean scope = BeanUtils.getBeanViaAbsolutePath(parametersInfo.getContentBeanPath());
         if (scope != null) {
             result = request.getRequestContext().getQueryManager().createQuery(scope, EventPageBean.JCR_TYPE);
         } else {
