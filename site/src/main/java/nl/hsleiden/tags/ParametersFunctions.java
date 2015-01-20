@@ -13,6 +13,7 @@ public class ParametersFunctions {
     private ParametersFunctions() {
     }
     
+    //components parameters
     public static String getSitemapConfigParameter(HttpServletRequest request, String paramName) {
         HstRequestContext requestContext = ((HstRequest) request).getRequestContext();
         return requestContext.getResolvedSiteMapItem().getLocalParameter(paramName);
@@ -29,5 +30,18 @@ public class ParametersFunctions {
     public static String getComponentConfigParameter(HttpServletRequest request, String paramName) {
         HstRequestContext requestContext = ((HstRequest) request).getRequestContext();
         return requestContext.getResolvedSiteMapItem().getHstComponentConfiguration().getParameter(paramName);
+    }
+    
+    //request parameters
+    public static boolean hasParameter(HttpServletRequest request, String paramName) {
+        boolean result = false;
+        if (request.getParameter(paramName) != null) {
+            result = true;
+        }
+        return result;
+    }
+
+    public static String getParameter(HttpServletRequest request, String paramName) {
+        return request.getParameter(paramName);
     }
 }
