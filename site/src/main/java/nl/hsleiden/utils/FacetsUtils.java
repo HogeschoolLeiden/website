@@ -26,13 +26,6 @@ public class FacetsUtils {
         String result = "";
         
         Object facetProp = facetBean.getProperty(HIPPOFACNAV_FILTERS);
-        if(facetProp==null){
-            if(facetBean.getPath().contains("events-facetnav")){
-                facetBean = facetBean.getRootFacetNavigationBean();
-                facetProp = facetBean.getProperty(HIPPOFACNAV_FILTERS);
-            }
-        }
-        
         if(facetProp instanceof String[]){
             String[] facetFilterProperties = (String[])facetProp;
             for (String filterProperty : facetFilterProperties) {
@@ -53,17 +46,10 @@ public class FacetsUtils {
         
         HippoBean result = null;
         
-        HippoFacetNavigationBean facNavBean = facetBean;
-        String docBase = (String) facNavBean.getProperty(HippoFacetAttributesConstants.HIPPO_DOCBASE);
-        if(docBase==null){
-            if(facNavBean.getPath().contains("events-facetnav")){
-                facNavBean = facNavBean.getRootFacetNavigationBean();
-                docBase = (String) facNavBean.getProperty(HippoFacetAttributesConstants.HIPPO_DOCBASE);
-            }
-        }
+        String docBase = (String) facetBean.getProperty(HippoFacetAttributesConstants.HIPPO_DOCBASE);
         
         try {
-            Object object = facNavBean.getObjectConverter().getObject(docBase, facNavBean.getNode());
+            Object object = facetBean.getObjectConverter().getObject(docBase, facetBean.getNode());
             if(object instanceof HippoBean){
                 result = (HippoBean) object;
             }
