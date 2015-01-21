@@ -31,6 +31,8 @@
 </c:set>
 
 <hst:link var="image" hippobean="${content.quoteParameters.image.listImageSmall }" />
+
+<c:if test="${not empty quoteText }">
                 
 <blockquote class="media">
   
@@ -106,3 +108,4 @@
   
 </blockquote>
 
+</c:if>
