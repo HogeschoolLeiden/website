@@ -1,5 +1,6 @@
 package nl.hsleiden.components;
 
+import hslbeans.EventsOverviewPage;
 import hslbeans.OverviewPage;
 
 import java.text.ParseException;
@@ -58,7 +59,25 @@ public class FacetedOverview extends MonolithicFacetedOverview {
     @Override
     protected void setItems(HstRequest request, Map<String, Object> model) {
         HippoFacetNavigationBean facetedNavBean = getFacetNavigationBean(request);
+        
+        
         if (facetedNavBean != null) {
+//            LOG.error("====================================================================");
+//            HippoBean contentBean = request.getRequestContext().getContentBean();
+//            System.out.println("contentBean instance of event: " + (contentBean instanceof EventsOverviewPage));
+//            System.out.println("contentBean path: " + contentBean.getPath());
+//            if(contentBean.getPath().contains("/events-facetnav/") ||
+//                    contentBean instanceof EventsOverviewPage){
+//                
+//                System.out.println("NOW get THE FUTURE facet: " + 
+//                        ((HippoFacetNavigationBean)facetedNavBean.getBean("Future/future")).getPath());
+//                
+//            }
+//            LOG.error("====================================================================");
+            if(facetedNavBean.getPath().contains("future")){
+                facetedNavBean = facetedNavBean.getRootFacetNavigationBean();
+            }
+            
             facetedNavBean = applyQueryToFacetBean(request, facetedNavBean);
             if (facetedNavBean != null) {
                 HippoResultSetBean resultSet = facetedNavBean.getResultSet();
@@ -71,23 +90,25 @@ public class FacetedOverview extends MonolithicFacetedOverview {
                 if (parametersInfo.getShowPaginator()) {
                     request.setAttribute(Constants.AttributesConstants.PAGINATOR, paginatorWidget);
                 }
-                
+
                 /**
                  * !! Dirty Work around !!
                  * 
-                 * for some yet unknown reason applying a string/hst query to the facet bean
-                 * produces the right facet items but gives wrong items in the result set.
+                 * for some yet unknown reason applying a string/hst query to
+                 * the facet bean produces the right facet items but gives wrong
+                 * items in the result set.
                  * 
-                 * Put correct items on request by executing hstQuery (generic overview style, with
-                 * configurations coming from facet configurations) 
+                 * Put correct items on request by executing hstQuery (generic
+                 * overview style, with configurations coming from facet
+                 * configurations)
                  * */
-                
-                if(getPublicRequestParameter(request, "q")!=null || 
-                        getPublicRequestParameter(request, "qd")!=null){                    
+
+                if (getPublicRequestParameter(request, "q") != null || getPublicRequestParameter(request, "qd") != null) {
                     addItemsAndPaginatorToModel(request, model);
                 }
-                
-            //show message in case supplied query does not produce any results
+
+                // show message in case supplied query does not produce any
+                // results
             } else {
                 request.setAttribute(WidgetConstants.FRONT_END_MESSAGE, "facet.search.noresults");
             }
@@ -95,24 +116,25 @@ public class FacetedOverview extends MonolithicFacetedOverview {
             throw new HstComponentException("content Bean is not of the type HippoFactNavigation");
         }
     }
-    
+
     private void addItemsAndPaginatorToModel(HstRequest request, Map<String, Object> model) {
         try {
             HstQuery query = getHstQuery(request);
             if (query != null) {
                 HstQueryResult queryResult = query.execute();
                 model.put(Constants.AttributesConstants.ITEMS, getItems(queryResult));
-                
+
                 PaginatorWidget paginatorWidget = new PaginatorWidget(queryResult.getTotalSize(),
-                        OverviewUtils.getPageNumber(request), OverviewUtils.getPageSize(request, getComponentParametersInfo(request)));
+                        OverviewUtils.getPageNumber(request), OverviewUtils.getPageSize(request,
+                                getComponentParametersInfo(request)));
 
                 request.setAttribute(Constants.AttributesConstants.PAGINATOR, paginatorWidget);
-            } 
+            }
         } catch (QueryException e) {
             throw new HstComponentException(e.getMessage(), e);
         }
     }
-    
+
     private List<HippoBean> getItems(HstQueryResult queryResult) {
         List<HippoBean> items = new ArrayList<HippoBean>();
         for (HippoBeanIterator hippoBeans = queryResult.getHippoBeans(); hippoBeans.hasNext();) {
@@ -120,7 +142,7 @@ public class FacetedOverview extends MonolithicFacetedOverview {
         }
         return items;
     }
-    
+
     @Override
     protected HstQuery getHstQuery(HstRequest request) throws QueryException {
 
@@ -131,26 +153,30 @@ public class FacetedOverview extends MonolithicFacetedOverview {
 
             FacetedOverviewPageInfo parametersInfo = getComponentParametersInfo(request);
             HippoBean scope = BeanUtils.getBean(parametersInfo.getContentBeanPath());
-            
+
             if (scope instanceof HippoFacetNavigationBean) {
-                
+
                 String doctype = FacetsUtils.getFacetDocumentType((HippoFacetNavigationBean) scope);
                 HippoBean docbase = FacetsUtils.getFacetScope((HippoFacetNavigationBean) scope);
+
+                System.out.println("docbase = " + docbase.getPath());
+                System.out.println("doctype = " + doctype);
                 
                 query = request.getRequestContext().getQueryManager().createQuery(docbase, doctype);
-                
+
                 Filter globalFilter = query.createFilter();
 
                 String dayStringQuery = getPublicRequestParameter(request, "qd");
 
-                LOG.debug("DAY String Query = " + dayStringQuery); 
+                LOG.debug("DAY String Query = " + dayStringQuery);
                 if (StringUtils.isNotBlank(dayStringQuery)) {
                     applyDateFilter(globalFilter, dayStringQuery);
+//                    applyFutureFilter(request, globalFilter);
                     query.setFilter(globalFilter);
                 } else {
-                    /** 
+                    /**
                      * disable exclusion of highlighted item (for now)
-                     * excludeHighLightedItem(contentBean, globalFilter); 
+                     * excludeHighLightedItem(contentBean, globalFilter);
                      * */
                     applyUserQuery(request, globalFilter);
                     query.setFilter(globalFilter);
@@ -160,7 +186,7 @@ public class FacetedOverview extends MonolithicFacetedOverview {
         }
 
         if (query != null) {
-            LOG.debug("----- QUERY = " + query.getQueryAsString(true));
+            LOG.error("----- QUERY = " + query.getQueryAsString(true));
         }
         return query;
     }
@@ -168,12 +194,12 @@ public class FacetedOverview extends MonolithicFacetedOverview {
     private void applyDateFilter(Filter globalFilter, String dayToFilter) throws FilterException {
         try {
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat(DATE_FORMATE_PATTERN);
-            globalFilter.addLessOrEqualThan("hsl:eventDate", 
-                    HslDateUtils.dateToCalendar(HslDateUtils.getStartOfDay(simpleDateFormat.parse(dayToFilter))), 
-                                                Resolution.DAY);
-            globalFilter.addGreaterOrEqualThan("hsl:eventEndDate", 
-                    HslDateUtils.dateToCalendar(HslDateUtils.getStartOfDay(simpleDateFormat.parse(dayToFilter))), 
-                                            Resolution.DAY);
+            globalFilter.addLessOrEqualThan("hsl:eventDate",
+                    HslDateUtils.dateToCalendar(HslDateUtils.getStartOfDay(simpleDateFormat.parse(dayToFilter))),
+                    Resolution.DAY);
+            globalFilter.addGreaterOrEqualThan("hsl:eventEndDate",
+                    HslDateUtils.dateToCalendar(HslDateUtils.getStartOfDay(simpleDateFormat.parse(dayToFilter))),
+                    Resolution.DAY);
         } catch (ParseException e) {
             LOG.error(e.getMessage(), e);
         }
@@ -189,13 +215,13 @@ public class FacetedOverview extends MonolithicFacetedOverview {
         }
     }
 
-    /** disable exclusion of highlighted for now
+    /**
+     * disable exclusion of highlighted for now
      *
-     *   private void excludeHighLightedItem(HippoBean contentBean, Filter globalFilter) throws FilterException {
-     *      if (((OverviewPage) contentBean).getHighLightedItem() != null) {
-     *         String highlightedUuid = ((OverviewPage) contentBean).getHighLightedItem().getIdentifier();
-     *        globalFilter.addNotEqualTo("jcr:uuid", highlightedUuid);
-     *      }
-     *   }
+     * private void excludeHighLightedItem(HippoBean contentBean, Filter
+     * globalFilter) throws FilterException { if (((OverviewPage)
+     * contentBean).getHighLightedItem() != null) { String highlightedUuid =
+     * ((OverviewPage) contentBean).getHighLightedItem().getIdentifier();
+     * globalFilter.addNotEqualTo("jcr:uuid", highlightedUuid); } }
      */
 }
