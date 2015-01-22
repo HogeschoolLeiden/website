@@ -65,6 +65,14 @@
                 </a>
               </li>
             </c:if>
+            <c:if test="${not empty item.link.link and not empty item.link.linkTitle }">
+              <li>
+                <hst:link hippobean="${item.link.link }" var="profielPagina"/>
+                <a  class="btn" title="${item.link.alt}" href="${profielPagina}">
+                    <span><c:out value="${item.link.linkTitle}" /></span>
+                </a>
+              </li>
+            </c:if>
           </ul>
           
           
@@ -82,6 +90,7 @@
           </c:if>
                     
         </div>
+        
       </c:if>    
     
     </section>
