@@ -8,4 +8,4 @@
 
 <hst:setBundle basename="nl.hsleiden.widget.Messages" />
 
-<tag:facetednavigation facetnav="${model.facetBean}" labels="${model.labels}" />
+<tag:facetednavigation facetnav="${model.facetBean}" labels="${model.labels}" deepLinking="true"/>

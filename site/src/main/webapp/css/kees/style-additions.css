@@ -898,7 +898,7 @@ article.detail-content div.contentarea .content p a {
 /* Mobile issues */
 /* ------------- */
 
-/* no need for extra padding of content and navigation sections in mobile */
+/* no need for so much extra padding of content and navigation sections in mobile */
 @media (max-width: 767px) {
 	.col-md-9.detail-content .col-md-8.col-sm-8.contentarea .content,
 	.overzicht.col-md-9 .overzichtlijst {
@@ -906,7 +906,7 @@ article.detail-content div.contentarea .content p a {
 	} 
 	
 	.col-md-3.col-xs-12 .subnav {
-		padding-left: 0;
+		padding-left: 10px;
 	} 
 	
 	/* lectorat menu header remove filtering */
@@ -1291,12 +1291,6 @@ col-md-3.col-xs-12 .mailplusform form ul li .mpFormField select{
 /* mobile: display problem for medewerkers overview  */
 /* ------------------------------------------------- */
 
-@media (max-width: 991px){
-	.overzicht {
-		float: none !important;
-	}	
-}
-
 @media (min-width: 450px) and (max-width: 550px) {
 	.highlighted.col-md-9.medewerkers{
 		height: 25px;
@@ -1371,9 +1365,30 @@ col-md-3.col-xs-12 .mailplusform form ul li .mpFormField select{
 
 @media (min-width: 992px) {
 	
-	.row .filter.filter-collapse.collapse.clearfix.algemeenfilter {
+	.row .filter.filter-collapse.collapse.clearfix.algemeenfilter.deepLinkning {
 		float: left;
 	}	
+}
+
+/* --------------------------------------- */
+/* open facet filtering together with menu */
+/* --------------------------------------- */
+@media (min-width: 768px) and (max-width: 991px) {
+	.collapse.sm-facet-display{
+		display: block;
+		float: left;
+		width: 37%;
+		right: inherit;
+		position: relative;
+		top: 0; 
+	}
+	
+	.collapse.sm-facet-display .filtergroup:last-of-type .filterlist {
+		border-bottom: 0;
+	}
+	
+	.overzicht.col-md-9 { width: 100%;}
+	.overzicht.col-md-9.col-sm-8 { width: 63%;}
 }
 
 

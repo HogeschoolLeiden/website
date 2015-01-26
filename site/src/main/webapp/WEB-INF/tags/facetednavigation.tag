@@ -10,10 +10,11 @@
 <%@ attribute name="facetnav" required="true" type="org.hippoecm.hst.content.beans.standard.HippoFacetNavigationBean"%>
 <%@ attribute name="labels" required="false" type="java.util.Map"%>
 <%@ attribute name="enableSearch" required="false" type="java.lang.Boolean"%>
+<%@ attribute name="deepLinking" required="false" type="java.lang.Boolean"%>
 
 <hst:setBundle basename="nl.hsleiden.general.Messages"/>
 
-<div class="filter filter-collapse collapse clearfix algemeenfilter">
+<div class="filter filter-collapse collapse clearfix algemeenfilter ${deepLinking ? 'deepLinkning' : 'sm-facet-display'}">
   
   
   <hst:include ref="leftTop" />

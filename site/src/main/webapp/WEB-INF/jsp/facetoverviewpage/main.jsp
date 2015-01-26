@@ -31,7 +31,7 @@
           <tag:pagenotfound />
         </c:when>
         <c:otherwise>
-          <section class="overzicht col-md-9">
+          <section class="overzicht col-md-9 col-sm-8">
             
             <h1 class="hidden"><c:out value="${model.document.title}"></c:out> </h1> 
             <hst:include ref="contentTop" />
