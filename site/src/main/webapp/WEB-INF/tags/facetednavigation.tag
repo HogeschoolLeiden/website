@@ -14,7 +14,7 @@
 
 <hst:setBundle basename="nl.hsleiden.general.Messages"/>
 
-<div class="filter filter-collapse collapse clearfix algemeenfilter ${deepLinking ? 'deepLinkning' : 'sm-facet-display'}">
+<div class="filter filter-collapse collapse clearfix algemeenfilter ${deepLinking ? 'deepLinking' : 'sm-facet-display'}">
   
   
   <hst:include ref="leftTop" />
