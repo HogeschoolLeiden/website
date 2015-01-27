@@ -106,13 +106,19 @@ $( document ).ready(function() {
 		}
 	});
 	
-	if (getCookie('allowCookies') || getCookie('refuseCookies')){
-		$("#row-disclaimer").addClass("hidden");
-	}
+	manageCookies();
 	
+	hideFilterButton();
+
 	hideLeftColumn();
 	
 });
+
+function manageCookies(){
+	if (getCookie('allowCookies') || getCookie('refuseCookies')){
+		$("#row-disclaimer").addClass("hidden");
+	}
+}
 
 function setCookieAllowRemoveMessage(){
 	$("#row-disclaimer").addClass("hidden");
@@ -122,24 +128,6 @@ function setCookieAllowRemoveMessage(){
 function setCookieRefuseRemoveMessage(){
 	$("#row-disclaimer").addClass("hidden");
 	addCookie('refuseCookies', true, 7);
-}
-
-function displayOrHideFiltering(){
-	if(window.innerWidth <768){
-		var leftColumn = jQuery(".filter.filter-collapse.collapse.clearfix.algemeenfilter");
-		if(leftColumn.hasClass("hidden")){
-			leftColumn.removeClass("hidden");
-		}else{
-			leftColumn.addClass("hidden");
-		}
-	}
-}
-
-function hideLeftColumn(){
-	if(window.innerWidth <768){
-		var leftColumn = jQuery(".filter.filter-collapse.collapse.clearfix.algemeenfilter");
-		leftColumn.addClass("hidden");
-	}
 }
 
 function addCookie(name, value, days) {
@@ -170,3 +158,69 @@ function getCookie(c_name) {
     return "";
 }
 
+function displayOrHideFiltering(){
+	if(window.innerWidth <768){
+		var leftColumn = jQuery(".filter.filter-collapse.collapse.clearfix.algemeenfilter");
+		var studieFilter = jQuery(".studiefilter.clearfix");
+		
+		if(leftColumn.hasClass("hidden")){
+			leftColumn.removeClass("hidden");
+		}else{
+			leftColumn.addClass("hidden");
+		}
+
+		if(studieFilter.hasClass("hidden")){
+			studieFilter.removeClass("hidden");
+		}else{
+			studieFilter.addClass("hidden");
+		}
+	}
+}
+
+function hideLeftColumn(){
+	if(window.innerWidth <768){
+		var leftColumn = jQuery(".filter.filter-collapse.collapse.clearfix.algemeenfilter");
+		leftColumn.addClass("hidden");
+	}
+}
+
+function hideFilterButton(){
+	if(window.innerWidth <768){
+		
+		var filterButton = jQuery(".toggle-filter-button");
+		var filterColumnPresence = jQuery(".algemeenfilter").length;
+		var studieFilterPresence = jQuery(".studiefilter").length;
+		
+		if(filterColumnPresence + studieFilterPresence >= 1){
+			if(filterColumnPresence >= 1){
+				manageNormalFiltering(filterButton)
+			}else if(studieFilterPresence >= 1){
+				manageBachelorsFiltering(filterButton)
+			}
+		}else{
+			if(! filterButton.hasClass("hidden")){
+				filterButton.addClass("hidden");
+			}
+		}
+	}
+}
+
+function manageBachelorsFiltering(filterButton){
+	if(jQuery(".noQueryResults").length > 0){
+		filterButton.addClass("hidden");
+	}
+}
+
+function manageNormalFiltering(filterButton){
+	var doNotDisplay = false;
+	if(jQuery("[class='filtergroup col-md-3']").length <= 0){
+		var firstDiv = jQuery(".algemeenfilter > div");
+		if(firstDiv.height() <= 0) {
+			var doNotDisplay = true;
+		}
+	}
+	
+	if(doNotDisplay){
+		filterButton.addClass("hidden");
+	}
+}

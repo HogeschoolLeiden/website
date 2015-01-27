@@ -64,7 +64,7 @@
           
       </section>
       
-      <div class="filter filter-collapse collapse clearfix algemeenfilter">
+      <div class="filter filter-collapse collapse clearfix algemeenfilter sm-facet-display">
         <hst:include ref="leftTop" />
         <%-- <h4><fmt:message key="refine.results" /></h4> --%>
          <hst:link siteMapItemRefId="search" var="searchPageUrl" navigationStateful="false"/>
