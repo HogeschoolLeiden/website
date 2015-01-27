@@ -10,13 +10,15 @@
 
 <section class="overzicht col-md-9">
    
-   <hst:cmseditlink hippobean="${document}" />
-   <h1 class="hidden"><c:out value="${document.title}"></c:out> </h1>
-   <hst:include ref="contentTop" />
-   
-   <tag:rssReader document="${document}"/>
+  <tag:rssReader document="${document}"/>
 
    <div class="overzichtlijst">
+   
+    <hst:cmseditlink hippobean="${document}" />
+    <h1 class="title"><c:out value="${document.title}"></c:out> </h1>
+    <p class="intro"><c:out value="${document.introduction }"/></p>
+    <hst:include ref="contentTop" />
+              
     <c:forEach var="item" items="${items}">
     
       <hst:link var="link" hippobean="${item}" />

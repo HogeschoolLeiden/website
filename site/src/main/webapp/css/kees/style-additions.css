@@ -1370,6 +1370,32 @@ col-md-3.col-xs-12 .mailplusform form ul li .mpFormField select{
 	}	
 }
 
+/* -------------------------------------------- */
+/* add title and introduction in overview pages */
+/* -------------------------------------------- */
+.overzicht.col-md-9 h1.title {
+	font-family: 'source_sans_prosemibold';
+	font-weight: 400;
+	font-style: normal;
+	color: #23114c;
+	font-size: 2.571em;
+	margin-bottom: 10px;
+	padding: 0;
+}
+
+.overzicht.col-md-9 h1.title + p.intro{
+	color: #23114c;
+	font-family: 'source_sans_proitalic';
+	font-weight: 400;
+	font-style: normal;
+}
+
+@media (max-width: 500px) {
+	.overzicht.col-md-9 h1.title{
+		font-size: 2em;
+	}
+{}
+
 /* --------------------------------------- */
 /* open facet filtering together with menu */
 /* --------------------------------------- */
@@ -1391,9 +1417,6 @@ col-md-3.col-xs-12 .mailplusform form ul li .mpFormField select{
 	.overzicht.col-md-9.col-sm-8 { width: 63%;}
 }
 
-/* --------------------------------------- */
-/* open facet filtering together with menu */
-/* --------------------------------------- */
 @media (max-width: 767px) {
 	.collapse.sm-facet-display {
 		display: block;

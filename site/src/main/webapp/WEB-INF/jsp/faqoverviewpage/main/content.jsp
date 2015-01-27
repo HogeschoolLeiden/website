@@ -14,14 +14,15 @@
 
 <section class="col-md-9 detail-content">
   <div class="row">
-    <div class="col-md-8 col-sm-8 contentarea">   
-    
-    <hst:cmseditlink hippobean="${document}" />
-    <h1 class="hidden"><c:out value="${document.title}"></c:out> </h1>
-    <hst:include ref="contentTop" />
-    
+    <div class="col-md-8 col-sm-8 contentarea">    
     
     <div class="content">
+    
+      <hst:cmseditlink hippobean="${document}" />
+      <h1 class="title"><c:out value="${document.title}"></c:out> </h1>
+      <p class="intro"><c:out value="${document.introduction }"/></p>
+     
+      <hst:include ref="contentTop" />
     
       <c:forEach var="item" items="${items}">
           
