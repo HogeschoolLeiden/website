@@ -21,7 +21,7 @@
         <span class="menuButton"><fmt:message key="mobile.menu.message"/></span>
       </button>       
       
-      <button class="navbar-toggle navbar-header toggle-filter-button fa fa-filter hidden-lg hidden-md hidden-sm"  data-target=".filter-collapse" data-toggle="collapse" type="button">
+      <button class="navbar-toggle navbar-header toggle-filter-button fa fa-filter hidden-lg hidden-md hidden-sm" onclick="displayOrHideFiltering()" type="button">
         <span class="sr-only">Toggle filter</span>
       </button>
       

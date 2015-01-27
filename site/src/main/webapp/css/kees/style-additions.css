@@ -1391,4 +1391,20 @@ col-md-3.col-xs-12 .mailplusform form ul li .mpFormField select{
 	.overzicht.col-md-9.col-sm-8 { width: 63%;}
 }
 
+/* --------------------------------------- */
+/* open facet filtering together with menu */
+/* --------------------------------------- */
+@media (max-width: 767px) {
+	.collapse.sm-facet-display {
+		display: block;
+		float: left;
+		width: 100%;
+		right: inherit;
+		position: absolute;
+		top: 0; 
+	}
+	
+	.filtergroup.col-md-3{ margin-left: 15px;}
+}
+
 

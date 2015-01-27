@@ -110,6 +110,8 @@ $( document ).ready(function() {
 		$("#row-disclaimer").addClass("hidden");
 	}
 	
+	hideLeftColumn();
+	
 });
 
 function setCookieAllowRemoveMessage(){
@@ -120,6 +122,24 @@ function setCookieAllowRemoveMessage(){
 function setCookieRefuseRemoveMessage(){
 	$("#row-disclaimer").addClass("hidden");
 	addCookie('refuseCookies', true, 7);
+}
+
+function displayOrHideFiltering(){
+	if(window.innerWidth <768){
+		var leftColumn = jQuery(".filter.filter-collapse.collapse.clearfix.algemeenfilter");
+		if(leftColumn.hasClass("hidden")){
+			leftColumn.removeClass("hidden");
+		}else{
+			leftColumn.addClass("hidden");
+		}
+	}
+}
+
+function hideLeftColumn(){
+	if(window.innerWidth <768){
+		var leftColumn = jQuery(".filter.filter-collapse.collapse.clearfix.algemeenfilter");
+		leftColumn.addClass("hidden");
+	}
 }
 
 function addCookie(name, value, days) {
