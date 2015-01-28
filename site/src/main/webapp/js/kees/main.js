@@ -110,7 +110,7 @@ $( document ).ready(function() {
 	
 	hideFilterButton();
 
-	hideLeftColumn();
+	hideFilteringColumn();
 	
 });
 
@@ -158,34 +158,64 @@ function getCookie(c_name) {
     return "";
 }
 
-function displayOrHideFiltering(){
-	if(window.innerWidth <768){
-		var leftColumn = jQuery(".filter.filter-collapse.collapse.clearfix.algemeenfilter");
-		var studieFilter = jQuery(".studiefilter.clearfix");
-		
-		if(leftColumn.hasClass("hidden")){
-			leftColumn.removeClass("hidden");
-		}else{
+/**
+ * invoked from the header button for switching the display of the filtering on and off.
+ * 
+ * In mobile version the filtering column is never displayed, so every click on the button
+ * triggers the addition/removal of "hidden" from the css class of the filtering column
+ * 
+ * In tablet version the filtering is displayed for every overview page, but not for the
+ * deep linking detail pages. 
+ **/
+function switchFiltering(){
+	if(window.innerWidth < 768){
+		var filteringColumn = jQuery(".algemeenfilter");
+		var studieFilter = jQuery(".studiefilter");
+
+		hideOrShow(filteringColumn);
+		hideOrShow(studieFilter);
+	}else{
+		if(window.innerWidth < 992){
+			var deepLinkingFilter = jQuery(".deepLinking");
+			hideOrShow(deepLinkingFilter);
+		}
+	}
+}
+
+function hideOrShow(section){
+	if(section.hasClass("hidden")){
+		section.removeClass("hidden");
+	}else{
+		section.addClass("hidden");
+	}
+}
+
+/**
+ * hide filtering section (left column) for mobile 
+ * for tablets, the filtering section is displayed for overview pages 
+ * and is hidden only for deep linking detail pages
+ **/
+
+function hideFilteringColumn(){
+	if(window.innerWidth < 768){
+		var leftColumn = jQuery(".algemeenfilter");
+		leftColumn.addClass("hidden");
+	}else{		
+		if(window.innerWidth < 992){
+			var leftColumn = jQuery(".deepLinking");
 			leftColumn.addClass("hidden");
 		}
-
-		if(studieFilter.hasClass("hidden")){
-			studieFilter.removeClass("hidden");
-		}else{
-			studieFilter.addClass("hidden");
-		}
 	}
 }
 
-function hideLeftColumn(){
-	if(window.innerWidth <768){
-		var leftColumn = jQuery(".filter.filter-collapse.collapse.clearfix.algemeenfilter");
-		leftColumn.addClass("hidden");
-	}
-}
-
+/**
+ * hide filtering button from the header if there is no filtering to be applied
+ * 
+ * it tablet view (768 - 991) filtering can be applied only for deep linking 
+ * detail pages, because the overview pages display it already.
+ **/
 function hideFilterButton(){
-	if(window.innerWidth <768){
+	if(window.innerWidth < 768){
 		
 		var filterButton = jQuery(".toggle-filter-button");
 		var filterColumnPresence = jQuery(".algemeenfilter").length;
@@ -201,6 +231,14 @@ function hideFilterButton(){
 			if(! filterButton.hasClass("hidden")){
 				filterButton.addClass("hidden");
 			}
+		}
+	}else if(window.innerWidth < 992){
+		
+		var filterButton = jQuery(".toggle-filter-button");
+		var deepLinkingColumnPresence = jQuery(".deepLinking").length;
+
+		if(deepLinkingColumnPresence <= 0){
+			filterButton.addClass("hidden");
 		}
 	}
 }

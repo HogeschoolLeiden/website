@@ -20,7 +20,7 @@
   <div class="container">
     <div class="row">
     
-      <section class="overzicht col-md-9">
+      <section class="overzicht col-md-9 col-sm-8">
           
           <hst:include ref="contentTop" />
           
