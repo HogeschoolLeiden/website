@@ -715,6 +715,12 @@
         <sv:property sv:name="caption" sv:type="String">
           <sv:value>Kost</sv:value>
         </sv:property>
+        <sv:property sv:name="hint" sv:type="String">
+          <sv:value>
+            If value is 0, then the document will be listed in the category: "Gratis",
+            If value is negative, then the document will be listed in the category: "Op aanvraag"
+          </sv:value>
+        </sv:property>
         <sv:property sv:name="field" sv:type="String">
           <sv:value>cost</sv:value>
         </sv:property>

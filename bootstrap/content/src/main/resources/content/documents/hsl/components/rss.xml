@@ -1,17 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<sv:node sv:name="rss" xmlns:sv="http://www.jcp.org/jcr/sv/1.0">
+<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="rss">
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>hippostd:folder</sv:value>
   </sv:property>
-  <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+  <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
     <sv:value>hippotranslation:translated</sv:value>
-    <sv:value>mix:versionable</sv:value>
     <sv:value>hippo:translated</sv:value>
+    <sv:value>mix:versionable</sv:value>
   </sv:property>
   <sv:property sv:name="jcr:uuid" sv:type="String">
     <sv:value>0ffc4277-7392-460c-85b0-4e3ed38b4c38</sv:value>
   </sv:property>
-  <sv:property sv:multiple="true" sv:name="hippostd:foldertype" sv:type="String">
+  <sv:property sv:name="hippostd:foldertype" sv:type="String" sv:multiple="true">
     <sv:value>new-rss-document</sv:value>
   </sv:property>
   <sv:property sv:name="hippotranslation:id" sv:type="String">
@@ -35,7 +34,7 @@
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hippo:handle</sv:value>
     </sv:property>
-    <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+    <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
       <sv:value>mix:referenceable</sv:value>
       <sv:value>hippo:translated</sv:value>
     </sv:property>
@@ -46,14 +45,14 @@
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>feed:rss20descriptor</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
         <sv:value>mix:referenceable</sv:value>
         <sv:value>mix:versionable</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
         <sv:value>ab18248c-65c8-4100-97f0-e453d79e5c67</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="feed:category" sv:type="String">
+      <sv:property sv:name="feed:category" sv:type="String" sv:multiple="true">
         <sv:value>evenementen</sv:value>
       </sv:property>
       <sv:property sv:name="feed:copyright" sv:type="String">
@@ -92,7 +91,7 @@
       <sv:property sv:name="feed:webMaster" sv:type="String">
         <sv:value>Webmaster</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
+      <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
         <sv:value>preview</sv:value>
       </sv:property>
       <sv:property sv:name="hippo:related___pathreference" sv:type="String">
@@ -123,9 +122,9 @@
         <sv:property sv:name="hippo:docbase" sv:type="String">
           <sv:value>5fb52229-991d-4253-9759-446328a1b5f6</sv:value>
         </sv:property>
-        <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
-        <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
-        <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
+        <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
       </sv:node>
     </sv:node>
     <sv:node sv:name="hippo:translation">
@@ -143,13 +142,13 @@
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>feed:rss20descriptor</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
         <sv:value>mix:referenceable</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
         <sv:value>b7d1fd67-b2da-4605-84fb-007a039a9bff</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="feed:category" sv:type="String">
+      <sv:property sv:name="feed:category" sv:type="String" sv:multiple="true">
         <sv:value>evenementen</sv:value>
       </sv:property>
       <sv:property sv:name="feed:copyright" sv:type="String">
@@ -188,7 +187,7 @@
       <sv:property sv:name="feed:webMaster" sv:type="String">
         <sv:value>Webmaster</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String"/>
+      <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true"/>
       <sv:property sv:name="hippo:related___pathreference" sv:type="String">
         <sv:value>rss/agenda/agenda[3]</sv:value>
         <sv:value>rss/agenda/agenda</sv:value>
@@ -218,22 +217,22 @@
         <sv:property sv:name="hippo:docbase" sv:type="String">
           <sv:value>5fb52229-991d-4253-9759-446328a1b5f6</sv:value>
         </sv:property>
-        <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
-        <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
-        <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
+        <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
       </sv:node>
     </sv:node>
     <sv:node sv:name="agenda">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>feed:rss20descriptor</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
         <sv:value>mix:referenceable</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
         <sv:value>76e29135-ea29-42fc-9778-d488bcbc2dd9</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="feed:category" sv:type="String">
+      <sv:property sv:name="feed:category" sv:type="String" sv:multiple="true">
         <sv:value>evenementen</sv:value>
       </sv:property>
       <sv:property sv:name="feed:copyright" sv:type="String">
@@ -272,7 +271,7 @@
       <sv:property sv:name="feed:webMaster" sv:type="String">
         <sv:value>Webmaster</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
+      <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
         <sv:value>live</sv:value>
       </sv:property>
       <sv:property sv:name="hippo:related___pathreference" sv:type="String">
@@ -306,9 +305,9 @@
         <sv:property sv:name="hippo:docbase" sv:type="String">
           <sv:value>5fb52229-991d-4253-9759-446328a1b5f6</sv:value>
         </sv:property>
-        <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
-        <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
-        <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
+        <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
       </sv:node>
     </sv:node>
   </sv:node>
@@ -316,7 +315,7 @@
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hippo:handle</sv:value>
     </sv:property>
-    <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+    <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
       <sv:value>mix:referenceable</sv:value>
       <sv:value>hippo:translated</sv:value>
     </sv:property>
@@ -327,14 +326,14 @@
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>feed:rss20descriptor</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
         <sv:value>mix:referenceable</sv:value>
         <sv:value>mix:versionable</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
         <sv:value>07325702-13ba-4c3c-b522-137d30b91e03</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="feed:category" sv:type="String">
+      <sv:property sv:name="feed:category" sv:type="String" sv:multiple="true">
         <sv:value>nieuws</sv:value>
       </sv:property>
       <sv:property sv:name="feed:copyright" sv:type="String">
@@ -373,7 +372,7 @@
       <sv:property sv:name="feed:webMaster" sv:type="String">
         <sv:value>Webmaster</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
+      <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
         <sv:value>preview</sv:value>
       </sv:property>
       <sv:property sv:name="hippo:related___pathreference" sv:type="String">
@@ -404,9 +403,9 @@
         <sv:property sv:name="hippo:docbase" sv:type="String">
           <sv:value>509a0853-75a6-4273-9fe2-fd3a9a6ccb99</sv:value>
         </sv:property>
-        <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
-        <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
-        <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
+        <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
       </sv:node>
     </sv:node>
     <sv:node sv:name="hippo:translation">
@@ -424,13 +423,13 @@
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>feed:rss20descriptor</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
         <sv:value>mix:referenceable</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
         <sv:value>83f71c5d-c75c-4f12-b320-15e8151b4f81</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="feed:category" sv:type="String">
+      <sv:property sv:name="feed:category" sv:type="String" sv:multiple="true">
         <sv:value>nieuws</sv:value>
       </sv:property>
       <sv:property sv:name="feed:copyright" sv:type="String">
@@ -469,7 +468,7 @@
       <sv:property sv:name="feed:webMaster" sv:type="String">
         <sv:value>Webmaster</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String"/>
+      <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true"/>
       <sv:property sv:name="hippo:related___pathreference" sv:type="String">
         <sv:value>rss/nieuws/nieuws</sv:value>
         <sv:value>rss/nieuws/nieuws[3]</sv:value>
@@ -499,22 +498,22 @@
         <sv:property sv:name="hippo:docbase" sv:type="String">
           <sv:value>509a0853-75a6-4273-9fe2-fd3a9a6ccb99</sv:value>
         </sv:property>
-        <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
-        <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
-        <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
+        <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
       </sv:node>
     </sv:node>
     <sv:node sv:name="nieuws">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>feed:rss20descriptor</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
         <sv:value>mix:referenceable</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
         <sv:value>f6006265-2a4d-4138-86c0-4e39bc96ed23</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="feed:category" sv:type="String">
+      <sv:property sv:name="feed:category" sv:type="String" sv:multiple="true">
         <sv:value>nieuws</sv:value>
       </sv:property>
       <sv:property sv:name="feed:copyright" sv:type="String">
@@ -553,7 +552,7 @@
       <sv:property sv:name="feed:webMaster" sv:type="String">
         <sv:value>Webmaster</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
+      <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
         <sv:value>live</sv:value>
       </sv:property>
       <sv:property sv:name="hippo:related___pathreference" sv:type="String">
@@ -587,9 +586,9 @@
         <sv:property sv:name="hippo:docbase" sv:type="String">
           <sv:value>509a0853-75a6-4273-9fe2-fd3a9a6ccb99</sv:value>
         </sv:property>
-        <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
-        <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
-        <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
+        <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
       </sv:node>
     </sv:node>
   </sv:node>
@@ -597,7 +596,7 @@
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hippo:handle</sv:value>
     </sv:property>
-    <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+    <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
       <sv:value>mix:referenceable</sv:value>
       <sv:value>hippo:translated</sv:value>
     </sv:property>
@@ -608,14 +607,14 @@
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>feed:rss20descriptor</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
         <sv:value>mix:referenceable</sv:value>
         <sv:value>mix:versionable</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
         <sv:value>5f9df097-b573-4b19-ba01-2f1e8b967010</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="feed:category" sv:type="String">
+      <sv:property sv:name="feed:category" sv:type="String" sv:multiple="true">
         <sv:value>peers</sv:value>
       </sv:property>
       <sv:property sv:name="feed:copyright" sv:type="String">
@@ -625,7 +624,7 @@
         <sv:value>This is the main description of the rss page. Some explanations for the users can be added here. The Pers rss are ordered by the value of "publicatieDatum" field.</sv:value>
       </sv:property>
       <sv:property sv:name="feed:documentType" sv:type="String">
-        <sv:value>hsl:NewsPage</sv:value>
+        <sv:value>hsl:PersPage</sv:value>
       </sv:property>
       <sv:property sv:name="feed:excludeItems" sv:type="String">
         <sv:value/>
@@ -654,7 +653,7 @@
       <sv:property sv:name="feed:webMaster" sv:type="String">
         <sv:value>Webmaster</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
+      <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
         <sv:value>preview</sv:value>
       </sv:property>
       <sv:property sv:name="hippo:related___pathreference" sv:type="String">
@@ -673,7 +672,7 @@
         <sv:value>2014-08-13T10:33:33.647+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-        <sv:value>2014-08-13T10:40:34.146+02:00</sv:value>
+        <sv:value>2015-01-29T09:38:56.872+01:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
         <sv:value>admin</sv:value>
@@ -685,9 +684,9 @@
         <sv:property sv:name="hippo:docbase" sv:type="String">
           <sv:value>2b3a5f59-47cd-41fb-ad05-a712a72a1d3e</sv:value>
         </sv:property>
-        <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
-        <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
-        <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
+        <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
       </sv:node>
     </sv:node>
     <sv:node sv:name="hippo:translation">
@@ -705,13 +704,13 @@
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>feed:rss20descriptor</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
         <sv:value>mix:referenceable</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
         <sv:value>da6223e0-87c4-4910-8f1b-a632ccaf8c38</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="feed:category" sv:type="String">
+      <sv:property sv:name="feed:category" sv:type="String" sv:multiple="true">
         <sv:value>peers</sv:value>
       </sv:property>
       <sv:property sv:name="feed:copyright" sv:type="String">
@@ -721,7 +720,7 @@
         <sv:value>This is the main description of the rss page. Some explanations for the users can be added here. The Pers rss are ordered by the value of "publicatieDatum" field.</sv:value>
       </sv:property>
       <sv:property sv:name="feed:documentType" sv:type="String">
-        <sv:value>hsl:NewsPage</sv:value>
+        <sv:value>hsl:PersPage</sv:value>
       </sv:property>
       <sv:property sv:name="feed:excludeItems" sv:type="String">
         <sv:value/>
@@ -750,7 +749,7 @@
       <sv:property sv:name="feed:webMaster" sv:type="String">
         <sv:value>Webmaster</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String"/>
+      <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true"/>
       <sv:property sv:name="hippo:related___pathreference" sv:type="String">
         <sv:value>rss/peers/peers</sv:value>
         <sv:value>rss/peers/peers[3]</sv:value>
@@ -768,7 +767,7 @@
         <sv:value>2014-08-13T10:33:33.647+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-        <sv:value>2014-08-13T10:39:28.019+02:00</sv:value>
+        <sv:value>2015-01-29T09:38:50.410+01:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
         <sv:value>admin</sv:value>
@@ -780,22 +779,22 @@
         <sv:property sv:name="hippo:docbase" sv:type="String">
           <sv:value>2b3a5f59-47cd-41fb-ad05-a712a72a1d3e</sv:value>
         </sv:property>
-        <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
-        <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
-        <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
+        <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
       </sv:node>
     </sv:node>
     <sv:node sv:name="peers">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>feed:rss20descriptor</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
         <sv:value>mix:referenceable</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
         <sv:value>aa0b0dae-671a-4e9f-aa06-7d55ca6a2e3f</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="feed:category" sv:type="String">
+      <sv:property sv:name="feed:category" sv:type="String" sv:multiple="true">
         <sv:value>peers</sv:value>
       </sv:property>
       <sv:property sv:name="feed:copyright" sv:type="String">
@@ -805,7 +804,7 @@
         <sv:value>This is the main description of the rss page. Some explanations for the users can be added here. The Pers rss are ordered by the value of "publicatieDatum" field.</sv:value>
       </sv:property>
       <sv:property sv:name="feed:documentType" sv:type="String">
-        <sv:value>hsl:NewsPage</sv:value>
+        <sv:value>hsl:PersPage</sv:value>
       </sv:property>
       <sv:property sv:name="feed:excludeItems" sv:type="String">
         <sv:value/>
@@ -834,7 +833,7 @@
       <sv:property sv:name="feed:webMaster" sv:type="String">
         <sv:value>Webmaster</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hippo:availability" sv:type="String">
+      <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
         <sv:value>live</sv:value>
       </sv:property>
       <sv:property sv:name="hippo:related___pathreference" sv:type="String">
@@ -853,13 +852,13 @@
         <sv:value>2014-08-13T10:33:33.647+02:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-        <sv:value>2014-08-13T10:40:34.146+02:00</sv:value>
+        <sv:value>2015-01-29T09:38:56.872+01:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
         <sv:value>admin</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-        <sv:value>2014-08-13T10:40:36.785+02:00</sv:value>
+        <sv:value>2015-01-29T09:38:59.729+01:00</sv:value>
       </sv:property>
       <sv:node sv:name="feed:image">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -868,9 +867,9 @@
         <sv:property sv:name="hippo:docbase" sv:type="String">
           <sv:value>2b3a5f59-47cd-41fb-ad05-a712a72a1d3e</sv:value>
         </sv:property>
-        <sv:property sv:multiple="true" sv:name="hippo:facets" sv:type="String"/>
-        <sv:property sv:multiple="true" sv:name="hippo:modes" sv:type="String"/>
-        <sv:property sv:multiple="true" sv:name="hippo:values" sv:type="String"/>
+        <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
       </sv:node>
     </sv:node>
   </sv:node>
