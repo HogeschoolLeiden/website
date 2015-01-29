@@ -1395,9 +1395,9 @@ col-md-3.col-xs-12 .mailplusform form ul li .mpFormField select{
 	}
 }
 
-/* --------------------------------------- */
-/* open facet filtering together with menu */
-/* --------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* open facet filtering together with menu (but not foor deep linking) */
+/* ------------------------------------------------------------------- */
 @media (min-width: 768px) and (max-width: 991px) {
 	.collapse.sm-facet-display{
 		display: block;
@@ -1430,4 +1430,13 @@ col-md-3.col-xs-12 .mailplusform form ul li .mpFormField select{
 	.filtergroup.col-md-3{ margin-left: 15px;}
 }
 
+/* ----------------------------------------------------------------- */
+/* Quote and testimonials do not display image on small window sizes */
+/* ----------------------------------------------------------------- */
+@media (max-width: 500px) {
+	.content blockquote.media img.pull-right,
+	.content blockquote.media img.pull-left {
+		display: none;
+	}
+} 
 
