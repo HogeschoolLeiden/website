@@ -138,7 +138,7 @@
         <sv:value>Formulieren</sv:value>
       </sv:property>
       <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
-        <sv:value>ef_done_redirect</sv:value>
+        <sv:value>eforms_done_redirect</sv:value>
         <sv:value>eforms-from-name</sv:value>
         <sv:value>eforms-from-email</sv:value>
         <sv:value>behaviors</sv:value>
@@ -154,7 +154,9 @@
         <sv:value>com.onehippo.cms7.eforms.hst.behaviors.FormIntroBehavior,com.onehippo.cms7.eforms.hst.behaviors.StoreFormDataBehavior,com.onehippo.cms7.eforms.hst.behaviors.ConfirmationBehavior,com.onehippo.cms7.eforms.hst.behaviors.MailFormDataBehavior,com.onehippo.cms7.eforms.hst.behaviors.FormSubmissionCounterBehavior</sv:value>
         <sv:value>true</sv:value>
         <sv:value>mail/Session</sv:value>
-        <sv:value>&lt;h1&gt;${form.getTitle()}&lt;/h1&gt;&#13;
+        <sv:value>&lt;#if form.getTitle()?has_content&gt;&#13;
+	&lt;h1&gt;${form.getTitle()}&lt;/h1&gt;&#13;
+&lt;/#if&gt;&#13;
 &lt;#if paragraph??&gt;&#13;
 	&lt;p&gt;${paragraph}&lt;/p&gt;&#13;
 &lt;/#if&gt;&#13;
@@ -188,12 +190,12 @@
 							&lt;/#list&gt;&#13;
 						&lt;/#list&gt;&#13;
                         &lt;#assign otherFieldName = field.getName()+"-other"&gt;&#13;
-                        &lt;#assign otherField = formMap.getField(otherFieldName)&gt;&#13;
-                        &lt;#if otherField.getValue()?has_content&gt;&#13;
+                        &lt;#if formMap.getField(otherFieldName)?has_content&gt;&#13;
+							&lt;#assign otherField = formMap.getField(otherFieldName)&gt;&#13;
 							&lt;tr&gt;&#13;
-	                            &lt;th align="left"&gt;${otherFieldName}&lt;/th&gt;&#13;
-	                            &lt;td align="left"&gt;${otherField.getValue()}&lt;/td&gt;&#13;
-                            &lt;/tr&gt;&#13;
+								&lt;th align="left"&gt;${otherFieldName}&lt;/th&gt;&#13;
+								&lt;td align="left"&gt;${otherField.getValue()}&lt;/td&gt;&#13;
+							&lt;/tr&gt;&#13;
                         &lt;/#if&gt;&#13;
                     &lt;#else&gt;&#13;
 						&lt;#assign multiValues = field.multiValues&gt;&#13;
@@ -221,7 +223,7 @@
 						&lt;#else&gt;&#13;
 							&lt;td align="left"&gt;${field.getValue()}&lt;/td&gt;&#13;
 						&lt;/#if&gt;&#13;
-                    &lt;/tr&gt;&#13;
+                     &lt;/tr&gt;&#13;
 				&lt;/#if&gt;&#13;
 			&lt;/#if&gt;&#13;
 		&lt;/#list&gt;&#13;
