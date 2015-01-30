@@ -180,10 +180,10 @@
     </tag-file>
 	
 	<function>
-		<description>get browser title from channel configuration</description>
-		<name>getDefaultBrowserTitle</name>
+		<description>get website properties list from channel configuration</description>
+		<name>getWebsitePropertyList</name>
 		<function-class>nl.hsleiden.tags.Functions</function-class>
-		<function-signature>java.lang.String getDefaultBrowserTitle(javax.servlet.http.HttpServletRequest)</function-signature>
+		<function-signature>nl.hsleiden.channels.WebsiteInfo getWebsitePropertyList(javax.servlet.http.HttpServletRequest)</function-signature>
 	</function>
   
     <function>

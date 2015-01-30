@@ -27,13 +27,11 @@ public class Functions {
     private Functions() {
     }
 
-    public static String getDefaultBrowserTitle(HttpServletRequest request) {
-        String result = "";
+    public static WebsiteInfo getWebsitePropertyList(HttpServletRequest request) {
+        WebsiteInfo result = null;
         HstRequest req = (HstRequest) request;
-        final Mount mount = req.getRequestContext().getResolvedMount().getMount();
-        final WebsiteInfo info = mount.getChannelInfo();
-        result = info.getDefaultBrowserTitle();
-
+        Mount mount = req.getRequestContext().getResolvedMount().getMount();
+        result = mount.getChannelInfo();        
         return result;
     }
 

@@ -92,7 +92,7 @@
 	 <title><c:out value="${document.browserTitle}" escapeXml="true" /></title>
     </c:when>
     <c:otherwise>
-      <title><c:out value="${tag:getDefaultBrowserTitle(pageContext.request)}" escapeXml="true" /></title>
+      <title><c:out value="${(tag:getWebsitePropertyList(pageContext.request)).defaultBrowserTitle}" escapeXml="true" /></title>
     </c:otherwise>
   </c:choose>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
@@ -118,56 +118,25 @@
     <hst:include ref="help" />
 	 
     <hst:headContributions categoryIncludes="scripts" xhtml="true" />
-		
+  	
 	<c:if test="${(not composermode ) and ( not tag:isCookiesRefused(pageContext.request))}">
 	    <ga:accountId/>
 	    <hst:link var="googleAnalytics" path="/resources/google-analytics.js"/>
     	<script src="${googleAnalytics}" type="text/javascript"></script>
-    	    
-        <!-- Google Tag Manager test and dev -->
-          <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-55GJBQ"
-          height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-          <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-          '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-55GJBQ');</script>
-        <!-- End Google Tag Manager -->
+    	
+        ${(tag:getWebsitePropertyList(pageContext.request)).googleTagManagerConfig }
 		
   	</c:if>
-    
-   <%--   
-    the next 2 scripts are causing problems to prettyPhoto - are they absolutely needed ??
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="<hst:link path="/js/kees/vendor/jquery-1.11.1.min.js"/>"><\/script>')</script>
-   
-    this should be used only in production, take it from some property maybe
-    
-     --%>
-    
-    <!-- Google Tag Manager production -->
-    <%-- <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NW5KCS"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-NW5KCS');</script> --%>
-    <!-- End Google Tag Manager -->
-   
-  
-     
+      
     <script type="text/javascript" src="<hst:link path="/js/kees/vendor/bootstrap.min.js" />"></script>
-    
-    <%--   included directly from the homepage (the page that uses them)
-    <script type="text/javascript" src="<hst:link path="/js/kees/vendor/idangerous.swiper.js"/>"></script>
-    <script type="text/javascript" src="<hst:link path="/js/kees/vendor/idangerous.swiper.progress.min.js"/>"></script>
-    --%>
     
     <script type="text/javascript" src="<hst:link path="/js/kees/vendor/ekko-lightbox.js"/>" ></script>
     <script type="text/javascript" src="<hst:link path="/js/kees/plugins.js" />"></script>
     <script type="text/javascript" src="<hst:link path="/js/kees/main.js" />"></script>
+    
+    <%-- Chat function test, should be different per environment --%>
+     
+    <script type="text/javascript" src="${(tag:getWebsitePropertyList(pageContext.request)).chatJsConfig }"></script> 
     
 </body>
 </html>

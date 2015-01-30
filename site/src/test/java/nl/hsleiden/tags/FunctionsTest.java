@@ -8,16 +8,10 @@ import hslbeans.WebPage;
 import java.util.ArrayList;
 import java.util.List;
 
-import nl.hsleiden.channels.WebsiteInfo;
-
 import org.easymock.EasyMock;
-import org.hippoecm.hst.configuration.hosting.Mount;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.content.beans.standard.HippoGalleryImageSetBean;
 import org.hippoecm.hst.content.beans.standard.HippoResource;
-import org.hippoecm.hst.core.request.ResolvedMount;
-import org.hippoecm.hst.mock.core.component.MockHstRequest;
-import org.hippoecm.hst.mock.core.request.MockHstRequestContext;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -37,21 +31,6 @@ public class FunctionsTest {
     public void isSubclassOfWebPageFailure() {
         boolean actual = Functions.isSubclassOfWebPage(new Basedocument());
         Assert.assertEquals(false, actual);
-    }
-
-    @Test
-    public void getDefaultBrowserTitle() {
-        String parameterInfoValue = "My browser title";
-        ResolvedMount resolvedMountMock = mockResolvedMount(parameterInfoValue);
-        
-        MockHstRequest request = new MockHstRequest();
-        MockHstRequestContext requestContext = new MockHstRequestContext();
-        
-        requestContext.setResolvedMount(resolvedMountMock);
-        request.setRequestContext(requestContext);
-        
-        String actual = Functions.getDefaultBrowserTitle(request);
-        Assert.assertEquals(parameterInfoValue, actual);
     }
     
     @Test
@@ -131,17 +110,6 @@ public class FunctionsTest {
         return mock;
     }
 
-    private ResolvedMount mockResolvedMount(String parameterInfoValue) {
-        ResolvedMount resolvedMountMock = EasyMock.createMock(ResolvedMount.class);
-        Mount mountMock = EasyMock.createMock(Mount.class);
-        WebsiteInfo infoMock = EasyMock.createMock(WebsiteInfo.class);
-        EasyMock.expect(infoMock.getDefaultBrowserTitle()).andReturn(parameterInfoValue);
-        EasyMock.expect(mountMock.getChannelInfo()).andReturn(infoMock);
-        EasyMock.expect(resolvedMountMock.getMount()).andReturn(mountMock);
-        EasyMock.replay(resolvedMountMock, mountMock, infoMock);
-        return resolvedMountMock;
-    }
-    
     private HippoBean getMockContentBean(String contentBeanPath) {
         HippoBean mock = EasyMock.createMock(HippoBean.class);
         EasyMock.expect(mock.getPath()).andReturn(contentBeanPath).anyTimes();
