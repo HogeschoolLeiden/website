@@ -222,7 +222,9 @@ $(document).ready(function() {
         params[$(this).attr('name')] = $(this).val();
       }
     });
+
   }
+
 
 
   <%-- real-time ajax-based single field validation --%>
@@ -230,12 +232,14 @@ $(document).ready(function() {
   var ajaxValidationUrl = '<hst:resourceURL resourceId="validation"/>';
 
   $('.eforms-field *:input').blur(function() {
+	  
     // on leaving form field, post field name/value for ajax validation
     var params = {};
     params[$(this).attr('name')] = $(this).val();
     $.post(ajaxValidationUrl, params,
       function(data) {
         var feedbackPanel = $('#feedbackPanel');
+        
         var count = 0;
         if (data) {
           for (var fieldName in data) {
@@ -254,6 +258,7 @@ $(document).ready(function() {
         if (count > 0) {
           // make feedback panel visible
           feedbackPanel.show();
+          scrollToErrorMessage();
         } else {
           // make feedback panel invisible
           feedbackPanel.hide();
@@ -423,7 +428,7 @@ $(document).ready(function() {
 
     $.post(ajaxValidationUrl, params,
       function(data){
-
+    	
         // remove previous error messages from feedback panel
         var messagesList = $('#feedbackPanel > ul');
         messagesList.empty();
@@ -445,6 +450,7 @@ $(document).ready(function() {
             // there are validation errors
             // make feedback panel visible
             feedbackPanel.show();
+            scrollToErrorMessage();
         } else {
           // no error messages
           // make feedback panel invisible
@@ -528,6 +534,7 @@ $(document).ready(function() {
             // there are validation errors
             // make feedback panel visible
             feedbackPanel.show();
+            scrollToErrorMessage();
 
         } else {
           // no error messages
@@ -542,8 +549,15 @@ $(document).ready(function() {
       }, "json");
 
   });
-
+  
 });
+function scrollToErrorMessage(){
+  scrollTo('KO');
+  scrollTo('feedbackPanel');
+  function scrollTo(hash) {
+      location.hash = "#" + hash;
+  }
+}
 </script>
 
 </c:if>
