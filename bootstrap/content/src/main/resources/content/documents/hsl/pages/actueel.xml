@@ -8616,17 +8616,6 @@
     <sv:property sv:name="hippotranslation:locale" sv:type="String">
       <sv:value>nl</sv:value>
     </sv:property>
-    <sv:node sv:name="hippo:translation">
-      <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hippo:translation</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippo:language" sv:type="String">
-        <sv:value/>
-      </sv:property>
-      <sv:property sv:name="hippo:message" sv:type="String">
-        <sv:value>Evenementen</sv:value>
-      </sv:property>
-    </sv:node>
     <sv:node sv:name="index">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hippo:handle</sv:value>
@@ -9097,43 +9086,679 @@
         </sv:node>
       </sv:node>
     </sv:node>
-    <sv:node sv:name="events-facetnav">
+    <sv:node sv:name="evenementen-future">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hippofacnav:facetnavigation</sv:value>
+        <sv:value>hippo:handle</sv:value>
       </sv:property>
-      <sv:property sv:name="hippo:count" sv:type="Long">
-        <sv:value>18</sv:value>
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:value>mix:referenceable</sv:value>
+        <sv:value>hippo:translated</sv:value>
       </sv:property>
-      <sv:property sv:name="hippo:docbase" sv:type="String">
-        <sv:value>c5a41f30-985c-4a3b-8679-e1233d608df8</sv:value>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>c73a486f-2a37-44ca-aaf3-59f01c805c61</sv:value>
       </sv:property>
-      <sv:property sv:name="hippofacnav:facetnodenames" sv:type="String" sv:multiple="true">
-        <sv:value>Over</sv:value>
-        <sv:value>Thema</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippofacnav:facets" sv:type="String" sv:multiple="true">
-        <sv:value>hsl:subjecttags</sv:value>
-        <sv:value>hsl:thematags</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippofacnav:filters" sv:type="String" sv:multiple="true">
-        <sv:value>jcr:primaryType=hsl:EventPage</sv:value>
-        <sv:value>not(hsl:hideFromSearch=true)</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippofacnav:limit" sv:type="Long">
-        <sv:value>100</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippofacnav:skipresultsetfacetnavigationroot" sv:type="Boolean">
-        <sv:value>false</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippofacnav:skipresultsetfacetsavailable" sv:type="Boolean">
-        <sv:value>false</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippofacnav:sortby" sv:type="String" sv:multiple="true">
-        <sv:value>hsl:eventDate</sv:value>
-      </sv:property>
-      <sv:property sv:name="hippofacnav:sortorder" sv:type="String" sv:multiple="true">
-        <sv:value>descending</sv:value>
-      </sv:property>
+      <sv:node sv:name="hippo:translation">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hippo:translation</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:language" sv:type="String">
+          <sv:value/>
+        </sv:property>
+        <sv:property sv:name="hippo:message" sv:type="String">
+          <sv:value>evenementen future</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="evenementen-future">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsl:EventsOverviewPage</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+          <sv:value>mix:referenceable</sv:value>
+          <sv:value>hsl:CalendarEventsMixin</sv:value>
+          <sv:value>mix:versionable</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>2a94a219-e763-48c6-a585-defc31a383eb</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+          <sv:value>preview</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+          <sv:value>actueel/evenementen/evenementen-future/evenementen-future[2]</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostd:state" sv:type="String">
+          <sv:value>unpublished</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+          <sv:value>live</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+          <sv:value>admin</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+          <sv:value>2014-06-05T13:47:15.942+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+          <sv:value>2015-02-05T15:23:38.450+01:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+          <sv:value>admin</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippotranslation:id" sv:type="String">
+          <sv:value>65d3320e-6ba2-4be2-bb20-efa066a0b26a</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippotranslation:locale" sv:type="String">
+          <sv:value>nl</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:author" sv:type="String">
+          <sv:value>author-three</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:browserTitle" sv:type="String">
+          <sv:value>Agenda future</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:description" sv:type="String">
+          <sv:value>Description events (metadata)</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:hideFromSearch" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:hideFromSitemap" sv:type="Boolean">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:introduction" sv:type="String">
+          <sv:value>Samenvatting  Agenda future Samenvatting  Agenda future</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:keywords" sv:type="String">
+          <sv:value/>
+        </sv:property>
+        <sv:property sv:name="hsl:releaseDate" sv:type="Date">
+          <sv:value>2015-02-05T09:33:00.000+01:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:share" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:subjecttags" sv:type="String" sv:multiple="true">
+          <sv:value>hl-media</sv:value>
+          <sv:value>actueel</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:thematags" sv:type="String" sv:multiple="true">
+          <sv:value>management</sv:value>
+          <sv:value>life-sciences</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:title" sv:type="String">
+          <sv:value>Agenda future</sv:value>
+        </sv:property>
+        <sv:node sv:name="hsl:headerImage">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippogallerypicker:imagelink</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>728712c6-75a7-490a-85e3-7857b7d32fa9</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+          <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+          <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+        </sv:node>
+        <sv:node sv:name="hsl:highLightedItem">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>fe50bda5-9d96-4ed4-ab99-5e6023e66d29</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="hsl:twitterCompoundMixin">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:TwitterCompoundMixin</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:twitterParameters">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:TwitterParameters</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:from" sv:type="String">
+              <sv:value>HSLeidenNL</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:limit" sv:type="Long">
+              <sv:value>2</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:query" sv:type="String">
+              <sv:value/>
+            </sv:property>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="hsl:rssItem">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="hsl:calendarEventsCompoundMixin">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:CalendarEventsCompoundMixin</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:overFilter" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:themaFilter" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:widgetTitle" sv:type="String">
+            <sv:value>not used</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:contentBeanPath">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippo:mirror</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>2c21a29c-a5d1-4e84-aec4-594e5bf93b25</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="hsl:relatedEventsCompoundMixin">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:RelatedEventsCompoundMixin</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:sortParameters">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:RelatedSortParameters</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:sortBy" sv:type="String">
+              <sv:value>Publicatiedatum</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:sortOrder" sv:type="String">
+              <sv:value>ascending</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="hsl:overviewParameters">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:RelatedOverviewParameters</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:overviewLinkLabel" sv:type="String">
+              <sv:value/>
+            </sv:property>
+            <sv:property sv:name="hsl:showOverview" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+            <sv:node sv:name="hsl:overviewBeanPath">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hippo:mirror</sv:value>
+              </sv:property>
+              <sv:property sv:name="hippo:docbase" sv:type="String">
+                <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
+              </sv:property>
+            </sv:node>
+          </sv:node>
+          <sv:node sv:name="hsl:widgetParameters">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:RelatedWidgetParameters</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:size" sv:type="Long">
+              <sv:value>1</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:widgetTitle" sv:type="String">
+              <sv:value/>
+            </sv:property>
+            <sv:node sv:name="hsl:contentBeanPath">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hippo:mirror</sv:value>
+              </sv:property>
+              <sv:property sv:name="hippo:docbase" sv:type="String">
+                <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
+              </sv:property>
+            </sv:node>
+          </sv:node>
+          <sv:node sv:name="hsl:filterParameters">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:RelatedFilterParameters</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:overFilter" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:themaFilter" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:typeFilter" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="evenementen-future">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsl:EventsOverviewPage</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+          <sv:value>mix:referenceable</sv:value>
+          <sv:value>hsl:CalendarEventsMixin</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>3ead9159-ce2c-4748-b8f9-f86344d522e6</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+          <sv:value>live</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+          <sv:value>actueel/evenementen/evenementen-future/evenementen-future</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostd:state" sv:type="String">
+          <sv:value>published</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+          <sv:value>live</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+          <sv:value>admin</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+          <sv:value>2014-06-05T13:47:15.942+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+          <sv:value>2015-02-05T15:23:38.450+01:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+          <sv:value>admin</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
+          <sv:value>2015-02-05T15:23:40.686+01:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippotranslation:id" sv:type="String">
+          <sv:value>65d3320e-6ba2-4be2-bb20-efa066a0b26a</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippotranslation:locale" sv:type="String">
+          <sv:value>nl</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:author" sv:type="String">
+          <sv:value>author-three</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:browserTitle" sv:type="String">
+          <sv:value>Agenda future</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:description" sv:type="String">
+          <sv:value>Description events (metadata)</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:hideFromSearch" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:hideFromSitemap" sv:type="Boolean">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:introduction" sv:type="String">
+          <sv:value>Samenvatting  Agenda future Samenvatting  Agenda future</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:keywords" sv:type="String">
+          <sv:value/>
+        </sv:property>
+        <sv:property sv:name="hsl:releaseDate" sv:type="Date">
+          <sv:value>2015-02-05T09:33:00.000+01:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:share" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:subjecttags" sv:type="String" sv:multiple="true">
+          <sv:value>hl-media</sv:value>
+          <sv:value>actueel</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:thematags" sv:type="String" sv:multiple="true">
+          <sv:value>management</sv:value>
+          <sv:value>life-sciences</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:title" sv:type="String">
+          <sv:value>Agenda future</sv:value>
+        </sv:property>
+        <sv:node sv:name="hsl:headerImage">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippogallerypicker:imagelink</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>728712c6-75a7-490a-85e3-7857b7d32fa9</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+          <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+          <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+        </sv:node>
+        <sv:node sv:name="hsl:highLightedItem">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>fe50bda5-9d96-4ed4-ab99-5e6023e66d29</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="hsl:twitterCompoundMixin">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:TwitterCompoundMixin</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:twitterParameters">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:TwitterParameters</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:from" sv:type="String">
+              <sv:value>HSLeidenNL</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:limit" sv:type="Long">
+              <sv:value>2</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:query" sv:type="String">
+              <sv:value/>
+            </sv:property>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="hsl:rssItem">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="hsl:calendarEventsCompoundMixin">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:CalendarEventsCompoundMixin</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:overFilter" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:themaFilter" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:widgetTitle" sv:type="String">
+            <sv:value>not used</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:contentBeanPath">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippo:mirror</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>2c21a29c-a5d1-4e84-aec4-594e5bf93b25</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="hsl:relatedEventsCompoundMixin">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:RelatedEventsCompoundMixin</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:sortParameters">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:RelatedSortParameters</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:sortBy" sv:type="String">
+              <sv:value>Publicatiedatum</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:sortOrder" sv:type="String">
+              <sv:value>ascending</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="hsl:overviewParameters">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:RelatedOverviewParameters</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:overviewLinkLabel" sv:type="String">
+              <sv:value/>
+            </sv:property>
+            <sv:property sv:name="hsl:showOverview" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+            <sv:node sv:name="hsl:overviewBeanPath">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hippo:mirror</sv:value>
+              </sv:property>
+              <sv:property sv:name="hippo:docbase" sv:type="String">
+                <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
+              </sv:property>
+            </sv:node>
+          </sv:node>
+          <sv:node sv:name="hsl:widgetParameters">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:RelatedWidgetParameters</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:size" sv:type="Long">
+              <sv:value>1</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:widgetTitle" sv:type="String">
+              <sv:value/>
+            </sv:property>
+            <sv:node sv:name="hsl:contentBeanPath">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hippo:mirror</sv:value>
+              </sv:property>
+              <sv:property sv:name="hippo:docbase" sv:type="String">
+                <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
+              </sv:property>
+            </sv:node>
+          </sv:node>
+          <sv:node sv:name="hsl:filterParameters">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:RelatedFilterParameters</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:overFilter" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:themaFilter" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:typeFilter" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="evenementen-future">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsl:EventsOverviewPage</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+          <sv:value>mix:referenceable</sv:value>
+          <sv:value>hsl:CalendarEventsMixin</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>08d96229-5053-4a44-81e7-b9f5cdfabb7a</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+          <sv:value>actueel/evenementen/evenementen-future/evenementen-future</sv:value>
+          <sv:value>actueel/evenementen/evenementen-future/evenementen-future[2]</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostd:state" sv:type="String">
+          <sv:value>draft</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+          <sv:value>live</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+          <sv:value>admin</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+          <sv:value>2014-06-05T13:47:15.942+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+          <sv:value>2015-02-05T15:23:30.483+01:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+          <sv:value>admin</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippotranslation:id" sv:type="String">
+          <sv:value>65d3320e-6ba2-4be2-bb20-efa066a0b26a</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippotranslation:locale" sv:type="String">
+          <sv:value>nl</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:author" sv:type="String">
+          <sv:value>author-three</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:browserTitle" sv:type="String">
+          <sv:value>Agenda future</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:description" sv:type="String">
+          <sv:value>Description events (metadata)</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:hideFromSearch" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:hideFromSitemap" sv:type="Boolean">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:introduction" sv:type="String">
+          <sv:value>Samenvatting  Agenda future Samenvatting  Agenda future</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:keywords" sv:type="String">
+          <sv:value/>
+        </sv:property>
+        <sv:property sv:name="hsl:releaseDate" sv:type="Date">
+          <sv:value>2015-02-05T09:33:00.000+01:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:share" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:subjecttags" sv:type="String" sv:multiple="true">
+          <sv:value>hl-media</sv:value>
+          <sv:value>actueel</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:thematags" sv:type="String" sv:multiple="true">
+          <sv:value>management</sv:value>
+          <sv:value>life-sciences</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsl:title" sv:type="String">
+          <sv:value>Agenda future</sv:value>
+        </sv:property>
+        <sv:node sv:name="hsl:headerImage">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippogallerypicker:imagelink</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>728712c6-75a7-490a-85e3-7857b7d32fa9</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+          <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+          <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+        </sv:node>
+        <sv:node sv:name="hsl:highLightedItem">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>fe50bda5-9d96-4ed4-ab99-5e6023e66d29</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="hsl:twitterCompoundMixin">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:TwitterCompoundMixin</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:twitterParameters">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:TwitterParameters</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:from" sv:type="String">
+              <sv:value>HSLeidenNL</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:limit" sv:type="Long">
+              <sv:value>2</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:query" sv:type="String">
+              <sv:value/>
+            </sv:property>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="hsl:rssItem">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="hsl:calendarEventsCompoundMixin">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:CalendarEventsCompoundMixin</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:overFilter" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:themaFilter" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsl:widgetTitle" sv:type="String">
+            <sv:value>not used</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:contentBeanPath">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippo:mirror</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>2c21a29c-a5d1-4e84-aec4-594e5bf93b25</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="hsl:relatedEventsCompoundMixin">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:RelatedEventsCompoundMixin</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:sortParameters">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:RelatedSortParameters</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:sortBy" sv:type="String">
+              <sv:value>Publicatiedatum</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:sortOrder" sv:type="String">
+              <sv:value>ascending</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="hsl:overviewParameters">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:RelatedOverviewParameters</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:overviewLinkLabel" sv:type="String">
+              <sv:value/>
+            </sv:property>
+            <sv:property sv:name="hsl:showOverview" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+            <sv:node sv:name="hsl:overviewBeanPath">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hippo:mirror</sv:value>
+              </sv:property>
+              <sv:property sv:name="hippo:docbase" sv:type="String">
+                <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
+              </sv:property>
+            </sv:node>
+          </sv:node>
+          <sv:node sv:name="hsl:widgetParameters">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:RelatedWidgetParameters</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:size" sv:type="Long">
+              <sv:value>1</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:widgetTitle" sv:type="String">
+              <sv:value/>
+            </sv:property>
+            <sv:node sv:name="hsl:contentBeanPath">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hippo:mirror</sv:value>
+              </sv:property>
+              <sv:property sv:name="hippo:docbase" sv:type="String">
+                <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
+              </sv:property>
+            </sv:node>
+          </sv:node>
+          <sv:node sv:name="hsl:filterParameters">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:RelatedFilterParameters</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:overFilter" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:themaFilter" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:typeFilter" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
+      </sv:node>
     </sv:node>
     <sv:node sv:name="event-1">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -11848,6 +12473,95 @@ Testimonial text two</sv:value>
           </sv:node>
         </sv:node>
       </sv:node>
+    </sv:node>
+    <sv:node sv:name="hippo:translation">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hippo:translation</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:language" sv:type="String">
+        <sv:value/>
+      </sv:property>
+      <sv:property sv:name="hippo:message" sv:type="String">
+        <sv:value>Evenementen</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="events-facetnav">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hippofacnav:facetnavigation</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:count" sv:type="Long">
+        <sv:value>18</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:docbase" sv:type="String">
+        <sv:value>c5a41f30-985c-4a3b-8679-e1233d608df8</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippofacnav:facetnodenames" sv:type="String" sv:multiple="true">
+        <sv:value>Over</sv:value>
+        <sv:value>Thema</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippofacnav:facets" sv:type="String" sv:multiple="true">
+        <sv:value>hsl:subjecttags</sv:value>
+        <sv:value>hsl:thematags</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippofacnav:filters" sv:type="String" sv:multiple="true">
+        <sv:value>jcr:primaryType=hsl:EventPage</sv:value>
+        <sv:value>not(hsl:hideFromSearch=true)</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippofacnav:limit" sv:type="Long">
+        <sv:value>100</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippofacnav:skipresultsetfacetnavigationroot" sv:type="Boolean">
+        <sv:value>false</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippofacnav:skipresultsetfacetsavailable" sv:type="Boolean">
+        <sv:value>false</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippofacnav:sortby" sv:type="String" sv:multiple="true">
+        <sv:value>hsl:eventDate</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippofacnav:sortorder" sv:type="String" sv:multiple="true">
+        <sv:value>descending</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="events-facetnav-future">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hippofacnav:facetnavigation</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:count" sv:type="Long">
+        <sv:value>18</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:docbase" sv:type="String">
+        <sv:value>c5a41f30-985c-4a3b-8679-e1233d608df8</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippofacnav:facetnodenames" sv:type="String" sv:multiple="true">
+        <sv:value>Over</sv:value>
+        <sv:value>Thema</sv:value>
+        <sv:value>Future</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippofacnav:facets" sv:type="String" sv:multiple="true">
+        <sv:value>hsl:subjecttags</sv:value>
+        <sv:value>hsl:thematags</sv:value>
+        <sv:value>hsl:eventEndDate$[{name:'future', resolution:'day', begin:0}, {name:'past', resolution:'day', end:-1}]</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippofacnav:filters" sv:type="String" sv:multiple="true">
+        <sv:value>jcr:primaryType=hsl:EventPage</sv:value>
+        <sv:value>not(hsl:hideFromSearch=true)</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippofacnav:limit" sv:type="Long">
+        <sv:value>100</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippofacnav:skipresultsetfacetnavigationroot" sv:type="Boolean">
+        <sv:value>false</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippofacnav:skipresultsetfacetsavailable" sv:type="Boolean">
+        <sv:value>false</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippofacnav:sortby" sv:type="String" sv:multiple="true">
+        <sv:value>hsl:eventDate</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippofacnav:sortorder" sv:type="String" sv:multiple="true">
+        <sv:value>ascending</sv:value>
+      </sv:property>
     </sv:node>
   </sv:node>
   <sv:node sv:name="pers">

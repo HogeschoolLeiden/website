@@ -22,7 +22,8 @@
   <c:if test="${facetnav.count gt 0}">
 
     <c:forEach var="facet" items="${facetnav.folders}">
-	  <c:if test="${facet.resultSet.count > 0}">
+	<c:if test="${not (facet.name eq 'Future')}">  
+    <c:if test="${facet.resultSet.count > 0}">
 		  
         <section class="filtergroup col-md-3">
 		  <%-- <h2><c:out value="${facet.name eq 'Specialisaties' ?  'Vakgebieden' : facet.name}" escapeXml="true" /></h2> --%>
@@ -95,6 +96,7 @@
         </section>
                
 	  </c:if>
+    </c:if>
 	</c:forEach>
   
     <c:if test="${enableSearch}">

@@ -24,6 +24,7 @@ public class FacetsUtils {
     
     public static String getFacetDocumentType(HippoFacetNavigationBean facetBean){
         String result = "";
+        facetBean = facetBean.getRootFacetNavigationBean();
         
         Object facetProp = facetBean.getProperty(HIPPOFACNAV_FILTERS);
         if(facetProp instanceof String[]){
@@ -45,7 +46,7 @@ public class FacetsUtils {
     public static HippoBean getFacetScope(HippoFacetNavigationBean facetBean){
         
         HippoBean result = null;
-        
+        facetBean = facetBean.getRootFacetNavigationBean();
         String docBase = (String) facetBean.getProperty(HippoFacetAttributesConstants.HIPPO_DOCBASE);
         
         try {

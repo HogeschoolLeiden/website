@@ -849,6 +849,20 @@
             <sv:value>actueel/evenementen</sv:value>
           </sv:property>
         </sv:node>
+        <sv:node sv:name="Upcoming Evenementen">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:sitemenuitem</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+            <sv:value>disabled</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+            <sv:value>actueel/upcoming-evenementen</sv:value>
+          </sv:property>
+        </sv:node>
       </sv:node>
       <sv:node sv:name="Pers">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">

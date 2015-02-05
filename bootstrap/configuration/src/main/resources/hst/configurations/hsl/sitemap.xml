@@ -208,7 +208,7 @@
           <sv:value>overviewSitemapRefId</sv:value>
         </sv:property>
         <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
-          <sv:value>agenda</sv:value>
+          <sv:value>agenda-future</sv:value>
         </sv:property>
         <sv:property sv:name="hst:relativecontentpath" sv:type="String">
           <sv:value>pages/actueel/evenementen/${1}</sv:value>
@@ -299,6 +299,59 @@
         </sv:property>
         <sv:property sv:name="hst:relativecontentpath" sv:type="String">
           <sv:value>pages/actueel/artikelen/${1}</sv:value>
+        </sv:property>
+      </sv:node>
+    </sv:node>
+    <sv:node sv:name="upcoming-evenementen">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:sitemapitem</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+        <sv:value>hst:pages/facetedoverview</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+        <sv:value>contentBeanPath</sv:value>
+        <sv:value>defaultPageSize</sv:value>
+        <sv:value>labelPaths</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+        <sv:value>pages/actueel/evenementen/events-facetnav-future/Future/future</sv:value>
+        <sv:value>5</sv:value>
+        <sv:value>/content/documents/hsl/configuratie/valuelists/label-paths,/content/documents/hsl/configuratie/valuelists/thema-values,/content/documents/hsl/configuratie/valuelists/over-values</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:refId" sv:type="String">
+        <sv:value>agenda-future</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+        <sv:value>pages/actueel/evenementen/evenementen-future</sv:value>
+      </sv:property>
+      <sv:node sv:name="_any_">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:sitemapitem</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+          <sv:value>hst:pages/pagenotfound</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:componentconfigurationmappingnames" sv:type="String" sv:multiple="true">
+          <sv:value>hippofacnav:facetnavigation</sv:value>
+          <sv:value>hippofacnav:facetsubnavigation</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:componentconfigurationmappingvalues" sv:type="String" sv:multiple="true">
+          <sv:value>hst:pages/facetedoverview</sv:value>
+          <sv:value>hst:pages/facetedoverview</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+          <sv:value>contentBeanPath</sv:value>
+          <sv:value>defaultPageSize</sv:value>
+          <sv:value>labelPaths</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+          <sv:value>pages/actueel/evenementen/evenementen-future</sv:value>
+          <sv:value>5</sv:value>
+          <sv:value>/content/documents/hsl/configuratie/valuelists/label-paths,/content/documents/hsl/configuratie/valuelists/thema-values,/content/documents/hsl/configuratie/valuelists/over-values</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+          <sv:value>pages/actueel/evenementen/events-facetnav-future/Future/future/${1}</sv:value>
         </sv:property>
       </sv:node>
     </sv:node>

@@ -125,44 +125,51 @@ public class FacetedOverview extends MonolithicFacetedOverview {
     protected HstQuery getHstQuery(HstRequest request) throws QueryException {
 
         HstQuery query = null;
+        HippoBean scope = null;
         HippoBean contentBean = request.getRequestContext().getContentBean();
 
         if (contentBean instanceof OverviewPage) {
-
-            FacetedOverviewPageInfo parametersInfo = getComponentParametersInfo(request);
-            HippoBean scope = BeanUtils.getBean(parametersInfo.getContentBeanPath());
-            
-            if (scope instanceof HippoFacetNavigationBean) {
-                
-                String doctype = FacetsUtils.getFacetDocumentType((HippoFacetNavigationBean) scope);
-                HippoBean docbase = FacetsUtils.getFacetScope((HippoFacetNavigationBean) scope);
-                
-                query = request.getRequestContext().getQueryManager().createQuery(docbase, doctype);
-                
-                Filter globalFilter = query.createFilter();
-
-                String dayStringQuery = getPublicRequestParameter(request, "qd");
-
-                LOG.debug("DAY String Query = " + dayStringQuery); 
-                if (StringUtils.isNotBlank(dayStringQuery)) {
-                    applyDateFilter(globalFilter, dayStringQuery);
-                    query.setFilter(globalFilter);
-                } else {
-                    /** 
-                     * disable exclusion of highlighted item (for now)
-                     * excludeHighLightedItem(contentBean, globalFilter); 
-                     * */
-                    applyUserQuery(request, globalFilter);
-                    query.setFilter(globalFilter);
-                }
-
-            }
+            scope = getScopeFromParameters(request);
+        }else if(contentBean instanceof HippoFacetNavigationBean){
+            scope = contentBean;
         }
+            
+        if (scope instanceof HippoFacetNavigationBean) {
+            
+            String doctype = FacetsUtils.getFacetDocumentType((HippoFacetNavigationBean) scope);
+            HippoBean docbase = FacetsUtils.getFacetScope((HippoFacetNavigationBean) scope);
 
+            query = request.getRequestContext().getQueryManager().createQuery(docbase, doctype);
+
+            Filter globalFilter = query.createFilter();
+
+            String dayStringQuery = getPublicRequestParameter(request, "qd");
+
+            LOG.debug("DAY String Query = " + dayStringQuery); 
+            if (StringUtils.isNotBlank(dayStringQuery)) {
+                applyDateFilter(globalFilter, dayStringQuery);
+                query.setFilter(globalFilter);
+            } else {
+                /** 
+                 * disable exclusion of highlighted item (for now)
+                 * excludeHighLightedItem(contentBean, globalFilter); 
+                 * */
+                applyUserQuery(request, globalFilter);
+                query.setFilter(globalFilter);
+            }
+
+        }
+        
         if (query != null) {
             LOG.debug("----- QUERY = " + query.getQueryAsString(true));
         }
         return query;
+    }
+
+    private HippoBean getScopeFromParameters(HstRequest request) {
+        FacetedOverviewPageInfo parametersInfo = getComponentParametersInfo(request);
+        HippoBean scope = BeanUtils.getBean(parametersInfo.getContentBeanPath());
+        return scope;
     }
 
     private void applyDateFilter(Filter globalFilter, String dayToFilter) throws FilterException {
