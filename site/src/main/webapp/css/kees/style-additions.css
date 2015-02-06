@@ -1440,3 +1440,36 @@ col-md-3.col-xs-12 .mailplusform form ul li .mpFormField select{
 	}
 } 
 
+/* ----------------------------- */
+/* Remove calendar selected date */
+/* ----------------------------- */
+.removeDateFilter {
+	width: -moz-calc(100% - 30px);
+  	width: -webkit-calc(100% -30px);
+  	width: calc(100% - 30px);
+  	margin: 20px 15px;
+	background: #23114c;
+	text-align: center;
+}
+.removeDateFilter a {
+	width: 100%;	
+	color: white;
+}
+.removeDateFilter a:HOVER {
+	color: #008383;
+}
+
+@media (min-width: 992px) {
+	.removeDateFilter {
+		float: left;
+		margin-top: 0;
+	}
+}
+
+@media (max-width: 767px) {
+	.removeDateFilter {
+		margin-left: 30px;
+	}
+}
+
+

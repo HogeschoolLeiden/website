@@ -35,6 +35,7 @@
   <section class="filtergroup col-md-3 calendar">
     <h2 class="hidden"><c:out value="${model.paramInfo.widgetTitle}" escapeXml="true" /></h2>
     <div id="datepicker" class="hasDatepicker"></div>
+    
     <hst:resourceURL  var="resouceUrl" />
     <script type="text/javascript">
 		$(document).ready(function() {
@@ -54,6 +55,42 @@
         	});
     	});
   	</script>
+    
+    
+    
   </section>
-  <div class="clearfix"></div>
+
+  <opw:public-parameter parameterName="qd" var="hasDateFilter"/>
+  <c:choose>
+    <c:when test="${not empty hasDateFilter}">
+      <c:set var="noDateFilterRefID" value="${tag:getSitemapConfigParameter(pageContext.request, 'noDateFilterRefID')}"/>
+      
+      <section class="removeDateFilter">
+        <c:set var="noParamRefId">
+          <c:choose>
+            <c:when test="${not empty noDateFilterRefID}">
+              <c:out value="${noDateFilterRefID}"/>
+            </c:when>
+            <c:otherwise>
+              <c:out value="agenda-future"/>
+            </c:otherwise>
+          </c:choose>
+        </c:set>
+        <hst:link siteMapItemRefId="${noParamRefId}" var="current" >
+          <hst:param name="qd"/>
+        </hst:link>
+        <fmt:message key="remove.date.filter.message" var="removeFilterMessage"/>
+        <a class="btn" title="${removeFilterMessage }" href="${current}">
+          <span>${removeFilterMessage}</span>
+        </a>
+      </section>
+    </c:when>
+    <c:otherwise>
+      <div class="clearfix"></div>
+    </c:otherwise>
+  </c:choose>
+    
+
+  
+
 </c:if>  
