@@ -4140,7 +4140,7 @@
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
       <sv:value>/hst:hst/hst:blueprints/website-subsite/hst:configuration/hst:workspace</sv:value> 
-    </sv:property> 
+    </sv:property>
   </sv:node>  
   <sv:node sv:name="website-hst-blueprints-website-english-subsite-workspace-sitemap"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
@@ -4286,6 +4286,9 @@
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
       <sv:value>/hst:hst/hst:blueprints/website-subsite/hst:configuration</sv:value> 
+    </sv:property>
+    <sv:property sv:name="hippo:reloadonstartup" sv:type="Boolean"> 
+      <sv:value>true</sv:value> 
     </sv:property> 
   </sv:node>  
   <sv:node sv:name="website-hst-blueprints-website-english-subsite-sitemap"> 
@@ -4300,7 +4303,10 @@
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
       <sv:value>/hst:hst/hst:blueprints/website-english-subsite/hst:configuration</sv:value> 
-    </sv:property> 
+    </sv:property>
+    <sv:property sv:name="hippo:reloadonstartup" sv:type="Boolean"> 
+      <sv:value>true</sv:value> 
+    </sv:property>  
   </sv:node>  
   
   <sv:node sv:name="website-hst-blueprints-website-subsite-abstractpages"> 
