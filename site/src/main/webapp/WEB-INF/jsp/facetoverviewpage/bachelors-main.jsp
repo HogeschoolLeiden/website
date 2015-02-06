@@ -25,21 +25,23 @@
         <c:otherwise>
           <section class="overzicht col-md-9">
             
-            <h1 class="hidden"><c:out value="${model.document.title}"></c:out>  </h1> 
- 
               <tag:facetednavigation-bachelors facetnav="${model.facetBean}" labels="${model.labels}" enableSearch="true"/>
                        
               <tag:rssReader document="${model.document}"/>
                   
               <div class="overzichtlijst">
               
+                <hst:cmseditlink hippobean="${model.document}" />
+                <h1 class="title"><c:out value="${model.document.title}"></c:out> </h1>
+                <p class="intro"><c:out value="${model.document.introduction }"/></p>
+              
                 <div class="paginator-style">
                   <opw:simplepaginator paginator="${model.paginator}" namespaced="false"/>
                 </div>
                 
-               <c:if test="${not empty frontEndMessage or not (fn:length(model.items)>0) }">
-                 <h2 class="noQueryResults"><fmt:message key="facet.search.noresults"/></h2>
-               </c:if>
+                <c:if test="${not empty frontEndMessage or not (fn:length(model.items)>0) }">
+                   <h2 class="noQueryResults"><fmt:message key="facet.search.noresults"/></h2>
+                </c:if>
               
                 <c:forEach var="item" items="${model.items}">
                 
