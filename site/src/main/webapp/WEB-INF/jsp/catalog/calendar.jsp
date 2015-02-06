@@ -63,9 +63,11 @@
   <opw:public-parameter parameterName="qd" var="hasDateFilter"/>
   <c:choose>
     <c:when test="${not empty hasDateFilter}">
+      
       <c:set var="noDateFilterRefID" value="${tag:getSitemapConfigParameter(pageContext.request, 'noDateFilterRefID')}"/>
       
       <section class="removeDateFilter">
+        
         <c:set var="noParamRefId">
           <c:choose>
             <c:when test="${not empty noDateFilterRefID}">
@@ -76,14 +78,16 @@
             </c:otherwise>
           </c:choose>
         </c:set>
-        <hst:link siteMapItemRefId="${noParamRefId}" var="current" >
-          <hst:param name="qd"/>
-        </hst:link>
+        
+        <hst:link siteMapItemRefId="${noParamRefId}" var="current" />
+        
         <fmt:message key="remove.date.filter.message" var="removeFilterMessage"/>
+        
         <a class="btn" title="${removeFilterMessage }" href="${current}">
           <span>${removeFilterMessage}</span>
         </a>
       </section>
+      
     </c:when>
     <c:otherwise>
       <div class="clearfix"></div>
