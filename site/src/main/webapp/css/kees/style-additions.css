@@ -1043,6 +1043,33 @@ article.detail-content div.contentarea .content p a {
 /* mailplus-forms FLEXIBLE BLOCK and WIDGET */
 /* ---------------------------------------- */
 
+@media (max-width : 460px ) {
+	/* force table to not act as such for small sizes */
+	.mailplusform table, 
+	.mailplusform thead, 
+	.mailplusform tbody, 
+	.mailplusform th, 
+	.mailplusform td, 
+	.mailplusform tr { 
+		display: block; 
+	}
+	
+	/* Behave  like a "row" */
+	.mailplusform table td { 
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	.mailplusform form table .mpFormLabel,
+	.mailplusform form table .mpFormField {
+		width: 100% !important;
+	}
+}
+
+.mailplusform td.submitCellSpacer { display: none; }
+
 .mailplusform{
 	background-color: white;
 	padding-top: 10px;
@@ -1059,38 +1086,44 @@ article.detail-content div.contentarea .content p a {
 	list-style-type: none;
 }
 
-.mailplusform form ul li .mpFormLabel label{
+.mailplusform form .mpFormLabel label{
 	color: #23114c;
 	font-family: 'source_sans_prosemibold';
 	font-weight: 400;
 	font-style: normal;
 	font-size: 1.45em;
-	display: block;
-	float: none;
-	width: auto;
 }
 
 .mailplusform form ul li .mpFormField,
-.mailplusform form ul li .mpFormField textarea,
-.mailplusform form ul li .mpFormField select,
-.mailplusform form ul li .mpFormField input[type='text']:not([class~="mpDateField"]){
+.mailplusform form .mpLabelRow {
 	width: 100%;
 }
 
-.mailplusform form ul li .mpFormField input,
-.mailplusform form ul li .mpFormField select {
+.mailplusform form table .mpFormLabel{
+	width: 35%;
+}
+.mailplusform form table .mpFormField{
+	width: 65%;
+}
+
+.mailplusform form .mpFormField textarea,
+.mailplusform form .mpFormField select,
+.mailplusform form .mpFormField input[type='text']:not([class~="mpDateField"]){
+	width: 100%;
+}
+
+
+.mailplusform form .mpFormField input,
+.mailplusform form .mpFormField select {
 	padding: 6px 10px;
 }
 
-.aside .mailplusform form ul li .mpFormField input,
-.aside .mailplusform form ul li .mpFormField select,
-col-md-3.col-xs-12 .mailplusform form ul li .mpFormField input,
-col-md-3.col-xs-12 .mailplusform form ul li .mpFormField select{
+.aside .mailplusform form .mpFormField input,
+.aside .mailplusform form .mpFormField select {
 	padding: 3px 5px;
 }
 
-
-.mailplusform form ul li .mpFormField .ui-datepicker-trigger{
+.mailplusform form .mpFormField .ui-datepicker-trigger{
 	border:none;
 	width: 29px;
 	height: 32px;
@@ -1100,23 +1133,23 @@ col-md-3.col-xs-12 .mailplusform form ul li .mpFormField select{
 	background-repeat: no-repeat;
 }
 
-.mailplusform form ul li .mpFormField .mpDateField.mpDD,
-.mailplusform form ul li .mpFormField .mpDateField.mpMM{
+.mailplusform form .mpFormField .mpDateField.mpDD,
+.mailplusform form .mpFormField .mpDateField.mpMM {
 	width:20%;
 }
 
-.mailplusform form ul li .mpFormField .mpDateField.mpYYYY{
+.mailplusform form .mpFormField .mpDateField.mpYYYY{
 	width: 38%;	
 }
 
-.mailplusform form ul li .mpFormField ul li input[type='radio'],
-.mailplusform form ul li .mpFormField ul li input[type='checkbox'] {
+.mailplusform form .mpFormField ul li input[type='radio'],
+.mailplusform form .mpFormField ul li input[type='checkbox'] {
 	margin-right: 10px;
 	display: none;
 }
 
-.mailplusform form ul li .mpFormField ul li input[type='radio'] +label:before,
-.mailplusform form ul li .mpFormField ul li input[type='checkbox'] +label:before  {
+.mailplusform form .mpFormField ul li input[type='radio'] + label:before,
+.mailplusform form .mpFormField ul li input[type='checkbox'] + label:before  {
 	content: "";
 	width: 20px;
 	height: 20px;
@@ -1125,28 +1158,28 @@ col-md-3.col-xs-12 .mailplusform form ul li .mpFormField select{
 	margin: 0 10px 0 0;
 }
 
-.mailplusform form ul li .mpFormField ul li input[type='checkbox'] +label:before {
+.mailplusform form .mpFormField ul li input[type='checkbox'] + label:before {
 	background: url("../img/checkbox.png") center center no-repeat;
 	background-size: 20px 20px;
 }
 
-.mailplusform form ul li .mpFormField ul li input[type='radio'] +label:before {
+.mailplusform form .mpFormField ul li input[type='radio'] + label:before {
 	background: url("../img/radiobutton.png") center center no-repeat;
 	background-size: 20px 20px;
 }
-.mailplusform form ul li .mpFormField ul li input[type='checkbox']:checked +label:before {
+.mailplusform form .mpFormField ul li input[type='checkbox']:checked + label:before {
 	background: url("../img/checkbox-checked.png") center center no-repeat;
 	background-size: 20px 20px;
 }
 
-.mailplusform form ul li .mpFormField ul li input[type='radio']:checked +label:before {
+.mailplusform form .mpFormField ul li input[type='radio']:checked + label:before {
 	background: url("../img/radiobutton-checked.png") center center no-repeat;
 	background-size: 20px 20px;
 }
 
-.mailplusform form ul li .mpFormField ul li input[type='radio'] +label, 
-.mailplusform form ul li .mpFormField ul li input[type='checkbox'] +label,
-.mailplusform form ul li .mpFormField label {
+.mailplusform form .mpFormField ul li input[type='radio'] + label, 
+.mailplusform form .mpFormField ul li input[type='checkbox'] + label,
+.mailplusform form .mpFormField label {
 	font-size: 1em;
 	color: #666;
 	font-family: 'source_sans_proregular';
@@ -1155,7 +1188,7 @@ col-md-3.col-xs-12 .mailplusform form ul li .mpFormField select{
 	cursor: pointer;
 }
 
-.mailplusform form ul li  .submitButton{
+.mailplusform form .submitButton{
 	position: relative !important;
 	background: #23114c;
 	width: 140px;

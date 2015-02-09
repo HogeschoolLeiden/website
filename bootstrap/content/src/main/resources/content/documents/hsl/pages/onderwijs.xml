@@ -4,8 +4,8 @@
   </sv:property>
   <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
     <sv:value>hippotranslation:translated</sv:value>
-    <sv:value>hippo:translated</sv:value>
     <sv:value>mix:versionable</sv:value>
+    <sv:value>hippo:translated</sv:value>
   </sv:property>
   <sv:property sv:name="jcr:uuid" sv:type="String">
     <sv:value>3dfeca53-e4c6-4c6f-84bb-a84e5f82e34b</sv:value>
@@ -252,8 +252,8 @@
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
       <sv:value>hippotranslation:translated</sv:value>
-      <sv:value>hippo:translated</sv:value>
       <sv:value>mix:versionable</sv:value>
+      <sv:value>hippo:translated</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>c0eda788-9569-4dbc-9213-c0bc664d5a2a</sv:value>
@@ -621,8 +621,8 @@
       </sv:property>
       <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
         <sv:value>hippotranslation:translated</sv:value>
-        <sv:value>mix:versionable</sv:value>
         <sv:value>hippo:translated</sv:value>
+        <sv:value>mix:versionable</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
         <sv:value>8cb306cb-7ac8-43de-bd07-d591ff766c04</sv:value>
@@ -654,8 +654,8 @@
           <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
             <sv:value>mix:referenceable</sv:value>
             <sv:value>hsl:ContactPersonsMixin</sv:value>
-            <sv:value>hsl:HeadTeasersMixin</sv:value>
             <sv:value>hsl:TwitterMixin</sv:value>
+            <sv:value>hsl:HeadTeasersMixin</sv:value>
           </sv:property>
           <sv:property sv:name="jcr:uuid" sv:type="String">
             <sv:value>4a63afbd-c88e-4049-be82-fe3761cc8699</sv:value>
@@ -828,8 +828,8 @@
           <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
             <sv:value>mix:referenceable</sv:value>
             <sv:value>hsl:ContactPersonsMixin</sv:value>
-            <sv:value>hsl:TwitterMixin</sv:value>
             <sv:value>hsl:HeadTeasersMixin</sv:value>
+            <sv:value>hsl:TwitterMixin</sv:value>
             <sv:value>mix:versionable</sv:value>
           </sv:property>
           <sv:property sv:name="jcr:uuid" sv:type="String">
@@ -993,8 +993,8 @@
           <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
             <sv:value>mix:referenceable</sv:value>
             <sv:value>hsl:ContactPersonsMixin</sv:value>
-            <sv:value>hsl:HeadTeasersMixin</sv:value>
             <sv:value>hsl:TwitterMixin</sv:value>
+            <sv:value>hsl:HeadTeasersMixin</sv:value>
           </sv:property>
           <sv:property sv:name="jcr:uuid" sv:type="String">
             <sv:value>67dd5c88-5b87-4ae8-bbba-dda22ecf9cf9</sv:value>
@@ -1160,8 +1160,8 @@
         </sv:property>
         <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
           <sv:value>hippotranslation:translated</sv:value>
-          <sv:value>mix:versionable</sv:value>
           <sv:value>hippo:translated</sv:value>
+          <sv:value>mix:versionable</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>f4f2d895-0c7b-42f6-9143-5cf090cf0a24</sv:value>
@@ -1229,7 +1229,7 @@
               <sv:value>2014-08-25T11:27:47.554+02:00</sv:value>
             </sv:property>
             <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-              <sv:value>2014-11-19T13:22:10.081+01:00</sv:value>
+              <sv:value>2015-02-09T11:59:09.964+01:00</sv:value>
             </sv:property>
             <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
               <sv:value>admin</sv:value>
@@ -1244,7 +1244,7 @@
               <sv:value>author-one</sv:value>
             </sv:property>
             <sv:property sv:name="hsl:browserTitle" sv:type="String">
-              <sv:value>Hlochemie bacheloropleiding</sv:value>
+              <sv:value>Hlochemie bacheloropleiding mpf</sv:value>
             </sv:property>
             <sv:property sv:name="hsl:description" sv:type="String">
               <sv:value>Hlochemie bacheloropleiding Inleiding</sv:value>
@@ -1284,7 +1284,7 @@
               <sv:value>life-sciences</sv:value>
             </sv:property>
             <sv:property sv:name="hsl:title" sv:type="String">
-              <sv:value>Hlochemie bacheloropleiding</sv:value>
+              <sv:value>Hlochemie bacheloropleiding mpf</sv:value>
             </sv:property>
             <sv:node sv:name="hsl:headerImage">
               <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -1307,6 +1307,17 @@
               <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
               <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
               <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+            </sv:node>
+            <sv:node sv:name="hsl:flexibleblock">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hsl:MailPlusForm</sv:value>
+              </sv:property>
+              <sv:property sv:name="hsl:formId" sv:type="String">
+                <sv:value>mpform1252</sv:value>
+              </sv:property>
+              <sv:property sv:name="hsl:reactUrl" sv:type="String">
+                <sv:value>http://m7.mailplus.nl/genericservice/code/servlet/React?command=getFormJs&amp;uid=370351&amp;feid=NqPfBiXbiYqxJ63qgdpt&amp;p=http&amp;om=t&amp;of=h&amp;c=1</sv:value>
+              </sv:property>
             </sv:node>
           </sv:node>
           <sv:node sv:name="index">
@@ -1339,7 +1350,7 @@
               <sv:value>2014-08-25T11:27:47.554+02:00</sv:value>
             </sv:property>
             <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-              <sv:value>2014-11-19T13:22:23.027+01:00</sv:value>
+              <sv:value>2015-02-09T11:59:18.863+01:00</sv:value>
             </sv:property>
             <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
               <sv:value>admin</sv:value>
@@ -1354,7 +1365,7 @@
               <sv:value>author-one</sv:value>
             </sv:property>
             <sv:property sv:name="hsl:browserTitle" sv:type="String">
-              <sv:value>Hlochemie bacheloropleiding</sv:value>
+              <sv:value>Hlochemie bacheloropleiding mpf</sv:value>
             </sv:property>
             <sv:property sv:name="hsl:description" sv:type="String">
               <sv:value>Hlochemie bacheloropleiding Inleiding</sv:value>
@@ -1394,7 +1405,7 @@
               <sv:value>life-sciences</sv:value>
             </sv:property>
             <sv:property sv:name="hsl:title" sv:type="String">
-              <sv:value>Hlochemie bacheloropleiding</sv:value>
+              <sv:value>Hlochemie bacheloropleiding mpf</sv:value>
             </sv:property>
             <sv:node sv:name="hsl:headerImage">
               <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -1417,6 +1428,17 @@
               <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
               <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
               <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+            </sv:node>
+            <sv:node sv:name="hsl:flexibleblock">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hsl:MailPlusForm</sv:value>
+              </sv:property>
+              <sv:property sv:name="hsl:formId" sv:type="String">
+                <sv:value>mpform1252</sv:value>
+              </sv:property>
+              <sv:property sv:name="hsl:reactUrl" sv:type="String">
+                <sv:value>http://m7.mailplus.nl/genericservice/code/servlet/React?command=getFormJs&amp;uid=370351&amp;feid=NqPfBiXbiYqxJ63qgdpt&amp;p=http&amp;om=t&amp;of=h&amp;c=1</sv:value>
+              </sv:property>
             </sv:node>
           </sv:node>
           <sv:node sv:name="index">
@@ -1448,13 +1470,13 @@
               <sv:value>2014-08-25T11:27:47.554+02:00</sv:value>
             </sv:property>
             <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-              <sv:value>2014-11-19T13:22:23.027+01:00</sv:value>
+              <sv:value>2015-02-09T11:59:18.863+01:00</sv:value>
             </sv:property>
             <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
               <sv:value>admin</sv:value>
             </sv:property>
             <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-              <sv:value>2014-11-19T13:22:25.139+01:00</sv:value>
+              <sv:value>2015-02-09T11:59:20.986+01:00</sv:value>
             </sv:property>
             <sv:property sv:name="hippotranslation:id" sv:type="String">
               <sv:value>2fcf2bd1-85c9-4c27-934b-33fa07d4bf8a</sv:value>
@@ -1466,7 +1488,7 @@
               <sv:value>author-one</sv:value>
             </sv:property>
             <sv:property sv:name="hsl:browserTitle" sv:type="String">
-              <sv:value>Hlochemie bacheloropleiding</sv:value>
+              <sv:value>Hlochemie bacheloropleiding mpf</sv:value>
             </sv:property>
             <sv:property sv:name="hsl:description" sv:type="String">
               <sv:value>Hlochemie bacheloropleiding Inleiding</sv:value>
@@ -1506,7 +1528,7 @@
               <sv:value>life-sciences</sv:value>
             </sv:property>
             <sv:property sv:name="hsl:title" sv:type="String">
-              <sv:value>Hlochemie bacheloropleiding</sv:value>
+              <sv:value>Hlochemie bacheloropleiding mpf</sv:value>
             </sv:property>
             <sv:node sv:name="hsl:headerImage">
               <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -1529,6 +1551,17 @@
               <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
               <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
               <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+            </sv:node>
+            <sv:node sv:name="hsl:flexibleblock">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hsl:MailPlusForm</sv:value>
+              </sv:property>
+              <sv:property sv:name="hsl:formId" sv:type="String">
+                <sv:value>mpform1252</sv:value>
+              </sv:property>
+              <sv:property sv:name="hsl:reactUrl" sv:type="String">
+                <sv:value>http://m7.mailplus.nl/genericservice/code/servlet/React?command=getFormJs&amp;uid=370351&amp;feid=NqPfBiXbiYqxJ63qgdpt&amp;p=http&amp;om=t&amp;of=h&amp;c=1</sv:value>
+              </sv:property>
             </sv:node>
           </sv:node>
         </sv:node>
@@ -4268,8 +4301,8 @@
         </sv:property>
         <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
           <sv:value>hippotranslation:translated</sv:value>
-          <sv:value>mix:versionable</sv:value>
           <sv:value>hippo:translated</sv:value>
+          <sv:value>mix:versionable</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>3e9c5e6a-54d2-464b-a95f-9a8531ae8345</sv:value>
@@ -8149,8 +8182,8 @@
       </sv:property>
       <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
         <sv:value>hippotranslation:translated</sv:value>
-        <sv:value>mix:versionable</sv:value>
         <sv:value>hippo:translated</sv:value>
+        <sv:value>mix:versionable</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
         <sv:value>083b155a-d15f-481c-8903-84f5c8cc193b</sv:value>
@@ -10336,6 +10369,7 @@
         </sv:property>
         <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
           <sv:value>mix:referenceable</sv:value>
+          <sv:value>hsl:MailPlusMixin</sv:value>
           <sv:value>mix:versionable</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
@@ -10360,7 +10394,7 @@
           <sv:value>2014-08-21T16:15:44.204+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2015-01-21T13:42:24.918+01:00</sv:value>
+          <sv:value>2015-02-09T11:59:02.066+01:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -10372,7 +10406,7 @@
           <sv:value>nl</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:browserTitle" sv:type="String">
-          <sv:value>Proefstuderen</sv:value>
+          <sv:value>Proefstuderen mpf</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:description" sv:type="String">
           <sv:value>Proefstuderen Inleiding</sv:value>
@@ -10408,7 +10442,7 @@
           <sv:value>management</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:title" sv:type="String">
-          <sv:value>Proefstuderen</sv:value>
+          <sv:value>Proefstuderen mpf</sv:value>
         </sv:property>
         <sv:node sv:name="hsl:headerImage">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -10484,6 +10518,22 @@
             </sv:property>
           </sv:node>
         </sv:node>
+        <sv:node sv:name="hsl:mailPlusCompoundMixin">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:MailPlusCompoundMixin</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:widgetParameters">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:MailPlusForm</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:formId" sv:type="String">
+              <sv:value>mpform1252</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:reactUrl" sv:type="String">
+              <sv:value>http://m7.mailplus.nl/genericservice/code/servlet/React?command=getFormJs&amp;uid=370351&amp;feid=NqPfBiXbiYqxJ63qgdpt&amp;p=http&amp;om=t&amp;of=h&amp;c=1</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
       </sv:node>
       <sv:node sv:name="hippo:translation">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -10502,6 +10552,7 @@
         </sv:property>
         <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
           <sv:value>mix:referenceable</sv:value>
+          <sv:value>hsl:MailPlusMixin</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>e3b47ade-f293-4b89-978b-b6651e2f493c</sv:value>
@@ -10524,7 +10575,7 @@
           <sv:value>2014-08-21T16:15:44.204+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2015-01-21T13:42:21.682+01:00</sv:value>
+          <sv:value>2015-02-09T11:58:44.050+01:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -10536,7 +10587,7 @@
           <sv:value>nl</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:browserTitle" sv:type="String">
-          <sv:value>Proefstuderen</sv:value>
+          <sv:value>Proefstuderen mpf</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:description" sv:type="String">
           <sv:value>Proefstuderen Inleiding</sv:value>
@@ -10572,7 +10623,7 @@
           <sv:value>management</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:title" sv:type="String">
-          <sv:value>Proefstuderen</sv:value>
+          <sv:value>Proefstuderen mpf</sv:value>
         </sv:property>
         <sv:node sv:name="hsl:headerImage">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -10648,6 +10699,22 @@
             </sv:property>
           </sv:node>
         </sv:node>
+        <sv:node sv:name="hsl:mailPlusCompoundMixin">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:MailPlusCompoundMixin</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:widgetParameters">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:MailPlusForm</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:formId" sv:type="String">
+              <sv:value>mpform1252</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:reactUrl" sv:type="String">
+              <sv:value>http://m7.mailplus.nl/genericservice/code/servlet/React?command=getFormJs&amp;uid=370351&amp;feid=NqPfBiXbiYqxJ63qgdpt&amp;p=http&amp;om=t&amp;of=h&amp;c=1</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
       </sv:node>
       <sv:node sv:name="proefstuderen">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -10655,6 +10722,7 @@
         </sv:property>
         <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
           <sv:value>mix:referenceable</sv:value>
+          <sv:value>hsl:MailPlusMixin</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>41257d58-c004-47a3-b577-6eba4a0ee237</sv:value>
@@ -10678,13 +10746,13 @@
           <sv:value>2014-08-21T16:15:44.204+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2015-01-21T13:42:24.918+01:00</sv:value>
+          <sv:value>2015-02-09T11:59:02.066+01:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-          <sv:value>2015-01-21T13:42:26.655+01:00</sv:value>
+          <sv:value>2015-02-09T11:59:04.907+01:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:id" sv:type="String">
           <sv:value>9092432a-4dd8-4751-ab4f-f832f2648f2d</sv:value>
@@ -10693,7 +10761,7 @@
           <sv:value>nl</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:browserTitle" sv:type="String">
-          <sv:value>Proefstuderen</sv:value>
+          <sv:value>Proefstuderen mpf</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:description" sv:type="String">
           <sv:value>Proefstuderen Inleiding</sv:value>
@@ -10729,7 +10797,7 @@
           <sv:value>management</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:title" sv:type="String">
-          <sv:value>Proefstuderen</sv:value>
+          <sv:value>Proefstuderen mpf</sv:value>
         </sv:property>
         <sv:node sv:name="hsl:headerImage">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -10802,6 +10870,22 @@
             </sv:property>
             <sv:property sv:name="hsl:twitter" sv:type="Boolean">
               <sv:value>false</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="hsl:mailPlusCompoundMixin">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsl:MailPlusCompoundMixin</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsl:widgetParameters">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hsl:MailPlusForm</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:formId" sv:type="String">
+              <sv:value>mpform1252</sv:value>
+            </sv:property>
+            <sv:property sv:name="hsl:reactUrl" sv:type="String">
+              <sv:value>http://m7.mailplus.nl/genericservice/code/servlet/React?command=getFormJs&amp;uid=370351&amp;feid=NqPfBiXbiYqxJ63qgdpt&amp;p=http&amp;om=t&amp;of=h&amp;c=1</sv:value>
             </sv:property>
           </sv:node>
         </sv:node>
@@ -11736,8 +11820,8 @@
       </sv:property>
       <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
         <sv:value>hippotranslation:translated</sv:value>
-        <sv:value>mix:versionable</sv:value>
         <sv:value>hippo:translated</sv:value>
+        <sv:value>mix:versionable</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
         <sv:value>f9375bcd-0646-452e-b0f1-25b264f8d9a9</sv:value>
@@ -13067,8 +13151,8 @@
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
       <sv:value>hippotranslation:translated</sv:value>
-      <sv:value>mix:versionable</sv:value>
       <sv:value>hippo:translated</sv:value>
+      <sv:value>mix:versionable</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>5d7374f0-a911-41a6-a920-08dd628e29eb</sv:value>
@@ -13440,8 +13524,8 @@
       </sv:property>
       <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
         <sv:value>hippotranslation:translated</sv:value>
-        <sv:value>hippo:translated</sv:value>
         <sv:value>mix:versionable</sv:value>
+        <sv:value>hippo:translated</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
         <sv:value>57554d8d-b7b7-434b-b92b-238305cb138c</sv:value>
@@ -13813,8 +13897,8 @@
         </sv:property>
         <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
           <sv:value>hippotranslation:translated</sv:value>
-          <sv:value>mix:versionable</sv:value>
           <sv:value>hippo:translated</sv:value>
+          <sv:value>mix:versionable</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>ca60ecd1-3e1b-4217-a1ed-35ff45736ebc</sv:value>
@@ -15997,8 +16081,8 @@
         </sv:property>
         <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
           <sv:value>hippotranslation:translated</sv:value>
-          <sv:value>mix:versionable</sv:value>
           <sv:value>hippo:translated</sv:value>
+          <sv:value>mix:versionable</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>079ba703-931d-4089-bd60-033b6b389c24</sv:value>
@@ -17005,8 +17089,8 @@
       </sv:property>
       <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
         <sv:value>hippotranslation:translated</sv:value>
-        <sv:value>hippo:translated</sv:value>
         <sv:value>mix:versionable</sv:value>
+        <sv:value>hippo:translated</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
         <sv:value>5b23bcd0-6ef1-48e4-b9e8-77ef2ea5a721</sv:value>
@@ -17378,8 +17462,8 @@
         </sv:property>
         <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
           <sv:value>hippotranslation:translated</sv:value>
-          <sv:value>hippo:translated</sv:value>
           <sv:value>mix:versionable</sv:value>
+          <sv:value>hippo:translated</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>51856340-1b65-49ce-9825-ae75acd1c673</sv:value>
@@ -19252,8 +19336,8 @@
         </sv:property>
         <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
           <sv:value>hippotranslation:translated</sv:value>
-          <sv:value>hippo:translated</sv:value>
           <sv:value>mix:versionable</sv:value>
+          <sv:value>hippo:translated</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>31b953bd-525a-4a1d-854a-6d1c1b6b6b64</sv:value>
@@ -23081,8 +23165,8 @@
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
       <sv:value>hippotranslation:translated</sv:value>
-      <sv:value>mix:versionable</sv:value>
       <sv:value>hippo:translated</sv:value>
+      <sv:value>mix:versionable</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>d19c10cc-b383-4a51-983b-269b2006c5b2</sv:value>
@@ -24641,8 +24725,8 @@
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
       <sv:value>hippotranslation:translated</sv:value>
-      <sv:value>mix:versionable</sv:value>
       <sv:value>hippo:translated</sv:value>
+      <sv:value>mix:versionable</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>d890783a-1987-4e34-836c-58a05a60b4f9</sv:value>
@@ -25019,8 +25103,8 @@
       </sv:property>
       <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
         <sv:value>hippotranslation:translated</sv:value>
-        <sv:value>hippo:translated</sv:value>
         <sv:value>mix:versionable</sv:value>
+        <sv:value>hippo:translated</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
         <sv:value>a8343909-792d-4420-8e6a-c63d064a2e2e</sv:value>
