@@ -21,5 +21,10 @@ public class CalendarEventsCompoundMixinBean extends hslbeans.CalendarEventsComp
         }
         return result;
     }
+    
+    public Boolean getFutureFilter() {
+       Boolean futureFilter = super.getFutureFilter();
+       return futureFilter != null ? futureFilter : false;
+    }
 
 }

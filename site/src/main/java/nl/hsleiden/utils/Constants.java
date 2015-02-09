@@ -72,6 +72,7 @@ public class Constants {
 
         public static final String THEMA_FILTER = "themaFilter";
         public static final String OVER_FILTER = "overFilter";
+        public static final String FUTURE_FILTER = "futureFilter";
 
         public static final String INITIAL_LOCATION = "/content/documents/hsl/pages";
         public static final String INITIAL_ASSETS_LOCATION = "/content/assets";

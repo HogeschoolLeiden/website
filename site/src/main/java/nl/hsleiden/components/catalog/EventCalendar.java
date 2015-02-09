@@ -99,11 +99,16 @@ public class EventCalendar extends AjaxEnabledComponent {
             QueryException {
 
         DateFormat format = new SimpleDateFormat(DATE_FORMATE_PATTERN);
+        
         Date startDate = format.parse(request.getParameter("start"));
         Date endDate = format.parse(request.getParameter("end"));
-
+        
+        if(info.getFutureFilter()){
+            startDate  = HslDateUtils.getStartOfDay(new Date());
+        }
+        
         HstQuery query = request.getRequestContext().getQueryManager().createQuery(scope, EventPageBean.class);
-
+        
         Filter baseFilter = getDateFilter(startDate, endDate, query);
         addTaggingFilter(baseFilter, query, request, info);
 

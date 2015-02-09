@@ -460,6 +460,7 @@ public class RelatedItemsTest {
         EasyMock.expect(mock.getSortOrder()).andReturn(sortOrder).anyTimes();
         EasyMock.expect(mock.getSortBy()).andReturn(sortBy).anyTimes();
         EasyMock.expect(mock.getOverFilter()).andReturn(overFilter).anyTimes();
+        EasyMock.expect(mock.getFutureFilter()).andReturn(false).anyTimes();
         EasyMock.expect(mock.getSize()).andReturn(size).anyTimes();
         EasyMock.expect(mock.getShowOverview()).andReturn(showOverview).anyTimes();
         EasyMock.expect(mock.getOverviewLinkLabel()).andReturn(overviewLinkLabel).anyTimes();

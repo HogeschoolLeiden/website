@@ -62,4 +62,6 @@ public interface RelatedItemsInfo extends ContentBeanPathInfo {
     @Parameter(name = Constants.WidgetConstants.OVER_FILTER, defaultValue = "off")
     public Boolean getOverFilter();
 
+    @Parameter(name = WidgetConstants.FUTURE_FILTER, defaultValue = "off")
+    public Boolean getFutureFilter();
 }

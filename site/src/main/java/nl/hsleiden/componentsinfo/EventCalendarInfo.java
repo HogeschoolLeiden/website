@@ -31,4 +31,7 @@ public interface EventCalendarInfo extends MixinEnabled {
     @Parameter(name = WidgetConstants.OVER_FILTER, defaultValue = "off")
     public Boolean getOverFilter();
 
+    @Parameter(name = WidgetConstants.FUTURE_FILTER, defaultValue = "off")
+    public Boolean getFutureFilter();
+
 }

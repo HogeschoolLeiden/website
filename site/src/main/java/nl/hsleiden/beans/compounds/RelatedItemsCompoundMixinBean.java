@@ -5,6 +5,12 @@ import nl.hsleiden.componentsinfo.RelatedItemsInfo;
 public class RelatedItemsCompoundMixinBean extends hslbeans.RelatedCompoundMixin implements RelatedItemsInfo {
 
     @Override
+    public Boolean getFutureFilter() {
+        Boolean futureFilter = super.getFilterParameters().getFutureFilter();
+        return futureFilter != null ? futureFilter : false;
+    }
+    
+    @Override
     public Boolean getUseMixin() {
        throw new UnsupportedOperationException();
     }

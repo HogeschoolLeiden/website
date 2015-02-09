@@ -79,7 +79,7 @@ public abstract class RelatedItems extends AjaxEnabledComponent {
         return model;
     }
 
-    private void addItemsToModel(HstRequest request, Map<String, Object> model, RelatedItemsInfo parametersInfo) {
+    protected void addItemsToModel(HstRequest request, Map<String, Object> model, RelatedItemsInfo parametersInfo) {
         try {
             HstQuery query = getQuery(request, parametersInfo);
             if (query != null && request.getAttribute(WidgetConstants.WEB_MASTER_MESSAGE) == null) {
@@ -98,7 +98,7 @@ public abstract class RelatedItems extends AjaxEnabledComponent {
         }
     }
 
-    private HstQuery getQuery(HstRequest request, RelatedItemsInfo parametersInfo) throws QueryException {
+    protected HstQuery getQuery(HstRequest request, RelatedItemsInfo parametersInfo) throws QueryException {
 
         HstQuery query = createQuery(request, parametersInfo);
         if (query != null) {
@@ -112,14 +112,14 @@ public abstract class RelatedItems extends AjaxEnabledComponent {
 
     protected abstract HstQuery createQuery(HstRequest request, RelatedItemsInfo parametersInfo) throws QueryException;
 
-    private void addOverviewLinkToModel(HstRequest request, Map<String, Object> model, RelatedItemsInfo parametersInfo) {
+    protected void addOverviewLinkToModel(HstRequest request, Map<String, Object> model, RelatedItemsInfo parametersInfo) {
         HippoBean overviewLink = BeanUtils.getBeanViaAbsolutePath(parametersInfo.getOverviewBeanPath());
         if (parametersInfo.getShowOverview() && overviewLink != null) {
             model.put(OVERVIEW_LINK, overviewLink);
         }
     }
 
-    private List<HippoBean> getItems(HstQueryResult queryResult) {
+    protected List<HippoBean> getItems(HstQueryResult queryResult) {
         List<HippoBean> items = new ArrayList<HippoBean>();
         for (HippoBeanIterator hippoBeans = queryResult.getHippoBeans(); hippoBeans.hasNext();) {
             items.add(hippoBeans.nextHippoBean());
@@ -127,7 +127,7 @@ public abstract class RelatedItems extends AjaxEnabledComponent {
         return items;
     }
 
-    private void addSorting(HstRequest request, HstQuery query, RelatedItemsInfo parametersInfo) {
+    protected void addSorting(HstRequest request, HstQuery query, RelatedItemsInfo parametersInfo) {
 
         String sortBy = HslUtils.getNamespacedFieldName(parametersInfo.getSortBy());
 
@@ -140,7 +140,7 @@ public abstract class RelatedItems extends AjaxEnabledComponent {
         }
     }
 
-    private void addFilter(HstQuery query, RelatedItemsInfo info, HstRequest request) throws FilterException {
+    protected void addFilter(HstQuery query, RelatedItemsInfo info, HstRequest request) throws FilterException {
         HippoBean contentBean = request.getRequestContext().getContentBean();
         if (info.getOverFilter() || info.getThemaFilter()) {
             if (contentBean instanceof ArticlePage) {
@@ -149,10 +149,9 @@ public abstract class RelatedItems extends AjaxEnabledComponent {
                 request.setAttribute(WidgetConstants.WEB_MASTER_MESSAGE, "webmaster.nofiltering.message");
             }
         }
-
     }
 
-    private void addFiltering(HstQuery query, RelatedItemsInfo info, ArticlePage contentBean) throws FilterException {
+    protected void addFiltering(HstQuery query, RelatedItemsInfo info, ArticlePage contentBean) throws FilterException {
 
         Filter globalFilter = query.createFilter();
         if (info.getOverFilter()) {
