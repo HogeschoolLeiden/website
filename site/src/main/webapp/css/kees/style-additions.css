@@ -1043,31 +1043,6 @@ article.detail-content div.contentarea .content p a {
 /* mailplus-forms FLEXIBLE BLOCK and WIDGET */
 /* ---------------------------------------- */
 
-@media (max-width : 460px ) {
-	/* force table to not act as such for small sizes */
-	.mailplusform table, 
-	.mailplusform thead, 
-	.mailplusform tbody, 
-	.mailplusform th, 
-	.mailplusform td, 
-	.mailplusform tr { 
-		display: block; 
-	}
-	
-	/* Behave  like a "row" */
-	.mailplusform table td { 
-		border: none;
-		border-bottom: 1px solid #eee; 
-		position: relative;
-		padding-left: 50%; 
-	}
-	
-	.mailplusform form table .mpFormLabel,
-	.mailplusform form table .mpFormField {
-		width: 100% !important;
-	}
-}
-
 .mailplusform td.submitCellSpacer { display: none; }
 
 .mailplusform{
@@ -1200,6 +1175,58 @@ article.detail-content div.contentarea .content p a {
 	font-size: 1.6em;
 	border-width: 0;
 	color: white;
+}
+
+/* aside column has not enough space,
+should force table to not act as such */
+.aside .mailplusform table, 
+.aside .mailplusform thead, 
+.aside .mailplusform tbody, 
+.aside .mailplusform th, 
+.aside .mailplusform td, 
+.aside .mailplusform tr { 
+	display: block; 
+}
+
+/* force td to behave like a "row" */
+.aside .mailplusform table td { 
+	border: none;
+	position: relative;
+	padding: 5px 5px;
+}
+
+.aside .mailplusform form table .mpFormLabel,
+.aside .mailplusform form table .mpFormField {
+	width: 100% !important;
+}
+
+.aside .mailplusform table .mpFormField ul {
+	margin: 0;
+}
+	
+@media (max-width : 460px ) {
+	/* force table to not act as such for small sizes */
+	.mailplusform table, 
+	.mailplusform thead, 
+	.mailplusform tbody, 
+	.mailplusform th, 
+	.mailplusform td, 
+	.mailplusform tr { 
+		display: block; 
+	}
+	
+	/* Behave  like a "row" */
+	.mailplusform table td { 
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	.mailplusform form table .mpFormLabel,
+	.mailplusform form table .mpFormField {
+		width: 100% !important;
+	}
 }
 
 /* --------------------------------------------------------- */
