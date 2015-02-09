@@ -28,6 +28,7 @@ public class RelatedEvents extends RelatedItems {
     @Override
     protected HstQuery createQuery(HstRequest request, RelatedItemsInfo parametersInfo) throws QueryException {
 
+        System.out.println("why does not sonar mail arrive ??");
         HstQuery result = null;
         HippoBean scope = BeanUtils.getBeanViaAbsolutePath(parametersInfo.getContentBeanPath());
         if (scope != null) {
