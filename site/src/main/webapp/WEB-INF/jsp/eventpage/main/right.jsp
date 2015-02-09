@@ -15,6 +15,8 @@
     <tag:infoBlock document="${document}" event="true"/>
   </c:when>
   <c:otherwise>
-    <tag:renderDate document="${document}" dateClass="datum large info"/>
+    <section class="icondate only">
+      <tag:renderDate document="${document}" dateClass="datum large info"/>
+    </section>
   </c:otherwise>
 </c:choose>

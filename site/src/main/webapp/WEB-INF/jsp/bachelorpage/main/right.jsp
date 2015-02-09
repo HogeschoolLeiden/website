@@ -15,11 +15,13 @@
     <tag:infoBlock document="${document}"/>
   </c:when>
   <c:otherwise>
-    <figure class="datum large info"> 
-      <img class="info" src="<hst:link hippobean="${document.icon.listImageMedium}"/>"
-         alt="<c:out value="${document.icon.alt}"/>"
-         title="<c:out value="${document.icon.alt}"/>" />  <%-- size:60x60 or width: 60px--%>
-    </figure>
+    <section class="icondate only">
+      <figure class="datum large info"> 
+        <img class="info" src="<hst:link hippobean="${document.icon.listImageMedium}"/>"
+           alt="<c:out value="${document.icon.alt}"/>"
+           title="<c:out value="${document.icon.alt}"/>" />  <%-- size:60x60 or width: 60px--%>
+      </figure>
+    </section>
   </c:otherwise>
 </c:choose>
 

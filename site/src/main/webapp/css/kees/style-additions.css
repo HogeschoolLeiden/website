@@ -984,27 +984,45 @@ article.detail-content div.contentarea .content p a {
     }
 
 	/* bachelors detail page - info block - smaller icon */
+	.col-md-4.col-sm-4.aside .blok.colorbg.lichtpaars.info {
+		width: -moz-calc(100% - 20px);
+		width: -webkit-calc(100% - 20px);
+		width: calc(100% - 20px);
+	}
 	.col-md-4.col-sm-4.aside .blok.colorbg.lichtpaars.info {margin-left: 20px; } 
-	.col-md-4.col-sm-4.aside > time.datum.large.info,
-	.col-md-4.col-sm-4.aside > figure.datum.large.info {margin-left: 35px; }
+	.col-md-4.col-sm-4.aside .icondate.only time.datum.large.info,
+	.col-md-4.col-sm-4.aside .icondate.only figure.datum.large.info {margin-left: 35px; }
 	 
  	.col-md-4.col-sm-4.aside .blok.colorbg.lichtpaars.info figure.datum.large.info,
- 	.col-md-4.col-sm-4.aside .blok.colorbg.lichtpaars.info time.datum.large.info,
- 	.col-md-4.col-sm-4.aside > time.datum.large.info,
- 	.col-md-4.col-sm-4.aside > figure.datum.large.info{
+ 	.col-md-4.col-sm-4.aside .blok.colorbg.lichtpaars.info time.datum.large.info{
 		width: 75px; height: 75px;
-		left: -35px; top:-25px; padding-top: 15px; 
+		left: -35px; top:-23px; padding-top: 15px; 
+	}
+
+ 	.col-md-4.col-sm-4.aside .icondate.only time.datum.large.info,
+ 	.col-md-4.col-sm-4.aside .icondate.only figure.datum.large.info{
+		width: 75px; height: 75px;
+		left: -35px; top:-15px; padding-top: 15px; 
 	}
 	
-
- 	.col-md-4.col-sm-4.aside .blok.colorbg.lichtpaars.info time.datum.large.info,
- 	.col-md-4.col-sm-4.aside > time.datum.large.info {
+	.col-md-4.col-sm-4.aside .icondate.only{
+		height: 65px;
+	}
+	
+	.col-md-4.col-sm-4.aside .blok.colorbg.lichtpaars.info time.datum.large.info,
+ 	.col-md-4.col-sm-4.aside .icondate.only time.datum.large.info {
 		font-size: 1.6em;
 		line-height: 1.1em;
 	}
 	
 	.col-md-4.col-sm-4.aside .blok.colorbg.lichtpaars.info figure.datum.large.info img.info,
-	.col-md-4.col-sm-4.aside > figure.datum.large.info img.info { width: 45px;}
+	.col-md-4.col-sm-4.aside .icondate.only figure.datum.large.info img.info { width: 45px;}
+}
+
+@media ( max-width :767px) and (orientation:landscape) {
+	.col-md-4.col-sm-4.aside .blok.colorbg.lichtpaars.info {
+		width: 96%;
+	}
 }
 
 /* ------------------------------------------------------------ */
