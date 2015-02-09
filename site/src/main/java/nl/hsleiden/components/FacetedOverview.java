@@ -168,8 +168,7 @@ public class FacetedOverview extends MonolithicFacetedOverview {
 
     private HippoBean getScopeFromParameters(HstRequest request) {
         FacetedOverviewPageInfo parametersInfo = getComponentParametersInfo(request);
-        HippoBean scope = BeanUtils.getBean(parametersInfo.getContentBeanPath());
-        return scope;
+        return BeanUtils.getBean(parametersInfo.getContentBeanPath());
     }
 
     private void applyDateFilter(Filter globalFilter, String dayToFilter) throws FilterException {

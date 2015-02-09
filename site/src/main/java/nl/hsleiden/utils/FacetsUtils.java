@@ -24,9 +24,9 @@ public class FacetsUtils {
     
     public static String getFacetDocumentType(HippoFacetNavigationBean facetBean){
         String result = "";
-        facetBean = facetBean.getRootFacetNavigationBean();
+        HippoFacetNavigationBean rootFacetBean = facetBean.getRootFacetNavigationBean();
         
-        Object facetProp = facetBean.getProperty(HIPPOFACNAV_FILTERS);
+        Object facetProp = rootFacetBean.getProperty(HIPPOFACNAV_FILTERS);
         if(facetProp instanceof String[]){
             String[] facetFilterProperties = (String[])facetProp;
             for (String filterProperty : facetFilterProperties) {
@@ -46,11 +46,11 @@ public class FacetsUtils {
     public static HippoBean getFacetScope(HippoFacetNavigationBean facetBean){
         
         HippoBean result = null;
-        facetBean = facetBean.getRootFacetNavigationBean();
-        String docBase = (String) facetBean.getProperty(HippoFacetAttributesConstants.HIPPO_DOCBASE);
+        HippoFacetNavigationBean rootFacetBean = facetBean.getRootFacetNavigationBean();
+        String docBase = (String) rootFacetBean.getProperty(HippoFacetAttributesConstants.HIPPO_DOCBASE);
         
         try {
-            Object object = facetBean.getObjectConverter().getObject(docBase, facetBean.getNode());
+            Object object = rootFacetBean.getObjectConverter().getObject(docBase, rootFacetBean.getNode());
             if(object instanceof HippoBean){
                 result = (HippoBean) object;
             }

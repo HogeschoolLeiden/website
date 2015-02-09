@@ -1,16 +1,14 @@
 package nl.hsleiden.components.catalog;
 
-import hslbeans.ArticlePage;
-
 import java.util.Date;
 
 import nl.hsleiden.beans.EventPageBean;
 import nl.hsleiden.beans.mixin.RelatedEventsMixin;
 import nl.hsleiden.componentsinfo.RelatedEventsInfo;
 import nl.hsleiden.componentsinfo.RelatedItemsInfo;
-import nl.hsleiden.utils.HslDateUtils;
 import nl.hsleiden.utils.Constants.FieldName;
 import nl.hsleiden.utils.Constants.WidgetConstants;
+import nl.hsleiden.utils.HslDateUtils;
 
 import org.hippoecm.hst.content.beans.query.HstQuery;
 import org.hippoecm.hst.content.beans.query.exceptions.FilterException;
@@ -28,7 +26,6 @@ public class RelatedEvents extends RelatedItems {
     @Override
     protected HstQuery createQuery(HstRequest request, RelatedItemsInfo parametersInfo) throws QueryException {
 
-        System.out.println("why does not sonar mail arrive ??");
         HstQuery result = null;
         HippoBean scope = BeanUtils.getBeanViaAbsolutePath(parametersInfo.getContentBeanPath());
         if (scope != null) {
