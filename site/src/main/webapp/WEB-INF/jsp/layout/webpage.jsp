@@ -98,6 +98,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
   
   <hst:headContributions categoryIncludes="extraCss" xhtml="true" />
+  
+  <hst:link var="canonicalLink" canonical="true"/>  
+  <link rel="canonical" href="${canonicalLink}"/>
+
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
