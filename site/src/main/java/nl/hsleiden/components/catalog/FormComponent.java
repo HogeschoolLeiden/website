@@ -78,7 +78,7 @@ public class FormComponent extends FormStoringEformComponent {
     }
 
     private String getRedirectionSitemap(final HstRequest request) {
-        String result = getComponentParameter(request, ATTRIBUTE_DONE_REDIRECT, null);
+        String result = getComponentParameter(ATTRIBUTE_DONE_REDIRECT, null);
         FormComponentInfo parametersInfo = getConfiguration(request);
         String beanPath = parametersInfo.getThanksBeanPath();
         if (beanPath != null && !beanPath.isEmpty()) {
@@ -88,7 +88,7 @@ public class FormComponent extends FormStoringEformComponent {
     }
 
     private void redirectToSitemap(final HstRequest request, final HstResponse response, String redirect) {
-        if (notEmpty(redirect)) {
+        if (!redirect.isEmpty()) {
             LOG.debug("redirecting to {}", redirect);
             sendRedirect(redirect, request, response);
         }
