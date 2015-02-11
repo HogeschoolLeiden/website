@@ -43,8 +43,23 @@
               <hst:include ref="contentTop" />
            
    
-              <c:if test="${not empty frontEndMessage or not (fn:length(model.items)>0) }">
-                <h2 class="noQueryResults"><fmt:message key="facet.search.noresults"/></h2>
+              <c:if test="${not empty frontEndMessage}">
+                <h2 class="noQueryResults"><fmt:message key="${frontEndMessage}" />
+                  <c:if test="${frontEndMessage eq 'facet.no.future.events'}">
+                    <hst:link var="archiveLink" siteMapItemRefId="agenda" />
+                    <a href="${archiveLink}">
+                      <c:out value=" "/>
+                      <fmt:message key="back.to.archive"/> 
+                    </a>
+                  </c:if>
+                  <c:if test="${frontEndMessage eq 'facet.search.noresults'}">
+                    <hst:link var="canonicalLink" canonical="true"/>  
+                    <a href="${canonicalLink}">
+                      <c:out value=" "/>
+                      <fmt:message key="remove.query.param"/> 
+                    </a>
+                  </c:if>
+                </h2>
               </c:if>
               
               <c:forEach var="item" items="${model.items}">

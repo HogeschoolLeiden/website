@@ -19,7 +19,7 @@
   
   <hst:include ref="leftTop" />
   
-  <c:if test="${facetnav.count gt 0}">
+  <c:if test="${facetnav.count gt 0 }">
 
     <c:forEach var="facet" items="${facetnav.folders}">
 	<c:if test="${not (facet.name eq 'Future')}">  
@@ -99,25 +99,26 @@
     </c:if>
 	</c:forEach>
   
-    <c:if test="${enableSearch}">
-      <section class="filtergroup col-md-3">
-        <fmt:message var="submitText" key="search.filter.keywords"/>
-        <h2><c:out value="${submitText}" /></h2>
-        <div class="filterlist">
-          <form role="form" class="form" method="get">
-                <div class="form-group">
-                <%-- escape js --%>
-                  <input type="text" name="q" class="form-control" placeholder=""
-                    ${not empty model.query? 'value=\"' : ''} ${fn:escapeXml(model.query)} ${not empty model.query? '\"' : ''}>
-                </div>
-                <button class="btn fa fa-search no-radius" type="submit">
-                  <span><c:out value="${submitText}" /></span>                            
-                </button> 
-           </form>
-        </div>
-      </section>
-    </c:if> 
           
   </c:if>
+
+  <c:if test="${enableSearch}">
+    <section class="filtergroup col-md-3">
+      <fmt:message var="submitText" key="search.filter.keywords"/>
+      <h2><c:out value="${submitText}" /></h2>
+      <div class="filterlist">
+        <form role="form" class="form" method="get">
+              <div class="form-group">
+              <%-- escape js --%>
+                <input type="text" name="q" class="form-control" placeholder=""
+                  ${not empty model.query? 'value=\"' : ''} ${fn:escapeXml(model.query)} ${not empty model.query? '\"' : ''}>
+              </div>
+              <button class="btn fa fa-search no-radius" type="submit">
+                <span><c:out value="${submitText}" /></span>                            
+              </button> 
+         </form>
+      </div>
+    </section>
+  </c:if> 
     
 </div>
