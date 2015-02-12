@@ -99,7 +99,7 @@
   
   <hst:headContributions categoryIncludes="extraCss" xhtml="true" />
   
-  <hst:link var="canonicalLink" canonical="true"/>  
+  <hst:link var="canonicalLink" hippobean="${document}" canonical="true"/>  
   <link rel="canonical" href="${canonicalLink}"/>
 
 </head>
@@ -118,7 +118,7 @@
   	<hst:include ref="main" />
       	
     <hst:include ref="footer" />
-
+ 
     <hst:include ref="help" />
 	 
     <hst:headContributions categoryIncludes="scripts" xhtml="true" />
