@@ -35,23 +35,23 @@
             
             <c:forEach items="${model.searchResults.hits}" var="hit">
               <c:set var="item" value="${hit.bean}"/>
-              <hst:link hippobean="${hit.bean}" var="link"/>
-                
-              <article class="media clearfix">
-                <hst:cmseditlink hippobean="${item}" />
+              
+              <c:if test="${tag:isSubclassOfWebPage(item)}">
+                <hst:link hippobean="${hit.bean}" var="link"/>
                   
-                  
-                <a href="${link}">
-                  <%-- afmeting afbeelding: 100x100 --%>
-                  <tag:renderListImage item="${item}"/>
-                   
-                  <div class="media-body">
-                    <h1 class="media-heading"><c:out value="${item.title }"/></h1>
-                    <p><c:out value="${item.introduction }"/></p>
-                  </div>   
-                </a>
-                   
-              </article>
+                <article class="media clearfix">
+                  <hst:cmseditlink hippobean="${item}" />
+                    
+                  <a href="${link}">
+                    <tag:renderListImage item="${item}"/>                  
+                    <div class="media-body">
+                      <h1 class="media-heading"><c:out value="${item.title }"/></h1>
+                      <p><c:out value="${item.introduction }"/></p>
+                    </div>   
+                  </a>
+                     
+                </article>
+              </c:if>
                 
             </c:forEach>
           </div>
@@ -66,7 +66,6 @@
       
       <div class="filter filter-collapse collapse clearfix algemeenfilter sm-facet-display">
         <hst:include ref="leftTop" />
-        <%-- <h4><fmt:message key="refine.results" /></h4> --%>
          <hst:link siteMapItemRefId="search" var="searchPageUrl" navigationStateful="false"/>
          <tag:facetedelasticsearch facets="${model.facets}" searchPageUrl="${searchPageUrl}" facetItemCssClass="checkbox"  facetsCssClass="fieldset" />
       </div>
