@@ -70,7 +70,7 @@
         <sv:value>facets</sv:value>
       </sv:property>
       <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
-        <sv:value>{"types":["ArticlePage","BachelorPage","EducationPage","EventPage","blogpost","Lectorat","OmnikassaPage","PersonnelPage","PersPage","NewsPage","WebPage"],"scope":"..","filters": [{"type": "term","field": "hideFromSearch","values": ["false"]}],"suggestions":{"ngramFields":["nGram"],"ignoreFields":["hippo_paths","jcr_uuid","author","hippostdpubwf_creationDate","hippostdpubwf_lastModificationDate"],"numberOfDocuments":5,"maxSuggestions":10}}</sv:value>
+        <sv:value>{"types":["ArticlePage","BachelorPage","EducationPage","EventPage","blogpost","Lectorat","OmnikassaPage","PersonnelPage","PersPage","NewsPage","WebPage"],"scope":"..","filters":[{"type":"term","field":"hideFromSearch","values":["false"]}],"suggestions":{"ngramFields":["nGram"],"ignoreFields":["hippotranslation_id","hippo_paths","jcr_uuid","author","hippostdpubwf_creationDate","hippostdpubwf_lastModificationDate","hippostd_stateSummary","hippostd_state","hippo_availability","hippo_modes","hippo_facets","hippo_values"],"numberOfDocuments":5,"maxSuggestions":10}}</sv:value>
       </sv:property>
       <sv:property sv:name="hst:resourcetemplate" sv:type="String">
         <sv:value>blank</sv:value>
