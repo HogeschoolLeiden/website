@@ -64,14 +64,25 @@
       <sv:value>Configuratie</sv:value>
     </sv:property>
   </sv:node>
+  <sv:node sv:name="hippo:translation">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hippo:translation</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:language" sv:type="String">
+      <sv:value/>
+    </sv:property>
+    <sv:property sv:name="hippo:message" sv:type="String">
+      <sv:value>Configuratie</sv:value>
+    </sv:property>
+  </sv:node>
   <sv:node sv:name="valuelists">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hippostd:folder</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
       <sv:value>hippotranslation:translated</sv:value>
-      <sv:value>hippo:translated</sv:value>
       <sv:value>mix:versionable</sv:value>
+      <sv:value>hippo:translated</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>0710213c-430e-44b9-871c-dabb4f22d510</sv:value>
@@ -1480,8 +1491,8 @@
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
       <sv:value>hippotranslation:translated</sv:value>
-      <sv:value>hippo:translated</sv:value>
       <sv:value>mix:versionable</sv:value>
+      <sv:value>hippo:translated</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>9d40f53f-c9e7-4a90-9a4f-706c3396eaf5</sv:value>
@@ -3225,7 +3236,7 @@
           <sv:value>2014-07-09T11:47:12.308+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2015-02-06T09:35:55.536+01:00</sv:value>
+          <sv:value>2015-02-13T16:08:55.011+01:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -3238,6 +3249,7 @@
         </sv:property>
         <sv:property sv:name="resourcebundle:descriptions" sv:type="String" sv:multiple="true">
           <sv:value>Default value for label of the overview links in the widgets</sv:value>
+          <sv:value/>
           <sv:value/>
           <sv:value/>
           <sv:value/>
@@ -3278,6 +3290,7 @@
           <sv:value>right.facet.overview</sv:value>
           <sv:value>max.submission.nr.message</sv:value>
           <sv:value>remove.date.filter.message</sv:value>
+          <sv:value>back.overview.nascholingen</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages" sv:type="String" sv:multiple="true">
           <sv:value>Overview</sv:value>
@@ -3298,6 +3311,7 @@
           <sv:value>ALLE MASTERS</sv:value>
           <sv:value>The maximum number of submission for this form has been reached</sv:value>
           <sv:value>remove.date.filter.message</sv:value>
+          <sv:value>back to masters and nascolingen</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages_en" sv:type="String" sv:multiple="true">
           <sv:value>Overview</sv:value>
@@ -3318,6 +3332,7 @@
           <sv:value>ALLE MASTERS</sv:value>
           <sv:value>The maximum number of submission for this form has been reached</sv:value>
           <sv:value>remove.date.filter.message</sv:value>
+          <sv:value>back to masters and nascolingen</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages_nl" sv:type="String" sv:multiple="true">
           <sv:value>Overview</sv:value>
@@ -3338,6 +3353,7 @@
           <sv:value>ALLE MASTERS</sv:value>
           <sv:value>The maximum number of submission for this form has been reached</sv:value>
           <sv:value>remove.date.filter.message</sv:value>
+          <sv:value>back to masters and nascolingen</sv:value>
         </sv:property>
       </sv:node>
       <sv:node sv:name="hippo:translation">
@@ -3381,7 +3397,7 @@
           <sv:value>2014-07-09T11:47:12.308+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2015-02-06T09:36:15.549+01:00</sv:value>
+          <sv:value>2015-02-13T16:09:23.881+01:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -3394,6 +3410,7 @@
         </sv:property>
         <sv:property sv:name="resourcebundle:descriptions" sv:type="String" sv:multiple="true">
           <sv:value>Default value for label of the overview links in the widgets</sv:value>
+          <sv:value/>
           <sv:value/>
           <sv:value/>
           <sv:value/>
@@ -3434,6 +3451,7 @@
           <sv:value>right.facet.overview</sv:value>
           <sv:value>max.submission.nr.message</sv:value>
           <sv:value>remove.date.filter.message</sv:value>
+          <sv:value>back.overview.nascholingen</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages" sv:type="String" sv:multiple="true">
           <sv:value>Overview</sv:value>
@@ -3454,6 +3472,7 @@
           <sv:value>ALLE MASTERS</sv:value>
           <sv:value>The maximum number of submission for this form has been reached</sv:value>
           <sv:value>remove.date.filter.message</sv:value>
+          <sv:value>back to masters and nascolingen</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages_en" sv:type="String" sv:multiple="true">
           <sv:value>Overview</sv:value>
@@ -3474,6 +3493,7 @@
           <sv:value>ALLE MASTERS</sv:value>
           <sv:value>The maximum number of submission for this form has been reached</sv:value>
           <sv:value>remove.date.filter.message</sv:value>
+          <sv:value>back to masters and nascolingen</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages_nl" sv:type="String" sv:multiple="true">
           <sv:value>Overview</sv:value>
@@ -3494,6 +3514,7 @@
           <sv:value>ALLE MASTERS</sv:value>
           <sv:value>The maximum number of submission for this form has been reached</sv:value>
           <sv:value>remove.date.filter.message</sv:value>
+          <sv:value>back to masters and nascolingen</sv:value>
         </sv:property>
       </sv:node>
       <sv:node sv:name="widget-messages">
@@ -3525,13 +3546,13 @@
           <sv:value>2014-07-09T11:47:12.308+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2015-02-06T09:36:15.549+01:00</sv:value>
+          <sv:value>2015-02-13T16:09:23.881+01:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-          <sv:value>2015-02-06T09:36:17.267+01:00</sv:value>
+          <sv:value>2015-02-13T16:09:25.643+01:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:id" sv:type="String">
           <sv:value>a624d81b-1d29-4fa5-a54c-22baa0004a2a</sv:value>
@@ -3541,6 +3562,7 @@
         </sv:property>
         <sv:property sv:name="resourcebundle:descriptions" sv:type="String" sv:multiple="true">
           <sv:value>Default value for label of the overview links in the widgets</sv:value>
+          <sv:value/>
           <sv:value/>
           <sv:value/>
           <sv:value/>
@@ -3581,6 +3603,7 @@
           <sv:value>right.facet.overview</sv:value>
           <sv:value>max.submission.nr.message</sv:value>
           <sv:value>remove.date.filter.message</sv:value>
+          <sv:value>back.overview.nascholingen</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages" sv:type="String" sv:multiple="true">
           <sv:value>Overview</sv:value>
@@ -3601,6 +3624,7 @@
           <sv:value>ALLE MASTERS</sv:value>
           <sv:value>The maximum number of submission for this form has been reached</sv:value>
           <sv:value>remove.date.filter.message</sv:value>
+          <sv:value>back to masters and nascolingen</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages_en" sv:type="String" sv:multiple="true">
           <sv:value>Overview</sv:value>
@@ -3621,6 +3645,7 @@
           <sv:value>ALLE MASTERS</sv:value>
           <sv:value>The maximum number of submission for this form has been reached</sv:value>
           <sv:value>remove.date.filter.message</sv:value>
+          <sv:value>back to masters and nascolingen</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages_nl" sv:type="String" sv:multiple="true">
           <sv:value>Overview</sv:value>
@@ -3641,6 +3666,7 @@
           <sv:value>ALLE MASTERS</sv:value>
           <sv:value>The maximum number of submission for this form has been reached</sv:value>
           <sv:value>remove.date.filter.message</sv:value>
+          <sv:value>back to masters and nascolingen</sv:value>
         </sv:property>
       </sv:node>
     </sv:node>
