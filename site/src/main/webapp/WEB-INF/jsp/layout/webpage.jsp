@@ -99,7 +99,7 @@
   
   <hst:headContributions categoryIncludes="extraCss" xhtml="true" />
   
-  <hst:link var="canonicalLink" hippobean="${document}" canonical="true"/>  
+  <hst:link var="canonicalLink" hippobean="${document}" canonical="true" fullyQualified="true"/>  
   <link rel="canonical" href="${canonicalLink}"/>
 
 </head>
