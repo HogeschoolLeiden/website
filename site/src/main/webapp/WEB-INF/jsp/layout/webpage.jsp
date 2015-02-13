@@ -99,7 +99,7 @@
   
   <hst:headContributions categoryIncludes="extraCss" xhtml="true" />
   
-  <hst:link var="canonicalLink" hippobean="${document}" canonical="true"/>  
+  <hst:link var="canonicalLink" hippobean="${document}" canonical="true" fullyQualified="true"/>  
   <link rel="canonical" href="${canonicalLink}"/>
 
 </head>
@@ -137,9 +137,7 @@
     <script type="text/javascript" src="<hst:link path="/js/kees/vendor/ekko-lightbox.js"/>" ></script>
     <script type="text/javascript" src="<hst:link path="/js/kees/plugins.js" />"></script>
     <script type="text/javascript" src="<hst:link path="/js/kees/main.js" />"></script>
-    
-    <%-- Chat function test, should be different per environment --%>
-     
+         
     <script type="text/javascript" src="${(tag:getWebsitePropertyList(pageContext.request)).chatJsConfig }"></script> 
     
 </body>
