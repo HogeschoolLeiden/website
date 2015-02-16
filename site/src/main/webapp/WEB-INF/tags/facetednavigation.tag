@@ -113,9 +113,7 @@
                 <input type="text" name="q" class="form-control" placeholder=""
                   ${not empty model.query? 'value=\"' : ''} ${fn:escapeXml(model.query)} ${not empty model.query? '\"' : ''}>
               </div>
-              <button class="btn fa fa-search no-radius" type="submit">
-                <span><c:out value="${submitText}" /></span>                            
-              </button> 
+              <button class="btn fa fa-search no-radius" type="submit"> </button> 
          </form>
       </div>
     </section>

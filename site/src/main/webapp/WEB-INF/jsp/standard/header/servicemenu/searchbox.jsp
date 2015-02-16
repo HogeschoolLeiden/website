@@ -71,7 +71,5 @@
 		   placeholder="${fn:escapeXml(submitText)}" required="required"
 		   ${not empty model.query? 'value=\"' : ''} ${model.query} ${not empty model.query? '\"' : ''} />
   </div>
-  <button class="btn fa fa-search no-radius btn-primary inline" type="submit" value="${submitText}">
-	<span><c:out value="${submitText}" /></span>
-  </button>
+  <button class="btn fa fa-search no-radius btn-primary inline" type="submit" value="${submitText}"> </button>
 </form>

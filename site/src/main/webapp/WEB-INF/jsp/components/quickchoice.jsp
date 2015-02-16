@@ -60,7 +60,7 @@
       <div class="form-group">
         <input type="text" class="form-control" id="zoekfilter" name="q" data-cip-id="zoekfilter" placeholder="${searchMessage}">
       </div>
-      <button class="btn fa fa-search no-radius" type="submit"><span>Zoek</span></button>
+      <button class="btn fa fa-search no-radius" type="submit"></button>
     </form>
   </div>
   

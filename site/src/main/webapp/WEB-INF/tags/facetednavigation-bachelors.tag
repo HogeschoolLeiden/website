@@ -21,8 +21,6 @@
     
   <c:if test="${facetnav.count gt 0}">
 
-<%--     <h4><c:out value="${facetnavtitle}" escapeXml="true"/></h4> --%>
-
     <c:forEach var="facet" items="${facetnav.folders}">
 	  <c:if test="${facet.resultSet.count > 0}">
 		  
@@ -91,9 +89,7 @@
                   <input type="text" name="q" class="form-control" placeholder=""
                     ${not empty model.query? 'value=\"' : ''} ${fn:escapeXml(model.query)} ${not empty model.query? '\"' : ''}>
 
-                <button class="btn fa fa-search no-radius" type="submit">
-                  <span><c:out value="${submitText}" /></span>                            
-                </button> 
+                <button class="btn fa fa-search no-radius" type="submit"></button> 
            </form>
            </li>
          </ul>
