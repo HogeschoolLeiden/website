@@ -49,13 +49,13 @@
           <hst:cmseditlink hippobean="${item}" />
           <ul class="col-md-8 col-xs-8 ${noImgNoShare}">
             <li><h2><span itemprop="name">${item.name }</span></h2></li>
-            <li><h2><span itemprop="role">${item.function }</span></h2></li>            
+            <li><h3><span itemprop="role">${item.function }</span></h3></li>            
             <c:if test="${not empty item.mail }">
               <li>
                 <c:set var="email">mailto:${item.mail}?subject=<fmt:message key="contact.person.subject"/></c:set>
                 <a title="${item.mail }" href="${fn:replace(email, ' ', '%20')}">
                     <c:out value="${item.mail }" />
-                  </a>
+                </a>
               </li>
             </c:if>
             <c:if test="${not empty item.phone }">

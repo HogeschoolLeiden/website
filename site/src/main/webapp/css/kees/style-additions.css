@@ -735,6 +735,8 @@ section.blok.colorbg.lichtpaars.contacts h1.pull-left span.col-md-8.col-xs-8.col
 .blok.colorbg.lichtpaars.contacts ul li a.btn{margin: 10px 0 0 0; padding: 3px 10px;}
 .blok.colorbg.lichtpaars.contacts ul li a.btn span{font-size: 12px;}
 
+.blok.colorbg.lichtpaars.contacts ul li h3{ font-size: 1.05em; margin: 0;}
+
 .hasDatepicker.fc.fc-ltr .fc-content .fc-view.fc-view-month.fc-grid .fc-event-container{display: none;} 
 
 .aside .filtergroup.col-md-3.calendar #datepicker { margin-bottom: 0; margin-top: 0;}
@@ -1550,4 +1552,34 @@ should force table to not act as such */
 	}
 }
 
+/* -------------------- */
+/* medewerkers accounts */
+/* -------------------- */
+.detail-content .contentarea .content figure.medewerkers ul.social li{
+	list-style-type: none;
+	background: none;
+	padding-left: 20px;
+	float: left;
+}
+
+figure.medewerkers ul.social li a {
+	background: url("../img/icon-social.png") left top no-repeat #008383;
+	background-size: 90px 60px;
+	width: 30px;
+	height: 30px;
+	display: block;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+}
+
+figure.medewerkers ul.social li.twitter a {
+	background-position: -30px 0;
+}
+figure.medewerkers ul.social li.googleplus a {
+	background-position: -60px 0;
+}
+figure.medewerkers ul.social li.linkedin a {
+	background-position: 0 -30px;
+}
 

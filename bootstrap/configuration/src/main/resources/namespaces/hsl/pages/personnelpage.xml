@@ -125,6 +125,23 @@
           <sv:value>hippogallerypicker:imagelink</sv:value>
         </sv:property>
       </sv:node>
+      <sv:node sv:name="medewerkerflexibleblock">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hipposysedit:field</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:multiple" sv:type="Boolean">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:ordered" sv:type="Boolean">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:path" sv:type="String">
+          <sv:value>hsl:medewerkerflexibleblock</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:type" sv:type="String">
+          <sv:value>nt:base</sv:value>
+        </sv:property>
+      </sv:node>
     </sv:node>
   </sv:node>
   <sv:node sv:name="hipposysedit:prototypes">
@@ -512,24 +529,24 @@
           </sv:property>
         </sv:node>
       </sv:node>
-      <sv:node sv:name="flexibleblock">
+      <sv:node sv:name="medewerkerflexibleblock">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>frontend:plugin</sv:value>
         </sv:property>
         <sv:property sv:name="caption" sv:type="String">
-          <sv:value>flexibleblock</sv:value>
+          <sv:value>Flexibleblock</sv:value>
         </sv:property>
         <sv:property sv:name="contentPickerType" sv:type="String">
           <sv:value>links</sv:value>
         </sv:property>
         <sv:property sv:name="cpItemsPath" sv:type="String">
-          <sv:value>hsl:flexibleblock</sv:value>
+          <sv:value>hsl:medewerkerflexibleblock</sv:value>
         </sv:property>
         <sv:property sv:name="engine" sv:type="String">
           <sv:value>${engine}</sv:value>
         </sv:property>
         <sv:property sv:name="field" sv:type="String">
-          <sv:value>flexibleblock</sv:value>
+          <sv:value>medewerkerflexibleblock</sv:value>
         </sv:property>
         <sv:property sv:name="mode" sv:type="String">
           <sv:value>${mode}</sv:value>

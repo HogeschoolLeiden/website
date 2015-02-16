@@ -49,6 +49,9 @@
 		<c:when test="${block['class'].name == 'hslbeans.Html' }">
 			<tag:htmlBlock content="${block}"/>
 		</c:when>
+        <c:when test="${block['class'].name == 'hslbeans.Accounts' }">
+          <tag:accountsblock content="${block}" name="${document.title}"/>
+        </c:when>
 	</c:choose>
 	<c:set var="tagcount" value="${tagcount + 1 }" />
 </c:forEach>

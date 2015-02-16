@@ -16,18 +16,8 @@
         <hst:cmseditlink hippobean="${document}" />
         <h1><c:out value="${document.title }" escapeXml="true" /></h1>
         <hst:include ref="contentTop" />
-
-        <%-- 
-        <c:if test="${hst:isReadable(document, 'releaseDate.time')}">
-          <tag:renderDate document="${document}"/>
-        </c:if>
-
-        <p class="intro">
-          <c:out value="${document.introduction }" />
-        </p> 
-        --%>
         
-        <tag:flexibleblock content="${document.flexibleblock }" document="${document}"/>
+        <tag:flexibleblock content="${document.medewerkerflexibleblock }" document="${document}"/>
         
         <hst:include ref="contentBottom" />
         <tag:toolbox document="${document }" />
