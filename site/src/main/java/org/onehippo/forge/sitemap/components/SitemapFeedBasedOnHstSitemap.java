@@ -46,8 +46,8 @@ import org.slf4j.LoggerFactory;
 public class SitemapFeedBasedOnHstSitemap extends BaseHstComponent {
 
     private static final String SITEMAP = "sitemap";
-    private static final String LOGGING_SEPARATOR = "-----------";
-    private static final Logger log = LoggerFactory.getLogger(SitemapFeedBasedOnHstSitemap.class);
+    private static final String LOGING_SEPARATOR = "-----------";
+    private static final Logger LOG = LoggerFactory.getLogger(SitemapFeedBasedOnHstSitemap.class);
     private static final String REGEX_FOR_SPLITTING_COMMA_SEPERATED_PARAMETERS = "[\\s]*,[\\s]*";
 
     @Override
@@ -82,16 +82,16 @@ public class SitemapFeedBasedOnHstSitemap extends BaseHstComponent {
     }
 
     private static void logQueryStatistics(final SitemapGenerator sitemapGenerator) {
-        log.info(LOGGING_SEPARATOR);
-        log.info("Queries fired: " + sitemapGenerator.getQueriesFired());
-        log.info("Cache Hits  : " + sitemapGenerator.getQueryCacheHits());
-        log.info(LOGGING_SEPARATOR);
+        LOG.info(LOGING_SEPARATOR);
+        LOG.info("Queries fired: " + sitemapGenerator.getQueriesFired());
+        LOG.info("Cache Hits  : " + sitemapGenerator.getQueryCacheHits());
+        LOG.info(LOGING_SEPARATOR);
     }
 
     private static OutputMode getOutputMode(final SiteMapFeedBasedOnHstSiteMapParameters parameters) {
         if (isNotBlank(parameters.getOutputMode())) {
             if (!OutputMode.existsForString(parameters.getOutputMode())) {
-                log.error("Output mode '{}' does not exist.", parameters.getOutputMode());
+                LOG.error("Output mode '{}' does not exist.", parameters.getOutputMode());
                 throw new HstComponentFatalException("Specified output mode does not exist");
             }
             return OutputMode.valueOf(parameters.getOutputMode().trim());
@@ -138,31 +138,37 @@ public class SitemapFeedBasedOnHstSitemap extends BaseHstComponent {
             splitter = new FileSystemSitemapSplitter(urlset, parameters.getSitemapDestinationFolderNameProperty());
             return splitter.split();
         case SPLIT_TO_REPOSITORY:
-            Session writeSession = null;
-            try {
-                /**
-                 * A persistable session is needed in order to be able to write
-                 * to the repository. In the hst-config.properties a user is
-                 * needed with writable permissions.
-                 */
-                writeSession = getPersistableSession(request);
-                splitter = new RepositorySitemapSplitter(urlset, writeSession,
-                        parameters.getSitemapDestinationFolderNameProperty());
-
-                return splitter.split();
-            } catch (RepositoryException e) {
-                throw new HstComponentFatalException("Cannot get a writable session", e);
-            } finally {
-                if (writeSession != null) {
-                    writeSession.logout();
-                }
-            }
+            return handleSplitToRepositoryCase(request, parameters, urlset);
         case SPLIT_TO_TAR_GZ_STREAM:
-            log.error("Splitting to a tar.gz stream is not supported, please use the JAX-RS resource.");
+            LOG.error("Splitting to a tar.gz stream is not supported, please use the JAX-RS resource.");
             return false;
         default:
-            log.error("No mode that supports splitting specified, cannot split site map. Mode = {}", outputMode);
+            LOG.error("No mode that supports splitting specified, cannot split site map. Mode = {}", outputMode);
             return false;
+        }
+    }
+
+    private boolean handleSplitToRepositoryCase(final HstRequest request,
+            final SiteMapFeedBasedOnHstSiteMapParameters parameters, final Urlset urlset) {
+        SitemapSplitter splitter;
+        Session writeSession = null;
+        try {
+            /**
+             * A persistable session is needed in order to be able to write
+             * to the repository. In the hst-config.properties a user is
+             * needed with writable permissions.
+             */
+            writeSession = getPersistableSession(request);
+            splitter = new RepositorySitemapSplitter(urlset, writeSession,
+                    parameters.getSitemapDestinationFolderNameProperty());
+
+            return splitter.split();
+        } catch (RepositoryException e) {
+            throw new HstComponentFatalException("Cannot get a writable session", e);
+        } finally {
+            if (writeSession != null) {
+                writeSession.logout();
+            }
         }
     }
 

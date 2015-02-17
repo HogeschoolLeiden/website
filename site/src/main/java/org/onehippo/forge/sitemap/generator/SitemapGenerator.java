@@ -350,7 +350,7 @@ public class SitemapGenerator {
 
     //ADDITION:
     public void addTypeExclusions(final String[] typesToExclude) {
-        typesExcludedFromSiteMap.addAll((Arrays.asList(typesToExclude)));
+        typesExcludedFromSiteMap.addAll(Arrays.asList(typesToExclude));
     }
 
     public void addSitemapPathExclusions(final Collection<String> pathsToExclude) {

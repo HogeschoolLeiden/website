@@ -166,6 +166,7 @@ public class SitemapGeneratorWorker extends Thread {
                 }
             }
         } catch (RuntimeException e) {
+            LOG.error("Runtime exception running worker thread. ", e);
             generator.reportErrorOccurred(e);
         }
     }
@@ -555,6 +556,7 @@ public class SitemapGeneratorWorker extends Thread {
             try {
                 nodePath = node.getPath();
             } catch (RepositoryException e1) {
+                LOG.error("Repository exception in obtainHippoBeanForNode() ", e1);
                 nodePath = "UNRESOLVABLE PATH";
             }
             LOG.error("Cannot convert node \"{}\"", nodePath);
@@ -569,6 +571,7 @@ public class SitemapGeneratorWorker extends Thread {
                 LOG.error("Found a corrupt node. Skipped the node. It is not added to the sitemap. "
                         + "Path = {}, Type = {}", nodePath, nodeType);
             } catch (RepositoryException e) {
+                LOG.error("Repository exception in obtainHippoBeanForNode() when trying to resolve node path and node name: ", e);
                 throw new IllegalStateException("Repository Exception when trying to resolve node path and node name.");
             }
             return null;
