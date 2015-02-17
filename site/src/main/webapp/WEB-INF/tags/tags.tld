@@ -185,6 +185,13 @@
 		<function-class>nl.hsleiden.tags.Functions</function-class>
 		<function-signature>nl.hsleiden.channels.WebsiteInfo getWebsitePropertyList(javax.servlet.http.HttpServletRequest)</function-signature>
 	</function>
+
+	<function>
+		<description>test if the provided facet group should display or not</description>
+		<name>shouldFilterGroupDisplay</name>
+		<function-class>nl.hsleiden.utils.FacetsUtils</function-class>
+		<function-signature>java.lang.Boolean shouldFilterGroupDisplay(org.hippoecm.hst.content.beans.standard.HippoFacetNavigationBean)</function-signature>
+	</function>
   
     <function>
       <description>test if document is subclass of web page</description>
