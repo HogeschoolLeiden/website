@@ -150,8 +150,7 @@ figure.fexibleblock.image img {
 .aside .button-block.twitter .col-sm-4,
 .aside .button-block.twitter .col-sm-4.half,
 .col-xs-6.col-sm-6.col-md-3 .button-block.twitter .col-sm-4,
-.col-xs-6.col-sm-6.col-md-3 .button-block.twitter .col-sm-4.half
-{
+.col-xs-6.col-sm-6.col-md-3 .button-block.twitter .col-sm-4.half {
 	width: auto;
 }
 
@@ -785,15 +784,6 @@ section.blok.colorbg.lichtpaars.contacts h1.pull-left span.col-md-8.col-xs-8.col
 article.detail-content div.contentarea .content p a {
 	color: #428bca;
 }
-
-@media (max-width : 767px) {
-	.catalog.image.teasers section.blok.download.image {
-		width: 46%;
-		min-width: 260px;
-		margin-right: 10px;
-		float: left;
-	}
-} 
 
 @media (min-width :768px) and (max-width: 1199px) {
 	.row .col-sm-4, .row asside .col-md-4 { padding-left: 0; padding-right: 0;}
@@ -1583,3 +1573,56 @@ figure.medewerkers ul.social li.linkedin a {
 	background-position: 0 -30px;
 }
 
+/* ----------------------------------------------------------------------------------------- */
+/* responsivness issues with findjestudie (and maybe an acceptable solution for tease image) */
+/* ----------------------------------------------------------------------------------------- */
+
+.vindjestudie .aside .catalog.image.teasers section.blok.download.image a .img img{
+	width: 260px;
+	min-width: 260px;
+	height: 260px;
+	min-height: 260px;
+}
+
+.vindjestudie .aside .catalog.image.teasers section.blok.download.image {
+	background: none;
+}
+	
+@media (min-width :992px) and (max-width: 1200px) {
+	.vindjestudie .overzicht.col-md-9 { width: 70%; }
+	.vindjestudie .aside { width: 30%;}
+	.vindjestudie .studiefilter ul li { margin-bottom: 15px;}
+}
+
+
+@media (min-width :768px) and (max-width: 991px) {
+	
+	.vindjestudie .aside .catalog .blok,
+	.vindjestudie .aside  .blok.colorbg.lichtpaars.contacts, 
+	.vindjestudie .aside .catalog.image.teasers section.blok.download.image, 
+	.vindjestudie .aside .catalog.internalLinks.teasers .col-xs-12.col-sm-6,
+	.vindjestudie .aside .catalog.text.teasers .col-xs-12.col-sm-6 {
+		width: 49%;
+		float: left;
+		margin: 0.5% 0.5%;
+	}
+
+	.vindjestudie .aside .catalog.text.teasers + .clearfix,
+	.vindjestudie .aside .catalog.internalLinks.teasers + .clearfix {
+		display: none;
+	}
+	
+	.vindjestudie .aside .button-block.twitter {
+		width: 100%;
+	}
+	
+	.vindjestudie .aside .button-block.twitter .col-sm-4.half {
+		width: 49%;
+		margin: 0 0.5%;
+	}
+
+	.vindjestudie .aside .button-block.twitter .col-sm-4 {
+		width: 32.9%;
+		margin: 0 0.2%;
+	}
+}

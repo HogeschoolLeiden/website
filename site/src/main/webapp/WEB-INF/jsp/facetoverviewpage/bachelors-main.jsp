@@ -107,7 +107,7 @@
 
           </section>
           
-          <aside class="col-md-3 col-sm-3 aside">
+          <aside class="col-md-3 aside">
             <hst:include ref="rightTop" />
             <hst:include ref="right" />
             <hst:include ref="rightBottom" />
