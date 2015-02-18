@@ -1574,7 +1574,7 @@ figure.medewerkers ul.social li.linkedin a {
 }
 
 /* ----------------------------------------------------------------------------------------- */
-/* responsivness issues with findjestudie (and maybe an acceptable solution for tease image) */
+/* responsiveness issues with: findjestudie, listing item in small sizes, 					 */
 /* ----------------------------------------------------------------------------------------- */
 
 .vindjestudie .aside .catalog.image.teasers section.blok.download.image a .img img{
@@ -1593,7 +1593,6 @@ figure.medewerkers ul.social li.linkedin a {
 	.vindjestudie .aside { width: 30%;}
 	.vindjestudie .studiefilter ul li { margin-bottom: 15px;}
 }
-
 
 @media (min-width :768px) and (max-width: 991px) {
 	
@@ -1625,4 +1624,8 @@ figure.medewerkers ul.social li.linkedin a {
 		width: 32.9%;
 		margin: 0 0.2%;
 	}
+}
+
+@media (max-width: 767px) {
+	.overzicht.col-md-9.col-sm-8 { width: 100%; }
 }
