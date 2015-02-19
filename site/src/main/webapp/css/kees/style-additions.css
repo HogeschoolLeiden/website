@@ -310,8 +310,18 @@ h2.noQueryResults { font-size: 1.2em; color: #23114c; font-family: 'source_sans_
 
 nav.col-md-3.col-xs-12 .catalog.image.teasers,
 aside.col-md-4.col-sm-4 .catalog.image.teasers {
-	max-width: 260px;
 	margin: 0 auto;
+}
+
+.aside .catalog.image.teasers section.blok.download.image a .img img{
+	width: 260px;
+	min-width: 260px;
+	height: 260px;
+	min-height: 260px;
+}
+
+.aside .catalog.image.teasers section.blok.download.image {
+	background: none;
 }
 
 /* ------------------- */
@@ -1578,6 +1588,23 @@ figure.medewerkers ul.social li.linkedin a {
 
 @media (max-width: 767px) {
 	.overzicht.col-md-9.col-sm-8 { width: 100%; }
+	
+	.aside .overzichtlijst.related {
+		float: left;
+	}
+}
+
+@media (max-width :767px) and (orientation:landscape) {
+	.aside .overzichtlijst.related {
+		float: left;
+	}
+}
+
+@media (min-width :768px) and (max-width: 991px) {
+	
+	.aside .overzichtlijst.related {
+		float: left;
+	}
 }
 
 .vindjestudie .aside .catalog.image.teasers section.blok.download.image a .img img{
@@ -1592,12 +1619,14 @@ figure.medewerkers ul.social li.linkedin a {
 }
 
 @media (max-width :767px) and (orientation:landscape) {
+	
 	.aside .catalog.image.teasers,
 	.aside .catalog.internalLinks.teasers .col-xs-12.col-sm-6,
 	.aside .catalog.text.teasers .col-xs-12.col-sm-6,
 	.aside .catalog.externalLinks.teasers .col-xs-12.col-sm-6{
 		width: 46%;
 		margin: 10px 2% !important;
+		/* float: left; img teaser problems */
 	}
 	
 	.vindjestudie .aside .catalog.text.teasers + .clearfix,
@@ -1614,7 +1643,8 @@ figure.medewerkers ul.social li.linkedin a {
 	.aside .button-block.twitter .col-sm-4 {
 		width: 32.9%;
 		margin: 0 0.2%;
-		float: left;
+		float: left; 
+		/* ??? */
 	}
 }
 	
