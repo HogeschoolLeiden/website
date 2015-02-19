@@ -930,14 +930,7 @@ article.detail-content div.contentarea .content p a {
 	
 	.highlighted.col-md-9 .media-body.col-md-5 > p{
 		padding-left: 15px;
-	} 
-
-	
-	/* bachelors facet page icon too big */
-	.vindjestudie .overzicht .overzichtlijst a figure.media-object.pull-left { width: 50px; height: 50px; margin-right: 10px;}
-	.vindjestudie .overzicht .overzichtlijst a figure.media-object.pull-left img {width: 70%; height: 70%}
-	.vindjestudie .overzicht .overzichtlijst, 
-	.vindjestudie .overzicht .overzichtlijst .media.clearfix.study {padding-left: 0; padding-right: 0; }
+	} 	
 	
 	/* lectoraten header title */
 	#top {min-height: 55px; display: block; width: 100%;}
@@ -950,6 +943,12 @@ article.detail-content div.contentarea .content p a {
 }
 
 @media (max-width: 767px) {
+	/* bachelors facet page icon too big */
+	.vindjestudie .overzicht .overzichtlijst a figure.media-object.pull-left { width: 50px; height: 50px; margin-right: 10px;}
+	.vindjestudie .overzicht .overzichtlijst a figure.media-object.pull-left img {width: 70%; height: 70%}
+	.vindjestudie .overzicht .overzichtlijst, 
+	.vindjestudie .overzicht .overzichtlijst .media.clearfix.study {padding-left: 0; padding-right: 0; }
+	
 	/* lectoraten header title */
 	.navbar .container.lectoraattitle {
 		width: -moz-calc(100% - 135px);
@@ -1577,6 +1576,10 @@ figure.medewerkers ul.social li.linkedin a {
 /* responsiveness issues with: findjestudie, listing item in small sizes, 					 */
 /* ----------------------------------------------------------------------------------------- */
 
+@media (max-width: 767px) {
+	.overzicht.col-md-9.col-sm-8 { width: 100%; }
+}
+
 .vindjestudie .aside .catalog.image.teasers section.blok.download.image a .img img{
 	width: 260px;
 	min-width: 260px;
@@ -1586,6 +1589,33 @@ figure.medewerkers ul.social li.linkedin a {
 
 .vindjestudie .aside .catalog.image.teasers section.blok.download.image {
 	background: none;
+}
+
+@media (max-width :767px) and (orientation:landscape) {
+	.aside .catalog.image.teasers,
+	.aside .catalog.internalLinks.teasers .col-xs-12.col-sm-6,
+	.aside .catalog.text.teasers .col-xs-12.col-sm-6,
+	.aside .catalog.externalLinks.teasers .col-xs-12.col-sm-6{
+		width: 46%;
+		margin: 10px 2% !important;
+	}
+	
+	.vindjestudie .aside .catalog.text.teasers + .clearfix,
+	.vindjestudie .aside .catalog.internalLinks.teasers + .clearfix,
+	.vindjestudie .aside .catalog.externalLinks.teasers + .clearfix {
+		display: none;
+	} 
+	 
+	.aside .button-block.twitter .col-sm-4.half {
+		width: 49%;
+		margin: 0 0.5%;
+	}
+
+	.aside .button-block.twitter .col-sm-4 {
+		width: 32.9%;
+		margin: 0 0.2%;
+		float: left;
+	}
 }
 	
 @media (min-width :992px) and (max-width: 1200px) {
@@ -1597,17 +1627,19 @@ figure.medewerkers ul.social li.linkedin a {
 @media (min-width :768px) and (max-width: 991px) {
 	
 	.vindjestudie .aside .catalog .blok,
-	.vindjestudie .aside  .blok.colorbg.lichtpaars.contacts, 
+	.vindjestudie .aside .blok.colorbg.lichtpaars.contacts, 
 	.vindjestudie .aside .catalog.image.teasers section.blok.download.image, 
 	.vindjestudie .aside .catalog.internalLinks.teasers .col-xs-12.col-sm-6,
-	.vindjestudie .aside .catalog.text.teasers .col-xs-12.col-sm-6 {
-		width: 49%;
+	.vindjestudie .aside .catalog.text.teasers .col-xs-12.col-sm-6,
+	.vindjestudie .aside .catalog.externalLinks.teasers .col-xs-12.col-sm-6 {
+		width: 48%;
 		float: left;
-		margin: 0.5% 0.5%;
+		margin: 1% 1%;
 	}
 
 	.vindjestudie .aside .catalog.text.teasers + .clearfix,
-	.vindjestudie .aside .catalog.internalLinks.teasers + .clearfix {
+	.vindjestudie .aside .catalog.internalLinks.teasers + .clearfix,
+	.vindjestudie .aside .catalog.externalLinks.teasers + .clearfix {
 		display: none;
 	}
 	
@@ -1626,6 +1658,3 @@ figure.medewerkers ul.social li.linkedin a {
 	}
 }
 
-@media (max-width: 767px) {
-	.overzicht.col-md-9.col-sm-8 { width: 100%; }
-}
