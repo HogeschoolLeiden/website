@@ -7,6 +7,7 @@ import hslbeans.Image;
 import hslbeans.ImageTeaser;
 import hslbeans.InfoBlock;
 import hslbeans.InternalLink;
+import hslbeans.PersonnelPage;
 import hslbeans.WebPage;
 
 import java.util.List;
@@ -51,13 +52,23 @@ public class Functions {
 
     public static HippoBean getFirstFlexibleBlockImage(WebPage bean) {
         HippoBean result = null;
-        if (bean instanceof ArticlePage) {
+        if(bean instanceof PersonnelPage){
+            PersonnelPage personnel = (PersonnelPage) bean;
+            List<HippoBean> flexibleblock = personnel.getMedewerkerflexibleblock();
+            result = getFirstImage(flexibleblock);
+        } else if (bean instanceof ArticlePage) {
             ArticlePage article = (ArticlePage) bean;
             List<HippoBean> flexibleblock = article.getFlexibleblock();
-            for (HippoBean hippoBean : flexibleblock) {
-                if (hippoBean instanceof Image && ((Image) hippoBean).getImage() != null) {
-                    result = hippoBean;
-                }
+            result = getFirstImage(flexibleblock);
+        }
+        return result;
+    }
+
+    private static HippoBean getFirstImage(List<HippoBean> flexibleblocklist) {
+        HippoBean result = null;
+        for (HippoBean hippoBean : flexibleblocklist) {
+            if (hippoBean instanceof Image && ((Image) hippoBean).getImage() != null) {
+                result = hippoBean;
             }
         }
         return result;
