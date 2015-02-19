@@ -52,9 +52,11 @@
                      alt="<c:out value="${item.icon.alt }" escapeXml="true" />" />
               </c:if>
               
-              <span class="${item.darkLinkBackground ? 'btn darkLinkBackground' : 'btn'}">
-                <c:out value="${item.externallink.linkTitle }" escapeXml="true" />
-              </span>
+              <c:if test="${not item.noLinkTekst}">
+                <span class="${item.darkLinkBackground ? 'btn darkLinkBackground' : 'btn'}">
+                  <c:out value="${item.externallink.linkTitle }" escapeXml="true" />
+                </span>
+              </c:if>
           </a>
         </c:when>
 
@@ -72,9 +74,11 @@
                      alt="<c:out value="${item.icon.alt }" escapeXml="true" />" />
               </c:if>
               
-              <span class="${item.darkLinkBackground ? 'btn darkLinkBackground' : 'btn'}">
-                <c:out value="${item.internallink.linkTitle }" escapeXml="true" />
-              </span>
+              <c:if test="${not item.noLinkTekst}">
+                <span class="${item.darkLinkBackground ? 'btn darkLinkBackground' : 'btn'}">
+                  <c:out value="${item.internallink.linkTitle }" escapeXml="true" />
+                </span>
+              </c:if>
           </a>
         </c:when>
         
