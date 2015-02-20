@@ -343,7 +343,9 @@ aside.col-md-4.col-sm-4 .catalog.image.teasers {
 /* ------------- */
 /* related items */
 /* ------------- */
-
+.aside .overzichtlijst.related {
+	margin: 10px auto;
+}
 .aside .overzichtlijst.related,
 .content .overzichtlijst.related,
 nav.col-md-3.col-xs-12 .overzichtlijst.related {
@@ -561,8 +563,10 @@ nav.col-md-3.col-xs-12 .overzichtlijst.related .media.clearfix:first-child,
 /* text, internal and external teasers can display on the right, background = white */
 /* -------------------------------------------------------------------------------- */
 
-nav.col-md-3.col-xs-12 .catalog.internalLinks.teasers .tekstitem ul li,nav.col-md-3.col-xs-12 .catalog.externalLinks.teasers ul li,.aside .catalog.internalLinks.teasers .tekstitem ul li,.aside .catalog.externalLinks.teasers ul li
-	{
+nav.col-md-3.col-xs-12 .catalog.internalLinks.teasers .tekstitem ul li,
+nav.col-md-3.col-xs-12 .catalog.externalLinks.teasers ul li,
+.aside .catalog.internalLinks.teasers .tekstitem ul li,
+.aside .catalog.externalLinks.teasers ul li {
 	padding-left: 20px;
 	background: url("../img/li.png") 2px 6px no-repeat;
 	background-size: 6px 6px;
