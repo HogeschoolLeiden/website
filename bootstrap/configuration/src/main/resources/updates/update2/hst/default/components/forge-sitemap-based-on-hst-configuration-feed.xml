@@ -2,9 +2,25 @@
 <sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:h="http://www.onehippo.org/jcr/xmlimport"
            sv:name="forge-sitemap-based-on-hst-configuration-feed" h:merge="combine">
   <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+    <sv:value>sitemapRefIdExclusions</sv:value>
+    <sv:value>splitter-destination-foldername</sv:value>
+    <sv:value>informationProvider</sv:value>
+    <sv:value>sitemapComponentConfigurationIdExclusions</sv:value>
+    <sv:value>sitemapPathExclusions</sv:value>
+    <sv:value>amountOfWorkers</sv:value>
+    <sv:value>output-mode</sv:value>
     <sv:value>excludeTypesList</sv:value>
+    <sv:value>exactSitemapExclusions</sv:value>
   </sv:property>
   <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+    <sv:value>${sitemapRefIdExclusions}</sv:value>
+    <sv:value>${splitter-destination-foldername}</sv:value>
+    <sv:value>${informationProvider}</sv:value>
+    <sv:value>${sitemapComponentConfigurationIdExclusions}</sv:value>
+    <sv:value>${sitemapPathExclusions}</sv:value>
+    <sv:value>${amountOfWorkers}</sv:value>
+    <sv:value>${output-mode}</sv:value>
     <sv:value>${excludeTypesList}</sv:value>
+    <sv:value>${exactSitemapExclusions}</sv:value>
   </sv:property>
 </sv:node>

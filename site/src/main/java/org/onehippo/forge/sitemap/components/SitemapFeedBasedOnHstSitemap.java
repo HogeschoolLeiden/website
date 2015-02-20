@@ -125,6 +125,9 @@ public class SitemapFeedBasedOnHstSitemap extends BaseHstComponent {
         String[] excludeTypesList = parameters.getExcludeTypesList().trim()
                 .split(REGEX_FOR_SPLITTING_COMMA_SEPERATED_PARAMETERS);
         sitemapGenerator.addTypeExclusions(excludeTypesList);
+        String[] exactSitemapExclusions = parameters.getExactSitemapExclusions().trim()
+                .split(REGEX_FOR_SPLITTING_COMMA_SEPERATED_PARAMETERS);
+        sitemapGenerator.addExactSitemapExclusions(exactSitemapExclusions);
 
         return sitemapGenerator;
     }
@@ -207,7 +210,7 @@ public class SitemapFeedBasedOnHstSitemap extends BaseHstComponent {
         String getSiteMapExclusionsForSiteMapPath();
 
         /**
-         * //ADDITION: add new paramter for being able to exclude also based on
+         * //ADDITION: add new parameter for being able to exclude also based on
          * document types The document types which must be excluded from the
          * generated sitemap.
          *
@@ -216,6 +219,16 @@ public class SitemapFeedBasedOnHstSitemap extends BaseHstComponent {
          */
         @Parameter(name = "excludeTypesList", defaultValue = "")
         String getExcludeTypesList();
+
+        /**
+         * //ADDITION: add new parameter for being able to exclude a 
+         * sitemap item based on its exact path but in the same time include its children.
+         *
+         * @return the comma separated list of sitemap paths which must be
+         *         excluded.
+         */
+        @Parameter(name = "exactSitemapExclusions", defaultValue = "")
+        String getExactSitemapExclusions();
 
         /**
          * The {@link UrlInformationProvider}.

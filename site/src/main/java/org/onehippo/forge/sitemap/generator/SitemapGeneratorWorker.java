@@ -48,8 +48,10 @@ import org.hippoecm.hst.configuration.HstNodeTypes;
 import org.hippoecm.hst.configuration.hosting.Mount;
 import org.hippoecm.hst.configuration.sitemap.HstSiteMapItem;
 import org.hippoecm.hst.content.beans.ObjectBeanManagerException;
+import org.hippoecm.hst.content.beans.manager.ObjectBeanManager;
 import org.hippoecm.hst.content.beans.manager.ObjectConverter;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
+import org.hippoecm.hst.core.linking.HstLink;
 import org.hippoecm.hst.core.linking.HstLinkCreator;
 import org.hippoecm.hst.core.request.HstRequestContext;
 import org.hippoecm.hst.util.HstSiteMapUtils;
@@ -71,14 +73,11 @@ public class SitemapGeneratorWorker extends Thread {
 
     // Constants
     private static final String JCR_ROOT = "/jcr:root";
-    private static final String NODE_TYPE_FOLDER_CONDITION = "["
-            + "@jcr:primaryType='" + HippoStdNodeType.NT_FOLDER + "'"
-            + " or @jcr:primaryType='" + HippoStdNodeType.NT_DIRECTORY + "'"
-            + "]";
+    private static final String NODE_TYPE_FOLDER_CONDITION = "[" + "@jcr:primaryType='" + HippoStdNodeType.NT_FOLDER
+            + "'" + " or @jcr:primaryType='" + HippoStdNodeType.NT_DIRECTORY + "'" + "]";
     private static final String ELEMENT_MATCHER_FOR_FOLDERS = "element(*, nt:base)" + NODE_TYPE_FOLDER_CONDITION;
 
-    private static final String NODE_TYPE_CONDITION_FOR_PUBLISHED_DOCUMENTS_TEMPLATE =
-            "/*[@hippo:availability='{}']/..";
+    private static final String NODE_TYPE_CONDITION_FOR_PUBLISHED_DOCUMENTS_TEMPLATE = "/*[@hippo:availability='{}']/..";
     private static final String QUERY_STRING_FOR_PUBLISHED_DOCUMENTS_TEMPLATE = "element(*, " + HippoNodeType.NT_HANDLE
             + ")" + NODE_TYPE_CONDITION_FOR_PUBLISHED_DOCUMENTS_TEMPLATE;
 
@@ -100,23 +99,28 @@ public class SitemapGeneratorWorker extends Thread {
     private final String queryStringForPublishedDocuments;
     private final Mount mount;
 
-    //ADDITION:
+    // ADDITION:
     private final List<String> excludeTypesList;
+    private final List<String> exactSitemapsExcludedList;
 
     /**
      * Constructor.
      *
-     * @param generator              the Sitemap generator
-     * @param urlset                 the Urlset which contains all the Urls
-     * @param requestContext         the Hst Request context
-     * @param objectConverter        the Object converter converts any kind of beans into JCR nodes & properties
-     * @param urlInformationProvider the Url information provider
+     * @param generator
+     *            the Sitemap generator
+     * @param urlset
+     *            the Urlset which contains all the Urls
+     * @param requestContext
+     *            the Hst Request context
+     * @param objectConverter
+     *            the Object converter converts any kind of beans into JCR nodes
+     *            & properties
+     * @param urlInformationProvider
+     *            the Url information provider
      */
-    @SuppressWarnings("deprecation")
     public SitemapGeneratorWorker(final SitemapGenerator generator, final Mount mount, final Urlset urlset,
-                                  final HstRequestContext requestContext, final ObjectConverter objectConverter,
-                                  final UrlInformationProvider urlInformationProvider, 
-                                  /* //ADDITION: */final List<String> typesExcluded) {
+            final HstRequestContext requestContext, final ObjectConverter objectConverter,
+            final UrlInformationProvider urlInformationProvider) {
 
         LOG.warn("mount type: {}", mount.getType());
 
@@ -124,9 +128,10 @@ public class SitemapGeneratorWorker extends Thread {
         publishedNodeTypeCondition = NODE_TYPE_CONDITION_FOR_PUBLISHED_DOCUMENTS_TEMPLATE.replace("{}", mountType);
         queryStringForPublishedDocuments = QUERY_STRING_FOR_PUBLISHED_DOCUMENTS_TEMPLATE.replace("{}", mountType);
 
-        //ADDITION:
-        this.excludeTypesList = typesExcluded;
-        
+        // ADDITION:
+        this.excludeTypesList = generator.getTypesExcludedFromSiteMap();
+        this.exactSitemapsExcludedList = generator.getExactSitemapExclusions();
+
         this.generator = generator;
         this.mount = mount;
         this.urlset = urlset;
@@ -137,7 +142,7 @@ public class SitemapGeneratorWorker extends Thread {
         try {
             Session session = requestContext.getSession();
             queryManager = session.getWorkspace().getQueryManager();
-            baseContentPath = mount.getCanonicalContentPath();
+            baseContentPath = mount.getContentPath();
             baseContentNode = session.getNode(baseContentPath);
         } catch (RepositoryException e) {
             throw new IllegalStateException("Cannot create SitemapGenerator due to a repository exception", e);
@@ -157,7 +162,8 @@ public class SitemapGeneratorWorker extends Thread {
                             wait(MS_TO_WAIT_FOR_NEW_TASK);
                         }
                     } catch (InterruptedException e) {
-                        // The Evil Overmind wants us to stop, let's not ignore that...
+                        // The Evil Overmind wants us to stop, let's not ignore
+                        // that...
                         return;
                     }
                 } else {
@@ -172,9 +178,11 @@ public class SitemapGeneratorWorker extends Thread {
     }
 
     /**
-     * Adds the canonical url of all the nodes that match to this sitemap item and their underlying children.
+     * Adds the canonical url of all the nodes that match to this sitemap item
+     * and their underlying children.
      *
-     * @param workItem the work item to process
+     * @param workItem
+     *            the work item to process
      */
     private void addSiteMapBranchToUrlSet(final WorkItem workItem) {
         final HstSiteMapItem siteMapItem = workItem.getSiteMapItem();
@@ -204,8 +212,7 @@ public class SitemapGeneratorWorker extends Thread {
             if (!generator.componentConfigurationIdShouldBeExcluded(componentConfigurationId)) {
                 String relativeContentPath = siteMapItem.getRelativeContentPath();
                 if (!StringUtils.isEmpty(relativeContentPath) && relativeContentPath.matches(".*\\$\\{\\d\\}.*")) {
-                    String resolvedContentPath =
-                            replacePlaceholdersWithMatchedNodes(relativeContentPath, matchedNodes);
+                    String resolvedContentPath = replacePlaceholdersWithMatchedNodes(relativeContentPath, matchedNodes);
                     addResolvedContentPathToUrlset(resolvedContentPath, relativeContentPath);
                 } else {
                     resolveSiteMapItemContainingDefaultOrAnyMatcherAndAddToUrlset(siteMapItem, matchedNodes);
@@ -220,8 +227,11 @@ public class SitemapGeneratorWorker extends Thread {
     /**
      * Adds the sitemap branch to the url set.
      *
-     * @param siteMapItem  the {@link HstSiteMapItem} to "parse"
-     * @param matchedNodes the {@link List} of node names that have already been matched (${1}, ${2}, etc..)
+     * @param siteMapItem
+     *            the {@link HstSiteMapItem} to "parse"
+     * @param matchedNodes
+     *            the {@link List} of node names that have already been matched
+     *            (${1}, ${2}, etc..)
      */
     private void addSiteMapBranchToUrlSet(final HstSiteMapItem siteMapItem, final List<String> matchedNodes) {
         WorkItem workItem = new WorkItem(siteMapItem, matchedNodes);
@@ -229,45 +239,56 @@ public class SitemapGeneratorWorker extends Thread {
     }
 
     /**
-     * Adds the canonical url of all the nodes that  match to this sitemap item with an any matcher and their
-     * underlying children.
+     * Adds the canonical url of all the nodes that match to this sitemap item
+     * with an any matcher and their underlying children.
      *
-     * @param siteMapItem  the {@link HstSiteMapItem} to "parse"
-     * @param matchedNodes the {@link List} of node names that have already been matched (${1}, ${2}, etc..)
+     * @param siteMapItem
+     *            the {@link HstSiteMapItem} to "parse"
+     * @param matchedNodes
+     *            the {@link List} of node names that have already been matched
+     *            (${1}, ${2}, etc..)
      */
     private void addSiteMapAnyMatcherBranchToUrlset(final HstSiteMapItem siteMapItem, final List<String> matchedNodes) {
         addSiteMapBranchWithMatcherToUrlset(siteMapItem, matchedNodes, "");
     }
 
     /**
-     * Adds the canonical url of all the nodes that  match to this sitemap item with a default matcher and their
-     * underlying children.
+     * Adds the canonical url of all the nodes that match to this sitemap item
+     * with a default matcher and their underlying children.
      *
-     * @param siteMapItem  the {@link HstSiteMapItem} to "parse"
-     * @param matchedNodes the {@link List} of node names that have already been matched (${1}, ${2}, etc..)
+     * @param siteMapItem
+     *            the {@link HstSiteMapItem} to "parse"
+     * @param matchedNodes
+     *            the {@link List} of node names that have already been matched
+     *            (${1}, ${2}, etc..)
      */
     private void addSiteMapDefaultMatcherBranchToUrlset(final HstSiteMapItem siteMapItem,
-                                                        final List<String> matchedNodes) {
+            final List<String> matchedNodes) {
         addSiteMapBranchWithMatcherToUrlset(siteMapItem, matchedNodes, "*");
     }
 
     /**
-     * Adds the canonical url of all the nodes that match to this sitemap item with a matcher and their underlying
-     * children.
+     * Adds the canonical url of all the nodes that match to this sitemap item
+     * with a matcher and their underlying children.
      *
-     * @param siteMapItem        the {@link HstSiteMapItem} to "parse"
-     * @param matchedNodes       the {@link List} of node names that have already been matched (${1}, ${2}, etc..)
-     * @param matcherReplacement the String to replace the matcher with ('*' for default), ('' for any)
+     * @param siteMapItem
+     *            the {@link HstSiteMapItem} to "parse"
+     * @param matchedNodes
+     *            the {@link List} of node names that have already been matched
+     *            (${1}, ${2}, etc..)
+     * @param matcherReplacement
+     *            the String to replace the matcher with ('*' for default), (''
+     *            for any)
      */
     private void addSiteMapBranchWithMatcherToUrlset(final HstSiteMapItem siteMapItem, final List<String> matchedNodes,
-                                                     final String matcherReplacement) {
+            final String matcherReplacement) {
         String componentConfigurationId = siteMapItem.getComponentConfigurationId();
-        boolean ignoreByComponentConfigurationId =
-                generator.componentConfigurationIdShouldBeExcluded(componentConfigurationId);
+        boolean ignoreByComponentConfigurationId = generator
+                .componentConfigurationIdShouldBeExcluded(componentConfigurationId);
         String contentPath = siteMapItem.getRelativeContentPath();
         if (LOG.isDebugEnabled()) {
-            LOG.debug("Relative content path = {} for sitemap item = {}",
-                    contentPath, HstSiteMapUtils.getPath(siteMapItem));
+            LOG.debug("Relative content path = {} for sitemap item = {}", contentPath,
+                    HstSiteMapUtils.getPath(siteMapItem));
         }
         final int curIdx = matchedNodes.size() + 1;
         String matcher = getMatcherForIndex(curIdx);
@@ -277,7 +298,8 @@ public class SitemapGeneratorWorker extends Thread {
             final String resolvedContentPath = replacePlaceholdersWithMatchedNodes(contentPath, matchedNodes);
             LOG.debug("Resolved relative content path = {}", resolvedContentPath);
 
-            // Resolve every document, add it's url and then resolve the children
+            // Resolve every document, add it's url and then resolve the
+            // children
             final String normalizedResolvedContentPath = PathUtils.normalizePath(resolvedContentPath);
             final String absoluteContentPath = baseContentPath + "/" + normalizedResolvedContentPath;
             final String resolvedContentPathWithMatcher = absoluteContentPath.replace(matcher, matcherReplacement);
@@ -298,7 +320,8 @@ public class SitemapGeneratorWorker extends Thread {
                 }
             }
         } else {
-            // There is no document to match, so we are matching on anything and passing that to the child nodes
+            // There is no document to match, so we are matching on anything and
+            // passing that to the child nodes
             List<String> newMatchedNodes = new ArrayList<String>(matchedNodes);
             newMatchedNodes.add(matcherReplacement);
             for (HstSiteMapItem childSiteMapItem : siteMapItem.getChildren()) {
@@ -309,31 +332,25 @@ public class SitemapGeneratorWorker extends Thread {
     }
 
     /**
-     * Builds the queries for the folder elements and the published nodes. These will be used to retrieve the node
-     * paths, which will be returned.
+     * Builds the queries for the folder elements and the published nodes. These
+     * will be used to retrieve the node paths, which will be returned.
      *
-     * @param pathForQuery        jcr-encoded path
-     * @param absoluteContentPath the absolute content path
+     * @param pathForQuery
+     *            jcr-encoded path
+     * @param absoluteContentPath
+     *            the absolute content path
      * @param ignoreByComponentConfigurationId
-     *                            true if node path must be ignored due to its component configuration id
-     *                            false otherwise
+     *            true if node path must be ignored due to its component
+     *            configuration id false otherwise
      * @return the node paths based on the queries
      */
-    private List<String> buildQueriesForFoldersAndPublishedNodesAndReturnNodePaths(
-            final String pathForQuery,
-            final String absoluteContentPath,
-            final boolean ignoreByComponentConfigurationId) {
+    private List<String> buildQueriesForFoldersAndPublishedNodesAndReturnNodePaths(final String pathForQuery,
+            final String absoluteContentPath, final boolean ignoreByComponentConfigurationId) {
 
-        final String queryStringForFolders = buildQueryString(
-                pathForQuery,
-                ELEMENT_MATCHER_FOR_FOLDERS,
-                NODE_TYPE_FOLDER_CONDITION
-        );
-        final String queryStringForPublishedNodes = buildQueryString(
-                pathForQuery,
-                queryStringForPublishedDocuments,
-                publishedNodeTypeCondition
-        );
+        final String queryStringForFolders = buildQueryString(pathForQuery, ELEMENT_MATCHER_FOR_FOLDERS,
+                NODE_TYPE_FOLDER_CONDITION);
+        final String queryStringForPublishedNodes = buildQueryString(pathForQuery, queryStringForPublishedDocuments,
+                publishedNodeTypeCondition);
 
         return returnNodePathsBasedOnQueries(Arrays.asList(queryStringForFolders, queryStringForPublishedNodes),
                 absoluteContentPath, ignoreByComponentConfigurationId);
@@ -342,21 +359,22 @@ public class SitemapGeneratorWorker extends Thread {
     /**
      * Returns the node paths based on the queries that have been built.
      *
-     * @param queryStrings        a {@link List} of queries to execute
-     * @param absoluteContentPath the absolute content path
+     * @param queryStrings
+     *            a {@link List} of queries to execute
+     * @param absoluteContentPath
+     *            the absolute content path
      * @param ignoreByComponentConfigurationId
-     *                            true if node path must be ignored due to its component configuration id
-     *                            false otherwise
+     *            true if node path must be ignored due to its component
+     *            configuration id false otherwise
      * @return the node paths based on the queries
      */
-    private List<String> returnNodePathsBasedOnQueries(List<String> queryStrings,
-                                                       final String absoluteContentPath,
-                                                       final boolean ignoreByComponentConfigurationId) {
+    private List<String> returnNodePathsBasedOnQueries(List<String> queryStrings, final String absoluteContentPath,
+            final boolean ignoreByComponentConfigurationId) {
 
         List<String> nodePaths = new ArrayList<String>();
         for (String queryString : queryStrings) {
-            List<String> nodePathsForQuery =
-                    addToUrlSetAndReturnNodePaths(queryString, absoluteContentPath, ignoreByComponentConfigurationId);
+            List<String> nodePathsForQuery = addToUrlSetAndReturnNodePaths(queryString, absoluteContentPath,
+                    ignoreByComponentConfigurationId);
             nodePaths.addAll(nodePathsForQuery);
         }
 
@@ -364,18 +382,21 @@ public class SitemapGeneratorWorker extends Thread {
     }
 
     /**
-     * Checks if the query is already cached, if not it adds Urls and its children to the {@link Urlset}. It returns
-     * the node paths based on the query.
+     * Checks if the query is already cached, if not it adds Urls and its
+     * children to the {@link Urlset}. It returns the node paths based on the
+     * query.
      *
-     * @param queryString         the query
-     * @param absoluteContentPath the absolute content path
+     * @param queryString
+     *            the query
+     * @param absoluteContentPath
+     *            the absolute content path
      * @param ignoreByComponentConfigurationId
-     *                            true if node path must be ignored due to its component configuration id
-     *                            false otherwise
+     *            true if node path must be ignored due to its component
+     *            configuration id false otherwise
      * @return the node paths based on the queries
      */
     private List<String> addToUrlSetAndReturnNodePaths(final String queryString, final String absoluteContentPath,
-                                                       final boolean ignoreByComponentConfigurationId) {
+            final boolean ignoreByComponentConfigurationId) {
         if (!generator.queryIsCached(queryString)) {
             return addUrlsAndChildrenToUrlSetForQuery(queryString, absoluteContentPath,
                     !ignoreByComponentConfigurationId);
@@ -385,10 +406,14 @@ public class SitemapGeneratorWorker extends Thread {
     }
 
     /**
-     * Adds the canonical url of the node, which is resolved by the resolved content path.
+     * Adds the canonical url of the node, which is resolved by the resolved
+     * content path.
      *
-     * @param resolvedContentPath the relative content path where the place holders are replaced with the matched nodes
-     * @param relativeContentPath the path of a site map item containing placeholders
+     * @param resolvedContentPath
+     *            the relative content path where the place holders are replaced
+     *            with the matched nodes
+     * @param relativeContentPath
+     *            the path of a site map item containing placeholders
      */
     private void addResolvedContentPathToUrlset(final String resolvedContentPath, final String relativeContentPath) {
         try {
@@ -412,17 +437,20 @@ public class SitemapGeneratorWorker extends Thread {
     }
 
     /**
-     * Replaces the default or any mather in the path of the site map item and adds the site map item to the urlset.
+     * Replaces the default or any mather in the path of the site map item and
+     * adds the site map item to the urlset.
      *
-     * @param siteMapItem  the {@link HstSiteMapItem} to "parse"
-     * @param matchedNodes the {@link List} of node names that have already been matched (${1}, ${2}, etc..)
+     * @param siteMapItem
+     *            the {@link HstSiteMapItem} to "parse"
+     * @param matchedNodes
+     *            the {@link List} of node names that have already been matched
+     *            (${1}, ${2}, etc..)
      */
     private void resolveSiteMapItemContainingDefaultOrAnyMatcherAndAddToUrlset(final HstSiteMapItem siteMapItem,
-                                                                               final List<String> matchedNodes) {
+            final List<String> matchedNodes) {
         Url url = new Url();
         String loc;
-        if (matchedNodes.isEmpty()
-                && !siteMapItem.getId().contains(HstNodeTypes.WILDCARD)
+        if (matchedNodes.isEmpty() && !siteMapItem.getId().contains(HstNodeTypes.WILDCARD)
                 && !siteMapItem.getId().contains(HstNodeTypes.ANY)) {
             loc = createLocForSitemapItem(siteMapItem);
         } else {
@@ -430,19 +458,32 @@ public class SitemapGeneratorWorker extends Thread {
             loc = linkCreator.create(path, mount).toUrlForm(requestContext, true);
         }
         url.setLoc(loc);
-        urlset.addUrlThatDoesntExistInTheListYet(url);
+
+        // ADDITION: added check and logging
+        if (siteMapItem.getRefId() == null || !exactSitemapsExcludedList.contains(siteMapItem.getId())) {
+            urlset.addUrlThatDoesntExistInTheListYet(url);
+        } else {
+            LOG.debug("skiping url: " + url.getLoc() + " for sitemap: " + siteMapItem.getRefId());
+        }
+
     }
 
     /**
-     * Creates a query based upon the ending character of the resolved content path.
+     * Creates a query based upon the ending character of the resolved content
+     * path.
      *
-     * @param pathForQuery      the encoded path of the resolved content path containing a matcher
-     * @param matcherCondition  query when pathForQuery ends with a default or any matcher
-     * @param nodeTypeCondition query when pathForQuery does not end with a default or any matcher
+     * @param pathForQuery
+     *            the encoded path of the resolved content path containing a
+     *            matcher
+     * @param matcherCondition
+     *            query when pathForQuery ends with a default or any matcher
+     * @param nodeTypeCondition
+     *            query when pathForQuery does not end with a default or any
+     *            matcher
      * @return The query that can be executed
      */
     private static String buildQueryString(final String pathForQuery, final String matcherCondition,
-                                           final String nodeTypeCondition) {
+            final String nodeTypeCondition) {
         if (pathForQuery.endsWith("*")) {
             // default matcher at the end of a path
             return pathForQuery.substring(0, pathForQuery.length() - 1) + matcherCondition;
@@ -457,14 +498,18 @@ public class SitemapGeneratorWorker extends Thread {
     /**
      * Executes the given query and adds the result to the urlset.
      *
-     * @param queryString                   the query the be executed
-     * @param absoluteContentPath           the content path containing '/' at the beginning and end of the path
-     * @param createLinksForThisSiteMapItem <code>true</code> if this method should add links to the urlest for the
-     *                                      resolved nodes, <code>false</code> otherwise
+     * @param queryString
+     *            the query the be executed
+     * @param absoluteContentPath
+     *            the content path containing '/' at the beginning and end of
+     *            the path
+     * @param createLinksForThisSiteMapItem
+     *            <code>true</code> if this method should add links to the
+     *            urlest for the resolved nodes, <code>false</code> otherwise
      * @return the {@link List} of node paths
      */
     private List<String> addUrlsAndChildrenToUrlSetForQuery(final String queryString, final String absoluteContentPath,
-                                                            final boolean createLinksForThisSiteMapItem) {
+            final boolean createLinksForThisSiteMapItem) {
         List<String> nodePaths = new ArrayList<String>();
         try {
             @SuppressWarnings("deprecation")
@@ -508,18 +553,23 @@ public class SitemapGeneratorWorker extends Thread {
     }
 
     /**
-     * @param pathWithPlaceholders the relative content path of a site map item containing placeholders.
-     * @param pathToParse          the path of a node which needs to eb parsed
-     * @param matchedNodes         the {@link List} of node names that have already been matched (${1}, ${2}, etc..)
+     * @param pathWithPlaceholders
+     *            the relative content path of a site map item containing
+     *            placeholders.
+     * @param pathToParse
+     *            the path of a node which needs to eb parsed
+     * @param matchedNodes
+     *            the {@link List} of node names that have already been matched
+     *            (${1}, ${2}, etc..)
      * @return A new List containing an update of the matched nodes
      */
     private List<String> getMatchedNodes(final String pathWithPlaceholders, final String pathToParse,
-                                         final List<String> matchedNodes) {
+            final List<String> matchedNodes) {
         int curIdx = matchedNodes.size() + 1;
 
         String localizedPath = localizePath(baseContentPath, pathToParse);
-        String contentPathWithPlaceholders =
-                replacePlaceholdersWithMatchedNodes(pathWithPlaceholders, matchedNodes, false);
+        String contentPathWithPlaceholders = replacePlaceholdersWithMatchedNodes(pathWithPlaceholders, matchedNodes,
+                false);
 
         Map<Integer, String> placeholderValues = extractPlaceholderValues(contentPathWithPlaceholders, localizedPath);
 
@@ -527,13 +577,15 @@ public class SitemapGeneratorWorker extends Thread {
         for (Map.Entry<Integer, String> entry : placeholderValues.entrySet()) {
             Integer placeholderNumber = entry.getKey();
             if (placeholderNumber == curIdx) {
-                // this is the current level of the site map, which is not in the list yet
+                // this is the current level of the site map, which is not in
+                // the list yet
                 newMatchedNodes.add(entry.getValue());
             } else if (placeholderNumber < curIdx) {
                 // this is a replacement for a * matcher
                 newMatchedNodes.set(placeholderNumber - 1, entry.getValue());
             } else {
-                // There should not be a parameter defined which is not applicable yet
+                // There should not be a parameter defined which is not
+                // applicable yet
                 throw new IllegalStateException("Found a placeholder number that should not exist");
             }
         }
@@ -542,9 +594,11 @@ public class SitemapGeneratorWorker extends Thread {
     }
 
     /**
-     * Tries to map the passed Node to a {@link HippoBean}, if that doesn't work, it returns null.
+     * Tries to map the passed Node to a {@link HippoBean}, if that doesn't
+     * work, it returns null.
      *
-     * @param node the node to map
+     * @param node
+     *            the node to map
      * @return {@link HippoBean} representing the node
      */
     private HippoBean obtainHippoBeanForNode(final Node node) {
@@ -571,7 +625,9 @@ public class SitemapGeneratorWorker extends Thread {
                 LOG.error("Found a corrupt node. Skipped the node. It is not added to the sitemap. "
                         + "Path = {}, Type = {}", nodePath, nodeType);
             } catch (RepositoryException e) {
-                LOG.error("Repository exception in obtainHippoBeanForNode() when trying to resolve node path and node name: ", e);
+                LOG.error(
+                        "Repository exception in obtainHippoBeanForNode() when trying to resolve node path and node name: ",
+                        e);
                 throw new IllegalStateException("Repository Exception when trying to resolve node path and node name.");
             }
             return null;
@@ -581,11 +637,13 @@ public class SitemapGeneratorWorker extends Thread {
     /**
      * Creates a {@link Url} based on the passed document.
      *
-     * @param hippoBean the HippoBean of the resulting query or based upon the resolved content path
+     * @param hippoBean
+     *            the HippoBean of the resulting query or based upon the
+     *            resolved content path
      * @return An empty url or a url with a canonical location tag
      */
     private Url createUrlBasedOnNodeWithCanonicalLoc(final HippoBean hippoBean) {
-        if (hippoBean == null /* //ADDITION: */|| isTypeExcluded(hippoBean)) {
+        if (hippoBean == null /* //ADDITION: */|| isTypeExcluded(hippoBean) || isExactSitemapExcluded(hippoBean)) {
             return null;
         }
 
@@ -606,16 +664,61 @@ public class SitemapGeneratorWorker extends Thread {
         return url;
     }
 
-    //ADDITION:
+    // ADDITION:
     private boolean isTypeExcluded(HippoBean hippoBean) {
         boolean result = false;
         try {
             String beanType = hippoBean.getNode().getProperty("jcr:primaryType").getString();
-            if(excludeTypesList.contains(beanType)){
-                result=true;
+            if (excludeTypesList.contains(beanType)) {
+                result = true;
             }
         } catch (RepositoryException e) {
-          LOG.debug("Ignored ERROR generating sitemap.xml: ", e);
+            LOG.debug("Ignored ERROR generating sitemap.xml: ", e);
+        }
+        return result;
+    }
+
+    private boolean isExactSitemapExcluded(HippoBean hippoBean) {
+        boolean result = false;
+        String matchedSitemnap = getMatchingSitemap(requestContext, hippoBean.getPath());
+        if (exactSitemapsExcludedList.contains(matchedSitemnap)) {
+            result = true;
+        }
+        return result;
+    }
+
+    private String getMatchingSitemap(HstRequestContext requestContext, String beanPath) {
+        String result = null;
+        try {
+            ObjectBeanManager objectBeanManager = requestContext.getObjectBeanManager();
+            HippoBean bean = (HippoBean) objectBeanManager.getObject(beanPath);
+            HstLink link = requestContext.getHstLinkCreator().create(bean, requestContext);
+            result = getRelativeUrlPath(requestContext, link.toUrlForm(requestContext, false));
+        } catch (ObjectBeanManagerException e) {
+            LOG.error(e.getMessage(), e);
+        }
+
+        // remove intial slash
+        if (result != null) {
+            result = result.substring(1);
+        }
+        return result;
+    }
+
+    private String getRelativeUrlPath(HstRequestContext requestContext, String relativeUrlform) {
+        String result = relativeUrlform;
+
+       /** 
+        * Mount mount = requestContext.getResolvedMount().getMount();
+        **/
+
+        String defaultContextPath = mount.getVirtualHost().getVirtualHosts().getDefaultContextPath();
+        if (relativeUrlform.startsWith(defaultContextPath) && mount.isContextPathInUrl()) {
+            result = result.substring(defaultContextPath.length());
+        }
+
+        if (mount.getParent() != null) {
+            result = ".." + result;
         }
         return result;
     }
@@ -623,7 +726,8 @@ public class SitemapGeneratorWorker extends Thread {
     /**
      * Creates the location tag for a sitemap item.
      *
-     * @param siteMapItem the {@link HstSiteMapItem} to "parse"
+     * @param siteMapItem
+     *            the {@link HstSiteMapItem} to "parse"
      * @return the location tag for the sitemap item
      */
     private String createLocForSitemapItem(final HstSiteMapItem siteMapItem) {

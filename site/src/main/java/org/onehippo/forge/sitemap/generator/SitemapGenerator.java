@@ -79,6 +79,8 @@ public class SitemapGenerator {
   
     //ADDITION:
     private final List<String> typesExcludedFromSiteMap;
+    private final List<String> exactSitemapExclusions;
+
 
     private final List<WorkItem> workItemQueue;
     private final List<WorkItem> workItemsInProgress;
@@ -121,6 +123,7 @@ public class SitemapGenerator {
         queryCacheHits = 0;
         //ADDITION:
         typesExcludedFromSiteMap = new ArrayList<String>();
+        exactSitemapExclusions = new ArrayList<String>();
     }
 
     public String createSitemap(final HstSiteMenu sitemenu, final int maxDepth) {
@@ -292,9 +295,7 @@ public class SitemapGenerator {
         for (int i = 0 ; i < amountOfWorkers; i++) {
             SitemapGeneratorWorker worker = new SitemapGeneratorWorker(
                     this, mount, urlset, requestContext,
-                    objectConverter, urlInformationProvider, 
-                    /* //ADDITION: */typesExcludedFromSiteMap
-            );
+                    objectConverter, urlInformationProvider);
             worker.start();
             workers.add(worker);
         }
@@ -351,6 +352,11 @@ public class SitemapGenerator {
     //ADDITION:
     public void addTypeExclusions(final String[] typesToExclude) {
         typesExcludedFromSiteMap.addAll(Arrays.asList(typesToExclude));
+    }
+
+    //ADDITION:
+    public void addExactSitemapExclusions(final String[] exactSitemapExclusions) {
+        this.exactSitemapExclusions.addAll(Arrays.asList(exactSitemapExclusions));
     }
 
     public void addSitemapPathExclusions(final Collection<String> pathsToExclude) {
@@ -446,4 +452,13 @@ public class SitemapGenerator {
     protected HstRequestContext getRequestContext() {
         return requestContext;
     }
+    
+    protected List<String> getTypesExcludedFromSiteMap(){
+        return typesExcludedFromSiteMap;
+    }
+
+    protected List<String> getExactSitemapExclusions(){
+        return exactSitemapExclusions;
+    }
+
 }
