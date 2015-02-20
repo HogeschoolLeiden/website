@@ -1610,6 +1610,21 @@ figure.medewerkers ul.social li.linkedin a {
 	.aside .overzichtlijst.related {
 		float: left;
 	}
+	
+	.aside .catalog.text.teasers + .clearfix,
+	.aside .catalog.internalLinks.teasers + .clearfix,
+	.aside .catalog.externalLinks.teasers + .clearfix {
+		display: none;
+	}
+	
+	.aside .catalog.image.teasers,
+	.aside .catalog.internalLinks.teasers .col-xs-12.col-sm-6,
+	.aside .catalog.text.teasers .col-xs-12.col-sm-6,
+	.aside .catalog.externalLinks.teasers .col-xs-12.col-sm-6{
+		width: 46%;
+		margin: 10px 2% !important;
+		/* float: left; img teaser problems */
+	}
 }
 
 @media (min-width :768px) and (max-width: 991px) {
@@ -1631,16 +1646,7 @@ figure.medewerkers ul.social li.linkedin a {
 }
 
 @media (max-width :767px) and (orientation:landscape) {
-	
-	.aside .catalog.image.teasers,
-	.aside .catalog.internalLinks.teasers .col-xs-12.col-sm-6,
-	.aside .catalog.text.teasers .col-xs-12.col-sm-6,
-	.aside .catalog.externalLinks.teasers .col-xs-12.col-sm-6{
-		width: 46%;
-		margin: 10px 2% !important;
-		/* float: left; img teaser problems */
-	}
-	
+		
 	.vindjestudie .aside .catalog.text.teasers + .clearfix,
 	.vindjestudie .aside .catalog.internalLinks.teasers + .clearfix,
 	.vindjestudie .aside .catalog.externalLinks.teasers + .clearfix {
