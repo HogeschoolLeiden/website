@@ -48,7 +48,6 @@ import org.hippoecm.hst.configuration.HstNodeTypes;
 import org.hippoecm.hst.configuration.hosting.Mount;
 import org.hippoecm.hst.configuration.sitemap.HstSiteMapItem;
 import org.hippoecm.hst.content.beans.ObjectBeanManagerException;
-import org.hippoecm.hst.content.beans.manager.ObjectBeanManager;
 import org.hippoecm.hst.content.beans.manager.ObjectConverter;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.core.linking.HstLink;
@@ -460,7 +459,7 @@ public class SitemapGeneratorWorker extends Thread {
         url.setLoc(loc);
 
         // ADDITION: added check and logging
-        if (siteMapItem.getRefId() == null || !exactSitemapsExcludedList.contains(siteMapItem.getId())) {
+        if (!exactSitemapsExcludedList.contains(siteMapItem.getId())) {
             urlset.addUrlThatDoesntExistInTheListYet(url);
         } else {
             LOG.debug("skiping url: " + url.getLoc() + " for sitemap: " + siteMapItem.getRefId());
@@ -680,46 +679,39 @@ public class SitemapGeneratorWorker extends Thread {
 
     private boolean isExactSitemapExcluded(HippoBean hippoBean) {
         boolean result = false;
-        String matchedSitemnap = getMatchingSitemap(requestContext, hippoBean.getPath());
+        String matchedSitemnap = getMatchingSitemapPath(requestContext, hippoBean);
         if (exactSitemapsExcludedList.contains(matchedSitemnap)) {
             result = true;
         }
+        LOG.debug("3) is path excluded = " + result);
+        LOG.debug(" ====================================== ");
         return result;
     }
 
-    private String getMatchingSitemap(HstRequestContext requestContext, String beanPath) {
+    private String getMatchingSitemapPath(HstRequestContext requestContext, HippoBean hippoBean) {
+        LOG.debug(" ++++++++++++++++++++++++++++++++++++++ ");
         String result = null;
-        try {
-            ObjectBeanManager objectBeanManager = requestContext.getObjectBeanManager();
-            HippoBean bean = (HippoBean) objectBeanManager.getObject(beanPath);
-            HstLink link = requestContext.getHstLinkCreator().create(bean, requestContext);
-            result = getRelativeUrlPath(requestContext, link.toUrlForm(requestContext, false));
-        } catch (ObjectBeanManagerException e) {
-            LOG.error(e.getMessage(), e);
-        }
-
+        HstLink link = requestContext.getHstLinkCreator().create(hippoBean, requestContext);
+        
+        LOG.debug("1) link = " + link.toUrlForm(requestContext, false));
+        result = getRelativeUrlPath(requestContext, link.toUrlForm(requestContext, false));
+       
         // remove intial slash
         if (result != null) {
             result = result.substring(1);
         }
+        LOG.debug("2) matching sitemap path = " + result);
         return result;
     }
 
     private String getRelativeUrlPath(HstRequestContext requestContext, String relativeUrlform) {
         String result = relativeUrlform;
 
-       /** 
-        * Mount mount = requestContext.getResolvedMount().getMount();
-        **/
-
         String defaultContextPath = mount.getVirtualHost().getVirtualHosts().getDefaultContextPath();
         if (relativeUrlform.startsWith(defaultContextPath) && mount.isContextPathInUrl()) {
             result = result.substring(defaultContextPath.length());
         }
 
-        if (mount.getParent() != null) {
-            result = ".." + result;
-        }
         return result;
     }
 
