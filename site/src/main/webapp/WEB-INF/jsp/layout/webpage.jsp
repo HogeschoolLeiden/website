@@ -129,8 +129,9 @@
       <script src="${googleAnalytics}" type="text/javascript"></script>
       
       <c:set var="gtm" value="${(tag:getMainWebsitePropertyList(pageContext.request)).googleTagManagerConfig}"/>
+      <c:set var="disableGTM" value="${(tag:getMainWebsitePropertyList(pageContext.request)).disableGoogleTagManager}"/>
       
-      <c:if test="${not empty gtm and not (fn:toLowerCase(gtm) eq 'no')}">
+      <c:if test="${not disableGTM eq 'true'}">
         ${gtm}
       </c:if>
   	</c:if>
@@ -141,8 +142,9 @@
     <script type="text/javascript" src="<hst:link path="/js/kees/main.js" />"></script>
     
     <c:set var="chatJs" value="${(tag:getMainWebsitePropertyList(pageContext.request)).chatJsConfig}"/>
+    <c:set var="disableChat" value="${(tag:getMainWebsitePropertyList(pageContext.request)).disableChatJs}"/>
     
-    <c:if test="${not empty chatJs and not (fn:toLowerCase(chatJs) eq 'no')}">     
+    <c:if test="${not disableChat eq 'true'}">     
       <script type="text/javascript" src="${chatJs}"></script> 
     </c:if>
     

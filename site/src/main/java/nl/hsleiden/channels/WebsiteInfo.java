@@ -49,5 +49,11 @@ public interface WebsiteInfo extends ChannelInfo {
                     + "'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); "
                     + "})(window,document,'script','dataLayer','GTM-55GJBQ');</script>")
     public String getGoogleTagManagerConfig();
+    
+    @Parameter( name = "disableGoogleTagManager", defaultValue="false")
+    public String getDisableGoogleTagManager ();
+    
+    @Parameter( name = "disableChatJs", defaultValue="false")
+    public String getDisableChatJs();
 
 }
