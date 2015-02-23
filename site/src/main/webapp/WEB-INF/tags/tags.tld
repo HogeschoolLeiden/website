@@ -187,6 +187,13 @@
 	</function>
 
 	<function>
+		<description>get main website properties list from channel configuration</description>
+		<name>getMainWebsitePropertyList</name>
+		<function-class>nl.hsleiden.tags.Functions</function-class>
+		<function-signature>nl.hsleiden.channels.WebsiteInfo getMainWebsitePropertyList(javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+
+	<function>
 		<description>test if the provided facet group should display or not</description>
 		<name>shouldFilterGroupDisplay</name>
 		<function-class>nl.hsleiden.utils.FacetsUtils</function-class>

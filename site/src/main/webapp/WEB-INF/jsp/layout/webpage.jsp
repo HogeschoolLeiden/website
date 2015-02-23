@@ -124,21 +124,27 @@
     <hst:headContributions categoryIncludes="scripts" xhtml="true" />
   	
 	<c:if test="${(not composermode ) and ( not tag:isCookiesRefused(pageContext.request))}">
-	    <ga:accountId/>
-	    <hst:link var="googleAnalytics" path="/resources/google-analytics.js"/>
-    	<script src="${googleAnalytics}" type="text/javascript"></script>
-    	
-        ${(tag:getWebsitePropertyList(pageContext.request)).googleTagManagerConfig }
-		
+	  <ga:accountId/>
+	  <hst:link var="googleAnalytics" path="/resources/google-analytics.js"/>
+      <script src="${googleAnalytics}" type="text/javascript"></script>
+      
+      <c:set var="gtm" value="${(tag:getMainWebsitePropertyList(pageContext.request)).googleTagManagerConfig}"/>
+      
+      <c:if test="${not empty gtm and not (fn:toLowerCase(gtm) eq 'no')}">
+        ${gtm}
+      </c:if>
   	</c:if>
       
-    <script type="text/javascript" src="<hst:link path="/js/kees/vendor/bootstrap.min.js" />"></script>
-    
+    <script type="text/javascript" src="<hst:link path="/js/kees/vendor/bootstrap.min.js" />"></script>   
     <script type="text/javascript" src="<hst:link path="/js/kees/vendor/ekko-lightbox.js"/>" ></script>
     <script type="text/javascript" src="<hst:link path="/js/kees/plugins.js" />"></script>
     <script type="text/javascript" src="<hst:link path="/js/kees/main.js" />"></script>
-         
-    <script type="text/javascript" src="${(tag:getWebsitePropertyList(pageContext.request)).chatJsConfig }"></script> 
+    
+    <c:set var="chatJs" value="${(tag:getMainWebsitePropertyList(pageContext.request)).chatJsConfig}"/>
+    
+    <c:if test="${not empty chatJs and not (fn:toLowerCase(chatJs) eq 'no')}">     
+      <script type="text/javascript" src="${chatJs}"></script> 
+    </c:if>
     
 </body>
 </html>

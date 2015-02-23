@@ -36,6 +36,14 @@ public class Functions {
         return result;
     }
 
+    public static WebsiteInfo getMainWebsitePropertyList(HttpServletRequest request) {
+        WebsiteInfo result = null;
+        HstRequest req = (HstRequest) request;
+        Mount mount = req.getRequestContext().getMount("hsl");
+        result = mount.getChannelInfo();        
+        return result;
+    }
+
     public static boolean isSubclassOfWebPage(HippoBean hippoBean) {
         boolean result = false;
         if (hippoBean instanceof WebPage) {
