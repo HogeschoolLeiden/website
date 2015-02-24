@@ -14,8 +14,11 @@
  *  limitations under the License.
  *  
  *  
- *  Overridden for being able to exclude items also based on the document types.
- *  Overridden parts are marked with the comment //ADDITION:
+ * Overridden for:
+ * being able to exclude items also based on the document types,
+ * being able to exclude sitemap paths, without excluding their children,
+ * being able to add assets urls in sitemap.xml
+ * Added or Overridden parts are marked with the comment //ADDITION:
  *  
  */
 package org.onehippo.forge.sitemap.generator;

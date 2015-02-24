@@ -13,8 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * 
- * Overridden for being able to exclude items also based on the document types.
- * Overridden parts are marked with the comment //ADDITION:
+ * Overridden for:
+ * being able to exclude items also based on the document types,
+ * being able to exclude sitemap paths, without excluding their children,
+ * being able to add assets urls in sitemap.xml
+ * Added or Overridden parts are marked with the comment //ADDITION:
  *  
  */
 package org.onehippo.forge.sitemap.generator;
@@ -49,7 +52,10 @@ import org.hippoecm.hst.configuration.hosting.Mount;
 import org.hippoecm.hst.configuration.sitemap.HstSiteMapItem;
 import org.hippoecm.hst.content.beans.ObjectBeanManagerException;
 import org.hippoecm.hst.content.beans.manager.ObjectConverter;
+import org.hippoecm.hst.content.beans.standard.HippoAsset;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
+import org.hippoecm.hst.content.beans.standard.HippoFolderBean;
+import org.hippoecm.hst.content.beans.standard.HippoResource;
 import org.hippoecm.hst.core.linking.HstLink;
 import org.hippoecm.hst.core.linking.HstLinkCreator;
 import org.hippoecm.hst.core.request.HstRequestContext;
@@ -213,6 +219,9 @@ public class SitemapGeneratorWorker extends Thread {
                 if (!StringUtils.isEmpty(relativeContentPath) && relativeContentPath.matches(".*\\$\\{\\d\\}.*")) {
                     String resolvedContentPath = replacePlaceholdersWithMatchedNodes(relativeContentPath, matchedNodes);
                     addResolvedContentPathToUrlset(resolvedContentPath, relativeContentPath);
+                //ADDITION: added else-if for adding the binaries in the sitemap.xml
+                } else if ("binaries".equalsIgnoreCase(siteMapItem.getId())) { 
+                    addBinariesToUrlSet();
                 } else {
                     resolveSiteMapItemContainingDefaultOrAnyMatcherAndAddToUrlset(siteMapItem, matchedNodes);
                 }
@@ -220,6 +229,36 @@ public class SitemapGeneratorWorker extends Thread {
             for (HstSiteMapItem siteMapItemChild : siteMapItem.getChildren()) {
                 addSiteMapBranchToUrlSet(siteMapItemChild, matchedNodes);
             }
+        }
+    }
+
+    //ADDITION: added method for displaying binaries urls in the sitemap.xml
+    private void addBinariesToUrlSet() {
+        try {
+            HippoFolderBean baseAssetsFolderBean = (HippoFolderBean) requestContext.getObjectBeanManager().getObject(
+                    "/content/assets/hsl");
+            addAssetsOfFolder(baseAssetsFolderBean);
+        } catch (ObjectBeanManagerException e) {
+            LOG.error("Error getting base aset folder: ", e);
+        } 
+    }
+
+    //ADDITION: added method for displaying binaries urls in the sitemap.xml
+    private void addAssetsOfFolder(HippoFolderBean mySubFolders) {
+        addAssetsToSitemap(mySubFolders);
+        for (HippoFolderBean subFolder : mySubFolders.getFolders()) {
+            addAssetsOfFolder(subFolder);
+        }
+    }
+
+    //ADDITION: added method for displaying binaries urls in the sitemap.xml
+    private void addAssetsToSitemap(HippoFolderBean hippoFolder) {
+        List<HippoAsset> myAssets = hippoFolder.getChildBeans("hippogallery:exampleAssetSet");
+        for (HippoAsset hippoAsset : myAssets) {
+            Url url = new Url();
+            url.setLoc(linkCreator.create(hippoAsset, requestContext).toUrlForm(requestContext, true));
+            url.setLastmod(hippoAsset.getBean("hippogallery:asset", HippoResource.class).getLastModified());
+            urlset.addUrlThatDoesntExistInTheListYet(url);
         }
     }
 
@@ -692,10 +731,10 @@ public class SitemapGeneratorWorker extends Thread {
         LOG.debug(" ++++++++++++++++++++++++++++++++++++++ ");
         String result = null;
         HstLink link = requestContext.getHstLinkCreator().create(hippoBean, requestContext);
-        
+
         LOG.debug("1) link = " + link.toUrlForm(requestContext, false));
         result = getRelativeUrlPath(requestContext, link.toUrlForm(requestContext, false));
-       
+
         // remove intial slash
         if (result != null) {
             result = result.substring(1);
