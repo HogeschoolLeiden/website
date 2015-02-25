@@ -147,4 +147,29 @@ public class Functions {
 
         return result;
     }
+    
+    public static String getBrowserTitle(HttpServletRequest request, HippoBean document){
+        String result = getWebsitePropertyList(request).getDefaultBrowserTitle();
+        if(document instanceof WebPage){
+            result = getDocumentTitle(document, result);
+        }
+        
+        return result;
+    }
+
+    private static String getDocumentTitle(HippoBean document, String actualBrowserTitle) {
+        String result = actualBrowserTitle;
+        
+        WebPage webPage = (WebPage) document;
+        String title = webPage.getTitle();
+        String browserTitle = webPage.getBrowserTitle();
+        
+        if(browserTitle != null && !browserTitle.isEmpty()){
+            result = browserTitle;
+        }else if(title != null && !title.isEmpty()){
+            result = result + " - " + title;
+        }
+        
+        return result;
+    }
 }

@@ -18,14 +18,14 @@
 <%@ taglib prefix="ga" uri="http://www.onehippo.org/jsp/google-analytics"%>
 
 <head>
+  <title><c:out value="${tag:getBrowserTitle(pageContext.request, document)}" escapeXml="true" /></title>
+  
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="x-ua-compatible" content="IE=edge">
-  
   <meta property="og:type" content="website"/>
        
   <c:if test="${tag:isSubclassOfWebPage(document)}">
     <c:if test="${not empty document.title }">
-      <%-- <meta name="title" content="<c:out value="${document.title}" escapeXml="true" />" /> --%>
       <meta property="og:title" content="${document.title}"/>
     </c:if>
     <c:if test="${hst:isReadable(document, 'description') && not empty document.description }">
@@ -38,7 +38,7 @@
       <meta name="author" content="<c:out value="${document.author.firstItem.label}" escapeXml="true" />" />
     </c:if>
   </c:if>
-
+    
   <script type="text/javascript">
   	var contextPath = "${tag:contextPath(pageContext.request)}";
   </script>
@@ -61,7 +61,6 @@
    <!-- CSS -->  
   <link rel="stylesheet" href="<hst:link path="/css/kees/bootstrap.min.css"/>" >
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" >
-  
   
   <!-- SWIPER SLIDER -->
   <link rel="stylesheet" href="<hst:link path="/css/kees/idangerous.swiper.css"/>">
@@ -87,14 +86,6 @@
  
   <hst:headContributions categoryExcludes="scripts,formsCssHere,extraCss" xhtml="true" />
   
-  <c:choose>
-    <c:when test="${tag:isSubclassOfWebPage(document) and not empty document.browserTitle}">
-	 <title><c:out value="${document.browserTitle}" escapeXml="true" /></title>
-    </c:when>
-    <c:otherwise>
-      <title><c:out value="${(tag:getWebsitePropertyList(pageContext.request)).defaultBrowserTitle}" escapeXml="true" /></title>
-    </c:otherwise>
-  </c:choose>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
   
   <hst:headContributions categoryIncludes="extraCss" xhtml="true" />
