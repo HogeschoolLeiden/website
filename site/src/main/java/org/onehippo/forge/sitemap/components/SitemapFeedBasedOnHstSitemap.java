@@ -25,10 +25,14 @@ package org.onehippo.forge.sitemap.components;
 import static org.apache.commons.lang.StringUtils.isNotBlank;
 import static org.onehippo.forge.sitemap.components.util.SiteMapGeneratorUtils.createUrlInformationProvider;
 
+import java.util.List;
+
 import javax.jcr.RepositoryException;
 import javax.jcr.Session;
 
 import org.hippoecm.hst.component.support.bean.BaseHstComponent;
+import org.hippoecm.hst.configuration.hosting.Mount;
+import org.hippoecm.hst.configuration.hosting.VirtualHost;
 import org.hippoecm.hst.container.RequestContextProvider;
 import org.hippoecm.hst.core.component.HstComponentFatalException;
 import org.hippoecm.hst.core.component.HstRequest;
@@ -36,6 +40,7 @@ import org.hippoecm.hst.core.component.HstResponse;
 import org.hippoecm.hst.core.parameters.Parameter;
 import org.hippoecm.hst.core.parameters.ParametersInfo;
 import org.hippoecm.hst.core.request.HstRequestContext;
+import org.onehippo.forge.sitemap.components.model.Url;
 import org.onehippo.forge.sitemap.components.model.Urlset;
 import org.onehippo.forge.sitemap.components.splitter.FileSystemSitemapSplitter;
 import org.onehippo.forge.sitemap.components.splitter.RepositorySitemapSplitter;
@@ -50,6 +55,7 @@ public class SitemapFeedBasedOnHstSitemap extends BaseHstComponent {
 
     private static final String SITEMAP = "sitemap";
     private static final String LOGING_SEPARATOR = "-----------";
+    
     private static final Logger LOG = LoggerFactory.getLogger(SitemapFeedBasedOnHstSitemap.class);
     private static final String REGEX_FOR_SPLITTING_COMMA_SEPERATED_PARAMETERS = "[\\s]*,[\\s]*";
 
@@ -60,8 +66,15 @@ public class SitemapFeedBasedOnHstSitemap extends BaseHstComponent {
 
         SiteMapFeedBasedOnHstSiteMapParameters parameters = getComponentParametersInfo(request);
 
-        SitemapGenerator sitemapGenerator = createSitemapGenerator(request.getRequestContext(), parameters);
+        //ADDITION: changed method signature for adding mount directly
+        Mount baseMount = request.getRequestContext().getResolvedMount().getMount();
+        SitemapGenerator sitemapGenerator = createSitemapGenerator(request.getRequestContext(), parameters, baseMount);
+        
         Urlset urlset = sitemapGenerator.createUrlSetBasedOnHstSiteMap();
+
+        //ADDITION: for adding all subsites urls in a single sitemap.xml file
+        urlset = addSubsitesUrls(request, urlset, parameters);
+
         boolean splittingExecuted;
 
         OutputMode outputMode = getOutputMode(parameters);
@@ -84,6 +97,62 @@ public class SitemapFeedBasedOnHstSitemap extends BaseHstComponent {
         }
     }
 
+    //ADDITION: for adding all subsites urls in a single sitemap.xml file
+    private Urlset addSubsitesUrls(HstRequest request, Urlset originalUrlSet,
+            SiteMapFeedBasedOnHstSiteMapParameters parameters) {
+
+        Urlset result = originalUrlSet;
+        VirtualHost virtualHost = request.getRequestContext().getVirtualHost();
+
+        String hostGroupName = virtualHost.getHostGroupName();
+        for (Mount mount : virtualHost.getVirtualHosts().getMountsByHostGroup(hostGroupName)) {
+
+            if (mount != null && !shouldMountBeExcludedFromSitemap(mount) && shouldMountBeIncludedInSitemap(mount)) {
+                LOG.debug("generating urls of mount: " + mount.getName());
+                result = addSubsiteUrls(request, parameters, result, mount);
+            }
+        }
+        return result;
+    }
+
+    //ADDITION: for adding all subsites urls in a single sitemap.xml file
+    private boolean shouldMountBeIncludedInSitemap(Mount mount) {
+        
+        LOG.debug("mount mapped: " + (mount.isMapped())); 
+        LOG.debug("mount not preview: " + (!mount.isPreview()));
+        LOG.debug("mount is site: " + (mount.isSite()));
+        
+        return mount.isMapped() && !mount.isPreview() && mount.isSite();
+    }
+
+    //ADDITION: for adding all subsites urls in a single sitemap.xml file
+    private boolean shouldMountBeExcludedFromSitemap(Mount mount) {
+
+        String excludeFromSitemapProperty = mount.getProperty("excludeFromSitemap");
+
+        LOG.debug("mount point null: " + (mount.getMountPoint() == null)); 
+        LOG.debug("excludeFromSitemap not null: " + (excludeFromSitemapProperty != null));
+
+        return mount.getMountPoint() == null
+                || (excludeFromSitemapProperty != null && "true".equalsIgnoreCase(excludeFromSitemapProperty));
+    }
+
+    //ADDITION: for adding all subsites urls in a single sitemap.xml file
+    private Urlset addSubsiteUrls(HstRequest request, SiteMapFeedBasedOnHstSiteMapParameters parameters,
+            Urlset actualUrlSet, Mount mount) {
+
+        Urlset result = actualUrlSet;
+
+        SitemapGenerator sitemapGenerator = createSitemapGenerator(request.getRequestContext(), parameters, mount);
+        Urlset urlset = sitemapGenerator.createUrlSetBasedOnHstSiteMap();
+
+        List<Url> urls = urlset.getUrls();
+        for (Url url : urls) {
+            result.addUrlThatDoesntExistInTheListYet(url);
+        }
+        return result;
+    }
+
     private static void logQueryStatistics(final SitemapGenerator sitemapGenerator) {
         LOG.info(LOGING_SEPARATOR);
         LOG.info("Queries fired: " + sitemapGenerator.getQueriesFired());
@@ -104,7 +173,7 @@ public class SitemapFeedBasedOnHstSitemap extends BaseHstComponent {
     }
 
     private SitemapGenerator createSitemapGenerator(final HstRequestContext requestContext,
-            final SiteMapFeedBasedOnHstSiteMapParameters parameters) {
+            final SiteMapFeedBasedOnHstSiteMapParameters parameters, Mount mount) {
         String[] refIdsToIgnore = parameters.getSitemapExclusionsForRefIds().trim()
                 .split(REGEX_FOR_SPLITTING_COMMA_SEPERATED_PARAMETERS);
         String[] componentConfigurationIdsToIgnore = parameters.getSitemapExclusionsForComponentConfigurationIds()
@@ -116,7 +185,7 @@ public class SitemapFeedBasedOnHstSitemap extends BaseHstComponent {
         UrlInformationProvider informationProvider = createUrlInformationProvider(parameters.getInformationProvider());
 
         SitemapGenerator sitemapGenerator = new SitemapGenerator(requestContext, RequestContextProvider.get()
-                .getContentBeansTool().getObjectConverter(), informationProvider);
+                .getContentBeansTool().getObjectConverter(), informationProvider, mount);
 
         sitemapGenerator.addSitemapRefIdExclusions(refIdsToIgnore);
         sitemapGenerator.addComponentConfigurationIdExclusions(componentConfigurationIdsToIgnore);
@@ -160,9 +229,9 @@ public class SitemapFeedBasedOnHstSitemap extends BaseHstComponent {
         Session writeSession = null;
         try {
             /**
-             * A persistable session is needed in order to be able to write
-             * to the repository. In the hst-config.properties a user is
-             * needed with writable permissions.
+             * A persistable session is needed in order to be able to write to
+             * the repository. In the hst-config.properties a user is needed
+             * with writable permissions.
              */
             writeSession = getPersistableSession(request);
             splitter = new RepositorySitemapSplitter(urlset, writeSession,
@@ -224,8 +293,9 @@ public class SitemapFeedBasedOnHstSitemap extends BaseHstComponent {
         String getExcludeTypesList();
 
         /**
-         * //ADDITION: add new parameter for being able to exclude a 
-         * sitemap item based on its exact path but in the same time include its children.
+         * //ADDITION: add new parameter for being able to exclude a sitemap
+         * item based on its exact path but in the same time include its
+         * children.
          *
          * @return the comma separated list of sitemap paths which must be
          *         excluded.
