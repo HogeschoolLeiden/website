@@ -31,9 +31,6 @@
     <c:if test="${hst:isReadable(document, 'description') && not empty document.description }">
       <meta name="description" content="<c:out value="${document.description}" escapeXml="true" />" />
     </c:if>
-    <c:if test="${not empty document.keywords }">
-      <meta name="keywords" content="<c:out value="${document.keywords}" escapeXml="true" />" />
-    </c:if>
     <c:if test="${hst:isReadable(document, 'author') && not empty document.author.firstItem.label }">
       <meta name="author" content="<c:out value="${document.author.firstItem.label}" escapeXml="true" />" />
     </c:if>
