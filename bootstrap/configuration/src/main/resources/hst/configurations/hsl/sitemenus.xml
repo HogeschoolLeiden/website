@@ -284,17 +284,173 @@
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
             <sv:value>hst:sitemenuitem</sv:value>
           </sv:property>
-          <sv:property sv:name="hst:depth" sv:type="Long">
-            <sv:value>3</sv:value>
-          </sv:property>
           <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
           <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
           <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-            <sv:value>opleiden/bacheloropleidingen/vind-je-studie</sv:value>
+            <sv:value>vind-je-studie</sv:value>
           </sv:property>
           <sv:property sv:name="hst:repobased" sv:type="Boolean">
-            <sv:value>true</sv:value>
+            <sv:value>false</sv:value>
           </sv:property>
+          <sv:node sv:name="HBO-Rechten">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:sitemenuitem</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:depth" sv:type="Long">
+              <sv:value>2</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:foldersonly" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+              <sv:value>hbo-rechten</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:repobased" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:node sv:name="Opbouw studie">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hst:sitemenuitem</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:depth" sv:type="Long">
+                <sv:value>2</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:foldersonly" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
+              <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
+              <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+                <sv:value>hbo-rechten/opbouw-studie/opbouw-studie.html</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:repobased" sv:type="Boolean">
+                <sv:value>true</sv:value>
+              </sv:property>
+            </sv:node>
+            <sv:node sv:name="Iets voor jou">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hst:sitemenuitem</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:foldersonly" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
+              <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
+              <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+                <sv:value>hbo-rechten/iets-voor-jou.html</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:repobased" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+            </sv:node>
+            <sv:node sv:name="Inschrijven_x002f_toelating">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hst:sitemenuitem</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:foldersonly" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
+              <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
+              <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+                <sv:value>hbo-rechten/inschrijven-toelating.html</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:repobased" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+            </sv:node>
+            <sv:node sv:name="Onderwijs- en Examenregeling (OER)">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hst:sitemenuitem</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:foldersonly" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
+              <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
+              <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+                <sv:value>hbo-rechten/onderwijs--en-examenregeling-oer.html</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:repobased" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+            </sv:node>
+            <sv:node sv:name="Veelgestelde vragen">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hst:sitemenuitem</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:foldersonly" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
+              <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
+              <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+                <sv:value>hbo-rechten/veelgestelde-vragen-hbo.html</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:repobased" sv:type="Boolean">
+                <sv:value>false</sv:value>
+              </sv:property>
+            </sv:node>
+          </sv:node>
+          <sv:node sv:name="Biologisch en medisch laboratoriumonderzoek">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:sitemenuitem</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:depth" sv:type="Long">
+              <sv:value>2</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:foldersonly" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+              <sv:value>biologisch-en-medisch-laboratoriumonderzoek</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:repobased" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="Bacheloropleidin xyz">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:sitemenuitem</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:depth" sv:type="Long">
+              <sv:value>2</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:foldersonly" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+              <sv:value>bacheloropleidin-xyz</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:repobased" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="Hlochemie bacheloropleiding mpf">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:sitemenuitem</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:depth" sv:type="Long">
+              <sv:value>2</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:foldersonly" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+              <sv:value>hlochemie</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:repobased" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+          </sv:node>
         </sv:node>
         <sv:node sv:name="Inschrijfinformatie">
           <sv:property sv:name="jcr:primaryType" sv:type="Name">
