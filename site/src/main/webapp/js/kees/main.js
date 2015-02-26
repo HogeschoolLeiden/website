@@ -62,12 +62,6 @@ $( document ).ready(function() {
     	}
 	}
 	/* // SWIPER SLIDER */	
-	
-	/* lightbox */
-	$(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) { 		event.preventDefault();
-		$(this).ekkoLightbox(); 
-	});
-	/* // lightbox */
 
 	/* form validation */
 	if ($(".validate").length > 0){
