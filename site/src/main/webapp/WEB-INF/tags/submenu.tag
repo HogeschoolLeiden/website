@@ -7,7 +7,7 @@
 <%@ taglib prefix='opw' uri="http://open-web.nl/hippo/prototype"%>
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 
-<%@ attribute name="menuItem" type="org.hippoecm.hst.core.sitemenu.EditableMenuItem" rtexprvalue="true" required="true"%>
+<%@ attribute name="menuItem" type="org.hippoecm.hst.core.sitemenu.CommonMenuItem" rtexprvalue="true" required="true"%>
 <%@ attribute name="columNr" type="java.lang.Integer" rtexprvalue="true" required="true" %>
 <%@ attribute name="labels" required="false" type="java.util.Map"%>
 

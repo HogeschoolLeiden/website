@@ -4,10 +4,10 @@ import nl.hsleiden.componentsinfo.NavigationComponentInfo;
 
 import org.hippoecm.hst.core.parameters.ParametersInfo;
 
-import com.tdclighthouse.prototype.components.Navigation;
+import com.tdclighthouse.prototype.components.CachedNavigation;
 
 
 @ParametersInfo(type = NavigationComponentInfo.class)
-public class NavigationComponent extends Navigation{
+public class NavigationComponent extends CachedNavigation {
 
 }
