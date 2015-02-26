@@ -1,5 +1,4 @@
-.aside > div > div:FIRST-CHILD .blok:first-of-type,
-.aside > .blok:first-of-type {
+.aside .blok:first-of-type {
 	margin-top: 0
 }
 
@@ -579,15 +578,18 @@ nav.col-md-3.col-xs-12 .catalog.externalLinks.teasers ul li,
 
 nav.col-md-3.col-xs-12 .catalog.internalLinks.teasers,
 nav.col-md-3.col-xs-12 .catalog.externalLinks.teasers,
+nav.col-md-3.col-xs-12 .catalog.text.teasers,
 .aside .catalog.internalLinks.teasers,
-.aside .catalog.externalLinks.teasers {
+.aside .catalog.externalLinks.teasers,
+.aside .catalog.text.teasers  {
 	margin: 10px auto !important;
 }
 	
 	
 .row.border-top .halfwidth { width: 50%; float: left; }
 
-.catalog.externalLinks.teasers .col-xs-12.col-sm-6, .catalog.text.teasers .col-xs-12.col-sm-6, 
+.catalog.externalLinks.teasers .col-xs-12.col-sm-6, 
+.catalog.text.teasers .col-xs-12.col-sm-6, 
 .catalog.internalLinks.teasers .col-xs-12.col-sm-6 { width: 100%; background: #fff;}
 
 /* ------------------------------------------------ */

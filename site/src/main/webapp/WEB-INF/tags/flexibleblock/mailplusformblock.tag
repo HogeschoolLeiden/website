@@ -30,17 +30,14 @@
       <link rel="stylesheet" href="http://static.mailplus.nl/jq//css/ui-lightness/jquery-ui-1.8.18.custom.css" />
     </hst:headContribution>
 
-     <hst:headContribution keyHint="mpfReact">
-     <script type="text/javascript" src="${reactUrl}"></script> 
-     <!--
-     <script type="text/javascript" src="http://m7.mailplus.nl/genericservice/code/servlet/React?command=getFormJs&amp;uid=370351&amp;feid=SCDjQXyc4fzX6DGNIbnM&amp;p=http&amp;om=d&amp;of=h&amp;c=1"></script> 
-       
-      <script type="text/javascript" src="https://m7.mailplus.nl/genericservice/code/servlet/React?command=getFormJs&amp;uid=370351&amp;feid=dvhN68S8JBXffL2SB7Zn&amp;p=https&amp;om=d&amp;of=h&amp;c=1"></script>
-      -->
+    <hst:headContribution keyHint="mpfReact">
+      <script type="text/javascript" src="${reactUrl}"></script>  
     </hst:headContribution> 
+    
     <hst:headContribution keyHint="mpfValidation">
       <script type="text/javascript" src="http://static.mailplus.nl/jq//jquery.validate.min.js" language='javascript'></script>
     </hst:headContribution>
+    
     <hst:headContribution keyHint="mpfJqueryUI">
       <script type="text/javascript" src="http://static.mailplus.nl/jq/jquery-ui-1.8.18.custom.min.js" language='javascript'></script>
     </hst:headContribution>
