@@ -572,31 +572,6 @@
       </sv:property>
     </sv:node>
   </sv:node>
-  <sv:node sv:name="veelgestelde-vragen">
-    <sv:property sv:name="jcr:primaryType" sv:type="Name">
-      <sv:value>hst:sitemapitem</sv:value>
-    </sv:property>
-    <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
-      <sv:value>hst:pages/faqoverview</sv:value>
-    </sv:property>
-    <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
-      <sv:value>contentBeanPath</sv:value>
-      <sv:value>showTypes</sv:value>
-      <sv:value>defaultPageSize</sv:value>
-      <sv:value>sortBy</sv:value>
-      <sv:value>sortOrder</sv:value>
-    </sv:property>
-    <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
-      <sv:value>pages/veelgestelde-vragen</sv:value>
-      <sv:value>hslbeans.FaqDocument</sv:value>
-      <sv:value>8</sv:value>
-      <sv:value>hsl:releaseDate</sv:value>
-      <sv:value>descending</sv:value>
-    </sv:property>
-    <sv:property sv:name="hst:relativecontentpath" sv:type="String">
-      <sv:value>pages/onderwijs/bacheloropleidingen/f.a.q</sv:value>
-    </sv:property>
-  </sv:node>
   <sv:node sv:name="zoek">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:sitemapitem</sv:value>
@@ -1090,202 +1065,6 @@
           <sv:value>pages/onderwijs/opleidingen-voor-professionals/${1}</sv:value>
         </sv:property>
       </sv:node>
-      <sv:node sv:name="masters">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hst:sitemapitem</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
-          <sv:value>hst:pages/facetedoverview</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
-          <sv:value>contentBeanPath</sv:value>
-          <sv:value>defaultPageSize</sv:value>
-          <sv:value>labelPaths</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
-          <sv:value>pages/onderwijs/opleidingen-voor-professionals/nascholing-facetnav</sv:value>
-          <sv:value>5</sv:value>
-          <sv:value>/content/documents/hsl/configuratie/valuelists/label-paths,/content/documents/hsl/configuratie/valuelists/opleidingen-duur-values,/content/documents/hsl/configuratie/valuelists/opleidingen-soort-values,/content/documents/hsl/configuratie/valuelists/opleidingen-niveau-values,/content/documents/hsl/configuratie/valuelists/opleidingen-values-masters-nasch,/content/documents/hsl/configuratie/valuelists/vakgebied-values</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:refId" sv:type="String">
-          <sv:value>masters</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:relativecontentpath" sv:type="String">
-          <sv:value>pages/onderwijs/opleidingen-voor-professionals/masters/index</sv:value>
-        </sv:property>
-        <sv:node sv:name="_any_">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>hst:sitemapitem</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
-            <sv:value>hst:pages/pagenotfound</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:componentconfigurationmappingnames" sv:type="String" sv:multiple="true">
-            <sv:value>hippofacnav:facetnavigation</sv:value>
-            <sv:value>hippofacnav:facetsubnavigation</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:componentconfigurationmappingvalues" sv:type="String" sv:multiple="true">
-            <sv:value>hst:pages/facetedoverview</sv:value>
-            <sv:value>hst:pages/facetedoverview</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
-            <sv:value>contentBeanPath</sv:value>
-            <sv:value>defaultPageSize</sv:value>
-            <sv:value>labelPaths</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
-            <sv:value>pages/onderwijs/opleidingen-voor-professionals/masters/index</sv:value>
-            <sv:value>5</sv:value>
-            <sv:value>/content/documents/hsl/configuratie/valuelists/label-paths,/content/documents/hsl/configuratie/valuelists/opleidingen-duur-values,/content/documents/hsl/configuratie/valuelists/opleidingen-soort-values,/content/documents/hsl/configuratie/valuelists/opleidingen-niveau-values,/content/documents/hsl/configuratie/valuelists/opleidingen-values-masters-nasch,/content/documents/hsl/configuratie/valuelists/vakgebied-values</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:relativecontentpath" sv:type="String">
-            <sv:value>pages/onderwijs/opleidingen-voor-professionals/nascholing-facetnav/${1}</sv:value>
-          </sv:property>
-        </sv:node>
-        <sv:node sv:name="_any_.html">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>hst:sitemapitem</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
-            <sv:value>hst:pages/pagenotfound</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:componentconfigurationmappingnames" sv:type="String" sv:multiple="true">
-            <sv:value>hsl:EducationPage</sv:value>
-            <sv:value>hsl:ArticlePage</sv:value>
-            <sv:value>hsl:EventPage</sv:value>
-            <sv:value>hsl:NewsPage</sv:value>
-            <sv:value>hsl:FaqOverviewPage</sv:value>
-            <sv:value>hsl:MedewerkersOverviewPage</sv:value>
-            <sv:value>hsl:PersonnelPage</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:componentconfigurationmappingvalues" sv:type="String" sv:multiple="true">
-            <sv:value>hst:pages/educationpage</sv:value>
-            <sv:value>hst:pages/educationarticlepage</sv:value>
-            <sv:value>hst:pages/educationeventpage</sv:value>
-            <sv:value>hst:pages/educationnewspage</sv:value>
-            <sv:value>hst:pages/educationfaqoverview</sv:value>
-            <sv:value>hst:pages/educationmedewerkersoverview</sv:value>
-            <sv:value>hst:pages/educationpersonnelpage</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
-            <sv:value>overviewSitemapRefId</sv:value>
-            <sv:value>contentBeanPath</sv:value>
-            <sv:value>showTypes</sv:value>
-            <sv:value>defaultPageSize</sv:value>
-            <sv:value>sortBy</sv:value>
-            <sv:value>sortOrder</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
-            <sv:value>masters</sv:value>
-            <sv:value>pages/onderwijs/opleidingen-voor-professionals/masters/${1}/..</sv:value>
-            <sv:value>hslbeans.FaqDocument</sv:value>
-            <sv:value>8</sv:value>
-            <sv:value>hsl:title</sv:value>
-            <sv:value>ascending</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:relativecontentpath" sv:type="String">
-            <sv:value>pages/onderwijs/opleidingen-voor-professionals/masters/${1}</sv:value>
-          </sv:property>
-        </sv:node>
-      </sv:node>
-      <sv:node sv:name="nascholingen">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hst:sitemapitem</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
-          <sv:value>hst:pages/facetedoverview</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
-          <sv:value>contentBeanPath</sv:value>
-          <sv:value>defaultPageSize</sv:value>
-          <sv:value>labelPaths</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
-          <sv:value>pages/onderwijs/opleidingen-voor-professionals/nascholing-facetnav</sv:value>
-          <sv:value>5</sv:value>
-          <sv:value>/content/documents/hsl/configuratie/valuelists/label-paths,/content/documents/hsl/configuratie/valuelists/opleidingen-duur-values,/content/documents/hsl/configuratie/valuelists/opleidingen-soort-values,/content/documents/hsl/configuratie/valuelists/opleidingen-niveau-values,/content/documents/hsl/configuratie/valuelists/opleidingen-values-masters-nasch,/content/documents/hsl/configuratie/valuelists/vakgebied-values</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:refId" sv:type="String">
-          <sv:value>nascholingen</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:relativecontentpath" sv:type="String">
-          <sv:value>pages/onderwijs/opleidingen-voor-professionals/nascholingen/index</sv:value>
-        </sv:property>
-        <sv:node sv:name="_any_">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>hst:sitemapitem</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
-            <sv:value>hst:pages/pagenotfound</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:componentconfigurationmappingnames" sv:type="String" sv:multiple="true">
-            <sv:value>hippofacnav:facetnavigation</sv:value>
-            <sv:value>hippofacnav:facetsubnavigation</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:componentconfigurationmappingvalues" sv:type="String" sv:multiple="true">
-            <sv:value>hst:pages/facetedoverview</sv:value>
-            <sv:value>hst:pages/facetedoverview</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
-            <sv:value>contentBeanPath</sv:value>
-            <sv:value>defaultPageSize</sv:value>
-            <sv:value>labelPaths</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
-            <sv:value>pages/onderwijs/opleidingen-voor-professionals/nascholingen/index</sv:value>
-            <sv:value>5</sv:value>
-            <sv:value>/content/documents/hsl/configuratie/valuelists/label-paths,/content/documents/hsl/configuratie/valuelists/opleidingen-duur-values,/content/documents/hsl/configuratie/valuelists/opleidingen-soort-values,/content/documents/hsl/configuratie/valuelists/opleidingen-niveau-values,/content/documents/hsl/configuratie/valuelists/opleidingen-values-masters-nasch,/content/documents/hsl/configuratie/valuelists/vakgebied-values</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:relativecontentpath" sv:type="String">
-            <sv:value>pages/onderwijs/opleidingen-voor-professionals/nascholing-facetnav/${1}</sv:value>
-          </sv:property>
-        </sv:node>
-        <sv:node sv:name="_any_.html">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>hst:sitemapitem</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
-            <sv:value>hst:pages/pagenotfound</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:componentconfigurationmappingnames" sv:type="String" sv:multiple="true">
-            <sv:value>hsl:EducationPage</sv:value>
-            <sv:value>hsl:ArticlePage</sv:value>
-            <sv:value>hsl:EventPage</sv:value>
-            <sv:value>hsl:NewsPage</sv:value>
-            <sv:value>hsl:FaqOverviewPage</sv:value>
-            <sv:value>hsl:MedewerkersOverviewPage</sv:value>
-            <sv:value>hsl:PersonnelPage</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:componentconfigurationmappingvalues" sv:type="String" sv:multiple="true">
-            <sv:value>hst:pages/educationpage</sv:value>
-            <sv:value>hst:pages/educationarticlepage</sv:value>
-            <sv:value>hst:pages/educationeventpage</sv:value>
-            <sv:value>hst:pages/educationnewspage</sv:value>
-            <sv:value>hst:pages/educationfaqoverview</sv:value>
-            <sv:value>hst:pages/educationmedewerkersoverview</sv:value>
-            <sv:value>hst:pages/educationpersonnelpage</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
-            <sv:value>overviewSitemapRefId</sv:value>
-            <sv:value>contentBeanPath</sv:value>
-            <sv:value>showTypes</sv:value>
-            <sv:value>defaultPageSize</sv:value>
-            <sv:value>sortBy</sv:value>
-            <sv:value>sortOrder</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
-            <sv:value>nascholingen</sv:value>
-            <sv:value>pages/onderwijs/opleidingen-voor-professionals/nascholingen/${1}/..</sv:value>
-            <sv:value>hslbeans.FaqDocument</sv:value>
-            <sv:value>8</sv:value>
-            <sv:value>hsl:title</sv:value>
-            <sv:value>ascending</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:relativecontentpath" sv:type="String">
-            <sv:value>pages/onderwijs/opleidingen-voor-professionals/nascholingen/${1}</sv:value>
-          </sv:property>
-        </sv:node>
-      </sv:node>
       <sv:node sv:name="cbd">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hst:sitemapitem</sv:value>
@@ -1327,20 +1106,6 @@
         </sv:node>
       </sv:node>
     </sv:node>
-  </sv:node>
-  <sv:node sv:name="confirmation">
-    <sv:property sv:name="jcr:primaryType" sv:type="Name">
-      <sv:value>hst:sitemapitem</sv:value>
-    </sv:property>
-    <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
-      <sv:value>hst:pages/omnikassavalidationpage</sv:value>
-    </sv:property>
-    <sv:property sv:name="hst:refId" sv:type="String">
-      <sv:value>omnikassaReturnPage</sv:value>
-    </sv:property>
-    <sv:property sv:name="hst:relativecontentpath" sv:type="String">
-      <sv:value>pages/service/payment-confirmation</sv:value>
-    </sv:property>
   </sv:node>
   <sv:node sv:name="onderzoek">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -1560,6 +1325,45 @@
         <sv:value>pages/service/${1}</sv:value>
       </sv:property>
     </sv:node>
+  </sv:node>
+  <sv:node sv:name="veelgestelde-vragen">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:sitemapitem</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+      <sv:value>hst:pages/faqoverview</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+      <sv:value>contentBeanPath</sv:value>
+      <sv:value>showTypes</sv:value>
+      <sv:value>defaultPageSize</sv:value>
+      <sv:value>sortBy</sv:value>
+      <sv:value>sortOrder</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+      <sv:value>pages/veelgestelde-vragen</sv:value>
+      <sv:value>hslbeans.FaqDocument</sv:value>
+      <sv:value>8</sv:value>
+      <sv:value>hsl:releaseDate</sv:value>
+      <sv:value>descending</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+      <sv:value>pages/onderwijs/bacheloropleidingen/f.a.q</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="confirmation">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:sitemapitem</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+      <sv:value>hst:pages/omnikassavalidationpage</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:refId" sv:type="String">
+      <sv:value>omnikassaReturnPage</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+      <sv:value>pages/service/payment-confirmation</sv:value>
+    </sv:property>
   </sv:node>
   <sv:node sv:name="vind-je-studie">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
@@ -1896,6 +1700,262 @@
       </sv:property>
       <sv:property sv:name="hst:relativecontentpath" sv:type="String">
         <sv:value>${parent}/../${1}</sv:value>
+      </sv:property>
+    </sv:node>
+  </sv:node>
+  <sv:node sv:name="nascholingen">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:sitemapitem</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+      <sv:value>hst:pages/facetedoverview</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+      <sv:value>contentBeanPath</sv:value>
+      <sv:value>defaultPageSize</sv:value>
+      <sv:value>labelPaths</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+      <sv:value>pages/onderwijs/opleidingen-voor-professionals/nascholing-facetnav</sv:value>
+      <sv:value>5</sv:value>
+      <sv:value>/content/documents/hsl/configuratie/valuelists/label-paths,/content/documents/hsl/configuratie/valuelists/opleidingen-duur-values,/content/documents/hsl/configuratie/valuelists/opleidingen-soort-values,/content/documents/hsl/configuratie/valuelists/opleidingen-niveau-values,/content/documents/hsl/configuratie/valuelists/opleidingen-values-masters-nasch,/content/documents/hsl/configuratie/valuelists/vakgebied-values</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:refId" sv:type="String">
+      <sv:value>nascholingen</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+      <sv:value>pages/onderwijs/opleidingen-voor-professionals/nascholingen/index</sv:value>
+    </sv:property>
+    <sv:node sv:name="_any_">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:sitemapitem</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+        <sv:value>hst:pages/pagenotfound</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentconfigurationmappingnames" sv:type="String" sv:multiple="true">
+        <sv:value>hippofacnav:facetnavigation</sv:value>
+        <sv:value>hippofacnav:facetsubnavigation</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentconfigurationmappingvalues" sv:type="String" sv:multiple="true">
+        <sv:value>hst:pages/facetedoverview</sv:value>
+        <sv:value>hst:pages/facetedoverview</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+        <sv:value>contentBeanPath</sv:value>
+        <sv:value>defaultPageSize</sv:value>
+        <sv:value>labelPaths</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+        <sv:value>pages/onderwijs/opleidingen-voor-professionals/nascholingen/index</sv:value>
+        <sv:value>5</sv:value>
+        <sv:value>/content/documents/hsl/configuratie/valuelists/label-paths,/content/documents/hsl/configuratie/valuelists/opleidingen-duur-values,/content/documents/hsl/configuratie/valuelists/opleidingen-soort-values,/content/documents/hsl/configuratie/valuelists/opleidingen-niveau-values,/content/documents/hsl/configuratie/valuelists/opleidingen-values-masters-nasch,/content/documents/hsl/configuratie/valuelists/vakgebied-values</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+        <sv:value>pages/onderwijs/opleidingen-voor-professionals/nascholing-facetnav/${1}</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="_any_.html">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:sitemapitem</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+        <sv:value>hst:pages/pagenotfound</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentconfigurationmappingnames" sv:type="String" sv:multiple="true">
+        <sv:value>hsl:EducationPage</sv:value>
+        <sv:value>hsl:ArticlePage</sv:value>
+        <sv:value>hsl:EventPage</sv:value>
+        <sv:value>hsl:NewsPage</sv:value>
+        <sv:value>hsl:FaqOverviewPage</sv:value>
+        <sv:value>hsl:MedewerkersOverviewPage</sv:value>
+        <sv:value>hsl:PersonnelPage</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentconfigurationmappingvalues" sv:type="String" sv:multiple="true">
+        <sv:value>hst:pages/educationpage</sv:value>
+        <sv:value>hst:pages/educationarticlepage</sv:value>
+        <sv:value>hst:pages/educationeventpage</sv:value>
+        <sv:value>hst:pages/educationnewspage</sv:value>
+        <sv:value>hst:pages/educationfaqoverview</sv:value>
+        <sv:value>hst:pages/educationmedewerkersoverview</sv:value>
+        <sv:value>hst:pages/educationpersonnelpage</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+        <sv:value>overviewSitemapRefId</sv:value>
+        <sv:value>contentBeanPath</sv:value>
+        <sv:value>showTypes</sv:value>
+        <sv:value>defaultPageSize</sv:value>
+        <sv:value>sortBy</sv:value>
+        <sv:value>sortOrder</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+        <sv:value>nascholingen</sv:value>
+        <sv:value>pages/onderwijs/opleidingen-voor-professionals/nascholingen/${1}/..</sv:value>
+        <sv:value>hslbeans.FaqDocument</sv:value>
+        <sv:value>8</sv:value>
+        <sv:value>hsl:title</sv:value>
+        <sv:value>ascending</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+        <sv:value>pages/onderwijs/opleidingen-voor-professionals/nascholingen/${1}</sv:value>
+      </sv:property>
+    </sv:node>
+  </sv:node>
+  <sv:node sv:name="masters">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:sitemapitem</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+      <sv:value>hst:pages/facetedoverview</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+      <sv:value>contentBeanPath</sv:value>
+      <sv:value>defaultPageSize</sv:value>
+      <sv:value>labelPaths</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+      <sv:value>pages/onderwijs/opleidingen-voor-professionals/nascholing-facetnav</sv:value>
+      <sv:value>5</sv:value>
+      <sv:value>/content/documents/hsl/configuratie/valuelists/label-paths,/content/documents/hsl/configuratie/valuelists/opleidingen-duur-values,/content/documents/hsl/configuratie/valuelists/opleidingen-soort-values,/content/documents/hsl/configuratie/valuelists/opleidingen-niveau-values,/content/documents/hsl/configuratie/valuelists/opleidingen-values-masters-nasch,/content/documents/hsl/configuratie/valuelists/vakgebied-values</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:refId" sv:type="String">
+      <sv:value>masters</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+      <sv:value>pages/onderwijs/opleidingen-voor-professionals/masters/index</sv:value>
+    </sv:property>
+    <sv:node sv:name="_any_">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:sitemapitem</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+        <sv:value>hst:pages/pagenotfound</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentconfigurationmappingnames" sv:type="String" sv:multiple="true">
+        <sv:value>hippofacnav:facetnavigation</sv:value>
+        <sv:value>hippofacnav:facetsubnavigation</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentconfigurationmappingvalues" sv:type="String" sv:multiple="true">
+        <sv:value>hst:pages/facetedoverview</sv:value>
+        <sv:value>hst:pages/facetedoverview</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+        <sv:value>contentBeanPath</sv:value>
+        <sv:value>defaultPageSize</sv:value>
+        <sv:value>labelPaths</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+        <sv:value>pages/onderwijs/opleidingen-voor-professionals/masters/index</sv:value>
+        <sv:value>5</sv:value>
+        <sv:value>/content/documents/hsl/configuratie/valuelists/label-paths,/content/documents/hsl/configuratie/valuelists/opleidingen-duur-values,/content/documents/hsl/configuratie/valuelists/opleidingen-soort-values,/content/documents/hsl/configuratie/valuelists/opleidingen-niveau-values,/content/documents/hsl/configuratie/valuelists/opleidingen-values-masters-nasch,/content/documents/hsl/configuratie/valuelists/vakgebied-values</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+        <sv:value>pages/onderwijs/opleidingen-voor-professionals/nascholing-facetnav/${1}</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="_any_.html">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:sitemapitem</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+        <sv:value>hst:pages/pagenotfound</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentconfigurationmappingnames" sv:type="String" sv:multiple="true">
+        <sv:value>hsl:EducationPage</sv:value>
+        <sv:value>hsl:ArticlePage</sv:value>
+        <sv:value>hsl:EventPage</sv:value>
+        <sv:value>hsl:NewsPage</sv:value>
+        <sv:value>hsl:FaqOverviewPage</sv:value>
+        <sv:value>hsl:MedewerkersOverviewPage</sv:value>
+        <sv:value>hsl:PersonnelPage</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentconfigurationmappingvalues" sv:type="String" sv:multiple="true">
+        <sv:value>hst:pages/educationpage</sv:value>
+        <sv:value>hst:pages/educationarticlepage</sv:value>
+        <sv:value>hst:pages/educationeventpage</sv:value>
+        <sv:value>hst:pages/educationnewspage</sv:value>
+        <sv:value>hst:pages/educationfaqoverview</sv:value>
+        <sv:value>hst:pages/educationmedewerkersoverview</sv:value>
+        <sv:value>hst:pages/educationpersonnelpage</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+        <sv:value>overviewSitemapRefId</sv:value>
+        <sv:value>contentBeanPath</sv:value>
+        <sv:value>showTypes</sv:value>
+        <sv:value>defaultPageSize</sv:value>
+        <sv:value>sortBy</sv:value>
+        <sv:value>sortOrder</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+        <sv:value>masters</sv:value>
+        <sv:value>pages/onderwijs/opleidingen-voor-professionals/masters/${1}/..</sv:value>
+        <sv:value>hslbeans.FaqDocument</sv:value>
+        <sv:value>8</sv:value>
+        <sv:value>hsl:title</sv:value>
+        <sv:value>ascending</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+        <sv:value>pages/onderwijs/opleidingen-voor-professionals/masters/${1}</sv:value>
+      </sv:property>
+    </sv:node>
+  </sv:node>
+  <sv:node sv:name="nascholingen-two">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:sitemapitem</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+      <sv:value>hst:pages/educationpage</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+      <sv:value>overviewSitemapRefId</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+      <sv:value>nascholingen</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+      <sv:value>pages/onderwijs/opleidingen-voor-professionals/nascholingen/nascholing-two/index</sv:value>
+    </sv:property>
+    <sv:node sv:name="_any_.html">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:sitemapitem</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+        <sv:value>hst:pages/pagenotfound</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentconfigurationmappingnames" sv:type="String" sv:multiple="true">
+        <sv:value>hsl:ArticlePage</sv:value>
+        <sv:value>hsl:EventPage</sv:value>
+        <sv:value>hsl:NewsPage</sv:value>
+        <sv:value>hsl:FaqOverviewPage</sv:value>
+        <sv:value>hsl:MedewerkersOverviewPage</sv:value>
+        <sv:value>hsl:PersonnelPage</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentconfigurationmappingvalues" sv:type="String" sv:multiple="true">
+        <sv:value>hst:pages/educationarticlepage</sv:value>
+        <sv:value>hst:pages/educationeventpage</sv:value>
+        <sv:value>hst:pages/educationnewspage</sv:value>
+        <sv:value>hst:pages/educationfaqoverview</sv:value>
+        <sv:value>hst:pages/educationmedewerkersoverview</sv:value>
+        <sv:value>hst:pages/educationpersonnelpage</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+        <sv:value>overviewSitemapRefId</sv:value>
+        <sv:value>contentBeanPath</sv:value>
+        <sv:value>showTypes</sv:value>
+        <sv:value>defaultPageSize</sv:value>
+        <sv:value>sortBy</sv:value>
+        <sv:value>sortOrder</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+        <sv:value>nascholingen</sv:value>
+        <sv:value>pages/onderwijs/opleidingen-voor-professionals/nascholingen/nascholing-two</sv:value>
+        <sv:value>hslbeans.FaqDocument</sv:value>
+        <sv:value>8</sv:value>
+        <sv:value>hsl:title</sv:value>
+        <sv:value>ascending</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+        <sv:value>pages/onderwijs/opleidingen-voor-professionals/nascholingen/nascholing-two/${1}</sv:value>
       </sv:property>
     </sv:node>
   </sv:node>
