@@ -27,6 +27,7 @@ import static java.util.Collections.synchronizedList;
 import static java.util.Collections.synchronizedMap;
 
 import java.io.ByteArrayOutputStream;
+import java.io.UnsupportedEncodingException;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -66,6 +67,8 @@ import org.onehippo.forge.sitemap.components.model.Url;
 import org.onehippo.forge.sitemap.components.model.Urlset;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import com.tdclighthouse.prototype.utils.Constants.EncodingsConstants;
 
 public class SitemapGenerator {
 
@@ -190,8 +193,8 @@ public class SitemapGenerator {
             handler.setResult(new StreamResult(out));
 
             m.marshal(urls, new SiteMapCharacterEscapeHandler(handler));
-            output = out.toString();
-        } catch (JAXBException | TransformerConfigurationException e) {
+            output = out.toString(EncodingsConstants.UTF8);
+        } catch (JAXBException | TransformerConfigurationException | UnsupportedEncodingException e) {
             throw new IllegalStateException("Cannot marshal the Urlset to an XML string", e);
         }
         return output;

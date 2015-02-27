@@ -559,10 +559,7 @@ public class SitemapGeneratorWorker extends Thread {
                 if (!indexedNodesInPathBMatchIndexedNodesInPathAWhenPathAHasThatNode(absoluteContentPath,
                         node.getPath())) {
                     // We will find this node later
-                    if (LOG.isDebugEnabled()) {
-                        LOG.debug("Ignoring node \"{}\" for absoluteContentPath \"{}\"", node.getPath(),
-                                absoluteContentPath);
-                    }
+                    logSomeDebugInfo(absoluteContentPath, node);
                     continue;
                 }
                 HippoBean bean = obtainHippoBeanForNode(node);
@@ -572,12 +569,7 @@ public class SitemapGeneratorWorker extends Thread {
                     continue;
                 }
 
-                if (createLinksForThisSiteMapItem && urlInformationProvider.includeDocumentInSiteMap(bean)) {
-                    Url url = createUrlBasedOnNodeWithCanonicalLoc(bean);
-                    if (url != null) {
-                        urlset.addUrlThatDoesntExistInTheListYet(url);
-                    }
-                }
+                addItemInUrlSet(createLinksForThisSiteMapItem, bean);
                 if (urlInformationProvider.includeChildrenInSiteMap(bean)) {
                     nodePaths.add(node.getPath());
                 }
@@ -588,6 +580,22 @@ public class SitemapGeneratorWorker extends Thread {
         }
 
         return nodePaths;
+    }
+
+    private void addItemInUrlSet(final boolean createLinksForThisSiteMapItem, HippoBean bean) {
+        if (createLinksForThisSiteMapItem && urlInformationProvider.includeDocumentInSiteMap(bean)) {
+            Url url = createUrlBasedOnNodeWithCanonicalLoc(bean);
+            if (url != null) {
+                urlset.addUrlThatDoesntExistInTheListYet(url);
+            }
+        }
+    }
+
+    private void logSomeDebugInfo(final String absoluteContentPath, Node node) throws RepositoryException {
+        if (LOG.isDebugEnabled()) {
+            LOG.debug("Ignoring node \"{}\" for absoluteContentPath \"{}\"", node.getPath(),
+                    absoluteContentPath);
+        }
     }
 
     /**

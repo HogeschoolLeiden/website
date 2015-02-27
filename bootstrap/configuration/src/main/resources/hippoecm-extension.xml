@@ -6867,21 +6867,6 @@
       <sv:value>/hst:hst/hst:configurations/hsl/hst:sitemap</sv:value>
     </sv:property>
   </sv:node>
-  <!-- following entry should be deleted once it has beployed in all environments -->
-  <sv:node sv:name="website-updates-update-2-website-hst-hst-hst-configurations-hsl-hst-sitemap-binaries-preview">
-    <sv:property sv:name="jcr:primaryType" sv:type="Name">
-      <sv:value>hippo:initializeitem</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:sequence" sv:type="Double">
-      <sv:value>30065.4</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:contentresource" sv:type="String">
-      <sv:value>updates/update2/hst/sitemap-binaries.xml</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:contentroot" sv:type="String">
-      <sv:value>/hst:hst/hst:configurations/hsl-preview/hst:sitemap</sv:value>
-    </sv:property>
-  </sv:node>
   <sv:node sv:name="website-updates-update2-hst-default-sitemap.xml-redo">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hippo:initializeitem</sv:value>
@@ -7088,7 +7073,7 @@
       <sv:value>true</sv:value> 
     </sv:property> 
   </sv:node>
-<sv:node sv:name="website-hippo-configuration-hippo-modules-elasticsearch">
+  <sv:node sv:name="website-hippo-configuration-hippo-modules-elasticsearch">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hippo:initializeitem</sv:value>
     </sv:property>
@@ -7100,6 +7085,34 @@
     </sv:property>
     <sv:property sv:name="hippo:contentroot" sv:type="String">
       <sv:value>/hippo:configuration/hippo:modules</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="website-hippo-configuration-hippo-frontend-cms-hst-editor-views-sitemap-item-root">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hippo:initializeitem</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:sequence" sv:type="Double">
+      <sv:value>30000.3</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:contentresource" sv:type="String">
+      <sv:value>configuration/frontend/cms/hst-editor-views/sitemap-item-root.xml</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:contentroot" sv:type="String">
+      <sv:value>/hippo:configuration/hippo:frontend/cms/hst-editor-views/hst:sitemapitem</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="website-hippo-configuration-hippo-frontend-cms-hst-editor-views-sitemenu-item-root">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hippo:initializeitem</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:sequence" sv:type="Double">
+      <sv:value>30000.3</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:contentresource" sv:type="String">
+      <sv:value>configuration/frontend/cms/hst-editor-views/sitemenu-item-root.xml</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:contentroot" sv:type="String">
+      <sv:value>/hippo:configuration/hippo:frontend/cms/hst-editor-views/hst:sitemenuitem</sv:value>
     </sv:property>
   </sv:node>
 </sv:node>

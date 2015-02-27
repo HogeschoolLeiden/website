@@ -1,0 +1,105 @@
+<!--
+  * Copyright 2008-2013 Hippo B.V. (http://www.onehippo.com)
+  *
+  * Licensed under the Apache License, Version 2.0 (the  "License");
+  * you may not use this file except in compliance with the License.
+  * You may obtain a copy of the License at
+  *
+  * http://www.apache.org/licenses/LICENSE-2.0
+  *
+  * Unless required by applicable law or agreed to in writing, software
+  * distributed under the License is distributed on an "AS IS" BASIS,
+  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  * See the License for the specific language governing permissions and
+  * limitations under the License.
+-->
+
+<html xmlns:wicket="http://wicket.apache.org/">
+  <wicket:panel>
+    <wicket:extend>
+      <p><wicket:message key="intro">Intro</wicket:message></p>
+      <fieldset>
+       <div>
+        <label for="matcher"><wicket:message key="matcher.label">Matcher label</wicket:message></label><input type="text" wicket:id="matcher" name="matcher"/>
+       </div>
+      </fieldset>
+      <fieldset>
+        <legend><wicket:message key="fieldset.legend">Destination</wicket:message></legend>
+        <div>
+          <label for="contentPath"><wicket:message key="matcher.contentpath">Content path</wicket:message></label><input type="text" name="contentPath" wicket:id="contentPath" style="width: 230px;"/> <span name="path" wicket:id="path">[Link Picker]</span>
+        </div>
+        <div>
+         <br/>
+         <!-- <label for="pagepicker"><wicket:message key="page.label">Page</wicket:message></label> -->
+          <wicket:message key="page.picker.label">Select a page from the list below or </wicket:message>
+          <a wicket:id="newPage" style="margin-left: 10px;">
+            <wicket:message key="page.new.label">create a new page.</wicket:message>
+          </a>
+          <div wicket:id="pagePicker">[ Page picker ]</div>
+        </div>
+      </fieldset>
+        <fieldset>
+            <legend>
+                <wicket:message key="parameters.legend">Parameters</wicket:message>
+            </legend>
+            <div>
+                <label for="parameters">
+                    <wicket:message key="parameters.label">Parameters label</wicket:message>
+                </label>
+                <a href="#" wicket:id="addParameter" class='button'>
+                    <wicket:message key="parameters.add.label">Add parameter</wicket:message>
+                </a>
+            </div>
+            <div>
+                <wicket:enclosure child="parameters">
+                    <table class="parameters">
+                        <tr>
+                            <th><wicket:message key="parameters.parameter.name">name&nbsp;</wicket:message></th>
+                            <th><wicket:message key="parameters.parameter.value">value&nbsp;</wicket:message></th>
+                            <th><wicket:message key="parameters.parameter.delete">delete&nbsp;</wicket:message></th>
+                        </tr>
+                        <tr wicket:id="parameters">
+                            <td><input type="text" wicket:id="name" class="small"/>&nbsp;</td>
+                            <td><input type="text" wicket:id="value" class="small"/></td>
+                            <td class="remove"><a wicket:id="remove"><em>X</em></a></td>
+                        </tr>
+                    </table>
+                </wicket:enclosure>
+            </div>
+          </fieldset>
+          
+          <fieldset>
+            <legend>
+                <wicket:message key="configMappings.legend">Configuration mappings</wicket:message>
+            </legend>
+            <div>
+                <label for="configMappings">
+                    <wicket:message key="configMappings.label">Mapping</wicket:message>
+                </label>
+                <a href="#" wicket:id="addConfigMapping" class='button'>
+                    <wicket:message key="configMappings.add.label">Add configuration mapping</wicket:message>
+                </a>
+            </div>
+            <div>
+                <wicket:enclosure child="configMappings">
+                    <table class="parameters">
+                        <tr>
+                            <th><wicket:message key="config.document.name">document type&nbsp;</wicket:message></th>
+                            <th><wicket:message key="config.page.value">hst:page&nbsp;</wicket:message></th>
+                            <th><wicket:message key="config.mappings.delete">delete mapping&nbsp;</wicket:message></th>
+                        </tr>
+                        <tr wicket:id="configMappings">
+                            <td><input type="text" wicket:id="name" class="small"/>&nbsp;</td>
+                            <td><input type="text" wicket:id="value" class="small"/></td>
+                            <td class="remove"><a wicket:id="remove"><em>X</em></a></td>
+                        </tr>
+                    </table>
+                </wicket:enclosure>
+            </div>  
+        </fieldset>
+        
+      <div wicket:id="wizard">[ Wizard ]</div>
+    </wicket:extend>
+
+  </wicket:panel>
+</html>
