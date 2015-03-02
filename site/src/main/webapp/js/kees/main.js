@@ -2,33 +2,7 @@ var doc = document.documentElement;
 doc.setAttribute('data-useragent', navigator.userAgent);
 
 $( document ).ready(function() {
-	
-	/* form validation */
-	if ($(".validate").length > 0){
-		$(".validate").validate({
-			errorElement:'span',
-			rules: {
-				email: {
-					required:true,
-					email:true
-				}
-			}
-		});
-		jQuery.extend(jQuery.validator.messages, {
-		    required: "Verplicht",
-		    email: "Incorrect"
-		});
-	}
-	/* // form validation */
-	
-	/* open share in new window
-	$('.share a').click(function(){
-		window.open($(this).attr('href'),'title', 'width=800, height=700');
-        return false;
-	});
-	 */
-	/* // open share in new window */
-	
+		
 	/* help button */
 	$(".hulp").click(function() {
 		if( $(this).hasClass("open")) {
