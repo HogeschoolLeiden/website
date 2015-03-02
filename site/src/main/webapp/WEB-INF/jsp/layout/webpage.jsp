@@ -65,7 +65,6 @@
   
   <hst:headContributions categoryIncludes="formsCssHere" xhtml="true" />
     
-  <link rel="stylesheet" href="<hst:link path="/css/kees/ekko-lightbox.min.css"/>" >
   <link rel="stylesheet" href="<hst:link path="/css/kees/style.css"/>" >
   
   <link rel="stylesheet" href="<hst:link path="/css/kees/style-additions.css"/>" >
@@ -124,8 +123,7 @@
       </c:if>
   	</c:if>
       
-    <script type="text/javascript" src="<hst:link path="/js/kees/vendor/bootstrap.min.js" />"></script>   
-    <script type="text/javascript" src="<hst:link path="/js/kees/vendor/ekko-lightbox.js"/>" ></script>
+    <script type="text/javascript" src="<hst:link path="/js/kees/vendor/bootstrap.min.js" />"></script>
     <script type="text/javascript" src="<hst:link path="/js/kees/plugins.js" />"></script>
     <script type="text/javascript" src="<hst:link path="/js/kees/main.js" />"></script>
     
