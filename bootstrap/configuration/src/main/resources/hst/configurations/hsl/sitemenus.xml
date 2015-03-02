@@ -289,9 +289,6 @@
           <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
             <sv:value>vind-je-studie</sv:value>
           </sv:property>
-          <sv:property sv:name="hst:repobased" sv:type="Boolean">
-            <sv:value>false</sv:value>
-          </sv:property>
           <sv:node sv:name="HBO-Rechten">
             <sv:property sv:name="jcr:primaryType" sv:type="Name">
               <sv:value>hst:sitemenuitem</sv:value>
@@ -624,6 +621,16 @@
               <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
               <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
                 <sv:value>opleiden/opleidingen-voor-professionals/cbd/e-learning</sv:value>
+              </sv:property>
+            </sv:node>
+            <sv:node sv:name="Medewerkers">
+              <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>hst:sitemenuitem</sv:value>
+              </sv:property>
+              <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
+              <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
+              <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+                <sv:value>opleiden/opleidingen-voor-professionals/cbd/medewerkers/index</sv:value>
               </sv:property>
             </sv:node>
           </sv:node>
