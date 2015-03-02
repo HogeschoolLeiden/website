@@ -31,69 +31,14 @@
       <sv:value>Configuratie</sv:value>
     </sv:property>
   </sv:node>
-  <sv:node sv:name="hippo:translation">
-    <sv:property sv:name="jcr:primaryType" sv:type="Name">
-      <sv:value>hippo:translation</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:language" sv:type="String">
-      <sv:value/>
-    </sv:property>
-    <sv:property sv:name="hippo:message" sv:type="String">
-      <sv:value>Configuratie</sv:value>
-    </sv:property>
-  </sv:node>
-  <sv:node sv:name="hippo:translation">
-    <sv:property sv:name="jcr:primaryType" sv:type="Name">
-      <sv:value>hippo:translation</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:language" sv:type="String">
-      <sv:value/>
-    </sv:property>
-    <sv:property sv:name="hippo:message" sv:type="String">
-      <sv:value>Configuratie</sv:value>
-    </sv:property>
-  </sv:node>
-  <sv:node sv:name="hippo:translation">
-    <sv:property sv:name="jcr:primaryType" sv:type="Name">
-      <sv:value>hippo:translation</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:language" sv:type="String">
-      <sv:value/>
-    </sv:property>
-    <sv:property sv:name="hippo:message" sv:type="String">
-      <sv:value>Configuratie</sv:value>
-    </sv:property>
-  </sv:node>
-  <sv:node sv:name="hippo:translation">
-    <sv:property sv:name="jcr:primaryType" sv:type="Name">
-      <sv:value>hippo:translation</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:language" sv:type="String">
-      <sv:value/>
-    </sv:property>
-    <sv:property sv:name="hippo:message" sv:type="String">
-      <sv:value>Configuratie</sv:value>
-    </sv:property>
-  </sv:node>
-  <sv:node sv:name="hippo:translation">
-    <sv:property sv:name="jcr:primaryType" sv:type="Name">
-      <sv:value>hippo:translation</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:language" sv:type="String">
-      <sv:value/>
-    </sv:property>
-    <sv:property sv:name="hippo:message" sv:type="String">
-      <sv:value>Configuratie</sv:value>
-    </sv:property>
-  </sv:node>
   <sv:node sv:name="valuelists">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hippostd:folder</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
       <sv:value>hippotranslation:translated</sv:value>
-      <sv:value>hippo:translated</sv:value>
       <sv:value>mix:versionable</sv:value>
+      <sv:value>hippo:translated</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>0710213c-430e-44b9-871c-dabb4f22d510</sv:value>
@@ -1502,8 +1447,8 @@
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
       <sv:value>hippotranslation:translated</sv:value>
-      <sv:value>hippo:translated</sv:value>
       <sv:value>mix:versionable</sv:value>
+      <sv:value>hippo:translated</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>9d40f53f-c9e7-4a90-9a4f-706c3396eaf5</sv:value>
@@ -2399,7 +2344,7 @@
           <sv:value>2014-07-08T16:56:32.253+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2015-02-16T14:25:07.703+01:00</sv:value>
+          <sv:value>2015-03-02T15:22:52.313+01:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -2411,6 +2356,7 @@
           <sv:value>nl</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:descriptions" sv:type="String" sv:multiple="true">
+          <sv:value/>
           <sv:value/>
           <sv:value/>
           <sv:value/>
@@ -2458,6 +2404,7 @@
           <sv:value>follow.medewerker.facebook</sv:value>
           <sv:value>follow.medewerker.linkedin</sv:value>
           <sv:value>follow.medewerker.googleplus</sv:value>
+          <sv:value>no.results.found.message</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages" sv:type="String" sv:multiple="true">
           <sv:value>Available Downloads</sv:value>
@@ -2481,6 +2428,7 @@
           <sv:value>follow {0} on facebook</sv:value>
           <sv:value>follow {0} on linkedin</sv:value>
           <sv:value>follow {0} on  google plus</sv:value>
+          <sv:value>Uw zoekvraag: "{1}" heeft geen resultaten opgeleverd.</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages_en" sv:type="String" sv:multiple="true">
           <sv:value>Available Downloads</sv:value>
@@ -2504,6 +2452,7 @@
           <sv:value>follow {0} on facebook</sv:value>
           <sv:value>follow {0} on linkedin</sv:value>
           <sv:value>follow {0} on google plus</sv:value>
+          <sv:value>Your serch: "{1}" has not given any results.</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages_nl" sv:type="String" sv:multiple="true">
           <sv:value>Available Downloads</sv:value>
@@ -2527,6 +2476,7 @@
           <sv:value>follow {0} on facebook</sv:value>
           <sv:value>follow {0} on linkedin</sv:value>
           <sv:value>follow {0} on  google plus</sv:value>
+          <sv:value>Uw zoekvraag: "{0}" heeft geen resultaten opgeleverd.</sv:value>
         </sv:property>
       </sv:node>
       <sv:node sv:name="general-messages">
@@ -2559,7 +2509,7 @@
           <sv:value>2014-07-08T16:56:32.253+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2015-02-16T14:25:52.227+01:00</sv:value>
+          <sv:value>2015-03-02T15:23:52.598+01:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -2571,6 +2521,7 @@
           <sv:value>nl</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:descriptions" sv:type="String" sv:multiple="true">
+          <sv:value/>
           <sv:value/>
           <sv:value/>
           <sv:value/>
@@ -2618,6 +2569,7 @@
           <sv:value>follow.medewerker.facebook</sv:value>
           <sv:value>follow.medewerker.linkedin</sv:value>
           <sv:value>follow.medewerker.googleplus</sv:value>
+          <sv:value>no.results.found.message</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages" sv:type="String" sv:multiple="true">
           <sv:value>Available Downloads</sv:value>
@@ -2641,6 +2593,7 @@
           <sv:value>follow {0} on facebook</sv:value>
           <sv:value>follow {0} on linkedin</sv:value>
           <sv:value>follow {0} on  google plus</sv:value>
+          <sv:value>Uw zoekvraag: "{1}" heeft geen resultaten opgeleverd.</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages_en" sv:type="String" sv:multiple="true">
           <sv:value>Available Downloads</sv:value>
@@ -2664,6 +2617,7 @@
           <sv:value>follow {0} on facebook</sv:value>
           <sv:value>follow {0} on linkedin</sv:value>
           <sv:value>follow {0} on google plus</sv:value>
+          <sv:value>Your serch: "{1}" has not given any results.</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages_nl" sv:type="String" sv:multiple="true">
           <sv:value>Available Downloads</sv:value>
@@ -2687,6 +2641,7 @@
           <sv:value>follow {0} on facebook</sv:value>
           <sv:value>follow {0} on linkedin</sv:value>
           <sv:value>follow {0} on  google plus</sv:value>
+          <sv:value>Uw zoekvraag: "{0}" heeft geen resultaten opgeleverd.</sv:value>
         </sv:property>
       </sv:node>
       <sv:node sv:name="general-messages">
@@ -2718,13 +2673,13 @@
           <sv:value>2014-07-08T16:56:32.253+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2015-02-16T14:25:52.227+01:00</sv:value>
+          <sv:value>2015-03-02T15:23:52.598+01:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-          <sv:value>2015-02-16T14:25:53.726+01:00</sv:value>
+          <sv:value>2015-03-02T15:23:55.321+01:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:id" sv:type="String">
           <sv:value>1f1b3223-e5aa-4c2b-9747-9a8102f8ab5e</sv:value>
@@ -2733,6 +2688,7 @@
           <sv:value>nl</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:descriptions" sv:type="String" sv:multiple="true">
+          <sv:value/>
           <sv:value/>
           <sv:value/>
           <sv:value/>
@@ -2780,6 +2736,7 @@
           <sv:value>follow.medewerker.facebook</sv:value>
           <sv:value>follow.medewerker.linkedin</sv:value>
           <sv:value>follow.medewerker.googleplus</sv:value>
+          <sv:value>no.results.found.message</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages" sv:type="String" sv:multiple="true">
           <sv:value>Available Downloads</sv:value>
@@ -2803,6 +2760,7 @@
           <sv:value>follow {0} on facebook</sv:value>
           <sv:value>follow {0} on linkedin</sv:value>
           <sv:value>follow {0} on  google plus</sv:value>
+          <sv:value>Uw zoekvraag: "{1}" heeft geen resultaten opgeleverd.</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages_en" sv:type="String" sv:multiple="true">
           <sv:value>Available Downloads</sv:value>
@@ -2826,6 +2784,7 @@
           <sv:value>follow {0} on facebook</sv:value>
           <sv:value>follow {0} on linkedin</sv:value>
           <sv:value>follow {0} on google plus</sv:value>
+          <sv:value>Your serch: "{1}" has not given any results.</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages_nl" sv:type="String" sv:multiple="true">
           <sv:value>Available Downloads</sv:value>
@@ -2849,6 +2808,7 @@
           <sv:value>follow {0} on facebook</sv:value>
           <sv:value>follow {0} on linkedin</sv:value>
           <sv:value>follow {0} on  google plus</sv:value>
+          <sv:value>Uw zoekvraag: "{0}" heeft geen resultaten opgeleverd.</sv:value>
         </sv:property>
       </sv:node>
     </sv:node>

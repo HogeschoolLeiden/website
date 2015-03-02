@@ -27,10 +27,19 @@
           <div class="overzichtlijst">
             <h3>
               <opw:public-parameter parameterName="q" var="query"/>
-              <fmt:message key="found.results.message" >
-                <fmt:param value="${model.searchResults.totalHits}"/>
-                <fmt:param value="${fn:escapeXml(query)}"/>
-              </fmt:message>
+              <c:choose>
+                <c:when test="${not (model.searchResults.totalHits > 0)}">
+                  <fmt:message key="no.results.found.message" >
+                    <fmt:param value="${fn:escapeXml(query)}"/>
+                  </fmt:message>
+                </c:when>
+                <c:otherwise>
+                  <fmt:message key="found.results.message" >
+                    <fmt:param value="${model.searchResults.totalHits}"/>
+                    <fmt:param value="${fn:escapeXml(query)}"/>
+                  </fmt:message>
+                </c:otherwise>
+              </c:choose> 
             </h3>
             
             <c:forEach items="${model.searchResults.hits}" var="hit">
