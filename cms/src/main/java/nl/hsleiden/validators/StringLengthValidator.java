@@ -19,15 +19,16 @@ public class StringLengthValidator extends GenericStringLengthValidator {
     public StringLengthValidator(IPluginContext context, IPluginConfig config) throws RepositoryException {
         super(context, config);
         setMaxLength(config);
+        if (config.containsKey(MIN_LENGTH)) {
+            setMinLength(config);
+        }
     }
 
     @Override
     protected void checkViolations(IFieldValidator fieldValidator, @SuppressWarnings("rawtypes") IModel childModel,
             Set<Violation> violations, String value) throws ValidationException {
-        if (StringUtils.length(value) > getMaxLength()) {
+        if (StringUtils.length(value) > getMaxLength() || StringUtils.length(value) < getMinLength() ) {
             violations.add(fieldValidator.newValueViolation(childModel, getTranslation()));
         }
     }
-
-   
 }

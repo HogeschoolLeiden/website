@@ -234,6 +234,11 @@
         <sv:property sv:name="hipposysedit:type" sv:type="String">
           <sv:value>Text</sv:value>
         </sv:property>
+        <sv:property sv:multiple="true" sv:name="hipposysedit:validators" sv:type="String">
+          <sv:value>non-empty</sv:value>
+          <sv:value>required</sv:value>
+          <sv:value>length-validator-min130-max155</sv:value>
+        </sv:property>
       </sv:node>
       <sv:node sv:name="releaseDate">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">

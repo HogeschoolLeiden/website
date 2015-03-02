@@ -21,7 +21,9 @@ public abstract class GenericStringLengthValidator extends AbstractCmsValidator 
     private static final long serialVersionUID = 1L;
     private static final Logger LOG = LoggerFactory.getLogger(GenericStringLengthValidator.class);
     private static final String MAX_LENGTH = "maxLength";
+    protected static final String MIN_LENGTH = "minLength";
     private int maxLength;
+    private int minLength;
 
     public GenericStringLengthValidator(IPluginContext context, IPluginConfig config) {
         super(context, config);
@@ -47,17 +49,26 @@ public abstract class GenericStringLengthValidator extends AbstractCmsValidator 
 
         return violations;
     }
-    
+
     public int getMaxLength() {
         return maxLength;
     }
-    
+
     protected void setMaxLength(IPluginConfig config) throws RepositoryException {
         if (config.containsKey(MAX_LENGTH)) {
             this.maxLength = config.getInt(MAX_LENGTH);
         } else {
-            throw new RepositoryException("maxLenght property should be set in the iplugin configuration of: " + config.getName());
+            throw new RepositoryException("maxLenght property should be set in the iplugin configuration of: "
+                    + config.getName());
         }
+    }
+
+    public int getMinLength() {
+        return minLength;
+    }
+
+    protected void setMinLength(IPluginConfig config) throws RepositoryException {
+        this.minLength = config.getInt(MIN_LENGTH);
     }
 
     protected abstract void checkViolations(IFieldValidator fieldValidator,
