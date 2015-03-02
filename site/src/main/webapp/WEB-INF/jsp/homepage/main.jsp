@@ -15,6 +15,14 @@
     <script type="text/javascript" src="<hst:link path="/js/homepage-height-equalizer.js"/>"></script>
   </hst:headContribution>
 
+  <hst:headContribution keyHint="homepage-swiper">
+    <script type="text/javascript" src="<hst:link path="/js/swiper.js"/>"></script>
+  </hst:headContribution>
+  
+  <hst:headContribution keyHint="swiperCss" category="swiperCss">
+    <link rel="stylesheet" href="<hst:link path="/css/kees/idangerous.swiper.css"/>" type="text/css" />
+  </hst:headContribution>
+
   <c:choose>
     <c:when test="${empty document}">
        <tag:pagenotfound />

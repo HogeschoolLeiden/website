@@ -16,9 +16,6 @@
     <div class="content">
       <h1><span><c:out value="${document.title }" /></span></h1>
       <hst:include ref="contentTop" />
-      <%-- <p class="intro">
-        <c:out value="${document.introduction }" />
-      </p> --%>
       <tag:flexibleblock content="${document.flexibleblock }" document="${document}"/>
       <tag:toolbox document="${document }"/>
     </div>

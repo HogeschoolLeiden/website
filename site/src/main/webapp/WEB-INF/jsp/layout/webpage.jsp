@@ -59,11 +59,7 @@
   <link rel="stylesheet" href="<hst:link path="/css/kees/bootstrap.min.css"/>" >
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" >
   
-  <!-- SWIPER SLIDER -->
-  <link rel="stylesheet" href="<hst:link path="/css/kees/idangerous.swiper.css"/>">
-  <!-- // SWIPER SLIDER -->
-  
-  <hst:headContributions categoryIncludes="formsCssHere" xhtml="true" />
+  <hst:headContributions categoryIncludes="formsCssHere,swiperCss" xhtml="true" />
     
   <link rel="stylesheet" href="<hst:link path="/css/kees/style.css"/>" >
   
