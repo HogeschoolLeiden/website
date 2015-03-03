@@ -1,8 +1,37 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:h="http://www.onehippo.org/jcr/xmlimport"
-  sv:name="root" h:merge="combine">
+<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:h="http://www.onehippo.org/jcr/xmlimport" sv:name="root" h:merge="combine">
+  <sv:property sv:name="typeNames" sv:type="String" h:merge="override" sv:multiple="true">
+    <sv:value>hsl:ArticlePage</sv:value>
+    <sv:value>hsl:BachelorPage</sv:value>
+    <sv:value>hsl:BlogOverviewPage</sv:value>
+    <sv:value>hsl:blogpost</sv:value>
+    <sv:value>hsl:EducationPage</sv:value>
+    <sv:value>hsl:EventPage</sv:value>
+    <sv:value>hsl:EventsOverviewPage</sv:value>
+    <sv:value>hsl:FaqOverviewPage</sv:value>
+    <sv:value>hsl:MedewerkersOverviewPage</sv:value>
+    <sv:value>hsl:NewsOverviewPage</sv:value>
+    <sv:value>hsl:NewsPage</sv:value>
+    <sv:value>hsl:PersonnelPage</sv:value>
+    <sv:value>hsl:PersPage</sv:value>
+    <sv:value>hsl:Lectorat</sv:value>
+  </sv:property>
   <sv:property sv:name="plugin.class" sv:type="String" h:merge="override">
     <sv:value>nl.hsleiden.frontend.editor.sitemap.HslSitemapItemEditorPlugin</sv:value>
   </sv:property>
+  <sv:property sv:name="typeValues" sv:type="String" h:merge="override" sv:multiple="true">
+    <sv:value>Algemene Pagina</sv:value>
+    <sv:value>Bachelor Pagina</sv:value>
+    <sv:value>Blog Overzicht Pagina</sv:value>
+    <sv:value>Blog Pagina</sv:value>
+    <sv:value>Opleidingen Pagina</sv:value>
+    <sv:value>Evenement Pagina</sv:value>
+    <sv:value>Evenementen Overzicht Pagina</sv:value>
+    <sv:value>F.A.Q. Overzicht Pagina</sv:value>
+    <sv:value>Medewerkers Overzicht Pagina</sv:value>
+    <sv:value>Nieuws Overzicht Pagina</sv:value>
+    <sv:value>Nieuws Pagina</sv:value>
+    <sv:value>Medewerker Pagina</sv:value>
+    <sv:value>Pers Pagina</sv:value>
+    <sv:value>Lectoraat Pagina</sv:value>
+  </sv:property>
 </sv:node>
-   
