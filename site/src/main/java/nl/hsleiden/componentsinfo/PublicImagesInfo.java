@@ -1,8 +1,8 @@
 package nl.hsleiden.componentsinfo;
 
 
+import nl.hsleiden.utils.Constants.HippoNodeTypes;
 import nl.hsleiden.utils.Constants.HstParameters;
-import nl.hsleiden.utils.Constants.NodeName;
 import nl.hsleiden.utils.Constants.WidgetConstants;
 
 import org.hippoecm.hst.core.parameters.JcrPath;
@@ -23,7 +23,7 @@ public interface PublicImagesInfo extends ContentBeanPathInfo {
     public String getContentBeanPath();
 
     @JcrPath(isRelative = false, pickerInitialPath = WidgetConstants.ROOT_IMAGE_FOLDER, 
-            pickerRemembersLastVisited=false, pickerSelectableNodeTypes = { NodeName.HSL_IMAGE_SET })
+            pickerRemembersLastVisited=false, pickerSelectableNodeTypes = { HippoNodeTypes.HSL_IMAGE_SET })
     @Parameter(name = HstParameters.IMAGE_FOLDER_PATH, displayName = "Map afbeelding", defaultValue = WidgetConstants.DEFAULT_IMAGE_FOLDER)
     public String getImageFolderBeanPath();
     

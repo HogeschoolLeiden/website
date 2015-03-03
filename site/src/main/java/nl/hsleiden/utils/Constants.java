@@ -2,8 +2,8 @@ package nl.hsleiden.utils;
 
 import com.tdclighthouse.prototype.utils.Constants.AttributesConstants;
 import com.tdclighthouse.prototype.utils.Constants.FieldNameConstants;
+import com.tdclighthouse.prototype.utils.Constants.HippoNodeTypesConstants;
 import com.tdclighthouse.prototype.utils.Constants.HstParametersConstants;
-import com.tdclighthouse.prototype.utils.Constants.NodeNameConstants;
 import com.tdclighthouse.prototype.utils.Constants.ParametersConstants;
 import com.tdclighthouse.prototype.utils.Constants.PikcerTypesConstants;
 import com.tdclighthouse.prototype.utils.Constants.ValuesConstants;
@@ -151,11 +151,11 @@ public class Constants {
         }
     }
 
-    public static class NodeName extends NodeNameConstants {
+    public static class HippoNodeTypes extends HippoNodeTypesConstants {
 
         public static final String HSL_IMAGE_SET = "hsl:ImageSet";
 
-        private NodeName() {
+        private HippoNodeTypes() {
         }
     }
 }

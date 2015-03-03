@@ -14,7 +14,7 @@ public class ContantsTest {
         testConstructor(Constants.Attributes.class);
         testConstructor(Constants.FieldName.class);
         testConstructor(Constants.HstParameters.class);
-        testConstructor(Constants.NodeName.class);
+        testConstructor(Constants.HippoNodeTypes.class);
         testConstructor(Constants.Parameters.class);
         testConstructor(Constants.PikcerTypes.class);
         testConstructor(Constants.Values.class);
