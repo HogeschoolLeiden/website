@@ -252,19 +252,19 @@
     <function>
       <name>getSitemenuConfigParameter</name>
       <function-class>nl.hsleiden.tags.ParametersFunctions</function-class>
-      <function-signature>java.lang.String getSitemenuConfigParameter(org.hippoecm.hst.core.sitemenu.EditableMenuItem, java.lang.String)</function-signature>
+      <function-signature>java.lang.String getSitemenuConfigParameter(org.hippoecm.hst.core.sitemenu.CommonMenuItem, java.lang.String)</function-signature>
     </function>
 
     <function>
       <name>getTopMenuItem</name>
       <function-class>nl.hsleiden.tags.MenuFunctions</function-class>
-      <function-signature>org.hippoecm.hst.core.sitemenu.EditableMenuItem getTopMenuItem(org.hippoecm.hst.core.sitemenu.EditableMenu, java.lang.Integer )</function-signature>
+      <function-signature>org.hippoecm.hst.core.sitemenu.CommonMenuItem getTopMenuItem(org.hippoecm.hst.core.sitemenu.CommonMenu, java.lang.Integer )</function-signature>
     </function>
 
     <function>
       <name>getMenuItem</name>
       <function-class>nl.hsleiden.tags.MenuFunctions</function-class>
-      <function-signature>org.hippoecm.hst.core.sitemenu.EditableMenuItem getMenuItem(javax.servlet.http.HttpServletRequest, org.hippoecm.hst.core.sitemenu.EditableMenuItem)</function-signature>
+      <function-signature>org.hippoecm.hst.core.sitemenu.CommonMenuItem getMenuItem(javax.servlet.http.HttpServletRequest, org.hippoecm.hst.core.sitemenu.CommonMenuItem)</function-signature>
     </function>
     
     <function>
@@ -296,6 +296,5 @@
       <function-class>nl.hsleiden.tags.Functions</function-class>
       <function-signature>java.lang.String getBrowserTitle(javax.servlet.http.HttpServletRequest, org.hippoecm.hst.content.beans.standard.HippoBean)</function-signature>
     </function>
-
 
 </taglib>

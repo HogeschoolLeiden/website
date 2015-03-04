@@ -7,29 +7,31 @@ import org.hippoecm.hst.configuration.site.HstSite;
 import org.hippoecm.hst.configuration.sitemenu.HstSiteMenuConfiguration;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.request.HstRequestContext;
-import org.hippoecm.hst.core.sitemenu.EditableMenu;
-import org.hippoecm.hst.core.sitemenu.EditableMenuItem;
+import org.hippoecm.hst.core.sitemenu.CommonMenu;
+import org.hippoecm.hst.core.sitemenu.CommonMenuItem;
 import org.hippoecm.hst.core.sitemenu.HstSiteMenuImpl;
+
+import com.tdclighthouse.prototype.utils.NavigationUtils;
 
 public class MenuFunctions {
 
     private MenuFunctions() {
     }
 
-    public static EditableMenuItem getTopMenuItem(EditableMenu menu, Integer level) {
-        EditableMenuItem result = null;
+    public static CommonMenuItem getTopMenuItem(CommonMenu menu, Integer level) {
+        CommonMenuItem result = null;
         if (menu != null) {
             result = getTopMenuItemOfNotNullMenu(menu, level);
         }
         return result;
 
     }
-    
-    //just for making sonar happy :)
-    private static EditableMenuItem getTopMenuItemOfNotNullMenu(EditableMenu menu, Integer level){
-        EditableMenuItem result = null;
+
+    // just for making sonar happy :)
+    private static CommonMenuItem getTopMenuItemOfNotNullMenu(CommonMenu menu, Integer level) {
+        CommonMenuItem result = null;
         Integer depthLevel = level;
-        for (EditableMenuItem menuItem : menu.getMenuItems()) {
+        for (CommonMenuItem menuItem : NavigationUtils.getMenuItems(menu)) {
             if (menuItem != null && menuItem.isExpanded()) {
                 while (depthLevel != 0) {
                     depthLevel--;
@@ -41,10 +43,10 @@ public class MenuFunctions {
         return result;
     }
 
-    private static EditableMenuItem recurseMenuItems(EditableMenuItem menuItem) {
-        EditableMenuItem result = null;
+    private static CommonMenuItem recurseMenuItems(CommonMenuItem menuItem) {
+        CommonMenuItem result = null;
         if (menuItem != null) {
-            for (EditableMenuItem child : menuItem.getChildMenuItems()) {
+            for (CommonMenuItem child : NavigationUtils.getSubmenuItems(menuItem)) {
                 if (child.isExpanded()) {
                     result = child;
                 }
@@ -56,8 +58,8 @@ public class MenuFunctions {
         return result;
     }
 
-    public static EditableMenuItem getMenuItem(HttpServletRequest req, EditableMenuItem originalMenuItem) {
-        EditableMenuItem result = originalMenuItem;
+    public static CommonMenuItem getMenuItem(HttpServletRequest req, CommonMenuItem originalMenuItem) {
+        CommonMenuItem result = originalMenuItem;
 
         String sitemenuConfigParameter = ParametersFunctions.getSitemenuConfigParameter(originalMenuItem,
                 "useMainMenuConfig");
@@ -65,10 +67,10 @@ public class MenuFunctions {
         if (sitemenuConfigParameter != null && "true".equalsIgnoreCase(sitemenuConfigParameter)) {
             HstRequest request = (HstRequest) req;
 
-            EditableMenu mainMenu = getSiteMainMenu(request);
+            CommonMenu mainMenu = getSiteMainMenu(request);
 
             String originalMenuItemName = originalMenuItem.getName();
-            for (EditableMenuItem menuItem : mainMenu.getMenuItems()) {
+            for (CommonMenuItem menuItem : NavigationUtils.getMenuItems(mainMenu)) {
                 if (originalMenuItemName.equals(menuItem.getName())) {
                     result = menuItem;
                     break;
@@ -79,13 +81,13 @@ public class MenuFunctions {
         return result;
     }
 
-    private static EditableMenu getSiteMainMenu(HstRequest request) {
+    private static CommonMenu getSiteMainMenu(HstRequest request) {
         HstRequestContext requestContext = request.getRequestContext();
         Mount mount = requestContext.getMount("hsl");
         HstSite hstSite = mount.getHstSite();
         HstSiteMenuConfiguration siteMenuConfiguration = hstSite.getSiteMenusConfiguration().getSiteMenuConfiguration(
                 "main");
 
-        return new HstSiteMenuImpl(null, siteMenuConfiguration, requestContext).getEditableMenu();
+        return new HstSiteMenuImpl(null, siteMenuConfiguration, requestContext);
     }
 }

@@ -13,19 +13,20 @@ import nl.hsleiden.tags.ParametersFunctions;
 
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
-import org.hippoecm.hst.core.sitemenu.EditableMenu;
-import org.hippoecm.hst.core.sitemenu.EditableMenuItem;
+import org.hippoecm.hst.core.sitemenu.CommonMenu;
+import org.hippoecm.hst.core.sitemenu.CommonMenuItem;
 
-import com.tdclighthouse.prototype.components.Navigation;
+import com.tdclighthouse.prototype.components.CachedNavigation;
+import com.tdclighthouse.prototype.utils.NavigationUtils;
 
-public class Breadcrumb extends Navigation {
+public class Breadcrumb extends CachedNavigation {
 
     @Override
     public void doBeforeRender(HstRequest request, HstResponse response) {
         super.doBeforeRender(request, response);
         List<BreadcrumbItemBean> model = new ArrayList<>();
-        EditableMenu editableMenu = (EditableMenu) request.getAttribute(MENU);
-        for (EditableMenuItem item : editableMenu.getMenuItems()) {
+        CommonMenu menu = (CommonMenu) request.getAttribute(MENU);
+        for (CommonMenuItem item : NavigationUtils.getMenuItems(menu)) {
             if (item.isExpanded() || item.isSelected()) {
                 if (!TRUE.equals(ParametersFunctions.getSitemenuConfigParameter(item, DISABLED))) {
                     model.add(new BreadcrumbItemBean(item.getName(), item.getHstLink()));
@@ -37,8 +38,8 @@ public class Breadcrumb extends Navigation {
         request.setAttribute(MODEL, model);
     }
 
-    private void processChildren(List<BreadcrumbItemBean> model, EditableMenuItem item) {
-        for (EditableMenuItem subitem : item.getChildMenuItems()) {
+    private void processChildren(List<BreadcrumbItemBean> model, CommonMenuItem item) {
+        for (CommonMenuItem subitem : NavigationUtils.getSubmenuItems(item)) {
             if (subitem.isExpanded() || subitem.isSelected()) {
                 if (!TRUE.equals(ParametersFunctions.getSitemenuConfigParameter(subitem, DISABLED))) {
                     model.add(new BreadcrumbItemBean(subitem.getName(), subitem.getHstLink()));

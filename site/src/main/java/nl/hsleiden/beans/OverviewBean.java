@@ -3,12 +3,12 @@ package nl.hsleiden.beans;
 import hslbeans.OverviewPage;
 
 import org.hippoecm.hst.content.beans.standard.HippoBean;
-import org.hippoecm.hst.core.sitemenu.EditableMenuItem;
+import org.hippoecm.hst.core.sitemenu.HstSiteMenuItem;
 
 public class OverviewBean {
 
     private HippoBean highLighted;
-    private EditableMenuItem menuItem;
+    private HstSiteMenuItem menuItem;
     private OverviewPage overviewBean;
 
     public HippoBean getHighLighted() {
@@ -19,11 +19,11 @@ public class OverviewBean {
         this.highLighted = highLighted;
     }
 
-    public EditableMenuItem getMenuItem() {
+    public HstSiteMenuItem getMenuItem() {
         return menuItem;
     }
 
-    public void setMenuItem(EditableMenuItem menuItem) {
+    public void setMenuItem(HstSiteMenuItem menuItem) {
         this.menuItem = menuItem;
     }
 

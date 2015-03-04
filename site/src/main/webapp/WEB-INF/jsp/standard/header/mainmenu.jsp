@@ -10,7 +10,7 @@
 
 
 <ul class="nav navbar-nav" id="mainnav">
-  <c:forEach items="${menu.menuItems}" var="siteMenuItem" varStatus="loop">
+  <c:forEach items="${menu.siteMenuItems}" var="siteMenuItem" varStatus="loop">
 	
     <c:if test="${loop.index < paramInfo.maxTopItems}">
           
@@ -43,8 +43,7 @@
 		<a href="${link}"> 
 		  <c:out value="${myMenuItem.name}" />
 		</a>
-          
-        <c:if test="${not empty myMenuItem.childMenuItems}">
+        <c:if test="${not empty opw:getSubmenuItems(myMenuItem)}">
           <ul class="dropdownmenu visible-lg visible-md clearfix">
             
             <tag:submenu menuItem="${myMenuItem}" columNr="0" labels="${labels}"/>
