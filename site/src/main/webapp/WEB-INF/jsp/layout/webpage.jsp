@@ -89,6 +89,9 @@
 
 <body itemscope itemtype="http://schema.org/WebPage">
     
+    <hst:defineObjects />
+    <c:set var="isCmsRequest" value="${hstRequest.requestContext.cmsRequest}" />
+
     <!--[if lt IE 9]>
     <p class="chromeframe">Uw gebruikt een oudere versie van uw browser. Wij raden u aan deze te <a href="http://www.google.com/chromeframe/?redirect=true">upgraden</a>.</p>
     <![endif]-->
@@ -106,15 +109,15 @@
 	 
     <hst:headContributions categoryIncludes="scripts" xhtml="true" />
   	
-	<c:if test="${(not composermode ) and ( not tag:isCookiesRefused(pageContext.request))}">
+	<c:if test="${(not isCmsRequest ) and ( not tag:isCookiesRefused(pageContext.request))}">
 	  <ga:accountId/>
 	  <hst:link var="googleAnalytics" path="/resources/google-analytics.js"/>
       <script src="${googleAnalytics}" type="text/javascript"></script>
       
-      <c:set var="gtm" value="${(tag:getMainWebsitePropertyList(pageContext.request)).googleTagManagerConfig}"/>
       <c:set var="disableGTM" value="${(tag:getMainWebsitePropertyList(pageContext.request)).disableGoogleTagManager}"/>
       
       <c:if test="${not disableGTM eq 'true'}">
+        <c:set var="gtm" value="${(tag:getMainWebsitePropertyList(pageContext.request)).googleTagManagerConfig}"/>
         ${gtm}
       </c:if>
   	</c:if>
@@ -123,10 +126,10 @@
     <script type="text/javascript" src="<hst:link path="/js/kees/plugins.js" />"></script>
     <script type="text/javascript" src="<hst:link path="/js/kees/main.js" />"></script>
     
-    <c:set var="chatJs" value="${(tag:getMainWebsitePropertyList(pageContext.request)).chatJsConfig}"/>
     <c:set var="disableChat" value="${(tag:getMainWebsitePropertyList(pageContext.request)).disableChatJs}"/>
     
-    <c:if test="${not disableChat eq 'true'}">     
+    <c:if test="${(not isCmsRequest ) and (not (disableChat eq 'true'))}">  
+      <c:set var="chatJs" value="${(tag:getMainWebsitePropertyList(pageContext.request)).chatJsConfig}"/>
       <script type="text/javascript" src="${chatJs}"></script> 
     </c:if>
     
