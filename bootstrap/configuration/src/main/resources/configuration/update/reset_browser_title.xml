@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="Reset browser title">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>hipposys:updaterinfo</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:batchsize" sv:type="Long">
+    <sv:value>10</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:dryrun" sv:type="Boolean">
+    <sv:value>false</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:query" sv:type="String">
+    <sv:value>content/documents//element(*, hsl:WebPage)</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:script" sv:type="String">
+    <sv:value>package org.hippoecm.frontend.plugins.cms.dev.updater&#13;
+&#13;
+import org.onehippo.repository.update.BaseNodeUpdateVisitor&#13;
+import javax.jcr.Node&#13;
+&#13;
+class UpdaterTemplate extends BaseNodeUpdateVisitor {&#13;
+&#13;
+  int counter = 0;&#13;
+  boolean doUpdate(Node node) {&#13;
+    boolean result = false;&#13;
+    if (node.isNodeType("hsl:WebPage")) {&#13;
+      &#13;
+      counter++;&#13;
+      if(!node.isCheckedOut()){&#13;
+		node.checkout();&#13;
+      }&#13;
+      &#13;
+      log.debug(counter +") Deleting browser title: " +node.getProperty("hsl:browserTitle").getString() + " of node: " + node.getPath());&#13;
+      node.setProperty("hsl:browserTitle", "");&#13;
+      result = true;&#13;
+    }&#13;
+    return result;&#13;
+  }&#13;
+&#13;
+  boolean undoUpdate(Node node) {&#13;
+    throw new UnsupportedOperationException('Updater does not implement undoUpdate method')&#13;
+  }&#13;
+&#13;
+}</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:throttle" sv:type="Long">
+    <sv:value>10</sv:value>
+  </sv:property>
+</sv:node>
