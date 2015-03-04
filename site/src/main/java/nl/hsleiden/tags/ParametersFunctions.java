@@ -2,6 +2,7 @@ package nl.hsleiden.tags;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.commons.lang3.StringUtils;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.request.HstRequestContext;
 import org.hippoecm.hst.core.sitemenu.CommonMenuItem;
@@ -20,7 +21,7 @@ public class ParametersFunctions {
     }
 
     public static String getSitemenuConfigParameter(CommonMenuItem menuItem, String paramName) {
-        String result = "";
+        String result = StringUtils.EMPTY;
         if(menuItem != null && paramName!=null && !paramName.isEmpty()){            
             result = RepoBasedMenuProvider.getParameterValue(paramName, menuItem);
         }
