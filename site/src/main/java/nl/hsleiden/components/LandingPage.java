@@ -13,18 +13,18 @@ import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
 import org.hippoecm.hst.core.parameters.ParametersInfo;
 import org.hippoecm.hst.core.request.ResolvedSiteMapItem;
-import org.hippoecm.hst.core.sitemenu.EditableMenu;
-import org.hippoecm.hst.core.sitemenu.EditableMenuItem;
+import org.hippoecm.hst.core.sitemenu.HstSiteMenuItem;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.tdclighthouse.prototype.components.Navigation;
+import com.tdclighthouse.prototype.beans.compounds.CacheableSiteMenu;
+import com.tdclighthouse.prototype.components.CachedNavigation;
 import com.tdclighthouse.prototype.componentsinfo.NavigationInfo;
 import com.tdclighthouse.prototype.utils.BeanUtils;
 import com.tdclighthouse.prototype.utils.Constants;
 
 @ParametersInfo(type = NavigationInfo.class)
-public class LandingPage extends Navigation {
+public class LandingPage extends CachedNavigation {
 
     private static final Logger LOG = LoggerFactory.getLogger(LandingPage.class);
 
@@ -35,7 +35,7 @@ public class LandingPage extends Navigation {
         HippoBean contentBean = request.getRequestContext().getContentBean();
         List<OverviewBean> overviewBeans = null;
 
-        EditableMenu menu = (EditableMenu) request.getAttribute(Constants.AttributesConstants.MENU);
+        CacheableSiteMenu menu = (CacheableSiteMenu) request.getAttribute(Constants.AttributesConstants.MENU);
 
         if (menu != null) {
             overviewBeans = getOverviewBeansList(request, menu);
@@ -45,13 +45,13 @@ public class LandingPage extends Navigation {
         request.setAttribute(Constants.AttributesConstants.DOCUMENT, contentBean);
     }
 
-    private List<OverviewBean> getOverviewBeansList(HstRequest request, EditableMenu menu) {
+    private List<OverviewBean> getOverviewBeansList(HstRequest request, CacheableSiteMenu menu) {
 
         List<OverviewBean> overviewBeans = new ArrayList<OverviewBean>();
 
-        EditableMenuItem deepestExpandedItem = menu.getDeepestExpandedItem();
+        HstSiteMenuItem deepestExpandedItem = menu.getDeepestExpandedItem();
 
-        for (EditableMenuItem sitemenuItem : deepestExpandedItem.getChildMenuItems()) {
+        for (HstSiteMenuItem sitemenuItem : deepestExpandedItem.getChildMenuItems()) {
             OverviewBean ob = new OverviewBean();
             ResolvedSiteMapItem resolveToSiteMapItem = sitemenuItem.resolveToSiteMapItem(request);
             if (resolveToSiteMapItem != null) {
