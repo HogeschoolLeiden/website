@@ -1,19 +1,3 @@
-/*
- *  Copyright 2008-2013 Hippo B.V. (http://www.onehippo.com)
- *
- *  Licensed under the Apache License, Version 2.0 (the "License");
- *  you may not use this file except in compliance with the License.
- *  You may obtain a copy of the License at
- *
- *       http://www.apache.org/licenses/LICENSE-2.0
- *
- *  Unless required by applicable law or agreed to in writing, software
- *  distributed under the License is distributed on an "AS IS" BASIS,
- *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  See the License for the specific language governing permissions and
- *  limitations under the License.
- */
-
 package nl.hsleiden.frontend.editor.sitemap;
 
 import java.util.Arrays;
@@ -40,8 +24,8 @@ import org.hippoecm.hst.plugins.frontend.editor.sitemap.SitemapItemEditorPlugin;
 
 public class HslSitemapItemEditorPlugin extends SitemapItemEditorPlugin {
 
-    private static final String TYPE_VALUES_PARAM = "typeValues";
-    private static final String TYPE_NAMES_PARAM = "typeNames";
+    protected static final String TYPE_VALUES_PARAM = "typeValues";
+    protected static final String TYPE_NAMES_PARAM = "typeNames";
 
     private static final long serialVersionUID = 1L;
 
@@ -49,21 +33,19 @@ public class HslSitemapItemEditorPlugin extends SitemapItemEditorPlugin {
     private static final String NAME = "name";
     private static final String REMOVE = "remove";
 
-    private List<String> typeNames;
-    private List<String> typeValues;
+    private List<String> translatedDocTypeNames;
 
     public HslSitemapItemEditorPlugin(final IPluginContext context, final IPluginConfig config) {
         super(context, config);
-
-        setTypeNames(Arrays.asList(config.getStringArray(TYPE_NAMES_PARAM)));
-        setTypeValues(Arrays.asList(config.getStringArray(TYPE_VALUES_PARAM)));
-
+        this.translatedDocTypeNames = Arrays.asList(config.getStringArray(TYPE_VALUES_PARAM));
         addComponentConfigMappings();
     }
 
     @Override
     protected EditorDAO<SitemapItem> newDAO() {
-        return new HslSitemapItemDAO(hstContext, hstContext.sitemap.getNamespace());
+        List<String> namesList = Arrays.asList(getPluginConfig().getStringArray(TYPE_NAMES_PARAM));
+        List<String> valuesList = Arrays.asList(getPluginConfig().getStringArray(TYPE_VALUES_PARAM));
+        return new HslSitemapItemDAO(hstContext, hstContext.sitemap.getNamespace(), namesList, valuesList);
     }
 
     @SuppressWarnings({ "rawtypes" })
@@ -91,20 +73,8 @@ public class HslSitemapItemEditorPlugin extends SitemapItemEditorPlugin {
         form.add(addParam);
     }
 
-    public List<String> getTypeNames() {
-        return typeNames;
-    }
-
-    public void setTypeNames(List<String> typeNames) {
-        this.typeNames = typeNames;
-    }
-
-    public List<String> getTypeValues() {
-        return typeValues;
-    }
-
-    public void setTypeValues(List<String> typeValues) {
-        this.typeValues = typeValues;
+    public List<String> getTranslatedDocTypeNames() {
+        return translatedDocTypeNames;
     }
 
     @SuppressWarnings({ "rawtypes", "unchecked" })
@@ -119,7 +89,7 @@ public class HslSitemapItemEditorPlugin extends SitemapItemEditorPlugin {
         protected void populateItem(final ListItem item) {
             Parameter param = (Parameter) item.getModelObject();
 
-            DropDownChoice<String> name = getDropDownChoiceField(param, getTypeNames(), NAME);
+            DropDownChoice<String> name = getDropDownChoiceField(param, getTranslatedDocTypeNames(), NAME);
             item.add(name);
 
             List<String> pages = hstContext.page.getReferenceables();

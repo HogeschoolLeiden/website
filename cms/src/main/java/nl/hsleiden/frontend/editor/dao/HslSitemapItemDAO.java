@@ -18,8 +18,13 @@ public class HslSitemapItemDAO extends SitemapItemDAO {
     private static final String HST_COMP_CONFIG_NAMES = "hst:componentconfigurationmappingnames";
     private static final String HST_COMP_CONFIG_VALUES = "hst:componentconfigurationmappingvalues";
 
-    public HslSitemapItemDAO(HstContext context, String namespace) {
+    private List<String> typeNames;
+    private List<String> typeValues;
+    
+    public HslSitemapItemDAO(HstContext context, String namespace, List<String> typeNames, List<String> typeValues) {
         super(context, namespace);
+        this.typeNames = typeNames;
+        this.typeValues = typeValues;
     }
 
     @Override
@@ -52,7 +57,10 @@ public class HslSitemapItemDAO extends SitemapItemDAO {
                     Arrays.fill(values, "");
                 }
                 for (int i = 0; i < names.size(); i++) {
-                    myItem.addConfigMapping(names.get(i), values[i]);
+                    
+                    //should use translated version of what names.get(i) contains
+                    String translatedName = typeValues.get(typeNames.indexOf(names.get(i)));
+                    myItem.addConfigMapping(translatedName, values[i]);
                 }
             }
         }
@@ -69,7 +77,10 @@ public class HslSitemapItemDAO extends SitemapItemDAO {
             List<String> mappingNames = new ArrayList<String>();
             List<String> mappingValues = new ArrayList<String>();
             for (Parameter param : myItem.getConfigMappings()) {
-                mappingNames.add(param.getName());
+                
+                //param.getName gives the translation, should use the real version.
+                String realName = typeNames.get(typeValues.indexOf(param.getName()));
+                mappingNames.add(realName);
                 mappingValues.add(param.getValue());
             }
 
