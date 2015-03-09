@@ -14,9 +14,9 @@ public interface FacetCatalogInfo extends FacetedOverviewPageInfo {
     @Parameter(name = "secondFacetName", displayName="Tweede Facet Naam", defaultValue="")
     public String getSecondFacetName();
 
-    @Parameter(name = Constants.WidgetConstants.LEFT_OVERVIEW_LINK, defaultValue = "opleiden/bacheloropleidingen/vind-je-studie")
+    @Parameter(name = Constants.WidgetConstants.LEFT_OVERVIEW_LINK, defaultValue = "vind-je-studie")
     public String getLeftOverviewLink();
 
-    @Parameter(name = Constants.WidgetConstants.RIGHT_OVERVIEW_LINK, defaultValue = "opleiden/opleidingen-voor-professionals/masters/Soort/masterclass")
+    @Parameter(name = Constants.WidgetConstants.RIGHT_OVERVIEW_LINK, defaultValue = "masters/Soort/masterclass")
     public String getRightOverviewLink();
 }
