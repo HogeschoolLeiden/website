@@ -19,11 +19,17 @@ import nl.hsleiden.beans.EventPageBean;
 import nl.hsleiden.channels.WebsiteInfo;
 
 import org.hippoecm.hst.configuration.hosting.Mount;
+import org.hippoecm.hst.configuration.sitemap.HstSiteMapItem;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.content.beans.standard.HippoResource;
 import org.hippoecm.hst.core.component.HstRequest;
+import org.hippoecm.hst.core.request.ResolvedSiteMapItem;
+
+import com.tdclighthouse.prototype.utils.BeanUtils;
 
 public class Functions {
+
+    private static final String SEPARATOR = " - ";
 
     private Functions() {
     }
@@ -32,7 +38,7 @@ public class Functions {
         WebsiteInfo result = null;
         HstRequest req = (HstRequest) request;
         Mount mount = req.getRequestContext().getResolvedMount().getMount();
-        result = mount.getChannelInfo();        
+        result = mount.getChannelInfo();
         return result;
     }
 
@@ -40,7 +46,7 @@ public class Functions {
         WebsiteInfo result = null;
         HstRequest req = (HstRequest) request;
         Mount mount = req.getRequestContext().getMount("hsl");
-        result = mount.getChannelInfo();        
+        result = mount.getChannelInfo();
         return result;
     }
 
@@ -60,7 +66,7 @@ public class Functions {
 
     public static HippoBean getFirstFlexibleBlockImage(WebPage bean) {
         HippoBean result = null;
-        if(bean instanceof PersonnelPage){
+        if (bean instanceof PersonnelPage) {
             PersonnelPage personnel = (PersonnelPage) bean;
             List<HippoBean> flexibleblock = personnel.getMedewerkerflexibleblock();
             result = getFirstImage(flexibleblock);
@@ -81,21 +87,21 @@ public class Functions {
         }
         return result;
     }
-        
+
     public static Integer indexOf(List<String> list, String item) {
         return list.indexOf(item);
     }
-        
-    public static String getConfiguredLink(ImageTeaser imgTeaser){
+
+    public static String getConfiguredLink(ImageTeaser imgTeaser) {
         String result = "";
         InternalLink internallink = imgTeaser.getInternallink();
         ExternalLink externallink = imgTeaser.getExternallink();
 
-        if(internallink !=null && internallink.getLink()!=null && !internallink.getLinkTitle().isEmpty()){
+        if (internallink != null && internallink.getLink() != null && !internallink.getLinkTitle().isEmpty()) {
             result = "int";
         }
 
-        if(result.isEmpty()){
+        if (result.isEmpty()) {
             result = checkExternalLink(externallink);
         }
 
@@ -104,23 +110,23 @@ public class Functions {
 
     private static String checkExternalLink(ExternalLink externallink) {
         String result = "";
-        if(externallink !=null && !externallink.getLinkUrl().isEmpty() && !externallink.getLinkTitle().isEmpty()){
+        if (externallink != null && !externallink.getLinkUrl().isEmpty() && !externallink.getLinkTitle().isEmpty()) {
             result = "ext";
         }
         return result;
     }
-    
-    public static Boolean isInfoBlockDisplayable(HippoBean document){
+
+    public static Boolean isInfoBlockDisplayable(HippoBean document) {
         boolean result = false;
-        
-        if(document instanceof EventPageBean){
+
+        if (document instanceof EventPageBean) {
             EventPageBean event = (EventPageBean) document;
             result = checkInfoBlock(event.getInfoBlock());
-        }else if (document instanceof BachelorPage){
+        } else if (document instanceof BachelorPage) {
             BachelorPage bachelor = (BachelorPage) document;
             result = checkInfoBlock(bachelor.getInfoBlock());
         }
-        
+
         return result;
     }
 
@@ -131,15 +137,15 @@ public class Functions {
            result = true; 
         }
         return result;
-    }    
-    
+    }
+
     public static Boolean isCookiesRefused(HttpServletRequest request) {
         boolean result = false;
         Cookie[] cookies = request.getCookies();
-        
-        if(cookies!=null){            
+
+        if (cookies != null) {
             for (Cookie cookie : cookies) {
-                if("refuseCookies".equalsIgnoreCase(cookie.getName())){
+                if ("refuseCookies".equalsIgnoreCase(cookie.getName())) {
                     result = true;
                 }
             }
@@ -147,27 +153,50 @@ public class Functions {
 
         return result;
     }
-    
-    public static String getBrowserTitle(HttpServletRequest request, HippoBean document){
-        String result = getWebsitePropertyList(request).getDefaultBrowserTitle();
-        if(document instanceof WebPage){
-            result = getDocumentTitle(document, result);
+
+    public static String getBrowserTitle(HttpServletRequest request, HippoBean document) {
+        String result = ""; 
+        if (document instanceof WebPage) {
+            result = composeBrowserTitle((HstRequest) request, (WebPage) document);
+        }else{
+            result = getWebsitePropertyList(request).getDefaultBrowserTitle();
         }
-        
         return result;
     }
 
-    private static String getDocumentTitle(HippoBean document, String actualBrowserTitle) {
-        String result = actualBrowserTitle;
-        
-        WebPage webPage = (WebPage) document;
-        String title = webPage.getTitle();
+    private static String composeBrowserTitle(HstRequest request, WebPage webPage) {
+ 
+        String result = "";
+
         String browserTitle = webPage.getBrowserTitle();
-        
-        if(browserTitle != null && !browserTitle.isEmpty()){
+        String title = webPage.getTitle();
+        String parentTitle = getParentTitle(request, title);
+
+        if (browserTitle != null && !browserTitle.isEmpty()) {
             result = browserTitle;
-        }else if(title != null && !title.isEmpty()){
-            result = result + " - " + title;
+        } else if (parentTitle != null && !parentTitle.isEmpty()) {
+            result = title + SEPARATOR + parentTitle;
+        } else {
+            result = getWebsitePropertyList(request).getDefaultBrowserTitle() + SEPARATOR  + title;
+        }
+
+        return result;
+    }
+
+    private static String getParentTitle(HstRequest request, String actualPageTitle) {
+        String result = null;
+        
+        ResolvedSiteMapItem resolvedSiteMapItem = request.getRequestContext().getResolvedSiteMapItem();
+        HstSiteMapItem parentSiteMapItem = resolvedSiteMapItem.getHstSiteMapItem().getParentItem();
+        
+        if (parentSiteMapItem != null && parentSiteMapItem.getRelativeContentPath() != null) {
+            HippoBean parentSiteMapItemBean = BeanUtils.getBean(parentSiteMapItem.getRelativeContentPath());
+            if (parentSiteMapItemBean != null && parentSiteMapItemBean instanceof WebPage) {
+                String parentTitle = ((WebPage) parentSiteMapItemBean).getTitle();
+                if(!parentTitle.equals(actualPageTitle)){
+                    result = parentTitle;
+                }
+            }
         }
         
         return result;
