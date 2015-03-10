@@ -95,6 +95,13 @@
   <logger name="org.hippoecm.hst">
     <level value="warn"/>
   </logger>
+  
+  <!-- Spring logging -->
+
+  <logger name="org.hippoecm.hst.site.container">
+    <level value="info"/>
+  </logger>
+  
 
   <!-- DiagnosticReportingValve only logs when diagnostics enabled in hst:hosts config in repo hence
        can be here on level 'info' -->
