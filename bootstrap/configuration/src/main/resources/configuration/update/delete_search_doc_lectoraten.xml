@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node sv:name="Delete Search Doc Lectoraten" xmlns:sv="http://www.jcp.org/jcr/sv/1.0">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>hipposys:updaterinfo</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:batchsize" sv:type="Long">
+    <sv:value>10</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:dryrun" sv:type="Boolean">
+    <sv:value>false</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:query" sv:type="String">
+    <sv:value>content/documents//element(zoek, hippo:handle)</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:script" sv:type="String">
+    <sv:value>package org.hippoecm.frontend.plugins.cms.dev.updater&#xd;
+&#xd;
+import org.onehippo.repository.update.BaseNodeUpdateVisitor&#xd;
+import javax.jcr.Node&#xd;
+&#xd;
+class UpdaterTemplate extends BaseNodeUpdateVisitor {&#xd;
+&#xd;
+  boolean doUpdate(Node node) {&#xd;
+    &#xd;
+    boolean result = false;&#xd;
+    if(!node.getPath().contains("/content/documents/hsl/")){&#xd;
+      &#xd;
+      if(nodeNeedsToBeDeleted(node, node.getName())){&#xd;
+        checkoutIfCheckedIn(node); &#xd;
+        &#xd;
+        log.debug("Deleting node: " + node.getPath());&#xd;
+        node.remove();&#xd;
+      &#xd;
+        result = true;&#xd;
+      }else{&#xd;
+        log.debug(node.getPath() + " is not a WebPage document. SKIPPING it");&#xd;
+      }&#xd;
+      &#xd;
+    }else{&#xd;
+      log.debug("SKIPPING document" + node.getPath());&#xd;
+    }&#xd;
+    &#xd;
+    return result;&#xd;
+  }&#xd;
+    &#xd;
+  boolean nodeNeedsToBeDeleted(Node node, String name){&#xd;
+    boolean result = false;&#xd;
+    if(node.hasNode(name)){&#xd;
+      Node meaningfulNode = node.getNode(name);&#xd;
+       if("hsl:WebPage".equals(meaningfulNode.getProperty("jcr:primaryType").getString())){&#xd;
+         result = true;&#xd;
+       }&#xd;
+    }&#xd;
+    return result;&#xd;
+  }&#xd;
+    &#xd;
+  void checkoutIfCheckedIn(Node node) throws RepositoryException {&#xd;
+    if(!node.isCheckedOut()){&#xd;
+      node.checkout();&#xd;
+    }      &#xd;
+  }&#xd;
+&#xd;
+  boolean undoUpdate(Node node) {&#xd;
+    throw new UnsupportedOperationException('Updater does not implement undoUpdate method')&#xd;
+  }&#xd;
+&#xd;
+}</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:throttle" sv:type="Long">
+    <sv:value>10</sv:value>
+  </sv:property>
+</sv:node>
