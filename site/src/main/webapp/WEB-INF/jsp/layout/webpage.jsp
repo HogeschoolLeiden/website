@@ -61,20 +61,13 @@
   
   <hst:headContributions categoryIncludes="formsCssHere,swiperCss" xhtml="true" />
     
-  <link rel="stylesheet" href="<hst:link path="/css/kees/style.css"/>" >
-  
-  <link rel="stylesheet" href="<hst:link path="/css/kees/style-additions.css"/>" >
+  <link rel="stylesheet" href="<hst:link path="/css/style.min.css"/>" >
   
   <link rel="stylesheet" type="text/css" href="<hst:link path="/css/print-style.css"/>" media="print"> 
   
-  <link rel="stylesheet" href="<hst:link path="/css/kees/normalize.css"/>" >
   
-  <script type="text/javascript" src="<hst:link path="/js/kees/vendor/modernizr-2.6.2.min.js" />"></script>
-  <script type="text/javascript" src="<hst:link path="/js/kees/vendor/retina.min.js" />"></script>
-  <script type="text/javascript" src="<hst:link path="/js/kees/vendor/respond.js" />"></script>
+  <script type="text/javascript" src="<hst:link path="/js/script.min.js" />"></script>
     
-  <script src="<hst:link path="/js/jquery.min.js" />" type="text/javascript"></script>
-  <script src="<hst:link path="/js/jquery.browser.min.js" />" type="text/javascript"></script>
  
   <hst:headContributions categoryExcludes="scripts,formsCssHere,extraCss" xhtml="true" />
   
@@ -122,9 +115,6 @@
       </c:if>
   	</c:if>
       
-    <script type="text/javascript" src="<hst:link path="/js/kees/vendor/bootstrap.min.js" />"></script>
-    <script type="text/javascript" src="<hst:link path="/js/kees/plugins.js" />"></script>
-    <script type="text/javascript" src="<hst:link path="/js/kees/main.js" />"></script>
     
     <c:set var="disableChat" value="${(tag:getMainWebsitePropertyList(pageContext.request)).disableChatJs}"/>
     
