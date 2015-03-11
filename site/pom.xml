@@ -270,6 +270,43 @@
           </mappings>
         </configuration>
       </plugin>
+      <!-- <plugin>
+        <artifactId>maven-war-plugin</artifactId>
+        <configuration>
+          <warSourceExcludes>**/bootstrap.min.css,**/fonts.css,**/base.css,**/toc.css,**/samaxesjs.core.js,**/samaxesjs.toc.js</warSourceExcludes>
+        </configuration>
+      </plugin> -->
+      <plugin>
+        <groupId>com.samaxes.maven</groupId>
+        <artifactId>minify-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>default-minify</id>
+            <configuration>
+              <cssSourceFiles>
+                <cssSourceFile>kees/style.css</cssSourceFile>
+                <cssSourceFile>kees/style-additions.css</cssSourceFile>
+                <cssSourceFile>kees/normalize.css</cssSourceFile>
+              </cssSourceFiles>
+              <jsSourceFiles>
+                <jsSourceFile>kees/vendor/modernizr-2.6.2.min.js</jsSourceFile>
+                <jsSourceFile>kees/vendor/retina.min.js</jsSourceFile>
+                <jsSourceFile>kees/vendor/respond.js</jsSourceFile>
+                <jsSourceFile>jquery.min.js</jsSourceFile>
+                <jsSourceFile>jquery.browser.min.js</jsSourceFile>
+                <jsSourceFile>kees/vendor/bootstrap.min.js</jsSourceFile>
+                <jsSourceFile>kees/plugins.js</jsSourceFile>
+                <jsSourceFile>kees/main.js</jsSourceFile>
+              </jsSourceFiles>
+              <jsEngine>CLOSURE</jsEngine>
+              <closureCreateSourceMap>true</closureCreateSourceMap>
+            </configuration>
+            <goals>
+              <goal>minify</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
 
     <resources>
