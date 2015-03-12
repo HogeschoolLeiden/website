@@ -1,12 +1,24 @@
-@media (min-width :768px){
-	.aside {margin-top: -20px;}
+@media ( min-width :768px) {
+	.aside {
+		margin-top: -20px;
+	}
+	.aside .mailplusform, .aside .button-block.twitter {
+		margin-top: 20px;
+	}
+	#main.landing .aside {
+		margin-top: -25px;
+	}
+	#main.landing .aside .button-block.twitter, #main.landing .aside .mailplusform {
+		margin-top: 0;
+	}
+	#main.landing .aside .overzichtlijst.related {
+		margin-top: 5px;
+	}
 }
 /* ---------------------------------------- */
 /* topmenu and topmenu menu hovering limits */
 /* ---------------------------------------- */
-
-.nav#mainnav ul.dropdownmenu.visible-lg.visible-md.clearfix li ul li ul
-	{
+.nav#mainnav ul.dropdownmenu.visible-lg.visible-md.clearfix li ul li ul	{
 	padding-left: 0;
 	padding-bottom: 0;
 	padding-top: 0;
