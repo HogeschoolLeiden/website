@@ -119,13 +119,13 @@ public class LectoratNews extends AjaxEnabledComponent {
         }
         return result;
     }
-
+ 
     private void addLectoratFiltering(HstRequest request, LectoratNewsCompoundMixin mixinInfo, HstQuery query)
             throws FilterException {
         Filter baseFilter = query.createFilter();
         for (HippoBean lectoratFolder : mixinInfo.getContentBeanPath()) {
             Filter lectoratFilter = query.createFilter();
-            lectoratFilter.addJCRExpression("(@hippo:paths='" + lectoratFolder.getIdentifier() + "')");
+            lectoratFilter.addEqualTo("hippo:paths", lectoratFolder.getIdentifier());
             baseFilter.addOrFilter(lectoratFilter);
         }
         query.setFilter(baseFilter);

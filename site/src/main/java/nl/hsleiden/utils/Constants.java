@@ -125,6 +125,7 @@ public class Constants {
     public static class Values extends ValuesConstants {
 
         public static final String DEFAULT_IMAGE_ALT = "Hogeschool Leiden";
+        public static final int DEFAULT_HST_QUERY_SIZE = 1000;
 
         private Values() {
         }
