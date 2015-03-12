@@ -37,7 +37,7 @@
                     <hst:facetnavigationlink remove="${item}" current="${facetnav}" var="removeLink" />
                     
                     <li>  
-                      <a href="${removeLink}">
+                      <a href="${removeLink}" rel="nofollow">
                         <img  class="cbimg" src="<hst:link path="/images/bachelor-checkbox-checked.png"/>" 
                               alt="<fmt:message key="checkbox.checked" />" title="<fmt:message key="checkbox.checked" />"/>
                         <span>
@@ -54,7 +54,7 @@
                       <hst:link var="link" hippobean="${item}" navigationStateful="true"/>
                       
                       <li>
-                        <a href="${link}">
+                        <a href="${link}" rel="nofollow">
                           <img  class="cbimg" src="<hst:link path="/images/bachelor-checkbox-unchecked.png"/>" 
                                 alt="<fmt:message key="checkbox.unchecked" />" title="<fmt:message key="checkbox.unchecked" />"/>
                           <span>

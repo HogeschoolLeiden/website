@@ -44,7 +44,7 @@
             <c:choose>
               <c:when test="${not item.selected}">
               
-                <a href="${facetLink}">
+                <a href="${facetLink}" rel="nofollow">
                   <div class="${facetItemCssClass}">
                     <img  class="cbimg" src="<hst:link path="/images/checkbox-unchecked.png"/>" 
                           alt="<fmt:message key="checkbox.unchecked" />" title="<fmt:message key="checkbox.unchecked" />"/>
@@ -55,7 +55,7 @@
               </c:when>
               <c:otherwise>
 
-                <a href="${facetLink}">
+                <a href="${facetLink}" rel="nofollow">
                   <div class="${facetItemCssClass} ${' '} ${selectedItemCssClass}">
                     <img  class="cbimg" src="<hst:link path="/images/checkbox-checked.png"/>" 
                           alt="<fmt:message key="checkbox.checked" />" title="<fmt:message key="checkbox.checked" />"/>
