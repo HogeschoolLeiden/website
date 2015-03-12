@@ -20,6 +20,7 @@ import nl.hsleiden.componentsinfo.EventCalendarInfo;
 import nl.hsleiden.utils.Constants;
 import nl.hsleiden.utils.Constants.BeanPaths;
 import nl.hsleiden.utils.Constants.FieldName;
+import nl.hsleiden.utils.Constants.Values;
 import nl.hsleiden.utils.Constants.WidgetConstants;
 import nl.hsleiden.utils.HslDateUtils;
 import nl.hsleiden.utils.HslUtils;
@@ -94,7 +95,6 @@ public class EventCalendar extends AjaxEnabledComponent {
         }
     }
 
-    @SuppressWarnings("unchecked")
     private HstQuery getQuery(HstRequest request, HippoBean scope, EventCalendarInfo info) throws ParseException,
             QueryException {
 
@@ -106,8 +106,9 @@ public class EventCalendar extends AjaxEnabledComponent {
         if(info.getFutureFilter()){
             startDate  = HslDateUtils.getStartOfDay(new Date());
         }
-        
-        HstQuery query = request.getRequestContext().getQueryManager().createQuery(scope, EventPageBean.class);
+
+        HstQuery query = request.getRequestContext().getQueryManager().createQuery(scope, EventPageBean.JCR_TYPE);
+        query.setLimit(Values.DEFAULT_HST_QUERY_SIZE);
         
         Filter baseFilter = getDateFilter(startDate, endDate, query);
         addTaggingFilter(baseFilter, query, request, info);
