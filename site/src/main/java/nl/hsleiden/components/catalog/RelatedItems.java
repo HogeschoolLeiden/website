@@ -85,7 +85,7 @@ public abstract class RelatedItems extends AjaxEnabledComponent {
             if (query != null && request.getAttribute(WidgetConstants.WEB_MASTER_MESSAGE) == null) {
                 LOG.debug("EXECUTING QUERY: " + query.getQueryAsString(false));
                 HstQueryResult queryResult = query.execute();
-                LOG.debug("QUERY RESULT SIZE: " + queryResult.getSize());
+                LOG.debug("QUERY RESULT SIZE: " + queryResult.getTotalSize());
                 List<HippoBean> items = getItems(queryResult);
                 if (!items.isEmpty()) {
                     model.put(Attributes.ITEMS, items);

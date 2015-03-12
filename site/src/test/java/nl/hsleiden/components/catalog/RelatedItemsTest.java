@@ -395,7 +395,7 @@ public class RelatedItemsTest {
     protected HstQueryResult createHstQueryResultMock() {
         HstQueryResult mock = EasyMock.createMock(HstQueryResult.class);
         EasyMock.expect(mock.getHippoBeans()).andReturn(createHippoBeanIteratorMock());
-        EasyMock.expect(mock.getSize()).andReturn(SIZE);
+        EasyMock.expect(mock.getTotalSize()).andReturn(SIZE);
 
         EasyMock.replay(mock);
         return mock;
