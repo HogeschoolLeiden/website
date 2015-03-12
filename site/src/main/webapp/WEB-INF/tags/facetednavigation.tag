@@ -39,7 +39,7 @@
                       <c:if test="${ancestor.parentBean.name eq 'Vakgebieden'}">
                         <hst:facetnavigationlink removeList="${opw:removeListByCategory('Vakgebieden', 'Specialisaties', facetnav)}" current="${facetnav}" var="removeLink" />
                     
-                        <a href="${removeLink}">
+                        <a href="${removeLink}" rel="nofollow">
                           <div class="checkbox">
                             <img  class="cbimg" src="<hst:link path="/images/checkbox-checked.png"/>" alt="<fmt:message key="checkbox.checked" />" title="<fmt:message key="checkbox.checked" />"/>
                             <c:out value="${labels[ancestor.name]}" default="${ancestor.name}" escapeXml="true" />
@@ -65,7 +65,7 @@
                     <c:choose>
                       <c:when test="${item.leaf and item.count gt 0}">
                         <hst:facetnavigationlink remove="${item}" current="${facetnav}" var="removeLink" />
-                        <a href="${removeLink}">
+                        <a href="${removeLink}" rel="nofollow">
                           <div class="${divClass }">
                             <img  class="cbimg" src="<hst:link path="/images/checkbox-checked.png"/>" alt="<fmt:message key="checkbox.checked" />" title="<fmt:message key="checkbox.checked" />"/>
                             <c:out value="${labels[item.name]}" default="${item.name}" escapeXml="true" />
@@ -75,7 +75,7 @@
                       <c:otherwise>
                         <c:if test="${item.count > 0 }">
                           <hst:link var="link" hippobean="${item}" navigationStateful="true"/>
-                          <a href="${link}">
+                          <a href="${link}" rel="nofollow">
                             <div class="${divClass }">
                               <img  class="cbimg" src="<hst:link path="/images/checkbox-unchecked.png"/>" alt="<fmt:message key="checkbox.unchecked" />" title="<fmt:message key="checkbox.unchecked" />"/>
                               <c:out value="${labels[item.name]}" default="${item.name}" escapeXml="true" />

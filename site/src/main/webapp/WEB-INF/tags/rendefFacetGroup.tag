@@ -18,7 +18,7 @@
     <c:if test="${item.count > 0 }">
        <hst:link var="link" hippobean="${item}" navigationStateful="true"/>
        <li>
-         <a href="${link}" class="btn">
+         <a href="${link}" class="btn" rel="nofollow">
            <c:out value="${labels[item.name]}" default="${item.name}" escapeXml="true" />
          </a>
        </li>
