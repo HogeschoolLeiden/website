@@ -96,6 +96,7 @@
     <restfb.version>1.7.0</restfb.version>
 
     <com.itextpdf.version>5.0.6</com.itextpdf.version>
+    <hsl.sitemap.version>1.04</hsl.sitemap.version>
   </properties>
 
   <repositories>
@@ -394,6 +395,18 @@
         <artifactId>restfb</artifactId>
         <version>${restfb.version}</version>
       </dependency>
+      <!-- sitemap plugin -->
+      <dependency>
+        <groupId>nl.hsleiden.sitemap</groupId>
+        <artifactId>sitemap-component</artifactId>
+        <version>${hsl.sitemap.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>nl.hsleiden.sitemap</groupId>
+        <artifactId>sitemap-content</artifactId>
+        <version>${hsl.sitemap.version}</version>
+      </dependency>
+    <!-- /sitemap plugin -->
     </dependencies>
   </dependencyManagement>
 
