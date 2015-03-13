@@ -22,8 +22,14 @@ public class YoutubeBeanTest {
         YoutubeBean youtubeBean = new YoutubeBean();
         youtubeBean.setObjectConverter(objectConverter);
         String url = youtubeBean.getUrl();
-        Assert.assertEquals("http://www.youtube.com/embed/yhKB-VxJWpg?disablekb=0&theme=black&showinfo=0&rel=0&autoplay=1",
-                url);
+        
+        Assert.assertTrue(url.contains("http://www.youtube.com/embed/yhKB-VxJWpg"));
+        Assert.assertTrue(url.contains("disablekb=0"));
+        Assert.assertTrue(url.contains("theme=black"));
+        Assert.assertTrue(url.contains("showinfo=0"));
+        Assert.assertTrue(url.contains("rel=0"));
+        Assert.assertTrue(url.contains("autoplay=1"));
+
     }
 
     @Test
