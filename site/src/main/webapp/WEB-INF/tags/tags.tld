@@ -107,6 +107,10 @@
       <path>/WEB-INF/tags/seo/cannonical.tag</path>
     </tag-file>
     <tag-file>
+      <name>relNextPrev</name>
+      <path>/WEB-INF/tags/seo/relNextPrev.tag</path>
+    </tag-file>
+    <tag-file>
       <name>facebookShareBlock</name>
       <path>/WEB-INF/tags/flexibleblock/facebookShareBlock.tag</path>
     </tag-file>
@@ -194,6 +198,20 @@
 		<name>shouldFilterGroupDisplay</name>
 		<function-class>nl.hsleiden.utils.FacetsUtils</function-class>
 		<function-signature>java.lang.Boolean shouldFilterGroupDisplay(org.hippoecm.hst.content.beans.standard.HippoFacetNavigationBean)</function-signature>
+	</function>
+
+	<function>
+		<description>test if the rel="prev" link should be added</description>
+		<name>hasPrevPage</name>
+		<function-class>nl.hsleiden.tags.Functions</function-class>
+		<function-signature>boolean hasPrevPage(com.tdclighthouse.prototype.utils.PaginatorWidget)</function-signature>
+	</function>
+
+	<function>
+		<description>test if the rel="next" link should be added</description>
+		<name>hasNextPage</name>
+		<function-class>nl.hsleiden.tags.Functions</function-class>
+		<function-signature>boolean hasNextPage(com.tdclighthouse.prototype.utils.PaginatorWidget)</function-signature>
 	</function>
   
     <function>

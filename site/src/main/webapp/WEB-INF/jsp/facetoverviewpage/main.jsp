@@ -87,7 +87,8 @@
             </div>  
           
             <div class="paginator-style">
-              <opw:simplepaginator paginator="${model.paginator}" namespaced="false"/>
+              <opw:simplepaginator paginator="${paginator}" namespaced="false"/>
+              <tag:relNextPrev paginator="${paginator}"/>
             </div>
       
             <hst:include ref="contentBottom" />
