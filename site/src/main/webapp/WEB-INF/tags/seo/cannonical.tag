@@ -5,8 +5,11 @@
 <%@ taglib prefix="hst" uri="http://www.hippoecm.org/jsp/hst/core" %>
 <%@ taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml" %>
 <%@ taglib prefix="opw" uri="http://open-web.nl/hippo/prototype" %>
+<%@ taglib prefix="tag" tagdir="/WEB-INF/tags" %>
 
-<hst:link var="canonicalLink" canonical="true"/>  
+<%@ attribute name="document" rtexprvalue="true" required="true" type="org.hippoecm.hst.content.beans.standard.HippoBean" %>
+
+<hst:link var="canonicalLink" hippobean="${document}" canonical="true" fullyQualified="true"/>
 <hst:headContribution keyHint="cannonicalLink">
   <link rel="canonical" href="${canonicalLink}"/>
 </hst:headContribution>

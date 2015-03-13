@@ -36,7 +36,8 @@
                 <p class="intro"><c:out value="${model.document.introduction }"/></p>
               
                 <div class="paginator-style">
-                  <opw:simplepaginator paginator="${model.paginator}" namespaced="false"/>
+                  <opw:simplepaginator paginator="${paginator}" namespaced="false"/>
+                  <tag:relNextPrev paginator="${paginator}"/>
                 </div>
                 
                 <c:if test="${not empty frontEndMessage}">

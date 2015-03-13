@@ -26,6 +26,7 @@ import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.request.ResolvedSiteMapItem;
 
 import com.tdclighthouse.prototype.utils.BeanUtils;
+import com.tdclighthouse.prototype.utils.PaginatorWidget;
 
 public class Functions {
 
@@ -47,6 +48,22 @@ public class Functions {
         HstRequest req = (HstRequest) request;
         Mount mount = req.getRequestContext().getMount("hsl");
         result = mount.getChannelInfo();
+        return result;
+    }
+
+    public static boolean hasPrevPage(PaginatorWidget paginator) {
+        boolean result = false;
+        if (paginator.getPage() > paginator.getFirstShownPage()) {
+            result = true;
+        }
+        return result;
+    }
+
+    public static boolean hasNextPage(PaginatorWidget paginator) {
+        boolean result = false;
+        if (paginator.getPage() < paginator.getLastShownPage()) {
+            result = true;
+        }
         return result;
     }
 
