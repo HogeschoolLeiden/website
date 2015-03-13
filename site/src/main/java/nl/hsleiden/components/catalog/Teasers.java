@@ -23,8 +23,8 @@ public abstract class Teasers extends AjaxEnabledComponent {
     protected void addItemsToModel(HstRequest request, Map<String, Object> model, TeasersInfo parametersInfo, String message) {
         List<HippoBean> items = new ArrayList<HippoBean>();
         
-        addItem(request, parametersInfo.getFirstTeaser(), items);
-        addItem(request, parametersInfo.getSecondTeaser(), items);
+        addItem(parametersInfo.getFirstTeaser(), items);
+        addItem(parametersInfo.getSecondTeaser(), items);
         
         if (!items.isEmpty()) {
             model.put(Attributes.ITEMS, items);
@@ -34,7 +34,7 @@ public abstract class Teasers extends AjaxEnabledComponent {
         }
     }
 
-    private void addItem(HstRequest request, String path, List<HippoBean> items) {
+    private void addItem(String path, List<HippoBean> items) {
         HippoBean bean = BeanUtils.getBeanViaAbsolutePath(path);
         if(bean!=null){
             items.add(bean);

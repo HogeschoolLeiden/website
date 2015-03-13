@@ -18,6 +18,7 @@ public class FacebookPostsCompoundMixinBean extends FacebookPostsCompoundMixin i
         return super.getFrom();
     }
 
+    @Override
     public int getPostsLimit() {
         return super.getLimit().intValue();
     }

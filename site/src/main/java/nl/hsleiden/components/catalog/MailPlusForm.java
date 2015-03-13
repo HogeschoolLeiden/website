@@ -27,6 +27,7 @@ import com.tdclighthouse.prototype.utils.BeanUtils;
 @ParametersInfo(type = MailPlusFormInfo.class)
 public class MailPlusForm extends AjaxEnabledComponent {
 
+    @Override
     public Map<String, Object> getModel(HstRequest request, HstResponse response) {
         try {
             MailPlusCompoundMixin mixinInfo = null;

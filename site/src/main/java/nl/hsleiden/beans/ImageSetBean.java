@@ -8,6 +8,7 @@ import hslbeans.ImageSet;
 @Node(jcrType = "hsl:ImageSet")
 public class ImageSetBean extends ImageSet {
 
+    @Override
     public String getAlt() {
         String result = super.getAlt();
         if (result == null || result.isEmpty()) {

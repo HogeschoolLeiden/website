@@ -67,8 +67,7 @@ public final class QRFreemarkerParser implements TemplateParser {
     }
 
     private static String populateTemplate(final HstRequest request, final Form form, final FormMap formMap,
-            final String paragraph, final boolean includeFieldData, final Template template,
-            final TemplateType templateType) {
+            final String paragraph, final boolean includeFieldData, final Template template) {
         if (template == null) {
             LOG.error("Template was null");
             return "";
@@ -100,8 +99,12 @@ public final class QRFreemarkerParser implements TemplateParser {
                         requestContext, true);
                 String rqcodeLink = hstLinkCreator.createByRefId("qrcode", mount).toUrlForm(requestContext, true);
 
-                context.put("QR",
-                        rqcodeLink + "/?c=" + URLEncoder.encode(linkToConfirmationPage + "?id=" + uniqueId.getValue(), EncodingsConstants.UTF8));
+                context.put(
+                        "QR",
+                        rqcodeLink
+                                + "/?c="
+                                + URLEncoder.encode(linkToConfirmationPage + "?id=" + uniqueId.getValue(),
+                                        EncodingsConstants.UTF8));
             }
             context.put("form", form);
             context.put("request", request);
@@ -116,6 +119,7 @@ public final class QRFreemarkerParser implements TemplateParser {
     }
 
     // from interface
+    @Override
     public String populateHtmlTemplate(final HstRequest request, final Form form, final FormMap formMap,
             final String paragraph, final boolean includeFieldData, final String... templatePath) {
 
@@ -123,15 +127,15 @@ public final class QRFreemarkerParser implements TemplateParser {
         if (length > 0) {
             String template = templatePath[0];
             LOG.info("Using custom velocity template: {}", template);
-            return populateTemplate(request, form, formMap, paragraph, includeFieldData,
-                    createTemplate(template, true), TemplateType.HTML);
+            return populateTemplate(request, form, formMap, paragraph, includeFieldData, createTemplate(template, true));
         }
         return populateTemplate(request, form, formMap, paragraph, includeFieldData,
-                createTemplate("com/onehippo/cms7/eforms/hst/templates/email/eforms_html.ftl", true), TemplateType.HTML);
+                createTemplate("com/onehippo/cms7/eforms/hst/templates/email/eforms_html.ftl", true));
 
     }
 
     // from interface
+    @Override
     public String populatePlainTextTemplate(final HstRequest request, final Form form, final FormMap formMap,
             final String paragraph, final boolean includeFieldData, final String... templatePath) {
         final int length = templatePath.length;
@@ -140,14 +144,14 @@ public final class QRFreemarkerParser implements TemplateParser {
             LOG.info("Using custom velocity template: ", template);
 
             return populateTemplate(request, form, formMap, paragraph, includeFieldData,
-                    createTemplate(template, false), TemplateType.TEXT_PLAIN);
+                    createTemplate(template, false));
         }
         return populateTemplate(request, form, formMap, paragraph, includeFieldData,
-                createTemplate("com/onehippo/cms7/eforms/hst/templates/email/eforms_text.ftl", false),
-                TemplateType.TEXT_PLAIN);
+                createTemplate("com/onehippo/cms7/eforms/hst/templates/email/eforms_text.ftl", false));
     }
 
     // from interface
+    @Override
     public String populateFromString(final HstRequest request, final Form form, final FormMap formMap,
             final String paragraph, final boolean includeFieldData, final String stringTemplate,
             final TemplateType templateType) {
@@ -155,7 +159,7 @@ public final class QRFreemarkerParser implements TemplateParser {
             return StringUtils.EMPTY;
         }
         Template emailTemplate = createEmailTemplate(stringTemplate, templateType == TemplateType.HTML);
-        return populateTemplate(request, form, formMap, paragraph, includeFieldData, emailTemplate, templateType);
+        return populateTemplate(request, form, formMap, paragraph, includeFieldData, emailTemplate);
     }
 
     private static Template createTemplate(final String templatePath, boolean escapeHtml) {

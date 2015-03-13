@@ -36,6 +36,7 @@ public class RelatedEvents extends RelatedItems {
         return result;
     }
 
+    @Override
     protected RelatedItemsInfo getParametersFromMixin(RelatedItemsInfo parametersInfo, HippoBean proxy) {
         RelatedItemsInfo result = parametersInfo;
         if (proxy instanceof RelatedEventsMixin) {
@@ -43,31 +44,32 @@ public class RelatedEvents extends RelatedItems {
         }
         return result;
     }
-    
+
+    @Override
     protected void addFilter(HstQuery query, RelatedItemsInfo info, HstRequest request) throws FilterException {
         super.addFilter(query, info, request);
         addDateFiltering(query, info);
     }
 
     private void addDateFiltering(HstQuery query, RelatedItemsInfo info) throws FilterException {
-        if(info.getFutureFilter()){
-            if(query.getFilter()!=null){
-                addFutureFilter(info, query, (Filter) query.getFilter());                
-            }else{
-                addFutureFilter(info, query);
+        if (info.getFutureFilter()) {
+            if (query.getFilter() != null) {
+                addFutureFilter(query, (Filter) query.getFilter());
+            } else {
+                addFutureFilter(query);
             }
         }
     }
 
-    private void addFutureFilter(RelatedItemsInfo parametersInfo, HstQuery query) throws FilterException {
-  
+    private void addFutureFilter(HstQuery query) throws FilterException {
+
         Filter baseFilter = query.createFilter();
         baseFilter.addGreaterOrEqualThan(FieldName.HSL_EVENT_END_DATE, HslDateUtils.getStartOfDay(new Date()));
         query.setFilter(baseFilter);
     }
 
-    private void addFutureFilter(RelatedItemsInfo parametersInfo, HstQuery query, Filter baseFilter) throws FilterException {
-        
+    private void addFutureFilter(HstQuery query, Filter baseFilter) throws FilterException {
+
         baseFilter.addGreaterOrEqualThan(FieldName.HSL_EVENT_END_DATE, HslDateUtils.getStartOfDay(new Date()));
         query.setFilter(baseFilter);
     }

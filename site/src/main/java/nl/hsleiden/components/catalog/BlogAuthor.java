@@ -15,6 +15,7 @@ import com.tdclighthouse.prototype.components.AjaxEnabledComponent;
 
 public class BlogAuthor extends AjaxEnabledComponent {
 
+    @Override
     public Map<String, Object> getModel(HstRequest request, HstResponse response) {
         Map<String, Object> model = new HashMap<String, Object>();
         HippoBean contentBean = request.getRequestContext().getContentBean();

@@ -41,6 +41,7 @@ public class LectoratNews extends AjaxEnabledComponent {
     private static final String DOCUMENTS_FOLDER = "/content/documents";
     private static final Logger LOG = LoggerFactory.getLogger(LectoratNews.class);
 
+    @Override
     public Map<String, Object> getModel(HstRequest request, HstResponse response) {
         try {
             LectoratNewsCompoundMixin mixinInfo = null;
@@ -104,8 +105,8 @@ public class LectoratNews extends AjaxEnabledComponent {
 
         HstQuery query = createQuery(request, mixinInfo);
         if (query != null) {
-            addLectoratFiltering(request, mixinInfo, query);
-            addSorting(request, query, mixinInfo);
+            addLectoratFiltering(mixinInfo, query);
+            addSorting(query, mixinInfo);
             query.setLimit(mixinInfo.getWidgetParameters().getSize().intValue());
         }
         return query;
@@ -120,7 +121,7 @@ public class LectoratNews extends AjaxEnabledComponent {
         return result;
     }
  
-    private void addLectoratFiltering(HstRequest request, LectoratNewsCompoundMixin mixinInfo, HstQuery query)
+    private void addLectoratFiltering(LectoratNewsCompoundMixin mixinInfo, HstQuery query)
             throws FilterException {
         Filter baseFilter = query.createFilter();
         for (HippoBean lectoratFolder : mixinInfo.getContentBeanPath()) {
@@ -139,7 +140,7 @@ public class LectoratNews extends AjaxEnabledComponent {
         return items;
     }
 
-    private void addSorting(HstRequest request, HstQuery query, LectoratNewsCompoundMixin parametersInfo) {
+    private void addSorting(HstQuery query, LectoratNewsCompoundMixin parametersInfo) {
         String sortBy = HslUtils.getNamespacedFieldName(parametersInfo.getWidgetParameters().getSortBy());
         if (StringUtils.isNotBlank(sortBy)) {
             if (Values.DESCENDING.equals(parametersInfo.getWidgetParameters().getSortOrder())) {

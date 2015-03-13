@@ -7,12 +7,15 @@ import org.hippoecm.hst.content.beans.Node;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 
 @Node(jcrType = "hsl:ExternalLinksTeasersCompoundMixin")
-public class ExternalLinksTeasersCompoundMixinBean extends ExternalLinksTeasersCompoundMixin implements ExternalLinksTeasersInfo {
+public class ExternalLinksTeasersCompoundMixinBean extends ExternalLinksTeasersCompoundMixin implements
+        ExternalLinksTeasersInfo {
 
+    @Override
     public Boolean getUseMixin() {
         throw new UnsupportedOperationException();
     }
 
+    @Override
     public String getFirstTeaser() {
         String result = null;
         if (!getExternallinksteasers().isEmpty()) {
@@ -24,6 +27,7 @@ public class ExternalLinksTeasersCompoundMixinBean extends ExternalLinksTeasersC
         return result;
     }
 
+    @Override
     public String getSecondTeaser() {
         String result = null;
         if (getExternallinksteasers().size() > 1) {

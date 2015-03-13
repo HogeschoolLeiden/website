@@ -48,20 +48,23 @@ public class Blogpost extends WebPage implements Authors {
     private HippoGalleryImageSetBean headerImage;
     private List<HippoBean> flexibleblock;
     
+    @Override
     public Boolean getHideFromSearch() {
         if (this.hideFromSearch == null) {
             this.hideFromSearch = getProperty("hsl:hideFromSearch");
         }
         return this.hideFromSearch;
     }
-
+    
+    @Override
     public Boolean getHideFromSitemap() {
         if (this.hideFromSitemap == null) {
             this.hideFromSitemap = getProperty("hsl:hideFromSitemap");
         }
         return this.hideFromSitemap;
     }
-
+    
+    @Override
     public Boolean getShare() {
         if (this.share == null) {
             this.share = getProperty("hsl:share");
@@ -69,6 +72,7 @@ public class Blogpost extends WebPage implements Authors {
         return this.share;
     }
 
+    @Override
     public String getKeywords() {
         if (this.keywords == null) {
             this.keywords = getProperty("hsl:keywords");
@@ -76,6 +80,7 @@ public class Blogpost extends WebPage implements Authors {
         return this.keywords;
     }
 
+    @Override
     public String getDescription() {
         if (this.description == null) {
             this.description = getProperty("hsl:description");
@@ -83,6 +88,7 @@ public class Blogpost extends WebPage implements Authors {
         return this.description;
     }
 
+    @Override
     public Calendar getReleaseDate() {
         if (this.releaseDate == null) {
             this.releaseDate = getProperty("hsl:releaseDate");
@@ -90,6 +96,7 @@ public class Blogpost extends WebPage implements Authors {
         return this.releaseDate;
     }
 
+    @Override
     public String getBrowserTitle() {
         if (this.browserTitle == null) {
             this.browserTitle = getProperty("hsl:browserTitle");
@@ -125,10 +132,12 @@ public class Blogpost extends WebPage implements Authors {
     }
 
     @HippoEssentialsGenerated(internalName = "hsl:title")
+    @Override
     public String getTitle() {
         return getProperty(TITLE);
     }
-
+    
+    @Override
     public String getIntroduction() {
         return getProperty(INTRODUCTION);
     }

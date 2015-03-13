@@ -28,6 +28,7 @@ public class LandingPage extends CachedNavigation {
 
     private static final Logger LOG = LoggerFactory.getLogger(LandingPage.class);
 
+    @Override
     public void doBeforeRender(HstRequest request, HstResponse response) {
 
         super.doBeforeRender(request, response);

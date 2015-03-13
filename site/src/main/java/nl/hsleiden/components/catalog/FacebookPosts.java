@@ -39,6 +39,7 @@ public class FacebookPosts extends AjaxEnabledComponent {
     private static final Logger LOG = LoggerFactory.getLogger(FacebookPosts.class);
     private final FacebookConfig config = HstServices.getComponentManager().getComponent(FacebookConfig.class);
 
+    @Override
     public Map<String, Object> getModel(HstRequest request, HstResponse response) {
         try {
             Map<String, Object> model = new HashMap<String, Object>();

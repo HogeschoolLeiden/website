@@ -29,6 +29,7 @@ public class ContactPersons extends AjaxEnabledComponent {
 
     private static final Logger LOG = LoggerFactory.getLogger(ContactPersons.class);
 
+    @Override
     public Map<String, Object> getModel(HstRequest request, HstResponse response) {
         try {
             ContactPersonsInfo parametersInfo = getConfiguration(request);
@@ -49,9 +50,9 @@ public class ContactPersons extends AjaxEnabledComponent {
     private void addItemsToModel(HstRequest request, Map<String, Object> model, ContactPersonsInfo parametersInfo) {
         List<HippoBean> items = new ArrayList<HippoBean>();
 
-        addItem(request, parametersInfo.getFirstContact(), items);
-        addItem(request, parametersInfo.getSecondContact(), items);
-        addItem(request, parametersInfo.getThirdContact(), items);
+        addItem(parametersInfo.getFirstContact(), items);
+        addItem(parametersInfo.getSecondContact(), items);
+        addItem(parametersInfo.getThirdContact(), items);
 
         if (!items.isEmpty()) {
             model.put(Attributes.ITEMS, items);
@@ -60,7 +61,7 @@ public class ContactPersons extends AjaxEnabledComponent {
         }
     }
 
-    private void addItem(HstRequest request, String path, List<HippoBean> items) {
+    private void addItem(String path, List<HippoBean> items) {
         HippoBean bean = BeanUtils.getBeanViaAbsolutePath(path);
         if (bean != null) {
             items.add(bean);

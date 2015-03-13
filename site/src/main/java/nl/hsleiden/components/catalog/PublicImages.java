@@ -36,6 +36,7 @@ public class PublicImages extends AjaxEnabledComponent {
 
     private static final Logger LOG = LoggerFactory.getLogger(PublicImages.class);
 
+    @Override
     public Map<String, Object> getModel(HstRequest request, HstResponse response) {
         try {
             PublicImagesInfo parametersInfo = getConfiguration(request);

@@ -30,6 +30,7 @@ public class LanguageSwitch extends WebDocumentDetail {
 
     private static final Logger LOG = LoggerFactory.getLogger(LanguageSwitch.class);
 
+    @Override
     public void doBeforeRender(HstRequest request, HstResponse response) {
         try {
             HippoBean bean = request.getRequestContext().getContentBean();
