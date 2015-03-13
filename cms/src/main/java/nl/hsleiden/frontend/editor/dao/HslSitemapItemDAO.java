@@ -46,7 +46,7 @@ public class HslSitemapItemDAO extends SitemapItemDAO {
 
     private void setComponentConfigurationMapping(JcrNodeModel model, HslSitemapItem item) {
 
-        HslSitemapItem myItem = (HslSitemapItem) item;
+        HslSitemapItem myItem = item;
         if (JcrUtilities.hasProperty(model, HST_COMP_CONFIG_NAMES)) {
             List<String> names = JcrUtilities.getMultiValueProperty(model, HST_COMP_CONFIG_NAMES);
             if (names != null && !names.isEmpty()) {

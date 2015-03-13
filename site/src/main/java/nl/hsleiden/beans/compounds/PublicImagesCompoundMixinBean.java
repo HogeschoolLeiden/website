@@ -40,6 +40,7 @@ public class PublicImagesCompoundMixinBean extends hslbeans.PublicImagesCompound
         return result;
     }
 
+    @Override
     public int getSize() {
         return getPublicImagesParameters().getSize().intValue();
     }

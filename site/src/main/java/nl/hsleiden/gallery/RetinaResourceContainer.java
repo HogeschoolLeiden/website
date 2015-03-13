@@ -24,7 +24,7 @@ public class RetinaResourceContainer extends AbstractResourceContainer {
 
     @Override
     public Node resolveToResourceNode(Session session, String pathInfo) {
-        
+
         String actualPath = pathInfo;
         String[] elems = actualPath.substring(1).split("/");
 
@@ -44,10 +44,10 @@ public class RetinaResourceContainer extends AbstractResourceContainer {
                 return node;
             }
             if (node.isNodeType(HippoNodeType.NT_HANDLE)) {
-                try {
+                if (node.hasNode(node.getName())) {
                     node = node.getNode(node.getName());
-                } catch (PathNotFoundException e) {
-                    LOG.info("Cannot return binary for a handle with no hippo document. Return null", e);
+                } else {
+                    LOG.info("Cannot return binary for a handle with no hippo document. Return null");
                     return null;
                 }
             }
