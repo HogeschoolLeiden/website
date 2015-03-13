@@ -22,6 +22,7 @@ public class RetinaResourceContainer extends AbstractResourceContainer {
         return "hsl:ImageSet";
     }
 
+    @Override
     public Node resolveToResourceNode(Session session, String pathInfo) {
         
         String actualPath = pathInfo;

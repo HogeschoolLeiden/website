@@ -24,6 +24,7 @@ public class InternalLinksTeasers extends Teasers {
 
     private static final Logger LOG = LoggerFactory.getLogger(InternalLinksTeasers.class);
 
+    @Override
     public Map<String, Object> getModel(HstRequest request, HstResponse response) {
         try {
             InternalLinksTeasersInfo parametersInfo = getConfiguration(request);

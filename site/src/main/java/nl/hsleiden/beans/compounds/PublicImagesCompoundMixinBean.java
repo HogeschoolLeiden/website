@@ -12,10 +12,12 @@ public class PublicImagesCompoundMixinBean extends hslbeans.PublicImagesCompound
     public static final String CONTENT_GALLERY_HSL_FOLDER_ICON_JPG = "/content/gallery/hsl/folder-icon.jpg";
     private static final Logger LOG = LoggerFactory.getLogger(PublicImagesCompoundMixinBean.class);
     
+    @Override
     public Boolean getUseMixin() {
         throw new UnsupportedOperationException();
     }
 
+    @Override
     public String getContentBeanPath() {
         String result = null;
         if(getPublicImagesParameters().getContentBeanPath()!=null){
@@ -24,6 +26,7 @@ public class PublicImagesCompoundMixinBean extends hslbeans.PublicImagesCompound
         return result;
     }
 
+    @Override
     public int getImagesPerRow() {
         int result = 0;
         String imagesPerRow = getPublicImagesParameters().getImagesPerRow();

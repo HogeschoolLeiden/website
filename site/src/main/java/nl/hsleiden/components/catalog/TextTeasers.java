@@ -24,6 +24,7 @@ public class TextTeasers extends Teasers {
 
     private static final Logger LOG = LoggerFactory.getLogger(TextTeasers.class);
 
+    @Override
     public Map<String, Object> getModel(HstRequest request, HstResponse response) {
         try {
             TextTeasersInfo parametersInfo = getConfiguration(request);

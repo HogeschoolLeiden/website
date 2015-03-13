@@ -15,6 +15,7 @@ public class Header extends BaseHstComponent {
 
     private static final Logger LOG = LoggerFactory.getLogger(Header.class);
 
+    @Override
     public void doBeforeRender(final HstRequest request, final HstResponse response) {
         final Mount mount = request.getRequestContext().getResolvedMount().getMount();
         final WebsiteInfo info = mount.getChannelInfo();
@@ -34,7 +35,7 @@ public class Header extends BaseHstComponent {
         try {
             result = request.getRequestContext().getObjectBeanManager().getObject(logoPath);
         } catch (ObjectBeanManagerException e) {
-            LOG.info("ImageSet is null, will use the static logo image" , e);
+            LOG.info("ImageSet is null, will use the static logo image", e);
         }
         return result;
     }

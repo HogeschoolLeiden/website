@@ -8,10 +8,12 @@ import org.hippoecm.hst.content.beans.standard.HippoBean;
 @Node(jcrType = "hsl:HeadTeasersCompoundMixin")
 public class HeadTeasersCompoundMixinBean extends hslbeans.HeadTeasersCompoundMixin implements HeadTeasersInfo {
 
+    @Override
     public Boolean getUseMixin() {
         throw new UnsupportedOperationException();
     }
 
+    @Override
     public String getFirstTeaser() {
         String result = null;
         if (!getTeasers().isEmpty()) {
@@ -23,6 +25,7 @@ public class HeadTeasersCompoundMixinBean extends hslbeans.HeadTeasersCompoundMi
         return result;
     }
 
+    @Override
     public String getSecondTeaser() {
         String result = null;
         if (getTeasers().size() > 1) {

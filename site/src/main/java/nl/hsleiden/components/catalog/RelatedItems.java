@@ -40,6 +40,7 @@ public abstract class RelatedItems extends AjaxEnabledComponent {
     private static final String OVERVIEW_LINK = "overviewLink";
     private static final Logger LOG = LoggerFactory.getLogger(RelatedItems.class);
 
+    @Override
     public Map<String, Object> getModel(HstRequest request, HstResponse response) {
         try {
             RelatedItemsInfo parametersInfo = getConfiguration(request);
@@ -74,7 +75,7 @@ public abstract class RelatedItems extends AjaxEnabledComponent {
 
         model.put("info", parametersInfo);
         addItemsToModel(request, model, parametersInfo);
-        addOverviewLinkToModel(request, model, parametersInfo);
+        addOverviewLinkToModel(model, parametersInfo);
 
         return model;
     }
@@ -102,7 +103,7 @@ public abstract class RelatedItems extends AjaxEnabledComponent {
 
         HstQuery query = createQuery(request, parametersInfo);
         if (query != null) {
-            addSorting(request, query, parametersInfo);
+            addSorting(query, parametersInfo);
             query.setLimit(parametersInfo.getSize());
             addFilter(query, parametersInfo, request);
         }
@@ -112,7 +113,7 @@ public abstract class RelatedItems extends AjaxEnabledComponent {
 
     protected abstract HstQuery createQuery(HstRequest request, RelatedItemsInfo parametersInfo) throws QueryException;
 
-    protected void addOverviewLinkToModel(HstRequest request, Map<String, Object> model, RelatedItemsInfo parametersInfo) {
+    protected void addOverviewLinkToModel(Map<String, Object> model, RelatedItemsInfo parametersInfo) {
         HippoBean overviewLink = BeanUtils.getBeanViaAbsolutePath(parametersInfo.getOverviewBeanPath());
         if (parametersInfo.getShowOverview() && overviewLink != null) {
             model.put(OVERVIEW_LINK, overviewLink);
@@ -127,7 +128,7 @@ public abstract class RelatedItems extends AjaxEnabledComponent {
         return items;
     }
 
-    protected void addSorting(HstRequest request, HstQuery query, RelatedItemsInfo parametersInfo) {
+    protected void addSorting(HstQuery query, RelatedItemsInfo parametersInfo) {
 
         String sortBy = HslUtils.getNamespacedFieldName(parametersInfo.getSortBy());
 

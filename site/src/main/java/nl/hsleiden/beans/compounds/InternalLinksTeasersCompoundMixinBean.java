@@ -9,10 +9,12 @@ import org.hippoecm.hst.content.beans.standard.HippoBean;
 @Node(jcrType = "hsl:InternalLinksTeasersCompoundMixin")
 public class InternalLinksTeasersCompoundMixinBean extends InternalLinksTeasersCompoundMixin implements InternalLinksTeasersInfo {
 
+    @Override
     public Boolean getUseMixin() {
         throw new UnsupportedOperationException();
     }
 
+    @Override
     public String getFirstTeaser() {
         String result = null;
         if (!getInternallinksteasers().isEmpty()) {
@@ -24,6 +26,7 @@ public class InternalLinksTeasersCompoundMixinBean extends InternalLinksTeasersC
         return result;
     }
 
+    @Override
     public String getSecondTeaser() {
         String result = null;
         if (getInternallinksteasers().size() > 1) {

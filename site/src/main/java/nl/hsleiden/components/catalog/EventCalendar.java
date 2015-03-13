@@ -55,14 +55,14 @@ public class EventCalendar extends AjaxEnabledComponent {
             Map<String, Object> result = new HashMap<String, Object>();
             EventCalendarInfo paramInfo = getConfiguration(request);
             result.put(Constants.Attributes.PARAM_INFO, paramInfo);
-            addEventualErrorMessages(request, result, paramInfo);
+            addEventualErrorMessages(request, paramInfo);
             return result;
         } catch (RepositoryException e) {
             throw new RuntimeRepositoryException(e.getMessage(), e);
         }
     }
 
-    private void addEventualErrorMessages(HstRequest request, Map<String, Object> result, EventCalendarInfo paramInfo)
+    private void addEventualErrorMessages(HstRequest request, EventCalendarInfo paramInfo)
             throws RepositoryException {
         if (getScope(request) == null) {
             request.setAttribute(WidgetConstants.WEB_MASTER_MESSAGE, "webmaster.nofolder.message");

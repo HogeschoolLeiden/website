@@ -50,7 +50,7 @@ public class ITextPdfForm {
             addFormData(form, doc, map);
             doc.add(Chunk.NEWLINE);
 
-            addIntroduction(formBean, introText, doc);
+            addIntroduction(introText, doc);
             doc.add(Chunk.NEWLINE);
 
             doc.close();
@@ -69,16 +69,16 @@ public class ITextPdfForm {
             if (abstractField.isMultiple()) {
                 if ("radiogroup".equalsIgnoreCase(abstractField.getType())) {
                     addSingleValueField(tbl, abstractField);
-                } else if ("checkboxgroup".equalsIgnoreCase(abstractField.getType())){
+                } else if ("checkboxgroup".equalsIgnoreCase(abstractField.getType())) {
                     addMultivalueField(tbl, abstractField);
-                    addSingleValueFormField(tbl, map.getField(abstractField.getName()+"-other"));
-                }else {
+                    addSingleValueFormField(tbl, map.getField(abstractField.getName() + "-other"));
+                } else {
                     addMultivalueField(tbl, abstractField);
                 }
             } else {
                 if ("datefield".equalsIgnoreCase(abstractField.getType())) {
                     addSingleValueFormField(tbl, map.getField(abstractField.getName()));
-                }else{                    
+                } else {
                     addSingleValueField(tbl, abstractField);
                 }
             }
@@ -117,7 +117,7 @@ public class ITextPdfForm {
         tbl.addCell(cell);
     }
 
-    private void addIntroduction(FormBean formBean, String introText, Document doc) throws DocumentException {
+    private void addIntroduction(String introText, Document doc) throws DocumentException {
         if (introText != null && !introText.isEmpty()) {
             doc.add(new Paragraph(introText));
         }

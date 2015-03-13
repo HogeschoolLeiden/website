@@ -24,6 +24,7 @@ public class ExternalLinksTeasers extends Teasers {
 
     private static final Logger LOG = LoggerFactory.getLogger(ExternalLinksTeasers.class);
 
+    @Override
     public Map<String, Object> getModel(HstRequest request, HstResponse response) {
         try {
             ExternalLinksTeasersInfo parametersInfo = getConfiguration(request);

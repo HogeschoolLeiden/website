@@ -30,6 +30,7 @@ public class RelatedPers extends RelatedItems {
         return result;
     }
 
+    @Override
     protected RelatedItemsInfo getParametersFromMixin(RelatedItemsInfo parametersInfo, HippoBean proxy) {
         RelatedItemsInfo result = parametersInfo;
         if (proxy instanceof RelatedPersMixin) {
