@@ -16,7 +16,7 @@
   </hst:headContribution>
   
   <hst:headContribution keyHint="swiperCss" category="swiperCss">
-    <link rel="stylesheet" href="<hst:link path="/css/kees/idangerous.swiper.css"/>" type="text/css" />
+    <link rel="stylesheet" href="<hst:link path="/css/idangerous.swiper.css"/>" type="text/css" />
   </hst:headContribution>
            
   <c:choose>

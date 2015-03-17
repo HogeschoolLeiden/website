@@ -218,4 +218,8 @@ public class Functions {
         
         return result;
     }
+    
+    public static String getEnvironmentProperty(String propertyName){
+        return System.getProperty(propertyName);
+    }
 }

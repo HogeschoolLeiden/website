@@ -55,20 +55,45 @@
   <link rel="apple-touch-icon" sizes="120x120" href="<hst:link path="/images/icons/touch-icon-120.png"/>">
   <link rel="apple-touch-icon" sizes="152x152" href="<hst:link path="/images/icons/touch-icon-152.png"/>">
   
-   <!-- CSS -->  
-  <link rel="stylesheet" href="<hst:link path="/css/kees/bootstrap.min.css"/>" >
+  <!-- CSS -->  
+  <c:set var="dev" value="${tag:getEnvironmentProperty('dev')}"/>
+
+  <link rel="stylesheet" href="<hst:link path="/css/bootstrap.min.css"/>" >
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" >
   
   <hst:headContributions categoryIncludes="formsCssHere,swiperCss" xhtml="true" />
-    
-  <link rel="stylesheet" href="<hst:link path="/css/style.min.css"/>" >
   
-  <link rel="stylesheet" type="text/css" href="<hst:link path="/css/print-style.css"/>" media="print"> 
+  <c:choose>
+    <c:when test="${dev eq 'true'}">
+      <link rel="stylesheet" type="text/css" href="<hst:link path='/css/style.css' />"/>
+      <link rel="stylesheet" type="text/css" href="<hst:link path='/css/style-additions.css' />"/>
+      <link rel="stylesheet" type="text/css" href="<hst:link path="/css/print-style.css"/>" media="print"> 
+      <link rel="stylesheet" type="text/css" href="<hst:link path='/css/normalize.css' />"/>
+    </c:when>
+    <c:otherwise>
+      <link rel="stylesheet" type="text/css" href="<hst:link path='/css/style.min.css' />"/>
+    </c:otherwise>
+  </c:choose> 
   
   
-  <script type="text/javascript" src="<hst:link path="/js/script.min.js" />"></script>
-    
- 
+  <c:choose>  
+    <c:when test="${dev eq 'true'}">
+      <script type="text/javascript" src="<hst:link path='/js/kees/vendor/modernizr-2.6.2.min.js' />"></script>
+      <script type="text/javascript" src="<hst:link path='/js/kees/vendor/retina.min.js' />"></script>
+      <script type="text/javascript" src="<hst:link path='/js/kees/vendor/respond.js' />"></script>
+      <script type="text/javascript" src="<hst:link path='/js/jquery.min.js' />"></script>
+      <script type="text/javascript" src="<hst:link path='/js/jquery.browser.min.js' />"></script>
+      <script type="text/javascript" src="<hst:link path='/js/kees/vendor/bootstrap.min.js' />"></script>
+      <script type="text/javascript" src="<hst:link path='/js/kees/plugins.js' />"></script>
+      <script type="text/javascript" src="<hst:link path='/js/kees/main.js' />"></script>
+    </c:when>
+    <c:otherwise>
+      <script type="text/javascript" src="<hst:link path='/js/script.min.js' />"></script>
+    </c:otherwise>
+  </c:choose> 
+
+  <script type="text/javascript" src="<hst:link path='/js/script.min.js' />"></script>
+
   <hst:headContributions categoryExcludes="scripts,formsCssHere,extraCss" xhtml="true" />
   
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
