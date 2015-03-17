@@ -25,10 +25,6 @@
       //  HEADER CONTRIBUTIONS     //
       // ######################### //
     --%>
-    
-    <hst:headContribution keyHint="mpfJqueryUICss">
-      <link rel="stylesheet" href="http://static.mailplus.nl/jq//css/ui-lightness/jquery-ui-1.8.18.custom.css" />
-    </hst:headContribution>
 
     <hst:headContribution keyHint="mpfReact">
       <script type="text/javascript" src="${reactUrl}"></script>  

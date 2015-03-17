@@ -61,40 +61,33 @@
   <link rel="stylesheet" href="<hst:link path="/css/bootstrap.min.css"/>" >
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" >
   
-  <hst:headContributions categoryIncludes="formsCssHere,swiperCss" xhtml="true" />
-  
   <c:choose>
     <c:when test="${dev eq 'true'}">
-      <link rel="stylesheet" type="text/css" href="<hst:link path='/css/style.css' />"/>
-      <link rel="stylesheet" type="text/css" href="<hst:link path='/css/style-additions.css' />"/>
-      <link rel="stylesheet" type="text/css" href="<hst:link path="/css/print-style.css"/>" media="print"> 
-      <link rel="stylesheet" type="text/css" href="<hst:link path='/css/normalize.css' />"/>
+
+      <link rel="stylesheet" href='<hst:link path="/css/eforms.css"/>' type="text/css" />
+      <link rel="stylesheet" href='<hst:link path="/css/idangerous.swiper.css"/>' type="text/css" />
+    
+      <link rel="stylesheet" type="text/css" href='<hst:link path="/css/style.css" />' type="text/css"/>
+      <link rel="stylesheet" type="text/css" href='<hst:link path="/css/style-additions.css" />' type="text/css"/>
+      <link rel="stylesheet" type="text/css" href='<hst:link path="/css/print-style.css"/>' type="text/css" media="print"> 
+      <link rel="stylesheet" type="text/css" href='<hst:link path='/css/normalize.css' />' type="text/css"/>
+      
+      <link rel="stylesheet" href='<hst:link path="/js/formcheck/theme/blue/formcheck.css"/>' type="text/css" />
+      <link rel="stylesheet" href='<hst:link path="/css/jquery-ui-1.10.2.custom.min.css"/>' type="text/css" />
+      <link rel='stylesheet' href='<hst:link path="/css/fullcalendar/fullcalendar.css" />' type="text/css" />
+      <link rel="stylesheet" href='<hst:link path="/css/prettyPhoto.css"/>' type="text/css" media="screen" />
+      <link rel="stylesheet" href="http://static.mailplus.nl/jq//css/ui-lightness/jquery-ui-1.8.18.custom.css" />
+      
     </c:when>
     <c:otherwise>
       <link rel="stylesheet" type="text/css" href="<hst:link path='/css/style.min.css' />"/>
     </c:otherwise>
   </c:choose> 
   
+  <script type="text/javascript" src="<hst:link path='/js/jquery.min.js' />"></script>
+  <script type="text/javascript" src="<hst:link path='/js/jquery.browser.min.js' />"></script>
   
-  <c:choose>  
-    <c:when test="${dev eq 'true'}">
-      <script type="text/javascript" src="<hst:link path='/js/kees/vendor/modernizr-2.6.2.min.js' />"></script>
-      <script type="text/javascript" src="<hst:link path='/js/kees/vendor/retina.min.js' />"></script>
-      <script type="text/javascript" src="<hst:link path='/js/kees/vendor/respond.js' />"></script>
-      <script type="text/javascript" src="<hst:link path='/js/jquery.min.js' />"></script>
-      <script type="text/javascript" src="<hst:link path='/js/jquery.browser.min.js' />"></script>
-      <script type="text/javascript" src="<hst:link path='/js/kees/vendor/bootstrap.min.js' />"></script>
-      <script type="text/javascript" src="<hst:link path='/js/kees/plugins.js' />"></script>
-      <script type="text/javascript" src="<hst:link path='/js/kees/main.js' />"></script>
-    </c:when>
-    <c:otherwise>
-      <script type="text/javascript" src="<hst:link path='/js/script.min.js' />"></script>
-    </c:otherwise>
-  </c:choose> 
-
-  <script type="text/javascript" src="<hst:link path='/js/script.min.js' />"></script>
-
-  <hst:headContributions categoryExcludes="scripts,formsCssHere,extraCss" xhtml="true" />
+  <hst:headContributions categoryExcludes="scripts,extraCss" xhtml="true" />
   
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
   
@@ -139,7 +132,6 @@
         ${gtm}
       </c:if>
   	</c:if>
-      
     
     <c:set var="disableChat" value="${(tag:getMainWebsitePropertyList(pageContext.request)).disableChatJs}"/>
     
@@ -147,6 +139,20 @@
       <c:set var="chatJs" value="${(tag:getMainWebsitePropertyList(pageContext.request)).chatJsConfig}"/>
       <script type="text/javascript" src="${chatJs}"></script> 
     </c:if>
+    
+    <c:choose>  
+      <c:when test="${dev eq 'true'}">
+        <script type="text/javascript" src="<hst:link path='/js/kees/vendor/modernizr-2.6.2.min.js' />"></script>
+        <script type="text/javascript" src="<hst:link path='/js/kees/vendor/retina.min.js' />"></script>
+        <script type="text/javascript" src="<hst:link path='/js/kees/vendor/respond.js' />"></script>
+        <script type="text/javascript" src="<hst:link path='/js/kees/vendor/bootstrap.min.js' />"></script>
+        <script type="text/javascript" src="<hst:link path='/js/kees/plugins.js' />"></script>
+        <script type="text/javascript" src="<hst:link path='/js/kees/main.js' />"></script>
+      </c:when>
+      <c:otherwise>
+        <script type="text/javascript" src="<hst:link path='/js/script.min.js' />"></script>
+      </c:otherwise>
+    </c:choose>
     
 </body>
 </html>
