@@ -138,10 +138,13 @@
     <c:if test="${(not isCmsRequest ) and (not (disableChat eq 'true'))}">  
       <c:set var="chatJs" value="${(tag:getMainWebsitePropertyList(pageContext.request)).chatJsConfig}"/>
       <script type="text/javascript" src="${chatJs}"></script> 
-    </c:if>
-    
+    </c:if>    
+
     <c:choose>  
       <c:when test="${dev eq 'true'}">
+        <script type="text/javascript" src="<hst:link path="/js/moment.min.js" />" ></script>
+        <script type="text/javascript" src="<hst:link path="/js/fullcalendar/fullcalendar.js" />" ></script>
+        <script type="text/javascript" src="<hst:link path="/js/fullcalendar/lang/nl.js" />" ></script>
         <script type="text/javascript" src="<hst:link path='/js/kees/vendor/modernizr-2.6.2.min.js' />"></script>
         <script type="text/javascript" src="<hst:link path='/js/kees/vendor/retina.min.js' />"></script>
         <script type="text/javascript" src="<hst:link path='/js/kees/vendor/respond.js' />"></script>
