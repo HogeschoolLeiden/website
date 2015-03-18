@@ -284,17 +284,23 @@
             <id>default-minify</id>
             <configuration>
               <cssSourceFiles>
-                <cssSourceFile>kees/style.css</cssSourceFile>
-                <cssSourceFile>kees/style-additions.css</cssSourceFile>
-                <cssSourceFile>kees/normalize.css</cssSourceFile>
+                <cssSourceFile>style.css</cssSourceFile>
+                <cssSourceFile>style-additions.css</cssSourceFile>
+                <cssSourceFile>print-style.css</cssSourceFile>
+                <cssSourceFile>normalize.css</cssSourceFile>
               </cssSourceFiles>
               <jsSourceFiles>
+                <jsSourceFile>pretty-photo-inizialization.js</jsSourceFile>
+                <jsSourceFile>jquery.prettyPhoto.js</jsSourceFile>
+                <jsSourceFile>homepage-height-equalizer.js</jsSourceFile>
+                <jsSourceFile>swiper.js</jsSourceFile>
+                <jsSourceFile>moment.min.js</jsSourceFile>
+                <jsSourceFile>fullcalendar/fullcalendar.js</jsSourceFile>
+                <jsSourceFile>fullcalendar/lang/nl.js</jsSourceFile>
                 <jsSourceFile>kees/vendor/modernizr-2.6.2.min.js</jsSourceFile>
                 <jsSourceFile>kees/vendor/retina.min.js</jsSourceFile>
                 <jsSourceFile>kees/vendor/respond.js</jsSourceFile>
-                <jsSourceFile>jquery.min.js</jsSourceFile>
-                <jsSourceFile>jquery.browser.min.js</jsSourceFile>
-                <jsSourceFile>kees/vendor/bootstrap.min.js</jsSourceFile>
+	            <jsSourceFile>kees/vendor/bootstrap.min.js</jsSourceFile>
                 <jsSourceFile>kees/plugins.js</jsSourceFile>
                 <jsSourceFile>kees/main.js</jsSourceFile>
               </jsSourceFiles>

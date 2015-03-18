@@ -151,14 +151,6 @@
                 //########################################################################
             --%>
             
-            <hst:headContribution keyHint="formValidationCss">
-              <link rel="stylesheet" href="<hst:link path="/js/formcheck/theme/blue/formcheck.css"/>" type="text/css" />
-            </hst:headContribution>
-            
-            <hst:headContribution keyHint="jqueryUICss">
-              <link rel="stylesheet" href="<hst:link path="/css/jquery-ui-1.10.2.custom.min.css"/>" type="text/css" />
-            </hst:headContribution>
-            
             <hst:headContribution keyHint="jquery">
               <script type="text/javascript" src="<hst:link path="/js/jquery-1.9.1.min.js"/>"></script>
             </hst:headContribution>

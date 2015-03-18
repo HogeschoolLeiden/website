@@ -581,6 +581,7 @@
                   <derby.stream.error.file>${project.basedir}/target/derby.log</derby.stream.error.file>
                   <log4j.configuration>file:${project.basedir}/release/conf/log4j-dev.xml</log4j.configuration>
                   <rebel.log4j-plugin>true</rebel.log4j-plugin>
+                  <dev>true</dev>
                   <!-- enables auto export: -->
                   <project.basedir>${project.basedir}</project.basedir>
                   <xr.util-logging.loggingEnabled>true</xr.util-logging.loggingEnabled>
