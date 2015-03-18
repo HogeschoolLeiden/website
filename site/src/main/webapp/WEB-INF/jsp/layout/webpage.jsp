@@ -67,10 +67,10 @@
       <link rel="stylesheet" href='<hst:link path="/css/eforms.css"/>' type="text/css" />
       <link rel="stylesheet" href='<hst:link path="/css/idangerous.swiper.css"/>' type="text/css" />
     
-      <link rel="stylesheet" type="text/css" href='<hst:link path="/css/style.css" />' type="text/css"/>
-      <link rel="stylesheet" type="text/css" href='<hst:link path="/css/style-additions.css" />' type="text/css"/>
-      <link rel="stylesheet" type="text/css" href='<hst:link path="/css/print-style.css"/>' type="text/css" media="print"> 
-      <link rel="stylesheet" type="text/css" href='<hst:link path='/css/normalize.css' />' type="text/css"/>
+      <link rel="stylesheet" href='<hst:link path="/css/style.css" />' type="text/css"/>
+      <link rel="stylesheet" href='<hst:link path="/css/style-additions.css" />' type="text/css"/>
+      <link rel="stylesheet" href='<hst:link path="/css/print-style.css"/>' type="text/css" media="print"> 
+      <link rel="stylesheet" href='<hst:link path='/css/normalize.css' />' type="text/css"/>
       
       <link rel="stylesheet" href='<hst:link path="/js/formcheck/theme/blue/formcheck.css"/>' type="text/css" />
       <link rel="stylesheet" href='<hst:link path="/css/jquery-ui-1.10.2.custom.min.css"/>' type="text/css" />
