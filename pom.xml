@@ -76,7 +76,7 @@
     <filesync.override>false</filesync.override>
     <maven.plugins.filesync.version>1.0.0</maven.plugins.filesync.version>
     <mysql.connecotr.version>5.1.30</mysql.connecotr.version>
-    <hippo.prototype.version>7.9.43</hippo.prototype.version>
+    <hippo.prototype.version>7.9.44</hippo.prototype.version>
     <hippo.maven.plugin.version>0.1.2</hippo.maven.plugin.version>
     <minify.maven.plugin>1.7.4</minify.maven.plugin>
     <cucumber.version>1.1.7</cucumber.version>
@@ -90,7 +90,7 @@
     <jcr.mock.version>1.0</jcr.mock.version>
     <twitter4j.version>4.0.2</twitter4j.version>
     <hsl-private-config.version>1.2</hsl-private-config.version>
-    <elasticsearch.plugin.version>1.13</elasticsearch.plugin.version>
+    <elasticsearch.plugin.version>1.14</elasticsearch.plugin.version>
     <omnikassa.plugin.version>1.1</omnikassa.plugin.version>
 
     <restfb.version>1.7.0</restfb.version>
@@ -586,6 +586,7 @@
                   <xr.util-logging.loggingEnabled>true</xr.util-logging.loggingEnabled>
                   <repo.bootstrap>true</repo.bootstrap>
                   <elasticConfig>${project.basedir}/release/conf/search-config.json</elasticConfig>
+                  <elasticsearch.enable.indexation>true</elasticsearch.enable.indexation>
                   <!-- uncomment to run with mysql db 
                   <repo.config>file:${project.basedir}/release/conf/repository.xml</repo.config>
                   -->
