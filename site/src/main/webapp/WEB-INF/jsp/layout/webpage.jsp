@@ -142,6 +142,10 @@
 
     <c:choose>  
       <c:when test="${dev eq 'true'}">
+        <script type="text/javascript" src="<hst:link path="/js/pretty-photo-inizialization.js"/>" charset="utf-8"></script>
+        <script type="text/javascript" src="<hst:link path="/js/jquery.prettyPhoto.js"/>" charset="utf-8"></script>
+        <script type="text/javascript" src="<hst:link path="/js/homepage-height-equalizer.js"/>"></script>
+        <script type="text/javascript" src="<hst:link path="/js/swiper.js"/>"></script>
         <script type="text/javascript" src="<hst:link path="/js/moment.min.js" />" ></script>
         <script type="text/javascript" src="<hst:link path="/js/fullcalendar/fullcalendar.js" />" ></script>
         <script type="text/javascript" src="<hst:link path="/js/fullcalendar/lang/nl.js" />" ></script>

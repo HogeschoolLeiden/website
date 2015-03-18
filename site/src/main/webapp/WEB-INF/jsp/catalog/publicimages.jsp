@@ -12,13 +12,6 @@
 <hst:setBundle basename="nl.hsleiden.channelmanager.Messages, nl.hsleiden.widget.Messages"/>
 
 <c:if test="${not empty model.items and fn:length(model.items) > 0 }">
-  <hst:headContribution keyHint="ppinit">
-    <script type="text/javascript" src="<hst:link path="/js/pretty-photo-inizialization.js"/>" charset="utf-8"></script>
-  </hst:headContribution>
-  
-  <hst:headContribution keyHint="prettyPhoto">
-    <script type="text/javascript" src="<hst:link path="/js/jquery.prettyPhoto.js"/>" charset="utf-8"></script>
-  </hst:headContribution>
 
   <div class="images${model.info.imagesPerRow}">
   
