@@ -63,21 +63,16 @@
   
   <c:choose>
     <c:when test="${dev eq 'true'}">
-
       <link rel="stylesheet" href='<hst:link path="/css/eforms.css"/>' type="text/css" />
-      <link rel="stylesheet" href='<hst:link path="/css/idangerous.swiper.css"/>' type="text/css" />
-    
-      <link rel="stylesheet" href='<hst:link path="/css/style.css" />' type="text/css"/>
+      <link rel="stylesheet" href='<hst:link path="/css/idangerous.swiper.css"/>' type="text/css" /> 
+      <link rel="stylesheet" href='<hst:link path="/css/style-main.css" />' type="text/css"/>
       <link rel="stylesheet" href='<hst:link path="/css/style-additions.css" />' type="text/css"/>
       <link rel="stylesheet" href='<hst:link path="/css/print-style.css"/>' type="text/css" media="print"> 
       <link rel="stylesheet" href='<hst:link path='/css/normalize.css' />' type="text/css"/>
-      
       <link rel="stylesheet" href='<hst:link path="/js/formcheck/theme/blue/formcheck.css"/>' type="text/css" />
       <link rel="stylesheet" href='<hst:link path="/css/jquery-ui-1.10.2.custom.min.css"/>' type="text/css" />
       <link rel='stylesheet' href='<hst:link path="/css/fullcalendar/fullcalendar.css" />' type="text/css" />
-      <link rel="stylesheet" href='<hst:link path="/css/prettyPhoto.css"/>' type="text/css" media="screen" />
-      <link rel="stylesheet" href="http://static.mailplus.nl/jq//css/ui-lightness/jquery-ui-1.8.18.custom.css" />
-      
+      <link rel="stylesheet" href='<hst:link path="/css/prettyPhoto.css"/>' type="text/css" media="screen" />      
     </c:when>
     <c:otherwise>
       <link rel="stylesheet" type="text/css" href="<hst:link path='/css/style.min.css' />"/>
@@ -141,7 +136,7 @@
     </c:if>    
 
     <c:choose>  
-      <c:when test="${dev eq 'true'}">
+      <c:when test="${dev eq 'true'}">  
         <script type="text/javascript" src="<hst:link path="/js/pretty-photo-inizialization.js"/>" charset="utf-8"></script>
         <script type="text/javascript" src="<hst:link path="/js/jquery.prettyPhoto.js"/>" charset="utf-8"></script>
         <script type="text/javascript" src="<hst:link path="/js/homepage-height-equalizer.js"/>"></script>

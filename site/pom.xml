@@ -283,17 +283,23 @@
           <execution>
             <id>default-minify</id>
             <configuration>
-              <cssSourceFiles>
-                <cssSourceFile>style.css</cssSourceFile>
+              <cssSourceFiles>            
+                <cssSourceFile>eforms.css</cssSourceFile>
+                <cssSourceFile>idangerous.swiper.css</cssSourceFile>
+                <cssSourceFile>style-main.css</cssSourceFile>
                 <cssSourceFile>style-additions.css</cssSourceFile>
                 <cssSourceFile>print-style.css</cssSourceFile>
                 <cssSourceFile>normalize.css</cssSourceFile>
+                <cssSourceFile>../js/formcheck/theme/blue/formcheck.css</cssSourceFile>
+                <cssSourceFile>jquery-ui-1.10.2.custom.min.css</cssSourceFile>
+                <cssSourceFile>fullcalendar/fullcalendar.css</cssSourceFile>
+                <cssSourceFile>prettyPhoto.css</cssSourceFile>
               </cssSourceFiles>
               <jsSourceFiles>
                 <jsSourceFile>pretty-photo-inizialization.js</jsSourceFile>
                 <jsSourceFile>jquery.prettyPhoto.js</jsSourceFile>
                 <jsSourceFile>homepage-height-equalizer.js</jsSourceFile>
-                <jsSourceFile>swiper.js</jsSourceFile>
+				<jsSourceFile>swiper.js</jsSourceFile>                
                 <jsSourceFile>moment.min.js</jsSourceFile>
                 <jsSourceFile>fullcalendar/fullcalendar.js</jsSourceFile>
                 <jsSourceFile>fullcalendar/lang/nl.js</jsSourceFile>
