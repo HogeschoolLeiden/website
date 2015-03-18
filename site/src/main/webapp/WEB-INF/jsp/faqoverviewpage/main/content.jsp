@@ -8,10 +8,6 @@
 <%@ taglib prefix="opw" uri="http://open-web.nl/hippo/prototype"%>
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
   
-<hst:headContribution category="scripts">
-  <script src="<hst:link path="/js/accordian.js"/>" type="text/javascript"></script>
-</hst:headContribution>
-
 <section class="col-md-9 detail-content">
   <div class="row">
     <div class="col-md-8 col-sm-8 contentarea">    
@@ -30,10 +26,15 @@
               <hst:cmseditlink hippobean="${item}"/>
               
               <div class="media-body accordian">
-                <h2 class="media-heading"><c:out value="${item.title }"/></h2>
+                <a href="#" title="expand" class="expOrColl">
+                  <img src="<hst:link path="images/faq-arrow-right.png"/>" alt="expand" title="expand" class="faqimg"/>
+                  <h2 class="media-heading"><c:out value="${item.title }"/></h2>
+                </a>
               </div>
               
-              <tag:flexibleblock content="${item.faqflexibleblock }" document="${document}"/>
+              <div class="faq item hidden">
+                <tag:flexibleblock content="${item.faqflexibleblock }" document="${document}"/>
+              </div>
              
 
           </article>
