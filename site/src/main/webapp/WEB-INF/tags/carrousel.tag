@@ -50,10 +50,8 @@
 
   </div>
 
-  <%-- <c:if test="${ fn:length(document.carrousel.carrouselitems) > 1 }"> --%>
     <div class="slider-pagination"></div>
     <div class="swipenav prev fa fa-angle-left"></div>
-    <div class="swipenav next fa fa-angle-right"></div>     
-  <%-- </c:if> --%>
+    <div class="swipenav next fa fa-angle-right"></div>
   
 </div>
