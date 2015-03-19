@@ -10,10 +10,6 @@
 <%@ taglib prefix="opw" uri="http://open-web.nl/hippo/prototype"%>
 
 <div id="main" role="main" class="lectoraat"> 
-  
-  <hst:headContribution keyHint="homepage-swiper">
-    <script type="text/javascript" src="<hst:link path="/js/swiper.js"/>"></script>
-  </hst:headContribution>
              
   <c:choose>
     <c:when test="${empty document}">
