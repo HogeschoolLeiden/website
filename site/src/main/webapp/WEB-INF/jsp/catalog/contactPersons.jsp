@@ -23,9 +23,20 @@
   
   <c:forEach var="item" items="${model.items}" varStatus="zebra">
   
-    <c:set var="noImgNoShare">
+    <c:set var="noImg">
       <c:choose>
-        <c:when test="${not (fn:length(item.accounts)>0) and (empty item.image)}">
+        <c:when test="${empty item.image}">
+          <c:out value="pull-left"/>
+        </c:when>
+        <c:otherwise>
+          <c:out value="pull-right"/>
+        </c:otherwise>
+      </c:choose>
+    </c:set>
+    
+    <c:set var="noShare">
+      <c:choose>
+        <c:when test="${not (fn:length(item.accounts)>0)}">
           <c:out value="pull-left"/>
         </c:when>
         <c:otherwise>
@@ -39,15 +50,15 @@
       
       
       <c:if test="${not empty item }">
-        <h1 ${noImgNoShare eq 'pull-left'? "class='pull-left'": '' }>
+        <h1 ${noImg eq 'pull-left'? "class='pull-left'": '' }>
           <span class="col-md-8 col-xs-8 col-md-offset-4 col-xs-offset-4">
-          <c:out value="${model.info.widgetTitle}" escapeXml="true" />
+            <c:out value="${model.info.widgetTitle}" escapeXml="true" />
           </span>
         </h1>
     
         <div itemscope itemtype="http://data-vocabulary.org/Person" class="contact clearfix">
           <hst:cmseditlink hippobean="${item}" />
-          <ul class="col-md-8 col-xs-8 ${noImgNoShare}">
+          <ul class="col-md-8 col-xs-8 ${noShare}">
             <li><h2><span itemprop="name">${item.name }</span></h2></li>
             <li><h3><span itemprop="role">${item.function }</span></h3></li>            
             <c:if test="${not empty item.mail }">
@@ -77,16 +88,17 @@
           
           
           <c:if test="${(fn:length(item.accounts)>0) or (not empty item.image)}">
-          <figure class="col-md-4 col-xs-4 pull-left">
-            <!-- img size 60 x 60 -->
-            <hst:link var="image" hippobean="${item.image.listImageSmall }" />
-            <img itemprop="photo" alt="${item.name }" src="${image }" title="${item.name }" />
-            
-            <c:if test="${fn:length(item.accounts)>0}">
-              <tag:socialaccounts document="${item}"/>
-            </c:if>
-            
-          </figure>
+            <figure class="col-md-4 col-xs-4 pull-left">
+              <c:if test="${not empty item.image }">
+                  <hst:link var="image" hippobean="${item.image.listImageSmall }" />
+                  <img itemprop="photo" alt="${item.name }" src="${image }" title="${item.name }" />
+              </c:if>
+              
+              <c:if test="${fn:length(item.accounts)>0}">
+                <tag:socialaccounts document="${item}"/>
+              </c:if>
+              
+            </figure>
           </c:if>
                     
         </div>
