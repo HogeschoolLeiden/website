@@ -131,6 +131,17 @@
       </releases>
     </repository>
     <repository>
+      <id>sf-hippo-common-tools-repo</id>
+      <url>http://svn.code.sf.net/p/hippocommontool/code/maven2/</url>
+      <releases>
+        <updatePolicy>never</updatePolicy>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+    <repository>
       <id>sf-hippo-prototype-repo</id>
       <url>http://svn.code.sf.net/p/hippoprototype/code/maven2/</url>
       <releases>
@@ -230,11 +241,11 @@
         <version>${essentials.version}</version>
       </dependency>
 
-      <dependency>
+      <!--<dependency>
         <groupId>nl.openweb.hsl</groupId>
         <artifactId>hsl-private-config</artifactId>
         <version>${hsl-private-config.version}</version>
-      </dependency>
+      </dependency> -->
 
       <!-- other predefined runtime scope versioned dependencies -->
       <dependency>
@@ -271,12 +282,12 @@
         <scope>test</scope>
       </dependency>
 
-      <dependency>
+      <!--<dependency>
         <groupId>nl.openweb.jcr</groupId>
         <artifactId>jcr-mock</artifactId>
         <version>${jcr.mock.version}</version>
         <scope>test</scope>
-      </dependency>
+      </dependency> -->
 
       <dependency>
         <groupId>org.easymock</groupId>
@@ -364,7 +375,7 @@
         <version>${forge.urlrewriter.version}</version>
       </dependency>
       <!-- Elasticsearch -->
-      <dependency>
+      <!-- <dependency>
         <groupId>nl.openweb.elasticsearch</groupId>
         <artifactId>hippo-elasticsearch-cms</artifactId>
         <version>${elasticsearch.plugin.version}</version>
@@ -378,9 +389,9 @@
         <groupId>nl.openweb.elasticsearch</groupId>
         <artifactId>hippo-elasticsearch-hst</artifactId>
         <version>${elasticsearch.plugin.version}</version>
-      </dependency>
+      </dependency> -->
       <!-- /Elasticsearch -->
-      <dependency>
+      <!-- <dependency>
         <groupId>nl.openweb.omnikassa</groupId>
         <artifactId>hippo-omnikassa-plugin-hst</artifactId>
         <version>${omnikassa.plugin.version}</version>
@@ -389,14 +400,14 @@
         <groupId>nl.openweb.omnikassa</groupId>
         <artifactId>hippo-omnikassa-plugin-repository</artifactId>
         <version>${omnikassa.plugin.version}</version>
-      </dependency>
+      </dependency> -->
       <dependency>
         <groupId>com.restfb</groupId>
         <artifactId>restfb</artifactId>
         <version>${restfb.version}</version>
       </dependency>
       <!-- sitemap plugin -->
-      <dependency>
+<!--       <dependency>
         <groupId>nl.hsleiden.sitemap</groupId>
         <artifactId>sitemap-component</artifactId>
         <version>${hsl.sitemap.version}</version>
@@ -405,7 +416,7 @@
         <groupId>nl.hsleiden.sitemap</groupId>
         <artifactId>sitemap-content</artifactId>
         <version>${hsl.sitemap.version}</version>
-      </dependency>
+      </dependency> -->
     <!-- /sitemap plugin -->
     </dependencies>
   </dependencyManagement>

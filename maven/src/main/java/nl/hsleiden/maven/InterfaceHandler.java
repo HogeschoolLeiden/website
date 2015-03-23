@@ -13,7 +13,6 @@ import net.sourceforge.mavenhippo.gen.annotation.Weight;
 import net.sourceforge.mavenhippo.model.ContentTypeBean;
 import net.sourceforge.mavenhippo.model.ContentTypeBean.ContentTypeException;
 import net.sourceforge.mavenhippo.model.HippoBeanClass;
-import nl.openweb.omnikassa.beans.OmnikassaAware;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,7 +30,6 @@ public class InterfaceHandler extends InterfacesHandler {
             ClassLoader classLoader, Set<String> namespaces, Map<String, ContentTypeBean> mixins) {
         super(beansOnClassPath, beansInProject, classLoader, namespaces, mixins);
         nodeTypeInterfaceMapping.put("hsl:WebPage", Page.class);
-        nodeTypeInterfaceMapping.put("hsl:OmnikassaPage", OmnikassaAware.class);
     }
 
     @Override

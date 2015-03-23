@@ -9,16 +9,9 @@ import java.lang.reflect.Field;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.jcr.ItemNotFoundException;
-import javax.jcr.RepositoryException;
-import javax.jcr.Session;
-
 import nl.hsleiden.beans.compounds.RelatedEventsCompoundMixinBean;
 import nl.hsleiden.beans.compounds.RelatedNewsCompoundMixinBean;
-import nl.openweb.jcr.mock.MockNode;
 
-import org.apache.commons.lang3.StringUtils;
-import org.easymock.EasyMock;
 import org.hippoecm.hst.content.beans.manager.ObjectConverterImpl;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.content.beans.standard.HippoFolder;
@@ -67,21 +60,5 @@ public class TestUtils {
         return objectConverter;
     }
     
-    public static Session getSessionForMirrorNode(String referencedNodeUuid, String referencedNodeType, String referencedNodePath) throws ItemNotFoundException, RepositoryException {
-        Session session = EasyMock.createMock(Session.class);
-        
-        MockNode referencedNode = new MockNode(session);
-        referencedNode.setPath(referencedNodePath);
-        referencedNode.setPrimaryType(referencedNodeType);
-        EasyMock.expect(session.getNodeByIdentifier(referencedNodeUuid)).andReturn(referencedNode);
-        if(StringUtils.isBlank(referencedNodePath) || "/".equals(referencedNodePath)){            
-            EasyMock.expect(session.getRootNode()).andReturn(referencedNode).anyTimes();
-        }else{
-            EasyMock.expect(session.getRootNode()).andReturn(new MockNode()).anyTimes();
-            
-        }
-        EasyMock.replay(session);
-        
-        return session;
-    }
+    
 }
