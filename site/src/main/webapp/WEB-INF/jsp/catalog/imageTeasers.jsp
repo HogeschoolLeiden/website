@@ -30,18 +30,8 @@
         <%-- External link case --%>
         <c:when test="${tag:getConfiguredLink(item) eq 'ext' }">
         
-          <c:set var="alt">
-            <c:choose>
-              <c:when test="${not empty item.externallink.alt }">
-                <c:out value="${item.externallink.alt}"></c:out>
-              </c:when>
-              <c:otherwise>
-                <c:out value="${item.externallink.linkTitle}"></c:out>
-              </c:otherwise>
-            </c:choose>
-          </c:set>
-          
-          <a href="${item.externallink.linkUrl}" title="${alt}" ${item.externallink.newWindow ? 'class="external link" target="_blank"': '' }>      
+          <a href="${item.externallink.linkUrl}" title="${tag:getLinkAlt(item.externallink)}" 
+                   ${item.externallink.newWindow ? 'class="external link" target="_blank"': '' }>      
               <div class="img">
                  <img src="<hst:link hippobean="${item.image.teaserImage }" />" 
                       alt="<c:out value="${item.image.alt }" escapeXml="true" />" />
@@ -62,8 +52,8 @@
 
         <%-- Internal link case --%>
         <c:when test="${tag:getConfiguredLink(item) eq 'int' }">
-          <c:set var="link"><hst:link hippobean="${item.internallink.link }" /></c:set>
-          <a href="${link}" title="${item.internallink.alt}">
+          <c:set var="link"><hst:link hippobean="${item.link.link }" /></c:set>
+          <a href="${link}" title="${tag:getLinkAlt(item.link)}">
               <div class="img">
                  <img src="<hst:link hippobean="${item.image.teaserImage }" />" 
                       alt="<c:out value="${item.image.alt }" escapeXml="true" />" />
@@ -76,7 +66,7 @@
               
               <c:if test="${not item.noLinkTekst}">
                 <span class="${item.darkLinkBackground ? 'btn darkLinkBackground' : 'btn'}">
-                  <c:out value="${item.internallink.linkTitle }" escapeXml="true" />
+                  <c:out value="${item.link.linkTitle }" escapeXml="true" />
                 </span>
               </c:if>
           </a>
@@ -84,15 +74,17 @@
         
         <%-- Just image, no link case --%>        
         <c:otherwise>
-          <div class="img">
-             <img src="<hst:link hippobean="${item.image.teaserImage }" />" 
-                  alt="<c:out value="${item.image.alt }" escapeXml="true" />" 
-                  title="<c:out value="${item.image.alt }" escapeXml="true" />" />
-          </div>
-          <c:if test="${not empty item.icon }">
-            <img class="icon imageTeaser" src="<hst:link hippobean="${item.icon.listImageMedium }" />" 
-               alt="<c:out value="${item.icon.alt }" escapeXml="true" />" />
-          </c:if>  
+          <a href="#" title="${item.image.alt }">
+            <div class="img">
+               <img src="<hst:link hippobean="${item.image.teaserImage }" />" 
+                    alt="<c:out value="${item.image.alt }" escapeXml="true" />" 
+                    title="<c:out value="${item.image.alt }" escapeXml="true" />" />
+            </div>
+            <c:if test="${not empty item.icon }">
+              <img class="icon imageTeaser" src="<hst:link hippobean="${item.icon.listImageMedium }" />" 
+                 alt="<c:out value="${item.icon.alt }" escapeXml="true" />" />
+            </c:if>  
+          </a>
         </c:otherwise>
       </c:choose>
       

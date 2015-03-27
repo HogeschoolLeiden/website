@@ -24,8 +24,8 @@
         
     <c:forEach var="item" items="${model.items}" varStatus="zebra">
       <c:if test="${not empty item }">
-        <div class="col-xs-12 col-sm-6">
         
+        <div class="col-xs-12 col-sm-6">
         <article class="tekstitem">
             
             <hst:cmseditlink hippobean="${item}" />
@@ -44,15 +44,25 @@
             
             <p><c:out value="${item.body }"/></p>
             
-            <c:if test="${hst:isReadable(item.link, 'link') and 
-                        not empty item.link.link and 
-                        not empty item.link.linkTitle}">
-              <c:set var="displayLink"><hst:link hippobean="${item.link.link }" /></c:set>
-              <a class="more" href="${displayLink}" title="${item.link.alt}"><c:out value="${item.link.linkTitle}"/></a>
-            </c:if>
-            
+            <c:choose>
+              <%-- External link case --%>
+              <c:when test="${tag:getConfiguredLink(item) eq 'ext' }">
+                 <a class="more"  href="${item.externallink.linkUrl}" title="${tag:getLinkAlt(item.externallink)}" 
+                   ${item.externallink.newWindow ? 'target="_blank"': '' }>
+                   <c:out value="${item.externallink.linkTitle}"/>
+                 </a>
+              </c:when>  
+              
+              <%-- Internal link case --%>
+              <c:when test="${tag:getConfiguredLink(item) eq 'int' }">
+                <c:set var="displayLink"><hst:link hippobean="${item.link.link }" /></c:set>
+                <a class="more" href="${displayLink}" title="${tag:getLinkAlt(item.link)}">
+                  <c:out value="${item.link.linkTitle}"/>
+                </a>
+              </c:when>          
+            </c:choose>
+
         </article>
-        
         </div>
         
       </c:if>

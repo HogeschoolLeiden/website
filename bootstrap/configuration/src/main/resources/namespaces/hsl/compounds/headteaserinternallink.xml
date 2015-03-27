@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="ExternalLink">
+<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="HeadTeaserInternalLink">
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>hipposysedit:templatetype</sv:value>
   </sv:property>
@@ -27,38 +27,12 @@
       </sv:property>
       <sv:property sv:name="hipposysedit:supertype" sv:type="String" sv:multiple="true">
         <sv:value>hippo:compound</sv:value>
+        <sv:value>hsl:InternalLink</sv:value>
         <sv:value>hippostd:relaxed</sv:value>
       </sv:property>
       <sv:property sv:name="hipposysedit:uri" sv:type="String">
         <sv:value>http://www.onehippo.org/hsl/nt/1.0</sv:value>
       </sv:property>
-      <sv:node sv:name="linkUrl">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hipposysedit:field</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:mandatory" sv:type="Boolean">
-          <sv:value>false</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:multiple" sv:type="Boolean">
-          <sv:value>false</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:ordered" sv:type="Boolean">
-          <sv:value>false</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:path" sv:type="String">
-          <sv:value>hsl:linkUrl</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:primary" sv:type="Boolean">
-          <sv:value>false</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:type" sv:type="String">
-          <sv:value>String</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:validators" sv:type="String" sv:multiple="true">
-          <sv:value>non-empty</sv:value>
-          <sv:value>required</sv:value>
-        </sv:property>
-      </sv:node>
       <sv:node sv:name="linkTitle">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hipposysedit:field</sv:value>
@@ -84,29 +58,7 @@
         <sv:property sv:name="hipposysedit:validators" sv:type="String" sv:multiple="true">
           <sv:value>non-empty</sv:value>
           <sv:value>required</sv:value>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="newWindow">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hipposysedit:field</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:mandatory" sv:type="Boolean">
-          <sv:value>false</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:multiple" sv:type="Boolean">
-          <sv:value>false</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:ordered" sv:type="Boolean">
-          <sv:value>false</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:path" sv:type="String">
-          <sv:value>hsl:newWindow</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:primary" sv:type="Boolean">
-          <sv:value>false</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:type" sv:type="String">
-          <sv:value>Boolean</sv:value>
+          <sv:value>length-validator-30</sv:value>
         </sv:property>
       </sv:node>
       <sv:node sv:name="alt">
@@ -132,6 +84,32 @@
           <sv:value>String</sv:value>
         </sv:property>
       </sv:node>
+      <sv:node sv:name="link">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hipposysedit:field</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:mandatory" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:multiple" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:ordered" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:path" sv:type="String">
+          <sv:value>hsl:link</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:primary" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:type" sv:type="String">
+          <sv:value>hippo:mirror</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:validators" sv:type="String" sv:multiple="true">
+          <sv:value>required</sv:value>
+        </sv:property>
+      </sv:node>
     </sv:node>
   </sv:node>
   <sv:node sv:name="hipposysedit:prototypes">
@@ -140,7 +118,7 @@
     </sv:property>
     <sv:node sv:name="hipposysedit:prototype">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hsl:ExternalLink</sv:value>
+        <sv:value>hsl:HeadTeaserInternalLink</sv:value>
       </sv:property>
       <sv:property sv:name="hsl:alt" sv:type="String">
         <sv:value/>
@@ -148,12 +126,14 @@
       <sv:property sv:name="hsl:linkTitle" sv:type="String">
         <sv:value/>
       </sv:property>
-      <sv:property sv:name="hsl:linkUrl" sv:type="String">
-        <sv:value/>
-      </sv:property>
-      <sv:property sv:name="hsl:newWindow" sv:type="Boolean">
-        <sv:value>false</sv:value>
-      </sv:property>
+      <sv:node sv:name="hsl:link">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hippo:mirror</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:docbase" sv:type="String">
+          <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
+        </sv:property>
+      </sv:node>
     </sv:node>
   </sv:node>
   <sv:node sv:name="editor:templates">
@@ -191,18 +171,21 @@
           <sv:value>row</sv:value>
         </sv:property>
       </sv:node>
-      <sv:node sv:name="linkUrl">
+      <sv:node sv:name="link">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>frontend:plugin</sv:value>
         </sv:property>
         <sv:property sv:name="caption" sv:type="String">
-          <sv:value>Link Url</sv:value>
+          <sv:value>Link</sv:value>
         </sv:property>
         <sv:property sv:name="field" sv:type="String">
-          <sv:value>linkUrl</sv:value>
+          <sv:value>link</sv:value>
+        </sv:property>
+        <sv:property sv:name="hint" sv:type="String">
+          <sv:value/>
         </sv:property>
         <sv:property sv:name="plugin.class" sv:type="String">
-          <sv:value>org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin</sv:value>
+          <sv:value>org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin</sv:value>
         </sv:property>
         <sv:property sv:name="wicket.id" sv:type="String">
           <sv:value>${cluster.id}.field</sv:value>
@@ -222,6 +205,9 @@
         </sv:property>
         <sv:property sv:name="field" sv:type="String">
           <sv:value>linkTitle</sv:value>
+        </sv:property>
+        <sv:property sv:name="hint" sv:type="String">
+          <sv:value>Maximaal 30 karakters</sv:value>
         </sv:property>
         <sv:property sv:name="plugin.class" sv:type="String">
           <sv:value>org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin</sv:value>
@@ -244,31 +230,6 @@
         </sv:property>
         <sv:property sv:name="field" sv:type="String">
           <sv:value>alt</sv:value>
-        </sv:property>
-        <sv:property sv:name="hint" sv:type="String">
-          <sv:value/>
-        </sv:property>
-        <sv:property sv:name="plugin.class" sv:type="String">
-          <sv:value>org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin</sv:value>
-        </sv:property>
-        <sv:property sv:name="wicket.id" sv:type="String">
-          <sv:value>${cluster.id}.field</sv:value>
-        </sv:property>
-        <sv:node sv:name="cluster.options">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>frontend:pluginconfig</sv:value>
-          </sv:property>
-        </sv:node>
-      </sv:node>
-      <sv:node sv:name="newWindow">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>frontend:plugin</sv:value>
-        </sv:property>
-        <sv:property sv:name="caption" sv:type="String">
-          <sv:value>Open in nieuw venster</sv:value>
-        </sv:property>
-        <sv:property sv:name="field" sv:type="String">
-          <sv:value>newWindow</sv:value>
         </sv:property>
         <sv:property sv:name="hint" sv:type="String">
           <sv:value/>

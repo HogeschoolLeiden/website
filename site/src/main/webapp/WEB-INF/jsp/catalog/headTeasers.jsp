@@ -47,14 +47,40 @@
         
         <section class="blok ${sectionClass}">
             <hst:cmseditlink hippobean="${item}" />
-            <c:set var="displayLink"><hst:link hippobean="${item.link.link }" /></c:set>
-            <a href="${displayLink}" title="${item.link.alt}">
-              <h1>
-                <c:out value="${item.title}"/>
-              </h1>
-              <h2><c:out value="${item.body}"/></h2>
-              <span class="btn"><c:out value="${item.link.linkTitle}"/></span>
-            </a>
+            
+            <c:choose>
+            
+              <%-- External link case --%>
+              <c:when test="${tag:getConfiguredLink(item) eq 'ext' }">
+            
+                <a href="${item.externallink.linkUrl}" title="${tag:getLinkAlt(item.externallink)}" 
+                       ${item.externallink.newWindow ? 'class="external link" target="_blank"': '' }>      
+                  <h1><c:out value="${item.title}"/></h1>
+                  <h2><c:out value="${item.body}"/></h2>
+                  <span class="btn"><c:out value="${item.externallink.linkTitle}"/></span>
+                </a>
+              </c:when>
+        
+              <%-- Internal link case --%>
+              <c:when test="${tag:getConfiguredLink(item) eq 'int' }">            
+                <a href='<hst:link hippobean="${item.link.link }"/>' title="${tag:getLinkAlt(item.link)}">
+                  <h1><c:out value="${item.title}"/></h1>
+                  <h2><c:out value="${item.body}"/></h2>
+                  <span class="btn"><c:out value="${item.link.linkTitle}"/></span>
+                </a>
+              </c:when>
+              
+              <%-- no link case --%>
+              <c:otherwise>
+                <a href="#" title="${item.title}">
+                  <h1><c:out value="${item.title}"/></h1>
+                  <h2><c:out value="${item.body}"/></h2>
+                  <span class="btn"><c:out value="take it from properties"/></span>
+                </a>
+              </c:otherwise>
+            </c:choose>
+            
+            
         </section>
         
       </c:if>

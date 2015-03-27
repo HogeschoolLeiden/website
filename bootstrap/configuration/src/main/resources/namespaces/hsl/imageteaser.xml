@@ -104,6 +104,32 @@
           <sv:value>required</sv:value>
         </sv:property>
       </sv:node>
+      <sv:node sv:name="link">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hipposysedit:field</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:mandatory" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:multiple" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:ordered" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:path" sv:type="String">
+          <sv:value>hsl:link</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:primary" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:type" sv:type="String">
+          <sv:value>hsl:InternalLink</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposysedit:validators" sv:type="String" sv:multiple="true">
+          <sv:value>optional</sv:value>
+        </sv:property>
+      </sv:node>
       <sv:node sv:name="externallink">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hipposysedit:field</sv:value>
@@ -125,32 +151,6 @@
         </sv:property>
         <sv:property sv:name="hipposysedit:type" sv:type="String">
           <sv:value>hsl:ExternalLink</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:validators" sv:type="String" sv:multiple="true">
-          <sv:value>optional</sv:value>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="internallink">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hipposysedit:field</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:mandatory" sv:type="Boolean">
-          <sv:value>false</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:multiple" sv:type="Boolean">
-          <sv:value>false</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:ordered" sv:type="Boolean">
-          <sv:value>false</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:path" sv:type="String">
-          <sv:value>hsl:internallink</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:primary" sv:type="Boolean">
-          <sv:value>false</sv:value>
-        </sv:property>
-        <sv:property sv:name="hipposysedit:type" sv:type="String">
-          <sv:value>hsl:InternalLink</sv:value>
         </sv:property>
         <sv:property sv:name="hipposysedit:validators" sv:type="String" sv:multiple="true">
           <sv:value>optional</sv:value>
@@ -364,7 +364,7 @@
           </sv:property>
         </sv:node>
       </sv:node>
-      <sv:node sv:name="internallink">
+      <sv:node sv:name="link">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>frontend:plugin</sv:value>
         </sv:property>
@@ -372,7 +372,7 @@
           <sv:value>Interne Link</sv:value>
         </sv:property>
         <sv:property sv:name="field" sv:type="String">
-          <sv:value>internallink</sv:value>
+          <sv:value>link</sv:value>
         </sv:property>
         <sv:property sv:name="hint" sv:type="String">
           <sv:value>Als beide links zijn ingevuld, gaat de interne link voor.</sv:value>
