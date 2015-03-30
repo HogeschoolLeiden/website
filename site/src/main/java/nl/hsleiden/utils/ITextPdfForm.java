@@ -65,11 +65,9 @@ public class ITextPdfForm {
         List<AbstractField> fields = form.getFields();
 
         PdfPTable tbl = new PdfPTable(2);
-        for (AbstractField abstractField : fields) {
+        for (AbstractField abstractField : fields) {            
             if (abstractField.isMultiple()) {
-                if ("radiogroup".equalsIgnoreCase(abstractField.getType())) {
-                    addSingleValueField(tbl, abstractField);
-                } else if ("checkboxgroup".equalsIgnoreCase(abstractField.getType())) {
+                if ("checkboxgroup".equalsIgnoreCase(abstractField.getType())) {
                     addMultivalueField(tbl, abstractField);
                     addSingleValueFormField(tbl, map.getField(abstractField.getName() + "-other"));
                 } else {
@@ -78,6 +76,9 @@ public class ITextPdfForm {
             } else {
                 if ("datefield".equalsIgnoreCase(abstractField.getType())) {
                     addSingleValueFormField(tbl, map.getField(abstractField.getName()));
+                } else if ("radiogroup".equalsIgnoreCase(abstractField.getType())) {
+                    addSingleValueField(tbl, abstractField);
+                    addSingleValueFormField(tbl, map.getField(abstractField.getName() + "-other"));
                 } else {
                     addSingleValueField(tbl, abstractField);
                 }

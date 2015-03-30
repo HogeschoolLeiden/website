@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="Change Form Mail Template">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>hipposys:updaterinfo</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:batchsize" sv:type="Long">
+    <sv:value>10</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:dryrun" sv:type="Boolean">
+    <sv:value>false</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:query" sv:type="String">
+    <sv:value>hst:hst/hst:configurations//element(*, hst:containeritemcomponent)[@hst:componentclassname='nl.hsleiden.components.catalog.FormComponent']</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:script" sv:type="String">
+    <sv:value>package org.hippoecm.frontend.plugins.cms.dev.updater&#13;
+&#13;
+import org.onehippo.repository.update.BaseNodeUpdateVisitor&#13;
+import javax.jcr.Node&#13;
+&#13;
+class UpdaterTemplate extends BaseNodeUpdateVisitor {&#13;
+&#13;
+  boolean doUpdate(Node node) {&#13;
+    boolean result = false;&#13;
+    log.debug("changing mail template for container: " + node.getPath());&#13;
+    &#13;
+    if(node.hasProperty("hst:parameternames")){&#13;
+      &#13;
+      int mailBodyPropertyIndex = 0;&#13;
+      Property paramNames = node.getProperty("hst:parameternames");&#13;
+      for(int i=0; i&lt;paramNames.getValues().length; i++) {&#13;
+          if(paramNames.getValues()[i].getString().equals("eforms-body-html")){&#13;
+              mailBodyPropertyIndex = i;&#13;
+          }&#13;
+      }&#13;
+&#13;
+      Property paramValues = node.getProperty("hst:parametervalues");&#13;
+      &#13;
+      String[] values = new String[paramValues.getValues().length];&#13;
+      for(int i=0; i&lt;paramValues.getValues().length; i++) {&#13;
+          if(i == mailBodyPropertyIndex){&#13;
+            values[i] = '&lt;#if form.getTitle()?has_content&gt;\n\t&lt;h1&gt;\${form.getTitle()}&lt;/h1&gt;\n&lt;/#if&gt;\n&lt;#if paragraph??&gt;&lt;p&gt;\${paragraph}&lt;/p&gt;&lt;/#if&gt;\n&lt;#if includeFieldData&gt;\n\t&lt;table&gt;\n\t\t&lt;#list form.getFields() as field&gt;\n\t\t\t&lt;#assign fieldType = field.type&gt;\n\t\t\t&lt;#assign multiple = field.isMultiple()&gt;\n\t\t\t&lt;#if multiple&gt;\n\t\t\t\t&lt;#if \"checkboxgroup\" == fieldType&gt;\n\t\t\t\t\t&lt;#assign multiValues = field.multiValues&gt;\n\t\t\t\t\t&lt;#list multiValues?keys as key&gt;\n\t\t\t\t\t\t&lt;#assign collection = multiValues[key]&gt;\n\t\t\t\t\t\t&lt;#list collection as itemValue&gt;\n\t\t\t\t\t\t\t&lt;#if itemValue??&gt;\n\t\t\t\t\t\t\t\t&lt;#if itemValue?has_content&gt;\n\t\t\t\t\t\t\t\t\t&lt;tr&gt;\n\t\t\t\t\t\t\t\t\t\t&lt;th align=\"left\"&gt;\${key}&lt;/th&gt;\n\t\t\t\t\t\t\t\t\t\t&lt;td align=\"left\"&gt;\${itemValue}&lt;/td&gt;\n\t\t\t\t\t\t\t\t\t&lt;/tr&gt;\n\t\t\t\t\t\t\t\t&lt;/#if&gt;\n\t\t\t\t\t\t\t&lt;/#if&gt;\n\t\t\t\t\t\t&lt;/#list&gt;\n\t\t\t\t\t&lt;/#list&gt;\n\t\t\t\t\t&lt;#assign otherFieldNameCheck = field.getName()+\"-other\"&gt;\n\t\t\t\t\t&lt;#if formMap.getField(otherFieldNameCheck)?has_content&gt;\n\t\t\t\t\t\t&lt;#assign otherField = formMap.getField(otherFieldNameCheck)&gt;\n\t\t\t\t\t\t&lt;tr&gt;\n\t\t\t\t\t\t\t&lt;th align=\"left\"&gt;\${otherFieldNameCheck}&lt;/th&gt;\n\t\t\t\t\t\t\t&lt;td align=\"left\"&gt;\${otherField.getValue()}&lt;/td&gt;\n\t\t\t\t\t\t&lt;/tr&gt;\n\t\t\t\t\t&lt;/#if&gt;\n\t\t\t\t&lt;#else&gt;\n\t\t\t\t\t&lt;#assign multiValues = field.multiValues&gt;\n\t\t\t\t\t&lt;#list multiValues?keys as key&gt;\n\t\t\t\t\t\t&lt;#assign collection = multiValues[key]&gt;\n\t\t\t\t\t\t&lt;#list collection as itemValue&gt;\n\t\t\t\t\t\t\t&lt;#if itemValue??&gt;\n\t\t\t\t\t\t\t\t&lt;#if itemValue?has_content&gt;\n\t\t\t\t\t\t\t\t\t&lt;tr&gt;\n\t\t\t\t\t\t\t\t\t\t&lt;th align=\"left\"&gt;\${key}&lt;/th&gt;\n\t\t\t\t\t\t\t\t\t\t&lt;td align=\"left\"&gt;\${itemValue}&lt;/td&gt;\n\t\t\t\t\t\t\t\t\t&lt;/tr&gt;\n\t\t\t\t\t\t\t\t&lt;/#if&gt;\n\t\t\t\t\t\t\t&lt;/#if&gt;\n\t\t\t\t\t\t&lt;/#list&gt;\n\t\t\t\t\t&lt;/#list&gt;\n\t\t\t\t&lt;/#if&gt;\n\t\t\t&lt;#else&gt;\n\t\t\t\t&lt;#if field.getValue()?has_content&gt;\n\t\t\t\t\t&lt;#if \"datefield\" == fieldType&gt;\n\t\t\t\t\t\t&lt;tr&gt;\n\t\t\t\t\t\t\t&lt;th align=\"left\"&gt;\${field.getLabelOrName()}&lt;/th&gt;\n\t\t\t\t\t\t\t&lt;td align=\"left\"&gt;\${formMap.getField(field.getName()).getValue()}&lt;/td&gt;\n\t\t\t\t\t\t&lt;/tr&gt;\n\t\t\t\t\t&lt;#else&gt;\n\t\t\t\t\t\t&lt;#if \"radiogroup\" == fieldType&gt;\n\t\t\t\t\t\t\t&lt;tr&gt;\n\t\t\t\t\t\t\t\t&lt;th align=\"left\"&gt;\${field.getLabelOrName()}&lt;/th&gt;\n\t\t\t\t\t\t\t\t&lt;td align=\"left\"&gt;\${field.getValue()}&lt;/td&gt;\n\t\t\t\t\t\t\t&lt;/tr&gt;\n\t\t\t\t\t\t\t&lt;#assign otherFieldNameRadio = field.getName()+\"-other\"&gt;\n\t\t\t\t\t\t\t&lt;#if formMap.getField(otherFieldNameRadio)?has_content&gt;\n\t\t\t\t\t\t\t\t&lt;#assign otherField = formMap.getField(otherFieldNameRadio)&gt;\n\t\t\t\t\t\t\t\t&lt;tr&gt;\n\t\t\t\t\t\t\t\t\t&lt;th align=\"left\"&gt;\${otherFieldNameRadio}&lt;/th&gt;\n\t\t\t\t\t\t\t\t\t&lt;td align=\"left\"&gt;\${otherField.getValue()}&lt;/td&gt;\n\t\t\t\t\t\t\t\t&lt;/tr&gt;\n\t \t\t\t\t\t\t&lt;/#if&gt;\n\t\t\t\t\t\t&lt;#else&gt;\n\t\t\t\t\t\t\t&lt;tr&gt;\n\t\t\t\t\t\t\t\t&lt;th align=\"left\"&gt;\${field.getLabelOrName()}&lt;/th&gt;\n\t\t\t\t\t\t\t\t&lt;td align=\"left\"&gt;\${field.getValue()}&lt;/td&gt;\n\t\t\t\t\t\t\t&lt;/tr&gt;\n\t\t\t\t\t\t&lt;/#if&gt;\n\t\t\t\t\t&lt;/#if&gt;\n\t\t\t\t&lt;/#if&gt;\n\t\t\t&lt;/#if&gt;\n\t\t&lt;/#list&gt;\n\t&lt;/table&gt;\n&lt;/#if&gt;';&#13;
+          }else{&#13;
+            values[i] = paramValues.getValues()[i].getString();&#13;
+          }&#13;
+      }&#13;
+               &#13;
+      node.setProperty("hst:parametervalues", values);&#13;
+      &#13;
+      &#13;
+      result = true;&#13;
+      log.debug("changed");&#13;
+    } else{&#13;
+      log.debug("SKIPPING container: " + node.getPath());&#13;
+    }&#13;
+       &#13;
+    return result;&#13;
+  }&#13;
+&#13;
+  boolean undoUpdate(Node node) {&#13;
+    throw new UnsupportedOperationException('Updater does not implement undoUpdate method')&#13;
+  }&#13;
+&#13;
+}</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:throttle" sv:type="Long">
+    <sv:value>10</sv:value>
+  </sv:property>
+</sv:node>

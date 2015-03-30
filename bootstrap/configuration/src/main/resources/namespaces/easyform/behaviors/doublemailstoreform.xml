@@ -154,6 +154,9 @@
         <sv:property sv:name="item" sv:type="String">
           <sv:value>${cluster.id}.field</sv:value>
         </sv:property>
+        <sv:property sv:name="layout.fieldextensions" sv:type="String">
+          <sv:value>${cluster.id}.fieldextensions</sv:value>
+        </sv:property>
         <sv:property sv:name="layout.form" sv:type="String">
           <sv:value>${cluster.id}.form</sv:value>
         </sv:property>
@@ -179,6 +182,7 @@
           <sv:value>layout.form</sv:value>
           <sv:value>layout.picker</sv:value>
           <sv:value>layout.properties</sv:value>
+          <sv:value>layout.fieldextensions</sv:value>
           <sv:value>layout.groups</sv:value>
           <sv:value>layout.validationhelper</sv:value>
         </sv:property>
@@ -233,6 +237,9 @@
         <sv:property sv:name="plugin.class" sv:type="String">
           <sv:value>com.onehippo.cms7.eforms.cms.form.FormPlugin</sv:value>
         </sv:property>
+        <sv:property sv:name="service.fieldextensions" sv:type="String">
+          <sv:value>${cluster.id}.service.fieldextensions</sv:value>
+        </sv:property>
         <sv:property sv:name="service.formlayout" sv:type="String">
           <sv:value>${cluster.id}.service.formlayout</sv:value>
         </sv:property>
@@ -270,6 +277,9 @@
         </sv:property>
         <sv:property sv:name="plugin.class" sv:type="String">
           <sv:value>com.onehippo.cms7.eforms.cms.picker.PickerPlugin</sv:value>
+        </sv:property>
+        <sv:property sv:name="service.fieldextensions" sv:type="String">
+          <sv:value>${cluster.id}.service.fieldextensions</sv:value>
         </sv:property>
         <sv:property sv:name="service.formlayout" sv:type="String">
           <sv:value>${cluster.id}.service.formlayout</sv:value>
@@ -322,6 +332,44 @@
           <sv:value>${wicket.model}</sv:value>
         </sv:property>
       </sv:node>
+      <sv:node sv:name="fieldextensions">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>frontend:plugin</sv:value>
+        </sv:property>
+        <sv:property sv:name="engine" sv:type="String">
+          <sv:value>${engine}</sv:value>
+        </sv:property>
+        <sv:property sv:name="item" sv:type="String">
+          <sv:value>${cluster.id}.fieldextensions.field</sv:value>
+        </sv:property>
+        <sv:property sv:name="mode" sv:type="String">
+          <sv:value>${mode}</sv:value>
+        </sv:property>
+        <sv:property sv:name="plugin.class" sv:type="String">
+          <sv:value>com.onehippo.cms7.eforms.cms.fieldextensions.FieldExtensionsPlugin</sv:value>
+        </sv:property>
+        <sv:property sv:name="service.fieldextensions" sv:type="String">
+          <sv:value>${cluster.id}.service.fieldextensions</sv:value>
+        </sv:property>
+        <sv:property sv:name="service.formlayout" sv:type="String">
+          <sv:value>${cluster.id}.service.formlayout</sv:value>
+        </sv:property>
+        <sv:property sv:name="service.formplugin" sv:type="String">
+          <sv:value>${cluster.id}.service.formplugin</sv:value>
+        </sv:property>
+        <sv:property sv:name="wicket.id" sv:type="String">
+          <sv:value>${cluster.id}.fieldextensions</sv:value>
+        </sv:property>
+        <sv:property sv:name="wicket.model" sv:type="String">
+          <sv:value>${wicket.model}</sv:value>
+        </sv:property>
+        <sv:node sv:name="cluster.options">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>frontend:pluginconfig</sv:value>
+          </sv:property>
+          <sv:property sv:name="field.extensions" sv:type="String" sv:multiple="true"/>
+        </sv:node>
+      </sv:node>
       <sv:node sv:name="extensions">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>frontend:plugin</sv:value>
@@ -357,6 +405,9 @@
         </sv:property>
         <sv:property sv:name="plugin.class" sv:type="String">
           <sv:value>com.onehippo.cms7.eforms.cms.groups.ReusableGroupPickerPlugin</sv:value>
+        </sv:property>
+        <sv:property sv:name="service.fieldextensions" sv:type="String">
+          <sv:value>${cluster.id}.service.fieldextensions</sv:value>
         </sv:property>
         <sv:property sv:name="service.formlayout" sv:type="String">
           <sv:value>${cluster.id}.service.formlayout</sv:value>
