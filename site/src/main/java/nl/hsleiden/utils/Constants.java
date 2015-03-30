@@ -126,6 +126,7 @@ public class Constants {
 
         public static final String DEFAULT_IMAGE_ALT = "Hogeschool Leiden";
         public static final int DEFAULT_HST_QUERY_SIZE = 1000;
+        public static final String SEPARATOR = " - ";
 
         private Values() {
         }

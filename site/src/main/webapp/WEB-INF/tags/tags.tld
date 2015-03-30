@@ -289,8 +289,14 @@
 
     <function>
       <name>getConfiguredLink</name>
-      <function-class>nl.hsleiden.tags.Functions</function-class>
-      <function-signature>java.lang.String getConfiguredLink(hslbeans.ImageTeaser)</function-signature>
+      <function-class>nl.hsleiden.tags.LinksAndBrowserTitleFunctions</function-class>
+      <function-signature>java.lang.String getConfiguredLink(org.hippoecm.hst.content.beans.standard.HippoBean)</function-signature>
+    </function>
+
+    <function>
+      <name>getLinkAlt</name>
+      <function-class>nl.hsleiden.tags.LinksAndBrowserTitleFunctions</function-class>
+      <function-signature>java.lang.String getLinkAlt(org.hippoecm.hst.content.beans.standard.HippoBean)</function-signature>
     </function>
 
     <function>
@@ -307,8 +313,14 @@
 
     <function>
       <name>getBrowserTitle</name>
-      <function-class>nl.hsleiden.tags.Functions</function-class>
+      <function-class>nl.hsleiden.tags.LinksAndBrowserTitleFunctions</function-class>
       <function-signature>java.lang.String getBrowserTitle(javax.servlet.http.HttpServletRequest, org.hippoecm.hst.content.beans.standard.HippoBean)</function-signature>
+    </function>
+
+    <function>
+      <name>getEnvironmentProperty</name>
+      <function-class>nl.hsleiden.tags.Functions</function-class>
+      <function-signature>java.lang.String getEnvironmentProperty(java.lang.String)</function-signature>
     </function>
 
 </taglib>

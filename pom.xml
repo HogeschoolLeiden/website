@@ -5,7 +5,7 @@
   <parent>
     <groupId>com.onehippo.cms7</groupId>
     <artifactId>hippo-cms7-enterprise-release</artifactId>
-    <version>7.9.6</version>
+    <version>7.9.7</version>
   </parent>
 
   <name>Website van Hogeschool Leiden</name>
@@ -62,7 +62,7 @@
 
     <!--***START temporary override of versions*** -->
     <essentials.version>1.01.02</essentials.version>
-    <hippo.addon-eforms.version>1.03.03</hippo.addon-eforms.version>
+    <hippo.addon-eforms.version>1.03.07</hippo.addon-eforms.version>
     <!-- ***END temporary override of versions*** -->
 
     <jsp-api.version>2.1</jsp-api.version>
@@ -76,7 +76,7 @@
     <filesync.override>false</filesync.override>
     <maven.plugins.filesync.version>1.0.0</maven.plugins.filesync.version>
     <mysql.connecotr.version>5.1.30</mysql.connecotr.version>
-    <hippo.prototype.version>7.9.43</hippo.prototype.version>
+    <hippo.prototype.version>7.9.45</hippo.prototype.version>
     <hippo.maven.plugin.version>0.1.2</hippo.maven.plugin.version>
     <minify.maven.plugin>1.7.4</minify.maven.plugin>
     <cucumber.version>1.1.7</cucumber.version>
@@ -90,7 +90,7 @@
     <jcr.mock.version>1.0</jcr.mock.version>
     <twitter4j.version>4.0.2</twitter4j.version>
     <hsl-private-config.version>1.2</hsl-private-config.version>
-    <elasticsearch.plugin.version>1.13</elasticsearch.plugin.version>
+    <elasticsearch.plugin.version>1.14</elasticsearch.plugin.version>
     <omnikassa.plugin.version>1.1</omnikassa.plugin.version>
 
     <restfb.version>1.7.0</restfb.version>
@@ -203,6 +203,16 @@
         <artifactId>hippo-addon-targeting-dependencies-site</artifactId>
         <version>${hippo.addon-targeting.version}</version>
         <type>pom</type>
+      </dependency>
+      <dependency>
+        <groupId>com.onehippo.cms7</groupId>
+        <artifactId>hippo-addon-eforms-repository</artifactId>
+        <version>${hippo.addon-eforms.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.onehippo.cms7</groupId>
+        <artifactId>hippo-addon-eforms-cms</artifactId>
+        <version>${hippo.addon-eforms.version}</version>
       </dependency>
       <dependency>
         <groupId>com.onehippo.cms7</groupId>
@@ -581,11 +591,13 @@
                   <derby.stream.error.file>${project.basedir}/target/derby.log</derby.stream.error.file>
                   <log4j.configuration>file:${project.basedir}/release/conf/log4j-dev.xml</log4j.configuration>
                   <rebel.log4j-plugin>true</rebel.log4j-plugin>
+                  <dev>true</dev>
                   <!-- enables auto export: -->
                   <project.basedir>${project.basedir}</project.basedir>
                   <xr.util-logging.loggingEnabled>true</xr.util-logging.loggingEnabled>
                   <repo.bootstrap>true</repo.bootstrap>
                   <elasticConfig>${project.basedir}/release/conf/search-config.json</elasticConfig>
+                  <elasticsearch.enable.indexation>true</elasticsearch.enable.indexation>
                   <!-- uncomment to run with mysql db 
                   <repo.config>file:${project.basedir}/release/conf/repository.xml</repo.config>
                   -->

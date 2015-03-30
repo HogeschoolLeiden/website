@@ -55,21 +55,34 @@
   <link rel="apple-touch-icon" sizes="120x120" href="<hst:link path="/images/icons/touch-icon-120.png"/>">
   <link rel="apple-touch-icon" sizes="152x152" href="<hst:link path="/images/icons/touch-icon-152.png"/>">
   
-   <!-- CSS -->  
-  <link rel="stylesheet" href="<hst:link path="/css/kees/bootstrap.min.css"/>" >
+  <!-- CSS -->  
+  <c:set var="dev" value="${tag:getEnvironmentProperty('dev')}"/>
+
+  <link rel="stylesheet" href="<hst:link path="/css/bootstrap.min.css"/>" >
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" >
   
-  <hst:headContributions categoryIncludes="formsCssHere,swiperCss" xhtml="true" />
-    
-  <link rel="stylesheet" href="<hst:link path="/css/style.min.css"/>" >
+  <c:choose>
+    <c:when test="${dev eq 'true'}">
+      <link rel="stylesheet" href='<hst:link path="/css/eforms.css"/>' type="text/css" />
+      <link rel="stylesheet" href='<hst:link path="/css/idangerous.swiper.css"/>' type="text/css" /> 
+      <link rel="stylesheet" href='<hst:link path="/css/style-main.css" />' type="text/css"/>
+      <link rel="stylesheet" href='<hst:link path="/css/style-additions.css" />' type="text/css"/>
+      <link rel="stylesheet" href='<hst:link path="/css/print-style.css"/>' type="text/css" media="print"> 
+      <link rel="stylesheet" href='<hst:link path='/css/normalize.css' />' type="text/css"/>
+      <link rel="stylesheet" href='<hst:link path="/js/formcheck/theme/blue/formcheck.css"/>' type="text/css" />
+      <link rel="stylesheet" href='<hst:link path="/css/jquery-ui-1.10.2.custom.min.css"/>' type="text/css" />
+      <link rel='stylesheet' href='<hst:link path="/css/fullcalendar/fullcalendar.css" />' type="text/css" />
+      <link rel="stylesheet" href='<hst:link path="/css/prettyPhoto.css"/>' type="text/css" media="screen" />      
+    </c:when>
+    <c:otherwise>
+      <link rel="stylesheet" type="text/css" href="<hst:link path='/css/style.min.css' />"/>
+    </c:otherwise>
+  </c:choose> 
   
-  <link rel="stylesheet" type="text/css" href="<hst:link path="/css/print-style.css"/>" media="print"> 
+  <script type="text/javascript" src="<hst:link path='/js/jquery.min.js' />"></script>
+  <script type="text/javascript" src="<hst:link path='/js/jquery.browser.min.js' />"></script>
   
-  
-  <script type="text/javascript" src="<hst:link path="/js/script.min.js" />"></script>
-    
- 
-  <hst:headContributions categoryExcludes="scripts,formsCssHere,extraCss" xhtml="true" />
+  <hst:headContributions categoryExcludes="scripts,extraCss" xhtml="true" />
   
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
   
@@ -114,14 +127,36 @@
         ${gtm}
       </c:if>
   	</c:if>
-      
     
     <c:set var="disableChat" value="${(tag:getMainWebsitePropertyList(pageContext.request)).disableChatJs}"/>
     
     <c:if test="${(not isCmsRequest ) and (not (disableChat eq 'true'))}">  
       <c:set var="chatJs" value="${(tag:getMainWebsitePropertyList(pageContext.request)).chatJsConfig}"/>
       <script type="text/javascript" src="${chatJs}"></script> 
-    </c:if>
+    </c:if>    
+
+    <c:choose>  
+      <c:when test="${dev eq 'true'}">  
+        <script type="text/javascript" src="<hst:link path="/js/pretty-photo-inizialization.js"/>" charset="utf-8"></script>
+        <script type="text/javascript" src="<hst:link path="/js/jquery.prettyPhoto.js"/>" charset="utf-8"></script>
+        <script type="text/javascript" src="<hst:link path="/js/homepage-height-equalizer.js"/>"></script>
+        <script type="text/javascript" src="<hst:link path="/js/swiper.js"/>"></script>
+        <script type="text/javascript" src="<hst:link path="/js/kees/vendor/idangerous.swiper.js"/>"></script>
+        <script type="text/javascript" src="<hst:link path="/js/kees/vendor/idangerous.swiper.progress.min.js"/>"></script>
+        <script type="text/javascript" src="<hst:link path="/js/moment.min.js" />" ></script>
+        <script type="text/javascript" src="<hst:link path="/js/fullcalendar/fullcalendar.js" />" ></script>
+        <script type="text/javascript" src="<hst:link path="/js/fullcalendar/lang/nl.js" />" ></script>
+        <script type="text/javascript" src="<hst:link path='/js/kees/vendor/modernizr-2.6.2.min.js' />"></script>
+        <script type="text/javascript" src="<hst:link path='/js/kees/vendor/retina.min.js' />"></script>
+        <script type="text/javascript" src="<hst:link path='/js/kees/vendor/respond.js' />"></script>
+        <script type="text/javascript" src="<hst:link path='/js/kees/vendor/bootstrap.min.js' />"></script>
+        <script type="text/javascript" src="<hst:link path='/js/kees/plugins.js' />"></script>
+        <script type="text/javascript" src="<hst:link path='/js/kees/main.js' />"></script>
+      </c:when>
+      <c:otherwise>
+        <script type="text/javascript" src="<hst:link path='/js/script.min.js' />"></script>
+      </c:otherwise>
+    </c:choose>
     
 </body>
 </html>

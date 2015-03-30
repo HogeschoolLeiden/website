@@ -2,11 +2,8 @@ package nl.hsleiden.tags;
 
 import hslbeans.ArticlePage;
 import hslbeans.BachelorPage;
-import hslbeans.ExternalLink;
 import hslbeans.Image;
-import hslbeans.ImageTeaser;
 import hslbeans.InfoBlock;
-import hslbeans.InternalLink;
 import hslbeans.PersonnelPage;
 import hslbeans.WebPage;
 
@@ -19,18 +16,13 @@ import nl.hsleiden.beans.EventPageBean;
 import nl.hsleiden.channels.WebsiteInfo;
 
 import org.hippoecm.hst.configuration.hosting.Mount;
-import org.hippoecm.hst.configuration.sitemap.HstSiteMapItem;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.content.beans.standard.HippoResource;
 import org.hippoecm.hst.core.component.HstRequest;
-import org.hippoecm.hst.core.request.ResolvedSiteMapItem;
 
-import com.tdclighthouse.prototype.utils.BeanUtils;
 import com.tdclighthouse.prototype.utils.PaginatorWidget;
 
-public class Functions {
-
-    private static final String SEPARATOR = " - ";
+public class Functions {  
 
     private Functions() {
     }
@@ -109,29 +101,8 @@ public class Functions {
         return list.indexOf(item);
     }
 
-    public static String getConfiguredLink(ImageTeaser imgTeaser) {
-        String result = "";
-        InternalLink internallink = imgTeaser.getInternallink();
-        ExternalLink externallink = imgTeaser.getExternallink();
-
-        if (internallink != null && internallink.getLink() != null && !internallink.getLinkTitle().isEmpty()) {
-            result = "int";
-        }
-
-        if (result.isEmpty()) {
-            result = checkExternalLink(externallink);
-        }
-
-        return result;
-    }
-
-    private static String checkExternalLink(ExternalLink externallink) {
-        String result = "";
-        if (externallink != null && !externallink.getLinkUrl().isEmpty() && !externallink.getLinkTitle().isEmpty()) {
-            result = "ext";
-        }
-        return result;
-    }
+    
+    
 
     public static Boolean isInfoBlockDisplayable(HippoBean document) {
         boolean result = false;
@@ -149,9 +120,10 @@ public class Functions {
 
     private static boolean checkInfoBlock(InfoBlock infoBlock) {
         boolean result = false;
-        if(infoBlock!=null && 
-           (!infoBlock.getInfoText().isEmpty() || infoBlock.getInfoLink()!=null || !infoBlock.getInfoLines().isEmpty())){
-           result = true; 
+        if (infoBlock != null
+                && (!infoBlock.getInfoText().isEmpty() || infoBlock.getInfoLink() != null || !infoBlock.getInfoLines()
+                        .isEmpty())) {
+            result = true;
         }
         return result;
     }
@@ -167,55 +139,12 @@ public class Functions {
                 }
             }
         }
-
         return result;
     }
 
-    public static String getBrowserTitle(HttpServletRequest request, HippoBean document) {
-        String result = ""; 
-        if (document instanceof WebPage) {
-            result = composeBrowserTitle((HstRequest) request, (WebPage) document);
-        }else{
-            result = getWebsitePropertyList(request).getDefaultBrowserTitle();
-        }
-        return result;
-    }
+    
 
-    private static String composeBrowserTitle(HstRequest request, WebPage webPage) {
- 
-        String result = "";
-
-        String browserTitle = webPage.getBrowserTitle();
-        String title = webPage.getTitle();
-        String parentTitle = getParentTitle(request, title);
-
-        if (browserTitle != null && !browserTitle.isEmpty()) {
-            result = browserTitle;
-        } else if (parentTitle != null && !parentTitle.isEmpty()) {
-            result = title + SEPARATOR + parentTitle;
-        } else {
-            result = getWebsitePropertyList(request).getDefaultBrowserTitle() + SEPARATOR  + title;
-        }
-
-        return result;
-    }
-
-    private static String getParentTitle(HstRequest request, String actualPageTitle) {
-        String result = null;
-        
-        ResolvedSiteMapItem resolvedSiteMapItem = request.getRequestContext().getResolvedSiteMapItem();
-        HstSiteMapItem parentSiteMapItem = resolvedSiteMapItem.getHstSiteMapItem().getParentItem();
-        
-        if (parentSiteMapItem != null && parentSiteMapItem.getRelativeContentPath() != null) {
-            HippoBean parentSiteMapItemBean = BeanUtils.getBean(parentSiteMapItem.getRelativeContentPath());
-            if (parentSiteMapItemBean != null && parentSiteMapItemBean instanceof WebPage) {
-                String parentTitle = ((WebPage) parentSiteMapItemBean).getTitle();
-                if(!parentTitle.equals(actualPageTitle)){
-                    result = parentTitle;
-                }
-            }
-        }
-        
-        return result;
+    public static String getEnvironmentProperty(String propertyName) {
+        return System.getProperty(propertyName);
     }
 }

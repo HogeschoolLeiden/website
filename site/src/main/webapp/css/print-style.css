@@ -1,3 +1,4 @@
+@media print {
 	.hulp, 							/* do not print help */
 	.fbLikeShare, 					/* do like share buttons of fb flexible block */
 	footer .container, 
@@ -26,7 +27,8 @@
 	div.background.img, 
 	div.background.large.img,
 	.catalog.facebook.posts,
-	#row-disclaimer { display: none; }
+	#row-disclaimer,
+	.userlike { display: none; }
 	
 	#main.detail{padding-top: 0;}
 	#main.detail .col-md-9.detail-content { margin-top: 0;}
@@ -110,3 +112,4 @@
 	    .gallery.row a.col-xs-6.col-sm-4.col-md-4 {width: 32.3%!important; margin-left: 0.5%!important; margin-right: 0.5%!important;}
 	    .gallery.row a img {width: 100%!important;}
 	}
+}

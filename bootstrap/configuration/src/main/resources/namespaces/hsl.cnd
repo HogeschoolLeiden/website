@@ -68,6 +68,15 @@
 
 [hsl:ExternalLink] > hippo:compound, hippostd:relaxed
   orderable
+  
+[hsl:InternalLink] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hsl:HeadTeaserExternalLink] > hippo:compound, hsl:ExternalLink, hippostd:relaxed
+  orderable
+
+[hsl:HeadTeaserInternalLink] > hippo:compound, hsl:InternalLink, hippostd:relaxed
+  orderable
 
 [hsl:CarrouselItem] > hippo:compound, hippostd:relaxed
   orderable
@@ -97,9 +106,6 @@
   orderable
 
 [hsl:ImageSet] > hippogallery:imageset, hippogallery:relaxed
-  orderable
-
-[hsl:InternalLink] > hippo:compound, hippostd:relaxed
   orderable
 
 [hsl:HTInternalLink] > hippo:compound, hippostd:relaxed
