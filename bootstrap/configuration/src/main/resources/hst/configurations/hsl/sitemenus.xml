@@ -568,71 +568,40 @@
           <sv:property sv:name="hst:repobased" sv:type="Boolean">
             <sv:value>true</sv:value>
           </sv:property>
-          <sv:node sv:name="CBD">
+        </sv:node>
+        <sv:node sv:name="CBD">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:sitemenuitem</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:depth" sv:type="Long">
+            <sv:value>2</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:foldersonly" sv:type="Boolean">
+            <sv:value>false</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
+          <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
+          <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+            <sv:value>opleiden/opleidingen-voor-professionals/cbd</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:repobased" sv:type="Boolean">
+            <sv:value>true</sv:value>
+          </sv:property>
+          <sv:node sv:name="Cursussen">
             <sv:property sv:name="jcr:primaryType" sv:type="Name">
               <sv:value>hst:sitemenuitem</sv:value>
             </sv:property>
-            <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-              <sv:value>opleiden/opleidingen-voor-professionals/cbd</sv:value>
+            <sv:property sv:name="hst:foldersonly" sv:type="Boolean">
+              <sv:value>false</sv:value>
             </sv:property>
-            <sv:node sv:name="Nieuws">
-              <sv:property sv:name="jcr:primaryType" sv:type="Name">
-                <sv:value>hst:sitemenuitem</sv:value>
-              </sv:property>
-              <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-                <sv:value>opleiden/opleidingen-voor-professionals/cbd/nieuws</sv:value>
-              </sv:property>
-            </sv:node>
-            <sv:node sv:name="Cursussen">
-              <sv:property sv:name="jcr:primaryType" sv:type="Name">
-                <sv:value>hst:sitemenuitem</sv:value>
-              </sv:property>
-              <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
-              <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
-              <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-                <sv:value>opleiden/opleidingen-voor-professionals/nascholingen/Vakgebieden/bioscience-en-diagnostiek</sv:value>
-              </sv:property>
-            </sv:node>
-            <sv:node sv:name="Maatwerktrajecten">
-              <sv:property sv:name="jcr:primaryType" sv:type="Name">
-                <sv:value>hst:sitemenuitem</sv:value>
-              </sv:property>
-              <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
-              <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
-              <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-                <sv:value>opleiden/opleidingen-voor-professionals/cbd/maatwerktrajecten</sv:value>
-              </sv:property>
-            </sv:node>
-            <sv:node sv:name="Online lessen">
-              <sv:property sv:name="jcr:primaryType" sv:type="Name">
-                <sv:value>hst:sitemenuitem</sv:value>
-              </sv:property>
-              <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
-              <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
-              <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-                <sv:value>opleiden/opleidingen-voor-professionals/cbd/online-lessen</sv:value>
-              </sv:property>
-            </sv:node>
-            <sv:node sv:name="E learning">
-              <sv:property sv:name="jcr:primaryType" sv:type="Name">
-                <sv:value>hst:sitemenuitem</sv:value>
-              </sv:property>
-              <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
-              <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
-              <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-                <sv:value>opleiden/opleidingen-voor-professionals/cbd/e-learning</sv:value>
-              </sv:property>
-            </sv:node>
-            <sv:node sv:name="Medewerkers">
-              <sv:property sv:name="jcr:primaryType" sv:type="Name">
-                <sv:value>hst:sitemenuitem</sv:value>
-              </sv:property>
-              <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
-              <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
-              <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-                <sv:value>opleiden/opleidingen-voor-professionals/cbd/medewerkers/index</sv:value>
-              </sv:property>
-            </sv:node>
+            <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+              <sv:value>/nascholingen/Vakgebieden/bioscience-en-diagnostiek</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:repobased" sv:type="Boolean">
+              <sv:value>false</sv:value>
+            </sv:property>
           </sv:node>
         </sv:node>
         <sv:node sv:name="Opleidingen">
@@ -649,30 +618,6 @@
           <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
             <sv:value>true</sv:value>
             <sv:value>{"relativeContentPath": "pages/onderwijs/opleidingen-voor-professionals/nascholing-facetnav/Vakgebieden", "invisible": "false", "disabled": "false"}</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:repobased" sv:type="Boolean">
-            <sv:value>true</sv:value>
-          </sv:property>
-        </sv:node>
-        <sv:node sv:name="Masters">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>hst:sitemenuitem</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:depth" sv:type="Long">
-            <sv:value>4</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
-            <sv:value>disabled</sv:value>
-            <sv:value>root</sv:value>
-            <sv:value>invisible</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
-            <sv:value>true</sv:value>
-            <sv:value>{"relativeContentPath": "pages/onderwijs/opleidingen-voor-professionals/masters/index", "invisible": "false", "disabled": "false","showFacetNavigations":"false"}</sv:value>
-            <sv:value>true</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-            <sv:value>opleiden/opleidingen-voor-professionals/masters</sv:value>
           </sv:property>
           <sv:property sv:name="hst:repobased" sv:type="Boolean">
             <sv:value>true</sv:value>
