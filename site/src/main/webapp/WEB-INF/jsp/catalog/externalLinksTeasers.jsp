@@ -44,18 +44,8 @@
             
             <ul>
               <c:forEach items="${item.externallinks}" var="linkListItem">
-                <c:set var="alt">
-                  <c:choose>
-                    <c:when test="${not empty linkListItem.alt }">
-                      <c:out value="${linkListItem.alt}"></c:out>
-                    </c:when>
-                    <c:otherwise>
-                      <c:out value="${linkListItem.linkTitle}"></c:out>
-                    </c:otherwise>
-                  </c:choose>
-                </c:set>
                 <li>
-                  <a href="${linkListItem.linkUrl}" title="${alt}" ${linkListItem.newWindow ? 'class="external link" target="_blank"': '' }>
+                  <a href="${linkListItem.linkUrl}" rel="nofollow" title="${tag:getLinkAlt(linkListItem)}" ${linkListItem.newWindow ? 'class="external link" target="_blank"': '' }>
                     <span>${linkListItem.linkTitle}</span>
                   </a>
                 </li>
