@@ -211,7 +211,7 @@
       <sv:property sv:name="hst:label" sv:type="String">
         <sv:value>Formulieren</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hst:parameternames" sv:type="String">
+      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
         <sv:value>eforms_done_redirect</sv:value>
         <sv:value>eforms-from-name</sv:value>
         <sv:value>eforms-from-email</sv:value>
@@ -221,7 +221,7 @@
         <sv:value>eforms-body-html</sv:value>
         <sv:value>tryToUseMixin</sv:value>
       </sv:property>
-      <sv:property sv:multiple="true" sv:name="hst:parametervalues" sv:type="String">
+      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
         <sv:value>bedank/bedank-pagina</sv:value>
         <sv:value>Hippo Site Info</sv:value>
         <sv:value>info@hsl.com</sv:value>
@@ -229,88 +229,87 @@
         <sv:value>true</sv:value>
         <sv:value>mail/Session</sv:value>
         <sv:value>&lt;#if form.getTitle()?has_content&gt;
-    &lt;#if form.getTitle()?has_content&gt;
-    	&lt;h1&gt;${form.getTitle()}&lt;/h1&gt;
-    &lt;/#if&gt;
-    &lt;#if paragraph??&gt;&lt;p&gt;${paragraph}&lt;/p&gt;&lt;/#if&gt;
-    &lt;#if includeFieldData&gt;
-    	&lt;table&gt;
-    		&lt;#list form.getFields() as field&gt;
-    			&lt;#assign fieldType = field.type&gt;
-    			&lt;#assign multiple = field.isMultiple()&gt;
-    			&lt;#if multiple&gt;
-    				&lt;#if "checkboxgroup" == fieldType&gt;
-    					&lt;#assign multiValues = field.multiValues&gt;
-    					&lt;#list multiValues?keys as key&gt;
-    						&lt;#assign collection = multiValues[key]&gt;
-    						&lt;#list collection as itemValue&gt;
-    							&lt;#if itemValue??&gt;
-    								&lt;#if itemValue?has_content&gt;
-    									&lt;tr&gt;
-    										&lt;th align="left"&gt;${key}&lt;/th&gt;
-    										&lt;td align="left"&gt;${itemValue}&lt;/td&gt;
-    									&lt;/tr&gt;
-    								&lt;/#if&gt;
-    							&lt;/#if&gt;
-    						&lt;/#list&gt;
-    					&lt;/#list&gt;
-    					&lt;#assign otherFieldNameCheck = field.getName()+"-other"&gt;
-    					&lt;#if formMap.getField(otherFieldNameCheck)?has_content&gt;
-    						&lt;#assign otherField = formMap.getField(otherFieldNameCheck)&gt;
-    						&lt;tr&gt;
-    							&lt;th align="left"&gt;${otherFieldNameCheck}&lt;/th&gt;
-    							&lt;td align="left"&gt;${otherField.getValue()}&lt;/td&gt;
-    						&lt;/tr&gt;
-    					&lt;/#if&gt;
-    				&lt;#else&gt;
-    					&lt;#assign multiValues = field.multiValues&gt;
-    					&lt;#list multiValues?keys as key&gt;
-    						&lt;#assign collection = multiValues[key]&gt;
-    						&lt;#list collection as itemValue&gt;
-    							&lt;#if itemValue??&gt;
-    								&lt;#if itemValue?has_content&gt;
-    									&lt;tr&gt;
-    										&lt;th align="left"&gt;${key}&lt;/th&gt;
-    										&lt;td align="left"&gt;${itemValue}&lt;/td&gt;
-    									&lt;/tr&gt;
-    								&lt;/#if&gt;
-    							&lt;/#if&gt;
-    						&lt;/#list&gt;
-    					&lt;/#list&gt;
-    				&lt;/#if&gt;
-    			&lt;#else&gt;
-    				&lt;#if field.getValue()?has_content&gt;
-    					&lt;#if "datefield" == fieldType&gt;
-    						&lt;tr&gt;
-    							&lt;th align="left"&gt;${field.getLabelOrName()}&lt;/th&gt;
-    							&lt;td align="left"&gt;${formMap.getField(field.getName()).getValue()}&lt;/td&gt;
-    						&lt;/tr&gt;
-    					&lt;#else&gt;
-    						&lt;#if "radiogroup" == fieldType&gt;
-    							&lt;tr&gt;
-    								&lt;th align="left"&gt;${field.getLabelOrName()}&lt;/th&gt;
-    								&lt;td align="left"&gt;${field.getValue()}&lt;/td&gt;
-    							&lt;/tr&gt;
-    							&lt;#assign otherFieldNameRadio = field.getName()+"-other"&gt;
-    							&lt;#if formMap.getField(otherFieldNameRadio)?has_content&gt;
-    								&lt;#assign otherField = formMap.getField(otherFieldNameRadio)&gt;
-    								&lt;tr&gt;
-    									&lt;th align="left"&gt;${otherFieldNameRadio}&lt;/th&gt;
-    									&lt;td align="left"&gt;${otherField.getValue()}&lt;/td&gt;
-    								&lt;/tr&gt;
-    	 						&lt;/#if&gt;
-    						&lt;#else&gt;
-    							&lt;tr&gt;
-    								&lt;th align="left"&gt;${field.getLabelOrName()}&lt;/th&gt;
-    								&lt;td align="left"&gt;${field.getValue()}&lt;/td&gt;
-    							&lt;/tr&gt;
-    						&lt;/#if&gt;
-    					&lt;/#if&gt;
-    				&lt;/#if&gt;
-    			&lt;/#if&gt;
-    		&lt;/#list&gt;
-    	&lt;/table&gt;
-    &lt;/#if&gt;</sv:value>
+	&lt;h1&gt;${form.getTitle()}&lt;/h1&gt;
+&lt;/#if&gt;
+&lt;#if paragraph??&gt;&lt;p&gt;${paragraph}&lt;/p&gt;&lt;/#if&gt;
+&lt;#if includeFieldData&gt;
+	&lt;table&gt;
+		&lt;#list form.getFields() as field&gt;
+			&lt;#assign fieldType = field.type&gt;
+			&lt;#assign multiple = field.isMultiple()&gt;
+			&lt;#if multiple&gt;
+				&lt;#if "checkboxgroup" == fieldType&gt;
+					&lt;#assign multiValues = field.multiValues&gt;
+					&lt;#list multiValues?keys as key&gt;
+						&lt;#assign collection = multiValues[key]&gt;
+						&lt;#list collection as itemValue&gt;
+							&lt;#if itemValue??&gt;
+								&lt;#if itemValue?has_content&gt;
+									&lt;tr&gt;
+										&lt;th align="left"&gt;${key}&lt;/th&gt;
+										&lt;td align="left"&gt;${itemValue}&lt;/td&gt;
+									&lt;/tr&gt;
+								&lt;/#if&gt;
+							&lt;/#if&gt;
+						&lt;/#list&gt;
+					&lt;/#list&gt;
+					&lt;#assign otherFieldNameCheck = field.getName()+"-other"&gt;
+					&lt;#if formMap.getField(otherFieldNameCheck)?has_content&gt;
+						&lt;#assign otherField = formMap.getField(otherFieldNameCheck)&gt;
+						&lt;tr&gt;
+							&lt;th align="left"&gt;${otherFieldNameCheck}&lt;/th&gt;
+							&lt;td align="left"&gt;${otherField.getValue()}&lt;/td&gt;
+						&lt;/tr&gt;
+					&lt;/#if&gt;
+				&lt;#else&gt;
+					&lt;#assign multiValues = field.multiValues&gt;
+					&lt;#list multiValues?keys as key&gt;
+						&lt;#assign collection = multiValues[key]&gt;
+						&lt;#list collection as itemValue&gt;
+							&lt;#if itemValue??&gt;
+								&lt;#if itemValue?has_content&gt;
+									&lt;tr&gt;
+										&lt;th align="left"&gt;${key}&lt;/th&gt;
+										&lt;td align="left"&gt;${itemValue}&lt;/td&gt;
+									&lt;/tr&gt;
+								&lt;/#if&gt;
+							&lt;/#if&gt;
+						&lt;/#list&gt;
+					&lt;/#list&gt;
+				&lt;/#if&gt;
+			&lt;#else&gt;
+				&lt;#if field.getValue()?has_content&gt;
+					&lt;#if "datefield" == fieldType&gt;
+						&lt;tr&gt;
+							&lt;th align="left"&gt;${field.getLabelOrName()}&lt;/th&gt;
+							&lt;td align="left"&gt;${formMap.getField(field.getName()).getValue()}&lt;/td&gt;
+						&lt;/tr&gt;
+					&lt;#else&gt;
+						&lt;#if "radiogroup" == fieldType&gt;
+							&lt;tr&gt;
+								&lt;th align="left"&gt;${field.getLabelOrName()}&lt;/th&gt;
+								&lt;td align="left"&gt;${field.getValue()}&lt;/td&gt;
+							&lt;/tr&gt;
+							&lt;#assign otherFieldNameRadio = field.getName()+"-other"&gt;
+							&lt;#if formMap.getField(otherFieldNameRadio)?has_content&gt;
+								&lt;#assign otherField = formMap.getField(otherFieldNameRadio)&gt;
+								&lt;tr&gt;
+									&lt;th align="left"&gt;${otherFieldNameRadio}&lt;/th&gt;
+									&lt;td align="left"&gt;${otherField.getValue()}&lt;/td&gt;
+								&lt;/tr&gt;
+	 						&lt;/#if&gt;
+						&lt;#else&gt;
+							&lt;tr&gt;
+								&lt;th align="left"&gt;${field.getLabelOrName()}&lt;/th&gt;
+								&lt;td align="left"&gt;${field.getValue()}&lt;/td&gt;
+							&lt;/tr&gt;
+						&lt;/#if&gt;
+					&lt;/#if&gt;
+				&lt;/#if&gt;
+			&lt;/#if&gt;
+		&lt;/#list&gt;
+	&lt;/table&gt;
+&lt;/#if&gt;</sv:value>
         <sv:value>true</sv:value>
       </sv:property>
       <sv:property sv:name="hst:resourcetemplate" sv:type="String">

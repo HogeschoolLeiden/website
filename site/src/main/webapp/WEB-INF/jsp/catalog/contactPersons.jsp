@@ -8,7 +8,7 @@
 <%@ taglib prefix="tag" uri="/WEB-INF/tags/tags.tld"%>
 <%@ taglib prefix='opw' uri="http://open-web.nl/hippo/prototype"%>
 
-<hst:setBundle basename="nl.hsleiden.channelmanager.Messages, nl.hsleiden.widget.Messages, nl.hsleiden.blog.Messages" />
+<hst:setBundle basename="nl.hsleiden.channelmanager.Messages, nl.hsleiden.widget.Messages, nl.hsleiden.blog.Messages, nl.hsleiden.general.Messages" />
 
 <hst:defineObjects />
 <c:set var="isCmsRequest" value="${hstRequest.requestContext.cmsRequest}" />
@@ -20,7 +20,7 @@
 </c:if>
 
 <c:if test="${not empty model.items and fn:length(model.items)>0}">
-  
+ 
   <c:forEach var="item" items="${model.items}" varStatus="zebra">
   
     <c:set var="noImg">
@@ -62,11 +62,9 @@
             <li><h2><span itemprop="name">${item.name }</span></h2></li>
             <li><h3><span itemprop="role">${item.function }</span></h3></li>            
             <c:if test="${not empty item.mail }">
-              <li>
-                <c:set var="email">mailto:${item.mail}?subject=<fmt:message key="contact.person.subject"/></c:set>
-                <a title="${item.mail }" href="${fn:replace(email, ' ', '%20')}">
-                    <c:out value="${item.mail }" />
-                </a>
+              <c:set var="subject"><fmt:message key="contact.person.subject"/></c:set>
+              <li class="nospam" data-n="${item.mailName}" data-d="${item.domain}" data-s="${subject}">
+                  <span class="sms"><fmt:message key="mail.protect.message"/></span>
               </li>
             </c:if>
             <c:if test="${not empty item.phone }">
