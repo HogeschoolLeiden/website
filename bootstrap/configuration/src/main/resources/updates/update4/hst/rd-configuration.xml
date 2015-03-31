@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="rd">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>hst:configuration</sv:value>
+  </sv:property>
+  <sv:property sv:name="jcr:uuid" sv:type="String">
+    <sv:value>da6a93cf-01aa-488f-a3ba-2d511541f127</sv:value>
+  </sv:property>
+  <sv:node sv:name="hst:sitemap">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:sitemap</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>d7dc578a-4765-46b9-90da-7a0bdaf074d2</sv:value>
+    </sv:property>
+    <sv:node sv:name="_any_">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:sitemapitem</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>d7091b47-8258-4121-b40e-9b5766d9fca6</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+        <sv:value>hst:pages/rd</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+        <sv:value>statusCode</sv:value>
+        <sv:value>redirectTo</sv:value>
+        <sv:value>preservePath</sv:value>
+        <sv:value>path</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+        <sv:value>301</sv:value>
+        <sv:value>http://www.hsleiden.nl</sv:value>
+        <sv:value>true</sv:value>
+        <sv:value>${1}</sv:value>
+      </sv:property>
+    </sv:node>
+  </sv:node>
+  <sv:node sv:name="hst:pages">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:pages</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>5f827b5d-a08b-4f12-8640-b2ae74a1410c</sv:value>
+    </sv:property>
+    <sv:node sv:name="rd">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:component</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>6f415a53-38a5-4150-b3c4-921600e65424</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentclassname" sv:type="String">
+        <sv:value>com.tdclighthouse.prototype.components.RedirectComponent</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+        <sv:value>statusCode</sv:value>
+        <sv:value>redirectTo</sv:value>
+        <sv:value>preservePath</sv:value>
+        <sv:value>path</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+        <sv:value>${statusCode}</sv:value>
+        <sv:value>${redirectTo}</sv:value>
+        <sv:value>${preservePath}</sv:value>
+        <sv:value>${path}</sv:value>
+      </sv:property>
+    </sv:node>
+  </sv:node>
+  <sv:node sv:name="hst:components">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:components</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>c23072cb-f03b-45d5-bae4-b2d58e7fbdef</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="hst:templates">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:templates</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>e37a0808-c694-4f06-968f-faaea30c1c66</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="hst:sitemenus">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:sitemenus</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>55f77b1b-56e4-47a8-b407-1012a4244f35</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="hst:sitemapitemhandlers">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:sitemapitemhandlers</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>f4310758-00fb-4b81-ba7b-1046ff458c56</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="hst:catalog">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:catalog</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>9a44906b-db63-4e4a-812d-f140e62a4f92</sv:value>
+    </sv:property>
+  </sv:node>
+</sv:node>
