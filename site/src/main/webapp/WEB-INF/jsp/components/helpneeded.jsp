@@ -22,7 +22,7 @@
           
             <c:choose>
               <c:when test="${fn:startsWith(item.externallink.linkUrl, 'mailto')}">
-                <span class="helpsms" data-n="${tag:getMailName(item.externallink.linkUrl)}" data-d="${tag:getMailDomain(item.externallink.linkUrl)}">
+                <span class="nospam" data-n="${tag:getMailName(item.externallink.linkUrl)}" data-d="${tag:getMailDomain(item.externallink.linkUrl)}">
                   <fmt:message key="mail.protect.helpmessage"/>
                 </span>
               </c:when>

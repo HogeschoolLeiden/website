@@ -62,9 +62,10 @@
             <li><h2><span itemprop="name">${item.name }</span></h2></li>
             <li><h3><span itemprop="role">${item.function }</span></h3></li>            
             <c:if test="${not empty item.mail }">
-              <c:set var="subject"><fmt:message key="contact.person.subject"/></c:set>
-              <li class="nospam" data-n="${item.mailName}" data-d="${item.domain}" data-s="${subject}">
-                  <span class="sms"><fmt:message key="mail.protect.message"/></span>
+              <li>
+                  <span class="nospam" data-n="${item.mailName}" data-d="${item.domain}">
+                    <fmt:message key="mail.protect.message"/>
+                  </span>
               </li>
             </c:if>
             <c:if test="${not empty item.phone }">
