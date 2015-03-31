@@ -31,25 +31,14 @@
       <sv:value>Configuratie</sv:value>
     </sv:property>
   </sv:node>
-  <sv:node sv:name="hippo:translation">
-    <sv:property sv:name="jcr:primaryType" sv:type="Name">
-      <sv:value>hippo:translation</sv:value>
-    </sv:property>
-    <sv:property sv:name="hippo:language" sv:type="String">
-      <sv:value/>
-    </sv:property>
-    <sv:property sv:name="hippo:message" sv:type="String">
-      <sv:value>Configuratie</sv:value>
-    </sv:property>
-  </sv:node>
   <sv:node sv:name="valuelists">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hippostd:folder</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
       <sv:value>hippotranslation:translated</sv:value>
-      <sv:value>hippo:translated</sv:value>
       <sv:value>mix:versionable</sv:value>
+      <sv:value>hippo:translated</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>0710213c-430e-44b9-871c-dabb4f22d510</sv:value>
@@ -1458,8 +1447,8 @@
     </sv:property>
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
       <sv:value>hippotranslation:translated</sv:value>
-      <sv:value>hippo:translated</sv:value>
       <sv:value>mix:versionable</sv:value>
+      <sv:value>hippo:translated</sv:value>
     </sv:property>
     <sv:property sv:name="jcr:uuid" sv:type="String">
       <sv:value>9d40f53f-c9e7-4a90-9a4f-706c3396eaf5</sv:value>
@@ -2355,7 +2344,7 @@
           <sv:value>2014-07-08T16:56:32.253+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2015-03-31T10:25:18.439+02:00</sv:value>
+          <sv:value>2015-03-31T17:38:56.458+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -2390,7 +2379,9 @@
           <sv:value/>
           <sv:value/>
           <sv:value/>
-		  <sv:value/>
+          <sv:value/>
+          <sv:value/>
+          <sv:value/>
         </sv:property>
         <sv:property sv:name="resourcebundle:id" sv:type="String">
           <sv:value>nl.hsleiden.general.Messages</sv:value>
@@ -2420,6 +2411,8 @@
           <sv:value>no.results.found.message</sv:value>
           <sv:value>mail.protect.message</sv:value>
           <sv:value>mail.protect.helpmessage</sv:value>
+          <sv:value>form.pay</sv:value>
+          <sv:value>form.confirm</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages" sv:type="String" sv:multiple="true">
           <sv:value>Available Downloads</sv:value>
@@ -2446,6 +2439,8 @@
           <sv:value>Uw zoekvraag: "{0}" heeft geen resultaten opgeleverd.</sv:value>
           <sv:value>Dit e-mailadres is afgeschermd. Activeer JavaScript om het te zien.</sv:value>
           <sv:value>Mail afgeschermd. Activeer Javascript.</sv:value>
+          <sv:value>Betaal</sv:value>
+          <sv:value>Bevestiging</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages_en" sv:type="String" sv:multiple="true">
           <sv:value>Available Downloads</sv:value>
@@ -2472,6 +2467,8 @@
           <sv:value>Your search: "{0}" has not given any results.</sv:value>
           <sv:value>This email address is protected. Please enable JavaScript to see it.</sv:value>
           <sv:value>Mail protected. Enable Javascript.</sv:value>
+          <sv:value>Pay</sv:value>
+          <sv:value>Confirmation</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages_nl" sv:type="String" sv:multiple="true">
           <sv:value>Available Downloads</sv:value>
@@ -2498,6 +2495,8 @@
           <sv:value>Uw zoekvraag: "{0}" heeft geen resultaten opgeleverd.</sv:value>
           <sv:value>Dit e-mailadres is afgeschermd. Activeer JavaScript om het te zien.</sv:value>
           <sv:value>Mail afgeschermd. Activeer Javascript.</sv:value>
+          <sv:value>Betaal</sv:value>
+          <sv:value>Bevestiging</sv:value>
         </sv:property>
       </sv:node>
       <sv:node sv:name="general-messages">
@@ -2530,7 +2529,7 @@
           <sv:value>2014-07-08T16:56:32.253+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2015-03-31T10:26:44.364+02:00</sv:value>
+          <sv:value>2015-03-31T17:40:28.543+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -2542,6 +2541,8 @@
           <sv:value>nl</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:descriptions" sv:type="String" sv:multiple="true">
+          <sv:value/>
+          <sv:value/>
           <sv:value/>
           <sv:value/>
           <sv:value/>
@@ -2595,6 +2596,8 @@
           <sv:value>no.results.found.message</sv:value>
           <sv:value>mail.protect.message</sv:value>
           <sv:value>mail.protect.helpmessage</sv:value>
+          <sv:value>form.pay</sv:value>
+          <sv:value>form.confirm</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages" sv:type="String" sv:multiple="true">
           <sv:value>Available Downloads</sv:value>
@@ -2621,6 +2624,8 @@
           <sv:value>Uw zoekvraag: "{0}" heeft geen resultaten opgeleverd.</sv:value>
           <sv:value>Dit e-mailadres is afgeschermd. Activeer JavaScript om het te zien.</sv:value>
           <sv:value>Mail afgeschermd. Activeer Javascript.</sv:value>
+          <sv:value>Betaal</sv:value>
+          <sv:value>Bevestiging</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages_en" sv:type="String" sv:multiple="true">
           <sv:value>Available Downloads</sv:value>
@@ -2647,6 +2652,8 @@
           <sv:value>Your search: "{0}" has not given any results.</sv:value>
           <sv:value>This email address is protected. Please enable JavaScript to see it.</sv:value>
           <sv:value>Mail protected. Enable Javascript.</sv:value>
+          <sv:value>Pay</sv:value>
+          <sv:value>Confirmation</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages_nl" sv:type="String" sv:multiple="true">
           <sv:value>Available Downloads</sv:value>
@@ -2673,6 +2680,8 @@
           <sv:value>Uw zoekvraag: "{0}" heeft geen resultaten opgeleverd.</sv:value>
           <sv:value>Dit e-mailadres is afgeschermd. Activeer JavaScript om het te zien.</sv:value>
           <sv:value>Mail afgeschermd. Activeer Javascript.</sv:value>
+          <sv:value>Betaal</sv:value>
+          <sv:value>Bevestiging</sv:value>
         </sv:property>
       </sv:node>
       <sv:node sv:name="general-messages">
@@ -2704,13 +2713,13 @@
           <sv:value>2014-07-08T16:56:32.253+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2015-03-31T10:26:44.364+02:00</sv:value>
+          <sv:value>2015-03-31T17:40:28.543+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
-          <sv:value>2015-03-31T10:26:50.041+02:00</sv:value>
+          <sv:value>2015-03-31T17:40:30.772+02:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippotranslation:id" sv:type="String">
           <sv:value>1f1b3223-e5aa-4c2b-9747-9a8102f8ab5e</sv:value>
@@ -2719,6 +2728,8 @@
           <sv:value>nl</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:descriptions" sv:type="String" sv:multiple="true">
+          <sv:value/>
+          <sv:value/>
           <sv:value/>
           <sv:value/>
           <sv:value/>
@@ -2772,6 +2783,8 @@
           <sv:value>no.results.found.message</sv:value>
           <sv:value>mail.protect.message</sv:value>
           <sv:value>mail.protect.helpmessage</sv:value>
+          <sv:value>form.pay</sv:value>
+          <sv:value>form.confirm</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages" sv:type="String" sv:multiple="true">
           <sv:value>Available Downloads</sv:value>
@@ -2796,8 +2809,10 @@
           <sv:value>follow {0} on linkedin</sv:value>
           <sv:value>follow {0} on  google plus</sv:value>
           <sv:value>Uw zoekvraag: "{0}" heeft geen resultaten opgeleverd.</sv:value>
-          <sv:value>Dit e-mailadres is afgeschermd. Activeer Javascript om het te zien.</sv:value>
+          <sv:value>Dit e-mailadres is afgeschermd. Activeer JavaScript om het te zien.</sv:value>
           <sv:value>Mail afgeschermd. Activeer Javascript.</sv:value>
+          <sv:value>Betaal</sv:value>
+          <sv:value>Bevestiging</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages_en" sv:type="String" sv:multiple="true">
           <sv:value>Available Downloads</sv:value>
@@ -2822,8 +2837,10 @@
           <sv:value>follow {0} on linkedin</sv:value>
           <sv:value>follow {0} on google plus</sv:value>
           <sv:value>Your search: "{0}" has not given any results.</sv:value>
-          <sv:value>This email address is protected. Please enable Javascript to see it.</sv:value>
-          <sv:value>Mail protectes. Enable Javascript.</sv:value>
+          <sv:value>This email address is protected. Please enable JavaScript to see it.</sv:value>
+          <sv:value>Mail protected. Enable Javascript.</sv:value>
+          <sv:value>Pay</sv:value>
+          <sv:value>Confirmation</sv:value>
         </sv:property>
         <sv:property sv:name="resourcebundle:messages_nl" sv:type="String" sv:multiple="true">
           <sv:value>Available Downloads</sv:value>
@@ -2848,8 +2865,10 @@
           <sv:value>follow {0} on linkedin</sv:value>
           <sv:value>follow {0} on  google plus</sv:value>
           <sv:value>Uw zoekvraag: "{0}" heeft geen resultaten opgeleverd.</sv:value>
-          <sv:value>Dit e-mailadres is afgeschermd. Activeer Javascript om het te zien.</sv:value>
+          <sv:value>Dit e-mailadres is afgeschermd. Activeer JavaScript om het te zien.</sv:value>
           <sv:value>Mail afgeschermd. Activeer Javascript.</sv:value>
+          <sv:value>Betaal</sv:value>
+          <sv:value>Bevestiging</sv:value>
         </sv:property>
       </sv:node>
     </sv:node>
