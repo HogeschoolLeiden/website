@@ -55,6 +55,14 @@ public class LinksAndBrowserTitleFunctions {
         return result;
     }
 
+    public static String getMailName(String mail) {
+        return mail.substring(mail.indexOf(":")+1, mail.indexOf("@"));
+    }
+
+    public static String getMailDomain(String mail) {
+        return mail.substring(mail.indexOf("@")+1);
+    }
+
     private static String composeBrowserTitle(HstRequest request, WebPage webPage) {
         String result = "";
         String browserTitle = webPage.getBrowserTitle();
