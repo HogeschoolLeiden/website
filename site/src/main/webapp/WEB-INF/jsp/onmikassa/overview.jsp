@@ -54,7 +54,7 @@
     <form method="post" action="${omnikassaRequest.url}" class="omnikassa-overview">
       <input class="btn" type="hidden" name="Data" value="${omnikassaRequest.data}"> <input class="btn" type="hidden" name="InterfaceVersion"
         value="${omnikassaRequest.interfaceVersion}"> <input class="btn" type="hidden" name="Seal" value="${omnikassaRequest.seal}">
-      <fmt:message key="from.pay" var="pay" />
+      <fmt:message key="form.pay" var="pay" />
       <input class="btn" type="submit" value="${pay}" />
     </form>
   </c:when>
@@ -63,7 +63,7 @@
         <hst:link siteMapItemRefId="omnikassaReturnPage" var="confirmationUrl" >
           <hst:param name="order_id" value="${formMap.value['order id'].value}"/>
         </hst:link>
-        <a href="${confirmationUrl}" class="btn"><fmt:message key="from.confirm"/></a>
+        <a href="${confirmationUrl}" class="btn"><fmt:message key="form.confirm"/></a>
       </div>
   </c:otherwise>
 </c:choose>
