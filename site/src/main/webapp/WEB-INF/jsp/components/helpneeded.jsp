@@ -27,7 +27,8 @@
                 </span>
               </c:when>
               <c:otherwise>
-                <a href="${item.externallink.linkUrl}" title="${tag:getLinkAlt(item.externallink)}" ${item.externallink.newWindow ? 'class="external link" target="_blank"': '' }>      
+                <a href="${item.externallink.linkUrl}" rel="nofollow" title="${tag:getLinkAlt(item.externallink)}" 
+                    ${item.externallink.newWindow ? 'target="_blank"': '' }>      
                    <c:out value="${item.externallink.linkTitle }" escapeXml="true" />
                 </a>
               </c:otherwise>

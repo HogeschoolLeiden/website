@@ -19,9 +19,11 @@
       <c:choose>
 		<c:when test="${not empty myMenuItem.hstLink }">
 			<hst:link var="link" link="${myMenuItem.hstLink}" />
+            <c:set var="ext" value="false"/>
 		</c:when>
 		<c:otherwise>
 			<c:set var="link" value="${myMenuItem.externalLink}" />
+            <c:set var="ext" value="true"/>
 		</c:otherwise>
 	  </c:choose>
 	  <c:choose>
@@ -40,7 +42,7 @@
 	  </c:choose>
 	
 	  <li ${not empty cssClass ? ' class=\"': ''}${cssClass}${not empty cssClass ? '\"': ''}>
-		<a href="${link}"> 
+		<a href="${link}" ${ext ? 'rel="nofollow"': '' }> 
 		  <c:out value="${myMenuItem.name}" />
 		</a>
         <c:if test="${not empty opw:getSubmenuItems(myMenuItem)}">
