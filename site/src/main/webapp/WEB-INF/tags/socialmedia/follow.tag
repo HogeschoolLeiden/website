@@ -19,13 +19,13 @@
 
 
 <li class="facebook">
-  <a href="http://www.facebook.com/HSLeidenNL" target="_blank" title="${facebook}">
+  <a href="http://www.facebook.com/HSLeidenNL" target="_blank" title="${facebook}" rel="nofollow">
     <span>${facebook}</span>
   </a>
 </li>
 
 <li class="twitter">
-  <a href="http://www.twitter.com/HSLeidenNL" target="_blank" title="${twitter}">
+  <a href="http://www.twitter.com/HSLeidenNL" target="_blank" title="${twitter}" rel="nofollow">
     <span>${twitter}</span>
   </a>
 </li>
@@ -37,18 +37,18 @@
 </li>
 
 <li class="linkedin">
-  <a href="http://www.linkedin.com/company/hogeschool-leiden" target="_blank" title="${linkedin}">
+  <a href="http://www.linkedin.com/company/hogeschool-leiden" target="_blank" title="${linkedin}" rel="nofollow">
     <span>${linkedin}</span>
   </a>
 </li>
 <li class="instagram">
-  <a href="https://instagram.com/hsleiden" target="_blank" title="${instagram}">
+  <a href="https://instagram.com/hsleiden" target="_blank" title="${instagram}" rel="nofollow">
     <span>${instagram}</span>
   </a>
 </li>
 
 <li class="youtube">
-  <a href="https://www.youtube.com/user/hogeschoolleiden" target="_blank" title="${youtube}">
+  <a href="https://www.youtube.com/user/hogeschoolleiden" target="_blank" title="${youtube}" rel="nofollow">
     <span>${youtube}</span>
   </a>
 </li>

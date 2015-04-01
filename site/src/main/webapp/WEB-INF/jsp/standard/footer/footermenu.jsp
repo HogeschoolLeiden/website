@@ -20,9 +20,11 @@
       <c:set var="link">
         <hst:link path="${path}" mount="hsl" />
       </c:set>
+      <c:set var="ext" value="false"/>
     </c:when>
     <c:otherwise>
       <c:set var="link" value="${siteMenuItem.externalLink}" />
+      <c:set var="ext" value="true"/>
     </c:otherwise>
   </c:choose>
   <c:choose>
@@ -46,7 +48,8 @@
 
   <div class="col-md-2 col-sm-4 navlist">
     <h2>
-      <a href="${link}"> <c:out value="${siteMenuItem.name}" />
+      <a href="${link}" ${ext ? 'rel="nofollow"': '' }> 
+        <c:out value="${siteMenuItem.name}" /> 
       </a>
     </h2>
     <ul class="hidden-xs">
@@ -57,13 +60,15 @@
             <c:set var="link">
               <hst:link path="${path}" mount="hsl" />
             </c:set>
+            <c:set var="ext" value="false"/>
           </c:when>
           <c:otherwise>
             <c:set var="link" value="${subItem.externalLink}" />
+            <c:set var="ext" value="true"/>
           </c:otherwise>
         </c:choose>
         <li ${not empty cssClass ? ' class=\"': ''} ${cssClass} ${not empty cssClass ? '\"': ''}>
-          <a href="${link}"> 
+          <a href="${link}" ${ext ? 'rel="nofollow"': '' }> 
             <c:out value="${subItem.name}" />
           </a>
         </li>

@@ -38,18 +38,6 @@
   </hst:headContribution>
 
 <div class="share clearfix">
-
-  <%-- 
-  enable after css
-  <c:if test="${not empty document}">
-      <hst:link mount="pdf" var="pdfLink"/>
-      <a  class="pdf" title="${pagePdf}" 
-          href="${pdfLink}?${pageContext.request.queryString}">
-        <c:out value="${pagePdf}"/>
-      </a>
-
-  </c:if> 
-  --%>
   
   <%-- FACEBOOK --%>
   <c:url var="fbUrl" value="https://www.facebook.com/sharer/sharer.php">
@@ -57,7 +45,7 @@
     <c:param name="t" value="=${document.title}"/>
   </c:url>
   
-  <a class="fa fa-facebook-square col-md-4 col-sm-4 col-xs-12" 
+  <a class="fa fa-facebook-square col-md-4 col-sm-4 col-xs-12" rel="nofollow"
       title="${pageFacebook}" target="_blank" href="${fn:escapeXml(fbUrl)}" >
        <span><c:out value="${pageFacebook}"/></span>
   </a>
@@ -68,7 +56,7 @@
   </c:url>
         
   <a class="fa fa-twitter col-md-4 col-sm-4 col-xs-12" title="${pageTwitter}" target="_blank"
-     href="${fn:escapeXml(twUrl)}">
+     href="${fn:escapeXml(twUrl)}" rel="nofollow">
      <span><c:out value="${pageTwitter}"/></span>
   </a>
   
@@ -77,7 +65,7 @@
 	<c:param name="url" value="${url}"/>
   </c:url>
   <a class="fa fa-google-plus col-md-4 col-sm-4 col-xs-12" title="${googleplus}"
-         href="${fn:escapeXml(googlePlusUrl)}" target="_blank">
+         href="${fn:escapeXml(googlePlusUrl)}" target="_blank" rel="nofollow">
          <span><c:out value="${googleplus}"/></span>
   </a>
   
@@ -91,7 +79,7 @@
       <c:param name="summary" value="${fn:substring(document.introduction,0, 256)}"/>
     </c:if>
   </c:url>
-  <a class="fa fa-linkedin col-md-4 col-sm-4 col-xs-12" title="${linkedin}" 
+  <a class="fa fa-linkedin col-md-4 col-sm-4 col-xs-12" title="${linkedin}" rel="nofollow"
      href="${fn:escapeXml(linkedInUrl)}" target="_blank"><span><c:out value="${linkedin}"/></span>
   </a>
 
@@ -99,7 +87,7 @@
   <c:set var="email">
     mailto:?subject=<fmt:message key="forward.mail.subject"/>&body=<fmt:message key="forward.mail.body"/>${fn:replace(url, ' ', '%20')}
   </c:set>
-  <a class="fa fa-envelope col-md-4 col-sm-4 col-xs-12" title="${forward}"
+  <a class="fa fa-envelope col-md-4 col-sm-4 col-xs-12" title="${forward}" rel="nofollow"
      href="<c:out value="${fn:replace(email, ' ', '%20')}" escapeXml="true"/>">
      <span><c:out value="${forward}"/></span>     
   </a>

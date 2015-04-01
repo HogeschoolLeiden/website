@@ -36,22 +36,22 @@
           <c:choose>
             <c:when test="${account.type eq 'twitter'}">
               <li class="twitter">
-                <a href="${account.link}" target="_blank" title="${twitter}"></a>
+                <a href="${account.link}" target="_blank" title="${twitter}" rel="nofollow"></a>
               </li>
             </c:when>
             <c:when test="${account.type eq 'linkedin'}">
               <li class="linkedin">
-                <a href="${account.link}" target="_blank" title="${linkedin}"></a>
+                <a href="${account.link}" target="_blank" title="${linkedin}" rel="nofollow"></a>
               </li>
             </c:when>
             <c:when test="${account.type eq 'facebook'}">
                <li class="facebook">
-                  <a href="${account.link}" target="_blank" title="${facebook}"></a>
+                  <a href="${account.link}" target="_blank" title="${facebook}" rel="nofollow"></a>
                </li>
             </c:when>
             <c:when test="${account.type eq 'googleplus'}">
                 <li class="googleplus">
-                  <a href="${account.link}" target="_blank" title="${googleplus}"></a>
+                  <a href="${account.link}" target="_blank" title="${googleplus}" rel="nofollow"></a>
                 </li>
             </c:when>
           </c:choose>

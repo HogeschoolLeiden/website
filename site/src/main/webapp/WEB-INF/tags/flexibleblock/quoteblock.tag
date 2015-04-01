@@ -74,7 +74,7 @@
           </c:url>
         
           <li>
-            <a class="fa fa-linkedin" title="${linkedin}" target="_blank" href="${fn:escapeXml(linkedinQuoteUrl)}">
+            <a class="fa fa-linkedin" title="${linkedin}" target="_blank" href="${fn:escapeXml(linkedinQuoteUrl)}" rel="nofollow">
                <span class="hidden">LinkedIn</span>
             </a>
           </li>
@@ -95,7 +95,7 @@
           </c:url>
   
           <li>
-            <a class="fa fa-twitter" target="_blank" title="${twitter}" href="${fn:escapeXml(twQuoteUrl)}" > 
+            <a class="fa fa-twitter" target="_blank" title="${twitter}" href="${fn:escapeXml(twQuoteUrl)}" rel="nofollow"> 
               <span class="hidden">Twitter</span>
             </a>
           </li>

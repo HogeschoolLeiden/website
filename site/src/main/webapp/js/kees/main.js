@@ -32,48 +32,20 @@ $(document).ready(function() {
 
 function renderMail() {
 	var mlink = jQuery(".nospam");
-	var hlink = jQuery(".helpsms");
-
-	if (mlink) {
-		var n = mlink.attr('data-n');
-		var d = mlink.attr('data-d');
-		var s = mlink.attr('data-s');
-		generateMailToLink(n, d, s, mlink);
-	}
-
-	if (hlink) {
-		var n = hlink.attr('data-n');
-		var d = hlink.attr('data-d');
-		generateHelpMailToLink(n, d, hlink);
-	}
+	mlink.each(function(){
+		var n = jQuery(this).attr('data-n');
+		var d = jQuery(this).attr('data-d');
+		generateMailToLink(n, d, jQuery(this));
+	
+	});
 }
 
-function generateHelpMailToLink(name, domain, mlink) {
+function generateMailToLink(name, domain, mlink) {
 	if (name) {
 		if (domain) {
-
-			var aElem = "<a href=\"mailto:" + name + "@" + domain + "\">"
-					+ name + "@" + domain + "<\/a>";
-
+			var aElem = "<a href=\"mailto:" + name + "@" + domain + "\" >" + name + "@" + domain + "<\/a>";
 			mlink.parent().append(aElem);
 			mlink.remove();
-		}
-	}
-}
-
-function generateMailToLink(name, domain, subject, mlink) {
-	if (name) {
-		if (domain) {
-
-			var aElem = "<a href=\"mailto:" + name + "@" + domain;
-			if (subject) {
-				aElem = aElem + "?subject=" + subject + "\">" + name + "@"
-						+ domain + "<\/a>";
-			} else {
-				aElem = aElem + "\">" + name + "@" + domain + "<\/a>";
-			}
-			mlink.children().first().remove();
-			mlink.append(aElem);
 		}
 	}
 }

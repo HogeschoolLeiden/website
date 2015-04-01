@@ -47,8 +47,8 @@
             <c:choose>
               <%-- External link case --%>
               <c:when test="${tag:getConfiguredLink(item) eq 'ext' }">
-                 <a class="more"  href="${item.externallink.linkUrl}" title="${tag:getLinkAlt(item.externallink)}" 
-                   ${item.externallink.newWindow ? 'target="_blank"': '' }>
+                 <a class="more"  href="${item.externallink.linkUrl}" rel="nofollow" 
+                    title="${tag:getLinkAlt(item.externallink)}" ${item.externallink.newWindow ? 'target="_blank"': '' }>
                    <c:out value="${item.externallink.linkTitle}"/>
                  </a>
               </c:when>  
