@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node sv:name="hsl" xmlns:sv="http://www.jcp.org/jcr/sv/1.0">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>hipposched:jobgroup</sv:value>
+  </sv:property>
+  <sv:node sv:name="SitemapXmlGenerator">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hipposched:repositoryjob</sv:value>
+    </sv:property>
+    <sv:property sv:name="hipposched:repositoryJobClass" sv:type="String">
+      <sv:value>nl.hsleiden.schedulers.SitemapGeneratorScheduledJob</sv:value>
+    </sv:property>
+    <sv:node sv:name="hipposched:triggers">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hipposched:triggers</sv:value>
+      </sv:property>
+      <sv:node sv:name="SitemapXmlGeneratorTrigger">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hipposched:crontrigger</sv:value>
+        </sv:property>
+        <sv:property sv:multiple="true" sv:name="jcr:mixinTypes" sv:type="Name">
+          <sv:value>mix:lockable</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposched:cronExpression" sv:type="String">
+          <sv:value>0 45 23 * * ?</sv:value>
+        </sv:property>
+        <sv:property sv:name="hipposched:nextFireTime" sv:type="Date">
+          <sv:value>2015-04-03T10:29:00.000+02:00</sv:value>
+        </sv:property>
+      </sv:node>
+    </sv:node>
+  </sv:node>
+</sv:node>
