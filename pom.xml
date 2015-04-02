@@ -90,13 +90,13 @@
     <jcr.mock.version>1.0</jcr.mock.version>
     <twitter4j.version>4.0.2</twitter4j.version>
     <hsl-private-config.version>1.2</hsl-private-config.version>
-    <elasticsearch.plugin.version>1.15-SNAPSHOT</elasticsearch.plugin.version>
+    <elasticsearch.plugin.version>1.15</elasticsearch.plugin.version>
     <omnikassa.plugin.version>1.2</omnikassa.plugin.version>
 
     <restfb.version>1.7.0</restfb.version>
 
     <com.itextpdf.version>5.0.6</com.itextpdf.version>
-    <hsl.sitemap.version>1.05-SNAPSHOT</hsl.sitemap.version>
+    <hsl.sitemap.version>1.05</hsl.sitemap.version>
   </properties>
 
   <repositories>
@@ -596,7 +596,7 @@
                   <project.basedir>${project.basedir}</project.basedir>
                   <xr.util-logging.loggingEnabled>true</xr.util-logging.loggingEnabled>
                   <repo.bootstrap>true</repo.bootstrap>
-                  <elasticConfig>${project.basedir}/release/conf/search-config.json</elasticConfig>
+                  <elasticsearch.configuration>${project.basedir}/release/conf/search-config.json</elasticsearch.configuration>
                   <elasticsearch.enable.indexation>true</elasticsearch.enable.indexation>
                   <!-- uncomment to run with mysql db 
                   <repo.config>file:${project.basedir}/release/conf/repository.xml</repo.config>
