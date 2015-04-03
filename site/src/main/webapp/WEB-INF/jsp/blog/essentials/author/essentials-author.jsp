@@ -61,10 +61,9 @@
     
     </div>
 
-    <hst:html hippohtml="${model.author.content}"></hst:html>
-    
-    
-        
+    <hst:html hippohtml="${model.author.content}"
+      contentRewriter="${pageContext.request.requestContext.attributes['hslHtmlRewriter']}" />
+
   </div>
 </div>
 

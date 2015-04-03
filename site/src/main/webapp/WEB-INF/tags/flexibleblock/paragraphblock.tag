@@ -40,15 +40,18 @@
     <c:choose>
       <c:when test="${position == 'left' || position == 'right' || position == 'top'}"> 
         <tag:paragraphImage position="${position }" image="${content.paragraphImage }" />
-        <hst:html hippohtml="${content.content }"/>
+        <hst:html hippohtml="${content.content }" 
+            contentRewriter="${pageContext.request.requestContext.attributes['hslHtmlRewriter']}" />
       </c:when>
       <c:otherwise>
-        <hst:html hippohtml="${content.content }"/>
+        <hst:html hippohtml="${content.content }"
+            contentRewriter="${pageContext.request.requestContext.attributes['hslHtmlRewriter']}" />
         <tag:paragraphImage position="${position }" image="${content.paragraphImage }" />
       </c:otherwise>
     </c:choose>
   </c:when>
   <c:otherwise>
-    <hst:html hippohtml="${content.content }"/>
+    <hst:html hippohtml="${content.content }"
+            contentRewriter="${pageContext.request.requestContext.attributes['hslHtmlRewriter']}" />
   </c:otherwise>
 </c:choose>
