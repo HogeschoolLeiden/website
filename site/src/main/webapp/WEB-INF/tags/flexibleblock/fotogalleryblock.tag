@@ -12,14 +12,6 @@
 
 <c:if test="${not empty content and not empty content.title and fn:length(content.image)>0 }">
 
-  <hst:headContribution keyHint="ppinit">
-    <script type="text/javascript" src="<hst:link path="/js/pretty-photo-inizialization.js"/>" charset="utf-8"></script>
-  </hst:headContribution>
-  
-  <hst:headContribution keyHint="prettyPhoto">
-    <script type="text/javascript" src="<hst:link path="/js/jquery.prettyPhoto.js"/>" charset="utf-8"></script>
-  </hst:headContribution>
-  
   <c:if test="${not empty content.title}">
     <h2><c:out value="${content.title }"/></h2>
   </c:if>

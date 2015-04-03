@@ -150,19 +150,8 @@
                 //  HEADER CONTRIBUTIONS
                 //########################################################################
             --%>
-            
-            <hst:headContribution keyHint="jquery">
-              <script type="text/javascript" src="<hst:link path="/js/jquery-1.9.1.min.js"/>"></script>
-            </hst:headContribution>
-            
-            <hst:headContribution keyHint="jquery-datepicker">
-              <script type="text/javascript" src="<hst:link path="/js/jquery-ui-1.10.2.custom.min.js"/>"></script>
-            </hst:headContribution>
-            
-            <hst:headContribution keyHint="formJsValidation">
-              <script type="text/javascript" src="<hst:link path="/js/jquery-validate-1.1.2.min.js"/>"></script>
-            </hst:headContribution>
 
+            <hst:headContribution category="scripts">
             <script type="text/javascript">
             $(document).ready(function() {
             
@@ -555,7 +544,7 @@
             
             });
             </script>
-
+            </hst:headContribution>
           </c:if>
         
 

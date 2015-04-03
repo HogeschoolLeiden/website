@@ -10,10 +10,6 @@
 
 
 <hst:resourceURL var="resourceUrl"/>
-<hst:link path="/js/typeahead.bundle.js" var="typeaheadLink" />
-<hst:headContribution category="scripts" keyHint="typeahead.bundle">
-	<script type="text/javascript" src="${typeaheadLink}"></script>
-</hst:headContribution>
 
 <hst:headContribution category="scripts" keyHint="typeahead.config">
 	<script type="text/javascript">
