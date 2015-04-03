@@ -58,11 +58,12 @@
 <!-- CSS -->
 <c:set var="dev" value="${tag:getEnvironmentProperty('dev')}" />
 
-<link rel="stylesheet" href="<hst:link path="/css/bootstrap.min.css"/>">
-<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+
 
 <c:choose>
   <c:when test="${dev eq 'true'}">
+    <link rel="stylesheet" href="<hst:link path="/css/bootstrap.min.css"/>">
+    <link rel="stylesheet" href="<hst:link path="/css/font-awesome.min.css"/>">
     <link rel="stylesheet" href='<hst:link path="/css/eforms.css"/>' type="text/css" />
     <link rel="stylesheet" href='<hst:link path="/css/idangerous.swiper.css"/>' type="text/css" />
     <link rel="stylesheet" href='<hst:link path="/css/style-main.css" />' type="text/css" />
