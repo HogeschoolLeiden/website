@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="Remove Plain text mails">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>hipposys:updaterinfo</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:batchsize" sv:type="Long">
+    <sv:value>10</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:dryrun" sv:type="Boolean">
+    <sv:value>false</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:query" sv:type="String">
+    <sv:value>content/documents//element(*, hippostd:html)</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:script" sv:type="String">
+    <sv:value>package org.hippoecm.frontend.plugins.cms.dev.updater&#13;
+&#13;
+import org.onehippo.repository.update.BaseNodeUpdateVisitor&#13;
+import javax.jcr.Node&#13;
+import java.util.regex.Matcher&#13;
+import java.util.regex.Pattern&#13;
+import java.util.Iterator&#13;
+import java.util.List&#13;
+import java.util.SortedSet&#13;
+import java.util.TreeSet&#13;
+&#13;
+import org.apache.commons.collections.comparators.ComparableComparator&#13;
+import org.apache.commons.lang3.builder.EqualsBuilder&#13;
+import org.apache.commons.lang3.builder.HashCodeBuilder&#13;
+&#13;
+class UpdaterTemplate extends BaseNodeUpdateVisitor {&#13;
+&#13;
+  String mailRegex= "(?&lt;!mailto:)\\b[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}\\b";&#13;
+  &#13;
+  boolean doUpdate(Node node) {&#13;
+    boolean result = false;&#13;
+     &#13;
+    if (node.hasProperty("hippostd:content")) {&#13;
+        String content = node.getProperty("hippostd:content").getString();&#13;
+        ReplacementUtil test = new ReplacementUtil(content);  &#13;
+        Pattern pattern = Pattern.compile(mailRegex);&#13;
+        Matcher matcher = pattern.matcher(content);&#13;
+&#13;
+        int i = 0;&#13;
+        log.debug("analysing node: - " + node.getPath());&#13;
+        &#13;
+        while (matcher.find()) {&#13;
+            i++;            &#13;
+            String matchedMailAdress = matcher.group();&#13;
+            log.debug(i + ") matched mail = " + matchedMailAdress);  &#13;
+            String protectedMailAddress = matchedMailAdress.replace("@", " AT-nospam-AT ");&#13;
+            log.debug(i + ") protectedMailAddress = " + protectedMailAddress); &#13;
+            test.addReplacemnetItem(new ReplacemnetItem(matcher.start(), matcher.end(), protectedMailAddress));&#13;
+        }&#13;
+        &#13;
+        if(i&gt;0){&#13;
+          if (!node.isCheckedOut()) {&#13;
+              node.checkout();&#13;
+          }&#13;
+          node.setProperty("hippostd:content", test.replace());&#13;
+          log.debug("CHANGED HTML OF NODE: - " + node.getPath());&#13;
+          log.debug("------------------------------");&#13;
+          result =true;&#13;
+        }else{&#13;
+          log.debug("no mail found on this node: - ");&#13;
+          log.debug("------------------------------");&#13;
+        }&#13;
+&#13;
+    }&#13;
+    &#13;
+    &#13;
+    return result;&#13;
+  }&#13;
+  &#13;
+  static class ReplacementUtil {&#13;
+&#13;
+    @SuppressWarnings("unchecked")&#13;
+    final SortedSet&lt;ReplacemnetItem&gt; items = new TreeSet&lt;ReplacemnetItem&gt;(new ComparableComparator());&#13;
+    final String originalString;&#13;
+&#13;
+    ReplacementUtil(String originalString) {&#13;
+        this.originalString = originalString;&#13;
+    }&#13;
+&#13;
+    void addReplacemnetItem(ReplacemnetItem replacemnetItem) {&#13;
+        items.add(replacemnetItem);&#13;
+    }&#13;
+&#13;
+    void addAllReplacemnetItems(List&lt;ReplacemnetItem&gt; replacemnetItems) {&#13;
+        items.addAll(replacemnetItems);&#13;
+    }&#13;
+&#13;
+    String replace() {&#13;
+        StringBuilder sb = new StringBuilder(originalString);&#13;
+        for (Iterator&lt;ReplacemnetItem&gt; iterator = items.iterator(); iterator.hasNext();) {&#13;
+            ReplacemnetItem item = iterator.next();&#13;
+            sb.replace(item.getStart(), item.getEnd(), item.getReplacement());&#13;
+        }&#13;
+        return sb.toString();&#13;
+    }&#13;
+  }&#13;
+  &#13;
+  static class ReplacemnetItem implements Comparable&lt;ReplacemnetItem&gt; {&#13;
+&#13;
+        final int start;&#13;
+        final int end;&#13;
+        final String replacement;&#13;
+&#13;
+        ReplacemnetItem(int start, int end, String replacement) {&#13;
+            if (end &lt; start) {&#13;
+                throw new IllegalArgumentException("end should be bigger than start.");&#13;
+            }&#13;
+            if (replacement == null) {&#13;
+                throw new IllegalArgumentException("replacement is required.");&#13;
+            }&#13;
+            this.start = start;&#13;
+            this.end = end;&#13;
+            this.replacement = replacement;&#13;
+        }&#13;
+&#13;
+        int getStart() {&#13;
+            return start;&#13;
+        }&#13;
+&#13;
+        int getEnd() {&#13;
+            return end;&#13;
+        }&#13;
+&#13;
+        String getReplacement() {&#13;
+            return replacement;&#13;
+        }&#13;
+&#13;
+        @Override&#13;
+        int compareTo(ReplacemnetItem o) {&#13;
+            return o.start - this.start;&#13;
+        }&#13;
+&#13;
+        @Override&#13;
+        boolean equals(Object obj) {&#13;
+            boolean result;&#13;
+            if (obj instanceof ReplacemnetItem) {&#13;
+                ReplacemnetItem rhs = (ReplacemnetItem) obj;&#13;
+                result = new EqualsBuilder().appendSuper(super.equals(obj)).append(start, rhs.start)&#13;
+                        .append(end, rhs.end).append(replacement, rhs.replacement).isEquals();&#13;
+            } else {&#13;
+                result = false;&#13;
+            }&#13;
+            return result;&#13;
+        }&#13;
+&#13;
+        @Override&#13;
+        int hashCode() {&#13;
+            return new HashCodeBuilder(91, 35).append(start).append(end).append(replacement).toHashCode();&#13;
+        }&#13;
+&#13;
+    }&#13;
+&#13;
+&#13;
+  boolean undoUpdate(Node node) {&#13;
+    throw new UnsupportedOperationException('Updater does not implement undoUpdate method')&#13;
+  }&#13;
+&#13;
+}</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:throttle" sv:type="Long">
+    <sv:value>10</sv:value>
+  </sv:property>
+</sv:node>
