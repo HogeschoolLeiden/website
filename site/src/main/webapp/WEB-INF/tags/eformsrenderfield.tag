@@ -71,6 +71,7 @@
       <input type="text" name="${field.formRelativeUniqueName}" class="date ${field.styleClass}" value="${field.value}" />
       <span class="eforms-hint"><c:out value='${field.hint}'/></span>
     </div>
+    <hst:headContribution category="scripts">
     <script>
       $(document).ready(function() {
         $(function() {
@@ -84,6 +85,7 @@
         });
       });
     </script>
+    </hst:headContribution>
   </c:when>
 
   <c:when test="${field.type eq 'radiogroup'}">
