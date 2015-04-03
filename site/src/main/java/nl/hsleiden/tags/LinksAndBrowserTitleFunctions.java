@@ -60,7 +60,19 @@ public class LinksAndBrowserTitleFunctions {
     }
 
     public static String getMailDomain(String mail) {
-        return mail.substring(mail.indexOf("@")+1);
+        if(mail.contains("?")){
+            return mail.substring(mail.indexOf("@")+1, mail.indexOf("?"));
+        }else{
+            return mail.substring(mail.indexOf("@")+1);
+        }
+    }
+
+    public static String getExtraMailInfo(String mail) {
+        if(mail.contains("?")){
+            return mail.substring(mail.indexOf("?")+1);
+        }else{
+            return "";
+        }
     }
 
     private static String composeBrowserTitle(HstRequest request, WebPage webPage) {

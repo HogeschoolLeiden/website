@@ -2,6 +2,8 @@ package nl.hsleiden.components;
 
 import java.util.Map;
 
+import nl.hsleiden.utils.HslHtmlRewriter;
+
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.content.beans.standard.HippoFacetNavigationBean;
 import org.hippoecm.hst.core.component.HstRequest;
@@ -14,6 +16,8 @@ import com.tdclighthouse.prototype.utils.Constants;
 
 public class Detail extends AbstractComponent {
 
+    public static final HslHtmlRewriter hslHtmlRewriter = new HslHtmlRewriter();
+    
     @Override
     public Map<String, Object> getModel(HstRequest request, HstResponse response) {
 
@@ -21,6 +25,7 @@ public class Detail extends AbstractComponent {
         if (contentBean != null) {
             request.setAttribute(Constants.AttributesConstants.DOCUMENT, contentBean);
         }
+        request.getRequestContext().setAttribute("hslHtmlRewriter", hslHtmlRewriter);
         return null;
     }
     
