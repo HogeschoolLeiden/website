@@ -129,52 +129,42 @@
     //########################################################################
 --%>
 
-<hst:headContribution keyHint="jquery">
-  <script type="text/javascript" src="<hst:link path="/js/jquery-1.9.1.min.js"/>"></script>
-</hst:headContribution>
 
-<hst:headContribution keyHint="jquery-datepicker">
-  <script type="text/javascript" src="<hst:link path="/js/jquery-ui-1.10.2.custom.min.js"/>"></script>
-</hst:headContribution>
-
-<hst:headContribution keyHint="formJsValidation">
-  <script type="text/javascript" src="<hst:link path="/js/jquery-validate-1.1.2.min.js"/>"></script>
-</hst:headContribution>
-
+<hst:headContribution category="scripts">
 <script type="text/javascript">
 $(document).ready(function() {
 
-  $('form[name="${form.name}"]').validate({errorElement:'div'});
+  $(&apos;form[name=&quot;${form.name}&quot;]&apos;).validate({errorElement:&apos;div&apos;});
 
   var resetPagesVisible = function() {
-    var allPages = $('.eforms-page.conditionally-visible');
-    var curPage = $('.eforms-page.conditionally-visible:visible:first');
+    var allPages = $(&apos;.eforms-page.conditionally-visible&apos;);
+    var curPage = $(&apos;.eforms-page.conditionally-visible:visible:first&apos;);
     var curIndex = -1;
 
-    for (var i = 0; i < allPages.length; i++) {
-      if (allPages[i].id == curPage.attr('id')) {
+    for (var i = 0; i &lt; allPages.length; i++) {
+      if (allPages[i].id == curPage.attr(&apos;id&apos;)) {
         curIndex = i;
       }
     }
 
-    if (curIndex > 0) {
-      $('#previousPageButton').show();
+    if (curIndex &gt; 0) {
+      $(&apos;#previousPageButton&apos;).show();
     }
 
-    if (curIndex < allPages.length - 1) {
-      $('#nextPageButton').show();
-      $('.eforms-buttons input[type="submit"]').each(function() {
+    if (curIndex &lt; allPages.length - 1) {
+      $(&apos;#nextPageButton&apos;).show();
+      $(&apos;.eforms-buttons input[type=&quot;submit&quot;]&apos;).each(function() {
         $(this).hide();
       });
     } else if (curIndex == allPages.length - 1) {
-      $('#nextPageButton').hide();
-      $('.eforms-buttons input[type="submit"]').each(function() {
+      $(&apos;#nextPageButton&apos;).hide();
+      $(&apos;.eforms-buttons input[type=&quot;submit&quot;]&apos;).each(function() {
         $(this).show();
       });
     }
 
-    $('#pagesTab li').hide();
-    $('#pagesTab li.conditionally-visible').show();
+    $(&apos;#pagesTab li&apos;).hide();
+    $(&apos;#pagesTab li.conditionally-visible&apos;).show();
   };
 
 
@@ -184,30 +174,30 @@ $(document).ready(function() {
     --%>
   function addFormFieldsToParameters(fields, params) {
     fields.each(function() {
-      if ($(this).attr('type') == 'checkbox') {
-        if (!params[$(this).attr('name')]) {
-          var checked = $('.eforms-page.conditionally-visible:visible .eforms-field *:input[name="' + $(this).attr('name') + '"]:checked');
-          if (checked.length > 0) {
+      if ($(this).attr(&apos;type&apos;) == &apos;checkbox&apos;) {
+        if (!params[$(this).attr(&apos;name&apos;)]) {
+          var checked = $(&apos;.eforms-page.conditionally-visible:visible .eforms-field *:input[name=&quot;&apos; + $(this).attr(&apos;name&apos;) + &apos;&quot;]:checked&apos;);
+          if (checked.length &gt; 0) {
             var values = [];
             checked.each(function(index) {
               values[index] = $(this).val();
             });
-            params[$(this).attr('name')] = values;
+            params[$(this).attr(&apos;name&apos;)] = values;
           } else {
-            params[$(this).attr('name')] = '';
+            params[$(this).attr(&apos;name&apos;)] = &apos;&apos;;
           }
         }
-      } else if ($(this).attr('type') == 'radio') {
-        if (!params[$(this).attr('name')]) {
-          var checked = $('.eforms-page.conditionally-visible:visible .eforms-field *:input[name="' + $(this).attr('name') + '"]:checked');
-          if (checked.length > 0) {
-            params[$(this).attr('name')] = $('.eforms-page.conditionally-visible:visible .eforms-field *:input[name="' + $(this).attr('name') + '"]:checked').val();
+      } else if ($(this).attr(&apos;type&apos;) == &apos;radio&apos;) {
+        if (!params[$(this).attr(&apos;name&apos;)]) {
+          var checked = $(&apos;.eforms-page.conditionally-visible:visible .eforms-field *:input[name=&quot;&apos; + $(this).attr(&apos;name&apos;) + &apos;&quot;]:checked&apos;);
+          if (checked.length &gt; 0) {
+            params[$(this).attr(&apos;name&apos;)] = $(&apos;.eforms-page.conditionally-visible:visible .eforms-field *:input[name=&quot;&apos; + $(this).attr(&apos;name&apos;) + &apos;&quot;]:checked&apos;).val();
           } else {
-            params[$(this).attr('name')] = '';
+            params[$(this).attr(&apos;name&apos;)] = &apos;&apos;;
           }
         }
       } else {
-        params[$(this).attr('name')] = $(this).val();
+        params[$(this).attr(&apos;name&apos;)] = $(this).val();
       }
     });
 
@@ -216,17 +206,17 @@ $(document).ready(function() {
 
 
   <%-- real-time ajax-based single field validation --%>
-  var fields = $('.eforms-field *:input');
-  var ajaxValidationUrl = '<hst:resourceURL resourceId="validation"/>';
+  var fields = $(&apos;.eforms-field *:input&apos;);
+  var ajaxValidationUrl = &apos;<hst:resourceURL resourceId="validation"/>&apos;;
 
-  $('.eforms-field *:input').blur(function() {
+  $(&apos;.eforms-field *:input&apos;).blur(function() {
 	  
     // on leaving form field, post field name/value for ajax validation
     var params = {};
-    params[$(this).attr('name')] = $(this).val();
+    params[$(this).attr(&apos;name&apos;)] = $(this).val();
     $.post(ajaxValidationUrl, params,
       function(data) {
-        var feedbackPanel = $('#feedbackPanel');
+        var feedbackPanel = $(&apos;#feedbackPanel&apos;);
         
         var count = 0;
         if (data) {
@@ -234,16 +224,16 @@ $(document).ready(function() {
             // get the error message
             var errorMessage = data[fieldName];
             // remove previous error messages from feedback panel
-            var messagesList = $('#feedbackPanel > ul');
+            var messagesList = $(&apos;#feedbackPanel &gt; ul&apos;);
             messagesList.empty();
             if (errorMessage) {
               // add error message to feedback panel
-              messagesList.append('<li>' + errorMessage.localizedMessage + '</li>');
+              messagesList.append(&apos;&lt;li&gt;&apos; + errorMessage.localizedMessage + &apos;&lt;/li&gt;&apos;);
               count++;
             }
           }
         }
-        if (count > 0) {
+        if (count &gt; 0) {
           // make feedback panel visible
           feedbackPanel.show();
           scrollToErrorMessage();
@@ -251,7 +241,7 @@ $(document).ready(function() {
           // make feedback panel invisible
           feedbackPanel.hide();
         }
-      }, "json");
+      }, &quot;json&quot;);
   });
 
 
@@ -261,15 +251,15 @@ $(document).ready(function() {
 
   if (conditions) {
     var items = [];
-    if (conditions['fields']) {
-      items = items.concat(conditions['fields']);
+    if (conditions[&apos;fields&apos;]) {
+      items = items.concat(conditions[&apos;fields&apos;]);
     }
-    if (conditions['pages']) {
-      items = items.concat(conditions['pages']);
+    if (conditions[&apos;pages&apos;]) {
+      items = items.concat(conditions[&apos;pages&apos;]);
     }
-    for (var i = 0; i < items.length; i++) {
+    for (var i = 0; i &lt; items.length; i++) {
       var item = items[i];
-      var condFieldName = item['condname'];
+      var condFieldName = item[&apos;condname&apos;];
       if (!condFieldNames[condFieldName]) {
         condFieldNames[condFieldName] = true;
       }
@@ -277,42 +267,42 @@ $(document).ready(function() {
   }
 
   for (var condFieldName in condFieldNames) {
-    var condField = $('.eforms-field *[name="' + condFieldName + '"]');
+    var condField = $(&apos;.eforms-field *[name=&quot;&apos; + condFieldName + &apos;&quot;]&apos;);
     if (condField.length == 0) continue;
-    var eventType = 'change';
+    var eventType = &apos;change&apos;;
 
     condField.bind(eventType, function() {
-      if (conditions && conditions['fields']) {
-        var fields = conditions['fields'];
+      if (conditions &amp;&amp; conditions[&apos;fields&apos;]) {
+        var fields = conditions[&apos;fields&apos;];
 
-        for (var i = 0; i < fields.length; i++) {
+        for (var i = 0; i &lt; fields.length; i++) {
           var field = fields[i];
-          var condFieldName = field['condname'];
-          if ($(this).attr('name') != condFieldName) continue;
+          var condFieldName = field[&apos;condname&apos;];
+          if ($(this).attr(&apos;name&apos;) != condFieldName) continue;
 
-          var name = field['name'];
-          var targetField = $('.eforms-field *[name="' + name + '"]');
+          var name = field[&apos;name&apos;];
+          var targetField = $(&apos;.eforms-field *[name=&quot;&apos; + name + &apos;&quot;]&apos;);
           if (targetField.length == 0) {
-              targetField = $('.eforms-fieldgroup[name="' + name + '"]');
+              targetField = $(&apos;.eforms-fieldgroup[name=&quot;&apos; + name + &apos;&quot;]&apos;);
           }
           if (targetField.length == 0) {
-              targetField = $('.eforms-text[name="' + name + '"]');
+              targetField = $(&apos;.eforms-text[name=&quot;&apos; + name + &apos;&quot;]&apos;);
           }
           if (targetField.length == 0) continue;
 
-          var targetContainer = targetField.parents('.eforms-field');
+          var targetContainer = targetField.parents(&apos;.eforms-field&apos;);
           if (targetContainer.length == 0) {
               targetContainer = targetField;
           }
 
-          var type = field['condtype'];
-          var condFieldValue = field['condvalue'];
+          var type = field[&apos;condtype&apos;];
+          var condFieldValue = field[&apos;condvalue&apos;];
           var curSelectedValue = $(this).val();
-          if ($(this).is('input') && $(this).attr('type') == 'radio') {
-            curSelectedValue = $('.eforms-field *[name="' + condFieldName + '"]:radio:checked').val();
+          if ($(this).is(&apos;input&apos;) &amp;&amp; $(this).attr(&apos;type&apos;) == &apos;radio&apos;) {
+            curSelectedValue = $(&apos;.eforms-field *[name=&quot;&apos; + condFieldName + &apos;&quot;]:radio:checked&apos;).val();
           }
 
-          if (type == 'visibility') {
+          if (type == &apos;visibility&apos;) {
             if (condFieldValue == curSelectedValue) {
               targetContainer.show();
             } else {
@@ -321,28 +311,28 @@ $(document).ready(function() {
           }
         }
 
-        var pages = conditions['pages'];
-        for (var i = 0; i < pages.length; i++) {
+        var pages = conditions[&apos;pages&apos;];
+        for (var i = 0; i &lt; pages.length; i++) {
           var page = pages[i];
-          var condFieldName = page['condname'];
-          if ($(this).attr('name') != condFieldName) continue;
+          var condFieldName = page[&apos;condname&apos;];
+          if ($(this).attr(&apos;name&apos;) != condFieldName) continue;
 
-          var pageIndex = page['index'];
-          var targetPage = $('#page' + pageIndex);
-          var type = page['condtype'];
-          var condFieldValue = page['condvalue'];
+          var pageIndex = page[&apos;index&apos;];
+          var targetPage = $(&apos;#page&apos; + pageIndex);
+          var type = page[&apos;condtype&apos;];
+          var condFieldValue = page[&apos;condvalue&apos;];
           var curSelectedValue = $(this).val();
-          if ($(this).is('input') && $(this).attr('type') == 'radio') {
-            curSelectedValue = $('.eforms-field *[name="' + condFieldName + '"]:radio:checked').val();
+          if ($(this).is(&apos;input&apos;) &amp;&amp; $(this).attr(&apos;type&apos;) == &apos;radio&apos;) {
+            curSelectedValue = $(&apos;.eforms-field *[name=&quot;&apos; + condFieldName + &apos;&quot;]:radio:checked&apos;).val();
           }
 
-          if (type == 'visibility') {
+          if (type == &apos;visibility&apos;) {
             if (condFieldValue == curSelectedValue) {
-              targetPage.addClass('conditionally-visible');
-              $('#pagesTab li:nth-child(' + (pageIndex + 1) + ')').addClass('conditionally-visible');
+              targetPage.addClass(&apos;conditionally-visible&apos;);
+              $(&apos;#pagesTab li:nth-child(&apos; + (pageIndex + 1) + &apos;)&apos;).addClass(&apos;conditionally-visible&apos;);
             } else {
-              targetPage.removeClass('conditionally-visible');
-              $('#pagesTab li:nth-child(' + (pageIndex + 1) + ')').removeClass('conditionally-visible');
+              targetPage.removeClass(&apos;conditionally-visible&apos;);
+              $(&apos;#pagesTab li:nth-child(&apos; + (pageIndex + 1) + &apos;)&apos;).removeClass(&apos;conditionally-visible&apos;);
             }
             resetPagesVisible();
           }
@@ -354,71 +344,71 @@ $(document).ready(function() {
   }
 
   <%-- In order not to show page tab for script-disabled clients, show the tabs by script if exits. --%>
-  if ($('#pagesTab')) {
-    $('#pagesTab').show();
+  if ($(&apos;#pagesTab&apos;)) {
+    $(&apos;#pagesTab&apos;).show();
   }
   <%-- Hide all the pages except of the first page --%>
-  $('.eforms-page').each(function() {
+  $(&apos;.eforms-page&apos;).each(function() {
     $(this).hide();
   });
-  if ($('.eforms-page.conditionally-visible').length) {
-    $('.eforms-page.conditionally-visible:first').show();
+  if ($(&apos;.eforms-page.conditionally-visible&apos;).length) {
+    $(&apos;.eforms-page.conditionally-visible:first&apos;).show();
   }
 
   resetPagesVisible();
 
-  $('#previousPageButton').click(function() {
-    var curPage = $('.eforms-page.conditionally-visible:visible');
-    var prevPage = curPage.prevAll('.eforms-page.conditionally-visible:first');
+  $(&apos;#previousPageButton&apos;).click(function() {
+    var curPage = $(&apos;.eforms-page.conditionally-visible:visible&apos;);
+    var prevPage = curPage.prevAll(&apos;.eforms-page.conditionally-visible:first&apos;);
     prevPage.show();
     curPage.hide();
 
-    var curIndex = parseInt(curPage.attr('id').replace(/^page/, ''));
-    var prevIndex = parseInt(prevPage.attr('id').replace(/^page/, ''));
-    $('#pagesTab li:nth-child(' + (curIndex + 1) + ')').removeClass('selected');
-    $('#pagesTab li:nth-child(' + (prevIndex + 1) + ')').addClass('selected');
+    var curIndex = parseInt(curPage.attr(&apos;id&apos;).replace(/^page/, &apos;&apos;));
+    var prevIndex = parseInt(prevPage.attr(&apos;id&apos;).replace(/^page/, &apos;&apos;));
+    $(&apos;#pagesTab li:nth-child(&apos; + (curIndex + 1) + &apos;)&apos;).removeClass(&apos;selected&apos;);
+    $(&apos;#pagesTab li:nth-child(&apos; + (prevIndex + 1) + &apos;)&apos;).addClass(&apos;selected&apos;);
 
-    if (prevPage.prevAll('.eforms-page.conditionally-visible:first').length == 0) {
-      $('#previousPageButton').hide();
+    if (prevPage.prevAll(&apos;.eforms-page.conditionally-visible:first&apos;).length == 0) {
+      $(&apos;#previousPageButton&apos;).hide();
     }
-    $('#nextPageButton').show();
-    $('.eforms-buttons input[type="submit"]').each(function() {
+    $(&apos;#nextPageButton&apos;).show();
+    $(&apos;.eforms-buttons input[type=&quot;submit&quot;]&apos;).each(function() {
         $(this).hide();
       });
 
     // remove error messages from feedback panel
-    var messagesList = $('#feedbackPanel > ul');
+    var messagesList = $(&apos;#feedbackPanel &gt; ul&apos;);
     messagesList.empty();
 
     // hide feedbackPanel
-    var feedbackPanel = $('#feedbackPanel');
+    var feedbackPanel = $(&apos;#feedbackPanel&apos;);
     feedbackPanel.hide();
 
   });
 
-  $('#nextPageButton').click(function() {
-    var curPage = $('.eforms-page.conditionally-visible:visible');
+  $(&apos;#nextPageButton&apos;).click(function() {
+    var curPage = $(&apos;.eforms-page.conditionally-visible:visible&apos;);
 
     // ajax based validation
     // validate all fields on current page before going to the next
     var params = {};
-    var fieldsOnPage = $('.eforms-page.conditionally-visible:visible .eforms-field *:input');
+    var fieldsOnPage = $(&apos;.eforms-page.conditionally-visible:visible .eforms-field *:input&apos;);
     addFormFieldsToParameters(fieldsOnPage, params);
 
     // add an empty parameter for any group on the current page
-    var groupsOnPage = $('.eforms-page.conditionally-visible:visible .eforms-fieldgroup');
+    var groupsOnPage = $(&apos;.eforms-page.conditionally-visible:visible .eforms-fieldgroup&apos;);
     groupsOnPage.each(function() {
-      params[$(this).attr('name')] = '';
+      params[$(this).attr(&apos;name&apos;)] = &apos;&apos;;
     });
 
     // add current page index to parameters
-    params['currentPage'] = curPage.attr('id').replace(/^page/, '');
+    params[&apos;currentPage&apos;] = curPage.attr(&apos;id&apos;).replace(/^page/, &apos;&apos;);
 
     $.post(ajaxValidationUrl, params,
       function(data){
     	
         // remove previous error messages from feedback panel
-        var messagesList = $('#feedbackPanel > ul');
+        var messagesList = $(&apos;#feedbackPanel &gt; ul&apos;);
         messagesList.empty();
 
         var count = 0;
@@ -428,13 +418,13 @@ $(document).ready(function() {
             var errorMessage = data[fieldName];
             if (errorMessage) {
               // add error message to feedback panel
-              messagesList.append('<li>' + errorMessage.localizedMessage + '</li>');
+              messagesList.append(&apos;&lt;li&gt;&apos; + errorMessage.localizedMessage + &apos;&lt;/li&gt;&apos;);
               count++;
             }
           }
         }
-        var feedbackPanel = $('#feedbackPanel');
-        if (count > 0) {
+        var feedbackPanel = $(&apos;#feedbackPanel&apos;);
+        if (count &gt; 0) {
             // there are validation errors
             // make feedback panel visible
             feedbackPanel.show();
@@ -445,26 +435,26 @@ $(document).ready(function() {
           feedbackPanel.hide();
 
           // go to the next page
-          var nextPage = curPage.nextAll('.eforms-page.conditionally-visible:first');
+          var nextPage = curPage.nextAll(&apos;.eforms-page.conditionally-visible:first&apos;);
           nextPage.show();
           curPage.hide();
 
-          var curIndex = parseInt(curPage.attr('id').replace(/^page/, ''));
-          var nextIndex = parseInt(nextPage.attr('id').replace(/^page/, ''));
-          $('#pagesTab li:nth-child(' + (curIndex + 1) + ')').removeClass('selected');
-          $('#pagesTab li:nth-child(' + (nextIndex + 1) + ')').addClass('selected');
+          var curIndex = parseInt(curPage.attr(&apos;id&apos;).replace(/^page/, &apos;&apos;));
+          var nextIndex = parseInt(nextPage.attr(&apos;id&apos;).replace(/^page/, &apos;&apos;));
+          $(&apos;#pagesTab li:nth-child(&apos; + (curIndex + 1) + &apos;)&apos;).removeClass(&apos;selected&apos;);
+          $(&apos;#pagesTab li:nth-child(&apos; + (nextIndex + 1) + &apos;)&apos;).addClass(&apos;selected&apos;);
 
-          $('#previousPageButton').show();
-          if (nextPage.nextAll('.eforms-page.conditionally-visible:first').length == 0) {
-            $('#nextPageButton').hide();
-            $('.eforms-buttons input[type="submit"]').each(function() {
+          $(&apos;#previousPageButton&apos;).show();
+          if (nextPage.nextAll(&apos;.eforms-page.conditionally-visible:first&apos;).length == 0) {
+            $(&apos;#nextPageButton&apos;).hide();
+            $(&apos;.eforms-buttons input[type=&quot;submit&quot;]&apos;).each(function() {
               $(this).show();
             });
           }
 
         }
 
-      }, "json");
+      }, &quot;json&quot;);
 
 
   });
@@ -473,9 +463,9 @@ $(document).ready(function() {
   var valid = false;
 
   // ajax page validation in case of last (or only) page
-  $('form[name="${form.name}"]').submit(function(event) {
+  $(&apos;form[name=&quot;${form.name}&quot;]&apos;).submit(function(event) {
 
-    var curPage = $('.eforms-page.conditionally-visible:visible');
+    var curPage = $(&apos;.eforms-page.conditionally-visible:visible&apos;);
 
     // if valid flag is set, page was validated and form can be submitted
     if (valid) {
@@ -483,17 +473,17 @@ $(document).ready(function() {
     }
 
     var params = {};
-    var fieldsOnPage = $('.eforms-page.conditionally-visible:visible .eforms-field:visible *:input');
+    var fieldsOnPage = $(&apos;.eforms-page.conditionally-visible:visible .eforms-field:visible *:input&apos;);
     addFormFieldsToParameters(fieldsOnPage, params);
 
     // add an empty parameter for any visible group on the current page
-    var groupsOnPage = $('.eforms-page.conditionally-visible:visible .eforms-fieldgroup:visible');
+    var groupsOnPage = $(&apos;.eforms-page.conditionally-visible:visible .eforms-fieldgroup:visible&apos;);
     groupsOnPage.each(function() {
-        params[$(this).attr('name')] = '';
+        params[$(this).attr(&apos;name&apos;)] = &apos;&apos;;
     });
 
     // add current page index to parameters
-    params['currentPage'] = curPage.attr('id').replace(/^page/, '');
+    params[&apos;currentPage&apos;] = curPage.attr(&apos;id&apos;).replace(/^page/, &apos;&apos;);
 
     // prevent form submission as we want to do ajax validation first
     event.preventDefault();
@@ -502,7 +492,7 @@ $(document).ready(function() {
       function(data){
 
         // remove previous error messages from feedback panel
-        var messagesList = $('#feedbackPanel > ul');
+        var messagesList = $(&apos;#feedbackPanel &gt; ul&apos;);
         messagesList.empty();
 
         var count = 0;
@@ -512,13 +502,13 @@ $(document).ready(function() {
             var errorMessage = data[fieldName];
             if (errorMessage) {
               // add error message to feedback panel
-              messagesList.append('<li>' + errorMessage.localizedMessage + '</li>');
+              messagesList.append(&apos;&lt;li&gt;&apos; + errorMessage.localizedMessage + &apos;&lt;/li&gt;&apos;);
               count++;
             }
           }
         }
-        var feedbackPanel = $('#feedbackPanel');
-        if (count > 0) {
+        var feedbackPanel = $(&apos;#feedbackPanel&apos;);
+        if (count &gt; 0) {
             // there are validation errors
             // make feedback panel visible
             feedbackPanel.show();
@@ -531,21 +521,21 @@ $(document).ready(function() {
 
           // set valid flag and resubmit form
           valid = true;
-          $('form[name="${form.name}"] input:submit').click();
+          $(&apos;form[name=&quot;${form.name}&quot;] input:submit&apos;).click();
         }
 
-      }, "json");
+      }, &quot;json&quot;);
 
   });
   
 });
 function scrollToErrorMessage(){
-  scrollTo('KO');
-  scrollTo('feedbackPanel');
+  scrollTo(&apos;KO&apos;);
+  scrollTo(&apos;feedbackPanel&apos;);
   function scrollTo(hash) {
-      location.hash = "#" + hash;
+      location.hash = &quot;#&quot; + hash;
   }
 }
 </script>
-
+</hst:headContribution>
 </c:if>
