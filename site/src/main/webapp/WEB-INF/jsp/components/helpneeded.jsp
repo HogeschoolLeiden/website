@@ -21,7 +21,7 @@
           <c:when test="${not empty item.externallink.linkTitle and not empty item.externallink.linkUrl}">
           
             <c:choose>
-              <c:when test="${fn:startsWith(item.externallink.linkUrl, 'mailto')}">
+              <c:when test="${fn:startsWith(item.externallink.linkUrl, 'mailto') and not empty tag:getMailName(item.externallink.linkUrl)}">
                 <span class="nospam" data-n="${tag:getMailName(item.externallink.linkUrl)}" data-d="${tag:getMailDomain(item.externallink.linkUrl)}">
                   <fmt:message key="mail.protect.helpmessage"/>
                 </span>

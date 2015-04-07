@@ -1,9 +1,10 @@
 package nl.hsleiden.utils;
 
 import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import javax.jcr.Node;
+
+import nl.hsleiden.utils.Constants.Regex;
 
 import org.apache.commons.lang3.StringUtils;
 import org.hippoecm.hst.configuration.hosting.Mount;
@@ -13,8 +14,7 @@ import org.hippoecm.hst.utils.SimpleHtmlExtractor;
 
 public class HslHtmlRewriter extends SimpleContentRewriter {
 
-    public static final Pattern MAIL_TO_REGEX = Pattern
-            .compile("\\bmailto:([A-Za-z0-9._%+-]+)@([A-Za-z0-9.-]+\\.[A-Za-z]{2,4})(\\?(.*))?\\b");
+    
 
     @Override
     public String rewrite(final String html, Node node, HstRequestContext requestContext, Mount targetMount) {
@@ -151,7 +151,7 @@ public class HslHtmlRewriter extends SimpleContentRewriter {
     private String composeMailToLink(String documentLinkHref) {
         String result;
 
-        Matcher matcher = MAIL_TO_REGEX.matcher(documentLinkHref);
+        Matcher matcher = Regex.MAIL_TO_REGEX.matcher(documentLinkHref);
         if (matcher.find()) {
             StringBuilder sb = new StringBuilder("#\"  class=\"nospam\" data-n=\"");
             sb.append(matcher.group(1));

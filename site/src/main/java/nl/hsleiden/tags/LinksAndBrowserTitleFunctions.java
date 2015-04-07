@@ -4,10 +4,13 @@ import hslbeans.ExternalLink;
 import hslbeans.InternalLink;
 import hslbeans.WebPage;
 
+import java.util.regex.Matcher;
+
 import javax.servlet.http.HttpServletRequest;
 
 import nl.hsleiden.beans.interfaces.LinkInterface;
 import nl.hsleiden.beans.interfaces.TeasersInterface;
+import nl.hsleiden.utils.Constants.Regex;
 import nl.hsleiden.utils.Constants.Values;
 
 import org.hippoecm.hst.configuration.sitemap.HstSiteMapItem;
@@ -56,23 +59,21 @@ public class LinksAndBrowserTitleFunctions {
     }
 
     public static String getMailName(String mail) {
-        return mail.substring(mail.indexOf(":")+1, mail.indexOf("@"));
+        String result = null;
+        Matcher matcher = Regex.MAIL_TO_REGEX.matcher(mail);
+        if (matcher.find()) {
+            result = matcher.group(1);
+        }
+        return result;
     }
 
     public static String getMailDomain(String mail) {
-        if(mail.contains("?")){
-            return mail.substring(mail.indexOf("@")+1, mail.indexOf("?"));
-        }else{
-            return mail.substring(mail.indexOf("@")+1);
+        String result = null;
+        Matcher matcher = Regex.MAIL_TO_REGEX.matcher(mail);
+        if (matcher.find()) {
+            result = matcher.group(2);
         }
-    }
-
-    public static String getExtraMailInfo(String mail) {
-        if(mail.contains("?")){
-            return mail.substring(mail.indexOf("?")+1);
-        }else{
-            return "";
-        }
+        return result;
     }
 
     private static String composeBrowserTitle(HstRequest request, WebPage webPage) {

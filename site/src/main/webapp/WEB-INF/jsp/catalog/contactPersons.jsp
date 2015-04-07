@@ -61,7 +61,7 @@
           <ul class="col-md-8 col-xs-8 ${noShare}">
             <li><h2><span itemprop="name">${item.name }</span></h2></li>
             <li><h3><span itemprop="role">${item.function }</span></h3></li>            
-            <c:if test="${not empty item.mail }">
+            <c:if test="${not empty item.mailName and not empty item.domain}">
               <li>
                   <span class="nospam" data-n="${item.mailName}" data-d="${item.domain}">
                     <fmt:message key="mail.protect.message"/>
