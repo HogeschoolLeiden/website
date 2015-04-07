@@ -1,16 +1,20 @@
 package nl.hsleiden.utils;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import javax.jcr.Node;
 
-import nl.hsleiden.tags.LinksAndBrowserTitleFunctions;
-
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.hippoecm.hst.configuration.hosting.Mount;
 import org.hippoecm.hst.content.rewriter.impl.SimpleContentRewriter;
 import org.hippoecm.hst.core.request.HstRequestContext;
 import org.hippoecm.hst.utils.SimpleHtmlExtractor;
 
 public class HslHtmlRewriter extends SimpleContentRewriter {
+
+    public static final Pattern MAIL_TO_REGEX = Pattern
+            .compile("\\bmailto:([A-Za-z0-9._%+-]+)@([A-Za-z0-9.-]+\\.[A-Za-z]{2,4})(\\?(.*))?\\b");
 
     @Override
     public String rewrite(final String html, Node node, HstRequestContext requestContext, Mount targetMount) {
@@ -96,7 +100,7 @@ public class HslHtmlRewriter extends SimpleContentRewriter {
                 int srcIndexEnd = rewrittenHtml.indexOf(ATTR_END, srcIndexStart);
                 if (srcIndexEnd > srcIndexStart) {
                     String srcPath = rewrittenHtml.substring(srcIndexStart, srcIndexEnd);
-                    
+
                     offset = endTag;
                     sb.append(rewrittenHtml.substring(globalOffset, srcIndexStart));
 
@@ -139,21 +143,28 @@ public class HslHtmlRewriter extends SimpleContentRewriter {
     }
 
     private void addRelNoFollow(StringBuilder sb, String documentLinkHref) {
-        if(isExternal(documentLinkHref)){                        
+        if (isExternal(documentLinkHref)) {
             sb.append("\" rel=\"nofollow");
         }
     }
 
     private String composeMailToLink(String documentLinkHref) {
-        String result = documentLinkHref;
-        if(result.startsWith("mailto")){
-            result ="#\""
-                    +" class=\"nospam\" data-n=\"" 
-                    + LinksAndBrowserTitleFunctions.getMailName(result)
-                    +"\" data-d=\"" 
-                    + LinksAndBrowserTitleFunctions.getMailDomain(result)
-                    +"\" data-e=\""
-                    + LinksAndBrowserTitleFunctions.getExtraMailInfo(result);
+        String result;
+
+        Matcher matcher = MAIL_TO_REGEX.matcher(documentLinkHref);
+        if (matcher.find()) {
+            StringBuilder sb = new StringBuilder("#\"  class=\"nospam\" data-n=\"");
+            sb.append(matcher.group(1));
+            sb.append("\" data-d=\"");
+            sb.append(matcher.group(2));
+            sb.append("\" data-e=\"");
+            String extralMailInfo = matcher.group(4);
+            if (StringUtils.isNotBlank(extralMailInfo)) {
+                sb.append(extralMailInfo);
+            }
+            result = sb.toString();
+        } else {
+            result = documentLinkHref;
         }
         return result;
     }
