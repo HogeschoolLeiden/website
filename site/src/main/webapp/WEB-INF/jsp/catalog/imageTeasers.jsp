@@ -30,7 +30,7 @@
         <%-- External link case --%>
         <c:when test="${tag:getConfiguredLink(item) eq 'ext' }">
         
-          <a href="${item.externallink.linkUrl}" title="${tag:getLinkAlt(item.externallink)}" 
+          <a href="${item.externallink.linkUrl}" rel="nofollow" title="${tag:getLinkAlt(item.externallink)}" 
                    ${item.externallink.newWindow ? 'class="external link" target="_blank"': '' }>      
               <div class="img">
                  <img src="<hst:link hippobean="${item.image.teaserImage }" />" 

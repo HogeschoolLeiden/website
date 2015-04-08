@@ -24,6 +24,7 @@
     <div id="datepicker" class="hasDatepicker"></div>
     
     <hst:resourceURL  var="resouceUrl" />
+    <hst:headContribution category="scripts">
     <script type="text/javascript">
 		$(document).ready(function() {
   		// page is now ready, initialize the calendar...
@@ -42,6 +43,7 @@
         	});
     	});
   	</script>
+    </hst:headContribution>
     
     
     

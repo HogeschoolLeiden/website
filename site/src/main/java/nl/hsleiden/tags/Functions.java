@@ -45,7 +45,7 @@ public class Functions {
 
     public static boolean hasPrevPage(PaginatorWidget paginator) {
         boolean result = false;
-        if (paginator.getPage() > paginator.getFirstShownPage()) {
+        if (paginator!=null && paginator.getPage() > paginator.getFirstShownPage()) {
             result = true;
         }
         return result;
@@ -53,7 +53,7 @@ public class Functions {
 
     public static boolean hasNextPage(PaginatorWidget paginator) {
         boolean result = false;
-        if (paginator.getPage() < paginator.getLastShownPage()) {
+        if (paginator!=null && paginator.getPage() < paginator.getLastShownPage()) {
             result = true;
         }
         return result;

@@ -26,7 +26,51 @@ $(document).ready(function() {
 
 	expandOrCollapseFaq();
 
+	renderMail();
+
 });
+
+function renderMail() {
+	var mlink = jQuery(".nospam");
+	mlink.each(function(){
+		var n = jQuery(this).attr('data-n');
+		var d = jQuery(this).attr('data-d');
+		var e = jQuery(this).attr('data-e');
+		generateMailToLink(n, d, e, jQuery(this), jQuery(this).text());
+	
+	});
+}
+
+/**
+ * Use display value for mailto links inside <a> coming from html.
+ * In the jsp's the mail to links should be inserted into <span> tags like:  
+ * 
+ * <span class="nospam" data-n="${item.mailName}" data-d="${item.domain}">
+ * 		<fmt:message key="mail.protect.message"/>
+ * </span>                
+ * */
+function generateMailToLink(name, domain, extra, mlink, display) {
+	if (name) {
+		if (domain) {
+			var aElem = "<a href=\"mailto:" + name + "@" + domain;
+			
+			if(extra){
+				aElem = aElem + "?" + extra + "\" >"				
+			}else{
+				aElem = aElem + "\" >"				
+			}
+			
+			if(mlink.is("a") && display){
+				aElem = aElem + display + "<\/a>";
+			}else{
+				aElem = aElem + name + "@" + domain + "<\/a>";
+			}
+			
+			mlink.parent().append(aElem);
+			mlink.remove();
+		}
+	}
+}
 
 function manageCookies() {
 	if (getCookie('allowCookies') || getCookie('refuseCookies')) {

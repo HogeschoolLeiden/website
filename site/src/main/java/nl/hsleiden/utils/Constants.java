@@ -1,11 +1,14 @@
 package nl.hsleiden.utils;
 
+import java.util.regex.Pattern;
+
 import com.tdclighthouse.prototype.utils.Constants.AttributesConstants;
 import com.tdclighthouse.prototype.utils.Constants.FieldNameConstants;
 import com.tdclighthouse.prototype.utils.Constants.HippoNodeTypesConstants;
 import com.tdclighthouse.prototype.utils.Constants.HstParametersConstants;
 import com.tdclighthouse.prototype.utils.Constants.ParametersConstants;
 import com.tdclighthouse.prototype.utils.Constants.PikcerTypesConstants;
+import com.tdclighthouse.prototype.utils.Constants.RegexConstants;
 import com.tdclighthouse.prototype.utils.Constants.ValuesConstants;
 
 public class Constants {
@@ -158,6 +161,14 @@ public class Constants {
         public static final String HSL_IMAGE_SET = "hsl:ImageSet";
 
         private HippoNodeTypes() {
+        }
+    }
+
+    public static class Regex extends RegexConstants {
+        public static final Pattern MAIL_TO_REGEX = Pattern
+                .compile("\\bmailto:([A-Za-z0-9._%+-]+)@([A-Za-z0-9.-]+\\.[A-Za-z]{2,4})(\\?(.*))?\\b");
+
+        private Regex() {
         }
     }
 }

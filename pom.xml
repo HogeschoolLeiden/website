@@ -87,16 +87,16 @@
     <forge.feed.version>2.02.00</forge.feed.version>
     <forge.robotstxt.version>1.08.00</forge.robotstxt.version>
 
-    <jcr.mock.version>1.0</jcr.mock.version>
+    <jcr.mock.version>1.1</jcr.mock.version>
     <twitter4j.version>4.0.2</twitter4j.version>
-    <hsl-private-config.version>1.2</hsl-private-config.version>
-    <elasticsearch.plugin.version>1.14</elasticsearch.plugin.version>
-    <omnikassa.plugin.version>1.1</omnikassa.plugin.version>
+    <hsl-private-config.version>1.3</hsl-private-config.version>
+    <elasticsearch.plugin.version>1.16</elasticsearch.plugin.version>
+    <omnikassa.plugin.version>1.4</omnikassa.plugin.version>
 
     <restfb.version>1.7.0</restfb.version>
 
     <com.itextpdf.version>5.0.6</com.itextpdf.version>
-    <hsl.sitemap.version>1.04</hsl.sitemap.version>
+    <hsl.sitemap.version>1.06</hsl.sitemap.version>
   </properties>
 
   <repositories>
@@ -174,6 +174,36 @@
     <repository>
       <id>openweb-maven-elasticsearch-plugin</id>
       <url>https://maven.open-web.nl/content/repositories/elasticsearch-plugin/</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>openweb-maven-hippo-omnikassa-plugin</id>
+      <url>https://maven.open-web.nl/content/repositories/hippo-omnikassa-plugin/</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>openweb-maven-hsl-repository</id>
+      <url>https://maven.open-web.nl/content/repositories/hsl-repository/</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>openweb-maven-jcr-mock</id>
+      <url>https://maven.open-web.nl/content/repositories/jcr-mock/</url>
       <releases>
         <enabled>true</enabled>
       </releases>
@@ -536,7 +566,7 @@
         <module>site</module>
         <!-- <module>essentials</module> -->
         <module>release</module>
-        <module>integration</module>
+        <!-- <module>integration</module> -->
       </modules>
     </profile>
 
@@ -596,8 +626,9 @@
                   <project.basedir>${project.basedir}</project.basedir>
                   <xr.util-logging.loggingEnabled>true</xr.util-logging.loggingEnabled>
                   <repo.bootstrap>true</repo.bootstrap>
-                  <elasticConfig>${project.basedir}/release/conf/search-config.json</elasticConfig>
+                  <elasticsearch.configuration>${project.basedir}/release/conf/search-config.json</elasticsearch.configuration>
                   <elasticsearch.enable.indexation>true</elasticsearch.enable.indexation>
+                  <sitemap.scheduler.config>${project.basedir}/release/conf/sitemapscheduler.properties</sitemap.scheduler.config>
                   <!-- uncomment to run with mysql db 
                   <repo.config>file:${project.basedir}/release/conf/repository.xml</repo.config>
                   -->

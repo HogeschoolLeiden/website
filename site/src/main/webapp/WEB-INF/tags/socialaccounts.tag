@@ -26,9 +26,9 @@
     
     <c:if test="${not empty accountClass}">
       <li>
-        <a href="${account.link}" class="${accountClass}" target="_blank"
+        <a href="${account.link}" class="${accountClass}" target="_blank" rel="nofollow"
            title="<fmt:message key="follow.author"/> ${account.type}">
-           <span class="hidden">Twitter</span></a></li>
+           <span class="hidden"><fmt:message key="follow.author"/> ${account.type}</span></a></li>
     </c:if>
   </c:forEach>
 </ul>

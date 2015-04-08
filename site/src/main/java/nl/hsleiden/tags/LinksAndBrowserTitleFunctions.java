@@ -4,10 +4,13 @@ import hslbeans.ExternalLink;
 import hslbeans.InternalLink;
 import hslbeans.WebPage;
 
+import java.util.regex.Matcher;
+
 import javax.servlet.http.HttpServletRequest;
 
 import nl.hsleiden.beans.interfaces.LinkInterface;
 import nl.hsleiden.beans.interfaces.TeasersInterface;
+import nl.hsleiden.utils.Constants.Regex;
 import nl.hsleiden.utils.Constants.Values;
 
 import org.hippoecm.hst.configuration.sitemap.HstSiteMapItem;
@@ -51,6 +54,24 @@ public class LinksAndBrowserTitleFunctions {
             result = composeBrowserTitle((HstRequest) request, (WebPage) document);
         } else {
             result = Functions.getWebsitePropertyList(request).getDefaultBrowserTitle();
+        }
+        return result;
+    }
+
+    public static String getMailName(String mail) {
+        String result = null;
+        Matcher matcher = Regex.MAIL_TO_REGEX.matcher(mail);
+        if (matcher.find()) {
+            result = matcher.group(1);
+        }
+        return result;
+    }
+
+    public static String getMailDomain(String mail) {
+        String result = null;
+        Matcher matcher = Regex.MAIL_TO_REGEX.matcher(mail);
+        if (matcher.find()) {
+            result = matcher.group(2);
         }
         return result;
     }

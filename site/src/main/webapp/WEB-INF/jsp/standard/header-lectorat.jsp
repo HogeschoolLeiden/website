@@ -21,15 +21,6 @@
         <span class="menuButton"><fmt:message key="mobile.menu.message"/></span>
       </button>       
       
-      <%-- 
-      do not have filtering in lectoraten
-      
-      <button class="navbar-toggle navbar-header toggle-filter-button fa fa-filter hidden-lg hidden-md"  data-target=".filter-collapse" data-toggle="collapse" type="button">
-        <span class="sr-only">Toggle filter</span>
-      </button> 
-      
-      --%>
-      
       <hst:link var="homeLink" path="/" mount="hsl"/>
 
       <a class="navbar-brand" href="${homeLink}">

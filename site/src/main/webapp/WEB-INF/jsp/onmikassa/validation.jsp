@@ -21,7 +21,7 @@
             <hst:cmseditlink hippobean="${document}"/>
           
             <c:choose>
-            	<c:when test="${status eq 'SUCCESSFUL' or status eq 'AWAITING_STATUS_REPORT'}">
+            	<c:when test="${status eq 'SUCCESSFUL' or status eq 'AWAITING_STATUS_REPORT' or status eq 'CONFIRMED'}">
     				<c:if test="${hst:isReadable(document, 'title') }">
     		          <h1><c:out value="${document.title}"/></h1>
     		        </c:if>
