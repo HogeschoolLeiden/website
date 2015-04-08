@@ -31,7 +31,7 @@ public class SitemapGeneratorScheduledJob implements RepositoryJob {
                 URL url = new URL(address);
                 URLConnection connection = url.openConnection();
                 connection.connect();
-                bReader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+                bReader = new BufferedReader(new InputStreamReader(connection.getInputStream(), "UTF-8"));
                 LOG.debug(bReader.readLine());
             } else {
                 LOG.warn("No address configured or property file missing");
@@ -44,14 +44,30 @@ public class SitemapGeneratorScheduledJob implements RepositoryJob {
     }
 
     private String getAddressFromProperties() throws IOException {
-        String address = null;
-        String ssc = System.getProperty("sitemap.scheduler.config");
-        if (StringUtils.isNoneBlank(ssc)) {
-            Properties props = new Properties();
-            props.load(new FileInputStream(ssc));
-            address = props.getProperty("sitemap.generator.url");
+        FileInputStream inStream = null;
+        try {
+            String address = null;
+            String ssc = System.getProperty("sitemap.scheduler.config");
+            if (StringUtils.isNoneBlank(ssc)) {
+                Properties props = new Properties();
+                inStream = new FileInputStream(ssc);
+                props.load(inStream);
+                address = props.getProperty("sitemap.generator.url");
+            }
+            return address;
+        } finally {
+            closeStream(inStream);
         }
-        return address;
+    }
+
+    private void closeStream(FileInputStream inStream) {
+        try {
+            if (inStream != null) {
+                inStream.close();
+            }
+        } catch (IOException e) {
+            LOG.warn(e.getMessage(), e);
+        }
     }
 
     private void closeConnection(BufferedReader bReader) throws RepositoryException {
@@ -63,5 +79,5 @@ public class SitemapGeneratorScheduledJob implements RepositoryJob {
         } catch (IOException e) {
             LOG.error("Exception closing the connection to sitemap generator url: ", e);
         }
-    }  
+    }
 }

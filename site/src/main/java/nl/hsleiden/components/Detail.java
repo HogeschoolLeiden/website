@@ -16,7 +16,7 @@ import com.tdclighthouse.prototype.utils.Constants;
 
 public class Detail extends AbstractComponent {
 
-    public static final HslHtmlRewriter hslHtmlRewriter = new HslHtmlRewriter();
+    public static final HslHtmlRewriter HSL_HTML_REWRITER = new HslHtmlRewriter();
     
     @Override
     public Map<String, Object> getModel(HstRequest request, HstResponse response) {
@@ -25,7 +25,7 @@ public class Detail extends AbstractComponent {
         if (contentBean != null) {
             request.setAttribute(Constants.AttributesConstants.DOCUMENT, contentBean);
         }
-        request.getRequestContext().setAttribute("hslHtmlRewriter", hslHtmlRewriter);
+        request.getRequestContext().setAttribute("hslHtmlRewriter", HSL_HTML_REWRITER);
         return null;
     }
     
