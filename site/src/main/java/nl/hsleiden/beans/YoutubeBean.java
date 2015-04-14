@@ -15,7 +15,7 @@ import com.tdclighthouse.prototype.utils.URL;
 public class YoutubeBean extends Youtube {
 
     private static final String YOUTUBE_REGEX = "https?://www.youtube.com/.*(\\?|&)(video_id=|/|v=)([^(&\\\r\\\n\\?)]*).*";
-    private static final String YOUTUBE_START = "http://www.youtube.com/embed/";
+    private static final String YOUTUBE_START = "//www.youtube.com/embed/";
 
     public static final String ALLOW_FULL_SCREEN = "allowFullScreen";
     public static final String AUTOPLAY = "autoplay";
