@@ -66,7 +66,7 @@
         
         <c:if test="${content.shareParameters.linkedin}">
       
-          <c:url var="linkedinQuoteUrl" value="http://www.linkedin.com/shareArticle">
+          <c:url var="linkedinQuoteUrl" value="https://www.linkedin.com/shareArticle">
             <c:param name="mini" value="true"/>
             <c:param name="url" value="${url}"/>
             <c:param name="title" value="${quoteAuthor}"/>
@@ -90,7 +90,7 @@
             </c:otherwise>
           </c:choose>
         
-          <c:url var="twQuoteUrl" value="http://twitter.com/home">
+          <c:url var="twQuoteUrl" value="https://twitter.com/home">
             <c:param name="status" value="${twitterQuote}"/>
           </c:url>
   

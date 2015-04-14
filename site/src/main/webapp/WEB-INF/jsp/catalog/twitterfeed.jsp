@@ -32,8 +32,8 @@
           <figure>
             <img src="${tweet.status.user.profileImageURL}" alt="profile image" /> <%-- get it from properties --%> 
           </figure>
-          <h2><a href="http://www.twitter.com/${tweet.status.user.screenName}" target="_BLANK" class="username" rel="nofollow">${tweet.status.user.name}</a></h2>
-          <h3><a href="http://www.twitter.com/${tweet.status.user.screenName}" target="_BLANK" class="screen-name" rel="nofollow">@${tweet.status.user.screenName}</a></h3>
+          <h2><a href="https://www.twitter.com/${tweet.status.user.screenName}" target="_BLANK" class="username" rel="nofollow">${tweet.status.user.name}</a></h2>
+          <h3><a href="https://www.twitter.com/${tweet.status.user.screenName}" target="_BLANK" class="screen-name" rel="nofollow">@${tweet.status.user.screenName}</a></h3>
           <span class="date"><fmt:formatDate value="${tweet.status.createdAt}" pattern="dd MMM"/></span> <br/>
           <p>${tweet.text}</p>
           <div class="action">

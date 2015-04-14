@@ -12,7 +12,7 @@
 <c:choose>
 <c:when test="${not empty model.paramInfo.forumShortname}">
 	<hst:headContribution keyHint="component.disqus.js" category="scripts">
-	<script type="text/javascript" async="async" src="http://${model.paramInfo.forumShortname}.disqus.com/embed.js"></script>
+	<script type="text/javascript" async="async" src="//${model.paramInfo.forumShortname}.disqus.com/embed.js"></script>
 	</hst:headContribution>
 	
 	<div id="disqus_thread"></div>
