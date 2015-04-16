@@ -70,7 +70,7 @@
   </a>
   
   <%-- LINKED IN --%>
-  <c:url var="linkedInUrl" value="http://www.linkedin.com/shareArticle">
+  <c:url var="linkedInUrl" value="https://www.linkedin.com/shareArticle">
     <c:param name="mini" value="true"/>
     <c:param name="url" value="${url}"/>
     <c:param name="title" value="${fn:substring(document.title,0,250)}"/>

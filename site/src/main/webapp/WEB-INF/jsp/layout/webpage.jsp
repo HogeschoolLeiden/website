@@ -118,7 +118,7 @@
     <script src="${googleAnalytics}" type="text/javascript"></script>
 
     <c:set var="disableGTM" value="${(tag:getMainWebsitePropertyList(pageContext.request)).disableGoogleTagManager}" />
-
+--${(tag:getMainWebsitePropertyList(pageContext.request))}--
     <c:if test="${not disableGTM eq 'true'}">
       <c:set var="gtm" value="${(tag:getMainWebsitePropertyList(pageContext.request)).googleTagManagerConfig}" />
         ${gtm}

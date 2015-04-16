@@ -71,7 +71,7 @@ public class TwitterUtils {
         for (MediaEntity mediaEntity : mediaEntities) {
             if("photo".equals(mediaEntity.getType())){
                 String mediaUrl = mediaEntity.getURL();
-                result = result.replace(mediaUrl, imgFormatter.format(new Object[]{mediaEntity.getMediaURL(), mediaUrl}));
+                result = result.replace(mediaUrl, imgFormatter.format(new Object[]{mediaEntity.getMediaURLHttps(), mediaUrl}));
             }
         }
         return result;
