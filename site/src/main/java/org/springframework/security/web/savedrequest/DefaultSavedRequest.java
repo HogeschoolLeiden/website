@@ -72,7 +72,6 @@ public class DefaultSavedRequest implements SavedRequest {
 
     //~ Constructors ===================================================================================================
 
-    @SuppressWarnings("unchecked")
     public DefaultSavedRequest(HttpServletRequest request, PortResolver portResolver) {
         Assert.notNull(request, "Request required");
         Assert.notNull(portResolver, "PortResolver required");
@@ -111,17 +110,11 @@ public class DefaultSavedRequest implements SavedRequest {
         }
 
         // Parameters
-        Map<String, Object> parameters = request.getParameterMap();
+        Map<String, String[]> parameters = request.getParameterMap();
 
         for (String paramName : parameters.keySet()) {
-            Object paramValues = parameters.get(paramName);
-            if (paramValues instanceof String[]) {
-                this.addParameter(paramName, (String[]) paramValues);
-            } else {
-                if (logger.isWarnEnabled()) {
-                    logger.warn("ServletRequest.getParameterMap() returned non-String array");
-                }
-            }
+            String[] paramValues = parameters.get(paramName);
+            this.addParameter(paramName, (String[]) paramValues);
         }
 
         // Primitives

@@ -217,59 +217,74 @@
       <groupId>nl.openweb.elasticsearch</groupId>
       <artifactId>hippo-elasticsearch-hst</artifactId>
     </dependency>
+
+    <dependency>
+      <groupId>org.apache.lucene</groupId>
+      <artifactId>lucene-analyzers</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.onehippo.forge.selectionplugins</groupId>
+      <artifactId>selectionplugins-hst-client</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.lucene</groupId>
+      <artifactId>lucene-analyzers</artifactId>
+      <version>2.4.1</version>
+    </dependency>
     
-    
-         <!-- SAML - Spring security -->
-      <dependency>
-        <groupId>org.surfnet.coin</groupId>
-        <artifactId>spring-security-opensaml</artifactId>
-        <exclusions>
-          <exclusion>
-            <artifactId>xml-apis</artifactId>
-            <groupId>xml-apis</groupId>
-          </exclusion>
-          <exclusion>
-            <artifactId>log4j-over-slf4j</artifactId>
-            <groupId>org.slf4j</groupId>
-          </exclusion>
-          <exclusion>
-            <artifactId>xercesImpl</artifactId>
-            <groupId>xerces</groupId>
-          </exclusion>
-        </exclusions>
-      </dependency>
+    <!-- SAML - Spring security -->
+    <dependency>
+      <groupId>org.surfnet.coin</groupId>
+      <artifactId>spring-security-opensaml</artifactId>
+      <exclusions>
+        <exclusion>
+          <artifactId>xml-apis</artifactId>
+          <groupId>xml-apis</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>log4j-over-slf4j</artifactId>
+          <groupId>org.slf4j</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>xercesImpl</artifactId>
+          <groupId>xerces</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
 
-      <dependency>
-        <groupId>org.onehippo.forge.hst-springsec</groupId>
-        <artifactId>hst-springsec</artifactId>
-      </dependency>
+    <dependency>
+      <groupId>org.onehippo.forge.hst-springsec</groupId>
+      <artifactId>hst-springsec</artifactId>
+    </dependency>
 
-      <dependency>
-        <groupId>org.springframework.security</groupId>
-        <artifactId>spring-security-core</artifactId>
-        <exclusions>
-          <exclusion>
-            <artifactId>spring-expression</artifactId>
-            <groupId>org.springframework</groupId>
-          </exclusion>
-        </exclusions>
-      </dependency>
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-core</artifactId>
+      <exclusions>
+        <exclusion>
+          <artifactId>spring-expression</artifactId>
+          <groupId>org.springframework</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
 
-      <dependency>
-        <groupId>org.springframework.security</groupId>
-        <artifactId>spring-security-web</artifactId>
-      </dependency>
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-web</artifactId>
+    </dependency>
 
-      <dependency>
-        <groupId>org.springframework.security</groupId>
-        <artifactId>spring-security-config</artifactId>
-      </dependency>
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-config</artifactId>
+    </dependency>
 
-      <dependency>
-        <groupId>org.springframework.security</groupId>
-        <artifactId>spring-security-taglibs</artifactId>
-      </dependency>
-      <!-- /SAML - Spring security -->
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-taglibs</artifactId>
+    </dependency>
+    <!-- /SAML - Spring security -->
 
   </dependencies>
 
@@ -337,7 +352,7 @@
             <id>default-minify</id>
             <configuration>
               <!-- <closureCompilationLevel>ADVANCED_OPTIMIZATIONS</closureCompilationLevel> -->
-              <cssSourceFiles> 
+              <cssSourceFiles>
                 <cssSourceFile>bootstrap.min.css</cssSourceFile>
                 <cssSourceFile>font-awesome.min.css</cssSourceFile>
                 <cssSourceFile>eforms.css</cssSourceFile>
@@ -359,16 +374,16 @@
                 <jsSourceFile>pretty-photo-inizialization.js</jsSourceFile>
                 <jsSourceFile>jquery.prettyPhoto.js</jsSourceFile>
                 <jsSourceFile>homepage-height-equalizer.js</jsSourceFile>
-				<jsSourceFile>swiper.js</jsSourceFile>
-				<jsSourceFile>kees/vendor/idangerous.swiper.js</jsSourceFile>
-				<jsSourceFile>kees/vendor/idangerous.swiper.progress.min.js</jsSourceFile>
+                <jsSourceFile>swiper.js</jsSourceFile>
+                <jsSourceFile>kees/vendor/idangerous.swiper.js</jsSourceFile>
+                <jsSourceFile>kees/vendor/idangerous.swiper.progress.min.js</jsSourceFile>
                 <jsSourceFile>moment.min.js</jsSourceFile>
                 <jsSourceFile>fullcalendar/fullcalendar.js</jsSourceFile>
                 <jsSourceFile>fullcalendar/lang/nl.js</jsSourceFile>
                 <jsSourceFile>kees/vendor/modernizr-2.6.2.min.js</jsSourceFile>
                 <jsSourceFile>kees/vendor/retina.min.js</jsSourceFile>
                 <jsSourceFile>kees/vendor/respond.js</jsSourceFile>
-	            <jsSourceFile>kees/vendor/bootstrap.min.js</jsSourceFile>
+                <jsSourceFile>kees/vendor/bootstrap.min.js</jsSourceFile>
                 <jsSourceFile>kees/plugins.js</jsSourceFile>
                 <jsSourceFile>kees/main.js</jsSourceFile>
                 <jsSourceFile>typeahead.bundle.js</jsSourceFile>

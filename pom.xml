@@ -76,7 +76,7 @@
     <filesync.override>false</filesync.override>
     <maven.plugins.filesync.version>1.0.0</maven.plugins.filesync.version>
     <mysql.connecotr.version>5.1.30</mysql.connecotr.version>
-    <hippo.prototype.version>7.9.46</hippo.prototype.version>
+    <hippo.prototype.version>7.9.47-SNAPSHOT</hippo.prototype.version>
     <hippo.maven.plugin.version>0.1.2</hippo.maven.plugin.version>
     <minify.maven.plugin>1.7.4</minify.maven.plugin>
     <cucumber.version>1.1.7</cucumber.version>
@@ -99,7 +99,7 @@
     <hsl.sitemap.version>1.06</hsl.sitemap.version>
     <!-- SAML -->
     <hst-springsec.version>0.02.01</hst-springsec.version>
-    <spring.security.version>3.0.7-SNAPSHOT</spring.security.version>
+    <spring.security.version>3.0.7.RELEASE</spring.security.version>
   </properties>
 
   <repositories>
@@ -717,6 +717,7 @@
                   <elasticsearch.configuration>${project.basedir}/release/conf/search-config.json</elasticsearch.configuration>
                   <elasticsearch.enable.indexation>true</elasticsearch.enable.indexation>
                   <sitemap.scheduler.config>${project.basedir}/release/conf/sitemapscheduler.properties</sitemap.scheduler.config>
+                  <opensaml.conf>file:${project.basedir}/release/conf/dev/opensaml.properties</opensaml.conf>
                   <!-- uncomment to run with mysql db 
                   <repo.config>file:${project.basedir}/release/conf/repository.xml</repo.config>
                   -->
