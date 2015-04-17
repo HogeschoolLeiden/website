@@ -97,6 +97,9 @@
 
     <com.itextpdf.version>5.0.6</com.itextpdf.version>
     <hsl.sitemap.version>1.06</hsl.sitemap.version>
+    <!-- SAML -->
+    <hst-springsec.version>0.02.01</hst-springsec.version>
+    <spring.security.version>3.0.7-SNAPSHOT</spring.security.version>
   </properties>
 
   <repositories>
@@ -211,7 +214,7 @@
         <enabled>false</enabled>
       </snapshots>
     </repository>
-	<repository>
+    <repository>
       <id>sf-hippo-common-tools-repo</id>
       <url>http://svn.code.sf.net/p/hippocommontool/code/maven2/</url>
       <releases>
@@ -226,6 +229,23 @@
       <id>hstpdfrenderer-maven-repo</id>
       <name>HST PDF Renderer Maven 2 Repository</name>
       <url>http://forge.onehippo.org/svn/hstpdfrenderer/maven2/</url>
+    </repository>
+    <repository>
+      <id>repo.springsource.org</id>
+      <name>repo.springsource.org-releases</name>
+      <url>http://repo.springsource.org/libs-snapshot</url>
+    </repository>
+    <repository>
+      <id>openconext-releases</id>
+      <name>OpenConext public releases repository</name>
+      <url>https://build.surfconext.nl/repository/public/releases</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <releases>
+        <enabled>true</enabled>
+        <updatePolicy>never</updatePolicy>
+      </releases>
     </repository>
   </repositories>
 
@@ -457,7 +477,64 @@
         <artifactId>sitemap-content</artifactId>
         <version>${hsl.sitemap.version}</version>
       </dependency>
-    <!-- /sitemap plugin -->
+      <!-- /sitemap plugin -->
+      <!-- SAML - Spring security -->
+      <dependency>
+        <groupId>org.surfnet.coin</groupId>
+        <artifactId>spring-security-opensaml</artifactId>
+        <version>3.2.0</version>
+        <exclusions>
+          <exclusion>
+            <artifactId>xml-apis</artifactId>
+            <groupId>xml-apis</groupId>
+          </exclusion>
+          <exclusion>
+            <artifactId>log4j-over-slf4j</artifactId>
+            <groupId>org.slf4j</groupId>
+          </exclusion>
+          <exclusion>
+            <artifactId>xercesImpl</artifactId>
+            <groupId>xerces</groupId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+
+      <dependency>
+        <groupId>org.onehippo.forge.hst-springsec</groupId>
+        <artifactId>hst-springsec</artifactId>
+        <version>${hst-springsec.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.springframework.security</groupId>
+        <artifactId>spring-security-core</artifactId>
+        <version>${spring.security.version}</version>
+        <exclusions>
+          <exclusion>
+            <artifactId>spring-expression</artifactId>
+            <groupId>org.springframework</groupId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+
+      <dependency>
+        <groupId>org.springframework.security</groupId>
+        <artifactId>spring-security-web</artifactId>
+        <version>${spring.security.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.springframework.security</groupId>
+        <artifactId>spring-security-config</artifactId>
+        <version>${spring.security.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.springframework.security</groupId>
+        <artifactId>spring-security-taglibs</artifactId>
+        <version>${spring.security.version}</version>
+      </dependency>
+      <!-- /SAML - Spring security -->
     </dependencies>
   </dependencyManagement>
 

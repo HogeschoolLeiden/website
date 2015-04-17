@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+       xmlns:lang="http://www.springframework.org/schema/lang" 
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                           http://www.springframework.org/schema/lang http://www.springframework.org/schema/beans/spring-lang-3.0.xsd
+                           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+    
+
+  <bean id="org.onehippo.forge.selection.hst.manager.ValueListManager" class="org.onehippo.forge.selection.hst.manager.DefaultValueListManager">
+      <constructor-arg>
+        <map>
+          <entry key="opleidingen" value="/content/documents/hsleiden/admin/waardenlijsten/opleidingen"/>
+          <entry key="afdelingen" value="/content/documents/hsleiden/admin/waardenlijsten/afdelingen"/>
+          <entry key="medewerkerslijst" value="/content/documents/hsleiden/admin/waardenlijsten/medewerkerslijst"/>
+          <entry key="servicelijst" value="/content/documents/hsleiden/admin/waardenlijsten/servicelijst"/>
+          <entry key="studentenlijst" value="/content/documents/hsleiden/admin/waardenlijsten/studentenlijst"/>
+        </map>
+      </constructor-arg>
+    </bean>
+    
+</beans>

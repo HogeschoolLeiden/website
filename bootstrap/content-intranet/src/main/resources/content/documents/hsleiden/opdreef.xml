@@ -1,0 +1,815 @@
+<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="opdreef">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>hippostd:folder</sv:value>
+  </sv:property>
+  <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+    <sv:value>mix:referenceable</sv:value>
+    <sv:value>hippo:translated</sv:value>
+  </sv:property>
+  <sv:property sv:name="jcr:uuid" sv:type="String">
+    <sv:value>b058bca8-e2d6-4dc4-bc81-a837a0c8801c</sv:value>
+  </sv:property>
+  <sv:property sv:name="hippostd:foldertype" sv:type="String" sv:multiple="true">
+    <sv:value>new-content-pagina-document</sv:value>
+    <sv:value>new-image-gallery-pagina-document</sv:value>
+    <sv:value>new-notulen-overzicht-document</sv:value>
+    <sv:value>new-content-folder</sv:value>
+  </sv:property>
+  <sv:node sv:name="hippo:translation">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hippo:translation</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippo:language" sv:type="String">
+      <sv:value/>
+    </sv:property>
+    <sv:property sv:name="hippo:message" sv:type="String">
+      <sv:value>Opdreef</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="activiteiten">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hippo:handle</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+      <sv:value>mix:referenceable</sv:value>
+      <sv:value>hippo:translated</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>b0a2d87a-b956-48d4-8f57-7f17af36f325</sv:value>
+    </sv:property>
+    <sv:node sv:name="hippo:translation">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hippo:translation</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:language" sv:type="String">
+        <sv:value/>
+      </sv:property>
+      <sv:property sv:name="hippo:message" sv:type="String">
+        <sv:value>Activiteiten</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="activiteiten">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hsleiden:ContentPagina</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:value>mix:referenceable</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>e3a940b2-8439-465a-9789-39279cbda7d4</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+        <sv:value>live</sv:value>
+        <sv:value>preview</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:holder" sv:type="String">
+        <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:state" sv:type="String">
+        <sv:value>published</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+        <sv:value>live</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+        <sv:value>Nijnke</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+        <sv:value>2012-11-09T14:26:56.458+01:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+        <sv:value>2013-05-21T12:19:57.044+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+        <sv:value>meij.vd.dorothe</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
+        <sv:value>2013-05-21T12:20:55.866+02:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippotranslation:id" sv:type="String">
+        <sv:value>86788633-8f5d-4eec-bb8a-a0292990863a</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippotranslation:locale" sv:type="String">
+        <sv:value>document-type-locale</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsleiden:afdeling" sv:type="String">
+        <sv:value/>
+      </sv:property>
+      <sv:property sv:name="hsleiden:categorie" sv:type="String" sv:multiple="true">
+        <sv:value/>
+      </sv:property>
+      <sv:property sv:name="hsleiden:externelinks" sv:type="String" sv:multiple="true">
+        <sv:value/>
+      </sv:property>
+      <sv:property sv:name="hsleiden:medewerkerslijst" sv:type="String" sv:multiple="true">
+        <sv:value>opdreef</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsleiden:opleiding" sv:type="String">
+        <sv:value/>
+      </sv:property>
+      <sv:property sv:name="hsleiden:service" sv:type="Boolean">
+        <sv:value>false</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsleiden:servicelijst" sv:type="String" sv:multiple="true"/>
+      <sv:property sv:name="hsleiden:student" sv:type="Boolean">
+        <sv:value>false</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsleiden:title" sv:type="String">
+        <sv:value>Activiteiten 2012-2013</sv:value>
+      </sv:property>
+      <sv:property sv:name="hsleiden:werknemer" sv:type="Boolean">
+        <sv:value>true</sv:value>
+      </sv:property>
+      
+      <sv:node sv:name="hsleiden:image">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hippogallerypicker:imagelink</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:docbase" sv:type="String">
+          <sv:value>76032ce0-eaf1-4119-bb92-30cfd379aa80</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+        <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+      </sv:node>
+      <sv:node sv:name="hsleiden:body">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hippostd:html</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostd:content" sv:type="String">
+          <sv:value>&lt;html&gt;
+&lt;body&gt;
+
+&lt;p&gt;Dit is de community van de personeelsverening OPDREEF. Op deze course vind je
+informatie over de personeelsvereniging, het algemeen bestuur en jaarverslagen.
+Natuurlijk ook informatie over alle activiteiten, foto's, verslagen en nog veel
+meer! &lt;/p&gt;
+
+&lt;p&gt;Neem gauw een kijkje.  &lt;/p&gt;
+
+&lt;p&gt;Heb je een leuk idee voor een activiteit? &lt;/p&gt;
+
+&lt;p&gt;Meld dit dan bij één van de OPDREEF leden of via e-mailadres
+&lt;a href="applewebdata://F70180FF-EB7E-427B-BC4E-5B395D365AEF/opdreef@hsleiden.nl%20"&gt;opdreef@hsleiden.nl &lt;/a&gt;! 
+&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="hsleiden:titelTekst">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsleiden:TitelTekstBlok</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsleiden:titel" sv:type="String">
+          <sv:value>Algemeen bestuur</sv:value>
+        </sv:property>
+        <sv:node sv:name="hsleiden:tekst">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippostd:html</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippostd:content" sv:type="String">
+            <sv:value>&lt;html&gt;
+&lt;body&gt;
+
+&lt;p&gt;
+&lt;img alt="Algemeen bestuur" src="algemeenbestuur.jpg/{_document}/hippogallery:original"/&gt;
+&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;Boven van l naar r: Frans Kingma, Pieter Bouma, Ivo Horn, Ies Lohman, Peter
+Hennevanger, Wim Heijman en Dick Keijzer.&lt;/p&gt;
+
+&lt;p&gt;Onder van l naar r: Nijnke van den Bosch, Caroline Siecker, Peter ten Wolde,
+Ria Neijenhuis en Carla Akse &lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</sv:value>
+          </sv:property>
+          <sv:node sv:name="algemeenbestuur.jpg">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippo:facetselect</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>3ce5ae56-a52a-4fed-81cc-1556be04ebc7</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+          </sv:node>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="hsleiden:titelTekst">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsleiden:TitelTekstBlok</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsleiden:titel" sv:type="String">
+          <sv:value>Dagelijks bestuur</sv:value>
+        </sv:property>
+        <sv:node sv:name="hsleiden:tekst">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippostd:html</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippostd:content" sv:type="String">
+            <sv:value>&lt;html&gt;
+&lt;body&gt;
+
+&lt;p&gt;&lt;strong&gt;Peter ten Wolde&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="Peter" src="peter.jpg/{_document}/hippogallery:original"/&gt; &lt;/p&gt;
+
+&lt;p&gt;Voorzitter OPDREEF&lt;/p&gt;
+
+&lt;p&gt;Werkzaam bij cluster Techniek HLO&lt;/p&gt;
+
+&lt;p&gt;wolde.ten.p@hsleiden.nl&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Zuzanne ten Berge &lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="Suzanne" src="suzanne.jpg/{_document}/hippogallery:original"/&gt; 
+&lt;/p&gt;
+
+&lt;p&gt;Secretaris OPDREEF&lt;/p&gt;
+
+&lt;p&gt;Werkzaam bij Onderwijslogistiek&lt;/p&gt;
+
+&lt;p&gt;berge.ten.s@hsleiden.nl - 071 - 5188 882 &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Pieter Bouma&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="Pieter" src="pieter_1.jpg/{_document}/hippogallery:original"/&gt; 
+&lt;/p&gt;
+
+&lt;p&gt;Penningmeester OPDREEF&lt;/p&gt;
+
+&lt;p&gt;Werkzaam bij Financiële zaken (BEZ)&lt;/p&gt;
+
+&lt;p&gt;bouma.p@hsleiden.nl - 071 5188 827&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Carla Akse&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="Carla" src="carla.jpg/{_document}/hippogallery:original"/&gt; &lt;/p&gt;
+
+&lt;p&gt;Vice-penningmeester OPDREEF&lt;/p&gt;
+
+&lt;p&gt;Werkzaam bij Cluster Zorg - SSBL (Service Bureau Buitenschoolsleren)&lt;/p&gt;
+
+&lt;p&gt;akse.c@hsleiden.nl - 071 - 5188 703&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Nijnke van den Bosch&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="Nijnke" src="nijnke.jpg/{_document}/hippogallery:original"/&gt; &lt;/p&gt;
+
+&lt;p&gt;Vice-secretaris&lt;/p&gt;
+
+&lt;p&gt;Werkzaam bij Management-ondersteuning &lt;/p&gt;
+
+&lt;p&gt;bosch.vd.n@hsleiden.nl - 071 5188 732&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Ria Neijenhuis&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="Ria" src="ria.jpg/{_document}/hippogallery:original"/&gt; &lt;/p&gt;
+
+&lt;p&gt;Lid OPDREEF&lt;/p&gt;
+
+&lt;p&gt;Werkzaam bij cluster Zorg - Verpleegkunde&lt;/p&gt;
+
+&lt;p&gt;nijenhuis.r@hsleiden.nl - 071 5 188 549&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Frances Rusman&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="Frances" src="frances.jpg/{_document}/hippogallery:original"/&gt; 
+&lt;/p&gt;
+
+&lt;p&gt;Lid OPDREEF Werkzaam bij Cluster Techniek - Informatica&lt;/p&gt;
+
+&lt;p&gt;rusman.f@hsleiden.nl - 071 5188 208&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tjakko Bloemendaal&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="Tjakko" src="tjakko.jpg/{_document}/hippogallery:original"/&gt; &lt;/p&gt;
+
+&lt;p&gt;Lid OPDREEF&lt;/p&gt;
+
+&lt;p&gt;Werkzaam bij Facilitair Bedrijf&lt;/p&gt;
+
+&lt;p&gt;bloemendaal.t@hsleiden.nl - 071 - 5188 900&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Willem van Gorkum&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="willem" src="willem.jpg/{_document}/hippogallery:original"/&gt; &lt;/p&gt;
+
+&lt;p&gt;Lid OPDREEF&lt;/p&gt;
+
+&lt;p&gt;Werkzaam bij Facilitair Bedrijf &lt;/p&gt;
+
+&lt;p&gt;gorkum.van.w@hsleiden.nl - 071 5 188 900&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</sv:value>
+          </sv:property>
+          <sv:node sv:name="peter.jpg">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippo:facetselect</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>d9645d7c-5dfa-4c67-8461-3843fa86f5db</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+          </sv:node>
+          <sv:node sv:name="suzanne.jpg">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippo:facetselect</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>323acf2e-3f9e-4dc6-8abd-2007497a34ba</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+          </sv:node>
+          <sv:node sv:name="pieter_1.jpg">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippo:facetselect</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>aebe5528-ac8c-4b3b-8464-df3ce15fa3fc</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+          </sv:node>
+          <sv:node sv:name="carla.jpg">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippo:facetselect</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>66b9bd3c-7d4a-43a6-8f80-0104c0ee05cf</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+          </sv:node>
+          <sv:node sv:name="nijnke.jpg">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippo:facetselect</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>fb0f926f-bc92-4a8a-be58-8ebd861a52c0</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+          </sv:node>
+          <sv:node sv:name="ria.jpg">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippo:facetselect</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>9043c894-a5ec-4404-9397-ebb6d3e6c72d</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+          </sv:node>
+          <sv:node sv:name="frances.jpg">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippo:facetselect</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>4a67a454-4711-47dd-98ef-d08a62ac0d57</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+          </sv:node>
+          <sv:node sv:name="tjakko.jpg">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippo:facetselect</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>f5f9f56b-e718-4127-baf8-828e853b6cc9</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+          </sv:node>
+          <sv:node sv:name="willem.jpg">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippo:facetselect</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:docbase" sv:type="String">
+              <sv:value>ce008261-8b7c-45e2-90e3-29a2d14b54f1</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+            <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+          </sv:node>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="hsleiden:bijlagen">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsleiden:TitelLinkBlok</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsleiden:titel" sv:type="String">
+          <sv:value>Jaarverslag 2009</sv:value>
+        </sv:property>
+        <sv:node sv:name="hsleiden:link">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>7b456611-faba-475c-894b-67fc595ebd32</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="hsleiden:bijlagen">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsleiden:TitelLinkBlok</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsleiden:titel" sv:type="String">
+          <sv:value>Jaarverslag 2008</sv:value>
+        </sv:property>
+        <sv:node sv:name="hsleiden:link">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>a63ff5e8-ceed-4ec5-a810-59e9cbad8c02</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="hsleiden:bijlagen">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsleiden:TitelLinkBlok</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsleiden:titel" sv:type="String">
+          <sv:value>Jaarverslag 2007</sv:value>
+        </sv:property>
+        <sv:node sv:name="hsleiden:link">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>7479a846-36e9-4ea4-af9b-cfd6e48f5c92</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="hsleiden:bijlagen">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsleiden:TitelLinkBlok</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsleiden:titel" sv:type="String">
+          <sv:value>Jaarverslag 2006</sv:value>
+        </sv:property>
+        <sv:node sv:name="hsleiden:link">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>90fe037c-dc7e-4787-939b-b8800ba129e6</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="hsleiden:bijlagen">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsleiden:TitelLinkBlok</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsleiden:titel" sv:type="String">
+          <sv:value>Jaarverslag 2005</sv:value>
+        </sv:property>
+        <sv:node sv:name="hsleiden:link">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>2ecc0449-757f-4fde-984b-3a46ea9d71d1</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="hsleiden:bijlagen">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsleiden:TitelLinkBlok</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsleiden:titel" sv:type="String">
+          <sv:value>Jaarverslag 2004</sv:value>
+        </sv:property>
+        <sv:node sv:name="hsleiden:link">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>07bfe11e-3f67-49ca-9de9-89d2d69ecc62</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="hsleiden:bijlagen">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsleiden:TitelLinkBlok</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsleiden:titel" sv:type="String">
+          <sv:value>Jaarverslag 2003</sv:value>
+        </sv:property>
+        <sv:node sv:name="hsleiden:link">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>c03d05f7-0b60-46a5-bf23-2379d90aa136</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="hsleiden:bijlagen">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsleiden:TitelLinkBlok</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsleiden:titel" sv:type="String">
+          <sv:value>Statuten</sv:value>
+        </sv:property>
+        <sv:node sv:name="hsleiden:link">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>5a5255a7-be03-4eca-b58c-02601709508c</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="hsleiden:bijlagen">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsleiden:TitelLinkBlok</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsleiden:titel" sv:type="String">
+          <sv:value>Huishoudelijk reglement statuten</sv:value>
+        </sv:property>
+        <sv:node sv:name="hsleiden:link">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>0c6686b0-1ec5-435e-a878-883f150bfd54</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+    </sv:node>
+  </sv:node>
+  <sv:node sv:name="fotos">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hippostd:folder</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+      <sv:value>mix:referenceable</sv:value>
+      <sv:value>hippo:translated</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>6175e0e5-3c55-479c-9de0-b4dd1f9f0420</sv:value>
+    </sv:property>
+    <sv:property sv:name="hippostd:foldertype" sv:type="String" sv:multiple="true">
+      <sv:value>new-content-pagina-document</sv:value>
+      <sv:value>new-image-gallery-pagina-document</sv:value>
+      <sv:value>new-notulen-overzicht-document</sv:value>
+      <sv:value>new-content-folder</sv:value>
+    </sv:property>
+    <sv:node sv:name="hippo:translation">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hippo:translation</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:language" sv:type="String">
+        <sv:value/>
+      </sv:property>
+      <sv:property sv:name="hippo:message" sv:type="String">
+        <sv:value>Foto's</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="een-eerste-foto-gallerij">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hippo:handle</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:value>mix:referenceable</sv:value>
+        <sv:value>hippo:translated</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>737df394-5e1b-4ddf-b364-cdf7f61a6fb6</sv:value>
+      </sv:property>
+      <sv:node sv:name="hippo:translation">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hippo:translation</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:language" sv:type="String">
+          <sv:value/>
+        </sv:property>
+        <sv:property sv:name="hippo:message" sv:type="String">
+          <sv:value>Een eerste foto gallerij</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="een-eerste-foto-gallerij">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hsleiden:ImageGalleryPagina</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+          <sv:value>mix:referenceable</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>661da9f4-a7c9-4a09-970c-62cc538900eb</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+          <sv:value>live</sv:value>
+          <sv:value>preview</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostd:holder" sv:type="String">
+          <sv:value>admin</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostd:state" sv:type="String">
+          <sv:value>published</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+          <sv:value>live</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+          <sv:value>admin</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+          <sv:value>2013-07-04T10:12:00.684+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+          <sv:value>2013-07-17T14:35:35.681+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+          <sv:value>admin</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
+          <sv:value>2013-07-17T14:35:38.094+02:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippotranslation:id" sv:type="String">
+          <sv:value>317aef93-ffca-42e3-b3a5-ba93804a741e</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippotranslation:locale" sv:type="String">
+          <sv:value>document-type-locale</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsleiden:afdeling" sv:type="String" sv:multiple="true">
+          <sv:value>afdeling-1</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsleiden:introduction" sv:type="String">
+          <sv:value>Dit is de introductie</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsleiden:medewerkerslijst" sv:type="String" sv:multiple="true">
+          <sv:value>diversiteit</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsleiden:opleiding" sv:type="String" sv:multiple="true">
+          <sv:value>opleiding-1</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsleiden:service" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsleiden:servicelijst" sv:type="String">
+          <sv:value/>
+        </sv:property>
+        <sv:property sv:name="hsleiden:student" sv:type="Boolean">
+          <sv:value>true</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsleiden:studentenlijst" sv:type="String" sv:multiple="true">
+          <sv:value>studie</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsleiden:title" sv:type="String">
+          <sv:value>Een eerste foto gallery</sv:value>
+        </sv:property>
+        <sv:property sv:name="hsleiden:werknemer" sv:type="Boolean">
+          <sv:value>true</sv:value>
+        </sv:property>
+        
+        <sv:node sv:name="hsleiden:image">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippogallerypicker:imagelink</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:facets" sv:type="String" sv:multiple="true"/>
+          <sv:property sv:name="hippo:modes" sv:type="String" sv:multiple="true"/>
+          <sv:property sv:name="hippo:values" sv:type="String" sv:multiple="true"/>
+        </sv:node>
+        <sv:node sv:name="hsleiden:body">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippostd:html</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippostd:content" sv:type="String">
+            <sv:value>&lt;html&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt; </sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="hsleiden:imageFolder">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>b68c44dc-b535-446f-9399-80a0a08507f3</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="hsleiden:titelTekst">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsleiden:TitelTekstBlok</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsleiden:titel" sv:type="String">
+            <sv:value>Titel van een tekst blok</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsleiden:tekst">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippostd:html</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippostd:content" sv:type="String">
+              <sv:value>&lt;html&gt;
+&lt;body&gt;
+
+&lt;div id="lipsum"&gt;
+&lt;p&gt;Etiam consectetur metus at odio vestibulum euismod. Maecenas scelerisque,
+orci nec tincidunt rhoncus, turpis orci rutrum purus, nec adipiscing sapien mi
+nec enim. Aenean ac nulla ac lorem viverra ornare. Duis lobortis magna ut
+dignissim lobortis. Praesent non tristique arcu. Vestibulum quis condimentum
+justo. Ut ornare consequat libero, eu ullamcorper nibh tincidunt a. Ut
+adipiscing, nulla sed tristique molestie, risus dui mattis diam, a gravida neque
+lectus sit amet nulla. Vestibulum ligula lacus, dignissim sit amet lectus quis,
+dignissim cursus nunc. Ut scelerisque aliquet condimentum. Nulla aliquet, est eu
+dictum suscipit, tellus velit eleifend purus, sed tincidunt urna quam at augue.
+Proin at arcu lectus. Nulla eu libero nunc. Aliquam erat volutpat. Fusce aliquet
+purus nec eros accumsan elementum.&lt;/p&gt;
+
+&lt;p&gt;Integer nisl est, volutpat non tortor ac, posuere luctus metus. Etiam
+aliquet, nisi tempus tempor auctor, lectus ipsum convallis turpis, id porta
+libero urna in magna. Phasellus vitae convallis diam. Etiam facilisis turpis
+odio, non suscipit leo facilisis elementum. Nunc non mollis risus. Aliquam ut
+risus sed leo iaculis mollis. Morbi a odio egestas, sagittis lectus sit amet,
+congue est.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
+        <sv:node sv:name="hsleiden:titelTekst">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hsleiden:TitelTekstBlok</sv:value>
+          </sv:property>
+          <sv:property sv:name="hsleiden:titel" sv:type="String">
+            <sv:value>Nog een titel</sv:value>
+          </sv:property>
+          <sv:node sv:name="hsleiden:tekst">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hippostd:html</sv:value>
+            </sv:property>
+            <sv:property sv:name="hippostd:content" sv:type="String">
+              <sv:value>&lt;html&gt;
+&lt;body&gt;
+
+&lt;p&gt;Etiam consectetur metus at odio vestibulum euismod. Maecenas scelerisque,
+orci nec tincidunt rhoncus, turpis orci rutrum purus, nec adipiscing sapien mi
+nec enim. Aenean ac nulla ac lorem viverra ornare. Duis lobortis magna ut
+dignissim lobortis. Praesent non tristique arcu. Vestibulum quis condimentum
+justo. Ut ornare consequat libero, eu ullamcorper nibh tincidunt a. Ut
+adipiscing, nulla sed tristique molestie, risus dui mattis diam, a gravida neque
+lectus sit amet nulla. Vestibulum ligula lacus, dignissim sit amet lectus quis,
+dignissim cursus nunc. Ut scelerisque aliquet condimentum. Nulla aliquet, est eu
+dictum suscipit, tellus velit eleifend purus, sed tincidunt urna quam at augue.
+Proin at arcu lectus. Nulla eu libero nunc. Aliquam erat volutpat. Fusce aliquet
+purus nec eros accumsan elementum.&lt;/p&gt;
+
+&lt;p&gt;Integer nisl est, volutpat non tortor ac, posuere luctus metus. Etiam
+aliquet, nisi tempus tempor auctor, lectus ipsum convallis turpis, id porta
+libero urna in magna. Phasellus vitae convallis diam. Etiam facilisis turpis
+odio, non suscipit leo facilisis elementum. Nunc non mollis risus. Aliquam ut
+risus sed leo iaculis mollis. Morbi a odio egestas, sagittis lectus sit amet,
+congue est.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</sv:value>
+            </sv:property>
+          </sv:node>
+        </sv:node>
+      </sv:node>
+    </sv:node>
+    <sv:node sv:name="sdsd">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hippostd:folder</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:value>mix:referenceable</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>bae859a6-3e7a-42e8-bee6-dec6ea79a382</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:foldertype" sv:type="String" sv:multiple="true">
+        <sv:value>new-content-pagina-document</sv:value>
+        <sv:value>new-image-gallery-pagina-document</sv:value>
+        <sv:value>new-notulen-overzicht-document</sv:value>
+        <sv:value>new-content-folder</sv:value>
+      </sv:property>
+    </sv:node>
+  </sv:node>
+</sv:node>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:h="http://www.onehippo.org/jcr/xmlimport" sv:name="hippofolders" h:merge="combine">
+  <sv:node sv:name="hippostd-folder" h:merge="combine">
+    <sv:node sv:name="hide-admin-folder">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hipposys:facetrule</sv:value>
+      </sv:property>
+      <sv:property sv:name="hipposys:equals" sv:type="Boolean">
+        <sv:value>false</sv:value>
+      </sv:property>
+      <sv:property sv:name="hipposys:facet" sv:type="String">
+        <sv:value>hippo:paths</sv:value>
+      </sv:property>
+      <sv:property sv:name="hipposys:filter" sv:type="Boolean">
+        <sv:value>false</sv:value>
+      </sv:property>
+      <sv:property sv:name="hipposys:type" sv:type="String">
+        <sv:value>Reference</sv:value>
+      </sv:property>
+      <sv:property sv:name="hipposys:value" sv:type="String">
+        <sv:value>/content/documents/hsleiden/admin</sv:value>
+      </sv:property>
+    </sv:node>
+  </sv:node>
+  <sv:node sv:name="hippostd-directory" h:merge="combine">
+    <sv:node sv:name="hide-admin-folder">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hipposys:facetrule</sv:value>
+      </sv:property>
+      <sv:property sv:name="hipposys:equals" sv:type="Boolean">
+        <sv:value>false</sv:value>
+      </sv:property>
+      <sv:property sv:name="hipposys:facet" sv:type="String">
+        <sv:value>hippo:paths</sv:value>
+      </sv:property>
+      <sv:property sv:name="hipposys:filter" sv:type="Boolean">
+        <sv:value>false</sv:value>
+      </sv:property>
+      <sv:property sv:name="hipposys:type" sv:type="String">
+        <sv:value>Reference</sv:value>
+      </sv:property>
+      <sv:property sv:name="hipposys:value" sv:type="String">
+        <sv:value>/content/documents/hsleiden/admin</sv:value>
+      </sv:property>
+    </sv:node>
+  </sv:node>
+  <sv:node sv:name="readonly" h:merge="combine">
+    <sv:property sv:name="hipposys:role" sv:type="String" h:merge="override">
+      <sv:value>readwrite</sv:value>
+    </sv:property>
+  </sv:node>
+</sv:node>

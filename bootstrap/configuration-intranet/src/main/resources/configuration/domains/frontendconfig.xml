@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:h="http://www.onehippo.org/jcr/xmlimport" sv:name="frontendconfig" h:merge="combine">
+  <sv:node sv:name="frontend-plugins" h:merge="combine">
+    <sv:node sv:name="hide-urlrewriter-section">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hipposys:facetrule</sv:value>
+      </sv:property>
+      <sv:property sv:name="hipposys:equals" sv:type="Boolean">
+        <sv:value>false</sv:value>
+      </sv:property>
+      <sv:property sv:name="hipposys:facet" sv:type="String">
+        <sv:value>cluster.name</sv:value>
+      </sv:property>
+      <sv:property sv:name="hipposys:filter" sv:type="Boolean">
+        <sv:value>true</sv:value>
+      </sv:property>
+      <sv:property sv:name="hipposys:type" sv:type="String">
+        <sv:value>String</sv:value>
+      </sv:property>
+      <sv:property sv:name="hipposys:value" sv:type="String">
+        <sv:value>cms-tree-views/urlrewriter</sv:value>
+      </sv:property>
+    </sv:node>
+  </sv:node>
+</sv:node>

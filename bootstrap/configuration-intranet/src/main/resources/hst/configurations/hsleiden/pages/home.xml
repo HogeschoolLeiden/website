@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="home">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>hst:component</sv:value>
+  </sv:property>
+  <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+    <sv:value>showMainMenu</sv:value>
+  </sv:property>
+  <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+    <sv:value>false</sv:value>
+  </sv:property>
+  <sv:property sv:name="hst:referencecomponent" sv:type="String">
+    <sv:value>hst:pages/standard-one-column</sv:value>
+  </sv:property>
+  <sv:node sv:name="main">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:component</sv:value>
+    </sv:property>
+    <sv:node sv:name="content">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:component</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:referencecomponent" sv:type="String">
+        <sv:value>hst:components/home</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:template" sv:type="String">
+        <sv:value>home.main.content</sv:value>
+      </sv:property>
+      <sv:node sv:name="most-read-students">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:component</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+          <sv:value>type</sv:value>
+          <sv:value>mainTitle</sv:value>
+          <sv:value>overviewPath</sv:value>
+          <sv:value>buttonText</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+          <sv:value>student</sv:value>
+          <sv:value>Studenteninformatie</sv:value>
+          <sv:value>studenten</sv:value>
+          <sv:value>Alle informatie voor studenten</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencecomponent" sv:type="String">
+          <sv:value>hst:components/most-read</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:template" sv:type="String">
+          <sv:value>common.most-read-home</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="most-read-service">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:component</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+          <sv:value>type</sv:value>
+          <sv:value>mainTitle</sv:value>
+          <sv:value>overviewPath</sv:value>
+          <sv:value>buttonText</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+          <sv:value>service</sv:value>
+          <sv:value>Zelf regelen</sv:value>
+          <sv:value>zelf-regelen</sv:value>
+          <sv:value>Alle informatie om zelf te regelen</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencecomponent" sv:type="String">
+          <sv:value>hst:components/most-read</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:template" sv:type="String">
+          <sv:value>common.most-read-home</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="most-read-employees">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:component</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+          <sv:value>type</sv:value>
+          <sv:value>mainTitle</sv:value>
+          <sv:value>overviewPath</sv:value>
+          <sv:value>buttonText</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+          <sv:value>medewerker</sv:value>
+          <sv:value>Medewerkersinformatie</sv:value>
+          <sv:value>medewerkers</sv:value>
+          <sv:value>Alle informatie voor medewerkers</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencecomponent" sv:type="String">
+          <sv:value>hst:components/most-read</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:template" sv:type="String">
+          <sv:value>common.most-read-home</sv:value>
+        </sv:property>
+      </sv:node>
+    </sv:node>
+  </sv:node>
+</sv:node>

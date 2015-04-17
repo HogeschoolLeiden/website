@@ -217,6 +217,59 @@
       <groupId>nl.openweb.elasticsearch</groupId>
       <artifactId>hippo-elasticsearch-hst</artifactId>
     </dependency>
+    
+    
+         <!-- SAML - Spring security -->
+      <dependency>
+        <groupId>org.surfnet.coin</groupId>
+        <artifactId>spring-security-opensaml</artifactId>
+        <exclusions>
+          <exclusion>
+            <artifactId>xml-apis</artifactId>
+            <groupId>xml-apis</groupId>
+          </exclusion>
+          <exclusion>
+            <artifactId>log4j-over-slf4j</artifactId>
+            <groupId>org.slf4j</groupId>
+          </exclusion>
+          <exclusion>
+            <artifactId>xercesImpl</artifactId>
+            <groupId>xerces</groupId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+
+      <dependency>
+        <groupId>org.onehippo.forge.hst-springsec</groupId>
+        <artifactId>hst-springsec</artifactId>
+      </dependency>
+
+      <dependency>
+        <groupId>org.springframework.security</groupId>
+        <artifactId>spring-security-core</artifactId>
+        <exclusions>
+          <exclusion>
+            <artifactId>spring-expression</artifactId>
+            <groupId>org.springframework</groupId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+
+      <dependency>
+        <groupId>org.springframework.security</groupId>
+        <artifactId>spring-security-web</artifactId>
+      </dependency>
+
+      <dependency>
+        <groupId>org.springframework.security</groupId>
+        <artifactId>spring-security-config</artifactId>
+      </dependency>
+
+      <dependency>
+        <groupId>org.springframework.security</groupId>
+        <artifactId>spring-security-taglibs</artifactId>
+      </dependency>
+      <!-- /SAML - Spring security -->
 
   </dependencies>
 
