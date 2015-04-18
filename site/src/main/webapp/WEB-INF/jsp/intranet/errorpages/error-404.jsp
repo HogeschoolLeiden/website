@@ -9,7 +9,7 @@
         <title>HS Leiden Praktische Informatie</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <link rel="stylesheet" href="/css/style.css"/>
+        <link rel="stylesheet" href="/css/style-intranet.css"/>
 
         <script src="<hst:link path="/js/vendor/jquery-1.10.1.min.js"/>"></script>
         <script src="<hst:link path="/js/vendor/modernizr-2.6.2.min.js"/>"></script>

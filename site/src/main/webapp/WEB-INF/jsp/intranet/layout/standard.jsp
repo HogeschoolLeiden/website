@@ -9,7 +9,7 @@
         <title>HS Leiden Praktische Informatie</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="<hst:link path="/css/style.css"/>">
+        <link rel="stylesheet" href="<hst:link path="/css/style-intranet.css"/>">
 
         <link rel="shortcut icon" href="<hst:link path="/favicon.ico"/>" type="image/x-icon">
         
@@ -27,7 +27,6 @@
     </head>
 
     <body>
-        
         <ul id="skiplinks">
 	      <li><a href="#maincontent">Meteen naar inhoud</a></li>
 	      <li><a href="#search">Meteen naar zoeken</a></li>

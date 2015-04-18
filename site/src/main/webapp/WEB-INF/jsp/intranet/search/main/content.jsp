@@ -13,7 +13,7 @@
     <hst:link var="searchUrl" path="/zoeken" />
     <form class="main-search search-form" name="main-search" action="${searchUrl}" method="GET">
         <input type="search" class="search-input" name="query" placeholder="Zoeken in praktische informatie" value="${searchText}">
-        <img class="search-magnify" src="<hst:link path="/img/search.png"/>" data-form="main-search" alt="zoeken">
+        <img class="search-magnify" src="<hst:link path="/img/intranet/search.png"/>" data-form="main-search" alt="zoeken">
         
         <c:if test="${not hideFilter}">
 	        <div class="filter-container">

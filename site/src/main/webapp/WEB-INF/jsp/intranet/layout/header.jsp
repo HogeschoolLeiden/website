@@ -8,7 +8,7 @@
     <div class="wrapper">
         <hst:link var="homeUrl" path="/" />
         <a href="${homeUrl}">
-            <img src="<hst:link path="/img/logo.png"/>" class="logo" />
+            <img src="<hst:link path="/img/intranet/logo.png"/>" class="logo" />
         </a>
     </div>
 </header>
@@ -23,7 +23,7 @@
         <hst:link var="searchUrl" path="/zoeken" />
         <form class="search-form" action="${searchUrl}" method="GET">
             <input type="search" class="search-input" name="query" placeholder="Zoeken in praktische informatie">
-            <img class="search-magnify" src="<hst:link path="/img/search.png"/>"search.png">
+            <img class="search-magnify" src="<hst:link path="/img/intranet/search.png"/>"search.png">
         </form>
     </section>
 </header>
