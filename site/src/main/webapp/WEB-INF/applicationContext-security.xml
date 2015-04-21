@@ -1,254 +1,279 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
-  Copyright 2011 Hippo
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:security="http://www.springframework.org/schema/security" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+                           http://www.springframework.org/schema/lang http://www.springframework.org/schema/beans/spring-lang-3.2.xsd
+                           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd
+                           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+                           http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd
+                           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+                           http://www.surfnet.nl/schema/security/opensaml http://www.surfnet.nl/schema/security/spring-security-opensaml.xsd">
+       
 
-  Licensed under the Apache License, Version 2.0 (the  "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
+  <!-- Enable auto-wiring -->
+  <context:annotation-config />
 
-  http://www.apache.org/licenses/LICENSE-2.0
+  <!-- Scan for auto-wiring classes in spring saml packages -->
+  <context:component-scan base-package="nl.hinttech.hsleiden.pi.security" />
 
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS"
-  BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License.
--->
-<beans
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:opensaml="http://www.surfnet.nl/schema/security/opensaml"
-  xmlns:security="http://www.springframework.org/schema/security"
-  xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns="http://www.springframework.org/schema/beans"
+  <!-- Unsecured pages -->
+  <security:http security="none" pattern="/favicon.ico" />
+  <security:http security="none" pattern="/images/**" />
+  <security:http security="none" pattern="/css/**" />
+  <security:http security="none" pattern="/logout.jsp" />
 
-  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
-                           http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.0.xsd http://www.surfnet.nl/schema/security/opensaml http://www.surfnet.nl/schema/security/spring-security-opensaml.xsd   http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+ 
+  <!-- Secured pages with SAML as entry point -->
+  <security:http entry-point-ref="samlEntryPoint">
+    <security:intercept-url pattern="/login/resource" access="IS_AUTHENTICATED_FULLY" />
+    <security:custom-filter before="FIRST" ref="metadataGeneratorFilter" />
+    <security:custom-filter after="BASIC_AUTH_FILTER" ref="samlFilter" />
+  </security:http>
 
-
-  <!--
-  //############################################
-  // START SAML SurfConext
-  //############################################
-  -->
-
-  <bean id="propertyResolver" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-    <property name="location" value="${opensaml.conf}"/>
+  <!-- Filters for processing of SAML messages -->
+  <bean id="samlFilter" class="org.springframework.security.web.FilterChainProxy">
+    <security:filter-chain-map request-matcher="ant">
+      <security:filter-chain pattern="/saml/login/**" filters="samlEntryPoint" />
+      <security:filter-chain pattern="/saml/logout/**" filters="samlLogoutFilter" />
+      <security:filter-chain pattern="/saml/metadata/**" filters="metadataDisplayFilter" />
+      <security:filter-chain pattern="/saml/SSO/**" filters="samlWebSSOProcessingFilter" />
+      <security:filter-chain pattern="/saml/SSOHoK/**" filters="samlWebSSOHoKProcessingFilter" />
+      <security:filter-chain pattern="/saml/SingleLogout/**" filters="samlLogoutProcessingFilter" />
+    <!-- <security:filter-chain pattern="/saml/discovery/**" filters="samlIDPDiscovery" /> -->
+    </security:filter-chain-map>
   </bean>
 
-  <bean id="openSAMLDispatcherProperties" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-    <property name="locations">
-      <list>
-        <value>${opensaml.conf}</value>
-      </list>
+  <!-- Handler deciding where to redirect user after successful login -->
+  <bean id="successRedirectHandler" class="org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler">
+    <property name="defaultTargetUrl" value="/" />
+  </bean>
+  <!--
+    Use the following for interpreting RelayState coming from unsolicited response as redirect URL:
+    <bean id="successRedirectHandler" class="org.springframework.security.saml.SAMLRelayStateSuccessHandler">
+       <property name="defaultTargetUrl" value="/" />
+    </bean>
+    -->
+
+  <!-- Handler deciding where to redirect user after failed login -->
+  <bean id="failureRedirectHandler" class="org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler">
+    <property name="useForward" value="true" />
+    <property name="defaultFailureUrl" value="/error.jsp" />
+  </bean>
+
+  <!-- Handler for successful logout -->
+  <bean id="successLogoutHandler" class="org.springframework.security.web.authentication.logout.SimpleUrlLogoutSuccessHandler">
+    <property name="defaultTargetUrl" value="/logout.jsp" />
+  </bean>
+
+  <security:authentication-manager alias="authenticationManager">
+      <!-- Register authentication manager for SAML provider -->
+    <security:authentication-provider ref="samlAuthenticationProvider" />
+      <!-- Register authentication manager for administration UI -->
+    <security:authentication-provider>
+      <security:user-service id="adminInterfaceService">
+        <security:user name="admin" password="admin" authorities="ROLE_ADMIN" />
+      </security:user-service>
+    </security:authentication-provider>
+  </security:authentication-manager>
+
+  <!-- Logger for SAML messages and events -->
+  <bean id="samlLogger" class="org.springframework.security.saml.log.SAMLDefaultLogger" />
+
+  <!-- Central storage of cryptographic keys -->
+  <bean id="keyManager" class="org.springframework.security.saml.key.JKSKeyManager">
+    <constructor-arg value="classpath:security/hslkeystore.jks" />
+    <constructor-arg type="java.lang.String" value="2hYRS3VIdH" />
+    <constructor-arg>
+      <map>
+        <entry key="localkey" value="NvGsusWXvv" />
+      </map>
+    </constructor-arg>
+    <constructor-arg type="java.lang.String" value="localkey" />
+  </bean>
+
+  <!-- Entry point to initialize authentication, default values taken from properties file -->
+  <bean id="samlEntryPoint" class="org.springframework.security.saml.SAMLEntryPoint">
+    <property name="defaultProfileOptions">
+      <bean class="org.springframework.security.saml.websso.WebSSOProfileOptions">
+        <property name="includeScoping" value="false" />
+      </bean>
     </property>
   </bean>
-  
-  <!-- TODO change provisioner-->
-  <bean id="samlProvisioner" class="nl.hinttech.hsleiden.pi.security.SamlProvisioner"/>
-  <!-- TODO change certificates -->
-  <bean id="samlCertificateStore" class="nl.surfnet.spring.security.opensaml.KeyStore">
-    <property name="certificates">
-      <map> 
-        <entry key="https://engine.surfconext.nl/authentication/idp/metadata" value="MIIDyzCCArOgAwIBAgIJAMzixtXMUH1NMA0GCSqGSIb3DQEBBQUAMHwxCzAJBgNVBAYTAk5MMRAwDgYDVQQIDAdVdHJlY2h0MRAwDgYDVQQHDAdVdHJlY2h0MRUwEwYDVQQKDAxTVVJGbmV0IEIuVi4xEzARBgNVBAsMClNVUkZjb25leHQxHTAbBgNVBAMMFGVuZ2luZS5zdXJmY29uZXh0Lm5sMB4XDTExMDEyNDEwMTg1N1oXDTIxMDEyMzEwMTg1N1owfDELMAkGA1UEBhMCTkwxEDAOBgNVBAgMB1V0cmVjaHQxEDAOBgNVBAcMB1V0cmVjaHQxFTATBgNVBAoMDFNVUkZuZXQgQi5WLjETMBEGA1UECwwKU1VSRmNvbmV4dDEdMBsGA1UEAwwUZW5naW5lLnN1cmZjb25leHQubmwwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDMJ6v+f3owS3KR5IXSil+3XFwGvCVeYx3jDOFKAnwvXlDpTu+t730b8/spHtlopyJVAlb6qBIPN7R4TGTLqiu0zebYsYx/PtqCk5cbu9qs3h+p2BBoTXVwXA/ZYi0tqtxp04hcNrRj1TAgLyC0S+KASTF+zzccAcjTBid5EMioo+YllgSEobWJ4X33XVRqNrikAPDsNmDrdKUi257JSO2xhVIG5lbtmDaL5ORCD56oRmVdp7VQTEQ3Yass8J5Rn+Ub6WmRBYeG+KzFBvtyBput2o0/gvtJn9L+NWeDB0LyUPaUYG/X4GF14FcmFQfz7I5jBCNHtPcLJbPYbZKQNhz/AgMBAAGjUDBOMB0GA1UdDgQWBBS9QqP8gtMM6nm4oYzNbgqhEDP1aDAfBgNVHSMEGDAWgBS9QqP8gtMM6nm4oYzNbgqhEDP1aDAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4IBAQBH2qyYwLwesIOxUTj+NJ0VXRBDH8VecNLiUUs9Np4x8A0pxLvlNnv5TdJAruEg1LSVmAqqPUdAB2m7CKDeUVM9cwOB7vqelV2GNgOfevXi+DZRMffyyE8qyIcnTqvDOgcR8qGTPSVT+SIsOkV9bYrjltrbnal7cJermsA8SC5w/pjLaOHI1xIZHquZzymWoN3Zfz2CQg2r5o+AURYd74GrHhHqVa9VrdWtcimB+vTQQihoLt8YciehpJjOMpx2D66eFfpC8ix31RRdjAVIo1y33h1yU3gEHePDbOthZE+lpXi2WJqO85H85LqJOtgn2WPI3P2Tx32Cq1WXCYkxLaPI"/>
-        <entry key="https://openidp.feide.no/simplesaml/saml2/idp/metadata.php" value="MIICizCCAfQCCQCY8tKaMc0BMjANBgkqhkiG9w0BAQUFADCBiTELMAkGA1UEBhMCTk8xEjAQBgNVBAgTCVRyb25kaGVpbTEQMA4GA1UEChMHVU5JTkVUVDEOMAwGA1UECxMFRmVpZGUxGTAXBgNVBAMTEG9wZW5pZHAuZmVpZGUubm8xKTAnBgkqhkiG9w0BCQEWGmFuZHJlYXMuc29sYmVyZ0B1bmluZXR0Lm5vMB4XDTA4MDUwODA5MjI0OFoXDTM1MDkyMzA5MjI0OFowgYkxCzAJBgNVBAYTAk5PMRIwEAYDVQQIEwlUcm9uZGhlaW0xEDAOBgNVBAoTB1VOSU5FVFQxDjAMBgNVBAsTBUZlaWRlMRkwFwYDVQQDExBvcGVuaWRwLmZlaWRlLm5vMSkwJwYJKoZIhvcNAQkBFhphbmRyZWFzLnNvbGJlcmdAdW5pbmV0dC5ubzCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAt8jLoqI1VTlxAZ2axiDIThWcAOXdu8KkVUWaN/SooO9O0QQ7KRUjSGKN9JK65AFRDXQkWPAu4HlnO4noYlFSLnYyDxI66LCr71x4lgFJjqLeAvB/GqBqFfIZ3YK/NrhnUqFwZu63nLrZjcUZxNaPjOOSRSDaXpv1kb5k3jOiSGECAwEAATANBgkqhkiG9w0BAQUFAAOBgQBQYj4cAafWaYfjBU2zi1ElwStIaJ5nyp/s/8B8SAPK2T79McMyccP3wSW13LHkmM1jwKe3ACFXBvqGQN0IbcH49hu0FKhYFM/GPDJcIHFBsiyMBXChpye9vBaTNEBCtU3KjjyG0hRT2mAQ9h+bkPmOvlEo/aH0xR68Z9hw4PF13w=="/>
-        <entry key="https://openidp.feide.no" value="MIICizCCAfQCCQCY8tKaMc0BMjANBgkqhkiG9w0BAQUFADCBiTELMAkGA1UEBhMCTk8xEjAQBgNVBAgTCVRyb25kaGVpbTEQMA4GA1UEChMHVU5JTkVUVDEOMAwGA1UECxMFRmVpZGUxGTAXBgNVBAMTEG9wZW5pZHAuZmVpZGUubm8xKTAnBgkqhkiG9w0BCQEWGmFuZHJlYXMuc29sYmVyZ0B1bmluZXR0Lm5vMB4XDTA4MDUwODA5MjI0OFoXDTM1MDkyMzA5MjI0OFowgYkxCzAJBgNVBAYTAk5PMRIwEAYDVQQIEwlUcm9uZGhlaW0xEDAOBgNVBAoTB1VOSU5FVFQxDjAMBgNVBAsTBUZlaWRlMRkwFwYDVQQDExBvcGVuaWRwLmZlaWRlLm5vMSkwJwYJKoZIhvcNAQkBFhphbmRyZWFzLnNvbGJlcmdAdW5pbmV0dC5ubzCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAt8jLoqI1VTlxAZ2axiDIThWcAOXdu8KkVUWaN/SooO9O0QQ7KRUjSGKN9JK65AFRDXQkWPAu4HlnO4noYlFSLnYyDxI66LCr71x4lgFJjqLeAvB/GqBqFfIZ3YK/NrhnUqFwZu63nLrZjcUZxNaPjOOSRSDaXpv1kb5k3jOiSGECAwEAATANBgkqhkiG9w0BAQUFAAOBgQBQYj4cAafWaYfjBU2zi1ElwStIaJ5nyp/s/8B8SAPK2T79McMyccP3wSW13LHkmM1jwKe3ACFXBvqGQN0IbcH49hu0FKhYFM/GPDJcIHFBsiyMBXChpye9vBaTNEBCtU3KjjyG0hRT2mAQ9h+bkPmOvlEo/aH0xR68Z9hw4PF13w=="/>
-        <entry key="https://idp.diy.surfconext.nl/simplesaml/saml2/idp/metadata.php" value="MIIE0zCCA7ugAwIBAgIJAMeqml0MvrPFMA0GCSqGSIb3DQEBBQUAMIGhMQswCQYDVQQGEwJOTDEQMA4GA1UECBMHVXRyZWNodDEQMA4GA1UEBxMHVXRyZWNodDEQMA4GA1UEChMHU1VSRm5ldDETMBEGA1UECxMKU1VSRmNvbmV4dDEaMBgGA1UEAxMRZGl5LnN1cmZjb25leHQubmwxKzApBgkqhkiG9w0BCQEWHHN1cmZjb25leHQtYmVoZWVyQHN1cmZuZXQubmwwHhcNMTExMjA5MjM1ODM1WhcNMjExMjA4MjM1ODM1WjCBoTELMAkGA1UEBhMCTkwxEDAOBgNVBAgTB1V0cmVjaHQxEDAOBgNVBAcTB1V0cmVjaHQxEDAOBgNVBAoTB1NVUkZuZXQxEzARBgNVBAsTClNVUkZjb25leHQxGjAYBgNVBAMTEWRpeS5zdXJmY29uZXh0Lm5sMSswKQYJKoZIhvcNAQkBFhxzdXJmY29uZXh0LWJlaGVlckBzdXJmbmV0Lm5sMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwiRJ3ZjEnXb6aM7vjt/QZjsC+RH/TUoRxU4XB7jQSybI3jgBO3a4DFOEyyj29BhJdKB1zVbo3nUMgiWsFONUwMV4J1T4ANrcdzkWcJ+y7RCvUA7hK8C3y4CFBFuwVRZ1U03+MYJp5oerJxg3PrpjWj4AifKGQ5Er6BpmHsxUv7OnpXy007PIyFhm3c7WQdKWfPOanLmSaBglTs38+ET+/mKHKxPRmcfraMvepwf2b7u/9D7JvL0O9mW11NPxzDfhgf4T/axBsgU4EuRtneaY3QzWUYWZEfbYAconYWc+Zgv7VpcXsOZMvaoYZbfuJdLadblCI/sluYo5TY91Z76O6QIDAQABo4IBCjCCAQYwHQYDVR0OBBYEFHW4Pywn3PgnsNWrZDtaW35G2k9OMIHWBgNVHSMEgc4wgcuAFHW4Pywn3PgnsNWrZDtaW35G2k9OoYGnpIGkMIGhMQswCQYDVQQGEwJOTDEQMA4GA1UECBMHVXRyZWNodDEQMA4GA1UEBxMHVXRyZWNodDEQMA4GA1UEChMHU1VSRm5ldDETMBEGA1UECxMKU1VSRmNvbmV4dDEaMBgGA1UEAxMRZGl5LnN1cmZjb25leHQubmwxKzApBgkqhkiG9w0BCQEWHHN1cmZjb25leHQtYmVoZWVyQHN1cmZuZXQubmyCCQDHqppdDL6zxTAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4IBAQB10RA+Cnrbxth80ApR9h8gFj79O1NE8E2cUWeK8zyg+ElPM91bZdxP0DJgjBljbQaoTn78bktb0qGEBZ92Q1jNn3KQBiG/Y49QlirZIylywB/NRH8VJWO9HblkTmaTe4j1hfNMy9YjLF9xN/6N2drnyPM2qGeXHTPdaMILi4P1WVvwR0A9y8HySZyucuoQwGfyA6F0Q7UEBIwKQdJ7eH+1taiyTR3Rg3wkADL4lyT2I44R9D4TjTJ1175nhgAERZgOlSFHXQIfiRGSpCATPXzpoXl0ejGErvqDk36fQIGtafUM07liuRd0hhJ1vRSw3t/loHju8RUN9lqgnkagGR+M"/>
-        <entry key="http://adfs.hsleiden.nl/adfs/services/trust" value="MIIE0zCCA7ugAwIBAgIJAMeqml0MvrPFMA0GCSqGSIb3DQEBBQUAMIGhMQswCQYDVQQGEwJOTDEQMA4GA1UECBMHVXRyZWNodDEQMA4GA1UEBxMHVXRyZWNodDEQMA4GA1UEChMHU1VSRm5ldDETMBEGA1UECxMKU1VSRmNvbmV4dDEaMBgGA1UEAxMRZGl5LnN1cmZjb25leHQubmwxKzApBgkqhkiG9w0BCQEWHHN1cmZjb25leHQtYmVoZWVyQHN1cmZuZXQubmwwHhcNMTExMjA5MjM1ODM1WhcNMjExMjA4MjM1ODM1WjCBoTELMAkGA1UEBhMCTkwxEDAOBgNVBAgTB1V0cmVjaHQxEDAOBgNVBAcTB1V0cmVjaHQxEDAOBgNVBAoTB1NVUkZuZXQxEzARBgNVBAsTClNVUkZjb25leHQxGjAYBgNVBAMTEWRpeS5zdXJmY29uZXh0Lm5sMSswKQYJKoZIhvcNAQkBFhxzdXJmY29uZXh0LWJlaGVlckBzdXJmbmV0Lm5sMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwiRJ3ZjEnXb6aM7vjt/QZjsC+RH/TUoRxU4XB7jQSybI3jgBO3a4DFOEyyj29BhJdKB1zVbo3nUMgiWsFONUwMV4J1T4ANrcdzkWcJ+y7RCvUA7hK8C3y4CFBFuwVRZ1U03+MYJp5oerJxg3PrpjWj4AifKGQ5Er6BpmHsxUv7OnpXy007PIyFhm3c7WQdKWfPOanLmSaBglTs38+ET+/mKHKxPRmcfraMvepwf2b7u/9D7JvL0O9mW11NPxzDfhgf4T/axBsgU4EuRtneaY3QzWUYWZEfbYAconYWc+Zgv7VpcXsOZMvaoYZbfuJdLadblCI/sluYo5TY91Z76O6QIDAQABo4IBCjCCAQYwHQYDVR0OBBYEFHW4Pywn3PgnsNWrZDtaW35G2k9OMIHWBgNVHSMEgc4wgcuAFHW4Pywn3PgnsNWrZDtaW35G2k9OoYGnpIGkMIGhMQswCQYDVQQGEwJOTDEQMA4GA1UECBMHVXRyZWNodDEQMA4GA1UEBxMHVXRyZWNodDEQMA4GA1UEChMHU1VSRm5ldDETMBEGA1UECxMKU1VSRmNvbmV4dDEaMBgGA1UEAxMRZGl5LnN1cmZjb25leHQubmwxKzApBgkqhkiG9w0BCQEWHHN1cmZjb25leHQtYmVoZWVyQHN1cmZuZXQubmyCCQDHqppdDL6zxTAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4IBAQB10RA+Cnrbxth80ApR9h8gFj79O1NE8E2cUWeK8zyg+ElPM91bZdxP0DJgjBljbQaoTn78bktb0qGEBZ92Q1jNn3KQBiG/Y49QlirZIylywB/NRH8VJWO9HblkTmaTe4j1hfNMy9YjLF9xN/6N2drnyPM2qGeXHTPdaMILi4P1WVvwR0A9y8HySZyucuoQwGfyA6F0Q7UEBIwKQdJ7eH+1taiyTR3Rg3wkADL4lyT2I44R9D4TjTJ1175nhgAERZgOlSFHXQIfiRGSpCATPXzpoXl0ejGErvqDk36fQIGtafUM07liuRd0hhJ1vRSw3t/loHju8RUN9lqgnkagGR+M"/>
-        <entry key="http://localhost:8080/site/OpenSAML.sso/Metadata" value="MIIE0zCCA7ugAwIBAgIJAMeqml0MvrPFMA0GCSqGSIb3DQEBBQUAMIGhMQswCQYDVQQGEwJOTDEQMA4GA1UECBMHVXRyZWNodDEQMA4GA1UEBxMHVXRyZWNodDEQMA4GA1UEChMHU1VSRm5ldDETMBEGA1UECxMKU1VSRmNvbmV4dDEaMBgGA1UEAxMRZGl5LnN1cmZjb25leHQubmwxKzApBgkqhkiG9w0BCQEWHHN1cmZjb25leHQtYmVoZWVyQHN1cmZuZXQubmwwHhcNMTExMjA5MjM1ODM1WhcNMjExMjA4MjM1ODM1WjCBoTELMAkGA1UEBhMCTkwxEDAOBgNVBAgTB1V0cmVjaHQxEDAOBgNVBAcTB1V0cmVjaHQxEDAOBgNVBAoTB1NVUkZuZXQxEzARBgNVBAsTClNVUkZjb25leHQxGjAYBgNVBAMTEWRpeS5zdXJmY29uZXh0Lm5sMSswKQYJKoZIhvcNAQkBFhxzdXJmY29uZXh0LWJlaGVlckBzdXJmbmV0Lm5sMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwiRJ3ZjEnXb6aM7vjt/QZjsC+RH/TUoRxU4XB7jQSybI3jgBO3a4DFOEyyj29BhJdKB1zVbo3nUMgiWsFONUwMV4J1T4ANrcdzkWcJ+y7RCvUA7hK8C3y4CFBFuwVRZ1U03+MYJp5oerJxg3PrpjWj4AifKGQ5Er6BpmHsxUv7OnpXy007PIyFhm3c7WQdKWfPOanLmSaBglTs38+ET+/mKHKxPRmcfraMvepwf2b7u/9D7JvL0O9mW11NPxzDfhgf4T/axBsgU4EuRtneaY3QzWUYWZEfbYAconYWc+Zgv7VpcXsOZMvaoYZbfuJdLadblCI/sluYo5TY91Z76O6QIDAQABo4IBCjCCAQYwHQYDVR0OBBYEFHW4Pywn3PgnsNWrZDtaW35G2k9OMIHWBgNVHSMEgc4wgcuAFHW4Pywn3PgnsNWrZDtaW35G2k9OoYGnpIGkMIGhMQswCQYDVQQGEwJOTDEQMA4GA1UECBMHVXRyZWNodDEQMA4GA1UEBxMHVXRyZWNodDEQMA4GA1UEChMHU1VSRm5ldDETMBEGA1UECxMKU1VSRmNvbmV4dDEaMBgGA1UEAxMRZGl5LnN1cmZjb25leHQubmwxKzApBgkqhkiG9w0BCQEWHHN1cmZjb25leHQtYmVoZWVyQHN1cmZuZXQubmyCCQDHqppdDL6zxTAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4IBAQB10RA+Cnrbxth80ApR9h8gFj79O1NE8E2cUWeK8zyg+ElPM91bZdxP0DJgjBljbQaoTn78bktb0qGEBZ92Q1jNn3KQBiG/Y49QlirZIylywB/NRH8VJWO9HblkTmaTe4j1hfNMy9YjLF9xN/6N2drnyPM2qGeXHTPdaMILi4P1WVvwR0A9y8HySZyucuoQwGfyA6F0Q7UEBIwKQdJ7eH+1taiyTR3Rg3wkADL4lyT2I44R9D4TjTJ1175nhgAERZgOlSFHXQIfiRGSpCATPXzpoXl0ejGErvqDk36fQIGtafUM07liuRd0hhJ1vRSw3t/loHju8RUN9lqgnkagGR+M"/>
-        <entry key="https://idp.diy.surfconext.nl/" value="MIIE0zCCA7ugAwIBAgIJAMeqml0MvrPFMA0GCSqGSIb3DQEBBQUAMIGhMQswCQYDVQQGEwJOTDEQMA4GA1UECBMHVXRyZWNodDEQMA4GA1UEBxMHVXRyZWNodDEQMA4GA1UEChMHU1VSRm5ldDETMBEGA1UECxMKU1VSRmNvbmV4dDEaMBgGA1UEAxMRZGl5LnN1cmZjb25leHQubmwxKzApBgkqhkiG9w0BCQEWHHN1cmZjb25leHQtYmVoZWVyQHN1cmZuZXQubmwwHhcNMTExMjA5MjM1ODM1WhcNMjExMjA4MjM1ODM1WjCBoTELMAkGA1UEBhMCTkwxEDAOBgNVBAgTB1V0cmVjaHQxEDAOBgNVBAcTB1V0cmVjaHQxEDAOBgNVBAoTB1NVUkZuZXQxEzARBgNVBAsTClNVUkZjb25leHQxGjAYBgNVBAMTEWRpeS5zdXJmY29uZXh0Lm5sMSswKQYJKoZIhvcNAQkBFhxzdXJmY29uZXh0LWJlaGVlckBzdXJmbmV0Lm5sMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwiRJ3ZjEnXb6aM7vjt/QZjsC+RH/TUoRxU4XB7jQSybI3jgBO3a4DFOEyyj29BhJdKB1zVbo3nUMgiWsFONUwMV4J1T4ANrcdzkWcJ+y7RCvUA7hK8C3y4CFBFuwVRZ1U03+MYJp5oerJxg3PrpjWj4AifKGQ5Er6BpmHsxUv7OnpXy007PIyFhm3c7WQdKWfPOanLmSaBglTs38+ET+/mKHKxPRmcfraMvepwf2b7u/9D7JvL0O9mW11NPxzDfhgf4T/axBsgU4EuRtneaY3QzWUYWZEfbYAconYWc+Zgv7VpcXsOZMvaoYZbfuJdLadblCI/sluYo5TY91Z76O6QIDAQABo4IBCjCCAQYwHQYDVR0OBBYEFHW4Pywn3PgnsNWrZDtaW35G2k9OMIHWBgNVHSMEgc4wgcuAFHW4Pywn3PgnsNWrZDtaW35G2k9OoYGnpIGkMIGhMQswCQYDVQQGEwJOTDEQMA4GA1UECBMHVXRyZWNodDEQMA4GA1UEBxMHVXRyZWNodDEQMA4GA1UEChMHU1VSRm5ldDETMBEGA1UECxMKU1VSRmNvbmV4dDEaMBgGA1UEAxMRZGl5LnN1cmZjb25leHQubmwxKzApBgkqhkiG9w0BCQEWHHN1cmZjb25leHQtYmVoZWVyQHN1cmZuZXQubmyCCQDHqppdDL6zxTAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4IBAQB10RA+Cnrbxth80ApR9h8gFj79O1NE8E2cUWeK8zyg+ElPM91bZdxP0DJgjBljbQaoTn78bktb0qGEBZ92Q1jNn3KQBiG/Y49QlirZIylywB/NRH8VJWO9HblkTmaTe4j1hfNMy9YjLF9xN/6N2drnyPM2qGeXHTPdaMILi4P1WVvwR0A9y8HySZyucuoQwGfyA6F0Q7UEBIwKQdJ7eH+1taiyTR3Rg3wkADL4lyT2I44R9D4TjTJ1175nhgAERZgOlSFHXQIfiRGSpCATPXzpoXl0ejGErvqDk36fQIGtafUM07liuRd0hhJ1vRSw3t/loHju8RUN9lqgnkagGR+M"/>
-        <entry key="http://localhost:8090/" value="MIICHzCCAYgCCQD7KMJ17XQa7TANBgkqhkiG9w0BAQUFADBUMQswCQYDVQQGEwJOTDEQMA4GA1UECAwHVXRyZWNodDEQMA4GA1UEBwwHVXRyZWNodDEQMA4GA1UECgwHU3VyZm5ldDEPMA0GA1UECwwGQ29uZXh0MB4XDTEyMDMwODA4NTQyNFoXDTEzMDMwODA4NTQyNFowVDELMAkGA1UEBhMCTkwxEDAOBgNVBAgMB1V0cmVjaHQxEDAOBgNVBAcMB1V0cmVjaHQxEDAOBgNVBAoMB1N1cmZuZXQxDzANBgNVBAsMBkNvbmV4dDCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA2slVe459WUDL4RXxJf5h5t5oUbPkPlFZ9lQysSoS3fnFTdCgzA6FzQzGRDcfRj0HnWBdA1YH+LxBjNcBIJ/nBc7Ssu4e4rMO3MSAV5Ouo3MaGgHqVq6dCD47f52b98df6QTAA3C+7sHqOdiQ0UDCAK0C+qP5LtTcmB8QrJhKmV8CAwEAATANBgkqhkiG9w0BAQUFAAOBgQCvPhO0aSbqX7g7IkR79IFVdJ/P7uSlYFtJ9cMxec85cYLmWL1aVgF5ZFFJqC25blyPJu2GRcSxoVwB3ae8sPCECWwqRQA4AHKIjiW5NgrAGYR++ssTOQR8mcAucEBfNaNdlJoy8GdZIhHZNkGlyHfY8kWS3OWkGzhWSsuRCLl78A=="/>
-        <entry key="http://localhost:9090/" value="MIICHzCCAYgCCQD7KMJ17XQa7TANBgkqhkiG9w0BAQUFADBUMQswCQYDVQQGEwJOTDEQMA4GA1UECAwHVXRyZWNodDEQMA4GA1UEBwwHVXRyZWNodDEQMA4GA1UECgwHU3VyZm5ldDEPMA0GA1UECwwGQ29uZXh0MB4XDTEyMDMwODA4NTQyNFoXDTEzMDMwODA4NTQyNFowVDELMAkGA1UEBhMCTkwxEDAOBgNVBAgMB1V0cmVjaHQxEDAOBgNVBAcMB1V0cmVjaHQxEDAOBgNVBAoMB1N1cmZuZXQxDzANBgNVBAsMBkNvbmV4dDCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA2slVe459WUDL4RXxJf5h5t5oUbPkPlFZ9lQysSoS3fnFTdCgzA6FzQzGRDcfRj0HnWBdA1YH+LxBjNcBIJ/nBc7Ssu4e4rMO3MSAV5Ouo3MaGgHqVq6dCD47f52b98df6QTAA3C+7sHqOdiQ0UDCAK0C+qP5LtTcmB8QrJhKmV8CAwEAATANBgkqhkiG9w0BAQUFAAOBgQCvPhO0aSbqX7g7IkR79IFVdJ/P7uSlYFtJ9cMxec85cYLmWL1aVgF5ZFFJqC25blyPJu2GRcSxoVwB3ae8sPCECWwqRQA4AHKIjiW5NgrAGYR++ssTOQR8mcAucEBfNaNdlJoy8GdZIhHZNkGlyHfY8kWS3OWkGzhWSsuRCLl78A=="/>
-        <entry key="http://localhost:8080/" value="MIICHzCCAYgCCQD7KMJ17XQa7TANBgkqhkiG9w0BAQUFADBUMQswCQYDVQQGEwJOTDEQMA4GA1UECAwHVXRyZWNodDEQMA4GA1UEBwwHVXRyZWNodDEQMA4GA1UECgwHU3VyZm5ldDEPMA0GA1UECwwGQ29uZXh0MB4XDTEyMDMwODA4NTQyNFoXDTEzMDMwODA4NTQyNFowVDELMAkGA1UEBhMCTkwxEDAOBgNVBAgMB1V0cmVjaHQxEDAOBgNVBAcMB1V0cmVjaHQxEDAOBgNVBAoMB1N1cmZuZXQxDzANBgNVBAsMBkNvbmV4dDCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA2slVe459WUDL4RXxJf5h5t5oUbPkPlFZ9lQysSoS3fnFTdCgzA6FzQzGRDcfRj0HnWBdA1YH+LxBjNcBIJ/nBc7Ssu4e4rMO3MSAV5Ouo3MaGgHqVq6dCD47f52b98df6QTAA3C+7sHqOdiQ0UDCAK0C+qP5LtTcmB8QrJhKmV8CAwEAATANBgkqhkiG9w0BAQUFAAOBgQCvPhO0aSbqX7g7IkR79IFVdJ/P7uSlYFtJ9cMxec85cYLmWL1aVgF5ZFFJqC25blyPJu2GRcSxoVwB3ae8sPCECWwqRQA4AHKIjiW5NgrAGYR++ssTOQR8mcAucEBfNaNdlJoy8GdZIhHZNkGlyHfY8kWS3OWkGzhWSsuRCLl78A=="/>
-        <entry key="http://localhost:8080/site/OpenSAML.sso/Metadata" value="MIICHzCCAYgCCQD7KMJ17XQa7TANBgkqhkiG9w0BAQUFADBUMQswCQYDVQQGEwJOTDEQMA4GA1UECAwHVXRyZWNodDEQMA4GA1UEBwwHVXRyZWNodDEQMA4GA1UECgwHU3VyZm5ldDEPMA0GA1UECwwGQ29uZXh0MB4XDTEyMDMwODA4NTQyNFoXDTEzMDMwODA4NTQyNFowVDELMAkGA1UEBhMCTkwxEDAOBgNVBAgMB1V0cmVjaHQxEDAOBgNVBAcMB1V0cmVjaHQxEDAOBgNVBAoMB1N1cmZuZXQxDzANBgNVBAsMBkNvbmV4dDCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA2slVe459WUDL4RXxJf5h5t5oUbPkPlFZ9lQysSoS3fnFTdCgzA6FzQzGRDcfRj0HnWBdA1YH+LxBjNcBIJ/nBc7Ssu4e4rMO3MSAV5Ouo3MaGgHqVq6dCD47f52b98df6QTAA3C+7sHqOdiQ0UDCAK0C+qP5LtTcmB8QrJhKmV8CAwEAATANBgkqhkiG9w0BAQUFAAOBgQCvPhO0aSbqX7g7IkR79IFVdJ/P7uSlYFtJ9cMxec85cYLmWL1aVgF5ZFFJqC25blyPJu2GRcSxoVwB3ae8sPCECWwqRQA4AHKIjiW5NgrAGYR++ssTOQR8mcAucEBfNaNdlJoy8GdZIhHZNkGlyHfY8kWS3OWkGzhWSsuRCLl78A=="/>
-        <entry key="http://mock-sp" value="MIICHzCCAYgCCQD7KMJ17XQa7TANBgkqhkiG9w0BAQUFADBUMQswCQYDVQQGEwJOTDEQMA4GA1UECAwHVXRyZWNodDEQMA4GA1UEBwwHVXRyZWNodDEQMA4GA1UECgwHU3VyZm5ldDEPMA0GA1UECwwGQ29uZXh0MB4XDTEyMDMwODA4NTQyNFoXDTEzMDMwODA4NTQyNFowVDELMAkGA1UEBhMCTkwxEDAOBgNVBAgMB1V0cmVjaHQxEDAOBgNVBAcMB1V0cmVjaHQxEDAOBgNVBAoMB1N1cmZuZXQxDzANBgNVBAsMBkNvbmV4dDCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA2slVe459WUDL4RXxJf5h5t5oUbPkPlFZ9lQysSoS3fnFTdCgzA6FzQzGRDcfRj0HnWBdA1YH+LxBjNcBIJ/nBc7Ssu4e4rMO3MSAV5Ouo3MaGgHqVq6dCD47f52b98df6QTAA3C+7sHqOdiQ0UDCAK0C+qP5LtTcmB8QrJhKmV8CAwEAATANBgkqhkiG9w0BAQUFAAOBgQCvPhO0aSbqX7g7IkR79IFVdJ/P7uSlYFtJ9cMxec85cYLmWL1aVgF5ZFFJqC25blyPJu2GRcSxoVwB3ae8sPCECWwqRQA4AHKIjiW5NgrAGYR++ssTOQR8mcAucEBfNaNdlJoy8GdZIhHZNkGlyHfY8kWS3OWkGzhWSsuRCLl78A=="/>
+
+
+  <!-- Filter automatically generates default SP metadata -->
+  <bean id="metadataGeneratorFilter" class="org.springframework.security.saml.metadata.MetadataGeneratorFilter">
+    <constructor-arg>
+      <bean class="org.springframework.security.saml.metadata.MetadataGenerator">
+        <property name="extendedMetadata">
+          <bean class="org.springframework.security.saml.metadata.ExtendedMetadata">
+            <property name="idpDiscoveryEnabled" value="false" />
+          </bean>
+        </property>
+      </bean>
+    </constructor-arg>
+  </bean>
+
+  <!-- The filter is waiting for connections on URL suffixed with filterSuffix and presents SP metadata there -->
+  <bean id="metadataDisplayFilter" class="org.springframework.security.saml.metadata.MetadataDisplayFilter" />
+
+  <!-- IDP Metadata configuration - paths to metadata of IDPs in circle of trust is here -->
+  <bean id="metadata" class="org.springframework.security.saml.metadata.CachingMetadataManager">
+    <constructor-arg>
+      <list>
+
+              <!-- Example of HTTP metadata without Extended Metadata -->
+        <bean class="org.opensaml.saml2.metadata.provider.HTTPMetadataProvider">
+                  <!-- URL containing the metadata -->
+          <constructor-arg>
+            <value type="java.lang.String">https://openidp.feide.no/simplesaml/saml2/idp/metadata.php</value>
+          </constructor-arg>
+                  <!-- Timeout for metadata loading in ms -->
+          <constructor-arg>
+            <value type="int">15000</value>
+          </constructor-arg>
+          <property name="parserPool" ref="parserPool" />
+        </bean>
+              <!-- Example of file system metadata without Extended Metadata -->
+              <!--
+                <bean class="org.opensaml.saml2.metadata.provider.FilesystemMetadataProvider">
+                    <constructor-arg>
+                        <value type="java.io.File">/usr/local/metadata/idp.xml</value>
+                    </constructor-arg>
+                    <property name="parserPool" ref="parserPool"/>
+                </bean>
+                -->
+      </list>
+    </constructor-arg>
+       
+  </bean>
+
+  <!-- SAML Authentication Provider responsible for validating of received SAML messages -->
+  <bean id="samlAuthenticationProvider" class="org.springframework.security.saml.SAMLAuthenticationProvider">
+  </bean>
+
+  <!-- Provider of default SAML Context -->
+  <bean id="contextProvider" class="org.springframework.security.saml.context.SAMLContextProviderImpl" />
+
+  <!-- Processing filter for WebSSO profile messages -->
+  <bean id="samlWebSSOProcessingFilter" class="org.springframework.security.saml.SAMLProcessingFilter">
+    <property name="authenticationManager" ref="authenticationManager" />
+    <property name="authenticationSuccessHandler" ref="successRedirectHandler" />
+    <property name="authenticationFailureHandler" ref="failureRedirectHandler" />
+  </bean>
+
+  <!-- Processing filter for WebSSO Holder-of-Key profile -->
+  <bean id="samlWebSSOHoKProcessingFilter" class="org.springframework.security.saml.SAMLWebSSOHoKProcessingFilter">
+    <property name="authenticationManager" ref="authenticationManager" />
+    <property name="authenticationSuccessHandler" ref="successRedirectHandler" />
+    <property name="authenticationFailureHandler" ref="failureRedirectHandler" />
+  </bean>
+
+  <!-- Logout handler terminating local session -->
+  <bean id="logoutHandler" class="org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler">
+    <property name="invalidateHttpSession" value="false" />
+  </bean>
+
+  <!-- Override default logout processing filter with the one processing SAML messages -->
+  <bean id="samlLogoutFilter" class="org.springframework.security.saml.SAMLLogoutFilter">
+    <constructor-arg index="0" ref="successLogoutHandler" />
+    <constructor-arg index="1" ref="logoutHandler" />
+    <constructor-arg index="2" ref="logoutHandler" />
+  </bean>
+
+  <!-- Filter processing incoming logout messages -->
+  <!-- First argument determines URL user will be redirected to after successful global logout -->
+  <bean id="samlLogoutProcessingFilter" class="org.springframework.security.saml.SAMLLogoutProcessingFilter">
+    <constructor-arg index="0" ref="successLogoutHandler" />
+    <constructor-arg index="1" ref="logoutHandler" />
+  </bean>
+
+  <!-- Class loading incoming SAML messages from httpRequest stream -->
+  <bean id="processor" class="org.springframework.security.saml.processor.SAMLProcessorImpl">
+    <constructor-arg>
+      <list>
+        <ref bean="redirectBinding" />
+        <ref bean="postBinding" />
+        <ref bean="artifactBinding" />
+        <ref bean="soapBinding" />
+        <ref bean="paosBinding" />
+      </list>
+    </constructor-arg>
+  </bean>
+
+  <!-- SAML 2.0 WebSSO Assertion Consumer -->
+  <bean id="webSSOprofileConsumer" class="org.springframework.security.saml.websso.WebSSOProfileConsumerImpl" />
+
+  <!-- SAML 2.0 Holder-of-Key WebSSO Assertion Consumer -->
+  <bean id="hokWebSSOprofileConsumer" class="org.springframework.security.saml.websso.WebSSOProfileConsumerHoKImpl" />
+
+  <!-- SAML 2.0 Web SSO profile -->
+  <bean id="webSSOprofile" class="org.springframework.security.saml.websso.WebSSOProfileImpl" />
+
+  <!-- SAML 2.0 Holder-of-Key Web SSO profile -->
+  <bean id="hokWebSSOProfile" class="org.springframework.security.saml.websso.WebSSOProfileConsumerHoKImpl" />
+
+  <!-- SAML 2.0 ECP profile -->
+  <bean id="ecpprofile" class="org.springframework.security.saml.websso.WebSSOProfileECPImpl" />
+
+  <!-- SAML 2.0 Logout Profile -->
+  <bean id="logoutprofile" class="org.springframework.security.saml.websso.SingleLogoutProfileImpl" />
+
+  <!-- Bindings, encoders and decoders used for creating and parsing messages -->
+  <bean id="postBinding" class="org.springframework.security.saml.processor.HTTPPostBinding">
+    <constructor-arg ref="parserPool" />
+    <constructor-arg ref="velocityEngine" />
+  </bean>
+
+  <bean id="redirectBinding" class="org.springframework.security.saml.processor.HTTPRedirectDeflateBinding">
+    <constructor-arg ref="parserPool" />
+  </bean>
+
+  <bean id="artifactBinding" class="org.springframework.security.saml.processor.HTTPArtifactBinding">
+    <constructor-arg ref="parserPool" />
+    <constructor-arg ref="velocityEngine" />
+    <constructor-arg>
+      <bean class="org.springframework.security.saml.websso.ArtifactResolutionProfileImpl">
+        <constructor-arg>
+          <bean class="org.apache.commons.httpclient.HttpClient">
+            <constructor-arg>
+              <bean class="org.apache.commons.httpclient.MultiThreadedHttpConnectionManager" />
+            </constructor-arg>
+          </bean>
+        </constructor-arg>
+        <property name="processor">
+          <bean class="org.springframework.security.saml.processor.SAMLProcessorImpl">
+            <constructor-arg ref="soapBinding" />
+          </bean>
+        </property>
+      </bean>
+    </constructor-arg>
+  </bean>
+
+  <bean id="soapBinding" class="org.springframework.security.saml.processor.HTTPSOAP11Binding">
+    <constructor-arg ref="parserPool" />
+  </bean>
+
+  <bean id="paosBinding" class="org.springframework.security.saml.processor.HTTPPAOS11Binding">
+    <constructor-arg ref="parserPool" />
+  </bean>
+
+  <!-- Initialization of OpenSAML library-->
+  <bean class="org.springframework.security.saml.SAMLBootstrap" />
+
+  <!-- Initialization of the velocity engine -->
+  <bean id="velocityEngine" class="org.springframework.security.saml.util.VelocityFactory" factory-method="getEngine" />
+
+  <!-- XML parser pool needed for OpenSAML parsing -->
+  <bean id="parserPool" class="org.opensaml.xml.parse.StaticBasicParserPool" init-method="initialize">
+    <property name="builderFeatures">
+      <map>
+        <entry key="http://apache.org/xml/features/dom/defer-node-expansion" value="false" />
       </map>
     </property>
   </bean>
 
-  <!--SERVICE PROVIDER-->
-
-  <opensaml:service-provider id="samlAuthenticationProvider"
-                             message-handler-ref="samlMessageHandler"
-                             preauth-filter-ref="samlPreAuthFilter"
-                             entity-id="${ISSUING_ENTITY_ID}"
-                             assertion-consumer-uri="${ASSERTION_CONSUMER_URI}"
-                             provisioner-ref="samlProvisioner"
-                             certificatestore-ref="samlCertificateStore"
-                             authentication-manager-ref="authenticationManager" />
-                             
-  <!--
-    //############################################
-    // END SAML SurfConext
-    //############################################
-  -->
-
-  <!-- HTTP Security Configuration -->
-  <security:http auto-config="true" use-expressions="true" disable-url-rewriting="true" entry-point-ref="loginUrlAuthenticationEntryPoint">
-
-    <security:custom-filter position="PRE_AUTH_FILTER" ref="samlPreAuthFilter"/>
-
-    <security:anonymous/>
-    <!-- SAML resources -->
-    <security:intercept-url pattern="/j_spring_security_logout" filters="none"/>
-    <security:intercept-url pattern="/login.jsp" filters="none"/>
-    <security:intercept-url pattern="/logout.jsp" filters="none"/>
-    <security:intercept-url pattern="/OpenSAML.sso/**" access="permitAll"/>
-    <security:intercept-url pattern="${ASSERTION_CONSUMER_URI}" access="hasAnyRole(ROLE_ANONYMOUS,ROLE_ADMIN,ROLE_USER)"/>
-
-    <!-- exclude resources -->
-    <security:intercept-url pattern="/favicon.ico" filters="none"/>
-    <security:intercept-url pattern="/_rp/**" filters="none"/>
-    <security:intercept-url pattern="/_cms/**" filters="none"/>
-    <security:intercept-url pattern="/_cmsrest/**" filters="none"/>
-    <security:intercept-url pattern="/_cmsinternal/**" filters="none"/>
-    <security:intercept-url pattern="/ping/**" filters="none"/>
-    <security:intercept-url pattern="/js/**" filters="none"/>
-    <security:intercept-url pattern="/css/**" filters="none"/>
-    <security:intercept-url pattern="/images/**" filters="none"/>
-    <security:intercept-url pattern="/script/**" filters="none"/>
-    
-    <!--   <security:intercept-url pattern="/**" access="permitAll"/> -->
-   <security:intercept-url pattern="${secure_pattern}" access="hasRole('ROLE_USER')" /> 
-
-    <security:form-login login-page="/OpenSAML.sso/Login?target=${wayf.url.sso}" default-target-url="/"/>
-    <security:anonymous/>
-    <security:logout invalidate-session="true" logout-success-url="/logout.jsp" logout-url="/j_spring_security_logout"/>
-
-    <security:remember-me/>
-  </security:http>
-
- <bean id="loginUrlAuthenticationEntryPoint" class="org.onehippo.forge.security.support.springsecurity.authentication.login.HippoLoginUrlAuthenticationEntryPoint">
-    <property name="loginFormUrl" value="/OpenSAML.sso/Login?target=${wayf.url.sso}"/>
-  </bean>
-
-  <!--  <security:http auto-config="false" entry-point-ref="loginUrlAuthenticationEntryPoint">
-    &lt;!&ndash; Channel Manager &ndash;&gt;
-    <security:intercept-url pattern="/_rp/**" filters="none"/>
-    <security:intercept-url pattern="/_cmsrest/**" filters="none"/>
-    <security:intercept-url pattern="/_cmsinternal/security*" filters="none"/>
-
-    <security:intercept-url pattern="/css/**" filters="none"/>
-    <security:intercept-url pattern="/images/**" filters="none"/>
-    <security:intercept-url pattern="/binaries/**" filters="none"/>
-    <security:intercept-url pattern="/login.jsp*" filters="none"/>
-    <security:intercept-url pattern="/news/**" access="ROLE_everybody"/>
-
-    <security:custom-filter position="LOGOUT_FILTER" ref="customLogoutFilter"/>
-    <security:custom-filter position="REMEMBER_ME_FILTER" ref="customRememberMeFilter"/>
-    <security:custom-filter position="FORM_LOGIN_FILTER" ref="customUsernamePasswordAuthenticationFilter"/>
-  </security:http>-->
-
-
-  <!--
-    Channel Manager specification. Need to override the default filter.
-
-    Custom Login Entry Point
-  -->
-<!--
-
- <bean id="loginUrlAuthenticationEntryPoint"
-              class="org.onehippo.forge.security.support.springsecurity.authentication.login.HippoLoginUrlAuthenticationEntryPoint">
-    <property name="loginFormUrl" value="/login.jsp"/>
-  </bean>
-
-  -->
-
-
-  <!--
-    Channel Manager specification. Need to override the default filter.
-
-    Custom Form Login Filter
-  -->
-  <bean id="customUsernamePasswordAuthenticationFilter"
-              class="org.onehippo.forge.security.support.springsecurity.authentication.HippoUsernamePasswordAuthenticationFilter">
-    <property name="authenticationManager" ref="authenticationManager"/>
-    <property name="authenticationFailureHandler" ref="failureHandler"/>
-    <property name="authenticationSuccessHandler" ref="successHandler"/>
-    <property name="rememberMeServices" ref="rememberMeServices"/>
-  </bean>
-
-  <bean id="successHandler"
-              class="org.onehippo.forge.security.support.springsecurity.authentication.login.HippoSimpleUrlAuthenticationSuccessHandler">
-    <property name="defaultTargetUrl" value="/"/>
-  </bean>
-
-  <bean id="failureHandler"
-              class="org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler">
-    <property name="defaultFailureUrl" value="/security?loginError=true"/>
-  </bean>
-
-
-
-  <security:authentication-manager alias="authenticationManager">
-    <security:authentication-provider ref="samlAuthenticationProvider"/>
-    <!-- Needed if you want the remember me feature-->
-    <security:authentication-provider ref="hippoAuthenticationRememberMeProvider"/>
-  </security:authentication-manager>
-
-
-
-  <!--
-    Hippo Repository based Authentication Remember Me Provider. This Authentication Provider support of remember me against Hippo Repository Security Store.
-    If you don't need to use the remember me feature, you don't have to include the following bean.
-  -->
-  <bean id="hippoAuthenticationRememberMeProvider" class="org.onehippo.forge.security.support.springsecurity.authentication.rememberme.HippoAuthenticationRememberMeProvider">
-    <property name="hippoUserDetailsService" ref="hippoUserServiceDetailsService"/>
-    <property name="key" value="hipporemembermekey2012"/>
-  </bean>
-
-  <bean name="hippoUserServiceDetailsService" class="org.onehippo.forge.security.support.springsecurity.authentication.HippoUserDetailsServiceImpl">
-    <property name="defaultRoleName" value="everybody"/>
-  </bean>
-
-  <bean id="customRememberMeFilter" class="org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter">
-    <property name="rememberMeServices" ref="rememberMeServices"/>
-    <property name="authenticationManager" ref="authenticationManager"/>
-  </bean>
-
-
-  <bean id="rememberMeServices" class="org.onehippo.forge.security.support.springsecurity.authentication.rememberme.HippoTokenBasedRememberMeServices">
-    <property name="userDetailsService" ref="hippoUserServiceDetailsService"/>
-    <property name="key" value="hipporemembermekey2012"/>
-    <property name="tokenValiditySeconds" value="31536000"/>
-  </bean>
-
-  <!--
-    Channel Manager specification. Need to override the default filter.
-
-    Custom Logout Filter
-  -->
-  <bean id="customLogoutFilter" class="org.onehippo.forge.security.support.springsecurity.authentication.logout.HippoLogoutFilter">
-    <!-- if logout succeed then this is the URL -->
-    <constructor-arg ref="logoutSuccessHandler"/>
-    <constructor-arg>
-      <array>
-        <ref bean="hippoLogoutHandler"/>
-      </array>
-    </constructor-arg>
-    <property name="filterProcessesUrl" value="/j_spring_security_logout"/>
-  </bean>
-
-  <bean id="hippoLogoutHandler" class="org.onehippo.forge.security.support.springsecurity.authentication.logout.HippoSecurityContextLogoutHandler"/>
-
-  <bean id="logoutSuccessHandler" class="org.onehippo.forge.security.support.springsecurity.authentication.logout.HippoLogoutSuccessHandler">
-    <property name="defaultTargetUrl" value="/"/>
-  </bean>
-  <mvc:annotation-driven/>
-
-  <!--  REPLACE BY HIPPO ONE-->
-  <bean id="authnRequestController" class="nl.surfnet.spring.security.opensaml.controller.AuthnRequestController">
-    <property name="SAMLMessageHandler" ref="samlMessageHandler"/>
-    <property name="assertionConsumerServiceURL" value="${ASSERTION_CONSUMER_URL}"/>
-    <property name="entityID" value="${ISSUING_ENTITY_ID}"/>
-    <property name="credentialResolver" ref="samlKeyStoreCredentialResolverDelegate"/>
-    <property name="metaDataProperties" value="metadata.properties"/>
-  </bean>
-
-  <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
-    <property name="mappings">
-      <value>
-        /OpenSAML.sso/Login = authnRequestController
-      </value>
-    </property>
-  </bean>
+  <bean id="parserPoolHolder" class="org.springframework.security.saml.parser.ParserPoolHolder" />
 
 </beans>
+ 

@@ -18,9 +18,9 @@
             .galleria-container{background: #fff;}
         </style>
         
-        <script src="<hst:link path="/js/vendor/jquery-1.10.1.min.js"/>"></script>
-        <script src="<hst:link path="/js/vendor/modernizr-2.6.2.min.js"/>"></script>
-        <script src="<hst:link path="/js/galleria/galleria-1.2.9.min.js"/>"></script>
+        <script src="<hst:link path="/js/intranet/vendor/jquery-1.10.1.min.js"/>"></script>
+        <script src="<hst:link path="/js/intranet/vendor/modernizr-2.6.2.min.js"/>"></script>
+        <script src="<hst:link path="/js/intranet/galleria/galleria-1.2.9.min.js"/>"></script>
         
         <%@include file="/WEB-INF/jsp/intranet/common/google-analytics-head.jsp" %>
         
@@ -42,9 +42,9 @@
 
 	    </div>
 	
-        <script src="<hst:link path="/js/plugins.js"/>"></script>
-        <script src="<hst:link path="/js/main.js"/>"></script>
-        <script src="/appbar/inc/js/appBarRemote.js"></script>
+        <script src="<hst:link path="/js/intranet/plugins.js"/>"></script>
+        <script src="<hst:link path="/js/intranet/main.js"/>"></script>
+        <script src="/appbar/inc/js/intranet/appBarRemote.js"></script>
         
 	    <%@include file="/WEB-INF/jsp/intranet/common/google-analytics-bottom.jsp" %>
 	    

@@ -20,7 +20,7 @@
                   <section class="column-box">
                        <div class="column-box-header">
                             <span title="${fn:escapeXml(group.categoryTitle)}"><hs:abbreviate maxLength="38" text="${fn:escapeXml(group.categoryTitle)}"/></span>
-                            <img src="<hst:link path="/img/arrow_down.png"/>" class="arrow down" alt="">
+                            <img src="<hst:link path="/img/intranet/arrow_down.png"/>" class="arrow down" alt="">
                        </div>
                        <div class="box-content">
                           <ul class="categories">
