@@ -186,6 +186,12 @@
     <filter-name>HtmlPDFRenderingFilter</filter-name>
     <url-pattern>/pdf/*</url-pattern>
   </filter-mapping>
+  
+  <filter-mapping>
+    <filter-name>springSecurityFilterChain</filter-name>
+    <url-pattern>/*</url-pattern>
+    <dispatcher>REQUEST</dispatcher>
+  </filter-mapping>
 
   <filter-mapping>
     <filter-name>HstFilter</filter-name>
@@ -363,7 +369,7 @@
     <url-pattern>/qrcode/</url-pattern>
   </servlet-mapping>
 
-  <security-constraint>
+<!--   <security-constraint>
     <web-resource-collection>
       <web-resource-name>Login</web-resource-name>
       <url-pattern>/login/resource</url-pattern>
@@ -380,7 +386,7 @@
       <form-login-page>/login/login</form-login-page>
       <form-error-page>/login/error</form-error-page>
     </form-login-config>
-  </login-config>
+  </login-config> -->
 
   <security-role>
     <description>Default role of Hippo Repository</description>
