@@ -8,7 +8,7 @@
                            http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd
                            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
                            http://www.surfnet.nl/schema/security/opensaml http://www.surfnet.nl/schema/security/spring-security-opensaml.xsd">
-       
+
   <bean id="propertyResolver" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
     <property name="location" value="${opensaml.conf}" />
   </bean>
@@ -22,17 +22,17 @@
   <!-- Unsecured pages -->
   <!-- Static Resources -->
   <security:http security="none" pattern="/favicon.ico" />
-  <security:http pattern="/css/**" security="none"/>
-  <security:http pattern="/images/**" security="none"/>
-  <security:http pattern="/script/**" security="none"/>
-  <security:http pattern="/binaries/**" security="none"/>
-  <security:http pattern="/login.jsp*" security="none"/>
-  <security:http pattern="/logout.jsp*" security="none"/>
+  <security:http pattern="/css/**" security="none" />
+  <security:http pattern="/images/**" security="none" />
+  <security:http pattern="/script/**" security="none" />
+  <security:http pattern="/binaries/**" security="none" />
+  <security:http pattern="/login.jsp*" security="none" />
+  <security:http pattern="/logout.jsp*" security="none" />
  
   <!-- Channel Manager requests may bypass authentication -->
-  <security:http pattern="/_rp/**" security="none"/>
-  <security:http pattern="/_cmsrest/**" security="none"/>
-  <security:http pattern="/_cmsinternal/**" security="none"/>
+  <security:http pattern="/_rp/**" security="none" />
+  <security:http pattern="/_cmsrest/**" security="none" />
+  <security:http pattern="/_cmsinternal/**" security="none" />
 
  
   <!-- Secured pages with SAML as entry point -->
@@ -58,7 +58,7 @@
   <!-- Handler deciding where to redirect user after successful login -->
   <bean id="successRedirectHandler" class="org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler">
     <property name="defaultTargetUrl" value="/" />
-    <property name="alwaysUseDefaultTargetUrl" value="true"/>
+    <property name="alwaysUseDefaultTargetUrl" value="true" />
   </bean>
   <!--
     Use the following for interpreting RelayState coming from unsolicited response as redirect URL:
@@ -77,9 +77,9 @@
   <bean id="successLogoutHandler" class="org.springframework.security.web.authentication.logout.SimpleUrlLogoutSuccessHandler">
     <property name="defaultTargetUrl" value="/" />
   </bean>
-  
-  <bean id="hippoAuthenticationProvider" class="org.onehippo.forge.security.support.springsecurity.authentication.HippoAuthenticationProvider"/>
-  
+
+  <bean id="hippoAuthenticationProvider" class="org.onehippo.forge.security.support.springsecurity.authentication.HippoAuthenticationProvider" />
+
 
   <security:authentication-manager alias="authenticationManager">
       <!-- Register authentication manager for SAML provider -->
@@ -111,6 +111,8 @@
     </property>
   </bean>
 
+  
+
 
   <!-- Filter automatically generates default SP metadata -->
   <bean id="metadataGeneratorFilter" class="org.springframework.security.saml.metadata.MetadataGeneratorFilter">
@@ -121,6 +123,7 @@
             <property name="idpDiscoveryEnabled" value="false" />
           </bean>
         </property>
+        <property name="entityBaseURL" value="${sp.fullurl}" />
       </bean>
     </constructor-arg>
   </bean>
@@ -137,7 +140,7 @@
         <bean class="org.opensaml.saml2.metadata.provider.HTTPMetadataProvider">
                   <!-- URL containing the metadata -->
           <constructor-arg>
-            <value type="java.lang.String">${wayf.url.metadata}</value>
+            <value type="java.lang.String">${idp.metadata.url}</value>
           </constructor-arg>
                   <!-- Timeout for metadata loading in ms -->
           <constructor-arg>
@@ -156,7 +159,7 @@
                 -->
       </list>
     </constructor-arg>
-       
+
   </bean>
 
   <!-- SAML Authentication Provider responsible for validating of received SAML messages -->
@@ -164,7 +167,13 @@
   </bean>
 
   <!-- Provider of default SAML Context -->
-  <bean id="contextProvider" class="org.springframework.security.saml.context.SAMLContextProviderImpl" />
+  <bean id="contextProvider" class="org.springframework.security.saml.context.SAMLContextProviderLB">
+    <property name="scheme" value="${sp.protocol}" />
+    <property name="serverName" value="${sp.hostname}" />
+    <property name="serverPort" value="${sp.portnumber}" />
+    <property name="includeServerPortInRequestURL" value="${sp.port.incloud}" />
+    <property name="contextPath" value="${sp.contextPath}" />
+  </bean>
 
   <!-- Processing filter for WebSSO profile messages -->
   <bean id="samlWebSSOProcessingFilter" class="org.springframework.security.saml.SAMLProcessingFilter">
