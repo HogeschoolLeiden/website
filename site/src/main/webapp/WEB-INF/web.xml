@@ -261,10 +261,10 @@
     </init-param>
   </servlet>
 
-  <servlet>
+<!--   <servlet>
     <servlet-name>LoginServlet</servlet-name>
     <servlet-class>org.hippoecm.hst.security.servlet.LoginServlet</servlet-class>
-  </servlet>
+  </servlet> -->
 
   <servlet>
     <servlet-name>SecurityResourceServlet</servlet-name>
@@ -302,33 +302,6 @@
     </init-param>
   </servlet>
 
-  <servlet>
-    <servlet-name>HstDispatcherServlet</servlet-name>
-    <servlet-class>org.hippoecm.hst.component.support.spring.mvc.HstDispatcherServlet</servlet-class>
-    <init-param>
-      <param-name>contextConfigLocation</param-name>
-      <param-value>
-            /WEB-INF/applicationContext.xml
-            /WEB-INF/applicationContext-security.xml
-          </param-value>
-    </init-param>
-  </servlet>
-
-  <servlet-mapping>
-    <servlet-name>HstDispatcherServlet</servlet-name>
-    <url-pattern>*.sso</url-pattern>
-  </servlet-mapping>
-
-  <servlet-mapping>
-    <servlet-name>HstDispatcherServlet</servlet-name>
-    <url-pattern>/OpenSAML.sso/Login</url-pattern>
-  </servlet-mapping>
-
-  <servlet-mapping>
-    <servlet-name>HstDispatcherServlet</servlet-name>
-    <url-pattern>/OpenSAML.sso/Metadata</url-pattern>
-  </servlet-mapping>
-
   <servlet-mapping>
     <servlet-name>BinariesServlet</servlet-name>
     <url-pattern>/binaries/*</url-pattern>
@@ -344,10 +317,10 @@
     <url-pattern>/hst/pagecomposer/sources/*</url-pattern>
   </servlet-mapping>
 
-  <servlet-mapping>
+<!--   <servlet-mapping>
     <servlet-name>LoginServlet</servlet-name>
     <url-pattern>/login/*</url-pattern>
-  </servlet-mapping>
+  </servlet-mapping> -->
 
   <servlet-mapping>
     <servlet-name>SecurityResourceServlet</servlet-name>

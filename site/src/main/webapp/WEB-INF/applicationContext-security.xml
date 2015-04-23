@@ -17,10 +17,19 @@
   <context:component-scan base-package="nl.hinttech.hsleiden.pi.security" />
 
   <!-- Unsecured pages -->
+  <!-- Static Resources -->
   <security:http security="none" pattern="/favicon.ico" />
-  <security:http security="none" pattern="/images/**" />
-  <security:http security="none" pattern="/css/**" />
-  <security:http security="none" pattern="/logout.jsp" />
+  <security:http pattern="/css/**" security="none"/>
+  <security:http pattern="/images/**" security="none"/>
+  <security:http pattern="/script/**" security="none"/>
+  <security:http pattern="/binaries/**" security="none"/>
+  <security:http pattern="/login.jsp*" security="none"/>
+  <security:http pattern="/logout.jsp*" security="none"/>
+ 
+  <!-- Channel Manager requests may bypass authentication -->
+  <security:http pattern="/_rp/**" security="none"/>
+  <security:http pattern="/_cmsrest/**" security="none"/>
+  <security:http pattern="/_cmsinternal/**" security="none"/>
 
  
   <!-- Secured pages with SAML as entry point -->
@@ -46,6 +55,7 @@
   <!-- Handler deciding where to redirect user after successful login -->
   <bean id="successRedirectHandler" class="org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler">
     <property name="defaultTargetUrl" value="/" />
+    <property name="alwaysUseDefaultTargetUrl" value="true"/>
   </bean>
   <!--
     Use the following for interpreting RelayState coming from unsolicited response as redirect URL:
@@ -64,16 +74,14 @@
   <bean id="successLogoutHandler" class="org.springframework.security.web.authentication.logout.SimpleUrlLogoutSuccessHandler">
     <property name="defaultTargetUrl" value="/" />
   </bean>
+  
+  <bean id="hippoAuthenticationProvider" class="org.onehippo.forge.security.support.springsecurity.authentication.HippoAuthenticationProvider"/>
+  
 
   <security:authentication-manager alias="authenticationManager">
       <!-- Register authentication manager for SAML provider -->
     <security:authentication-provider ref="samlAuthenticationProvider" />
-      <!-- Register authentication manager for administration UI -->
-    <security:authentication-provider>
-      <security:user-service id="adminInterfaceService">
-        <security:user name="admin" password="admin" authorities="ROLE_ADMIN" />
-      </security:user-service>
-    </security:authentication-provider>
+    <security:authentication-provider ref="hippoAuthenticationProvider" />
   </security:authentication-manager>
 
   <!-- Logger for SAML messages and events -->
