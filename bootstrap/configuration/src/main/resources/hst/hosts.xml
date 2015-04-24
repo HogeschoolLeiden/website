@@ -54,7 +54,6 @@
     <sv:value>.woff</sv:value>
     <sv:value>.eot</sv:value>
     <sv:value>.map</sv:value>
-    <sv:value>.map</sv:value>
   </sv:property>
   <sv:property sv:name="hst:versioninpreviewheader" sv:type="Boolean">
     <sv:value>true</sv:value>
@@ -465,6 +464,157 @@
                 </sv:node>
               </sv:node>
             </sv:node>
+          </sv:node>
+        </sv:node>
+      </sv:node>
+    </sv:node>
+  </sv:node>
+  <sv:node sv:name="dev-local">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:virtualhostgroup</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:cmslocation" sv:type="String">
+      <sv:value>http://localhost:8080/cms</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:defaultport" sv:type="Long">
+      <sv:value>8080</sv:value>
+    </sv:property>
+    <sv:node sv:name="local">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:virtualhost</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:showcontextpath" sv:type="Boolean">
+        <sv:value>false</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:showport" sv:type="Boolean">
+        <sv:value>false</sv:value>
+      </sv:property>
+      <sv:node sv:name="site">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:virtualhost</sv:value>
+        </sv:property>
+        <sv:node sv:name="hst:root">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:mount</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:alias" sv:type="String">
+            <sv:value>hsl</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:channelpath" sv:type="String">
+            <sv:value>/hst:hst/hst:channels/hsl</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:mountpoint" sv:type="String">
+            <sv:value>/hst:hst/hst:sites/hsl</sv:value>
+          </sv:property>
+          <sv:node sv:name="pdf">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:mount</sv:value>
+            </sv:property>
+            <sv:property sv:name="excludeFromSitemap" sv:type="String">
+              <sv:value>true</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:alias" sv:type="String">
+              <sv:value>pdf</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="expertisecentrum-jeugd">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:mount</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:channelpath" sv:type="String">
+              <sv:value>/hst:hst/hst:channels/expertisecentrum-jeugd</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:contextpath" sv:type="String">
+              <sv:value>/site</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:mountpoint" sv:type="String">
+              <sv:value>/hst:hst/hst:sites/expertisecentrum-jeugd</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="biodiversiteit">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:mount</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:channelpath" sv:type="String">
+              <sv:value>/hst:hst/hst:channels/biodiversiteit</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:contextpath" sv:type="String">
+              <sv:value>/site</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:mountpoint" sv:type="String">
+              <sv:value>/hst:hst/hst:sites/biodiversiteit</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="onderzoeksmethoden-en-technieken">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:mount</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:channelpath" sv:type="String">
+              <sv:value>/hst:hst/hst:channels/onderzoeksmethoden-en-technieken</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:contextpath" sv:type="String">
+              <sv:value>/site</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:mountpoint" sv:type="String">
+              <sv:value>/hst:hst/hst:sites/onderzoeksmethoden-en-technieken</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="antroposofische-gezondheidszorg">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:mount</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:channelpath" sv:type="String">
+              <sv:value>/hst:hst/hst:channels/antroposofische-gezondheidszorg</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:contextpath" sv:type="String">
+              <sv:value>/site</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:mountpoint" sv:type="String">
+              <sv:value>/hst:hst/hst:sites/antroposofische-gezondheidszorg</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="hsl-en">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:mount</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:channelpath" sv:type="String">
+              <sv:value>/hst:hst/hst:channels/hsl-en</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:contextpath" sv:type="String">
+              <sv:value>/site</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:locale" sv:type="String">
+              <sv:value>en_US</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:mountpoint" sv:type="String">
+              <sv:value>/hst:hst/hst:sites/hsl-en</sv:value>
+            </sv:property>
+          </sv:node>
+          <sv:node sv:name="intranet">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+              <sv:value>hst:mount</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:authenticated" sv:type="Boolean">
+              <sv:value>true</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:channelpath" sv:type="String">
+              <sv:value>/hst:hst/hst:channels/hsleiden</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:contextpath" sv:type="String">
+              <sv:value>/site</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:formloginpage" sv:type="String">
+              <sv:value>../login/resource</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:locale" sv:type="String">
+              <sv:value>en_US</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:mountpoint" sv:type="String">
+              <sv:value>/hst:hst/hst:sites/hsleiden</sv:value>
+            </sv:property>
+            <sv:property sv:name="hst:users" sv:type="String" sv:multiple="true">
+              <sv:value>ebrahim.aharpour93@gmail.com</sv:value>
+            </sv:property>
           </sv:node>
         </sv:node>
       </sv:node>
