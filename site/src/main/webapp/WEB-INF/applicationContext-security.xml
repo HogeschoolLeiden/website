@@ -239,7 +239,9 @@
   <bean id="ecpprofile" class="org.springframework.security.saml.websso.WebSSOProfileECPImpl" />
 
   <!-- SAML 2.0 Logout Profile -->
-  <bean id="logoutprofile" class="org.springframework.security.saml.websso.SingleLogoutProfileImpl" />
+  <bean id="logoutprofile" class="org.springframework.security.saml.websso.SingleLogoutProfileImpl">
+    <property name="responseSkew" value="${time.skew}"/>
+  </bean>
 
   <!-- Bindings, encoders and decoders used for creating and parsing messages -->
   <bean id="postBinding" class="org.springframework.security.saml.processor.HTTPPostBinding">
