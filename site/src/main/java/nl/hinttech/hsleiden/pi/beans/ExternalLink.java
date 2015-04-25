@@ -7,7 +7,7 @@ import org.hippoecm.hst.content.beans.Node;
 /**
  * Compound type for an external link.
  */
-@Node(jcrType = "hsleiden:TitelExterneLinkBlok")
+@Node(jcrType = "intranet:TitelExterneLinkBlok")
 public class ExternalLink extends BaseDocument {
 
     public static final String PROPERTY_TITLE = NAMESPACE_PREFIX + "titel";

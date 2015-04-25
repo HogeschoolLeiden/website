@@ -10,7 +10,7 @@ import org.hippoecm.hst.content.beans.standard.HippoDocument;
  * Compound type to store one setting in a {@link SiteSettings} document.
  *
  */
-@Node(jcrType = "hsleiden:KeyValuePair")
+@Node(jcrType = "intranet:KeyValuePair")
 public class KeyValuePair extends HippoDocument {
     
     public static final String PROPERTY_KEY = NAMESPACE_PREFIX + "key";

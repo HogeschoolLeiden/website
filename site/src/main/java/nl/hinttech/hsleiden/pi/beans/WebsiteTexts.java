@@ -11,7 +11,7 @@ import org.hippoecm.hst.content.beans.standard.HippoHtml;
  * Document type that can be used to configure texts within the website that have no direct link with a document.
  * Use this as some sort of resource bundle (without the translations)
  */
-@Node(jcrType = "hsleiden:WebsiteTeksten")
+@Node(jcrType = "intranet:WebsiteTeksten")
 public class WebsiteTexts extends BaseDocument {
 
     public static final String PROPERTY_TEXTS = NAMESPACE_PREFIX + "texts";

@@ -10,7 +10,7 @@ import org.hippoecm.hst.content.beans.standard.HippoFolderBean;
  * Subclass of {@link TextDocument} that adds an image folder property to the document.
  * The front-end uses this property to show all images within the image folder in a gallery.
  */
-@Node(jcrType = "hsleiden:ImageGalleryPagina")
+@Node(jcrType = "intranet:ImageGalleryPagina")
 public class ImageGalleryDocument extends TextDocument {
 
     public static final String PROPERTY_IMAGE_FOLDER = NAMESPACE_PREFIX + "imageFolder";

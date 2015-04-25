@@ -8,7 +8,7 @@ import org.hippoecm.hst.content.beans.standard.HippoBean;
 /**
  * Compound type for specifying an internal link.
  */
-@Node(jcrType = "hsleiden:TitelLinkBlok")
+@Node(jcrType = "intranet:TitelLinkBlok")
 public class InternalLink extends BaseDocument {
 
     public static final String PROPERTY_TITLE = NAMESPACE_PREFIX + "titel";

@@ -8,7 +8,7 @@ import org.hippoecm.hst.content.beans.standard.HippoHtml;
 /**
  * Compound type (used within {@link WebsiteTexts}) for specifying a HTML text.
  */
-@Node(jcrType = "hsleiden:HtmlTekst")
+@Node(jcrType = "intranet:HtmlTekst")
 public class HtmlText extends BaseDocument {
 
     public static final String PROPERTY_KEY = NAMESPACE_PREFIX + "key";

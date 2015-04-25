@@ -13,7 +13,7 @@ import org.hippoecm.hst.content.beans.Node;
  * this list up with dynamically determined most read documents (using the {@link PageViewCounter}.
  * 
  */
-@Node(jcrType = "hsleiden:VeelGelezenBlok")
+@Node(jcrType = "intranet:VeelGelezenBlok")
 public class MostReadBlock extends BaseDocument {
 
     public static final String PROPERTY_ABOUT = NAMESPACE_PREFIX + "about";

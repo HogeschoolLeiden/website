@@ -212,7 +212,7 @@ public class SearchComponent extends BaseComponent {
             tagsFilter.addContains(TextDocument.PROPERTY_TAGS, parsedQuery);
             
             Filter contentFilter = query.createFilter();
-            contentFilter.addContains("hsleiden:titelTekst/hsleiden:tekst/hippostd:content", parsedQuery);
+            contentFilter.addContains("intranet:titelTekst/intranet:tekst/hippostd:content", parsedQuery);
             
             Filter fullTextFilter = query.createFilter();
             fullTextFilter.addContains(".", parsedQuery);

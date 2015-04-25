@@ -22,7 +22,7 @@ class UpdaterTemplate extends BaseNodeUpdateVisitor {
 
   boolean doUpdate(Node node) {
     log.debug "Updating node ${node.path}";
-    if (!node.path.contains("hsleiden/admin")) {
+    if (!node.path.contains("intranet/admin")) {
       log.debug "setting foldertype property"
       String[] values = ["new-content-pagina-document", "new-image-gallery-pagina-document", "new-notulen-overzicht-document", "new-content-folder"];
       node.setProperty("hippostd:foldertype", values);

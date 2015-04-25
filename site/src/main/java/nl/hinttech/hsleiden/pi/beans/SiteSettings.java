@@ -12,7 +12,7 @@ import org.hippoecm.hst.content.beans.Node;
  * For HSLeiden we use it to set the Google Analytics Account ID.
  *
  */
-@Node(jcrType = "hsleiden:SiteSettings")
+@Node(jcrType = "intranet:SiteSettings")
 public class SiteSettings extends BaseDocument {
 
     public static final String PROPERTY_SETTINGS = NAMESPACE_PREFIX + "settings";

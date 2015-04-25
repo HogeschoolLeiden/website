@@ -17,7 +17,7 @@ public class HSLeiden {
 
     public static final Logger log = LoggerFactory.getLogger(HSLeiden.class);
     
-    public static final String NAMESPACE = "hsleiden";
+    public static final String NAMESPACE = "intranet";
     public static final String NAMESPACE_PREFIX = NAMESPACE + ":";
 
     public static final String TYPE_STUDENT = "student";

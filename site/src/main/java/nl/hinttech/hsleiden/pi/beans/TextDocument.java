@@ -21,7 +21,7 @@ import org.onehippo.forge.selection.hst.contentbean.ValueList;
 /**
  * The superclass of all of our content documents.
  */
-@Node(jcrType = "hsleiden:TekstPagina")
+@Node(jcrType = "intranet:TekstPagina")
 public class TextDocument extends BaseDocument {
 
     public static final String PROPERTY_TITLE = NAMESPACE_PREFIX + "title";

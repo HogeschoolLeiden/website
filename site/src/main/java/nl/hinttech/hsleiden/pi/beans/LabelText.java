@@ -7,7 +7,7 @@ import org.hippoecm.hst.content.beans.Node;
 /**
  * Compound type (used within {@link WebsiteTexts}) for specifying a simple label text.
  */
-@Node(jcrType = "hsleiden:LabelTekst")
+@Node(jcrType = "intranet:LabelTekst")
 public class LabelText extends BaseDocument {
 
     public static final String PROPERTY_KEY = NAMESPACE_PREFIX + "key";

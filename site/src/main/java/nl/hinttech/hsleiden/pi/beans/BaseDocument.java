@@ -9,7 +9,7 @@ import org.hippoecm.hst.content.beans.standard.HippoDocument;
 /**
  * The base class of all our hippo document beans.
  */
-@Node(jcrType = "hsleiden:basedocument")
+@Node(jcrType = "intranet:basedocument")
 public class BaseDocument extends HippoDocument {
 
     protected List<String> getPropertyAsList(String propertyName) {

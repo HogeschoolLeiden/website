@@ -11,7 +11,7 @@ import org.hippoecm.hst.content.beans.standard.HippoFolderBean;
  * This property is used by the front-end to show all assets (minutes) within that folder.
  * (we assume that the assets are organized within year folders within the configured asset folder).
  */
-@Node(jcrType = "hsleiden:NotulenOverzicht")
+@Node(jcrType = "intranet:NotulenOverzicht")
 public class MinutesDocument extends TextDocument {
 
     public static final String PROPERTY_ASSET_FOLDER = NAMESPACE_PREFIX + "assetFolder";

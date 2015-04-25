@@ -7,7 +7,7 @@ import org.hippoecm.hst.content.beans.Node;
 /**
  * Compound type (used within {@link WebsiteTexts}) for specifying piece of (unformatted) text.
  */
-@Node(jcrType = "hsleiden:PlatteTekst")
+@Node(jcrType = "intranet:PlatteTekst")
 public class SimpleText extends BaseDocument {
 
     public static final String PROPERTY_KEY = NAMESPACE_PREFIX + "key";

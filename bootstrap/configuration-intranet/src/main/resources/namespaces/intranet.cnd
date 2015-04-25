@@ -1,0 +1,51 @@
+<'hippo'='http://www.onehippo.org/jcr/hippo/nt/2.0.4'>
+<'hippostd'='http://www.onehippo.org/jcr/hippostd/nt/2.0'>
+<'hippostdpubwf'='http://www.onehippo.org/jcr/hippostdpubwf/nt/1.0'>
+<'hippotranslation'='http://www.onehippo.org/jcr/hippotranslation/nt/1.0'>
+<'intranet'='http://www.onehippo.org/intranet/nt/1.0'>
+
+[intranet:basedocument] > hippo:document, hippostd:publishableSummary, hippostdpubwf:document
+  orderable
+
+[intranet:TekstPagina] > intranet:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[intranet:ContentPagina] > intranet:TekstPagina, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[intranet:HtmlTekst] > hippo:compound, hippostd:relaxed
+  orderable
+
+[intranet:ImageGalleryPagina] > intranet:TekstPagina, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[intranet:KeyValuePair] > hippo:compound, hippostd:relaxed
+  orderable
+
+[intranet:LabelTekst] > hippo:compound, hippostd:relaxed
+  orderable
+
+[intranet:NotulenOverzicht] > intranet:TekstPagina, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[intranet:PlatteTekst] > hippo:compound, hippostd:relaxed
+  orderable
+
+[intranet:SiteSettings] > intranet:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[intranet:TitelExterneLinkBlok] > hippo:compound, hippostd:relaxed
+  orderable
+
+[intranet:TitelLinkBlok] > hippo:compound, hippostd:relaxed
+  orderable
+
+[intranet:TitelTekstBlok] > hippo:compound, hippostd:relaxed
+  orderable
+
+[intranet:VeelGelezenBlok] > intranet:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[intranet:WebsiteTeksten] > intranet:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+

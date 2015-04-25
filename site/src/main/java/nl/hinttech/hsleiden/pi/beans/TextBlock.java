@@ -8,7 +8,7 @@ import org.hippoecm.hst.content.beans.standard.HippoHtml;
 /**
  * Compound type for specifying a block of formatted text.
  */
-@Node(jcrType = "hsleiden:TitelTekstBlok")
+@Node(jcrType = "intranet:TitelTekstBlok")
 public class TextBlock extends BaseDocument {
 
     public static final String PROPERTY_TITLE = NAMESPACE_PREFIX + "titel";

@@ -10,7 +10,7 @@ import org.hippoecm.hst.content.beans.Node;
  * Subclass of TextDocument that adds some extra properties (like links and attachments) 
  * to a document.
  */
-@Node(jcrType = "hsleiden:ContentPagina")
+@Node(jcrType = "intranet:ContentPagina")
 public class ContentDocument extends TextDocument {
 
     public static final String PROPERTY_EXTERNAL_LINKS = NAMESPACE_PREFIX + "externelinks";

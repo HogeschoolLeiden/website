@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:ae="http://www.onehippo.org/jcr/autoexport/1.0" sv:name="hippo:initialize" ae:id="hsleiden">  
+<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:ae="http://www.onehippo.org/jcr/autoexport/1.0" sv:name="hippo:initialize" ae:id="intranet">  
   <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
     <sv:value>hippo:initializefolder</sv:value> 
   </sv:property>  
@@ -18,7 +18,7 @@
     </sv:property> 
   </sv:node>  
   <!-- Document types -->  
-  <sv:node sv:name="hsleiden"> 
+  <sv:node sv:name="intranet"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -26,13 +26,13 @@
       <sv:value>30050</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:namespace" sv:type="String"> 
-      <sv:value>http://www.onehippo.org/hsleiden/nt/1.0</sv:value> 
+      <sv:value>http://www.onehippo.org/intranet/nt/1.0</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:nodetypesresource" sv:type="String"> 
-      <sv:value>namespaces/hsleiden.cnd</sv:value> 
+      <sv:value>namespaces/intranet.cnd</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-namespace"> 
+  <sv:node sv:name="intranet-namespace"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -40,13 +40,13 @@
       <sv:value>30051</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>namespaces/hsleiden.xml</sv:value> 
+      <sv:value>namespaces/intranet.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
       <sv:value>/hippo:namespaces</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-basedocument-namespace"> 
+  <sv:node sv:name="intranet-basedocument-namespace"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -54,13 +54,13 @@
       <sv:value>31051.1</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>namespaces/hsleiden/basedocument.xml</sv:value> 
+      <sv:value>namespaces/intranet/basedocument.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hippo:namespaces/hsleiden</sv:value> 
+      <sv:value>/hippo:namespaces/intranet</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hst-channels"> 
+  <sv:node sv:name="intranet-hst-channels"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -74,7 +74,7 @@
       <sv:value>/hst:hst/hst:channels</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hst-sites"> 
+  <sv:node sv:name="intranet-hst-sites"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -88,7 +88,7 @@
       <sv:value>/hst:hst/hst:sites</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hst-configurations"> 
+  <sv:node sv:name="intranet-hst-configurations"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -103,7 +103,7 @@
     </sv:property> 
   </sv:node>  
   <!-- Website -->  
-  <sv:node sv:name="hsleiden-sitemap"> 
+  <sv:node sv:name="intranet-sitemap"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -111,13 +111,13 @@
       <sv:value>31056</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>hst/configurations/hsleiden/sitemap.xml</sv:value> 
+      <sv:value>hst/configurations/intranet/sitemap.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hst:hst/hst:configurations/hsleiden</sv:value> 
+      <sv:value>/hst:hst/hst:configurations/intranet</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-sitemenus"> 
+  <sv:node sv:name="intranet-sitemenus"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -125,13 +125,13 @@
       <sv:value>31057</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>hst/configurations/hsleiden/sitemenus.xml</sv:value> 
+      <sv:value>hst/configurations/intranet/sitemenus.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hst:hst/hst:configurations/hsleiden</sv:value> 
+      <sv:value>/hst:hst/hst:configurations/intranet</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-configuration-pages"> 
+  <sv:node sv:name="intranet-configuration-pages"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -139,13 +139,13 @@
       <sv:value>31058</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>hst/configurations/hsleiden/pages.xml</sv:value> 
+      <sv:value>hst/configurations/intranet/pages.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hst:hst/hst:configurations/hsleiden</sv:value> 
+      <sv:value>/hst:hst/hst:configurations/intranet</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-configuration-pages-search"> 
+  <sv:node sv:name="intranet-configuration-pages-search"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -153,13 +153,13 @@
       <sv:value>31058.1</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>hst/configurations/hsleiden/pages/search.xml</sv:value> 
+      <sv:value>hst/configurations/intranet/pages/search.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hst:hst/hst:configurations/hsleiden/hst:pages</sv:value> 
+      <sv:value>/hst:hst/hst:configurations/intranet/hst:pages</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-configuration-components"> 
+  <sv:node sv:name="intranet-configuration-components"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -167,13 +167,13 @@
       <sv:value>31059</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>hst/configurations/hsleiden/components.xml</sv:value> 
+      <sv:value>hst/configurations/intranet/components.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hst:hst/hst:configurations/hsleiden</sv:value> 
+      <sv:value>/hst:hst/hst:configurations/intranet</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-configuration-components-header"> 
+  <sv:node sv:name="intranet-configuration-components-header"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -181,13 +181,13 @@
       <sv:value>31059.2</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>hst/configurations/hsleiden/components/header.xml</sv:value> 
+      <sv:value>hst/configurations/intranet/components/header.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hst:hst/hst:configurations/hsleiden/hst:components</sv:value> 
+      <sv:value>/hst:hst/hst:configurations/intranet/hst:components</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-configuration-templates"> 
+  <sv:node sv:name="intranet-configuration-templates"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -195,13 +195,13 @@
       <sv:value>31060</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>hst/configurations/hsleiden/templates.xml</sv:value> 
+      <sv:value>hst/configurations/intranet/templates.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hst:hst/hst:configurations/hsleiden</sv:value> 
+      <sv:value>/hst:hst/hst:configurations/intranet</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-configuration-catalog"> 
+  <sv:node sv:name="intranet-configuration-catalog"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -209,14 +209,14 @@
       <sv:value>31061</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>hst/configurations/hsleiden/catalog.xml</sv:value> 
+      <sv:value>hst/configurations/intranet/catalog.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hst:hst/hst:configurations/hsleiden</sv:value> 
+      <sv:value>/hst:hst/hst:configurations/intranet</sv:value> 
     </sv:property> 
   </sv:node>  
   <!-- Subsite components -->  
-  <!-- <sv:node sv:name="hsleiden-subsite-common-configuration-components"> 
+  <!-- <sv:node sv:name="intranet-subsite-common-configuration-components"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -224,13 +224,13 @@
       <sv:value>31080</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>hst/configurations/hsleiden-subsite-common/components.xml</sv:value> 
+      <sv:value>hst/configurations/intranet-subsite-common/components.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hst:hst/hst:configurations/hsleiden-subsite-common</sv:value> 
+      <sv:value>/hst:hst/hst:configurations/intranet-subsite-common</sv:value> 
     </sv:property> 
   </sv:node>   -->
-<!--   <sv:node sv:name="hsleiden-subsite-common-configuration-components-content"> 
+<!--   <sv:node sv:name="intranet-subsite-common-configuration-components-content"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -238,13 +238,13 @@
       <sv:value>31080.1</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>hst/configurations/hsleiden-subsite-common/components/content.xml</sv:value> 
+      <sv:value>hst/configurations/intranet-subsite-common/components/content.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hst:hst/hst:configurations/hsleiden-subsite-common/hst:components</sv:value> 
+      <sv:value>/hst:hst/hst:configurations/intranet-subsite-common/hst:components</sv:value> 
     </sv:property> 
   </sv:node>   -->
-<!--   <sv:node sv:name="hsleiden-subsite-common-configuration-components-header"> 
+<!--   <sv:node sv:name="intranet-subsite-common-configuration-components-header"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -252,13 +252,13 @@
       <sv:value>31080.2</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>hst/configurations/hsleiden-subsite-common/components/header.xml</sv:value> 
+      <sv:value>hst/configurations/intranet-subsite-common/components/header.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hst:hst/hst:configurations/hsleiden-subsite-common/hst:components</sv:value> 
+      <sv:value>/hst:hst/hst:configurations/intranet-subsite-common/hst:components</sv:value> 
     </sv:property> 
   </sv:node>   -->
-<!--   <sv:node sv:name="hsleiden-subsite-common-configuration-components-leftmenu"> 
+<!--   <sv:node sv:name="intranet-subsite-common-configuration-components-leftmenu"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -266,14 +266,14 @@
       <sv:value>31080.3</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>hst/configurations/hsleiden-subsite-common/components/leftmenu.xml</sv:value> 
+      <sv:value>hst/configurations/intranet-subsite-common/components/leftmenu.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hst:hst/hst:configurations/hsleiden-subsite-common/hst:components</sv:value> 
+      <sv:value>/hst:hst/hst:configurations/intranet-subsite-common/hst:components</sv:value> 
     </sv:property> 
   </sv:node>  --> 
   <!-- Subsite templates -->  
-  <!-- <sv:node sv:name="hsleiden-subsite-common-configuration-templates"> 
+  <!-- <sv:node sv:name="intranet-subsite-common-configuration-templates"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -281,15 +281,15 @@
       <sv:value>31081</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>hst/configurations/hsleiden-subsite-common/templates.xml</sv:value> 
+      <sv:value>hst/configurations/intranet-subsite-common/templates.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hst:hst/hst:configurations/hsleiden-subsite-common</sv:value> 
+      <sv:value>/hst:hst/hst:configurations/intranet-subsite-common</sv:value> 
     </sv:property> 
   </sv:node>   -->
   <!-- Blueprints -->  
   <!-- Subsites bootstrap content -->  
-  <sv:node sv:name="hsleiden-hippo-queries-new-subsite-template-hsleiden-subsite"> 
+  <sv:node sv:name="intranet-hippo-queries-new-subsite-template-intranet-subsite"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -297,7 +297,7 @@
       <sv:value>31900</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>configuration/queries/templates/new-subsite/hsleiden-subsite.xml</sv:value> 
+      <sv:value>configuration/queries/templates/new-subsite/intranet-subsite.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
       <sv:value>/hippo:configuration/hippo:queries/hippo:templates/new-subsite/hippostd:templates</sv:value> 
@@ -320,7 +320,7 @@
     </sv:property> 
   </sv:node>   -->
   <!-- Formdata node and a security domain for it -->  
-<!--   <sv:node sv:name="hsleiden-formdata-container"> 
+<!--   <sv:node sv:name="intranet-formdata-container"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -334,7 +334,7 @@
       <sv:value>33000.0</sv:value> 
     </sv:property> 
   </sv:node>   -->
-  <!-- <sv:node sv:name="hsleiden-formdata-domain"> 
+  <!-- <sv:node sv:name="intranet-formdata-domain"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -349,7 +349,7 @@
     </sv:property> 
   </sv:node>   -->
   <!-- Security and default available users -->  
-<!--   <sv:node sv:name="hsleiden-groups-author-add"> 
+<!--   <sv:node sv:name="intranet-groups-author-add"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -363,7 +363,7 @@
       <sv:value>33100.3</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-groups-editor-add"> 
+  <sv:node sv:name="intranet-groups-editor-add"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -377,7 +377,7 @@
       <sv:value>33100.4</sv:value> 
     </sv:property> 
   </sv:node>   -->
-<!--   <sv:node sv:name="hsleiden-groups-webmaster-add"> 
+<!--   <sv:node sv:name="intranet-groups-webmaster-add"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -391,7 +391,7 @@
       <sv:value>editor</sv:value> 
     </sv:property> 
   </sv:node>   -->
-<!--   <sv:node sv:name="hsleiden-group-sitewriters"> 
+<!--   <sv:node sv:name="intranet-group-sitewriters"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -405,7 +405,7 @@
       <sv:value>33100.6</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-group-liveusers"> 
+  <sv:node sv:name="intranet-group-liveusers"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -419,7 +419,7 @@
       <sv:value>33100.6</sv:value> 
     </sv:property> 
   </sv:node>   -->
-<!--   <sv:node sv:name="hsleiden-group-previewusers"> 
+<!--   <sv:node sv:name="intranet-group-previewusers"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -433,7 +433,7 @@
       <sv:value>33100.6</sv:value> 
     </sv:property> 
   </sv:node>  --> 
-  <!-- <sv:node sv:name="hsleiden-sitewriters-readfolders"> 
+  <!-- <sv:node sv:name="intranet-sitewriters-readfolders"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -447,7 +447,7 @@
       <sv:value>33100.7</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-previewusers-documents"> 
+  <sv:node sv:name="intranet-previewusers-documents"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -461,7 +461,7 @@
       <sv:value>33100.7</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-liveusers-documents"> 
+  <sv:node sv:name="intranet-liveusers-documents"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -475,7 +475,7 @@
       <sv:value>33100.7</sv:value> 
     </sv:property> 
   </sv:node>   -->
-  <!-- <sv:node sv:name="hsleiden-configuser-read-everywhere"> 
+  <!-- <sv:node sv:name="intranet-configuser-read-everywhere"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -489,7 +489,7 @@
       <sv:value>33100.7</sv:value> 
     </sv:property> 
   </sv:node>   -->
-  <sv:node sv:name="hsleiden-hippo-namespaces-hsleiden-TitelTekstBlok"> 
+  <sv:node sv:name="intranet-hippo-namespaces-intranet-TitelTekstBlok"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -497,13 +497,13 @@
       <sv:value>31052.0</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>namespaces/hsleiden/TitelTekstBlok.xml</sv:value> 
+      <sv:value>namespaces/intranet/TitelTekstBlok.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hippo:namespaces/hsleiden</sv:value> 
+      <sv:value>/hippo:namespaces/intranet</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hippo-namespaces-hsleiden-TitelExterneLinkBlok"> 
+  <sv:node sv:name="intranet-hippo-namespaces-intranet-TitelExterneLinkBlok"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -511,13 +511,13 @@
       <sv:value>31052.0</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>namespaces/hsleiden/TitelExterneLinkBlok.xml</sv:value> 
+      <sv:value>namespaces/intranet/TitelExterneLinkBlok.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hippo:namespaces/hsleiden</sv:value> 
+      <sv:value>/hippo:namespaces/intranet</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hippo-namespaces-hsleiden-TitelLinkBlok"> 
+  <sv:node sv:name="intranet-hippo-namespaces-intranet-TitelLinkBlok"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -525,13 +525,13 @@
       <sv:value>31052.0</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>namespaces/hsleiden/TitelLinkBlok.xml</sv:value> 
+      <sv:value>namespaces/intranet/TitelLinkBlok.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hippo:namespaces/hsleiden</sv:value> 
+      <sv:value>/hippo:namespaces/intranet</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hippo-namespaces-hsleiden-ContentPagina"> 
+  <sv:node sv:name="intranet-hippo-namespaces-intranet-ContentPagina"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -539,13 +539,13 @@
       <sv:value>31052.0</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>namespaces/hsleiden/ContentPagina.xml</sv:value> 
+      <sv:value>namespaces/intranet/ContentPagina.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hippo:namespaces/hsleiden</sv:value> 
+      <sv:value>/hippo:namespaces/intranet</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hippo-namespaces-hsleiden-VeelGelezenBlok"> 
+  <sv:node sv:name="intranet-hippo-namespaces-intranet-VeelGelezenBlok"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -553,13 +553,13 @@
       <sv:value>31052.0</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>namespaces/hsleiden/VeelGelezenBlok.xml</sv:value> 
+      <sv:value>namespaces/intranet/VeelGelezenBlok.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hippo:namespaces/hsleiden</sv:value> 
+      <sv:value>/hippo:namespaces/intranet</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hst-hst-hst-configurations-hsleiden-hst-pages-standard-one-column"> 
+  <sv:node sv:name="intranet-hst-hst-hst-configurations-intranet-hst-pages-standard-one-column"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -567,13 +567,13 @@
       <sv:value>31059.0</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>hst/configurations/hsleiden/pages/standard-one-column.xml</sv:value> 
+      <sv:value>hst/configurations/intranet/pages/standard-one-column.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hst:hst/hst:configurations/hsleiden/hst:pages</sv:value> 
+      <sv:value>/hst:hst/hst:configurations/intranet/hst:pages</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hst-hst-hst-configurations-hsleiden-hst-pages-standard-two-columns"> 
+  <sv:node sv:name="intranet-hst-hst-hst-configurations-intranet-hst-pages-standard-two-columns"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -581,13 +581,13 @@
       <sv:value>31059.0</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>hst/configurations/hsleiden/pages/standard-two-columns.xml</sv:value> 
+      <sv:value>hst/configurations/intranet/pages/standard-two-columns.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hst:hst/hst:configurations/hsleiden/hst:pages</sv:value> 
+      <sv:value>/hst:hst/hst:configurations/intranet/hst:pages</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hst-hst-hst-configurations-hsleiden-hst-pages-browse-page"> 
+  <sv:node sv:name="intranet-hst-hst-hst-configurations-intranet-hst-pages-browse-page"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -595,13 +595,13 @@
       <sv:value>31059.0</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>hst/configurations/hsleiden/pages/browse-page.xml</sv:value> 
+      <sv:value>hst/configurations/intranet/pages/browse-page.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hst:hst/hst:configurations/hsleiden/hst:pages</sv:value> 
+      <sv:value>/hst:hst/hst:configurations/intranet/hst:pages</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hst-hst-hst-configurations-hsleiden-hst-components-browse"> 
+  <sv:node sv:name="intranet-hst-hst-hst-configurations-intranet-hst-components-browse"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -609,13 +609,13 @@
       <sv:value>31060.0</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>hst/configurations/hsleiden/components/browse.xml</sv:value> 
+      <sv:value>hst/configurations/intranet/components/browse.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hst:hst/hst:configurations/hsleiden/hst:components</sv:value> 
+      <sv:value>/hst:hst/hst:configurations/intranet/hst:components</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hst-hst-hst-configurations-hsleiden-hst-components-most-read"> 
+  <sv:node sv:name="intranet-hst-hst-hst-configurations-intranet-hst-components-most-read"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -623,13 +623,13 @@
       <sv:value>31060.0</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>hst/configurations/hsleiden/components/most-read.xml</sv:value> 
+      <sv:value>hst/configurations/intranet/components/most-read.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hst:hst/hst:configurations/hsleiden/hst:components</sv:value> 
+      <sv:value>/hst:hst/hst:configurations/intranet/hst:components</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hst-hst-hst-configurations-hsleiden-hst-pages-standard"> 
+  <sv:node sv:name="intranet-hst-hst-hst-configurations-intranet-hst-pages-standard"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -637,13 +637,13 @@
       <sv:value>31059.0</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>hst/configurations/hsleiden/pages/standard.xml</sv:value> 
+      <sv:value>hst/configurations/intranet/pages/standard.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hst:hst/hst:configurations/hsleiden/hst:pages</sv:value> 
+      <sv:value>/hst:hst/hst:configurations/intranet/hst:pages</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hst-hst-hst-configurations-hsleiden-hst-pages-content-page"> 
+  <sv:node sv:name="intranet-hst-hst-hst-configurations-intranet-hst-pages-content-page"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -651,13 +651,13 @@
       <sv:value>31059.0</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>hst/configurations/hsleiden/pages/content-page.xml</sv:value> 
+      <sv:value>hst/configurations/intranet/pages/content-page.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hst:hst/hst:configurations/hsleiden/hst:pages</sv:value> 
+      <sv:value>/hst:hst/hst:configurations/intranet/hst:pages</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hst-hst-hst-configurations-hsleiden-hst-components-content"> 
+  <sv:node sv:name="intranet-hst-hst-hst-configurations-intranet-hst-components-content"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -665,13 +665,13 @@
       <sv:value>31060.0</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>hst/configurations/hsleiden/components/content.xml</sv:value> 
+      <sv:value>hst/configurations/intranet/components/content.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hst:hst/hst:configurations/hsleiden/hst:components</sv:value> 
+      <sv:value>/hst:hst/hst:configurations/intranet/hst:components</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hst-hst-hst-configurations-hsleiden-hst-components-table-of-contents"> 
+  <sv:node sv:name="intranet-hst-hst-hst-configurations-intranet-hst-components-table-of-contents"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -679,13 +679,13 @@
       <sv:value>31060.0</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>hst/configurations/hsleiden/components/table-of-contents.xml</sv:value> 
+      <sv:value>hst/configurations/intranet/components/table-of-contents.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hst:hst/hst:configurations/hsleiden/hst:components</sv:value> 
+      <sv:value>/hst:hst/hst:configurations/intranet/hst:components</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hst-hst-hst-configurations-hsleiden-hst-components-internal-links"> 
+  <sv:node sv:name="intranet-hst-hst-hst-configurations-intranet-hst-components-internal-links"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -693,13 +693,13 @@
       <sv:value>31060.0</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>hst/configurations/hsleiden/components/internal-links.xml</sv:value> 
+      <sv:value>hst/configurations/intranet/components/internal-links.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hst:hst/hst:configurations/hsleiden/hst:components</sv:value> 
+      <sv:value>/hst:hst/hst:configurations/intranet/hst:components</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hst-hst-hst-configurations-hsleiden-hst-components-external-links"> 
+  <sv:node sv:name="intranet-hst-hst-hst-configurations-intranet-hst-components-external-links"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -707,13 +707,13 @@
       <sv:value>31060.0</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>hst/configurations/hsleiden/components/external-links.xml</sv:value> 
+      <sv:value>hst/configurations/intranet/components/external-links.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hst:hst/hst:configurations/hsleiden/hst:components</sv:value> 
+      <sv:value>/hst:hst/hst:configurations/intranet/hst:components</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hst-hst-hst-configurations-hsleiden-hst-components-attachments"> 
+  <sv:node sv:name="intranet-hst-hst-hst-configurations-intranet-hst-components-attachments"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -721,13 +721,13 @@
       <sv:value>31060.0</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>hst/configurations/hsleiden/components/attachments.xml</sv:value> 
+      <sv:value>hst/configurations/intranet/components/attachments.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hst:hst/hst:configurations/hsleiden/hst:components</sv:value> 
+      <sv:value>/hst:hst/hst:configurations/intranet/hst:components</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hst-hst-hst-configurations-hsleiden-hst-pages-home"> 
+  <sv:node sv:name="intranet-hst-hst-hst-configurations-intranet-hst-pages-home"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -735,13 +735,13 @@
       <sv:value>31059.0</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>hst/configurations/hsleiden/pages/home.xml</sv:value> 
+      <sv:value>hst/configurations/intranet/pages/home.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hst:hst/hst:configurations/hsleiden/hst:pages</sv:value> 
+      <sv:value>/hst:hst/hst:configurations/intranet/hst:pages</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hst-hst-hst-configurations-hsleiden-hst-components-home"> 
+  <sv:node sv:name="intranet-hst-hst-hst-configurations-intranet-hst-components-home"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -749,13 +749,13 @@
       <sv:value>31060.0</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>hst/configurations/hsleiden/components/home.xml</sv:value> 
+      <sv:value>hst/configurations/intranet/components/home.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hst:hst/hst:configurations/hsleiden/hst:components</sv:value> 
+      <sv:value>/hst:hst/hst:configurations/intranet/hst:components</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hippo-namespaces-hsleiden-HtmlTekst"> 
+  <sv:node sv:name="intranet-hippo-namespaces-intranet-HtmlTekst"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -763,13 +763,13 @@
       <sv:value>31052.0</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>namespaces/hsleiden/HtmlTekst.xml</sv:value> 
+      <sv:value>namespaces/intranet/HtmlTekst.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hippo:namespaces/hsleiden</sv:value> 
+      <sv:value>/hippo:namespaces/intranet</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hippo-namespaces-hsleiden-PlatteTekst"> 
+  <sv:node sv:name="intranet-hippo-namespaces-intranet-PlatteTekst"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -777,13 +777,13 @@
       <sv:value>31052.0</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>namespaces/hsleiden/PlatteTekst.xml</sv:value> 
+      <sv:value>namespaces/intranet/PlatteTekst.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hippo:namespaces/hsleiden</sv:value> 
+      <sv:value>/hippo:namespaces/intranet</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hippo-namespaces-hsleiden-WebsiteTeksten"> 
+  <sv:node sv:name="intranet-hippo-namespaces-intranet-WebsiteTeksten"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -791,13 +791,13 @@
       <sv:value>31052.0</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>namespaces/hsleiden/WebsiteTeksten.xml</sv:value> 
+      <sv:value>namespaces/intranet/WebsiteTeksten.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hippo:namespaces/hsleiden</sv:value> 
+      <sv:value>/hippo:namespaces/intranet</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hippo-namespaces-hsleiden-LabelTekst"> 
+  <sv:node sv:name="intranet-hippo-namespaces-intranet-LabelTekst"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -805,13 +805,13 @@
       <sv:value>31052.0</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>namespaces/hsleiden/LabelTekst.xml</sv:value> 
+      <sv:value>namespaces/intranet/LabelTekst.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hippo:namespaces/hsleiden</sv:value> 
+      <sv:value>/hippo:namespaces/intranet</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hst-hst-hst-configurations-hsleiden-hst-components-search"> 
+  <sv:node sv:name="intranet-hst-hst-hst-configurations-intranet-hst-components-search"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -819,13 +819,13 @@
       <sv:value>31060.0</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>hst/configurations/hsleiden/components/search.xml</sv:value> 
+      <sv:value>hst/configurations/intranet/components/search.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hst:hst/hst:configurations/hsleiden/hst:components</sv:value> 
+      <sv:value>/hst:hst/hst:configurations/intranet/hst:components</sv:value> 
     </sv:property> 
   </sv:node>  
-<!--   <sv:node sv:name="hsleiden-hst-hst-hst-hosts"> 
+<!--   <sv:node sv:name="intranet-hst-hst-hst-hosts"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -839,7 +839,7 @@
       <sv:value>/hst:hst</sv:value> 
     </sv:property> 
   </sv:node>   -->
-  <sv:node sv:name="hsleiden-hippo-configuration-hippo-users-teststudent"> 
+  <sv:node sv:name="intranet-hippo-configuration-hippo-users-teststudent"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -853,7 +853,7 @@
       <sv:value>/hippo:configuration/hippo:users</sv:value> 
     </sv:property> 
   </sv:node>  
-<!--   <sv:node sv:name="hsleiden-hippo-configuration-hippo-users-configuser"> 
+<!--   <sv:node sv:name="intranet-hippo-configuration-hippo-users-configuser"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -867,7 +867,7 @@
       <sv:value>/hippo:configuration/hippo:users</sv:value> 
     </sv:property> 
   </sv:node>   -->
-<!--   <sv:node sv:name="hsleiden-hippo-configuration-hippo-users-editor"> 
+<!--   <sv:node sv:name="intranet-hippo-configuration-hippo-users-editor"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -881,7 +881,7 @@
       <sv:value>/hippo:configuration/hippo:users</sv:value> 
     </sv:property> 
   </sv:node>   -->
-<!--   <sv:node sv:name="hsleiden-hippo-configuration-hippo-users-admin"> 
+<!--   <sv:node sv:name="intranet-hippo-configuration-hippo-users-admin"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -895,7 +895,7 @@
       <sv:value>/hippo:configuration/hippo:users</sv:value> 
     </sv:property> 
   </sv:node>   -->
-  <!-- <sv:node sv:name="hsleiden-hippo-configuration-hippo-users-previewuser"> 
+  <!-- <sv:node sv:name="intranet-hippo-configuration-hippo-users-previewuser"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -909,7 +909,7 @@
       <sv:value>/hippo:configuration/hippo:users</sv:value> 
     </sv:property> 
   </sv:node>   -->
-  <sv:node sv:name="hsleiden-hippo-configuration-hippo-users-bartosz"> 
+  <sv:node sv:name="intranet-hippo-configuration-hippo-users-bartosz"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -923,7 +923,7 @@
       <sv:value>/hippo:configuration/hippo:users</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hippo-configuration-hippo-users-Dennis"> 
+  <sv:node sv:name="intranet-hippo-configuration-hippo-users-Dennis"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -937,7 +937,7 @@
       <sv:value>/hippo:configuration/hippo:users</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hippo-configuration-hippo-users-ibronsveld"> 
+  <sv:node sv:name="intranet-hippo-configuration-hippo-users-ibronsveld"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -951,7 +951,7 @@
       <sv:value>/hippo:configuration/hippo:users</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hippo-configuration-hippo-users-mnour"> 
+  <sv:node sv:name="intranet-hippo-configuration-hippo-users-mnour"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -965,7 +965,7 @@
       <sv:value>/hippo:configuration/hippo:users</sv:value> 
     </sv:property> 
   </sv:node>  
-<!--   <sv:node sv:name="hsleiden-hippo-configuration-hippo-users-sitewriter"> 
+<!--   <sv:node sv:name="intranet-hippo-configuration-hippo-users-sitewriter"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -979,7 +979,7 @@
       <sv:value>/hippo:configuration/hippo:users</sv:value> 
     </sv:property> 
   </sv:node>   -->
-  <sv:node sv:name="hsleiden-hippo-configuration-hippo-users-jposthuma"> 
+  <sv:node sv:name="intranet-hippo-configuration-hippo-users-jposthuma"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -993,7 +993,7 @@
       <sv:value>/hippo:configuration/hippo:users</sv:value> 
     </sv:property> 
   </sv:node>  
-<!--   <sv:node sv:name="hsleiden-hippo-configuration-hippo-users-liveuser"> 
+<!--   <sv:node sv:name="intranet-hippo-configuration-hippo-users-liveuser"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -1007,7 +1007,7 @@
       <sv:value>/hippo:configuration/hippo:users</sv:value> 
     </sv:property> 
   </sv:node>   -->
-  <sv:node sv:name="hsleiden-hippo-configuration-hippo-users-bart"> 
+  <sv:node sv:name="intranet-hippo-configuration-hippo-users-bart"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -1021,7 +1021,7 @@
       <sv:value>/hippo:configuration/hippo:users</sv:value> 
     </sv:property> 
   </sv:node>  
- <!--  <sv:node sv:name="hsleiden-hippo-configuration-hippo-users-workflowuser"> 
+ <!--  <sv:node sv:name="intranet-hippo-configuration-hippo-users-workflowuser"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -1035,7 +1035,7 @@
       <sv:value>/hippo:configuration/hippo:users</sv:value> 
     </sv:property> 
   </sv:node>   -->
-<!--   <sv:node sv:name="hsleiden-hippo-configuration-hippo-users-author"> 
+<!--   <sv:node sv:name="intranet-hippo-configuration-hippo-users-author"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -1049,7 +1049,7 @@
       <sv:value>/hippo:configuration/hippo:users</sv:value> 
     </sv:property> 
   </sv:node> -->
-  <sv:node sv:name="hsleiden-hippo-configuration-hippo-users-tnugter"> 
+  <sv:node sv:name="intranet-hippo-configuration-hippo-users-tnugter"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -1063,7 +1063,7 @@
       <sv:value>/hippo:configuration/hippo:users</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hippo-namespaces-hsleiden-TekstPagina"> 
+  <sv:node sv:name="intranet-hippo-namespaces-intranet-TekstPagina"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -1071,13 +1071,13 @@
       <sv:value>31052.0</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>namespaces/hsleiden/TekstPagina.xml</sv:value> 
+      <sv:value>namespaces/intranet/TekstPagina.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hippo:namespaces/hsleiden</sv:value> 
+      <sv:value>/hippo:namespaces/intranet</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hippo-namespaces-hsleiden-NotulenOverzicht"> 
+  <sv:node sv:name="intranet-hippo-namespaces-intranet-NotulenOverzicht"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -1085,13 +1085,13 @@
       <sv:value>31052.0</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>namespaces/hsleiden/NotulenOverzicht.xml</sv:value> 
+      <sv:value>namespaces/intranet/NotulenOverzicht.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hippo:namespaces/hsleiden</sv:value> 
+      <sv:value>/hippo:namespaces/intranet</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hst-hst-hst-configurations-hsleiden-hst-pages-minutes-page"> 
+  <sv:node sv:name="intranet-hst-hst-hst-configurations-intranet-hst-pages-minutes-page"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -1099,13 +1099,13 @@
       <sv:value>31059.0</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>hst/configurations/hsleiden/pages/minutes-page.xml</sv:value> 
+      <sv:value>hst/configurations/intranet/pages/minutes-page.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hst:hst/hst:configurations/hsleiden/hst:pages</sv:value> 
+      <sv:value>/hst:hst/hst:configurations/intranet/hst:pages</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hst-hst-hst-configurations-hsleiden-hst-components-minutes"> 
+  <sv:node sv:name="intranet-hst-hst-hst-configurations-intranet-hst-components-minutes"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -1113,13 +1113,13 @@
       <sv:value>31060.0</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>hst/configurations/hsleiden/components/minutes.xml</sv:value> 
+      <sv:value>hst/configurations/intranet/components/minutes.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hst:hst/hst:configurations/hsleiden/hst:components</sv:value> 
+      <sv:value>/hst:hst/hst:configurations/intranet/hst:components</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hippo-namespaces-hsleiden-ImageGalleryPagina"> 
+  <sv:node sv:name="intranet-hippo-namespaces-intranet-ImageGalleryPagina"> 
     <sv:property sv:name="hippo:reloadonstartup" sv:type="Boolean"> 
       <sv:value>true</sv:value> 
     </sv:property>  
@@ -1130,13 +1130,13 @@
       <sv:value>31052.0</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>namespaces/hsleiden/ImageGalleryPagina.xml</sv:value> 
+      <sv:value>namespaces/intranet/ImageGalleryPagina.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hippo:namespaces/hsleiden</sv:value> 
+      <sv:value>/hippo:namespaces/intranet</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hst-hst-hst-configurations-hsleiden-hst-components-image-gallery"> 
+  <sv:node sv:name="intranet-hst-hst-hst-configurations-intranet-hst-components-image-gallery"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -1144,13 +1144,13 @@
       <sv:value>31060.0</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>hst/configurations/hsleiden/components/image-gallery.xml</sv:value> 
+      <sv:value>hst/configurations/intranet/components/image-gallery.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hst:hst/hst:configurations/hsleiden/hst:components</sv:value> 
+      <sv:value>/hst:hst/hst:configurations/intranet/hst:components</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hst-hst-hst-configurations-hsleiden-hst-pages-image-gallery-page"> 
+  <sv:node sv:name="intranet-hst-hst-hst-configurations-intranet-hst-pages-image-gallery-page"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -1158,13 +1158,13 @@
       <sv:value>31059.0</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>hst/configurations/hsleiden/pages/image-gallery-page.xml</sv:value> 
+      <sv:value>hst/configurations/intranet/pages/image-gallery-page.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hst:hst/hst:configurations/hsleiden/hst:pages</sv:value> 
+      <sv:value>/hst:hst/hst:configurations/intranet/hst:pages</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hst-hst-hst-configurations-hsleiden-hst-pages-disconnected-assets-page"> 
+  <sv:node sv:name="intranet-hst-hst-hst-configurations-intranet-hst-pages-disconnected-assets-page"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -1172,13 +1172,13 @@
       <sv:value>31059.0</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>hst/configurations/hsleiden/pages/disconnected-assets-page.xml</sv:value> 
+      <sv:value>hst/configurations/intranet/pages/disconnected-assets-page.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hst:hst/hst:configurations/hsleiden/hst:pages</sv:value> 
+      <sv:value>/hst:hst/hst:configurations/intranet/hst:pages</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hst-hst-hst-configurations-hsleiden-hst-pages-disconnected-images-page"> 
+  <sv:node sv:name="intranet-hst-hst-hst-configurations-intranet-hst-pages-disconnected-images-page"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -1186,13 +1186,13 @@
       <sv:value>31059.0</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>hst/configurations/hsleiden/pages/disconnected-images-page.xml</sv:value> 
+      <sv:value>hst/configurations/intranet/pages/disconnected-images-page.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hst:hst/hst:configurations/hsleiden/hst:pages</sv:value> 
+      <sv:value>/hst:hst/hst:configurations/intranet/hst:pages</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hippo-configuration-hippo-domains-page-view-counter"> 
+  <sv:node sv:name="intranet-hippo-configuration-hippo-domains-page-view-counter"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -1206,7 +1206,7 @@
       <sv:value>/hippo:configuration/hippo:domains</sv:value> 
     </sv:property> 
   </sv:node>  
-<!--   <sv:node sv:name="hsleiden-hippo-configuration-hippo-domains-hippofolders"> 
+<!--   <sv:node sv:name="intranet-hippo-configuration-hippo-domains-hippofolders"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -1220,7 +1220,7 @@
       <sv:value>/hippo:configuration/hippo:domains</sv:value> 
     </sv:property> 
   </sv:node>   -->
-  <sv:node sv:name="hsleiden-hippo-configuration-hippo-groups-site-configurator"> 
+  <sv:node sv:name="intranet-hippo-configuration-hippo-groups-site-configurator"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -1234,7 +1234,7 @@
       <sv:value>/hippo:configuration/hippo:groups</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hippo-configuration-hippo-domains-site-configuration"> 
+  <sv:node sv:name="intranet-hippo-configuration-hippo-domains-site-configuration"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -1248,7 +1248,7 @@
       <sv:value>/hippo:configuration/hippo:domains</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hippo-configuration-hippo-users-haring"> 
+  <sv:node sv:name="intranet-hippo-configuration-hippo-users-haring"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -1262,7 +1262,7 @@
       <sv:value>/hippo:configuration/hippo:users</sv:value> 
     </sv:property> 
   </sv:node>  
-<!--   <sv:node sv:name="hsleiden-hippo-configuration-hippo-groups-editor"> 
+<!--   <sv:node sv:name="intranet-hippo-configuration-hippo-groups-editor"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -1276,7 +1276,7 @@
       <sv:value>/hippo:configuration/hippo:groups</sv:value> 
     </sv:property> 
   </sv:node>   -->
-  <sv:node sv:name="hsleiden-hst-hst-hst-configurations-hsleiden-hst-components-main-menu"> 
+  <sv:node sv:name="intranet-hst-hst-hst-configurations-intranet-hst-components-main-menu"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -1284,13 +1284,13 @@
       <sv:value>31060.0</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>hst/configurations/hsleiden/components/main-menu.xml</sv:value> 
+      <sv:value>hst/configurations/intranet/components/main-menu.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hst:hst/hst:configurations/hsleiden/hst:components</sv:value> 
+      <sv:value>/hst:hst/hst:configurations/intranet/hst:components</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hst-hst-hst-configurations-hsleiden-hst-pages-standard-search"> 
+  <sv:node sv:name="intranet-hst-hst-hst-configurations-intranet-hst-pages-standard-search"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -1298,13 +1298,13 @@
       <sv:value>31059.0</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>hst/configurations/hsleiden/pages/standard-search.xml</sv:value> 
+      <sv:value>hst/configurations/intranet/pages/standard-search.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hst:hst/hst:configurations/hsleiden/hst:pages</sv:value> 
+      <sv:value>/hst:hst/hst:configurations/intranet/hst:pages</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hst-hst-hst-configurations-hsleiden-hst-pages-page-not-found"> 
+  <sv:node sv:name="intranet-hst-hst-hst-configurations-intranet-hst-pages-page-not-found"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -1312,13 +1312,13 @@
       <sv:value>31059.0</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>hst/configurations/hsleiden/pages/page-not-found.xml</sv:value> 
+      <sv:value>hst/configurations/intranet/pages/page-not-found.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hst:hst/hst:configurations/hsleiden/hst:pages</sv:value> 
+      <sv:value>/hst:hst/hst:configurations/intranet/hst:pages</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hippo-namespaces-hsleiden-KeyValuePair"> 
+  <sv:node sv:name="intranet-hippo-namespaces-intranet-KeyValuePair"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -1326,13 +1326,13 @@
       <sv:value>31052.0</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>namespaces/hsleiden/KeyValuePair.xml</sv:value> 
+      <sv:value>namespaces/intranet/KeyValuePair.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hippo:namespaces/hsleiden</sv:value> 
+      <sv:value>/hippo:namespaces/intranet</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hippo-namespaces-hsleiden-SiteSettings"> 
+  <sv:node sv:name="intranet-hippo-namespaces-intranet-SiteSettings"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -1340,13 +1340,13 @@
       <sv:value>31052.0</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentresource" sv:type="String"> 
-      <sv:value>namespaces/hsleiden/SiteSettings.xml</sv:value> 
+      <sv:value>namespaces/intranet/SiteSettings.xml</sv:value> 
     </sv:property>  
     <sv:property sv:name="hippo:contentroot" sv:type="String"> 
-      <sv:value>/hippo:namespaces/hsleiden</sv:value> 
+      <sv:value>/hippo:namespaces/intranet</sv:value> 
     </sv:property> 
   </sv:node>  
-<!--   <sv:node sv:name="hsleiden-hippo-configuration-hippo-queries-hippo-templates-new-document"> 
+<!--   <sv:node sv:name="intranet-hippo-configuration-hippo-queries-hippo-templates-new-document"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -1360,7 +1360,7 @@
       <sv:value>/hippo:configuration/hippo:queries/hippo:templates</sv:value> 
     </sv:property> 
   </sv:node>   -->
-  <sv:node sv:name="hsleiden-hippo-configuration-hippo-queries-hippo-templates-new-content-folder"> 
+  <sv:node sv:name="intranet-hippo-configuration-hippo-queries-hippo-templates-new-content-folder"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -1374,7 +1374,7 @@
       <sv:value>/hippo:configuration/hippo:queries/hippo:templates</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hippo-configuration-hippo-queries-hippo-templates-new-content-pagina-document"> 
+  <sv:node sv:name="intranet-hippo-configuration-hippo-queries-hippo-templates-new-content-pagina-document"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -1388,7 +1388,7 @@
       <sv:value>/hippo:configuration/hippo:queries/hippo:templates</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hippo-configuration-hippo-queries-hippo-templates-new-image-gallery-pagina-document"> 
+  <sv:node sv:name="intranet-hippo-configuration-hippo-queries-hippo-templates-new-image-gallery-pagina-document"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -1402,7 +1402,7 @@
       <sv:value>/hippo:configuration/hippo:queries/hippo:templates</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hippo-configuration-hippo-queries-hippo-templates-new-notulen-overzicht-document"> 
+  <sv:node sv:name="intranet-hippo-configuration-hippo-queries-hippo-templates-new-notulen-overzicht-document"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -1416,7 +1416,7 @@
       <sv:value>/hippo:configuration/hippo:queries/hippo:templates</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hippo-configuration-hippo-update-hippo-registry"> 
+  <sv:node sv:name="intranet-hippo-configuration-hippo-update-hippo-registry"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -1430,7 +1430,7 @@
       <sv:value>/hippo:configuration/hippo:update</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hippo-configuration-hippo-domains-hippodocuments"> 
+  <sv:node sv:name="intranet-hippo-configuration-hippo-domains-hippodocuments"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -1444,7 +1444,7 @@
       <sv:value>/hippo:configuration/hippo:domains</sv:value> 
     </sv:property> 
   </sv:node>  
-<!--   <sv:node sv:name="hsleiden-hippo-configuration-hippo-groups-admin"> 
+<!--   <sv:node sv:name="intranet-hippo-configuration-hippo-groups-admin"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -1458,7 +1458,7 @@
       <sv:value>/hippo:configuration/hippo:groups</sv:value> 
     </sv:property> 
   </sv:node>  --> 
-  <sv:node sv:name="hsleiden-hippo-configuration-hippo-domains-adminfolder"> 
+  <sv:node sv:name="intranet-hippo-configuration-hippo-domains-adminfolder"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -1472,7 +1472,7 @@
       <sv:value>/hippo:configuration/hippo:domains</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hippo-configuration-hippo-frontend-login"> 
+  <sv:node sv:name="intranet-hippo-configuration-hippo-frontend-login"> 
     <sv:property sv:name="jcr:primaryType" sv:type="Name"> 
       <sv:value>hippo:initializeitem</sv:value> 
     </sv:property>  
@@ -1486,7 +1486,7 @@
       <sv:value>/hippo:configuration/hippo:frontend</sv:value> 
     </sv:property> 
   </sv:node>  
-  <sv:node sv:name="hsleiden-hippo-configuration-hippo-domains-frontendconfig">
+  <sv:node sv:name="intranet-hippo-configuration-hippo-domains-frontendconfig">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hippo:initializeitem</sv:value>
     </sv:property>
