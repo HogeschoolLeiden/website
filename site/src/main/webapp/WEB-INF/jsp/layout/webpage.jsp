@@ -92,9 +92,16 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
-
   <hst:defineObjects />
   <c:set var="isCmsRequest" value="${hstRequest.requestContext.cmsRequest}" />
+  <c:if test="${(not isCmsRequest ) and ( not tag:isCookiesRefused(pageContext.request))}">
+    <c:set var="disableGTM" value="${(tag:getMainWebsitePropertyList(pageContext.request)).disableGoogleTagManager}" />
+    <c:if test="${not disableGTM eq 'true'}">
+        ${(tag:getMainWebsitePropertyList(pageContext.request)).googleTagManagerConfig}
+    </c:if>
+  </c:if>
+
+
 
   <!--[if lt IE 9]>
     <p class="chromeframe">Uw gebruikt een oudere versie van uw browser. Wij raden u aan deze te <a href="http://www.google.com/chromeframe/?redirect=true">upgraden</a>.</p>
@@ -117,12 +124,6 @@
     <hst:link var="googleAnalytics" path="/resources/google-analytics.js" />
     <script src="${googleAnalytics}" type="text/javascript"></script>
 
-    <c:set var="disableGTM" value="${(tag:getMainWebsitePropertyList(pageContext.request)).disableGoogleTagManager}" />
---${(tag:getMainWebsitePropertyList(pageContext.request))}--
-    <c:if test="${not disableGTM eq 'true'}">
-      <c:set var="gtm" value="${(tag:getMainWebsitePropertyList(pageContext.request)).googleTagManagerConfig}" />
-        ${gtm}
-      </c:if>
   </c:if>
 
   <c:set var="disableChat" value="${(tag:getMainWebsitePropertyList(pageContext.request)).disableChatJs}" />
