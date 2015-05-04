@@ -7,6 +7,9 @@
     <sv:value>editor:editable</sv:value>
     <sv:value>hippo:translated</sv:value>
   </sv:property>
+  <sv:property sv:name="jcr:uuid" sv:type="String">
+    <sv:value>9336adb1-ccf4-45ac-93c4-dc8e8a27c9f5</sv:value>
+  </sv:property>
   <sv:node sv:name="hippo:translation">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hippo:translation</sv:value>
@@ -36,6 +39,9 @@
     <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
       <sv:value>mix:referenceable</sv:value>
     </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>fa331a18-3eff-430f-9ae0-7629e03974a3</sv:value>
+    </sv:property>
     <sv:node sv:name="hipposysedit:nodetype">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hipposysedit:nodetype</sv:value>
@@ -43,6 +49,9 @@
       <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
         <sv:value>hipposysedit:remodel</sv:value>
         <sv:value>mix:referenceable</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>75e310d9-62c0-4142-9e30-8d1765ac5468</sv:value>
       </sv:property>
       <sv:property sv:name="hipposysedit:node" sv:type="Boolean">
         <sv:value>true</sv:value>
@@ -199,6 +208,9 @@
       <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
         <sv:value>mix:referenceable</sv:value>
       </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>d7412798-7484-4076-9baf-927a4e28e5a2</sv:value>
+      </sv:property>
       <sv:property sv:name="hippo:related___pathreference" sv:type="String"/>
       <sv:property sv:name="hippostd:holder" sv:type="String">
         <sv:value>holder</sv:value>
@@ -238,7 +250,7 @@
       </sv:property>
       <sv:node sv:name="hsl:link">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hsl:HTInternalLink</sv:value>
+          <sv:value>hsl:HeadTeaserInternalLink</sv:value>
         </sv:property>
         <sv:property sv:name="hsl:alt" sv:type="String">
           <sv:value/>
