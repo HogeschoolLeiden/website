@@ -1,4 +1,4 @@
-<%@ tag description="render form field item" pageEncoding="UTF-8" %>
+<%@ tag description="render form field item" pageEncoding="UTF-8" trimDirectiveWhitespaces="true" %>
 <%@ attribute name="field" type="com.onehippo.cms7.eforms.hst.model.AbstractField" required="true" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
