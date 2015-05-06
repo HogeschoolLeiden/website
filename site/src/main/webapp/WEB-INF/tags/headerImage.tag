@@ -13,22 +13,26 @@
 
 <c:if test="${hst:isReadable(document, 'headerImage')}">
   <c:if test="${not empty document.headerImage }">
-    
+  
     <div class="background img">
       <div class="img">
        <c:choose>
         <%-- afmeting afbeelindg: 1280x620 --%>
         <c:when test="${not empty large }">
           <hst:link var="img" hippobean="${document.headerImage.detailBackground}"/> 
+          <hst:link var="mobileImg" hippobean="${document.headerImage.detailBackgroundMobile}"/> 
         </c:when>
         <c:otherwise>
           <%-- afmeting afbeelindg: 1280x295 --%>
           <hst:link var="img" hippobean="${document.headerImage.detailBackgroundSmall}"/>         
+          <hst:link var="mobileImg" hippobean="${document.headerImage.detailBackgroundSmallMobile}"/>         
         </c:otherwise>
        </c:choose>
         
         <c:if test="${not empty img }">
-            <img src="${img}" title="<c:out value="${document.headerImage.alt}"/>"
+            <img src="${img}" class="hidden-md" title="<c:out value="${document.headerImage.alt}"/>"
+                 alt="<c:out value="${document.headerImage.alt}"/>"/>
+            <img src="${mobileImg}" class="visible-xs-block visible-md-block" title="<c:out value="${document.headerImage.alt}"/>"
                  alt="<c:out value="${document.headerImage.alt}"/>"/>
         </c:if>
       </div>
