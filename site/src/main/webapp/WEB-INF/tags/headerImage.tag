@@ -30,9 +30,9 @@
        </c:choose>
         
         <c:if test="${not empty img }">
-            <img src="${img}" class="hidden-md" title="<c:out value="${document.headerImage.alt}"/>"
+            <img src="${img}" class="hidden-xs hidden-sm" title="<c:out value="${document.headerImage.alt}"/>"
                  alt="<c:out value="${document.headerImage.alt}"/>"/>
-            <img src="${mobileImg}" class="visible-xs-block visible-md-block" title="<c:out value="${document.headerImage.alt}"/>"
+            <img src="${mobileImg}" class="visible-xs-block visible-sm-block" title="<c:out value="${document.headerImage.alt}"/>"
                  alt="<c:out value="${document.headerImage.alt}"/>"/>
         </c:if>
       </div>
