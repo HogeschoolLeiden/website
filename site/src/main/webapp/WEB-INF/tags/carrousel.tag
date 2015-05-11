@@ -18,7 +18,10 @@
 
         <a href="<hst:link hippobean="${carrouselitem.document }" />" title="${carrouselitem.document.title}"> 
         
-        <img src="<hst:link hippobean="${carrouselitem.image.detailBackground }" />"
+        <img class="hidden-xs hidden-sm" src="<hst:link hippobean="${carrouselitem.image.detailBackground }" />"
+          alt="<c:out value="${carrouselitem.document.title }" escapeXml="true" />"
+          title="<c:out value="${carrouselitem.document.title }" escapeXml="true" />" />
+        <img class="visible-xs-block visible-sm-block" src="<hst:link hippobean="${carrouselitem.image.detailBackgroundMobile }" />"
           alt="<c:out value="${carrouselitem.document.title }" escapeXml="true" />"
           title="<c:out value="${carrouselitem.document.title }" escapeXml="true" />" />
 
