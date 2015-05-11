@@ -33,7 +33,11 @@
             <img src="<hst:link hippobean="${logo.listImageLarge}"/>"
                  alt="<c:out value="${headerName}"/>"
                  title="<c:out value="${headerName}"/>" 
-                 class="img-responsive"/>
+                 class="hidden-xs img-responsive"/>
+            <img src="<hst:link hippobean="${logo.thumbnail}"/>"
+                 alt="<c:out value="${headerName}"/>"
+                 title="<c:out value="${headerName}"/>" 
+                 class="visible-xs-block img-responsive"/>
           </c:when>
           <c:otherwise>
             <img src="<hst:link path="images/logo-hsleiden-large.png"/>"
