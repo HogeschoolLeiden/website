@@ -284,6 +284,7 @@ public class ScaleImageOperation extends AbstractImageOperation {
             final int originalHeight = reader.getHeight(0);
             final double resizeRatio = calculateResizeRatio(originalWidth, originalHeight, width, height);
 
+            //code change
             int targetWidth = (int) Math.round(Math.max(originalWidth * resizeRatio, 1));
             int targetHeight = (int) Math.round(Math.max(originalHeight * resizeRatio, 1));
             
@@ -296,7 +297,8 @@ public class ScaleImageOperation extends AbstractImageOperation {
             synchronized(scalingLock) {
                 BufferedImage originalImage = reader.read(0);
                 scaledImage = ImageUtils.scaleImage(originalImage, targetWidth, targetHeight, strategy);
-                if (width != 0 && height != 0) {
+                // code change
+                if (width != 0 && height != 0 && targetWidth >= width && targetHeight >= height) {
                     scaledImage = Scalr.crop(scaledImage, (targetWidth - width) / 2, (targetHeight - height) / 2, width, height);
                 }
             }
