@@ -284,8 +284,8 @@ public class ScaleImageOperation extends AbstractImageOperation {
             final int originalHeight = reader.getHeight(0);
             final double resizeRatio = calculateResizeRatio(originalWidth, originalHeight, width, height);
 
-            int targetWidth = (int) Math.max(originalWidth * resizeRatio, 1);
-            int targetHeight = (int) Math.max(originalHeight * resizeRatio, 1);
+            int targetWidth = (int) Math.round(Math.max(originalWidth * resizeRatio, 1));
+            int targetHeight = (int) Math.round(Math.max(originalHeight * resizeRatio, 1));
             
             if (log.isDebugEnabled()) {
                 log.debug("Resizing image of {}x{} to {}x{}", new Object[]{originalWidth, originalHeight, targetWidth, targetHeight});
@@ -303,6 +303,7 @@ public class ScaleImageOperation extends AbstractImageOperation {
 
             scaledWidth = scaledImage.getWidth();
             scaledHeight = scaledImage.getHeight();
+
             ImageWriteParam writeParam = writer.getDefaultWriteParam();
             if (writeParam.canWriteProgressive()) {
                 writeParam.setProgressiveMode(ImageWriteParam.MODE_DISABLED);
