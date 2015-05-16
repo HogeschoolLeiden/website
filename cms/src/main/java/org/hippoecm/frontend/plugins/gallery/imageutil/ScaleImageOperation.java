@@ -308,7 +308,7 @@ public class ScaleImageOperation extends AbstractImageOperation {
 
             ImageWriteParam writeParam = writer.getDefaultWriteParam();
             if (writeParam.canWriteProgressive()) {
-                writeParam.setProgressiveMode(ImageWriteParam.MODE_DISABLED);
+                writeParam.setProgressiveMode(ImageWriteParam.MODE_DEFAULT);
             }
             
             ByteArrayOutputStream scaledOutputStream = ImageUtils.writeImage(writer, scaledImage, compressionQuality);
