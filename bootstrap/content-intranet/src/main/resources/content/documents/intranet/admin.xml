@@ -1573,6 +1573,17 @@ de Servicedesk (servicedesk@hsleiden.nl). &lt;/p&gt;
           <sv:value>http://localhost:8080/cms</sv:value>
         </sv:property>
       </sv:node>
+      <sv:node sv:name="intranet:settings">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>intranet:KeyValuePair</sv:value>
+        </sv:property>
+        <sv:property sv:name="intranet:key" sv:type="String">
+          <sv:value>hide.filter</sv:value>
+        </sv:property>
+        <sv:property sv:name="intranet:value" sv:type="String">
+          <sv:value>true</sv:value>
+        </sv:property>
+      </sv:node>
     </sv:node>
     <sv:node sv:name="hippo:translation">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
