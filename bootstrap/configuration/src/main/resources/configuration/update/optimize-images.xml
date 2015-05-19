@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="Optimize Images">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>hipposys:updaterinfo</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:batchsize" sv:type="Long">
+    <sv:value>10</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:dryrun" sv:type="Boolean">
+    <sv:value>false</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:query" sv:type="String">
+    <sv:value>//content//element(*,hippogallery:image)[@jcr:mimeType='image/jpeg']</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:script" sv:type="String">
+    <sv:value>package org.hippoecm.frontend.plugins.cms.dev.updater&#13;
+&#13;
+import org.onehippo.repository.update.BaseNodeUpdateVisitor&#13;
+import javax.jcr.Node&#13;
+import java.io.ByteArrayInputStream&#13;
+import java.io.BufferedInputStream&#13;
+import java.io.ByteArrayOutputStream&#13;
+import javax.jcr.Binary&#13;
+import org.imgscalr.Scalr&#13;
+import javax.imageio.IIOImage&#13;
+import javax.imageio.ImageIO&#13;
+import javax.imageio.ImageWriteParam&#13;
+import javax.imageio.ImageWriter&#13;
+import java.io.IOException&#13;
+import java.awt.image.BufferedImage&#13;
+import org.apache.jackrabbit.value.BinaryImpl&#13;
+&#13;
+import org.onehippo.repository.update.BaseNodeUpdateVisitor&#13;
+import javax.jcr.Node&#13;
+&#13;
+class UpdaterTemplate extends BaseNodeUpdateVisitor {&#13;
+  &#13;
+  final float CompressionQuality = 0.85F;&#13;
+  final boolean progressiveMode = true;&#13;
+&#13;
+  boolean doUpdate(Node node) {&#13;
+    boolean result = false;&#13;
+    if (node.hasProperty("jcr:data") &amp;&amp; node.hasProperty("jcr:mimeType") &amp;&amp; "image/jpeg".equals(node.getProperty("jcr:mimeType").getString())) {&#13;
+      optimizeImage(node);&#13;
+      result = true;&#13;
+    }&#13;
+    return result;&#13;
+  }&#13;
+  &#13;
+  boolean optimizeImage(Node node) {&#13;
+    boolean result = false;&#13;
+    &#13;
+    ByteArrayOutputStream os = new ByteArrayOutputStream();   &#13;
+    Binary outBinary;&#13;
+    Binary inputBinary; &#13;
+    ImageWriter writer;&#13;
+    try {&#13;
+      inputBinary = node.getProperty(Property.JCR_DATA).getBinary();&#13;
+      BufferedImage originalImage = ImageIO.read(inputBinary.getStream());&#13;
+    &#13;
+      Iterator&lt;ImageWriter&gt; iter =  ImageIO.getImageWritersByMIMEType(node.getProperty("jcr:mimeType").getString());&#13;
+      writer = (ImageWriter) iter.next();&#13;
+      &#13;
+      ImageWriteParam iwp = writer.getDefaultWriteParam();&#13;
+      &#13;
+      iwp.setCompressionMode(ImageWriteParam.MODE_EXPLICIT);&#13;
+      iwp.setCompressionQuality(CompressionQuality);&#13;
+        &#13;
+      if (progressiveMode) {&#13;
+        iwp.setProgressiveMode(ImageWriteParam.MODE_DEFAULT);&#13;
+      }&#13;
+      &#13;
+      writer.setOutput(ImageIO.createImageOutputStream(os));&#13;
+      IIOImage outimage = new IIOImage(originalImage, null, null);&#13;
+      writer.write(null, outimage, iwp);&#13;
+      &#13;
+      &#13;
+      outBinary = new BinaryImpl(new BufferedInputStream(new ByteArrayInputStream(os.toByteArray())));&#13;
+      node.setProperty(Property.JCR_DATA, outBinary);&#13;
+      log.debug "Updating node ${node.path}"&#13;
+      result = true;&#13;
+      &#13;
+      }finally {&#13;
+        if (writer != null) {&#13;
+          writer.dispose();&#13;
+        }&#13;
+        if (inputBinary != null) {&#13;
+          inputBinary.dispose();&#13;
+        }&#13;
+        if (outBinary != null) {&#13;
+          outBinary.dispose();&#13;
+        }&#13;
+        if (os != null) {&#13;
+          os.close();&#13;
+        }&#13;
+      }&#13;
+      return result;&#13;
+  }&#13;
+&#13;
+  boolean undoUpdate(Node node) {&#13;
+    throw new UnsupportedOperationException('Updater does not implement undoUpdate method')&#13;
+  }&#13;
+&#13;
+}</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:throttle" sv:type="Long">
+    <sv:value>10</sv:value>
+  </sv:property>
+</sv:node>

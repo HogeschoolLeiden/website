@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="Crop images">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>hipposys:updaterinfo</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:batchsize" sv:type="Long">
+    <sv:value>10</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:dryrun" sv:type="Boolean">
+    <sv:value>false</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:query" sv:type="String">
+    <sv:value>//element(*,hsl:ImageSet)</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:script" sv:type="String">
+    <sv:value>package org.hippoecm.frontend.plugins.cms.dev.updater&#13;
+&#13;
+import org.onehippo.repository.update.BaseNodeUpdateVisitor&#13;
+import javax.jcr.Node&#13;
+import java.io.ByteArrayInputStream&#13;
+import java.io.BufferedInputStream&#13;
+import java.io.ByteArrayOutputStream&#13;
+import javax.jcr.Binary&#13;
+import org.imgscalr.Scalr&#13;
+import javax.imageio.ImageIO&#13;
+import java.io.IOException&#13;
+import java.awt.image.BufferedImage&#13;
+import org.apache.jackrabbit.value.BinaryImpl&#13;
+&#13;
+class UpdaterTemplate extends BaseNodeUpdateVisitor {&#13;
+&#13;
+  boolean doUpdate(Node node) {&#13;
+	handel(node, "hsl:detailBackgroundSmall", 295L);&#13;
+	handel(node, "hsl:detailBackground", 620L);&#13;
+    return true&#13;
+  }&#13;
+  &#13;
+  void handel(Node node, String nodeName, long height) {&#13;
+	if (node.hasNode(nodeName) &amp;&amp; !node.hasNode(nodeName + "Mobile")) {&#13;
+	  Node n = node.getNode(nodeName);&#13;
+      String mimeType = n.getProperty("jcr:mimeType").getString();&#13;
+	  if ("image/jpeg".equals(mimeType)) {&#13;
+		log.debug "Copying node ${node.path}/${nodeName} to ${node.path}/${nodeName}Mobile"&#13;
+		node.getSession().getWorkspace().copy(node.getPath() + "/${nodeName}", node.getPath() + "/${nodeName}" + "Mobile");&#13;
+&#13;
+		if (n.getProperty("hippogallery:height").getLong() == height &amp;&amp; n.getProperty("hippogallery:width").getLong() == 1280L) {&#13;
+		Node targetNode = node.getNode(nodeName + "Mobile");&#13;
+		resize(n, targetNode);&#13;
+		}&#13;
+		log.debug "Updating node ${node.path}"&#13;
+	  }&#13;
+    }&#13;
+  }&#13;
+  &#13;
+  void resize(Node sourceNode, Node targetNode){&#13;
+    ByteArrayOutputStream os = new ByteArrayOutputStream();&#13;
+        &#13;
+    Binary binary;&#13;
+    Binary b; &#13;
+    try {&#13;
+      b = sourceNode.getProperty(Property.JCR_DATA).getBinary();&#13;
+      BufferedImage originalImage = ImageIO.read(b.getStream());&#13;
+	  int hight = (int) (sourceNode.getProperty("hippogallery:height").getLong() * 0.6);&#13;
+      BufferedImage image = Scalr.resize(originalImage, 768, hight);&#13;
+      &#13;
+      ImageIO.write(image, "jpg", os);&#13;
+      &#13;
+      binary = new BinaryImpl(new BufferedInputStream(new ByteArrayInputStream(os.toByteArray())));&#13;
+      &#13;
+      targetNode.setProperty(Property.JCR_DATA,binary);&#13;
+      targetNode.setProperty("hippogallery:height", hight);&#13;
+      targetNode.setProperty("hippogallery:width", 768);&#13;
+      &#13;
+      &#13;
+      }finally {    &#13;
+        if (binary != null) {&#13;
+          binary.dispose();&#13;
+        }&#13;
+        if (b != null) {&#13;
+          b.dispose();&#13;
+        }&#13;
+        if (os != null) {&#13;
+          os.close();&#13;
+        }&#13;
+      }&#13;
+  }&#13;
+&#13;
+  boolean undoUpdate(Node node) {&#13;
+    throw new UnsupportedOperationException('Updater does not implement undoUpdate method')&#13;
+  }&#13;
+}</sv:value>
+  </sv:property>
+  <sv:property sv:name="hipposys:throttle" sv:type="Long">
+    <sv:value>1000</sv:value>
+  </sv:property>
+</sv:node>

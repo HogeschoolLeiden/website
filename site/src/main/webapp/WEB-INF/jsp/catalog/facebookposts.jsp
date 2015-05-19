@@ -23,9 +23,7 @@
     
   <section class="catalog facebook posts">
     <div id="fb-root"></div> 
-    <hst:headContribution category="scripts">
     <script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/all.js#xfbml=1"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>  
-    </hst:headContribution>
     <c:forEach items="${model.postIDs }" var="postID">
     
       <div class="fb-post" data-href="https://www.facebook.com/${model.info.account}/posts/${postID}">

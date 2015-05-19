@@ -13,6 +13,9 @@
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>frontend:pluginconfig</sv:value>
     </sv:property>
+    <sv:property sv:name="compression" sv:type="Double">
+      <sv:value>0.85</sv:value>
+    </sv:property>
     <sv:property sv:name="height" sv:type="Long">
       <sv:value>60</sv:value>
     </sv:property>
@@ -27,6 +30,9 @@
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>frontend:pluginconfig</sv:value>
     </sv:property>
+    <sv:property sv:name="compression" sv:type="Double">
+      <sv:value>0.85</sv:value>
+    </sv:property>
     <sv:property sv:name="height" sv:type="Long">
       <sv:value>0</sv:value>
     </sv:property>
@@ -37,10 +43,12 @@
       <sv:value>0</sv:value>
     </sv:property>
   </sv:node>
-  
   <sv:node sv:name="hsl:wideImage">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>frontend:pluginconfig</sv:value>
+    </sv:property>
+    <sv:property sv:name="compression" sv:type="Double">
+      <sv:value>0.85</sv:value>
     </sv:property>
     <sv:property sv:name="height" sv:type="Long">
       <sv:value>310</sv:value>
@@ -56,6 +64,9 @@
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>frontend:pluginconfig</sv:value>
     </sv:property>
+    <sv:property sv:name="compression" sv:type="Double">
+      <sv:value>0.85</sv:value>
+    </sv:property>
     <sv:property sv:name="height" sv:type="Long">
       <sv:value>620</sv:value>
     </sv:property>
@@ -66,10 +77,12 @@
       <sv:value>1210</sv:value>
     </sv:property>
   </sv:node>
-    
   <sv:node sv:name="hsl:teaserImage">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>frontend:pluginconfig</sv:value>
+    </sv:property>
+    <sv:property sv:name="compression" sv:type="Double">
+      <sv:value>0.85</sv:value>
     </sv:property>
     <sv:property sv:name="height" sv:type="Long">
       <sv:value>260</sv:value>
@@ -85,6 +98,9 @@
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>frontend:pluginconfig</sv:value>
     </sv:property>
+    <sv:property sv:name="compression" sv:type="Double">
+      <sv:value>0.85</sv:value>
+    </sv:property>
     <sv:property sv:name="height" sv:type="Long">
       <sv:value>520</sv:value>
     </sv:property>
@@ -95,10 +111,12 @@
       <sv:value>520</sv:value>
     </sv:property>
   </sv:node>
-  
   <sv:node sv:name="hsl:listImageSmall">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>frontend:pluginconfig</sv:value>
+    </sv:property>
+    <sv:property sv:name="compression" sv:type="Double">
+      <sv:value>0.85</sv:value>
     </sv:property>
     <sv:property sv:name="height" sv:type="Long">
       <sv:value>60</sv:value>
@@ -114,6 +132,9 @@
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>frontend:pluginconfig</sv:value>
     </sv:property>
+    <sv:property sv:name="compression" sv:type="Double">
+      <sv:value>0.85</sv:value>
+    </sv:property>
     <sv:property sv:name="height" sv:type="Long">
       <sv:value>120</sv:value>
     </sv:property>
@@ -124,10 +145,12 @@
       <sv:value>120</sv:value>
     </sv:property>
   </sv:node>
-  
   <sv:node sv:name="hsl:listImageMedium">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>frontend:pluginconfig</sv:value>
+    </sv:property>
+    <sv:property sv:name="compression" sv:type="Double">
+      <sv:value>0.85</sv:value>
     </sv:property>
     <sv:property sv:name="height" sv:type="Long">
       <sv:value>100</sv:value>
@@ -143,6 +166,9 @@
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>frontend:pluginconfig</sv:value>
     </sv:property>
+    <sv:property sv:name="compression" sv:type="Double">
+      <sv:value>0.85</sv:value>
+    </sv:property>
     <sv:property sv:name="height" sv:type="Long">
       <sv:value>200</sv:value>
     </sv:property>
@@ -153,10 +179,12 @@
       <sv:value>200</sv:value>
     </sv:property>
   </sv:node>
-  
   <sv:node sv:name="hsl:listImageLarge">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>frontend:pluginconfig</sv:value>
+    </sv:property>
+    <sv:property sv:name="compression" sv:type="Double">
+      <sv:value>0.85</sv:value>
     </sv:property>
     <sv:property sv:name="height" sv:type="Long">
       <sv:value>150</sv:value>
@@ -172,6 +200,9 @@
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>frontend:pluginconfig</sv:value>
     </sv:property>
+    <sv:property sv:name="compression" sv:type="Double">
+      <sv:value>0.85</sv:value>
+    </sv:property>
     <sv:property sv:name="height" sv:type="Long">
       <sv:value>300</sv:value>
     </sv:property>
@@ -182,10 +213,29 @@
       <sv:value>300</sv:value>
     </sv:property>
   </sv:node>
-  
+  <sv:node sv:name="hsl:detailBackgroundMobile">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>frontend:pluginconfig</sv:value>
+    </sv:property>
+    <sv:property sv:name="compression" sv:type="Double">
+      <sv:value>0.85</sv:value>
+    </sv:property>
+    <sv:property sv:name="height" sv:type="Long">
+      <sv:value>372</sv:value>
+    </sv:property>
+    <sv:property sv:name="upscaling" sv:type="Boolean">
+      <sv:value>false</sv:value>
+    </sv:property>
+    <sv:property sv:name="width" sv:type="Long">
+      <sv:value>768</sv:value>
+    </sv:property>
+  </sv:node>
   <sv:node sv:name="hsl:detailBackground">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>frontend:pluginconfig</sv:value>
+    </sv:property>
+    <sv:property sv:name="compression" sv:type="Double">
+      <sv:value>0.85</sv:value>
     </sv:property>
     <sv:property sv:name="height" sv:type="Long">
       <sv:value>620</sv:value>
@@ -201,6 +251,9 @@
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>frontend:pluginconfig</sv:value>
     </sv:property>
+    <sv:property sv:name="compression" sv:type="Double">
+      <sv:value>0.85</sv:value>
+    </sv:property>
     <sv:property sv:name="height" sv:type="Long">
       <sv:value>1240</sv:value>
     </sv:property>
@@ -211,10 +264,12 @@
       <sv:value>2560</sv:value>
     </sv:property>
   </sv:node>
-  
   <sv:node sv:name="hsl:detailBackgroundSmall">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>frontend:pluginconfig</sv:value>
+    </sv:property>
+    <sv:property sv:name="compression" sv:type="Double">
+      <sv:value>0.85</sv:value>
     </sv:property>
     <sv:property sv:name="height" sv:type="Long">
       <sv:value>295</sv:value>
@@ -226,9 +281,29 @@
       <sv:value>1280</sv:value>
     </sv:property>
   </sv:node>
+  <sv:node sv:name="hsl:detailBackgroundSmallMobile">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>frontend:pluginconfig</sv:value>
+    </sv:property>
+    <sv:property sv:name="compression" sv:type="Double">
+      <sv:value>0.85</sv:value>
+    </sv:property>
+    <sv:property sv:name="height" sv:type="Long">
+      <sv:value>177</sv:value>
+    </sv:property>
+    <sv:property sv:name="upscaling" sv:type="Boolean">
+      <sv:value>false</sv:value>
+    </sv:property>
+    <sv:property sv:name="width" sv:type="Long">
+      <sv:value>768</sv:value>
+    </sv:property>
+  </sv:node>
   <sv:node sv:name="hsl:detailBackgroundSmall2x">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>frontend:pluginconfig</sv:value>
+    </sv:property>
+    <sv:property sv:name="compression" sv:type="Double">
+      <sv:value>0.85</sv:value>
     </sv:property>
     <sv:property sv:name="height" sv:type="Long">
       <sv:value>590</sv:value>
@@ -240,10 +315,12 @@
       <sv:value>2560</sv:value>
     </sv:property>
   </sv:node>
-  
   <sv:node sv:name="hsl:paragraph">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>frontend:pluginconfig</sv:value>
+    </sv:property>
+    <sv:property sv:name="compression" sv:type="Double">
+      <sv:value>0.85</sv:value>
     </sv:property>
     <sv:property sv:name="height" sv:type="Long">
       <sv:value>130</sv:value>
@@ -259,6 +336,9 @@
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>frontend:pluginconfig</sv:value>
     </sv:property>
+    <sv:property sv:name="compression" sv:type="Double">
+      <sv:value>0.85</sv:value>
+    </sv:property>
     <sv:property sv:name="height" sv:type="Long">
       <sv:value>260</sv:value>
     </sv:property>
@@ -269,10 +349,12 @@
       <sv:value>490</sv:value>
     </sv:property>
   </sv:node>
-  
   <sv:node sv:name="hsl:article">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>frontend:pluginconfig</sv:value>
+    </sv:property>
+    <sv:property sv:name="compression" sv:type="Double">
+      <sv:value>0.85</sv:value>
     </sv:property>
     <sv:property sv:name="height" sv:type="Long">
       <sv:value>310</sv:value>
@@ -288,6 +370,9 @@
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>frontend:pluginconfig</sv:value>
     </sv:property>
+    <sv:property sv:name="compression" sv:type="Double">
+      <sv:value>0.85</sv:value>
+    </sv:property>
     <sv:property sv:name="height" sv:type="Long">
       <sv:value>620</sv:value>
     </sv:property>
@@ -298,10 +383,12 @@
       <sv:value>1030</sv:value>
     </sv:property>
   </sv:node>
-  
   <sv:node sv:name="hsl:landing">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>frontend:pluginconfig</sv:value>
+    </sv:property>
+    <sv:property sv:name="compression" sv:type="Double">
+      <sv:value>0.85</sv:value>
     </sv:property>
     <sv:property sv:name="height" sv:type="Long">
       <sv:value>150</sv:value>
@@ -316,6 +403,9 @@
   <sv:node sv:name="hsl:landing2x">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>frontend:pluginconfig</sv:value>
+    </sv:property>
+    <sv:property sv:name="compression" sv:type="Double">
+      <sv:value>0.85</sv:value>
     </sv:property>
     <sv:property sv:name="height" sv:type="Long">
       <sv:value>300</sv:value>

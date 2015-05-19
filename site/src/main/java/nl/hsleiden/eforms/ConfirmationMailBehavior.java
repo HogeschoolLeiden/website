@@ -31,45 +31,49 @@ public class ConfirmationMailBehavior extends ConfirmationBehavior {
     protected void sendMail(HstRequest request, ComponentConfiguration config, final FormBean formBean, Form form,
             FormMap map) throws MessagingException, RepositoryException {
 
-        // SENDER STUFF: sender from CMS managed behaviour or from HST config
-        String sessionName = getComponentParameter(request, config, PARAM_MAIL_SESSION, MAIL_SESSION_NAME);
-        Session session = getSession(sessionName);
-
-        MailSender sender;
-        String confirmationSender = getConfirmationSenderAddress(formBean);
-        if (confirmationSender != null) {
-            sender = new MailSender(session, null, confirmationSender);
-        } else {
-            // fallback to HST config
-            String fromName = getComponentParameter(request, config, PARAM_FROM_NAME, null);
-            String fromEmail = getComponentParameter(request, config, PARAM_FROM_EMAIL, null);
-            sender = new MailSender(session, fromName, fromEmail);
-        }
-
-        // RECIPIENT STUFF: subject from CMS managed behaviour or from
-        // properties file
         List<Address> emailAddresses = getEmailAddresses(formBean, map);
-        String subject = getConfirmationSubject(formBean, map);
-        if (subject == null) {
-            subject = getLocalizedMessage("confirmation.subject", request.getLocale());
+        if (emailAddresses != null && !emailAddresses.isEmpty()) {
+
+            // SENDER STUFF: sender from CMS managed behaviour or from HST
+            // config
+            String sessionName = getComponentParameter(request, config, PARAM_MAIL_SESSION, MAIL_SESSION_NAME);
+            Session session = getSession(sessionName);
+
+            MailSender sender;
+            String confirmationSender = getConfirmationSenderAddress(formBean);
+            if (confirmationSender != null) {
+                sender = new MailSender(session, null, confirmationSender);
+            } else {
+                // fallback to HST config
+                String fromName = getComponentParameter(request, config, PARAM_FROM_NAME, null);
+                String fromEmail = getComponentParameter(request, config, PARAM_FROM_EMAIL, null);
+                sender = new MailSender(session, fromName, fromEmail);
+            }
+
+            // RECIPIENT STUFF: subject from CMS managed behaviour or from
+            // properties file
+            String subject = getConfirmationSubject(formBean, map);
+            if (subject == null) {
+                subject = getLocalizedMessage("confirmation.subject", request.getLocale());
+            }
+
+            // TEMPLATE
+            final String confirmationText = getConfirmationText(formBean);
+            final boolean includeFieldData = isConfirmationIncludeFields(formBean);
+            MailTemplate mail = new MailTemplate(sender, emailAddresses, subject, getHtml(request, config, form, map,
+                    confirmationText, includeFieldData), getPlainText(request, config, form, map, confirmationText,
+                    includeFieldData));
+
+            LOG.debug("Sending confirmation e-mail to {}", emailAddresses);
+
+            if (FormComponent.isSendPdf(request)) {
+                addFormDataAsPdfAttachment(request, mail, formBean, form, map);
+            } else {
+                addSelectedAttachment(request, mail);
+            }
+
+            mail.sendMessage();
         }
-
-        // TEMPLATE
-        final String confirmationText = getConfirmationText(formBean);
-        final boolean includeFieldData = isConfirmationIncludeFields(formBean);
-        MailTemplate mail = new MailTemplate(sender, emailAddresses, subject, getHtml(request, config, form, map,
-                confirmationText, includeFieldData), getPlainText(request, config, form, map, confirmationText,
-                includeFieldData));
-
-        LOG.debug("Sending confirmation e-mail to {}", emailAddresses);
-
-        if(FormComponent.isSendPdf(request)){
-            addFormDataAsPdfAttachment(request, mail, formBean, form, map);
-        }else{
-            addSelectedAttachment(request, mail);            
-        }
-
-        mail.sendMessage();
     }
 
     private void addSelectedAttachment(HstRequest request, MailTemplate mail) {
@@ -83,9 +87,9 @@ public class ConfirmationMailBehavior extends ConfirmationBehavior {
             mail.addAttachment(attachmentFileName, attachmentData);
         }
     }
-    
+
     private void addFormDataAsPdfAttachment(HstRequest request, MailTemplate mail, FormBean formBean, Form form,
-            FormMap map) {        
+            FormMap map) {
         String attachmentFileName = getPdfFormFileName(request, formBean);
         InputStream attachmentData = getPdfFormData(formBean, form, map);
         attachDataToMail(mail, attachmentFileName, attachmentData);
@@ -100,13 +104,13 @@ public class ConfirmationMailBehavior extends ConfirmationBehavior {
     private String getPdfFormFileName(HstRequest request, FormBean formBean) {
         String result = request.getRequestContext().getBaseURL().getPathInfo().replaceAll("/", "_");
         String formName = formBean.getFormName();
-        if(formName != null && !formName.isEmpty()){
+        if (formName != null && !formName.isEmpty()) {
             result = formName;
         }
-        return result+".pdf";
+        return result + ".pdf";
     }
-    
-    private String getIntroText(FormBean formBean){
+
+    private String getIntroText(FormBean formBean) {
         String result = null;
         try {
             result = super.getConfirmationText(formBean);
