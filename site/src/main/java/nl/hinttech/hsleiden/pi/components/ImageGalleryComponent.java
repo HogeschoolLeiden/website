@@ -1,4 +1,4 @@
-// $Id: ImageGalleryComponent.java 460 2013-07-17 08:35:02Z rharing $
+// $Id: ImageGalleryComponent.java 1501 2014-01-27 08:48:58Z rharing $
 package nl.hinttech.hsleiden.pi.components;
 
 import static nl.hinttech.hsleiden.pi.util.HSLeiden.PAGE_NOT_FOUND;
@@ -8,6 +8,7 @@ import java.util.List;
 
 import nl.hinttech.hsleiden.pi.beans.ImageGalleryDocument;
 import nl.hinttech.hsleiden.pi.beans.Metadata;
+import nl.hinttech.hsleiden.pi.beans.TableOfContents;
 
 import org.hippoecm.hst.content.beans.standard.HippoFolderBean;
 import org.hippoecm.hst.content.beans.standard.HippoGalleryImageSet;
@@ -22,7 +23,7 @@ import org.hippoecm.hst.util.HstResponseUtils;
 public class ImageGalleryComponent extends BaseComponent {
 
     @Override
-    public void doBeforeRender(HstRequest request, HstResponse response) throws HstComponentException {
+    public void doBeforeRender(final HstRequest request, final HstResponse response) throws HstComponentException {
         super.doBeforeRender(request, response);
         
         ImageGalleryDocument document = request.getRequestContext().getContentBean(ImageGalleryDocument.class);
@@ -43,10 +44,13 @@ public class ImageGalleryComponent extends BaseComponent {
         request.setAttribute("metadata", metadata);
         request.setAttribute("images", images);
         
-        setBreadcrumb(request, document);
+        TableOfContents toc = new TableOfContents("Inhoudsopgave", document.getTextBlocks());
+        request.getRequestContext().setAttribute("tableOfContents", toc);
+        
+        setBreadcrumb(request, document.getTitle());
     }
 
-    private List<HippoGalleryImageSet> getImages(HstRequest request, ImageGalleryDocument document) {
+    private List<HippoGalleryImageSet> getImages(final HstRequest request, final ImageGalleryDocument document) {
         
         List<HippoGalleryImageSet> images = new ArrayList<HippoGalleryImageSet>();
         if (document != null) {

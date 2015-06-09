@@ -2,7 +2,6 @@ package nl.hinttech.hsleiden.pi.components;
 
 import nl.hinttech.hsleiden.pi.beans.Breadcrumb;
 import nl.hinttech.hsleiden.pi.beans.SiteSettings;
-import nl.hinttech.hsleiden.pi.beans.TextDocument;
 import nl.hinttech.hsleiden.pi.beans.WebsiteTexts;
 import nl.hinttech.hsleiden.pi.util.HSLeiden;
 
@@ -13,7 +12,12 @@ import org.hippoecm.hst.content.beans.standard.HippoHtml;
 import org.hippoecm.hst.core.component.HstComponentException;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
+import org.hippoecm.hst.core.container.ComponentManager;
 import org.hippoecm.hst.core.sitemenu.HstSiteMenuItem;
+import org.hippoecm.hst.site.HstServices;
+import org.onehippo.forge.selection.hst.contentbean.ValueList;
+import org.onehippo.forge.selection.hst.manager.ValueListManager;
+import org.onehippo.forge.selection.hst.util.SelectionUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -34,7 +38,7 @@ public abstract class BaseComponent extends BaseHstComponent {
     @Override
     public void doBeforeRender(final HstRequest request, final HstResponse response) throws HstComponentException {
         super.doBeforeRender(request, response);
-               
+
         makeWebsiteTextsAvailable(request);
         makeSiteSettingsAvailable(request);
     }
@@ -58,7 +62,8 @@ public abstract class BaseComponent extends BaseHstComponent {
      * make the website texts document available to all components. (do this only once per request)
      */
     private void makeWebsiteTextsAvailable(final HstRequest request) {
-               
+        
+       
         websiteTexts = (WebsiteTexts) request.getRequestContext().getAttribute(ATTRIBUTE_WEBSITE_TEXTS);
         if (websiteTexts == null) {
             HippoBean contentRoot = getContentRoot(request);
@@ -79,11 +84,19 @@ public abstract class BaseComponent extends BaseHstComponent {
     }
     
     /**
-     * Set the breadcrumb for the current request and document
+     * Set the breadcrumb for the current request and document title
      * Use this method for detail pages.
      */
-    protected  void setBreadcrumb(final HstRequest request, final TextDocument document) {
-        Breadcrumb.setBreadcrumb(request, 3, document.getTitle(), getCurrentUrl(request));
+    protected  void setBreadcrumb(final HstRequest request, final String documentTitle) {
+        Breadcrumb.setBreadcrumb(request, 3, documentTitle, getCurrentUrl(request));
+    }
+    
+    /**
+     * Set the breadcrumb for the current request and document title
+     * Use this method for Minor pages.
+     */
+    protected  void setBreadcrumbForMinor(final HstRequest request, final String documentTitle) {
+        Breadcrumb.setBreadcrumb(request, 4, documentTitle, getCurrentUrl(request));
     }
     
     /**
@@ -192,6 +205,21 @@ public abstract class BaseComponent extends BaseHstComponent {
      */
     protected String getTraining(final HstRequest request) {
         return getPublicRequestParameter(request, "opleiding");
+    }
+    
+    /**
+     * Puts a specific value list on the request in order to let the jsp's use them.
+     * The attribute name will be the same as the provided valueListName.
+     */
+    protected void setValueList(final HstRequest request, final String valueListName) {
+        ComponentManager componentManager = HstServices.getComponentManager();
+        ValueListManager valueListManager = componentManager.getComponent(ValueListManager.class.getName());
+        HippoBean siteContentBaseBean = request.getRequestContext().getSiteContentBaseBean();
+         
+        ValueList valueList = valueListManager.getValueList(siteContentBaseBean, valueListName);
+        if (valueList != null) {
+            request.setAttribute(valueListName, SelectionUtil.valueListAsMap(valueList));
+        }
     }
 
 }

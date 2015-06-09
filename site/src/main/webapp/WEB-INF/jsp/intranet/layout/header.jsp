@@ -1,9 +1,6 @@
 <%@ include file="/WEB-INF/jspf/htmlTags.jspf"%>
 <%@ include file="/WEB-INF/jspf/taglibs.jspf"%>
 
-<span style="display:none;" id="userUID" class="userUID">${userId}</span> 
-<%-- <span style="display:none;" id="userUID" class="userUID"></span> --%>
-
 <header class="bar">
     <div class="wrapper">
         <hst:link var="homeUrl" path="/" />

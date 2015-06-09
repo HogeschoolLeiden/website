@@ -1606,3 +1606,51 @@ article p a {
   }
 }
 /* iPads (portrait) ----------- */
+
+/* Minor overview ----------- */
+
+table.minor-overview {
+	width: 100%;
+}
+
+table.minor-overview thead {
+	color: #23114c;
+    font-weight: bold;
+}
+
+table.minor-overview td.col2 {
+	width: 100pt;
+}
+
+table.minor-overview td.col3 {
+    width: 50pt;
+}
+
+/* Minor detail ----------- */
+
+table.minor {
+    width: 100%;
+}
+
+table.minor td {
+	padding: 10pt;
+	padding-bottom: 5pt;
+	padding-top:5pt;
+	vertical-align: top;
+}
+
+table.minor td.col1 {
+	padding-left: 0pt;
+    width: 80pt;
+    text-align: left;
+    /* color: #23114c; dark blue */
+    color:  #008385; /* green */
+    font-weight: bold;
+    border-right-style: solid;
+    border-right-width: thin;
+    border-right-color: #008385;
+}
+
+table.minor td.col2 {
+    text-align: left;
+}

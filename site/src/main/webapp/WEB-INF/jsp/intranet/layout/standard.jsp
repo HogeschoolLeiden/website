@@ -27,6 +27,9 @@
     </head>
 
     <body>
+        
+        <span style="display:none;" id="userUID" class="userUID"></span>
+        
         <ul id="skiplinks">
 	      <li><a href="#maincontent">Meteen naar inhoud</a></li>
 	      <li><a href="#search">Meteen naar zoeken</a></li>

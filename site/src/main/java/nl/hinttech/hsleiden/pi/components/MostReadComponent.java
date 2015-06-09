@@ -5,8 +5,8 @@ import java.util.List;
 
 import nl.hinttech.hsleiden.pi.beans.InternalLink;
 import nl.hinttech.hsleiden.pi.beans.LinkItem;
+import nl.hinttech.hsleiden.pi.beans.MetadataDocument;
 import nl.hinttech.hsleiden.pi.beans.MostReadBlock;
-import nl.hinttech.hsleiden.pi.beans.TextDocument;
 import nl.hinttech.hsleiden.pi.counters.PageViewCounter;
 
 import org.apache.commons.lang.StringUtils;
@@ -28,7 +28,7 @@ import org.hippoecm.hst.core.component.HstResponse;
 public class MostReadComponent extends BaseComponent {
 
     @Override
-    public void doBeforeRender(HstRequest request, HstResponse response) throws HstComponentException {
+    public void doBeforeRender(final HstRequest request, final HstResponse response) throws HstComponentException {
 
         super.doBeforeRender(request, response);
 
@@ -75,13 +75,13 @@ public class MostReadComponent extends BaseComponent {
         return value;
     }
 
-    private void addDynamicLinkItems(HstRequest request, List<LinkItem> links, String type) {
+    private void addDynamicLinkItems(final HstRequest request, final List<LinkItem> links, final String type) {
         
         ObjectBeanManager objectBeanManager = request.getRequestContext().getObjectBeanManager();
         PageViewCounter pageViewCounter = PageViewCounter.getInstance(request);
         
-        List<TextDocument> items = pageViewCounter.getMostReadTextDocumentsForType(type, 10, 30, objectBeanManager);
-        for (TextDocument item : items) {
+        List<MetadataDocument> items = pageViewCounter.getMostReadDocumentsForType(type, 10, 30, objectBeanManager);
+        for (MetadataDocument item : items) {
             if (!links.contains(item)) {
                 LinkItem linkItem = new LinkItem(item, item.getTitle());
                 links.add(linkItem);
@@ -92,7 +92,7 @@ public class MostReadComponent extends BaseComponent {
         }
     }
 
-    private void addUserConfiguredLinkItems(HstRequest request, List<LinkItem> links, String type) {
+    private void addUserConfiguredLinkItems(final HstRequest request, final List<LinkItem> links, final String type) {
 
         try {
             MostReadBlock mostReadBlock = getMostReadBlock(request, type);
@@ -109,7 +109,7 @@ public class MostReadComponent extends BaseComponent {
     }
 
     @SuppressWarnings("unchecked")
-    private MostReadBlock getMostReadBlock(HstRequest request, String type) throws QueryException {
+    private MostReadBlock getMostReadBlock(final HstRequest request, final String type) throws QueryException {
 
         HippoBean scope = getContentRoot(request).getBean("admin");
         HstQuery query = request.getRequestContext().getQueryManager().createQuery(scope, MostReadBlock.class);
@@ -127,7 +127,7 @@ public class MostReadComponent extends BaseComponent {
         return null;
     }
 
-    private String getType(HstRequest request) {
+    private String getType(final HstRequest request) {
         String type = getResolvedSiteMapParameter(request, "type");
         if (StringUtils.isBlank(type)) {
             type = getComponentParameter("type");

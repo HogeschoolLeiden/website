@@ -4,6 +4,9 @@
 <'hippotranslation'='http://www.onehippo.org/jcr/hippotranslation/nt/1.0'>
 <'intranet'='http://www.onehippo.org/intranet/nt/1.0'>
 
+[intranet:ContactPersoon] > hippo:compound, hippostd:relaxed
+  orderable
+
 [intranet:basedocument] > hippo:document, hippostd:publishableSummary, hippostdpubwf:document
   orderable
 
@@ -25,10 +28,19 @@
 [intranet:LabelTekst] > hippo:compound, hippostd:relaxed
   orderable
 
+[intranet:LesDag] > hippo:compound, hippostd:relaxed
+  orderable
+
+[intranet:Minor] > intranet:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
 [intranet:NotulenOverzicht] > intranet:TekstPagina, hippostd:relaxed, hippotranslation:translated
   orderable
 
 [intranet:PlatteTekst] > hippo:compound, hippostd:relaxed
+  orderable
+
+[intranet:Rooster] > hippo:compound, hippostd:relaxed
   orderable
 
 [intranet:SiteSettings] > intranet:basedocument, hippostd:relaxed, hippotranslation:translated
@@ -41,6 +53,9 @@
   orderable
 
 [intranet:TitelTekstBlok] > hippo:compound, hippostd:relaxed
+  orderable
+
+[intranet:Toegankelijkheid] > hippo:compound, hippostd:relaxed
   orderable
 
 [intranet:VeelGelezenBlok] > intranet:basedocument, hippostd:relaxed, hippotranslation:translated

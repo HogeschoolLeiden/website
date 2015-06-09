@@ -2,6 +2,7 @@ package nl.hinttech.hsleiden.pi.util;
 
 import nl.hinttech.hsleiden.pi.beans.ContentDocument;
 import nl.hinttech.hsleiden.pi.beans.ImageGalleryDocument;
+import nl.hinttech.hsleiden.pi.beans.Minor;
 import nl.hinttech.hsleiden.pi.beans.MinutesDocument;
 
 import org.hippoecm.hst.content.beans.standard.HippoAsset;
@@ -48,11 +49,12 @@ public class HSLeiden {
     
     static {
 
-        searchableClasses = new Class[4];
+        searchableClasses = new Class[5];
         searchableClasses[0] = ContentDocument.class;
         searchableClasses[1] = MinutesDocument.class;
         searchableClasses[2] = ImageGalleryDocument.class;
         searchableClasses[3] = HippoAsset.class;
+        searchableClasses[4] = Minor.class;
         
         browsableClasses = new Class[3];
         browsableClasses[0] = ContentDocument.class;
@@ -70,16 +72,16 @@ public class HSLeiden {
         return browsableClasses;
     }
 
-    public static void rememberActiveMenu(HstRequest request) {
+    public static void rememberActiveMenu(final HstRequest request) {
         request.getSession().setAttribute("activeMenu", getActiveMenu(request));
     }
     
-    public static HstSiteMenuItem getActiveMenu(HstRequest request) {
+    public static HstSiteMenuItem getActiveMenu(final HstRequest request) {
         HstSiteMenu mainMenu = request.getRequestContext().getHstSiteMenus().getSiteMenu("main");
         return mainMenu.getSelectSiteMenuItem();
     }
     
-    public static HstSiteMenuItem getRememberedActiveMenu(HstRequest request) {
+    public static HstSiteMenuItem getRememberedActiveMenu(final HstRequest request) {
         return  (HstSiteMenuItem) request.getSession().getAttribute("activeMenu");
     }
  

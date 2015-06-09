@@ -22,9 +22,8 @@ import org.onehippo.forge.selection.hst.contentbean.ValueList;
  * The superclass of all of our content documents.
  */
 @Node(jcrType = "intranet:TekstPagina")
-public class TextDocument extends BaseDocument {
+public class TextDocument extends MetadataDocument {
 
-    public static final String PROPERTY_TITLE = NAMESPACE_PREFIX + "title";
     public static final String PROPERTY_IMAGE = NAMESPACE_PREFIX + "image";
     public static final String PROPERTY_BODY = NAMESPACE_PREFIX + "body";
     public static final String PROPERTY_STUDENT_CATEGORY = NAMESPACE_PREFIX + "studentenlijst";
@@ -38,10 +37,6 @@ public class TextDocument extends BaseDocument {
     public static final String PROPERTY_TRAINING = NAMESPACE_PREFIX + "opleiding";
     public static final String PROPERTY_INTRODUCTION = NAMESPACE_PREFIX + "introduction";
     public static final String PROPERTY_TAGS = "hippostd:tags";
-
-    public String getTitle() {
-        return getProperty(PROPERTY_TITLE);
-    }
 
     public HippoGalleryImageSetBean getImage() {
         return getLinkedBean(PROPERTY_IMAGE, HippoGalleryImageSetBean.class);
@@ -59,23 +54,24 @@ public class TextDocument extends BaseDocument {
         }
         return intro;
     }
-    
+
     private String getHtmlAsFlatText() {
         if (getHtml() != null) {
-            String content = getHtml().getContent().replaceAll("\\<h[1-6]\\>.*\\<\\/h[1-6]\\>", "").replaceAll("\\<.*?\\>", " ");
+            String content = getHtml().getContent().replaceAll("\\<h[1-6]\\>.*\\<\\/h[1-6]\\>", "")
+                    .replaceAll("\\<.*?\\>", " ");
             if (content.length() >= 250) {
-              String tmp = content.substring(0, 250);
-              String tmp2 = tmp.replaceAll("\\n", " ");
-              return tmp2.replaceAll("\\s{2,}", " ")  + " ...";
+                String tmp = content.substring(0, 250);
+                String tmp2 = tmp.replaceAll("\\n", " ");
+                return tmp2.replaceAll("\\s{2,}", " ") + " ...";
             } else {
-              String tmp = content.replace("\\n", " ");
-              return tmp.replaceAll("\\s{2,}", " ");
+                String tmp = content.replace("\\n", " ");
+                return tmp.replaceAll("\\s{2,}", " ");
             }
-          } else {
+        } else {
             return "";
-          }
+        }
     }
-    
+
     public List<String> getStudentCategories() {
         return getPropertyAsList(PROPERTY_STUDENT_CATEGORY);
     }
@@ -107,19 +103,22 @@ public class TextDocument extends BaseDocument {
         return textBlocks;
     }
 
+    @Override
     public boolean isForStudent() {
         return (Boolean) getProperty(PROPERTY_IS_FOR_STUDENT);
     }
 
+    @Override
     public boolean isForEmployee() {
         return (Boolean) getProperty(PROPERTY_IS_FOR_EMPLOYEE);
     }
 
+    @Override
     public boolean isForService() {
         return (Boolean) getProperty(PROPERTY_IS_FOR_SERVICE);
     }
 
-    public static String getTypePropertyForType(String type) {
+    public static String getTypePropertyForType(final String type) {
         if (TYPE_STUDENT.equals(type)) {
             return PROPERTY_IS_FOR_STUDENT;
         }
@@ -132,7 +131,7 @@ public class TextDocument extends BaseDocument {
         return PROPERTY_IS_FOR_STUDENT;
     }
 
-    public List<String> getCategoriesForType(String type) {
+    public List<String> getCategoriesForType(final String type) {
         if (TYPE_STUDENT.equals(type)) {
             return getStudentCategories();
         }
@@ -145,7 +144,7 @@ public class TextDocument extends BaseDocument {
         return getServiceCategories();
     }
 
-    public static String getCategoryValueListNameForType(String type) {
+    public static String getCategoryValueListNameForType(final String type) {
         if (TYPE_STUDENT.equals(type)) {
             return "studentenlijst";
         }
@@ -158,7 +157,8 @@ public class TextDocument extends BaseDocument {
         return "studentenlijst";
     }
 
-    public Metadata getMetadata(BaseHstComponent component, HstRequest request) {
+    @Override
+    public Metadata getMetadata(final BaseHstComponent component, final HstRequest request) {
 
         Metadata metadata = new Metadata();
 
@@ -176,13 +176,17 @@ public class TextDocument extends BaseDocument {
         ValueList trainings = ValueListUtil.getValueList(component, request, HSLeiden.VALUELIST_TRAININGS);
 
         for (String department : getDepartments()) {
-            String label = ValueListUtil.getLabelForKey(department, departments);
-            metadata.addItem(HSLeiden.METADATA_LABEL_DEPARTMENT, label, "/zoeken?afdeling=" + department);
+            if (StringUtils.isNotBlank(department)) {
+                String label = ValueListUtil.getLabelForKey(department, departments);
+                metadata.addItem(HSLeiden.METADATA_LABEL_DEPARTMENT, label, "/zoeken?afdeling=" + department);
+            }
         }
 
         for (String training : getTrainings()) {
-            String label = ValueListUtil.getLabelForKey(training, trainings);
-            metadata.addItem(HSLeiden.METADATA_LABEL_TRAINING, label, "/zoeken?opleiding=" + training);
+            if (StringUtils.isNotBlank(training)) {
+                String label = ValueListUtil.getLabelForKey(training, trainings);
+                metadata.addItem(HSLeiden.METADATA_LABEL_TRAINING, label, "/zoeken?opleiding=" + training);
+            }
         }
 
         return metadata;

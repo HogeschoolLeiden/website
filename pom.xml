@@ -101,6 +101,7 @@
     <!-- SAML -->
     <spring.security.version>3.2.3.RELEASE</spring.security.version>
     <hst-springsec.version>0.03.01</hst-springsec.version>
+    <poi.version>3.9</poi.version>
   </properties>
 
   <repositories>
@@ -536,6 +537,11 @@
         <version>${spring.security.version}</version>
       </dependency>
       <!-- /SAML - Spring security -->
+      <dependency>
+        <groupId>org.apache.poi</groupId>
+        <artifactId>poi</artifactId>
+        <version>${poi.version}</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
 

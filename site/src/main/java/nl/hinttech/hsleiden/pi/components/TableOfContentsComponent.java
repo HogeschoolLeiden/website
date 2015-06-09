@@ -1,33 +1,25 @@
 package nl.hinttech.hsleiden.pi.components;
 
-import nl.hinttech.hsleiden.pi.beans.ContentDocument;
-import nl.hinttech.hsleiden.pi.beans.TextDocument;
+import nl.hinttech.hsleiden.pi.beans.TableOfContents;
 
-import org.apache.commons.lang.StringUtils;
 import org.hippoecm.hst.core.component.HstComponentException;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
 
 /**
- * Component for rendering the Table Of Contents of a {@link TextDocument};
+ * Component for rendering the Table Of Contents;
  */
 public class TableOfContentsComponent extends BaseComponent {
 
     @Override
-    public void doBeforeRender(HstRequest request, HstResponse response) throws HstComponentException {
+    public void doBeforeRender(final HstRequest request, final HstResponse response) throws HstComponentException {
         super.doBeforeRender(request, response);
-
-        TextDocument document = request.getRequestContext().getContentBean(TextDocument.class);
         
-        String tocTitle = null;
-        if (document instanceof ContentDocument) {
-            tocTitle = ((ContentDocument)document).getTocTitle();
-        }
-        if (StringUtils.isBlank(tocTitle)) {
-            tocTitle = "Inhoudsopgave";
-        }
+        // The table of contents object is set on the request by other components!!!
+        // just make it available to the jsp.
+        TableOfContents toc = (TableOfContents) request.getRequestContext().getAttribute("tableOfContents");
         
-        request.setAttribute("tocTitle", tocTitle);
-        request.setAttribute("document", document);
+        request.setAttribute("tableOfContents", toc);
+        
     }
 }

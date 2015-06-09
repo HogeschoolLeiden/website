@@ -23,7 +23,7 @@ import javax.jcr.Property;
 import javax.jcr.RepositoryException;
 import javax.jcr.Session;
 
-import nl.hinttech.hsleiden.pi.beans.TextDocument;
+import nl.hinttech.hsleiden.pi.beans.MetadataDocument;
 
 import org.apache.commons.lang.StringUtils;
 import org.hippoecm.hst.content.beans.ObjectBeanManagerException;
@@ -145,6 +145,7 @@ public class PageViewCounter extends AbstractCounter {
 
     public static final BeanRetriever retriever = new BeanRetriever() {
 
+        @Override
         public HippoDocumentBean retrieve(final String uuid, final ObjectBeanManager objectBeanManager) {
             try {
                 HippoDocumentBean bean = (HippoDocumentBean) objectBeanManager.getObjectByUuid(uuid);
@@ -166,13 +167,13 @@ public class PageViewCounter extends AbstractCounter {
      * @param request
      *            the request, used to retrieve the persistable session (only when really saving the counts)
      */
-    public void increment(final TextDocument document, final javax.servlet.http.HttpSession httpSession,
+    public void increment(final MetadataDocument document, final javax.servlet.http.HttpSession httpSession,
             final HstRequest request) {
         updateCounts(document, httpSession);
         save(request, SAVE_INTERVAL_MINUTES);
     }
 
-    private void updateCounts(final TextDocument document, final javax.servlet.http.HttpSession httpSession) {
+    private void updateCounts(final MetadataDocument document, final javax.servlet.http.HttpSession httpSession) {
 
         // Use the handle, so counting different versions of an article works.
         String uuid = document.getCanonicalHandleUUID();
@@ -363,10 +364,10 @@ public class PageViewCounter extends AbstractCounter {
         return false;
     }
 
-    public List<TextDocument> getMostReadTextDocumentsForType(String type, int nrOfEntries, int maxAge,
-            ObjectBeanManager objectBeanManager) {
+    public List<MetadataDocument> getMostReadDocumentsForType(final String type, final int nrOfEntries, final int maxAge,
+            final ObjectBeanManager objectBeanManager) {
 
-        List<TextDocument> answer = new LinkedList<TextDocument>();
+        List<MetadataDocument> answer = new LinkedList<MetadataDocument>();
 
         List<Count> temp = sort(Sort.SortDirection.DESCENDING);
 
@@ -386,8 +387,8 @@ public class PageViewCounter extends AbstractCounter {
                 HippoDocumentBean bean = retriever.retrieve(count.getUuid(), objectBeanManager);
                 
                 if (bean != null) {
-                    if (bean instanceof TextDocument) {
-                        answer.add((TextDocument)bean);
+                    if (bean instanceof MetadataDocument) {
+                        answer.add((MetadataDocument)bean);
                     }
                 }
                 

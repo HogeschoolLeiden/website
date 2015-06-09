@@ -3,6 +3,7 @@ package nl.hinttech.hsleiden.pi.components;
 import static nl.hinttech.hsleiden.pi.util.HSLeiden.PAGE_NOT_FOUND;
 import nl.hinttech.hsleiden.pi.beans.ContentDocument;
 import nl.hinttech.hsleiden.pi.beans.Metadata;
+import nl.hinttech.hsleiden.pi.beans.TableOfContents;
 import nl.hinttech.hsleiden.pi.counters.PageViewCounter;
 
 import org.hippoecm.hst.core.component.HstComponentException;
@@ -18,7 +19,7 @@ import org.hippoecm.hst.util.HstResponseUtils;
 public class ContentComponent extends BaseComponent {
 
     @Override
-    public void doBeforeRender(HstRequest request, HstResponse response) throws HstComponentException {
+    public void doBeforeRender(final HstRequest request, final HstResponse response) throws HstComponentException {
 
         super.doBeforeRender(request, response);
 
@@ -30,12 +31,15 @@ public class ContentComponent extends BaseComponent {
         
         // get the metadata of the document in our Metadata object.
         Metadata metadata = document.getMetadata(this, request);
-
+                
         request.setAttribute("document", document);
         request.setAttribute("metadata", metadata);
         
+        TableOfContents toc = new TableOfContents(document.getTocTitle(), document.getTextBlocks());
+        request.getRequestContext().setAttribute("tableOfContents", toc);
+        
         PageViewCounter.getInstance(request).increment(document, request.getSession(), request);
-        setBreadcrumb(request, document);
+        setBreadcrumb(request, document.getTitle());
     }
 
     

@@ -27,14 +27,6 @@ public class MainMenuComponent extends BaseHstComponent {
 
     }
 
-    private boolean showMainMenu(HstRequest request) {
-        String paramValue = getComponentParameter("showMainMenu");
-        if ("false".equals(paramValue)) {
-            return false; 
-        }
-        return true;
-    }
-
     private HstSiteMenuItem getActiveMenu(HstRequest request, HstSiteMenu mainMenu) {
         HstSiteMenuItem activeMenu = HSLeiden.getRememberedActiveMenu(request);
         if (activeMenu == null) {

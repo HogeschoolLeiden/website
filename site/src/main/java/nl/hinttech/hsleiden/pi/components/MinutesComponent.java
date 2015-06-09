@@ -5,6 +5,7 @@ import nl.hinttech.hsleiden.pi.beans.Asset;
 import nl.hinttech.hsleiden.pi.beans.Assets;
 import nl.hinttech.hsleiden.pi.beans.Metadata;
 import nl.hinttech.hsleiden.pi.beans.MinutesDocument;
+import nl.hinttech.hsleiden.pi.beans.TableOfContents;
 import nl.hinttech.hsleiden.pi.counters.PageViewCounter;
 
 import org.hippoecm.hst.content.beans.standard.HippoAsset;
@@ -20,7 +21,7 @@ import org.hippoecm.hst.util.HstResponseUtils;
 public class MinutesComponent extends BaseComponent {
 
     @Override
-    public void doBeforeRender(HstRequest request, HstResponse response) throws HstComponentException {
+    public void doBeforeRender(final HstRequest request, final HstResponse response) throws HstComponentException {
 
         super.doBeforeRender(request, response);
 
@@ -43,12 +44,15 @@ public class MinutesComponent extends BaseComponent {
         request.setAttribute("metadata", metadata);
         request.setAttribute("assets", assets);
         
+        TableOfContents toc = new TableOfContents(document.getTextBlocks());
+        request.getRequestContext().setAttribute("tableOfContents", toc);
+        
         PageViewCounter.getInstance(request).increment(document, request.getSession(), request);
         
-        setBreadcrumb(request, document);
+        setBreadcrumb(request, document.getTitle());
     }
 
-    private Assets getAssets(HstRequest request, HippoFolderBean assetFolder) {
+    private Assets getAssets(final HstRequest request, final HippoFolderBean assetFolder) {
         
         Assets assets = new Assets();
         

@@ -1,4 +1,4 @@
-// $Id: Breadcrumb.java 460 2013-07-17 08:35:02Z rharing $
+// $Id: Breadcrumb.java 1477 2014-01-22 13:00:57Z rharing $
 package nl.hinttech.hsleiden.pi.beans;
 
 import java.util.ArrayList;
@@ -21,16 +21,20 @@ public class Breadcrumb {
         items.add(new BreadcrumbItem("Home", "/"));
     }
     
-    private  void removeLevel(int level) {
+    private  void removeLevel(final int level) {
         
         for (int i=items.size() - 1; items.size() >= level; i--) {
             items.remove(i);
         }
     }
 
-    public void add(int level, BreadcrumbItem breadcrumbItem) {   
+    public void add(final int level, final BreadcrumbItem breadcrumbItem) {   
         boolean removeAndAdd = true;
-
+        
+        if (level == 3 && items.size() > 3) {
+            items.remove(3);
+        }
+        
         if (level == 3 && items.contains(breadcrumbItem)) {
             removeAndAdd = false;  
         }  
@@ -41,13 +45,13 @@ public class Breadcrumb {
         }
     }
     
-    public static void setBreadcrumb(HstRequest request, int level, String title, String relativeUrl) {
+    public static void setBreadcrumb(final HstRequest request, final int level, final String title, final String relativeUrl) {
         Breadcrumb breadcrumb = getBreadcrumb(request);    
         breadcrumb.add(level, new BreadcrumbItem(title, relativeUrl));    
         request.getSession().setAttribute("breadcrumb", breadcrumb);
     }
     
-    public static Breadcrumb getBreadcrumb(HstRequest request) {
+    public static Breadcrumb getBreadcrumb(final HstRequest request) {
         Breadcrumb breadcrumb = (Breadcrumb) request.getSession().getAttribute("breadcrumb");
         if (breadcrumb == null) {
             breadcrumb = new Breadcrumb();
@@ -55,7 +59,7 @@ public class Breadcrumb {
         return breadcrumb;
     }
 
-    public static void clear(HstRequest request) {
+    public static void clear(final HstRequest request) {
         request.getSession().setAttribute("breadcrumb", null);
     }
 }

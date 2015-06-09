@@ -9,6 +9,7 @@ import nl.hinttech.hsleiden.pi.beans.InternalLink;
 import nl.hinttech.hsleiden.pi.beans.Metadata;
 import nl.hinttech.hsleiden.pi.beans.Metadata.Group;
 import nl.hinttech.hsleiden.pi.beans.Metadata.Item;
+import nl.hinttech.hsleiden.pi.beans.MetadataDocument;
 import nl.hinttech.hsleiden.pi.beans.Paginator;
 import nl.hinttech.hsleiden.pi.beans.SearchResult;
 import nl.hinttech.hsleiden.pi.beans.SearchResultItem;
@@ -112,11 +113,10 @@ public class SearchComponent extends BaseComponent {
             HippoBean document = it.next();
 
             SearchResultItem item = null;
-            if (document instanceof TextDocument) {
+            if (document instanceof MetadataDocument) {
                 // The found item is a normal document.
-                Metadata metadata = ((TextDocument) document).getMetadata(this, request);
+                Metadata metadata = ((MetadataDocument) document).getMetadata(this, request);
                 item = new SearchResultItem(document, metadata);
-
             } else if (document instanceof HippoAsset) {
                 // The found document is an asset
                 // We also need to find the documents that refer to this asset
