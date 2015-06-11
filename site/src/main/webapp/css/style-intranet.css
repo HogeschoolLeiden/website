@@ -1610,17 +1610,17 @@ article p a {
 /* iPads (portrait) ----------- */
 
 /* logo popup menu*/
-#wrapper-logo .popup-menu {
+#wrapper-logo #popup-menu {
 	top: 95px;
 	max-width: 1009px;
 	position: absolute;
 	background-color: #008385;
-	display: block;
+	display: none;
 	padding: 20px;
 	float: left;
 }
 
-#wrapper-logo .popup-menu a {
+#wrapper-logo #popup-menu a {
 	height: 95px;
 	width: 67px;
 	display: inline-block;
@@ -1641,7 +1641,7 @@ article p a {
 	width: 243px;
 	float: left;
 }
-#wrapper-logo .popup-menu h2 {
+#wrapper-logo #popup-menu h2 {
 	color:  white;
 	font-family: font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
 	margin: 14px;

@@ -47,7 +47,6 @@
 	
         <script src="<hst:link path="/js/intranet/plugins.js"/>"></script>
         <script src="<hst:link path="/js/intranet/main.js"/>"></script>
-        <script src="/appbar/inc/js/intranet/appBarRemote.js"></script>
         
 	    <%@include file="/WEB-INF/jsp/intranet/common/google-analytics-bottom.jsp" %>
 	    

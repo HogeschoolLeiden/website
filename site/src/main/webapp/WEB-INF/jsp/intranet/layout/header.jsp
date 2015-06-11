@@ -4,10 +4,10 @@
 <header class="bar">
     <div class="wrapper" id="wrapper-logo" >
         <hst:link var="homeUrl" path="/" />
-        <a href="${homeUrl}">
+        <span id="popup">
             <img src="<hst:link path="/img/intranet/logo.png"/>" class="logo" />
-        </a>
-        <div class="popup-menu">
+        </span>
+        <div id="popup-menu">
 	        <div class="digital">
 	        	<h2>HL Digitaal</h2>
 		        <ul>
