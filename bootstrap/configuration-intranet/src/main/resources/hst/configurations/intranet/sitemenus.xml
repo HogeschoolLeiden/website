@@ -2,13 +2,28 @@
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>hst:sitemenus</sv:value>
   </sv:property>
+  <sv:property sv:name="jcr:uuid" sv:type="String">
+    <sv:value>82f93558-4a4c-4ebf-9e5e-0e3d2925886b</sv:value>
+  </sv:property>
+  <sv:property sv:name="hst:lastmodified" sv:type="Date">
+    <sv:value>2015-06-11T16:45:08.124+02:00</sv:value>
+  </sv:property>
+  <sv:property sv:name="hst:lastmodifiedby" sv:type="String">
+    <sv:value>admin.ebrahim</sv:value>
+  </sv:property>
   <sv:node sv:name="main">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:sitemenu</sv:value>
     </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>3d256544-a632-42ac-b2dd-49315512129e</sv:value>
+    </sv:property>
     <sv:node sv:name="Home">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:sitemenuitem</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>f120a547-acd0-4234-b0ba-ddfd8b1c8770</sv:value>
       </sv:property>
       <sv:property sv:name="hst:foldersonly" sv:type="Boolean">
         <sv:value>false</sv:value>
@@ -26,6 +41,9 @@
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:sitemenuitem</sv:value>
       </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>2ed68529-7667-4e09-9c14-39d772bd9e0b</sv:value>
+      </sv:property>
       <sv:property sv:name="hst:foldersonly" sv:type="Boolean">
         <sv:value>false</sv:value>
       </sv:property>
@@ -41,6 +59,9 @@
     <sv:node sv:name="Zelf regelen">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:sitemenuitem</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>ede0b81a-4343-4248-a092-0ad9552f3677</sv:value>
       </sv:property>
       <sv:property sv:name="hst:foldersonly" sv:type="Boolean">
         <sv:value>false</sv:value>
@@ -58,6 +79,9 @@
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:sitemenuitem</sv:value>
       </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>44ee7ac3-1ac9-4b48-a0b0-5b516e7c2c97</sv:value>
+      </sv:property>
       <sv:property sv:name="hst:foldersonly" sv:type="Boolean">
         <sv:value>false</sv:value>
       </sv:property>
@@ -74,6 +98,9 @@
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
         <sv:value>hst:sitemenuitem</sv:value>
       </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>cf6cebec-5fbe-4b67-824a-2080238c8750</sv:value>
+      </sv:property>
       <sv:property sv:name="hst:foldersonly" sv:type="Boolean">
         <sv:value>false</sv:value>
       </sv:property>
@@ -85,6 +112,325 @@
       <sv:property sv:name="hst:repobased" sv:type="Boolean">
         <sv:value>false</sv:value>
       </sv:property>
+    </sv:node>
+  </sv:node>
+  <sv:node sv:name="appbar">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:sitemenu</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>f3ed7668-8cff-4d9b-82d6-dbefce138aa8</sv:value>
+    </sv:property>
+    <sv:node sv:name="HL Digitaal">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:sitemenuitem</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>ae6d0129-a27c-4840-9ab9-d65a67239727</sv:value>
+      </sv:property>
+      <sv:node sv:name="Mail &amp; Agenda">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:sitemenuitem</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>089fef77-cac7-44cc-9411-c45ed22361ca</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+          <sv:value>imageIndex</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+          <sv:value>0</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+          <sv:value>zelf-regelen</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="Rooster">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:sitemenuitem</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>52abce1d-724b-443f-94b0-3f747b9d97ed</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+          <sv:value>imageIndex</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+          <sv:value>3</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+          <sv:value>opleiden/bacheloropleidingen/vindt-je-studie</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="ELO">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:sitemenuitem</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>87298a61-9e03-4d6d-b37c-0463cca33ad8</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:foldersonly" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+          <sv:value>imageIndex</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+          <sv:value>6</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+          <sv:value>afbeeldingen</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:repobased" sv:type="Boolean">
+          <sv:value>false</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="Osiris student">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:sitemenuitem</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>6f1ed855-2dc3-4702-a29c-938c386b5830</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+          <sv:value>imageIndex</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+          <sv:value>2</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+          <sv:value>opleiden/bacheloropleidingen/vindt-je-studie</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="Praktische informatie">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:sitemenuitem</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>82187da2-aed8-4b02-8cd1-115df13a2797</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+          <sv:value>imageIndex</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+          <sv:value>9</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+          <sv:value>opleiden/bacheloropleidingen/vindt-je-studie</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="SPIN">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:sitemenuitem</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>f54d7451-bf7c-4be8-8154-d25928e848e2</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+          <sv:value>imageIndex</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+          <sv:value>10</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+          <sv:value>opleiden/bacheloropleidingen/vindt-je-studie</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="Osiris docent">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:sitemenuitem</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>097d425c-44c5-4628-bf2d-adc748c6f77a</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+          <sv:value>imageIndex</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+          <sv:value>7</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+          <sv:value>opleiden/bacheloropleidingen/vindt-je-studie</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="Mediacentrum">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:sitemenuitem</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>e9e4629d-e615-4aec-bb87-b371206256fc</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+          <sv:value>imageIndex</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+          <sv:value>4</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+          <sv:value>opleiden/bacheloropleidingen/vindt-je-studie</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="Webprint">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:sitemenuitem</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>30d9882f-70d5-44c8-864a-63af91c94f27</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+          <sv:value>imageIndex</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+          <sv:value>5</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+          <sv:value>opleiden/bacheloropleidingen/vindt-je-studie</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="Intekenen">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:sitemenuitem</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>e508c31f-59d7-4809-b036-2fa5c5d7718e</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+          <sv:value>imageIndex</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+          <sv:value>1</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+          <sv:value>opleiden/bacheloropleidingen/vindt-je-studie</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="Alumninet">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:sitemenuitem</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>7ee05f38-dcb6-4b26-b1bf-5ba243282c95</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+          <sv:value>imageIndex</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+          <sv:value>11</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
+          <sv:value>opleiden/bacheloropleidingen/vindt-je-studie</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="Website HS Leiden">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:sitemenuitem</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>4bea0647-da35-4316-b1b5-172a41a7b272</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:externallink" sv:type="String">
+          <sv:value>http://www.hsleiden.nl/</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+          <sv:value>imageIndex</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+          <sv:value>14</sv:value>
+        </sv:property>
+      </sv:node>
+    </sv:node>
+    <sv:node sv:name="Extern">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:sitemenuitem</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>26213df8-4295-4ddd-b958-4bedc679dd03</sv:value>
+      </sv:property>
+      <sv:node sv:name="surfspot">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:sitemenuitem</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>d1684e53-0ac8-4269-8a18-8d5841958bd1</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:externallink" sv:type="String">
+          <sv:value>https://www.surfspot.nl/</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+          <sv:value>imageIndex</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+          <sv:value>8</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="Studielink">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:sitemenuitem</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>30e90528-824d-4ba8-83b3-6feede94ce80</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:externallink" sv:type="String">
+          <sv:value>https://www.surfspot.nl/</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+          <sv:value>imageIndex</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+          <sv:value>12</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="Bookshop">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:sitemenuitem</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>73d502e7-2d53-4f4b-9232-980f0f076479</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:externallink" sv:type="String">
+          <sv:value>https://www.surfspot.nl/</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+          <sv:value>imageIndex</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+          <sv:value>15</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="Edugroepen">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:sitemenuitem</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>32e187a7-11af-4f42-a79b-25e06d6f86a7</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:externallink" sv:type="String">
+          <sv:value>https://www.surfspot.nl/</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+          <sv:value>imageIndex</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+          <sv:value>13</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="HBO Kennisbank">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:sitemenuitem</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>97fe15af-de0b-4ac8-b63c-6d064aa109e9</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:externallink" sv:type="String">
+          <sv:value>https://www.surfspot.nl/</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+          <sv:value>imageIndex</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+          <sv:value>17</sv:value>
+        </sv:property>
+      </sv:node>
     </sv:node>
   </sv:node>
 </sv:node>

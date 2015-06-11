@@ -15,7 +15,7 @@
             <ul>
               <c:forEach items="${menuItem.childMenuItems}" var="subitem">
                 <c:choose>
-                  <c:when test="${not empty myMenuItem.hstLink }">
+                  <c:when test="${not empty subitem.hstLink }">
                     <hst:link var="menuLink" link="${subitem.hstLink}" />
                     <c:set var="ext" value="false"/>
                   </c:when>
