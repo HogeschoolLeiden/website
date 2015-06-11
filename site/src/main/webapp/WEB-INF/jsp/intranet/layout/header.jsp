@@ -8,36 +8,29 @@
             <img src="<hst:link path="/img/intranet/logo.png"/>" class="logo" />
         </span>
         <div id="popup-menu">
-	        <div class="digital">
-	        	<h2>HL Digitaal</h2>
-		        <ul>
-		        	<hst:link var="spriteBackground" path="/img/intranet/apps_sprite.png"></hst:link>
-		        	<li><a href="/" style="background: url('${spriteBackground}') -${67 + (70 * 0)}px 95px;"></a></li>
-		        	<li><a href="/" style="background: url('${spriteBackground}') -${67 + (70 * 3)}px 95px;"></a></li>
-		        	<li><a href="/" style="background: url('${spriteBackground}') -${67 + (70 * 6)}px 95px;"></a></li>
-		        	<li><a href="/" style="background: url('${spriteBackground}') -${67 + (70 * 2)}px 95px;"></a></li>
-		        	<li><a href="/" style="background: url('${spriteBackground}') -${67 + (70 * 9)}px 95px;"></a></li>
-		        	<li><a href="/" style="background: url('${spriteBackground}') -${67 + (70 * 10)}px 95px;"></a></li>
-		        	<li><a href="/" style="background: url('${spriteBackground}') -${67 + (70 * 7)}px 95px;"></a></li>
-		        	<li><a href="/" style="background: url('${spriteBackground}') -${67 + (70 * 4)}px 95px;"></a></li>
-		        	<li><a href="/" style="background: url('${spriteBackground}') -${67 + (70 * 5)}px 95px;"></a></li>
-		        	<li><a href="/" style="background: url('${spriteBackground}') -${67 + (70 * 1)}px 95px;"></a></li>
-		        	<li><a href="/" style="background: url('${spriteBackground}') -${67 + (70 * 11)}px 95px;"></a></li>
-		        	<li><a href="/" style="background: url('${spriteBackground}') -${67 + (70 * 14)}px 95px;"></a></li>
-		  
-		        </ul>
-	        </div>
-	        <div class="external">
-	        	<h2>Extern</h2>
-		        <ul>
-		        	<hst:link var="spriteBackground" path="/img/intranet/apps_sprite.png"></hst:link>
-		        	<li><a href="/" style="background: url('${spriteBackground}') -${67 + (70 * 8)}px 95px;"></a></li>
-		        	<li><a href="/" style="background: url('${spriteBackground}') -${67 + (70 * 12)}px 95px;"></a></li>
-		        	<li><a href="/" style="background: url('${spriteBackground}') -${67 + (70 * 15)}px 95px;"></a></li>
-		        	<li><a href="/" style="background: url('${spriteBackground}') -${67 + (70 * 13)}px 95px;"></a></li>
-		        	<li><a href="/" style="background: url('${spriteBackground}') -${67 + (70 * 17)}px 95px;"></a></li>
-		        </ul>
-	        </div>
+          <hst:link var="spriteBackground" path="/img/intranet/apps_sprite.png"></hst:link>
+          <c:forEach items="${appbar.siteMenuItems}" varStatus="status" var="menuItem">
+          <div class="${status.index eq 0 ? 'digital' : 'external' }">
+            <h2><c:out value="${menuItem.name}"/></h2>
+            <ul>
+              <c:forEach items="${menuItem.childMenuItems}" var="subitem">
+                <c:choose>
+                  <c:when test="${not empty myMenuItem.hstLink }">
+                    <hst:link var="menuLink" link="${subitem.hstLink}" />
+                    <c:set var="ext" value="false"/>
+                  </c:when>
+                  <c:otherwise>
+                    <c:set var="menuLink" value="${subitem.externalLink}" />
+                    <c:set var="ext" value="true"/>
+                  </c:otherwise>
+                </c:choose>
+                <li>
+                  <a href="${menuLink}" style="background: url('${spriteBackground}') -${67 + (70 * subitem.parameters['imageIndex'])}px 95px;" title="${fn:escapeXml(subitem.name)}" ${ext ? 'target="_blank"' : '' }></a>
+                </li>
+              </c:forEach>
+            </ul>
+          </div>
+          </c:forEach>
     	</div>
     </div>
 </header>
