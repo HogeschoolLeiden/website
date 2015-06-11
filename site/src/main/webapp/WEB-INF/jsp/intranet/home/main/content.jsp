@@ -2,7 +2,7 @@
 <%@ include file="/WEB-INF/jspf/taglibs.jspf" %>
 
 <section class="title">
-    <p class="title-intro"<hst:html hippohtml="${welcomeText}"/>
+    <p class="title-intro"><hst:html hippohtml="${welcomeText}"/></p>
 </section>
 
 <div id="maincontent" >
