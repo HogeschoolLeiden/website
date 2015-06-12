@@ -16,7 +16,7 @@
  </div>
  
  <script>
-     <hst:link var="themeUrl" path="js/galleria/themes/classic/galleria.classic.min.js" />
+     <hst:link var="themeUrl" path="js/intranet/galleria/themes/classic/galleria.classic.min.js" />
      
      Galleria.loadTheme('${themeUrl}');
   Galleria.run('#galleria', {
