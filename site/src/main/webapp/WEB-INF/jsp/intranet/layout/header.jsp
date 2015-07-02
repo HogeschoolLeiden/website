@@ -25,7 +25,7 @@
                   </c:otherwise>
                 </c:choose>
                 <li>
-                  <a href="${menuLink}" style="background: url('${spriteBackground}') -${67 + (70 * subitem.parameters['imageIndex'])}px 95px;" title="${fn:escapeXml(subitem.name)}" ${ext ? 'target="_blank"' : '' }></a>
+                  <a href="${menuLink}" class="popup-menu-icon-${subitem.parameters['imageIndex']}" title="${fn:escapeXml(subitem.name)}" ${ext ? 'target="_blank"' : '' }></a>
                 </li>
               </c:forEach>
             </ul>
