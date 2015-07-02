@@ -40,14 +40,14 @@
         <section class="page-title">
             <span class="title-header">Praktische informatie</span>
         </section>
+        <section id="search" class="search">
+            <hst:link var="searchUrl" path="/zoeken" />
+            <form class="search-form" action="${searchUrl}" method="GET">
+                <input type="search" class="search-input" name="query" placeholder="Zoeken in praktische informatie">
+                <img class="search-magnify" src="<hst:link path="/img/intranet/search.png"/>"search.png">
+            </form>
+        </section>
     </div>
-    <section id="search" class="search">
-        <hst:link var="searchUrl" path="/zoeken" />
-        <form class="search-form" action="${searchUrl}" method="GET">
-            <input type="search" class="search-input" name="query" placeholder="Zoeken in praktische informatie">
-            <img class="search-magnify" src="<hst:link path="/img/intranet/search.png"/>"search.png">
-        </form>
-    </section>
 </header>
 
 
