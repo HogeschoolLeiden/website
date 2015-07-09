@@ -31,7 +31,13 @@
             </ul>
           </div>
           </c:forEach>
+          <div id="popup-menu-close">
+            <img alt="app-bar" src="<hst:link path="/images/popup-close.png"/>">
+          </div>
     	</div>
+    </div>
+    <div id="popup-menu-open">
+      <img alt="app-bar" src="<hst:link path="/images/popup-open.png"/>">
     </div>
 </header>
 

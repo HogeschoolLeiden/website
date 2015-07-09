@@ -31,14 +31,17 @@ $('#skiplinks a').on('focus', function () {
 $('#skiplinks a').on('blur', function () {
     $(this).closest('#skiplinks').removeClass('active');
 });
-
+var togglePopup = function() {
+  var display = $('#popup-menu').css("display");
+  if (display == 'none') {
+    $('#popup-menu').css({ "display": "block"});
+  } else {
+    $('#popup-menu').css({ "display": "none"});
+  }
+}
 $( document ).ready(function() {
-  $('#popup').click(function() {
-    var display = $('#popup-menu').css("display");
-    if (display == 'none') {
-      $('#popup-menu').css({ "display": "block"});
-    } else {
-      $('#popup-menu').css({ "display": "none"});
-    }
-  });
+  $('#popup-menu-open img').click(togglePopup);
+});
+$( document ).ready(function() {
+  $('#popup-menu-close img').click(togglePopup);
 });

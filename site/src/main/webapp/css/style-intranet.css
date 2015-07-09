@@ -1657,13 +1657,16 @@ table.minor td.col2 {
 
 /* logo popup menu*/
 #wrapper-logo #popup-menu {
-	top: 95px;
+	top: 36px;
+	right: -9px;
 	max-width: 1009px;
 	position: absolute;
 	background-color: #008385;
 	display: none;
 	padding: 20px;
 	float: left;
+	z-index: 100;
+	border-bottom: 3px solid #23114C;
 }
 
 #wrapper-logo #popup-menu a {
@@ -1800,4 +1803,21 @@ a.popup-menu-icon-17 {
 }
 a.popup-menu-icon-17:HOVER {
 	background: url('../img/intranet/apps_sprite.png') -1257px 0px!important;
+}
+div#popup-menu-open {
+  top: 36px;
+  left: 40px;
+  position: absolute;
+  width: 100%;
+  
+}
+div#popup-menu-close {
+  bottom: -33px;
+  position: absolute;
+  width: 915px;
+}
+
+#popup-menu-open img, #popup-menu-close img {
+	margin: auto;
+	display: block;
 }
