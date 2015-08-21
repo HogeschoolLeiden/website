@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.lucene.search.Searchable;
+import org.apache.lucene.search.IndexSearcher;
 import org.hippoecm.hst.content.beans.standard.HippoDocumentBean;
 
 /**
@@ -51,15 +51,15 @@ public class AbstractCounter {
      * @param sortDirection
      * @return
      */
-    public List<Searchable> sort(final List<Searchable> items, final Sort.SortDirection sortDirection) {
+    public List<IndexSearcher> sort(final List<IndexSearcher> items, final Sort.SortDirection sortDirection) {
 
-        List<Searchable> sortedList = new ArrayList<Searchable>();
+        List<IndexSearcher> sortedList = new ArrayList<IndexSearcher>();
 
         // sort the values within the internal counts map in the specified direction
         List<Count> list = sort(sortDirection);
 
         if (sortDirection.equals(Sort.SortDirection.ASCENDING)) {
-            for (Searchable item : items) {
+            for (IndexSearcher item : items) {
                 if (!isCounted(((HippoDocumentBean) item).getCanonicalHandleUUID())) {
                     sortedList.add(item);
                 }
@@ -67,13 +67,13 @@ public class AbstractCounter {
         }
         for (Count count : list) {
             String uuid = count.getUuid();
-            Searchable item = getAndRemoveItemFromList(uuid, items);
+            IndexSearcher item = getAndRemoveItemFromList(uuid, items);
             if (item != null) {
                 sortedList.add(item);
             }
         }
         if (sortDirection.equals(Sort.SortDirection.DESCENDING)) {
-            for (Searchable item : items) {
+            for (IndexSearcher item : items) {
                 sortedList.add(item);
             }
         }
@@ -87,14 +87,14 @@ public class AbstractCounter {
         return (count != null);
     }
 
-    private Searchable getAndRemoveItemFromList(final String uuid, final List<Searchable> items) {
+    private IndexSearcher getAndRemoveItemFromList(final String uuid, final List<IndexSearcher> items) {
 
         for (int i = 0; i < items.size(); i++) {
 
             HippoDocumentBean item = (HippoDocumentBean) items.get(i);
             if (item.getCanonicalHandleUUID().equals(uuid)) {
                 items.remove(i);
-                return (Searchable) item;
+                return (IndexSearcher) item;
             }
         }
         return null;
