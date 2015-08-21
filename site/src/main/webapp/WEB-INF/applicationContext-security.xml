@@ -161,9 +161,13 @@
     </constructor-arg>
 
   </bean>
+  
+  <bean id="hslSamlUserDetailsService" class="nl.hinttech.hsleiden.pi.saml.HslSamlUserDetailsService">
+  </bean>
 
   <!-- SAML Authentication Provider responsible for validating of received SAML messages -->
   <bean id="samlAuthenticationProvider" class="org.springframework.security.saml.SAMLAuthenticationProvider">
+    <property name="userDetails" ref="hslSamlUserDetailsService"/>
   </bean>
 
   <!-- Provider of default SAML Context -->
