@@ -24,15 +24,17 @@ public class HslSamlUserDetailsService implements SAMLUserDetailsService {
 
     @Override
     public Object loadUserBySAML(SAMLCredential credential) {
-        String userId = getUserId(credential);
+        String userId = getUserName(credential);
         return new User(userId, userId, getAuthorities(credential));
     }
 
-    public String getUserId(SAMLCredential credential) {
+    public String getUserName(SAMLCredential credential) {
         final List<String> userIdValueList = getAttributeValue(USERNAME_FIELD_2_0, USERNAME_FIELD_1_1, credential);
         String userId = null;
         if (!userIdValueList.isEmpty()) {
             userId = userIdValueList.get(0);
+        } else {
+           userId = "unknown";
         }
         return userId;
     }
@@ -69,7 +71,7 @@ public class HslSamlUserDetailsService implements SAMLUserDetailsService {
 
     private Collection<GrantedAuthority> getAuthorities(SAMLCredential credential) {
         List<GrantedAuthority> roles = new ArrayList<GrantedAuthority>();
-        roles.add(new SimpleGrantedAuthority("ROLE_ANONYMOUS"));
+        roles.add(new SimpleGrantedAuthority("anonymous"));
         Attribute attribute = credential.getAttribute("urn:mace:dir:attribute-def:eduPersonAffiliation");
         if (attribute == null) {
             attribute = credential.getAttribute("urn:oid:1.3.6.1.4.1.5923.1.1.1.1");
